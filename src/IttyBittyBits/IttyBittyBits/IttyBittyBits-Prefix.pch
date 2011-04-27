@@ -1,0 +1,7 @@
+//
+// Prefix header for all source files of the 'IttyBittyBits' target in the 'IttyBittyBits' project
+//
+
+#ifdef __OBJC__
+    #import <Foundation/Foundation.h>
+#endif

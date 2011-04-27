@@ -1,0 +1,211 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A7B4DABD1367991200543D61 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7B4DABC1367991200543D61 /* Foundation.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		A7B4DAB91367991200543D61 /* libIttyBittyBits.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libIttyBittyBits.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		A7B4DABC1367991200543D61 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		A7B4DAC01367991200543D61 /* IttyBittyBits-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "IttyBittyBits-Prefix.pch"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A7B4DAB61367991200543D61 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A7B4DABD1367991200543D61 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A7B4DAAE1367991100543D61 = {
+			isa = PBXGroup;
+			children = (
+				A7B4DABE1367991200543D61 /* IttyBittyBits */,
+				A7B4DABB1367991200543D61 /* Frameworks */,
+				A7B4DABA1367991200543D61 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A7B4DABA1367991200543D61 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A7B4DAB91367991200543D61 /* libIttyBittyBits.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A7B4DABB1367991200543D61 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A7B4DABC1367991200543D61 /* Foundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A7B4DABE1367991200543D61 /* IttyBittyBits */ = {
+			isa = PBXGroup;
+			children = (
+				A7B4DABF1367991200543D61 /* Supporting Files */,
+			);
+			path = IttyBittyBits;
+			sourceTree = "<group>";
+		};
+		A7B4DABF1367991200543D61 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A7B4DAC01367991200543D61 /* IttyBittyBits-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		A7B4DAB71367991200543D61 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		A7B4DAB81367991200543D61 /* IttyBittyBits */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A7B4DAC31367991200543D61 /* Build configuration list for PBXNativeTarget "IttyBittyBits" */;
+			buildPhases = (
+				A7B4DAB51367991200543D61 /* Sources */,
+				A7B4DAB61367991200543D61 /* Frameworks */,
+				A7B4DAB71367991200543D61 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = IttyBittyBits;
+			productName = IttyBittyBits;
+			productReference = A7B4DAB91367991200543D61 /* libIttyBittyBits.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A7B4DAB01367991100543D61 /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = A7B4DAB31367991100543D61 /* Build configuration list for PBXProject "IttyBittyBits" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = A7B4DAAE1367991100543D61;
+			productRefGroup = A7B4DABA1367991200543D61 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A7B4DAB81367991200543D61 /* IttyBittyBits */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A7B4DAB51367991200543D61 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		A7B4DAC11367991200543D61 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		A7B4DAC21367991200543D61 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				SDKROOT = iphoneos;
+			};
+			name = Release;
+		};
+		A7B4DAC41367991200543D61 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				DSTROOT = /tmp/IttyBittyBits.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "IttyBittyBits/IttyBittyBits-Prefix.pch";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		A7B4DAC51367991200543D61 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				DSTROOT = /tmp/IttyBittyBits.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "IttyBittyBits/IttyBittyBits-Prefix.pch";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A7B4DAB31367991100543D61 /* Build configuration list for PBXProject "IttyBittyBits" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A7B4DAC11367991200543D61 /* Debug */,
+				A7B4DAC21367991200543D61 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A7B4DAC31367991200543D61 /* Build configuration list for PBXNativeTarget "IttyBittyBits" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A7B4DAC41367991200543D61 /* Debug */,
+				A7B4DAC51367991200543D61 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A7B4DAB01367991100543D61 /* Project object */;
+}
