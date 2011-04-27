@@ -37,33 +37,24 @@
 static NSString *IBAKeychainUtilsErrorDomain = @"IBAKeychainUtilsErrorDomain";
 
 /////////////////////////////////////////////////////////////////////////////////////////////////
-static void ClearError(NSError** error)
-{
-    if (error != nil) 
-    {
-		*error = nil;
-	}
-}
+#define ClearError(error) \
+    if ((error) != nil) { *(error) = nil; }
 
 /////////////////////////////////////////////////////////////////////////////////////////////////
-static void SetErrorForError(NSError** error, NSError* srcError)
+#define SetErrorWithError(error, srcError) \
+    if ((error) != nil) { *(error) = (srcError); }
+
+/////////////////////////////////////////////////////////////////////////////////////////////////
+static BOOL SetErrorForCode(NSError** error, NSInteger code)
 {
     if (error != nil)
     {
-        *error = srcError;
-    }
-}
-
-/////////////////////////////////////////////////////////////////////////////////////////////////
-static void SetErrorForCode(NSError** error, NSInteger code)
-{
-    if (error != nil)
-    {
-        // Only return an error if a real exception happened--not simply for "not found."
         *error = [NSError errorWithDomain: IBAKeychainUtilsErrorDomain 
                                      code: code 
                                  userInfo: nil];
     }
+    
+    return (error != nil);
 }
 
 @implementation IBAKeychainUtils
@@ -186,13 +177,13 @@ static void SetErrorForCode(NSError** error, NSInteger code)
         
 		if ([getError code] != noErr) 
         {
-            SetErrorForError(error, getError);            
+            SetErrorWithError(error, getError);            
 			return NO;
 		}
 	}
 	else if ([getError code] != noErr) 
     {
-        SetErrorForError(error, getError);        
+        SetErrorWithError(error, getError);        
 		return NO;
 	}
 	
