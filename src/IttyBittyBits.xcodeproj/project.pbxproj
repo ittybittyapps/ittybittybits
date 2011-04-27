@@ -14,6 +14,7 @@
 		A7B4DAD613679F5E00543D61 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A7B4DAD413679F5E00543D61 /* InfoPlist.strings */; };
 		A7B4DAD913679F5E00543D61 /* GHUnitIOSTestMain.m in Sources */ = {isa = PBXBuildFile; fileRef = A7B4DAD813679F5E00543D61 /* GHUnitIOSTestMain.m */; };
 		A7B4DAEA13679F9200543D61 /* GHUnitIOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7B4DAE913679F9200543D61 /* GHUnitIOS.framework */; };
+		A7B4DAF71367BFEB00543D61 /* IBASynthesizeSingleton.h in Headers */ = {isa = PBXBuildFile; fileRef = A7B4DAF51367BFEB00543D61 /* IBASynthesizeSingleton.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		A7B4DAD713679F5E00543D61 /* IttyBittyBitsTests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "IttyBittyBitsTests-Prefix.pch"; sourceTree = "<group>"; };
 		A7B4DAD813679F5E00543D61 /* GHUnitIOSTestMain.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GHUnitIOSTestMain.m; sourceTree = "<group>"; };
 		A7B4DAE913679F9200543D61 /* GHUnitIOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GHUnitIOS.framework; path = "../../lib/gh-unit/GHUnitIOS.framework"; sourceTree = "<group>"; };
+		A7B4DAF51367BFEB00543D61 /* IBASynthesizeSingleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBASynthesizeSingleton.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +88,7 @@
 		A7B4DABE1367991200543D61 /* IttyBittyBits */ = {
 			isa = PBXGroup;
 			children = (
+				A7B4DAF31367BF8000543D61 /* Foundation */,
 				A7B4DABF1367991200543D61 /* Supporting Files */,
 			);
 			path = IttyBittyBits;
@@ -104,7 +107,8 @@
 			children = (
 				A7B4DAD213679F5E00543D61 /* Supporting Files */,
 			);
-			path = IttyBittyBitsTests;
+			name = IttyBittyBitsTests;
+			path = ../../tests;
 			sourceTree = "<group>";
 		};
 		A7B4DAD213679F5E00543D61 /* Supporting Files */ = {
@@ -118,6 +122,14 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		A7B4DAF31367BF8000543D61 /* Foundation */ = {
+			isa = PBXGroup;
+			children = (
+				A7B4DAF51367BFEB00543D61 /* IBASynthesizeSingleton.h */,
+			);
+			path = Foundation;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -125,6 +137,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A7B4DAF71367BFEB00543D61 /* IBASynthesizeSingleton.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -170,6 +183,9 @@
 /* Begin PBXProject section */
 		A7B4DAB01367991100543D61 /* Project object */ = {
 			isa = PBXProject;
+			attributes = {
+				ORGANIZATIONNAME = "Itty Bitty Apps Pty. Ltd.";
+			};
 			buildConfigurationList = A7B4DAB31367991100543D61 /* Build configuration list for PBXProject "IttyBittyBits" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
@@ -348,6 +364,7 @@
 				A7B4DAC51367991200543D61 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A7B4DAE613679F5E00543D61 /* Build configuration list for PBXNativeTarget "IttyBittyBitsTests" */ = {
 			isa = XCConfigurationList;
@@ -356,6 +373,7 @@
 				A7B4DAE813679F5E00543D61 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
