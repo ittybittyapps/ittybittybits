@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:IttyBittyBits/IttyBittyBits.xcodeproj">
+      location = "group:src/IttyBittyBits.xcodeproj">
    </FileRef>
 </Workspace>

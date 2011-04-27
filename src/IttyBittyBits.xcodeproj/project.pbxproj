@@ -13,9 +13,26 @@
 		A7B4DAD013679F5E00543D61 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7B4DACF13679F5E00543D61 /* CoreGraphics.framework */; };
 		A7B4DAD613679F5E00543D61 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A7B4DAD413679F5E00543D61 /* InfoPlist.strings */; };
 		A7B4DAD913679F5E00543D61 /* GHUnitIOSTestMain.m in Sources */ = {isa = PBXBuildFile; fileRef = A7B4DAD813679F5E00543D61 /* GHUnitIOSTestMain.m */; };
-		A7B4DAEA13679F9200543D61 /* GHUnitIOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7B4DAE913679F9200543D61 /* GHUnitIOS.framework */; };
 		A7B4DAF71367BFEB00543D61 /* IBASynthesizeSingleton.h in Headers */ = {isa = PBXBuildFile; fileRef = A7B4DAF51367BFEB00543D61 /* IBASynthesizeSingleton.h */; };
+		A7B4DB031367C3EC00543D61 /* libIttyBittyBits.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A7B4DAB91367991200543D61 /* libIttyBittyBits.a */; };
+		A7B4DB051367C3F700543D61 /* GHUnitIOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7B4DB041367C3F700543D61 /* GHUnitIOS.framework */; };
+		A7B4DB0B1367C52600543D61 /* IBAKeychainUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = A7B4DB091367C52600543D61 /* IBAKeychainUtils.h */; };
+		A7B4DB0C1367C52600543D61 /* IBAKeychainUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = A7B4DB0A1367C52600543D61 /* IBAKeychainUtils.m */; };
+		A7B4DB0F1367C5F900543D61 /* IBADebug.h in Headers */ = {isa = PBXBuildFile; fileRef = A7B4DB0D1367C5F900543D61 /* IBADebug.h */; };
+		A7B4DB101367C5F900543D61 /* IBADebug.m in Sources */ = {isa = PBXBuildFile; fileRef = A7B4DB0E1367C5F900543D61 /* IBADebug.m */; };
+		A7B4DB121367C65B00543D61 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7B4DB111367C65B00543D61 /* Security.framework */; };
+		A7B4DB171367C70D00543D61 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7B4DB111367C65B00543D61 /* Security.framework */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A7B4DB061367C40C00543D61 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A7B4DAB01367991100543D61 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A7B4DAB81367991200543D61;
+			remoteInfo = IttyBittyBits;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		A7B4DAB91367991200543D61 /* libIttyBittyBits.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libIttyBittyBits.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -28,8 +45,13 @@
 		A7B4DAD513679F5E00543D61 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		A7B4DAD713679F5E00543D61 /* IttyBittyBitsTests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "IttyBittyBitsTests-Prefix.pch"; sourceTree = "<group>"; };
 		A7B4DAD813679F5E00543D61 /* GHUnitIOSTestMain.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GHUnitIOSTestMain.m; sourceTree = "<group>"; };
-		A7B4DAE913679F9200543D61 /* GHUnitIOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GHUnitIOS.framework; path = "../../lib/gh-unit/GHUnitIOS.framework"; sourceTree = "<group>"; };
 		A7B4DAF51367BFEB00543D61 /* IBASynthesizeSingleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBASynthesizeSingleton.h; sourceTree = "<group>"; };
+		A7B4DB041367C3F700543D61 /* GHUnitIOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GHUnitIOS.framework; path = "../lib/gh-unit/GHUnitIOS.framework"; sourceTree = "<group>"; };
+		A7B4DB091367C52600543D61 /* IBAKeychainUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IBAKeychainUtils.h; path = Security/IBAKeychainUtils.h; sourceTree = SOURCE_ROOT; };
+		A7B4DB0A1367C52600543D61 /* IBAKeychainUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = IBAKeychainUtils.m; path = Security/IBAKeychainUtils.m; sourceTree = SOURCE_ROOT; };
+		A7B4DB0D1367C5F900543D61 /* IBADebug.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IBADebug.h; path = Foundation/IBADebug.h; sourceTree = SOURCE_ROOT; };
+		A7B4DB0E1367C5F900543D61 /* IBADebug.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = IBADebug.m; path = Foundation/IBADebug.m; sourceTree = SOURCE_ROOT; };
+		A7B4DB111367C65B00543D61 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,6 +59,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A7B4DB121367C65B00543D61 /* Security.framework in Frameworks */,
 				A7B4DABD1367991200543D61 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -45,10 +68,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A7B4DAEA13679F9200543D61 /* GHUnitIOS.framework in Frameworks */,
+				A7B4DB051367C3F700543D61 /* GHUnitIOS.framework in Frameworks */,
+				A7B4DB031367C3EC00543D61 /* libIttyBittyBits.a in Frameworks */,
 				A7B4DACD13679F5E00543D61 /* UIKit.framework in Frameworks */,
 				A7B4DACE13679F5E00543D61 /* Foundation.framework in Frameworks */,
 				A7B4DAD013679F5E00543D61 /* CoreGraphics.framework in Frameworks */,
+				A7B4DB171367C70D00543D61 /* Security.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -58,8 +83,8 @@
 		A7B4DAAE1367991100543D61 = {
 			isa = PBXGroup;
 			children = (
-				A7B4DABE1367991200543D61 /* IttyBittyBits */,
-				A7B4DAD113679F5E00543D61 /* IttyBittyBitsTests */,
+				A7B4DABE1367991200543D61 /* Src */,
+				A7B4DAD113679F5E00543D61 /* Tests */,
 				A7B4DABB1367991200543D61 /* Frameworks */,
 				A7B4DABA1367991200543D61 /* Products */,
 			);
@@ -68,7 +93,6 @@
 		A7B4DABA1367991200543D61 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				A7B4DAB91367991200543D61 /* libIttyBittyBits.a */,
 				A7B4DACA13679F5D00543D61 /* IttyBittyBitsTests.app */,
 			);
 			name = Products;
@@ -77,7 +101,9 @@
 		A7B4DABB1367991200543D61 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				A7B4DAE913679F9200543D61 /* GHUnitIOS.framework */,
+				A7B4DB111367C65B00543D61 /* Security.framework */,
+				A7B4DAB91367991200543D61 /* libIttyBittyBits.a */,
+				A7B4DB041367C3F700543D61 /* GHUnitIOS.framework */,
 				A7B4DABC1367991200543D61 /* Foundation.framework */,
 				A7B4DACC13679F5E00543D61 /* UIKit.framework */,
 				A7B4DACF13679F5E00543D61 /* CoreGraphics.framework */,
@@ -85,12 +111,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		A7B4DABE1367991200543D61 /* IttyBittyBits */ = {
+		A7B4DABE1367991200543D61 /* Src */ = {
 			isa = PBXGroup;
 			children = (
 				A7B4DAF31367BF8000543D61 /* Foundation */,
+				A7B4DB081367C4DE00543D61 /* Security */,
 				A7B4DABF1367991200543D61 /* Supporting Files */,
 			);
+			name = Src;
 			path = IttyBittyBits;
 			sourceTree = "<group>";
 		};
@@ -102,13 +130,13 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		A7B4DAD113679F5E00543D61 /* IttyBittyBitsTests */ = {
+		A7B4DAD113679F5E00543D61 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
 				A7B4DAD213679F5E00543D61 /* Supporting Files */,
 			);
-			name = IttyBittyBitsTests;
-			path = ../../tests;
+			name = Tests;
+			path = ../tests;
 			sourceTree = "<group>";
 		};
 		A7B4DAD213679F5E00543D61 /* Supporting Files */ = {
@@ -126,8 +154,19 @@
 			isa = PBXGroup;
 			children = (
 				A7B4DAF51367BFEB00543D61 /* IBASynthesizeSingleton.h */,
+				A7B4DB0D1367C5F900543D61 /* IBADebug.h */,
+				A7B4DB0E1367C5F900543D61 /* IBADebug.m */,
 			);
 			path = Foundation;
+			sourceTree = "<group>";
+		};
+		A7B4DB081367C4DE00543D61 /* Security */ = {
+			isa = PBXGroup;
+			children = (
+				A7B4DB091367C52600543D61 /* IBAKeychainUtils.h */,
+				A7B4DB0A1367C52600543D61 /* IBAKeychainUtils.m */,
+			);
+			path = Security;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,6 +177,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				A7B4DAF71367BFEB00543D61 /* IBASynthesizeSingleton.h in Headers */,
+				A7B4DB0B1367C52600543D61 /* IBAKeychainUtils.h in Headers */,
+				A7B4DB0F1367C5F900543D61 /* IBADebug.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -172,6 +213,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				A7B4DB071367C40C00543D61 /* PBXTargetDependency */,
 			);
 			name = IttyBittyBitsTests;
 			productName = IttyBittyBitsTests;
@@ -220,6 +262,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A7B4DB0C1367C52600543D61 /* IBAKeychainUtils.m in Sources */,
+				A7B4DB101367C5F900543D61 /* IBADebug.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -232,6 +276,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A7B4DB071367C40C00543D61 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A7B4DAB81367991200543D61 /* IttyBittyBits */;
+			targetProxy = A7B4DB061367C40C00543D61 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		A7B4DAD413679F5E00543D61 /* InfoPlist.strings */ = {
@@ -280,7 +332,7 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				DSTROOT = /tmp/IttyBittyBits.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "IttyBittyBits/IttyBittyBits-Prefix.pch";
+				GCC_PREFIX_HEADER = "IttyBittyBits-Prefix.pch";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -292,7 +344,7 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				DSTROOT = /tmp/IttyBittyBits.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "IttyBittyBits/IttyBittyBits-Prefix.pch";
+				GCC_PREFIX_HEADER = "IttyBittyBits-Prefix.pch";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -306,12 +358,12 @@
 				COPY_PHASE_STRIP = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/../../lib/gh-unit\"",
+					"\"$(SRCROOT)/../lib/gh-unit\"",
 				);
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "IttyBittyBitsTests/IttyBittyBitsTests-Prefix.pch";
-				INFOPLIST_FILE = "IttyBittyBitsTests/IttyBittyBitsTests-Info.plist";
+				GCC_PREFIX_HEADER = "../tests/IttyBittyBitsTests-Prefix.pch";
+				INFOPLIST_FILE = "../tests/IttyBittyBitsTests-Info.plist";
 				OTHER_LDFLAGS = (
 					"-ObjC",
 					"-all_load",
@@ -329,11 +381,11 @@
 				COPY_PHASE_STRIP = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/../../lib/gh-unit\"",
+					"\"$(SRCROOT)/../lib/gh-unit\"",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "IttyBittyBitsTests/IttyBittyBitsTests-Prefix.pch";
-				INFOPLIST_FILE = "IttyBittyBitsTests/IttyBittyBitsTests-Info.plist";
+				GCC_PREFIX_HEADER = "../tests/IttyBittyBitsTests-Prefix.pch";
+				INFOPLIST_FILE = "../tests/IttyBittyBitsTests-Info.plist";
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				OTHER_LDFLAGS = (
 					"-ObjC",
