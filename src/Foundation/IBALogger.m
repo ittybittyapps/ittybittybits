@@ -46,7 +46,11 @@ IBA_SYNTHESIZE_SINGLETON_FOR_CLASS(IBALogger, sharedLogger)
         name = [aName retain];
         self.facility = aFacility;
     
-        aslClient = asl_open([aName UTF8String], [aFacility UTF8String], 0);
+        uint32_t opts = ASL_OPT_STDERR   | // adds stderr as an output file descriptor
+                        ASL_OPT_NO_DELAY | // connects to the server immediately
+                        ASL_OPT_NO_REMOTE; // disables remote-control filter adjustment
+        
+        aslClient = asl_open([aName UTF8String], [aFacility UTF8String], opts);
         aslMsg = asl_new(ASL_TYPE_MSG);
     }
     
@@ -124,8 +128,14 @@ IBA_SYNTHESIZE_SINGLETON_FOR_CLASS(IBALogger, sharedLogger)
 {
     va_list args;
     va_start(args, level);
-    NSString* msg = [[NSString alloc] initWithFormat:format arguments:args];
+    [self log:format level:level args:args];
     va_end(args);
+}
+
+/////////////////////////////////////////////////////////////////////////////////////////////////
+- (void) log:(NSString*)format level:(NSInteger)level args:(va_list)args
+{
+    NSString* msg = [[NSString alloc] initWithFormat:format arguments:args];
     
     dispatch_async(logQueue, ^ {
         if (asl_log(aslClient, aslMsg, level, "%s", [msg UTF8String]))
@@ -136,6 +146,51 @@ IBA_SYNTHESIZE_SINGLETON_FOR_CLASS(IBALogger, sharedLogger)
     });
     
     [msg release];
+}
+
+/////////////////////////////////////////////////////////////////////////////////////////////////
+- (void) logDebug:(NSString*)format, ...
+{
+    va_list args;
+    va_start(args, format);
+    [self logDebug:format args:args];
+    va_end(args);
+}
+
+/////////////////////////////////////////////////////////////////////////////////////////////////
+- (void) logDebug:(NSString*)format args:(va_list)args
+{
+    [self log:format level:ASL_LEVEL_DEBUG args:args];
+}
+
+/////////////////////////////////////////////////////////////////////////////////////////////////
+- (void) logInfo:(NSString*)format, ...
+{
+    va_list args;
+    va_start(args, format);
+    [self logInfo:format args:args];
+    va_end(args);
+}
+
+/////////////////////////////////////////////////////////////////////////////////////////////////
+- (void) logInfo:(NSString*)format args:(va_list)args
+{
+    [self log:format level:ASL_LEVEL_INFO args:args];
+}
+
+/////////////////////////////////////////////////////////////////////////////////////////////////
+- (void) logNotice:(NSString*)format, ...
+{
+    va_list args;
+    va_start(args, format);
+    [self logNotice:format args:args];
+    va_end(args);
+}
+
+/////////////////////////////////////////////////////////////////////////////////////////////////
+- (void) logNotice:(NSString*)format args:(va_list)args
+{
+    [self log:format level:ASL_LEVEL_NOTICE args:args];
 }
 
 @end

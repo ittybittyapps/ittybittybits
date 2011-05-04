@@ -111,6 +111,43 @@
        level:(NSInteger)level, ... NS_FORMAT_FUNCTION(1,3);
 
 /*!
+ \brief     Log a message with the specified level and format string.
+ */
+- (void) log:(NSString*)format
+       level:(NSInteger)level
+        args:(va_list)args;
+
+/*!
+ \brief     Log a debug message with the specified format.
+ */
+- (void) logDebug:(NSString*)format, ...;
+
+/*!
+ \brief     Log a debug message with the specified format.
+ */
+- (void) logDebug:(NSString*)format args:(va_list)args;
+
+/*!
+ \brief     Log an info message with the specified format.
+ */
+- (void) logInfo:(NSString*)format, ...;
+
+/*!
+ \brief     Log an info message with the specified format.
+ */
+- (void) logInfo:(NSString*)format args:(va_list)args;
+
+/*!
+ \brief     Log a notice message with the specified format.
+ */
+- (void) logNotice:(NSString*)format, ...;
+
+/*!
+ \brief     Log a notice message with the specified format.
+ */
+- (void) logNotice:(NSString*)format args:(va_list)args;
+
+/*!
  \brief     Write log messages to the file at the specified path.
  \details   Log messages will be written to this file as well as to the server.
  \param     path    The path of the file to start writing to.
