@@ -57,6 +57,8 @@ typedef void (^IBATimerBlock)(NSTimer*);
             The number of seconds between firings of the timer. If seconds is less than or equal to 0.0, this method chooses the nonnegative value of 0.1 milliseconds instead.
  \param     repeats
             If YES, the timer will repeatedly reschedule itself until invalidated. If NO, the timer will be invalidated after it fires.
+ \param     block
+            The block to execute when the timer fires.
  \return    A new NSTimer object, configured according to the specified parameters.
  
  */

@@ -26,8 +26,6 @@
 
 #import "NSTimer+Blocks.h"
 
-
-
 @interface NSTimer (IBA_NSTimerBlockPrivateAdditions)
 + (void)iba_executeBlockWithTimer:(NSTimer*)timer;
 @end
