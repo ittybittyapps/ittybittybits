@@ -10,4 +10,11 @@
    <FileRef
       location = "group:src/IttyBittyBits.xcodeproj">
    </FileRef>
+   <Group
+      location = "container:"
+      name = "Samples">
+      <FileRef
+         location = "group:samples/DebugConsole/DebugConsole.xcodeproj">
+      </FileRef>
+   </Group>
 </Workspace>

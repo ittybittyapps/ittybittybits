@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A7914160136FD62200209C96 /* IBALogger.h in Headers */ = {isa = PBXBuildFile; fileRef = A791415E136FD62200209C96 /* IBALogger.h */; };
+		A7914161136FD62200209C96 /* IBALogger.m in Sources */ = {isa = PBXBuildFile; fileRef = A791415F136FD62200209C96 /* IBALogger.m */; };
+		A79141671370E2EC00209C96 /* IBALoggerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A79141641370E01300209C96 /* IBALoggerTests.m */; };
+		A791416B13711FC400209C96 /* IBATemporaryFile.h in Headers */ = {isa = PBXBuildFile; fileRef = A791416913711FC400209C96 /* IBATemporaryFile.h */; };
+		A791416C13711FC400209C96 /* IBATemporaryFile.m in Sources */ = {isa = PBXBuildFile; fileRef = A791416A13711FC400209C96 /* IBATemporaryFile.m */; };
 		A7B4DABD1367991200543D61 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7B4DABC1367991200543D61 /* Foundation.framework */; };
 		A7B4DACD13679F5E00543D61 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7B4DACC13679F5E00543D61 /* UIKit.framework */; };
 		A7B4DACE13679F5E00543D61 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7B4DABC1367991200543D61 /* Foundation.framework */; };
@@ -34,6 +39,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A791415E136FD62200209C96 /* IBALogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IBALogger.h; path = Foundation/IBALogger.h; sourceTree = SOURCE_ROOT; };
+		A791415F136FD62200209C96 /* IBALogger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = IBALogger.m; path = Foundation/IBALogger.m; sourceTree = SOURCE_ROOT; };
+		A79141631370E01300209C96 /* IBALoggerTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBALoggerTests.h; sourceTree = "<group>"; };
+		A79141641370E01300209C96 /* IBALoggerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IBALoggerTests.m; sourceTree = "<group>"; };
+		A791416913711FC400209C96 /* IBATemporaryFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IBATemporaryFile.h; path = Foundation/IBATemporaryFile.h; sourceTree = SOURCE_ROOT; };
+		A791416A13711FC400209C96 /* IBATemporaryFile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = IBATemporaryFile.m; path = Foundation/IBATemporaryFile.m; sourceTree = SOURCE_ROOT; };
 		A7B4DAB91367991200543D61 /* libIttyBittyBits.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libIttyBittyBits.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7B4DABC1367991200543D61 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		A7B4DAC01367991200543D61 /* IttyBittyBits-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "IttyBittyBits-Prefix.pch"; sourceTree = "<group>"; };
@@ -78,6 +89,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A791415C136FD5E200209C96 /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = UIKit;
+			sourceTree = "<group>";
+		};
+		A79141621370DFE100209C96 /* Foundation */ = {
+			isa = PBXGroup;
+			children = (
+				A79141631370E01300209C96 /* IBALoggerTests.h */,
+				A79141641370E01300209C96 /* IBALoggerTests.m */,
+			);
+			path = Foundation;
+			sourceTree = "<group>";
+		};
 		A7B4DAAE1367991100543D61 = {
 			isa = PBXGroup;
 			children = (
@@ -115,6 +142,7 @@
 				A7B4DAF31367BF8000543D61 /* Foundation */,
 				A7B4DB081367C4DE00543D61 /* Security */,
 				A7B4DABF1367991200543D61 /* Supporting Files */,
+				A791415C136FD5E200209C96 /* UIKit */,
 			);
 			name = Src;
 			path = IttyBittyBits;
@@ -131,6 +159,7 @@
 		A7B4DAD113679F5E00543D61 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
+				A79141621370DFE100209C96 /* Foundation */,
 				A7B4DAD213679F5E00543D61 /* Supporting Files */,
 			);
 			name = Tests;
@@ -153,6 +182,10 @@
 			children = (
 				A7B4DAF51367BFEB00543D61 /* IBASynthesizeSingleton.h */,
 				A7B4DB0D1367C5F900543D61 /* IBADebug.h */,
+				A791415E136FD62200209C96 /* IBALogger.h */,
+				A791415F136FD62200209C96 /* IBALogger.m */,
+				A791416913711FC400209C96 /* IBATemporaryFile.h */,
+				A791416A13711FC400209C96 /* IBATemporaryFile.m */,
 			);
 			path = Foundation;
 			sourceTree = "<group>";
@@ -176,6 +209,8 @@
 				A7B4DAF71367BFEB00543D61 /* IBASynthesizeSingleton.h in Headers */,
 				A7B4DB0B1367C52600543D61 /* IBAKeychainUtils.h in Headers */,
 				A7B4DB0F1367C5F900543D61 /* IBADebug.h in Headers */,
+				A7914160136FD62200209C96 /* IBALogger.h in Headers */,
+				A791416B13711FC400209C96 /* IBATemporaryFile.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -260,6 +295,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				A7B4DB0C1367C52600543D61 /* IBAKeychainUtils.m in Sources */,
+				A7914161136FD62200209C96 /* IBALogger.m in Sources */,
+				A791416C13711FC400209C96 /* IBATemporaryFile.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -268,6 +305,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A7B4DAD913679F5E00543D61 /* GHUnitIOSTestMain.m in Sources */,
+				A79141671370E2EC00209C96 /* IBALoggerTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -307,7 +345,6 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_FOUR_CHARACTER_CONSTANTS = YES;
 				GCC_WARN_NON_VIRTUAL_DESTRUCTOR = YES;
-				GCC_WARN_PEDANTIC = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				RUN_CLANG_STATIC_ANALYZER = YES;
@@ -326,7 +363,6 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_FOUR_CHARACTER_CONSTANTS = YES;
 				GCC_WARN_NON_VIRTUAL_DESTRUCTOR = YES;
-				GCC_WARN_PEDANTIC = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				RUN_CLANG_STATIC_ANALYZER = YES;

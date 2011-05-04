@@ -11,23 +11,32 @@
 //  appreciated but not required.
 //
 
-#define SYNTHESIZE_SINGLETON_FOR_CLASS(classname, accessorname) \
- \
+#define IBA_SYNTHESIZE_SINGLETON_FOR_CLASS(classname, accessorname) \
 static classname *shared##classname = nil; \
- \
-+ (classname *)shared##accessorname \
++ (void)cleanupFromTerminate \
+{ \
+    classname *temp = shared##classname; \
+    shared##classname = nil; \
+    [temp dealloc]; \
+} \
++ (void)registerForCleanup \
+{ \
+    /*[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(cleanupFromTerminate) name:UIApplicationWillTerminateNotification object:nil];*/ \
+} \
++ (classname *)accessorname \
 { \
     @synchronized(self) \
     { \
         if (shared##classname == nil) \
         { \
+            NSAutoreleasePool *pool = [[NSAutoreleasePool alloc] init]; \
             shared##classname = [[self alloc] init]; \
+            [self registerForCleanup]; \
+            [pool drain]; \
         } \
     } \
-     \
     return shared##classname; \
 } \
- \
 + (id)allocWithZone:(NSZone *)zone \
 { \
     @synchronized(self) \
@@ -38,30 +47,10 @@ static classname *shared##classname = nil; \
             return shared##classname; \
         } \
     } \
-     \
     return nil; \
 } \
- \
-- (id)copyWithZone:(NSZone *)zone \
-{ \
-    return self; \
-} \
- \
-- (id)retain \
-{ \
-    return self; \
-} \
- \
-- (NSUInteger)retainCount \
-{ \
-    return NSUIntegerMax; \
-} \
- \
-- (void)release \
-{ \
-} \
- \
-- (id)autorelease \
-{ \
-    return self; \
-}
+- (id)copyWithZone:(NSZone *)zone { return self; } \
+- (id)retain { return self; } \
+- (NSUInteger)retainCount { return NSUIntegerMax; } \
+- (void)release { } \
+- (id)autorelease { return self; }

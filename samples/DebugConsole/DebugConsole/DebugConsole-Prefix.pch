@@ -1,5 +1,5 @@
 //
-// Prefix header for all source files of the 'IttyBittyBitsTests' target in the 'IttyBittyBitsTests' project
+// Prefix header for all source files of the 'DebugConsole' target in the 'DebugConsole' project
 //
 
 #import <Availability.h>
@@ -11,5 +11,4 @@
 #ifdef __OBJC__
     #import <UIKit/UIKit.h>
     #import <Foundation/Foundation.h>
-    #import <GHUnitIOS/GHUnit.h>
 #endif
