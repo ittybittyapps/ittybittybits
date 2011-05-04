@@ -24,3 +24,4 @@ This library also contains modified versions of code copyright the following aut
     Jonathan Wight
     Jon Crosby
     Mike Malone
+    Remy Demarest
