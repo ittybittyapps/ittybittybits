@@ -21,7 +21,7 @@ static classname *shared##classname = nil; \
 } \
 + (void)registerForCleanup \
 { \
-    /*[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(cleanupFromTerminate) name:UIApplicationWillTerminateNotification object:nil];*/ \
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(cleanupFromTerminate) name:UIApplicationWillTerminateNotification object:nil]; \
 } \
 + (classname *)accessorname \
 { \
