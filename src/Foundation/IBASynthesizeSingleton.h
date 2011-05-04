@@ -21,12 +21,16 @@ static classname *shared##classname = nil; \
 } \
 + (void)registerForCleanup \
 { \
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(cleanupFromTerminate) name:UIApplicationWillTerminateNotification object:nil]; \
+    [[NSNotificationCenter defaultCenter] addObserver:self \
+                                             selector:@selector(cleanupFromTerminate) \
+                                                 name:UIApplicationWillTerminateNotification \
+                                               object:nil]; \
 } \
 + (classname *)accessorname \
 { \
-    @synchronized(self) \
-    { \
+    static dispatch_once_t p; \
+    dispatch_once(&p, \
+    ^{ \
         if (shared##classname == nil) \
         { \
             NSAutoreleasePool *pool = [[NSAutoreleasePool alloc] init]; \
@@ -34,20 +38,21 @@ static classname *shared##classname = nil; \
             [self registerForCleanup]; \
             [pool drain]; \
         } \
-    } \
+    }); \
     return shared##classname; \
 } \
 + (id)allocWithZone:(NSZone *)zone \
 { \
-    @synchronized(self) \
-    { \
+    static dispatch_once_t p; \
+    __block classname* temp = nil; \
+    dispatch_once(&p, \
+    ^{ \
         if (shared##classname == nil) \
         { \
-            shared##classname = [super allocWithZone:zone]; \
-            return shared##classname; \
+            temp = shared##classname = [super allocWithZone:zone]; \
         } \
-    } \
-    return nil; \
+    }); \
+    return temp; \
 } \
 - (id)copyWithZone:(NSZone *)zone { return self; } \
 - (id)retain { return self; } \
