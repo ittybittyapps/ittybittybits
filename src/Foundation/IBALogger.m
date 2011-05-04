@@ -19,6 +19,7 @@
 
 #import "IBALogger.h"
 #import "IBADebug.h"
+#import "IBACommon.h"
 #import "IBASynthesizeSingleton.h"
 
 #import <stdarg.h>
@@ -74,14 +75,9 @@ IBA_SYNTHESIZE_SINGLETON_FOR_CLASS(IBALogger, sharedLogger)
         asl_free(aslMsg);
         asl_close(aslClient);
         
-        [name release]; 
-        name = nil;
-        
-        [facility release];
-        facility = nil;
-        
-        [additionalFiles release];
-        additionalFiles = nil;
+        IBA_RELEASE(name);
+        IBA_RELEASE(facility);
+        IBA_RELEASE(additionalFiles);
     });
     
     dispatch_release(logQueue);

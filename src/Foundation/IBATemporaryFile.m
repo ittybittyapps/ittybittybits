@@ -19,6 +19,7 @@
 
 #import "IBATemporaryFile.h"
 #import "IBADebug.h"
+#import "IBACommon.h"
 
 @implementation IBATemporaryFile
 
@@ -67,11 +68,8 @@
         NSLog(@"Failed to remove temporary file '%@': %@", filepath, [error localizedDescription]);
     }
 
-    [filepath release];
-    filepath = nil;
-
-    [handle release];
-    handle = nil;
+    IBA_RELEASE(filepath);
+    IBA_RELEASE(handle);
         
     [super dealloc];
 }
