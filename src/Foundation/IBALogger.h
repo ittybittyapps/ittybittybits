@@ -119,7 +119,7 @@
  \brief     Log a message with the specified level and format string.
  */
 - (void) log:(NSString*)format
-       level:(NSInteger)level, ... NS_FORMAT_FUNCTION(1,3);
+       level:(NSInteger)level, ... NS_FORMAT_FUNCTION(1, 3);
 
 /*!
  \brief     Log a message with the specified level and format string.
@@ -131,7 +131,7 @@
 /*!
  \brief     Log a debug message with the specified format.
  */
-- (void) logDebug:(NSString*)format, ...;
+- (void) logDebug:(NSString*)format, ... NS_FORMAT_FUNCTION(1, 2);
 
 /*!
  \brief     Log a debug message with the specified format.
@@ -141,7 +141,7 @@
 /*!
  \brief     Log an info message with the specified format.
  */
-- (void) logInfo:(NSString*)format, ...;
+- (void) logInfo:(NSString*)format, ... NS_FORMAT_FUNCTION(1, 2);
 
 /*!
  \brief     Log an info message with the specified format.
@@ -151,12 +151,64 @@
 /*!
  \brief     Log a notice message with the specified format.
  */
-- (void) logNotice:(NSString*)format, ...;
+- (void) logNotice:(NSString*)format, ... NS_FORMAT_FUNCTION(1, 2);
 
 /*!
  \brief     Log a notice message with the specified format.
  */
 - (void) logNotice:(NSString*)format args:(va_list)args;
+
+/*!
+ \brief     Log a warning message with the specified format.
+ */
+- (void) logWarning:(NSString*)format, ... NS_FORMAT_FUNCTION(1, 2);
+
+/*!
+ \brief     Log a warning message with the specified format.
+ */
+- (void) logWarning:(NSString*)format args:(va_list)args;
+
+/*!
+ \brief     Log a error message with the specified format.
+ */
+- (void) logError:(NSString*)format, ... NS_FORMAT_FUNCTION(1, 2);
+
+/*!
+ \brief     Log a error message with the specified format.
+ */
+- (void) logError:(NSString*)format args:(va_list)args;
+
+/*!
+ \brief     Log a critical error message with the specified format.
+ */
+- (void) logCritical:(NSString*)format, ... NS_FORMAT_FUNCTION(1, 2);
+
+/*!
+ \brief     Log a critical error message with the specified format.
+ */
+- (void) logCritical:(NSString*)format args:(va_list)args;
+
+/*!
+ \brief     Log an alert message with the specified format.
+ */
+- (void) logAlert:(NSString*)format, ... NS_FORMAT_FUNCTION(1, 2);
+
+/*!
+ \brief     Log an alert message with the specified format.
+ */
+- (void) logAlert:(NSString*)format args:(va_list)args;
+
+/*!
+ \brief     Log an emergency message with the specified format.
+ \note      Emergency messages are written to the terminal of all logged in users.
+ */
+- (void) logEmergency:(NSString*)format, ... NS_FORMAT_FUNCTION(1, 2);
+
+/*!
+ \brief     Log an emergency message with the specified format.
+ \note      Emergency messages are written to the terminal of all logged in users.
+ */
+- (void) logEmergency:(NSString*)format args:(va_list)args;
 
 /*!
  \brief     Write log messages to the file at the specified path.

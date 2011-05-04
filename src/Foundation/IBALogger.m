@@ -199,4 +199,79 @@ IBA_SYNTHESIZE_SINGLETON_FOR_CLASS(IBALogger, sharedLogger)
     [self log:format level:ASL_LEVEL_NOTICE args:args];
 }
 
+/////////////////////////////////////////////////////////////////////////////////////////////////
+- (void) logWarning:(NSString*)format, ...
+{
+    va_list args;
+    va_start(args, format);
+    [self logWarning:format args:args];
+    va_end(args);
+}
+
+/////////////////////////////////////////////////////////////////////////////////////////////////
+- (void) logWarning:(NSString*)format args:(va_list)args
+{
+    [self log:format level:ASL_LEVEL_WARNING args:args];
+}
+
+/////////////////////////////////////////////////////////////////////////////////////////////////
+- (void) logError:(NSString*)format, ...
+{
+    va_list args;
+    va_start(args, format);
+    [self logError:format args:args];
+    va_end(args);
+}
+
+/////////////////////////////////////////////////////////////////////////////////////////////////
+- (void) logError:(NSString*)format args:(va_list)args
+{
+    [self log:format level:ASL_LEVEL_ERR args:args];
+}
+
+/////////////////////////////////////////////////////////////////////////////////////////////////
+- (void) logCritical:(NSString*)format, ...
+{
+    va_list args;
+    va_start(args, format);
+    [self logCritical:format args:args];
+    va_end(args);
+}
+
+/////////////////////////////////////////////////////////////////////////////////////////////////
+- (void) logCritical:(NSString*)format args:(va_list)args
+{
+    [self log:format level:ASL_LEVEL_CRIT args:args];
+}
+
+/////////////////////////////////////////////////////////////////////////////////////////////////
+- (void) logAlert:(NSString*)format, ...
+{
+    va_list args;
+    va_start(args, format);
+    [self logAlert:format args:args];
+    va_end(args);
+}
+
+/////////////////////////////////////////////////////////////////////////////////////////////////
+- (void) logAlert:(NSString*)format args:(va_list)args
+{
+    [self log:format level:ASL_LEVEL_ALERT args:args];
+}
+
+/////////////////////////////////////////////////////////////////////////////////////////////////
+- (void) logEmergency:(NSString*)format, ...
+{
+    va_list args;
+    va_start(args, format);
+    [self logEmergency:format args:args];
+    va_end(args);
+}
+
+/////////////////////////////////////////////////////////////////////////////////////////////////
+- (void) logEmergency:(NSString*)format args:(va_list)args
+{
+    [self log:format level:ASL_LEVEL_EMERG args:args];
+}
+
 @end
