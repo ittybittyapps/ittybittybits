@@ -19,6 +19,9 @@
 		A79602101373D49300BA29E5 /* IttyBittyBits.h in Headers */ = {isa = PBXBuildFile; fileRef = A796020F1373D49300BA29E5 /* IttyBittyBits.h */; };
 		A79602131373D50700BA29E5 /* IBAFoundation.h in Headers */ = {isa = PBXBuildFile; fileRef = A79602121373D50700BA29E5 /* IBAFoundation.h */; };
 		A79602151373D55800BA29E5 /* IBASecurity.h in Headers */ = {isa = PBXBuildFile; fileRef = A79602141373D55800BA29E5 /* IBASecurity.h */; };
+		A79602191373E46600BA29E5 /* IBARoundedRectPath.m in Sources */ = {isa = PBXBuildFile; fileRef = A79602171373E46600BA29E5 /* IBARoundedRectPath.m */; };
+		A796021A1373E46600BA29E5 /* IBARoundedRectPath.h in Headers */ = {isa = PBXBuildFile; fileRef = A79602181373E46600BA29E5 /* IBARoundedRectPath.h */; };
+		A796021C1373EAB000BA29E5 /* IBACoreGraphics.h in Headers */ = {isa = PBXBuildFile; fileRef = A796021B1373EAB000BA29E5 /* IBACoreGraphics.h */; };
 		A7B4DABD1367991200543D61 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7B4DABC1367991200543D61 /* Foundation.framework */; };
 		A7B4DACD13679F5E00543D61 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7B4DACC13679F5E00543D61 /* UIKit.framework */; };
 		A7B4DACE13679F5E00543D61 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7B4DABC1367991200543D61 /* Foundation.framework */; };
@@ -61,6 +64,9 @@
 		A796020F1373D49300BA29E5 /* IttyBittyBits.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IttyBittyBits.h; sourceTree = SOURCE_ROOT; };
 		A79602121373D50700BA29E5 /* IBAFoundation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IBAFoundation.h; path = Foundation/IBAFoundation.h; sourceTree = SOURCE_ROOT; };
 		A79602141373D55800BA29E5 /* IBASecurity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IBASecurity.h; path = Security/IBASecurity.h; sourceTree = SOURCE_ROOT; };
+		A79602171373E46600BA29E5 /* IBARoundedRectPath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = IBARoundedRectPath.m; path = CoreGraphics/IBARoundedRectPath.m; sourceTree = SOURCE_ROOT; };
+		A79602181373E46600BA29E5 /* IBARoundedRectPath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IBARoundedRectPath.h; path = CoreGraphics/IBARoundedRectPath.h; sourceTree = SOURCE_ROOT; };
+		A796021B1373EAB000BA29E5 /* IBACoreGraphics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IBACoreGraphics.h; path = CoreGraphics/IBACoreGraphics.h; sourceTree = SOURCE_ROOT; };
 		A7B4DAB91367991200543D61 /* libIttyBittyBits.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libIttyBittyBits.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7B4DABC1367991200543D61 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		A7B4DAC01367991200543D61 /* IttyBittyBits-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "IttyBittyBits-Prefix.pch"; sourceTree = "<group>"; };
@@ -124,6 +130,16 @@
 			path = Foundation;
 			sourceTree = "<group>";
 		};
+		A79602161373E41E00BA29E5 /* CoreGraphics */ = {
+			isa = PBXGroup;
+			children = (
+				A796021B1373EAB000BA29E5 /* IBACoreGraphics.h */,
+				A79602181373E46600BA29E5 /* IBARoundedRectPath.h */,
+				A79602171373E46600BA29E5 /* IBARoundedRectPath.m */,
+			);
+			path = CoreGraphics;
+			sourceTree = "<group>";
+		};
 		A7B4DAAE1367991100543D61 = {
 			isa = PBXGroup;
 			children = (
@@ -158,6 +174,7 @@
 		A7B4DABE1367991200543D61 /* Src */ = {
 			isa = PBXGroup;
 			children = (
+				A79602161373E41E00BA29E5 /* CoreGraphics */,
 				A7B4DAF31367BF8000543D61 /* Foundation */,
 				A7B4DB081367C4DE00543D61 /* Security */,
 				A7B4DABF1367991200543D61 /* Supporting Files */,
@@ -242,6 +259,8 @@
 				A79602101373D49300BA29E5 /* IttyBittyBits.h in Headers */,
 				A79602131373D50700BA29E5 /* IBAFoundation.h in Headers */,
 				A79602151373D55800BA29E5 /* IBASecurity.h in Headers */,
+				A796021A1373E46600BA29E5 /* IBARoundedRectPath.h in Headers */,
+				A796021C1373EAB000BA29E5 /* IBACoreGraphics.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -330,6 +349,7 @@
 				A791416C13711FC400209C96 /* IBATemporaryFile.m in Sources */,
 				A791416E1371370A00209C96 /* IBADebug.m in Sources */,
 				A7014AF813718C0300BE32D2 /* NSTimer+Blocks.m in Sources */,
+				A79602191373E46600BA29E5 /* IBARoundedRectPath.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

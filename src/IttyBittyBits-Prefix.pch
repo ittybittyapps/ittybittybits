@@ -3,6 +3,7 @@
 //
 
 #ifdef __OBJC__
+    #import <CoreGraphics/CoreGraphics.h>
     #import <Foundation/Foundation.h>
     #import <Security/Security.h>
     #import <UIKit/UIKit.h>
