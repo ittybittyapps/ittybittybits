@@ -21,7 +21,7 @@
 
 #import <CoreGraphics/CoreGraphics.h>
 
-#import "IBACommon.h"
+#import "../Foundation/IBACommon.h"
 
 IBA_EXTERN_C_BEGIN
 
@@ -32,7 +32,7 @@ IBA_EXTERN_C_BEGIN
  \param     radius
             Radius of the corners. \a radius is clamped internally to be no larger than the smaller of half \a rect's width or height
  */
-void GTMCGContextAddRoundRect(CGContextRef context, CGRect rect, CGFloat radius);
+void IBACGContextAddRoundRect(CGContextRef context, CGRect rect, CGFloat radius);
 
 /*!
  \brief     Adds a path which is a round rectangle inscribed inside of rectangle \a rect with a corner radius of \a radius.
@@ -45,7 +45,7 @@ void GTMCGContextAddRoundRect(CGContextRef context, CGRect rect, CGFloat radius)
  \param     radius
             Radius of the corners. \a radius is clamped internally to be no larger than the smaller of half \a rect's width or height.
  */
-void GTMCGPathAddRoundRect(CGMutablePathRef path,
+void IBACGPathAddRoundRect(CGMutablePathRef path,
                            const CGAffineTransform *m,
                            CGRect rect,
                            CGFloat radius);
