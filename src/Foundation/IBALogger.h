@@ -18,6 +18,7 @@
 //  limitations under the License.
 
 #import <Foundation/Foundation.h>
+#import "IBACommon.h"
 
 #import <asl.h>
 #import <dispatch/dispatch.h>
@@ -119,96 +120,96 @@
  \brief     Log a message with the specified level and format string.
  */
 - (void) log:(NSString*)format
-       level:(NSInteger)level, ... NS_FORMAT_FUNCTION(1, 3);
+       level:(NSInteger)level, ... IBA_FORMAT_FUNCTION(1, 3);
 
 /*!
  \brief     Log a message with the specified level and format string.
  */
 - (void) log:(NSString*)format
        level:(NSInteger)level
-        args:(va_list)args;
+        args:(va_list)args IBA_FORMAT_FUNCTION(1, 0);
 
 /*!
  \brief     Log a debug message with the specified format.
  */
-- (void) logDebug:(NSString*)format, ... NS_FORMAT_FUNCTION(1, 2);
+- (void) logDebug:(NSString*)format, ... IBA_FORMAT_FUNCTION(1, 2);
 
 /*!
  \brief     Log a debug message with the specified format.
  */
-- (void) logDebug:(NSString*)format args:(va_list)args;
+- (void) logDebug:(NSString*)format args:(va_list)args IBA_FORMAT_FUNCTION(1, 0);
 
 /*!
  \brief     Log an info message with the specified format.
  */
-- (void) logInfo:(NSString*)format, ... NS_FORMAT_FUNCTION(1, 2);
+- (void) logInfo:(NSString*)format, ... IBA_FORMAT_FUNCTION(1, 2);
 
 /*!
  \brief     Log an info message with the specified format.
  */
-- (void) logInfo:(NSString*)format args:(va_list)args;
+- (void) logInfo:(NSString*)format args:(va_list)args IBA_FORMAT_FUNCTION(1, 0);
 
 /*!
  \brief     Log a notice message with the specified format.
  */
-- (void) logNotice:(NSString*)format, ... NS_FORMAT_FUNCTION(1, 2);
+- (void) logNotice:(NSString*)format, ... IBA_FORMAT_FUNCTION(1, 2);
 
 /*!
  \brief     Log a notice message with the specified format.
  */
-- (void) logNotice:(NSString*)format args:(va_list)args;
+- (void) logNotice:(NSString*)format args:(va_list)args IBA_FORMAT_FUNCTION(1, 0);
 
 /*!
  \brief     Log a warning message with the specified format.
  */
-- (void) logWarning:(NSString*)format, ... NS_FORMAT_FUNCTION(1, 2);
+- (void) logWarning:(NSString*)format, ... IBA_FORMAT_FUNCTION(1, 2);
 
 /*!
  \brief     Log a warning message with the specified format.
  */
-- (void) logWarning:(NSString*)format args:(va_list)args;
+- (void) logWarning:(NSString*)format args:(va_list)args IBA_FORMAT_FUNCTION(1, 0);
 
 /*!
  \brief     Log a error message with the specified format.
  */
-- (void) logError:(NSString*)format, ... NS_FORMAT_FUNCTION(1, 2);
+- (void) logError:(NSString*)format, ... IBA_FORMAT_FUNCTION(1, 2);
 
 /*!
  \brief     Log a error message with the specified format.
  */
-- (void) logError:(NSString*)format args:(va_list)args;
+- (void) logError:(NSString*)format args:(va_list)args IBA_FORMAT_FUNCTION(1, 0);
 
 /*!
  \brief     Log a critical error message with the specified format.
  */
-- (void) logCritical:(NSString*)format, ... NS_FORMAT_FUNCTION(1, 2);
+- (void) logCritical:(NSString*)format, ... IBA_FORMAT_FUNCTION(1, 2);
 
 /*!
  \brief     Log a critical error message with the specified format.
  */
-- (void) logCritical:(NSString*)format args:(va_list)args;
+- (void) logCritical:(NSString*)format args:(va_list)args IBA_FORMAT_FUNCTION(1, 0);
 
 /*!
  \brief     Log an alert message with the specified format.
  */
-- (void) logAlert:(NSString*)format, ... NS_FORMAT_FUNCTION(1, 2);
+- (void) logAlert:(NSString*)format, ... IBA_FORMAT_FUNCTION(1, 2);
 
 /*!
  \brief     Log an alert message with the specified format.
  */
-- (void) logAlert:(NSString*)format args:(va_list)args;
+- (void) logAlert:(NSString*)format args:(va_list)args IBA_FORMAT_FUNCTION(1, 0);
 
 /*!
  \brief     Log an emergency message with the specified format.
  \note      Emergency messages are written to the terminal of all logged in users.
  */
-- (void) logEmergency:(NSString*)format, ... NS_FORMAT_FUNCTION(1, 2);
+- (void) logEmergency:(NSString*)format, ... IBA_FORMAT_FUNCTION(1, 2);
 
 /*!
  \brief     Log an emergency message with the specified format.
  \note      Emergency messages are written to the terminal of all logged in users.
  */
-- (void) logEmergency:(NSString*)format args:(va_list)args;
+- (void) logEmergency:(NSString*)format args:(va_list)args IBA_FORMAT_FUNCTION(1, 0);
 
 /*!
  \brief     Write log messages to the file at the specified path.

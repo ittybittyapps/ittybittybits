@@ -18,6 +18,7 @@
 //  limitations under the License.
 
 #import <Foundation/Foundation.h>
+#import "IBACommon.h"
 #import "IBALogger.h"
 
 /*!
@@ -34,10 +35,10 @@
 #define IBAAssertNotNilOrEmptyString(x) \
     NSAssert1((((x) != nil) && (![(x) isEqualToString: @""])), @"%@ can not be nil or empty", @#x)
 
-void ALogImpl(BOOL assert, const char* functionName, const char* filename, int line, NSString* format, ...);
+void ALogImpl(BOOL assert, const char* functionName, const char* filename, int line, NSString* format, ...) IBA_FORMAT_FUNCTION(5, 6);
 
 #ifndef NDEBUG
-    void DLogImpl(const char* functionName, NSString* format, ...);
+    void DLogImpl(const char* functionName, NSString* format, ...) IBA_FORMAT_FUNCTION(2, 3);
     #define DLog(format, ...) \
         DLogImpl(__PRETTY_FUNCTION__, format, ##__VA_ARGS__)
 
