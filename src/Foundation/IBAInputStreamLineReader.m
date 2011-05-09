@@ -37,6 +37,34 @@ const size_t kBufferSize = 4096;
 @synthesize linesEndWith;
 @synthesize stringEncoding;
 
+#pragma mark -
+#pragma mark Class Methods
+
+/////////////////////////////////////////////////////////////////////////////////////////////////
++ (id) readerWithInputStream:(NSInputStream*)inputStream 
+        linesEndingWith:(NSString*)lineEnding 
+               encoding:(NSStringEncoding)encoding
+{
+    return [[[self alloc] initWithStream:inputStream linesEndingWith:lineEnding encoding:encoding] autorelease];
+}
+
+/////////////////////////////////////////////////////////////////////////////////////////////////
++ (id) readerWithInputStream:(NSInputStream*)inputStream
+{
+    return [[[self alloc] initWithStream:inputStream] autorelease];
+}
+
+
+#pragma mark - 
+#pragma mark Instance Methods
+
+/////////////////////////////////////////////////////////////////////////////////////////////////
+- (id) initWithStream:(NSInputStream*)anInputStream 
+{
+    return [self initWithStream:anInputStream linesEndingWith:@"\n" encoding:NSUTF8StringEncoding];
+}
+
+
 /////////////////////////////////////////////////////////////////////////////////////////////////
 - (id) initWithStream:(NSInputStream*)anInputStream 
       linesEndingWith:(NSString*)lineEnding 
