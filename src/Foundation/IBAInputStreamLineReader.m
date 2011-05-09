@@ -114,10 +114,10 @@ const size_t kBufferSize = 4096;
     
     if ([self.characterBuffer length] > 0)
     {
-        NSArray* components = [self.characterBuffer componentsSeparatedByString:self.linesEndWith];
-        if ([components count] > 1 || ([components count] == 1 && requireLineEnding == NO))
+        NSRange lineEnding = [self.characterBuffer rangeOfString:self.linesEndWith];
+        if (lineEnding.location != NSNotFound || (lineEnding.location == NSNotFound && requireLineEnding == NO))
         {
-            fetchedLine = [components objectAtIndex:0];
+            fetchedLine = [self.characterBuffer substringWithRange:NSMakeRange(0, MIN(lineEnding.location, [self.characterBuffer length]))];
         }
     }
     
