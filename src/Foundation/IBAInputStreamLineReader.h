@@ -9,8 +9,14 @@
 #import <Foundation/Foundation.h>
 
 
-@interface IBALineInputStream : NSInputStream {
-    
+@interface IBAInputStreamLineReader : NSObject {
 }
+
+- (id) initWithStream:(NSInputStream*)inputStream 
+      linesEndingWith:(NSString*)lineEnding 
+             encoding:(NSStringEncoding)encoding;
+
+
+- (NSInteger) readLine:(NSString**)line;
 
 @end
