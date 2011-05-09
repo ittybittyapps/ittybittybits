@@ -29,7 +29,7 @@
 
 /*!
  \brief     Create a temporary file instance given the specified filename template.
- \param     filenameTemplate    The filename template in the form of "tmp.XXXXXX", the X characters will be replaced with random characters.  No characters can come after the X characters.
+ \param     filenameTemplate    The filename template in the form of "tmp.XXXXXX", the X characters will be replaced with random characters.  Note that no characters can come after the X characters in the template.
  \return    The allocated instance (autoreleased).
  */
 + (IBATemporaryFile*) temporaryFileWithTemplate:(NSString*)filenameTemplate;
@@ -37,7 +37,7 @@
 /*!
  \brief     Initialize the instance with the specified filename template.
  \details   Once the instance has been initialized the handle property will be non-nil and a temporary file will have been created matching the specified template.
- \param     filenameTemplate    The filename template in the form of "tmpXXXXXXsuffix", the X characters will be replaced with random characters.
+ \param     filenameTemplate    The filename template in the form of "tmp.XXXXXX", the X characters will be replaced with random characters. Note that no characters can come after the X characters in the template.
  */
 - (id) initWithFilenameTemplate:(NSString*)filenameTemplate;
 
