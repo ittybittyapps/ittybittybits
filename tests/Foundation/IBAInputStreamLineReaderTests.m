@@ -23,26 +23,22 @@
 
 @implementation IBAInputStreamLineReaderTests
 
-
-
-+ (NSInputStream*) newInputStreamReaderWithCharacters:(const char*)data lineEnding:(NSString*)lineEnding encoding:(NSStringEncoding)encoding
++ (NSInputStream*) InputStreamWithCharacters:(const char*)data 
 {
-    NSData* testData = [NSData dataWithBytes:data length:(sizeof(char) * strlen(data))];
-    NSInputStream* inputStream = [[NSInputStream alloc] initWithData:testData];
+    NSData* testData = [[NSData alloc] initWithBytes:data length:(sizeof(char) * strlen(data))];
+    
+    NSInputStream* inputStream = [[[NSInputStream alloc] initWithData:testData] autorelease];
     [inputStream scheduleInRunLoop:[NSRunLoop mainRunLoop] forMode:NSDefaultRunLoopMode];
     [inputStream open];
-    
-    return [[IBAInputStreamLineReader alloc] initWithStream:inputStream 
-                                            linesEndingWith:lineEnding
-                                                   encoding:encoding];
+    [testData release];
 
+    return inputStream;
 }
 
 + (void)closeInputStream:(NSInputStream*)stream
 {
     [stream removeFromRunLoop:[NSRunLoop currentRunLoop] forMode:NSDefaultRunLoopMode];
     [stream close];
-
 }
 
 // Run before each test method
@@ -59,9 +55,13 @@
 
 - (void)testStreamReaderMultipleLines 
 {
-    IBAInputStreamLineReader* reader = [[[self class] newInputStreamReaderWithCharacters:"line1\nline2\n\nline4" 
-                                                                              lineEnding:@"\n" 
-                                                                                encoding:NSUTF8StringEncoding] autorelease];
+    NSString* lineEnding = @"\n";
+    const char* characters = "line1\nline2\n\nline4";
+    
+    NSInputStream* inputStream = [[self class] InputStreamWithCharacters:characters];
+    IBAInputStreamLineReader* reader = [[[IBAInputStreamLineReader alloc] initWithStream:inputStream 
+                                                                         linesEndingWith:lineEnding
+                                                                                encoding:NSUTF8StringEncoding]                                                                               autorelease];
     
     NSString* line = nil;
     
@@ -80,13 +80,18 @@
     GHAssertEquals([reader readLine:&line], 0, @"");    
     GHAssertNil(line, @"");    
     
+    [[self class] closeInputStream:inputStream];
 }
 
 - (void)testStreamReaderWindowsLineEndings
 {
-    IBAInputStreamLineReader* reader = [[[self class] newInputStreamReaderWithCharacters:"line1\r\nline2\r\n\r\nline4\r\n"
-                                                                              lineEnding:@"\r\n" 
-                                                                                encoding:NSUTF8StringEncoding] autorelease];
+    NSString* lineEnding = @"\r\n";
+    const char* characters = "line1\r\nline2\r\n\r\nline4\r\n";
+    
+    NSInputStream* inputStream = [[self class] InputStreamWithCharacters:characters];
+    IBAInputStreamLineReader* reader = [[[IBAInputStreamLineReader alloc] initWithStream:inputStream 
+                                                                         linesEndingWith:lineEnding
+                                                                                encoding:NSUTF8StringEncoding]                                                                               autorelease];
     
     NSString* line = nil;
     
@@ -103,15 +108,20 @@
     GHAssertEqualStrings(line, @"line4", @"");
     
     GHAssertEquals([reader readLine:&line], 0, @"");    
-    GHAssertNil(line, @"");    
+    GHAssertNil(line, @"");   
     
+    [[self class] closeInputStream:inputStream];
 }
 
 - (void)testStreamReaderSingleLineNoLineEnding
 {
-    IBAInputStreamLineReader* reader = [[[self class] newInputStreamReaderWithCharacters:"line1"
-                                                                              lineEnding:@"\n" 
-                                                                                encoding:NSUTF8StringEncoding] autorelease];
+    NSString* lineEnding = @"\n";
+    const char* characters = "line1";
+    
+    NSInputStream* inputStream = [[self class] InputStreamWithCharacters:characters];
+    IBAInputStreamLineReader* reader = [[[IBAInputStreamLineReader alloc] initWithStream:inputStream 
+                                                                         linesEndingWith:lineEnding
+                                                                                encoding:NSUTF8StringEncoding]                                                                               autorelease];
     
     NSString* line = nil;
     
@@ -121,13 +131,17 @@
     GHAssertEquals([reader readLine:&line], 0, @"readLine should return 0 as there is no more data in stream");    
     GHAssertNil(line, @"returned line should be nil");   
    
-    
+    [[self class] closeInputStream:inputStream];
 }
 
 - (void)testStreamReaderSingleLineWithLineEnding
 {
-    IBAInputStreamLineReader* reader = [[[self class] newInputStreamReaderWithCharacters:"line1\n"
-                                                                              lineEnding:@"\n" 
+    NSString* lineEnding = @"\n";
+    const char* characters = "line1\n";
+    
+    NSInputStream* inputStream = [[self class] InputStreamWithCharacters:characters];
+    IBAInputStreamLineReader* reader = [[[IBAInputStreamLineReader alloc] initWithStream:inputStream 
+                                                                         linesEndingWith:lineEnding
                                                                                 encoding:NSUTF8StringEncoding] autorelease];
     
     NSString* line = nil;
@@ -137,24 +151,36 @@
     
     GHAssertEquals([reader readLine:&line], 0, @"readLine should return 0 as there is no more data in stream");    
     GHAssertNil(line, @"returned line should be nil");   
+
+    [[self class] closeInputStream:inputStream];
 }
 
 - (void)testStreamReaderEmptyLineNoLineEnding
 {
-    IBAInputStreamLineReader* reader = [[[self class] newInputStreamReaderWithCharacters:""
-                                                                              lineEnding:@"\n" 
+    NSString* lineEnding = @"\n";
+    const char* characters = "";
+    
+    NSInputStream* inputStream = [[self class] InputStreamWithCharacters:characters];
+    IBAInputStreamLineReader* reader = [[[IBAInputStreamLineReader alloc] initWithStream:inputStream 
+                                                                         linesEndingWith:lineEnding
                                                                                 encoding:NSUTF8StringEncoding] autorelease];
     
     NSString* line = nil;
     
     GHAssertEquals([reader readLine:&line], 0, @"readLine should return 0 as there is no data in stream");    
     GHAssertNil(line, @"returned line should be nil");
+
+    [[self class] closeInputStream:inputStream];
 }
 
 - (void)testStreamReaderEmptyLineWithLineEnding
 {
-    IBAInputStreamLineReader* reader = [[[self class] newInputStreamReaderWithCharacters:"\n"
-                                                                              lineEnding:@"\n" 
+    NSString* lineEnding = @"\n";
+    const char* characters = "\n";
+    
+    NSInputStream* inputStream = [[self class] InputStreamWithCharacters:characters];
+    IBAInputStreamLineReader* reader = [[[IBAInputStreamLineReader alloc] initWithStream:inputStream 
+                                                                         linesEndingWith:lineEnding
                                                                                 encoding:NSUTF8StringEncoding] autorelease];
     
     NSString* line = nil;
@@ -164,6 +190,8 @@
     
     GHAssertEquals([reader readLine:&line], 0, @"readLine should return 0 as there is no more data in stream");    
     GHAssertNil(line, @"returned line should be nil");
+
+    [[self class] closeInputStream:inputStream];
 }
 
 - (void)testStreamReaderWithALotOfLines
@@ -174,8 +202,10 @@
         [bigString appendString:@"line\nline\nline\nline\nline\nline\nline\nline\nline\nline\n"];
     }
     
-    IBAInputStreamLineReader* reader = [[[self class] newInputStreamReaderWithCharacters:[bigString UTF8String]
-                                                                              lineEnding:@"\n" 
+    NSString* lineEnding = @"\n";
+    NSInputStream* inputStream = [[self class] InputStreamWithCharacters:[bigString UTF8String]];
+    IBAInputStreamLineReader* reader = [[[IBAInputStreamLineReader alloc] initWithStream:inputStream 
+                                                                         linesEndingWith:lineEnding
                                                                                 encoding:NSUTF8StringEncoding] autorelease];
     
     NSString* line = nil;
@@ -188,6 +218,8 @@
     
     GHAssertEquals([reader readLine:&line], 0, @"readLine should return 0 as there is no more data in stream");    
     GHAssertNil(line, @"returned line should be nil");
+    
+    [[self class] closeInputStream:inputStream];
 }
 
 @end
