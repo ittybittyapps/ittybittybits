@@ -23,7 +23,7 @@
 
 @implementation IBAInputStreamLineReaderTests
 
-+ (NSInputStream*) InputStreamWithCharacters:(const char*)data 
++ (NSInputStream*) inputStreamWithCharacters:(const char*)data 
 {
     NSData* testData = [[NSData alloc] initWithBytes:data length:(sizeof(char) * strlen(data))];
     
@@ -58,7 +58,7 @@
     NSString* lineEnding = @"\n";
     const char* characters = "line1\nline2\n\nline4";
     
-    NSInputStream* inputStream = [[self class] InputStreamWithCharacters:characters];
+    NSInputStream* inputStream = [[self class] inputStreamWithCharacters:characters];
     IBAInputStreamLineReader* reader = [[[IBAInputStreamLineReader alloc] initWithStream:inputStream 
                                                                          linesEndingWith:lineEnding
                                                                                 encoding:NSUTF8StringEncoding]                                                                               autorelease];
@@ -88,7 +88,7 @@
     NSString* lineEnding = @"\r\n";
     const char* characters = "line1\r\nline2\r\n\r\nline4\r\n";
     
-    NSInputStream* inputStream = [[self class] InputStreamWithCharacters:characters];
+    NSInputStream* inputStream = [[self class] inputStreamWithCharacters:characters];
     IBAInputStreamLineReader* reader = [[[IBAInputStreamLineReader alloc] initWithStream:inputStream 
                                                                          linesEndingWith:lineEnding
                                                                                 encoding:NSUTF8StringEncoding]                                                                               autorelease];
@@ -118,7 +118,7 @@
     NSString* lineEnding = @"\n";
     const char* characters = "line1";
     
-    NSInputStream* inputStream = [[self class] InputStreamWithCharacters:characters];
+    NSInputStream* inputStream = [[self class] inputStreamWithCharacters:characters];
     IBAInputStreamLineReader* reader = [[[IBAInputStreamLineReader alloc] initWithStream:inputStream 
                                                                          linesEndingWith:lineEnding
                                                                                 encoding:NSUTF8StringEncoding]                                                                               autorelease];
@@ -139,7 +139,7 @@
     NSString* lineEnding = @"\n";
     const char* characters = "line1\n";
     
-    NSInputStream* inputStream = [[self class] InputStreamWithCharacters:characters];
+    NSInputStream* inputStream = [[self class] inputStreamWithCharacters:characters];
     IBAInputStreamLineReader* reader = [[[IBAInputStreamLineReader alloc] initWithStream:inputStream 
                                                                          linesEndingWith:lineEnding
                                                                                 encoding:NSUTF8StringEncoding] autorelease];
@@ -160,7 +160,7 @@
     NSString* lineEnding = @"\n";
     const char* characters = "";
     
-    NSInputStream* inputStream = [[self class] InputStreamWithCharacters:characters];
+    NSInputStream* inputStream = [[self class] inputStreamWithCharacters:characters];
     IBAInputStreamLineReader* reader = [[[IBAInputStreamLineReader alloc] initWithStream:inputStream 
                                                                          linesEndingWith:lineEnding
                                                                                 encoding:NSUTF8StringEncoding] autorelease];
@@ -178,7 +178,7 @@
     NSString* lineEnding = @"\n";
     const char* characters = "\n";
     
-    NSInputStream* inputStream = [[self class] InputStreamWithCharacters:characters];
+    NSInputStream* inputStream = [[self class] inputStreamWithCharacters:characters];
     IBAInputStreamLineReader* reader = [[[IBAInputStreamLineReader alloc] initWithStream:inputStream 
                                                                          linesEndingWith:lineEnding
                                                                                 encoding:NSUTF8StringEncoding] autorelease];
@@ -203,7 +203,7 @@
     }
     
     NSString* lineEnding = @"\n";
-    NSInputStream* inputStream = [[self class] InputStreamWithCharacters:[bigString UTF8String]];
+    NSInputStream* inputStream = [[self class] inputStreamWithCharacters:[bigString UTF8String]];
     IBAInputStreamLineReader* reader = [[[IBAInputStreamLineReader alloc] initWithStream:inputStream 
                                                                          linesEndingWith:lineEnding
                                                                                 encoding:NSUTF8StringEncoding] autorelease];
