@@ -28,6 +28,17 @@
 @implementation IBADelimitedTextFileReader
 
 #pragma mark -
+#pragma mark Class Methods
+
+/////////////////////////////////////////////////////////////////////////////////////////////////
++ (IBADelimitedTextFileReader*) tabDelimitedTextFileReaderWithColumnHeaders:(BOOL)hasColumnHeaders
+{
+    return [[[IBADelimitedTextFileReader alloc] initWithFieldDelimiter:@"\t" 
+                                                       recordDelimiter:@"\n" 
+                                                      hasColumnHeaders:hasColumnHeaders] autorelease];
+}
+
+#pragma mark -
 #pragma mark Instance Methods
 
 @synthesize hasColumnHeaders;
@@ -85,6 +96,7 @@
     NSInteger columnCount = [self.columnNames count];
     
     while ([lineReader readLine:&line])
+    while ([lineReader readLine:&line] > 0)
     {
         NSArray* fields = [line componentsSeparatedByString:self.fieldDelimiter];
         NSInteger fieldCount = [fields count];
@@ -123,11 +135,29 @@
 {
     IBAAssertNotNilOrEmptyString(path);
 
+    NSRunLoop* runLoop = [NSRunLoop currentRunLoop];
     
     NSData* fileData = [NSData dataWithContentsOfMappedFile:path];
     NSInputStream* stream = [[NSInputStream alloc] initWithData:fileData];
+    [stream scheduleInRunLoop:runLoop forMode:NSDefaultRunLoopMode];
+    [stream open];
+
     [self readRecordsFromStream:stream delegate:delegate];
+    
+    [stream removeFromRunLoop:runLoop forMode:NSDefaultRunLoopMode];
+    [stream close];
     [stream release];
 }
+
+/////////////////////////////////////////////////////////////////////////////////////////////////
+- (void) readRecordsFromFile:(NSString*)path
+                  usingBlock:(IBADelimitedTextFileReaderDidReadRecordBlock)block
+{
+    IBADelimitedTextFileReaderDelegateBlockAdapter* adapter = [[IBADelimitedTextFileReaderDelegateBlockAdapter alloc] initWithDidReadRecordBlock:block];
+    
+    [self readRecordsFromFile:path delegate:adapter];
+    [adapter release];
+}
+
 
 @end

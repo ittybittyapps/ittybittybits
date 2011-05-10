@@ -20,7 +20,7 @@
 
 #import <Foundation/Foundation.h>
 
-#import "IBADelimitedTestFileReaderDelegate.h"
+#import "IBADelimitedTextFileReaderDelegate.h"
 
 
 /*!
@@ -30,6 +30,14 @@
 @interface IBADelimitedTextFileReader : NSObject {
     
 }
+
+/*!
+ \brief     Factory method that creates a tab delimited text file reader.
+ \details   The fieldDelimiter is set to the tab character (\\t) and the recordDelimiter set to the new-line character (\\n).
+ \param     hasColumnHeaders
+            A value indicating whether the file has a column header row as the first row of the file.
+ */
++ (IBADelimitedTextFileReader*) tabDelimitedTextFileReaderWithColumnHeaders:(BOOL)hasColumnHeaders;
 
 /*!
  \brief     Gets or sets a value indicating whether the first record of the delimited text file is the column headers.  Defaults to NO.
@@ -70,5 +78,9 @@
 
 - (void) readRecordsFromFile:(NSString*)path 
                     delegate:(id<IBADelimitedTextFileReaderDelegate>)delegate;
+
+- (void) readRecordsFromFile:(NSString*)path
+                  usingBlock:(IBADelimitedTextFileReaderDidReadRecordBlock)block;
+
 
 @end

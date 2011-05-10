@@ -35,4 +35,23 @@
  */
 - (void) didReadColumnHeaders:(NSArray*)columnHeaders;
 
-@end//
+@end
+
+typedef void (^IBADelimitedTextFileReaderDidReadRecordBlock)(NSDictionary*);
+typedef void (^IBADelimitedTextFileReaderDidReadColumnHeadersBlock)(NSArray*);
+
+
+/*!
+ \brief     An adapter that lets you use blocks to service IBADelimitedTextFileReaderDelegate callbacks.
+ */
+@interface IBADelimitedTextFileReaderDelegateBlockAdapter : NSObject<IBADelimitedTextFileReaderDelegate>
+{
+@private
+    IBADelimitedTextFileReaderDidReadRecordBlock didReadRecordBlock;
+    IBADelimitedTextFileReaderDidReadColumnHeadersBlock didReadColumnHeaders;
+}
+
+- (id) initWithDidReadRecordBlock:(IBADelimitedTextFileReaderDidReadRecordBlock)block;
+
+@end
+
