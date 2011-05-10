@@ -17,7 +17,7 @@ const size_t kBufferSize = 4096;
 @property (nonatomic, assign) BOOL eofReached;
 @property (nonatomic, assign) BOOL errorOccured;
 @property (nonatomic, retain) NSInputStream* inputStream;
-@property (nonatomic, retain) NSMutableString* characterBuffer;
+@property (nonatomic, retain) NSMutableData* lineBuffer;
 @property (nonatomic, retain) NSString* linesEndWith;
 @property (nonatomic, assign) NSStringEncoding stringEncoding;
 
@@ -33,7 +33,7 @@ const size_t kBufferSize = 4096;
 @synthesize eofReached;
 @synthesize errorOccured;
 @synthesize inputStream;
-@synthesize characterBuffer;
+@synthesize lineBuffer;
 @synthesize linesEndWith;
 @synthesize stringEncoding;
 
@@ -78,7 +78,7 @@ const size_t kBufferSize = 4096;
         self.stringEncoding = encoding;
         self.inputStream = anInputStream;
         self.linesEndWith = lineEnding;
-        self.characterBuffer = [[NSMutableString alloc] initWithCapacity:kBufferSize * 2];
+        self.lineBuffer = [[NSMutableData alloc] initWithCapacity:kBufferSize * 2];
     }
     
     return self;
@@ -89,7 +89,7 @@ const size_t kBufferSize = 4096;
 {
     self.inputStream = nil;
     self.linesEndWith = nil;
-    self.characterBuffer = nil;
+    self.lineBuffer = nil;
     
     [super dealloc];
 }
@@ -140,20 +140,25 @@ const size_t kBufferSize = 4096;
 {
     NSString* fetchedLine = nil;
     
-    if ([self.characterBuffer length] > 0)
+    if ([self.lineBuffer length] > 0)
     {
-        NSRange lineEnding = [self.characterBuffer rangeOfString:self.linesEndWith];
+        NSString* bufferAsString = [[NSString alloc] initWithData:self.lineBuffer encoding:NSUTF8StringEncoding];
+        NSRange lineEnding = [bufferAsString rangeOfString:self.linesEndWith];
         if (lineEnding.location != NSNotFound || (lineEnding.location == NSNotFound && requireLineEnding == NO))
         {
-            fetchedLine = [self.characterBuffer substringWithRange:NSMakeRange(0, MIN(lineEnding.location, [self.characterBuffer length]))];
+            fetchedLine = [bufferAsString substringWithRange:NSMakeRange(0, MIN(lineEnding.location, [bufferAsString length]))];
         }
+        
+        IBA_RELEASE(bufferAsString);
     }
     
     if (fetchedLine)
     {
-        // remove the fetched line from the beginning of the buffer
-        NSRange lineRange = NSMakeRange(0, MIN([self.characterBuffer length], [fetchedLine length] + [self.linesEndWith length]));
-        [self.characterBuffer deleteCharactersInRange:lineRange];
+        // remove the fetched line from the beginning of the line buffer
+        int fetchedLineBytes = [fetchedLine lengthOfBytesUsingEncoding:NSUTF8StringEncoding] + [self.linesEndWith lengthOfBytesUsingEncoding:NSUTF8StringEncoding];
+        
+        CFRange lineRange = CFRangeMake(0, MIN([self.lineBuffer length], fetchedLineBytes));
+        CFDataDeleteBytes((CFMutableDataRef)self.lineBuffer, lineRange);
     }
     
     return fetchedLine;
@@ -169,18 +174,15 @@ const size_t kBufferSize = 4096;
         
     // The lineBuffer does not contain a substring terminated with lineEnding, so append more to the buffer.
     uint8_t buffer[kBufferSize];
-    
+   
     // read bufferSize - 1 to leave space for the null terminator.
     NSInteger bytesRead = [self.inputStream read:buffer maxLength:kBufferSize-1];
     if (bytesRead > 0){
         // null terminate the buffer
         buffer[bytesRead] = 0;
-        
-        // convert the buffer to an NSString
-        NSString* bufferAsString = [NSString stringWithCString:(const char*)buffer encoding:self.stringEncoding];
-        
-        // append the read string to the current line buffer
-        [self.characterBuffer appendString:bufferAsString];
+
+        // append the read data to the current character buffer
+        [self.lineBuffer appendBytes:buffer length:bytesRead];
     }
     else
     {                    
@@ -198,7 +200,7 @@ const size_t kBufferSize = 4096;
 /////////////////////////////////////////////////////////////////////////////////////////////////
 - (BOOL) lineBufferIsEmptyAndEndOfFile
 {
-    return (self.eofReached || self.errorOccured) && [self.characterBuffer length] == 0;
+    return (self.eofReached || self.errorOccured) && [self.lineBuffer length] == 0;
 }
 
 /////////////////////////////////////////////////////////////////////////////////////////////////
