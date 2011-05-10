@@ -1,8 +1,8 @@
 //
-//  IBAFoundation.h
+//  IBAMath.h
 //  IttyBittyBits
 //
-//  Created by Oliver Jones on 6/05/11.
+//  Created by Oliver Jones on 10/05/11.
 //  Copyright 2011 Itty Bitty Apps Pty. Ltd. All rights reserved.
 //
 //  Licensed under the Apache License, Version 2.0 (the "License");
@@ -17,14 +17,14 @@
 //  See the License for the specific language governing permissions and
 //  limitations under the License.
 
-#import "IBACommon.h"
-#import "IBADebug.h"
-#import "IBADelimitedTextFileReader.h"
-#import "IBAInputStreamLineReader.h"
-#import "IBALogger.h"
-#import "IBAMath.h"
-#import "IBASynthesizeSingleton.h"
-#import "IBATemporaryFile.h"
-#import "NSArray+Whitespace.h"
-#import "NSString+Whitespace.h"
-#import "NSTimer+Blocks.h"
+/*!
+ \def       IBA_DEG_TO_RAD
+ \brief     Macro to convert degrees to radians.
+ */
+#define IBA_DEG_TO_RAD(x) ((x) * (M_PI/180.0f))
+
+/*!
+ \def       IBA_RAD_TO_DEG
+ \brief     Macro to convert radians to degrees.
+ */
+#define IBA_RAD_TO_DEG(x) ((x) * (180.0f/M_PI))

@@ -48,6 +48,7 @@
 		A7D58C591378CFAA0041BBEB /* NSArray+Whitespace.h in Headers */ = {isa = PBXBuildFile; fileRef = A7D58C571378CFA80041BBEB /* NSArray+Whitespace.h */; };
 		A7D58C5A1378CFAA0041BBEB /* NSArray+Whitespace.m in Sources */ = {isa = PBXBuildFile; fileRef = A7D58C581378CFA90041BBEB /* NSArray+Whitespace.m */; };
 		A7D58C5C1378DAE40041BBEB /* IBADelimitedTextFileReaderDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A7D58C5B1378DAE30041BBEB /* IBADelimitedTextFileReaderDelegate.m */; };
+		A7D58C6013792D970041BBEB /* IBAMath.h in Headers */ = {isa = PBXBuildFile; fileRef = A7D58C5F13792D960041BBEB /* IBAMath.h */; };
 		A7FB6B5C137148DC0088C4CD /* IBACommon.h in Headers */ = {isa = PBXBuildFile; fileRef = A7FB6B5B137148DC0088C4CD /* IBACommon.h */; };
 /* End PBXBuildFile section */
 
@@ -109,6 +110,7 @@
 		A7D58C571378CFA80041BBEB /* NSArray+Whitespace.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSArray+Whitespace.h"; path = "Foundation/NSArray+Whitespace.h"; sourceTree = SOURCE_ROOT; };
 		A7D58C581378CFA90041BBEB /* NSArray+Whitespace.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSArray+Whitespace.m"; path = "Foundation/NSArray+Whitespace.m"; sourceTree = SOURCE_ROOT; };
 		A7D58C5B1378DAE30041BBEB /* IBADelimitedTextFileReaderDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = IBADelimitedTextFileReaderDelegate.m; path = Foundation/IBADelimitedTextFileReaderDelegate.m; sourceTree = SOURCE_ROOT; };
+		A7D58C5F13792D960041BBEB /* IBAMath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IBAMath.h; path = Foundation/IBAMath.h; sourceTree = SOURCE_ROOT; };
 		A7FB6B5B137148DC0088C4CD /* IBACommon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IBACommon.h; path = Foundation/IBACommon.h; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
@@ -259,6 +261,7 @@
 				A707FD7A13777B280029FA76 /* IBAInputStreamLineReader.m */,
 				A791415E136FD62200209C96 /* IBALogger.h */,
 				A791415F136FD62200209C96 /* IBALogger.m */,
+				A7D58C5F13792D960041BBEB /* IBAMath.h */,
 				A7B4DAF51367BFEB00543D61 /* IBASynthesizeSingleton.h */,
 				A791416913711FC400209C96 /* IBATemporaryFile.h */,
 				A791416A13711FC400209C96 /* IBATemporaryFile.m */,
@@ -306,6 +309,7 @@
 				A707FD7B13777B280029FA76 /* IBAInputStreamLineReader.h in Headers */,
 				A7D58C541378BF440041BBEB /* NSString+Whitespace.h in Headers */,
 				A7D58C591378CFAA0041BBEB /* NSArray+Whitespace.h in Headers */,
+				A7D58C6013792D970041BBEB /* IBAMath.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
