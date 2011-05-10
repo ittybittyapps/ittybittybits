@@ -24,5 +24,6 @@
 #import "IBALogger.h"
 #import "IBASynthesizeSingleton.h"
 #import "IBATemporaryFile.h"
+#import "NSArray+Whitespace.h"
 #import "NSString+Whitespace.h"
 #import "NSTimer+Blocks.h"
