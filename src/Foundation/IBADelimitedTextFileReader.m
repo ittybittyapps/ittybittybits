@@ -95,7 +95,6 @@
     NSString* line = nil;
     NSInteger columnCount = [self.columnNames count];
     
-    while ([lineReader readLine:&line])
     while ([lineReader readLine:&line] > 0)
     {
         NSArray* fields = [line componentsSeparatedByString:self.fieldDelimiter];
