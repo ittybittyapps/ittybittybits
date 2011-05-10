@@ -43,6 +43,8 @@
 		A7B4DB0F1367C5F900543D61 /* IBADebug.h in Headers */ = {isa = PBXBuildFile; fileRef = A7B4DB0D1367C5F900543D61 /* IBADebug.h */; };
 		A7B4DB121367C65B00543D61 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7B4DB111367C65B00543D61 /* Security.framework */; };
 		A7B4DB171367C70D00543D61 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7B4DB111367C65B00543D61 /* Security.framework */; };
+		A7D58C541378BF440041BBEB /* NSString+Whitespace.h in Headers */ = {isa = PBXBuildFile; fileRef = A7D58C521378BF440041BBEB /* NSString+Whitespace.h */; };
+		A7D58C551378BF440041BBEB /* NSString+Whitespace.m in Sources */ = {isa = PBXBuildFile; fileRef = A7D58C531378BF440041BBEB /* NSString+Whitespace.m */; };
 		A7FB6B5C137148DC0088C4CD /* IBACommon.h in Headers */ = {isa = PBXBuildFile; fileRef = A7FB6B5B137148DC0088C4CD /* IBACommon.h */; };
 /* End PBXBuildFile section */
 
@@ -99,6 +101,8 @@
 		A7B4DB0A1367C52600543D61 /* IBAKeychainUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = IBAKeychainUtils.m; path = Security/IBAKeychainUtils.m; sourceTree = SOURCE_ROOT; };
 		A7B4DB0D1367C5F900543D61 /* IBADebug.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IBADebug.h; path = Foundation/IBADebug.h; sourceTree = SOURCE_ROOT; };
 		A7B4DB111367C65B00543D61 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		A7D58C521378BF440041BBEB /* NSString+Whitespace.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString+Whitespace.h"; path = "Foundation/NSString+Whitespace.h"; sourceTree = SOURCE_ROOT; };
+		A7D58C531378BF440041BBEB /* NSString+Whitespace.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+Whitespace.m"; path = "Foundation/NSString+Whitespace.m"; sourceTree = SOURCE_ROOT; };
 		A7FB6B5B137148DC0088C4CD /* IBACommon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IBACommon.h; path = Foundation/IBACommon.h; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
@@ -240,6 +244,8 @@
 				A7FB6B5B137148DC0088C4CD /* IBACommon.h */,
 				A7B4DB0D1367C5F900543D61 /* IBADebug.h */,
 				A791416D1371370A00209C96 /* IBADebug.m */,
+				A707FD72137761570029FA76 /* IBADelimitedTextFileReader.h */,
+				A707FD73137761570029FA76 /* IBADelimitedTextFileReader.m */,
 				A79602121373D50700BA29E5 /* IBAFoundation.h */,
 				A707FD7913777B280029FA76 /* IBAInputStreamLineReader.h */,
 				A707FD7A13777B280029FA76 /* IBAInputStreamLineReader.m */,
@@ -250,9 +256,9 @@
 				A791416A13711FC400209C96 /* IBATemporaryFile.m */,
 				A7014AF513718C0300BE32D2 /* NSTimer+Blocks.h */,
 				A7014AF613718C0300BE32D2 /* NSTimer+Blocks.m */,
-				A707FD72137761570029FA76 /* IBADelimitedTextFileReader.h */,
-				A707FD73137761570029FA76 /* IBADelimitedTextFileReader.m */,
 				A707FD77137776AB0029FA76 /* IBADelimitedTextFileReaderDelegate.h */,
+				A7D58C521378BF440041BBEB /* NSString+Whitespace.h */,
+				A7D58C531378BF440041BBEB /* NSString+Whitespace.m */,
 			);
 			path = Foundation;
 			sourceTree = "<group>";
@@ -289,6 +295,7 @@
 				A707FD74137761570029FA76 /* IBADelimitedTextFileReader.h in Headers */,
 				A707FD78137776AB0029FA76 /* IBADelimitedTextFileReaderDelegate.h in Headers */,
 				A707FD7B13777B280029FA76 /* IBAInputStreamLineReader.h in Headers */,
+				A7D58C541378BF440041BBEB /* NSString+Whitespace.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -380,6 +387,7 @@
 				A79602191373E46600BA29E5 /* IBARoundedRectPath.m in Sources */,
 				A707FD75137761570029FA76 /* IBADelimitedTextFileReader.m in Sources */,
 				A707FD7C13777B280029FA76 /* IBAInputStreamLineReader.m in Sources */,
+				A7D58C551378BF440041BBEB /* NSString+Whitespace.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
