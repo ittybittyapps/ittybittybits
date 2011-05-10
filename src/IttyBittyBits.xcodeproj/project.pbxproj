@@ -45,6 +45,8 @@
 		A7B4DB171367C70D00543D61 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7B4DB111367C65B00543D61 /* Security.framework */; };
 		A7D58C541378BF440041BBEB /* NSString+Whitespace.h in Headers */ = {isa = PBXBuildFile; fileRef = A7D58C521378BF440041BBEB /* NSString+Whitespace.h */; };
 		A7D58C551378BF440041BBEB /* NSString+Whitespace.m in Sources */ = {isa = PBXBuildFile; fileRef = A7D58C531378BF440041BBEB /* NSString+Whitespace.m */; };
+		A7D58C591378CFAA0041BBEB /* NSArray+Whitespace.h in Headers */ = {isa = PBXBuildFile; fileRef = A7D58C571378CFA80041BBEB /* NSArray+Whitespace.h */; };
+		A7D58C5A1378CFAA0041BBEB /* NSArray+Whitespace.m in Sources */ = {isa = PBXBuildFile; fileRef = A7D58C581378CFA90041BBEB /* NSArray+Whitespace.m */; };
 		A7FB6B5C137148DC0088C4CD /* IBACommon.h in Headers */ = {isa = PBXBuildFile; fileRef = A7FB6B5B137148DC0088C4CD /* IBACommon.h */; };
 /* End PBXBuildFile section */
 
@@ -103,6 +105,8 @@
 		A7B4DB111367C65B00543D61 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		A7D58C521378BF440041BBEB /* NSString+Whitespace.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString+Whitespace.h"; path = "Foundation/NSString+Whitespace.h"; sourceTree = SOURCE_ROOT; };
 		A7D58C531378BF440041BBEB /* NSString+Whitespace.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+Whitespace.m"; path = "Foundation/NSString+Whitespace.m"; sourceTree = SOURCE_ROOT; };
+		A7D58C571378CFA80041BBEB /* NSArray+Whitespace.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSArray+Whitespace.h"; path = "Foundation/NSArray+Whitespace.h"; sourceTree = SOURCE_ROOT; };
+		A7D58C581378CFA90041BBEB /* NSArray+Whitespace.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSArray+Whitespace.m"; path = "Foundation/NSArray+Whitespace.m"; sourceTree = SOURCE_ROOT; };
 		A7FB6B5B137148DC0088C4CD /* IBACommon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IBACommon.h; path = Foundation/IBACommon.h; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
@@ -257,6 +261,8 @@
 				A7014AF513718C0300BE32D2 /* NSTimer+Blocks.h */,
 				A7014AF613718C0300BE32D2 /* NSTimer+Blocks.m */,
 				A707FD77137776AB0029FA76 /* IBADelimitedTextFileReaderDelegate.h */,
+				A7D58C571378CFA80041BBEB /* NSArray+Whitespace.h */,
+				A7D58C581378CFA90041BBEB /* NSArray+Whitespace.m */,
 				A7D58C521378BF440041BBEB /* NSString+Whitespace.h */,
 				A7D58C531378BF440041BBEB /* NSString+Whitespace.m */,
 			);
@@ -296,6 +302,7 @@
 				A707FD78137776AB0029FA76 /* IBADelimitedTextFileReaderDelegate.h in Headers */,
 				A707FD7B13777B280029FA76 /* IBAInputStreamLineReader.h in Headers */,
 				A7D58C541378BF440041BBEB /* NSString+Whitespace.h in Headers */,
+				A7D58C591378CFAA0041BBEB /* NSArray+Whitespace.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -388,6 +395,7 @@
 				A707FD75137761570029FA76 /* IBADelimitedTextFileReader.m in Sources */,
 				A707FD7C13777B280029FA76 /* IBAInputStreamLineReader.m in Sources */,
 				A7D58C551378BF440041BBEB /* NSString+Whitespace.m in Sources */,
+				A7D58C5A1378CFAA0041BBEB /* NSArray+Whitespace.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
