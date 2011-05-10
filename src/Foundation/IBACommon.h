@@ -61,3 +61,15 @@
         #define IBA_EXTERN_C_END
     #endif
 #endif
+
+/*!
+ \def       IBA_NSARRAY
+ \brief     Helper macro for creating inline NSArray instances with a series of objects.
+ */
+#define IBA_NSARRAY(...) [NSArray arrayWithObjects:__VA_ARGS__, nil]
+
+/*!
+ \def       IBA_NSARRAY
+ \brief     Helper macro for creating inline NSMutableArray instances with a series of objects.
+ */
+#define IBA_NSMUTABLEARRAY(...) [NSMutableArray arrayWithObjects:__VA_ARGS__, nil]
