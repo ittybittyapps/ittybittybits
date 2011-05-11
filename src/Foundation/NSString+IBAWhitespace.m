@@ -20,17 +20,22 @@
 #import "NSString+Whitespace.h"
 #import "IBACommon.h"
 
-@implementation NSString (IBAWhitespaceAdditions)
+@implementation NSString (IBAWhitespace)
 
-/////////////////////////////////////////////////////////////////////////////////////////////////
-- (NSString*) ibaStringByTrimmingWhitespaceAndNewline
+/*!
+ \brief     Returns a new string made by removing from both ends of the receiver characters in the whitespaceAndNewline character set.
+ \return    A new string made by removing from both ends of the receiver characters contained in the whitespaceAndNewline character set. If the receiver is composed entirely of characters from this set, an empty string is returned.
+ */
+- (NSString *)ibaStringByTrimmingWhitespaceAndNewline
 {
     return [self stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
 }
 
-/////////////////////////////////////////////////////////////////////////////////////////////////
-
-- (NSString *) ibaStringByCompressingWhitespaceAndNewlineTo:(NSString *)seperator
+/*!
+ \brief     Returns a new string made by removing from both ends (and between words) of the receiver characters in the whitespaceAndNewline character set. The string is split into words and joined back together using the specified \a seperator.
+ \return    A new string made by removing from both ends (and between words) of the receiver characters contained in the whitespaceAndNewline character set.  If the receiver is composed entirely of characters from this set, an empty string is returned.
+ */
+- (NSString *)ibaStringByCompressingWhitespaceAndNewlineTo:(NSString *)seperator
 {
     NSArray *components = [self componentsSeparatedByCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
     NSMutableArray *nonemptyComponents = [[NSMutableArray alloc] initWithCapacity:[components count]];
@@ -43,7 +48,7 @@
         }
     }
 
-    NSString* compressedString = [nonemptyComponents componentsJoinedByString:seperator];
+    NSString *compressedString = [nonemptyComponents componentsJoinedByString:seperator];
     IBA_RELEASE(nonemptyComponents);
     
     return compressedString;

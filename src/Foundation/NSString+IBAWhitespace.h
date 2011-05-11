@@ -1,8 +1,8 @@
 //
-//  IBAFoundation.h
+//  NSString+Whitespace.h
 //  IttyBittyBits
 //
-//  Created by Oliver Jones on 6/05/11.
+//  Created by Oliver Jones on 10/05/11.
 //  Copyright 2011 Itty Bitty Apps Pty. Ltd. All rights reserved.
 //
 //  Licensed under the Apache License, Version 2.0 (the "License");
@@ -17,14 +17,11 @@
 //  See the License for the specific language governing permissions and
 //  limitations under the License.
 
-#import "IBACommon.h"
-#import "IBADebug.h"
-#import "IBADelimitedTextFileReader.h"
-#import "IBAInputStreamLineReader.h"
-#import "IBALogger.h"
-#import "IBAMath.h"
-#import "IBASynthesizeSingleton.h"
-#import "IBATemporaryFile.h"
-#import "NSArray+IBAWhitespace.h"
-#import "NSString+IBAWhitespace.h"
-#import "NSTimer+IBABlocks.h"
+#import <Foundation/Foundation.h>
+
+@interface NSString (IBAWhitespace)
+
+- (NSString *)ibaStringByTrimmingWhitespaceAndNewline;
+- (NSString *)ibaStringByCompressingWhitespaceAndNewlineTo:(NSString *)seperator;
+
+@end
