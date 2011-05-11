@@ -73,3 +73,11 @@
  \brief     Helper macro for creating inline NSMutableArray instances with a series of objects.
  */
 #define IBA_NSMUTABLEARRAY(...) [NSMutableArray arrayWithObjects:__VA_ARGS__, nil]
+
+/*!
+ \def       IBALocalizedString
+ \brief     Returns a localized version of a string.
+ \details   This is just a helper macro that simplfies using NSLocalizedString a little.
+ \sa        NSLocalizedString
+ */
+#define IBALocalizedString(x) NSLocalizedString((x), @"")
