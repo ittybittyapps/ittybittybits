@@ -24,7 +24,7 @@
  OTHER DEALINGS IN THE SOFTWARE.
  */
 
-#import "NSTimer+Blocks.h"
+#import "NSTimer+IBABlocks.h"
 
 #pragma mark -
 #pragma Private Interface

@@ -6,7 +6,7 @@
 //  Copyright 2011 Itty Bitty Apps Pty. Ltd. All rights reserved.
 //
 
-#import "NSArray+Whitespace.h"
+#import "NSArray+IBAWhitespace.h"
 #import "IBACommon.h"
 
 @implementation NSArray (IBAWhitespace)
