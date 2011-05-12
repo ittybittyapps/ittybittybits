@@ -1,8 +1,8 @@
 //
-//  IttyBittyBits.h
+//  IBAUIKit.h
 //  IttyBittyBits
 //
-//  Created by Oliver Jones on 6/05/11.
+//  Created by Oliver Jones on 12/05/11.
 //  Copyright 2011 Itty Bitty Apps Pty. Ltd. All rights reserved.
 //
 //  Licensed under the Apache License, Version 2.0 (the "License");
@@ -17,7 +17,16 @@
 //  See the License for the specific language governing permissions and
 //  limitations under the License.
 
-#import "Foundation/IBAFoundation.h"
-#import "CoreGraphics/IBACoreGraphics.h"
-#import "Security/IBASecurity.h"
-#import "UIKit/IBAUIKit.h"
+#define UIColorFromRGB(rgbValue) [UIColor \
+    colorWithRed:((float)(((rgbValue) & 0xFF0000) >> 16))/255.0f \
+    green:((float)(((rgbValue) & 0xFF00) >> 8))/255.0f \
+    blue:((float)((rgbValue) & 0xFF))/255.0f alpha:1.0f]
+
+#define UIColorWithAlphaFromRGB(rgbValue, alphaValue) [UIColor \
+    colorWithRed:((float)(((rgbValue) & 0xFF0000) >> 16))/255.0f \
+    green:((float)(((rgbValue) & 0xFF00) >> 8))/255.0f \
+    blue:((float)((rgbValue) & 0xFF))/255.0f alpha:(alphaValue)]
+
+
+#import "UIBarButtonItem+IBAFactories.h"
+#import "UIAlertView+IBAHelpers.h"

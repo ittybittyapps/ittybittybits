@@ -15,6 +15,11 @@
 		A707FD7B13777B280029FA76 /* IBAInputStreamLineReader.h in Headers */ = {isa = PBXBuildFile; fileRef = A707FD7913777B280029FA76 /* IBAInputStreamLineReader.h */; };
 		A707FD7C13777B280029FA76 /* IBAInputStreamLineReader.m in Sources */ = {isa = PBXBuildFile; fileRef = A707FD7A13777B280029FA76 /* IBAInputStreamLineReader.m */; };
 		A707FD8113779BFD0029FA76 /* IBAInputStreamLineReaderTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A707FD7E13779BCB0029FA76 /* IBAInputStreamLineReaderTests.m */; };
+		A722FA43137B73730066CC1A /* IBAUIKit.h in Headers */ = {isa = PBXBuildFile; fileRef = A722FA42137B73730066CC1A /* IBAUIKit.h */; };
+		A722FA46137B77550066CC1A /* UIBarButtonItem+IBAFactories.h in Headers */ = {isa = PBXBuildFile; fileRef = A722FA44137B77550066CC1A /* UIBarButtonItem+IBAFactories.h */; };
+		A722FA47137B77550066CC1A /* UIBarButtonItem+IBAFactories.m in Sources */ = {isa = PBXBuildFile; fileRef = A722FA45137B77550066CC1A /* UIBarButtonItem+IBAFactories.m */; };
+		A722FA5F137B94D90066CC1A /* UIAlertView+IBAHelpers.h in Headers */ = {isa = PBXBuildFile; fileRef = A722FA5D137B94D90066CC1A /* UIAlertView+IBAHelpers.h */; };
+		A722FA60137B94D90066CC1A /* UIAlertView+IBAHelpers.m in Sources */ = {isa = PBXBuildFile; fileRef = A722FA5E137B94D90066CC1A /* UIAlertView+IBAHelpers.m */; };
 		A7656EB91377DF50002FB968 /* IBADelimitedTextFileReaderTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A7656EB61377DF3C002FB968 /* IBADelimitedTextFileReaderTests.m */; };
 		A7914160136FD62200209C96 /* IBALogger.h in Headers */ = {isa = PBXBuildFile; fileRef = A791415E136FD62200209C96 /* IBALogger.h */; };
 		A7914161136FD62200209C96 /* IBALogger.m in Sources */ = {isa = PBXBuildFile; fileRef = A791415F136FD62200209C96 /* IBALogger.m */; };
@@ -72,6 +77,11 @@
 		A707FD7A13777B280029FA76 /* IBAInputStreamLineReader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = IBAInputStreamLineReader.m; path = Foundation/IBAInputStreamLineReader.m; sourceTree = SOURCE_ROOT; };
 		A707FD7D13779BCB0029FA76 /* IBAInputStreamLineReaderTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBAInputStreamLineReaderTests.h; sourceTree = "<group>"; };
 		A707FD7E13779BCB0029FA76 /* IBAInputStreamLineReaderTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IBAInputStreamLineReaderTests.m; sourceTree = "<group>"; };
+		A722FA42137B73730066CC1A /* IBAUIKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IBAUIKit.h; path = UIKit/IBAUIKit.h; sourceTree = SOURCE_ROOT; };
+		A722FA44137B77550066CC1A /* UIBarButtonItem+IBAFactories.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIBarButtonItem+IBAFactories.h"; path = "UIKit/UIBarButtonItem+IBAFactories.h"; sourceTree = SOURCE_ROOT; };
+		A722FA45137B77550066CC1A /* UIBarButtonItem+IBAFactories.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIBarButtonItem+IBAFactories.m"; path = "UIKit/UIBarButtonItem+IBAFactories.m"; sourceTree = SOURCE_ROOT; };
+		A722FA5D137B94D90066CC1A /* UIAlertView+IBAHelpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIAlertView+IBAHelpers.h"; path = "UIKit/UIAlertView+IBAHelpers.h"; sourceTree = SOURCE_ROOT; };
+		A722FA5E137B94D90066CC1A /* UIAlertView+IBAHelpers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIAlertView+IBAHelpers.m"; path = "UIKit/UIAlertView+IBAHelpers.m"; sourceTree = SOURCE_ROOT; };
 		A7656EB51377DF3C002FB968 /* IBADelimitedTextFileReaderTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBADelimitedTextFileReaderTests.h; sourceTree = "<group>"; };
 		A7656EB61377DF3C002FB968 /* IBADelimitedTextFileReaderTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IBADelimitedTextFileReaderTests.m; sourceTree = "<group>"; };
 		A791415E136FD62200209C96 /* IBALogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IBALogger.h; path = Foundation/IBALogger.h; sourceTree = SOURCE_ROOT; };
@@ -143,8 +153,13 @@
 		A791415C136FD5E200209C96 /* UIKit */ = {
 			isa = PBXGroup;
 			children = (
+				A722FA42137B73730066CC1A /* IBAUIKit.h */,
+				A722FA44137B77550066CC1A /* UIBarButtonItem+IBAFactories.h */,
+				A722FA45137B77550066CC1A /* UIBarButtonItem+IBAFactories.m */,
+				A722FA5D137B94D90066CC1A /* UIAlertView+IBAHelpers.h */,
+				A722FA5E137B94D90066CC1A /* UIAlertView+IBAHelpers.m */,
 			);
-			name = UIKit;
+			path = UIKit;
 			sourceTree = "<group>";
 		};
 		A79141621370DFE100209C96 /* Foundation */ = {
@@ -310,6 +325,9 @@
 				A7D58C541378BF440041BBEB /* NSString+IBAWhitespace.h in Headers */,
 				A7D58C591378CFAA0041BBEB /* NSArray+IBAWhitespace.h in Headers */,
 				A7D58C6013792D970041BBEB /* IBAMath.h in Headers */,
+				A722FA43137B73730066CC1A /* IBAUIKit.h in Headers */,
+				A722FA46137B77550066CC1A /* UIBarButtonItem+IBAFactories.h in Headers */,
+				A722FA5F137B94D90066CC1A /* UIAlertView+IBAHelpers.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -404,6 +422,8 @@
 				A7D58C551378BF440041BBEB /* NSString+IBAWhitespace.m in Sources */,
 				A7D58C5A1378CFAA0041BBEB /* NSArray+IBAWhitespace.m in Sources */,
 				A7D58C5C1378DAE40041BBEB /* IBADelimitedTextFileReaderDelegate.m in Sources */,
+				A722FA47137B77550066CC1A /* UIBarButtonItem+IBAFactories.m in Sources */,
+				A722FA60137B94D90066CC1A /* UIAlertView+IBAHelpers.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
