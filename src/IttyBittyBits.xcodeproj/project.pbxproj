@@ -220,6 +220,7 @@
 				A7B4DAD113679F5E00543D61 /* Tests */,
 				A7B4DABB1367991200543D61 /* Frameworks */,
 				A7B4DABA1367991200543D61 /* Products */,
+				A7B4DAB91367991200543D61 /* libIttyBittyBits.a */,
 			);
 			sourceTree = "<group>";
 		};
@@ -235,7 +236,6 @@
 			isa = PBXGroup;
 			children = (
 				A7B4DB111367C65B00543D61 /* Security.framework */,
-				A7B4DAB91367991200543D61 /* libIttyBittyBits.a */,
 				A7B4DB041367C3F700543D61 /* GHUnitIOS.framework */,
 				A7B4DABC1367991200543D61 /* Foundation.framework */,
 				A7B4DACC13679F5E00543D61 /* UIKit.framework */,
@@ -515,6 +515,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				RUN_CLANG_STATIC_ANALYZER = YES;
 				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
 			};
 			name = Debug;
 		};
@@ -533,6 +534,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				RUN_CLANG_STATIC_ANALYZER = YES;
 				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
 			};
 			name = Release;
 		};
