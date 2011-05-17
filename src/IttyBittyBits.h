@@ -21,3 +21,4 @@
 #import "CoreGraphics/IBACoreGraphics.h"
 #import "Security/IBASecurity.h"
 #import "UIKit/IBAUIKit.h"
+#import "MapKit/IBAMapKit.h"

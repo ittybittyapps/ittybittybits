@@ -24,6 +24,22 @@
 #define IBA_RELEASE(x) \
     [(x) release]; (x) = nil
 
+/*!
+ \def       IBA_PROPERTY_IVAR
+ \brief     Returns gets the ivar name of a property with the specified \a name.
+ \param     name        The name of the property.
+ \return    The ivar name.
+ */
+#define IBA_PROPERTY_IVAR(name) name##_
+
+/*!
+ \brief     Release an nil the instance variable behind a property.
+ \details   Useful for releasing ivars backing readonly properties.
+ \param     propertyName        The name of the property to release.
+ */
+#define IBA_RELEASE_PROPERTY(propertyName) \
+    IBA_RELEASE(IBA_PROPERTY_IVAR(propertyName));
+
 /*! 
  \def       IBA_FORMAT_FUNCTION
  \brief     An alias for NS_FORMAT_FUNCTION
@@ -63,6 +79,12 @@
 #endif
 
 /*!
+ \def       IBA_SYNTHESIZE
+ \brief     Helper macro for specifying synthesized properties.
+ */
+#define IBA_SYNTHESIZE(x) @synthesize x=x##_
+
+/*!
  \def       IBA_NSARRAY
  \brief     Helper macro for creating inline NSArray instances with a series of objects.
  */
@@ -73,6 +95,15 @@
  \brief     Helper macro for creating inline NSMutableArray instances with a series of objects.
  */
 #define IBA_NSMUTABLEARRAY(...) [NSMutableArray arrayWithObjects:__VA_ARGS__, nil]
+
+#define IBAFloatToNumber(x) [NSNumber numberWithFloat:(x)]
+#define IBADoubleToNumber(x) [NSNumber numberWithDouble:(x)]
+#define IBAIntToNumber(x) [NSNumber numberWithInt:(x)]
+#define IBAUIntToNumber(x) [NSNumber numberWithUnsignedInt:(x)]
+#define IBALongToNumber(x) [NSNumber numberWithLong:(x)]
+#define IBAULongToNumber(x) [NSNumber numberWithUnsignedLong:(x)]
+#define IBALongLongToNumber(x) [NSNumber numberWithLongLong:(x)]
+#define IBAULongLongToNumber(x) [NSNumber numberWithUnsignedLongLong:(x)]
 
 /*!
  \def       IBALocalizedString

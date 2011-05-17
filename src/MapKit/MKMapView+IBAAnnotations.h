@@ -1,10 +1,9 @@
 //
-//  UIAlertView+IBAHelpers.h
+//  MKMapView+IBAAnnotations.h
 //  IttyBittyBits
 //
-//  Created by Oliver Jones on 12/05/11.
+//  Created by Oliver Jones on 16/05/11.
 //  Copyright 2011 Itty Bitty Apps Pty. Ltd. All rights reserved.
-//
 //
 //  Licensed under the Apache License, Version 2.0 (the "License");
 //  you may not use this file except in compliance with the License.
@@ -18,11 +17,21 @@
 //  See the License for the specific language governing permissions and
 //  limitations under the License.
 
+
 #import <Foundation/Foundation.h>
+#import <MapKit/MapKit.h>
 
+@interface MKMapView (IBAAnnotations)
 
-@interface UIAlertView (IBAHelpers)
+- (void) setRegionForAnnotations:(NSArray *)annotations
+                        animated:(BOOL)animated;
 
-+ (void)showSimpleAlertWithTitle:(NSString *)title message:(NSString *)message;
+- (void) setRegionForAnnotations:(NSArray *)annotations
+                        location:(CLLocationCoordinate2D)coordinate
+                        animated:(BOOL)animated;
+
+- (void) setRegionForCoordinates:(CLLocationCoordinate2D *)coordinates
+                           count:(NSUInteger)number
+                        animated:(BOOL)animated;
 
 @end

@@ -1,5 +1,5 @@
 //
-//  NSArray+Whitespace.m
+//  NSArray+IBAWhitespace.m
 //  IttyBittyBits
 //
 //  Created by Oliver Jones on 10/05/11.

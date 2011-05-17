@@ -1,5 +1,5 @@
 //
-//  NSString+Whitespace.m
+//  NSString+IBAWhitespace.m
 //  IttyBittyBits
 //
 //  Created by Oliver Jones on 10/05/11.
@@ -52,6 +52,14 @@
     IBA_RELEASE(nonemptyComponents);
     
     return compressedString;
+}
+
+/*!
+ \brief     Retuns a value indicating that the value of the receiver is not nil, empty or just whitespace (or newlines).
+ */
+- (BOOL)ibaNotBlank
+{
+    return self != nil && ([@"" isEqualToString:[self ibaStringByTrimmingWhitespaceAndNewline]] == NO);
 }
 
 @end

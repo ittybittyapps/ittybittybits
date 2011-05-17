@@ -22,6 +22,7 @@
 #import "IBALogger.h"
 
 /*!
+ \def       IBAAssertNotNil
  \brief     Raises an assertion when the argument is nil.
  \param     x   The argument to test.
  */
@@ -29,11 +30,28 @@
     NSAssert1((x) != nil, @"%@ can not be nil", @#x)
 
 /*!
+ \def       IBACAssertNotNil
+ \brief     Raises an assertion when the argument is nil.
+ \param     x   The argument to test.
+ */
+#define IBACAssertNotNil(x) \
+    NSCAssert1((x) != nil, @"%@ can not be nil", @#x)
+
+/*!
+ \def       IBAAssertNotNilOrEmptyString
  \brief     Raises an assertion when the argument is a nil or empty string.
  \param     x   The argument to test.
  */
 #define IBAAssertNotNilOrEmptyString(x) \
     NSAssert1((((x) != nil) && (![(x) isEqualToString: @""])), @"%@ can not be nil or empty", @#x)
+
+/*!
+ \def       IBACAssertNotNilOrEmptyString
+ \brief     Raises an assertion when the argument is a nil or empty string.
+ \param     x   The argument to test.
+ */
+#define IBACAssertNotNilOrEmptyString(x) \
+    NSCAssert1((((x) != nil) && (![(x) isEqualToString: @""])), @"%@ can not be nil or empty", @#x)
 
 void ALogImpl(BOOL assert, const char* functionName, const char* filename, int line, NSString* format, ...) IBA_FORMAT_FUNCTION(5, 6);
 

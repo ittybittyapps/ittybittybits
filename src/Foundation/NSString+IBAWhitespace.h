@@ -1,5 +1,5 @@
 //
-//  NSString+Whitespace.h
+//  NSString+IBAWhitespace.h
 //  IttyBittyBits
 //
 //  Created by Oliver Jones on 10/05/11.
@@ -23,5 +23,6 @@
 
 - (NSString *)ibaStringByTrimmingWhitespaceAndNewline;
 - (NSString *)ibaStringByCompressingWhitespaceAndNewlineTo:(NSString *)seperator;
+- (BOOL)ibaNotBlank;
 
 @end

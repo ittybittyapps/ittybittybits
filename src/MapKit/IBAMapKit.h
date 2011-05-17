@@ -1,10 +1,9 @@
 //
-//  UIAlertView+IBAHelpers.h
+//  IBAMapKit.h
 //  IttyBittyBits
 //
-//  Created by Oliver Jones on 12/05/11.
+//  Created by Oliver Jones on 16/05/11.
 //  Copyright 2011 Itty Bitty Apps Pty. Ltd. All rights reserved.
-//
 //
 //  Licensed under the Apache License, Version 2.0 (the "License");
 //  you may not use this file except in compliance with the License.
@@ -18,11 +17,4 @@
 //  See the License for the specific language governing permissions and
 //  limitations under the License.
 
-#import <Foundation/Foundation.h>
-
-
-@interface UIAlertView (IBAHelpers)
-
-+ (void)showSimpleAlertWithTitle:(NSString *)title message:(NSString *)message;
-
-@end
+#import "MKMapView+IBAAnnotations.h"
