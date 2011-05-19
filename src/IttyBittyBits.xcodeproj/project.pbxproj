@@ -44,6 +44,8 @@
 		A7B109F9138387AC00C8A672 /* NSArray+IBASorting.h in Headers */ = {isa = PBXBuildFile; fileRef = A7B109F7138387AC00C8A672 /* NSArray+IBASorting.h */; };
 		A7B109FA138387AC00C8A672 /* NSArray+IBASorting.m in Sources */ = {isa = PBXBuildFile; fileRef = A7B109F8138387AC00C8A672 /* NSArray+IBASorting.m */; };
 		A7B10AAE1384AB5F00C8A672 /* IBAPreProcessorMagic.h in Headers */ = {isa = PBXBuildFile; fileRef = A7B10AAD1384AB5F00C8A672 /* IBAPreProcessorMagic.h */; };
+		A7B10AB11384E4F500C8A672 /* JSONKit.h in Headers */ = {isa = PBXBuildFile; fileRef = A7B10AAF1384E4F500C8A672 /* JSONKit.h */; };
+		A7B10AB21384E4F500C8A672 /* JSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = A7B10AB01384E4F500C8A672 /* JSONKit.m */; };
 		A7B4DABD1367991200543D61 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7B4DABC1367991200543D61 /* Foundation.framework */; };
 		A7B4DACD13679F5E00543D61 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7B4DACC13679F5E00543D61 /* UIKit.framework */; };
 		A7B4DACE13679F5E00543D61 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7B4DABC1367991200543D61 /* Foundation.framework */; };
@@ -121,6 +123,8 @@
 		A7B109F7138387AC00C8A672 /* NSArray+IBASorting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSArray+IBASorting.h"; path = "Foundation/NSArray+IBASorting.h"; sourceTree = SOURCE_ROOT; };
 		A7B109F8138387AC00C8A672 /* NSArray+IBASorting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSArray+IBASorting.m"; path = "Foundation/NSArray+IBASorting.m"; sourceTree = SOURCE_ROOT; };
 		A7B10AAD1384AB5F00C8A672 /* IBAPreProcessorMagic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IBAPreProcessorMagic.h; path = Foundation/IBAPreProcessorMagic.h; sourceTree = SOURCE_ROOT; };
+		A7B10AAF1384E4F500C8A672 /* JSONKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JSONKit.h; path = ../lib/JSONKit/JSONKit.h; sourceTree = "<group>"; };
+		A7B10AB01384E4F500C8A672 /* JSONKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JSONKit.m; path = ../lib/JSONKit/JSONKit.m; sourceTree = "<group>"; };
 		A7B4DAB91367991200543D61 /* libIttyBittyBits.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libIttyBittyBits.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7B4DABC1367991200543D61 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		A7B4DAC01367991200543D61 /* IttyBittyBits-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "IttyBittyBits-Prefix.pch"; sourceTree = "<group>"; };
@@ -221,6 +225,23 @@
 				A79602171373E46600BA29E5 /* IBARoundedRectPath.m */,
 			);
 			path = CoreGraphics;
+			sourceTree = "<group>";
+		};
+		A7B10A78138496FC00C8A672 /* Third Party */ = {
+			isa = PBXGroup;
+			children = (
+				A7B10AB31384E4F800C8A672 /* JSONKit */,
+			);
+			name = "Third Party";
+			sourceTree = "<group>";
+		};
+		A7B10AB31384E4F800C8A672 /* JSONKit */ = {
+			isa = PBXGroup;
+			children = (
+				A7B10AAF1384E4F500C8A672 /* JSONKit.h */,
+				A7B10AB01384E4F500C8A672 /* JSONKit.m */,
+			);
+			name = JSONKit;
 			sourceTree = "<group>";
 		};
 		A7B4DAAE1367991100543D61 = {
@@ -379,6 +400,7 @@
 				A7B109F513837F4C00C8A672 /* NSDictionary+IBAExtensions.h in Headers */,
 				A7B109F9138387AC00C8A672 /* NSArray+IBASorting.h in Headers */,
 				A7B10AAE1384AB5F00C8A672 /* IBAPreProcessorMagic.h in Headers */,
+				A7B10AB11384E4F500C8A672 /* JSONKit.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -480,6 +502,7 @@
 				A706A6EE13821B8300429203 /* IBAActionSheet.m in Sources */,
 				A7B109F613837F4C00C8A672 /* NSDictionary+IBAExtensions.m in Sources */,
 				A7B109FA138387AC00C8A672 /* NSArray+IBASorting.m in Sources */,
+				A7B10AB21384E4F500C8A672 /* JSONKit.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -532,6 +555,7 @@
 				GCC_WARN_FOUR_CHARACTER_CONSTANTS = YES;
 				GCC_WARN_NON_VIRTUAL_DESTRUCTOR = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "$(SRCROOT)/lib/JSONKit";
 				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				RUN_CLANG_STATIC_ANALYZER = YES;
 				SDKROOT = iphoneos;
@@ -551,6 +575,7 @@
 				GCC_WARN_FOUR_CHARACTER_CONSTANTS = YES;
 				GCC_WARN_NON_VIRTUAL_DESTRUCTOR = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "$(SRCROOT)/lib/JSONKit";
 				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				RUN_CLANG_STATIC_ANALYZER = YES;
 				SDKROOT = iphoneos;
