@@ -17,6 +17,8 @@
 //  See the License for the specific language governing permissions and
 //  limitations under the License.
 
+#include "IBAPreProcessorMagic.h"
+
 /*!
  \brief     Release and nil the passed variable.
  \param     x   The instance to release.
@@ -78,12 +80,32 @@
     #endif
 #endif
 
+
+
 /*!
  \def       IBA_SYNTHESIZE
  \brief     Helper macro for specifying synthesized properties.
  */
-#define IBA_SYNTHESIZE(x) @synthesize x=x##_
-
+#define IBA_SYNTHESIZE(...) @synthesize IBA_CAT(_IBA_SYNTHESIZE_, IBA_N_ARGS(__VA_ARGS__))(__VA_ARGS__)
+#define _IBA_SYNTHESIZE_H(x) x=IBA_PROPERTY_IVAR(x)
+#define _IBA_SYNTHESIZE_1(a) _IBA_SYNTHESIZE_H(a)
+#define _IBA_SYNTHESIZE_2(a, b) _IBA_SYNTHESIZE_H(a), _IBA_SYNTHESIZE_H(b)
+#define _IBA_SYNTHESIZE_3(a, ...) _IBA_SYNTHESIZE_H(a), _IBA_SYNTHESIZE_2(__VA_ARGS__)
+#define _IBA_SYNTHESIZE_4(a, ...) _IBA_SYNTHESIZE_H(a), _IBA_SYNTHESIZE_3(__VA_ARGS__)
+#define _IBA_SYNTHESIZE_5(a, ...) _IBA_SYNTHESIZE_H(a), _IBA_SYNTHESIZE_4(__VA_ARGS__)
+#define _IBA_SYNTHESIZE_6(a, ...) _IBA_SYNTHESIZE_H(a), _IBA_SYNTHESIZE_5(__VA_ARGS__)
+#define _IBA_SYNTHESIZE_7(a, ...) _IBA_SYNTHESIZE_H(a), _IBA_SYNTHESIZE_6(__VA_ARGS__)
+#define _IBA_SYNTHESIZE_8(a, ...) _IBA_SYNTHESIZE_H(a), _IBA_SYNTHESIZE_7(__VA_ARGS__)
+#define _IBA_SYNTHESIZE_9(a, ...) _IBA_SYNTHESIZE_H(a), _IBA_SYNTHESIZE_8(__VA_ARGS__)
+#define _IBA_SYNTHESIZE_10(a, ...) _IBA_SYNTHESIZE_H(a), _IBA_SYNTHESIZE_9(__VA_ARGS__)
+#define _IBA_SYNTHESIZE_11(a, ...) _IBA_SYNTHESIZE_H(a), _IBA_SYNTHESIZE_10(__VA_ARGS__)
+#define _IBA_SYNTHESIZE_12(a, ...) _IBA_SYNTHESIZE_H(a), _IBA_SYNTHESIZE_11(__VA_ARGS__)
+#define _IBA_SYNTHESIZE_13(a, ...) _IBA_SYNTHESIZE_H(a), _IBA_SYNTHESIZE_12(__VA_ARGS__)
+#define _IBA_SYNTHESIZE_14(a, ...) _IBA_SYNTHESIZE_H(a), _IBA_SYNTHESIZE_13(__VA_ARGS__)
+#define _IBA_SYNTHESIZE_15(a, ...) _IBA_SYNTHESIZE_H(a), _IBA_SYNTHESIZE_14(__VA_ARGS__)
+#define _IBA_SYNTHESIZE_16(a, ...) _IBA_SYNTHESIZE_H(a), _IBA_SYNTHESIZE_15(__VA_ARGS__)
+#define _IBA_SYNTHESIZE_17(a, ...) _IBA_SYNTHESIZE_H(a), _IBA_SYNTHESIZE_16(__VA_ARGS__)
+ 
 /*!
  \def       IBA_NSARRAY
  \brief     Helper macro for creating inline NSArray instances with a series of objects.

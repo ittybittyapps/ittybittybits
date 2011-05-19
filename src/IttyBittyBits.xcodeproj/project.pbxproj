@@ -43,6 +43,7 @@
 		A7B109F613837F4C00C8A672 /* NSDictionary+IBAExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = A7B109F413837F4C00C8A672 /* NSDictionary+IBAExtensions.m */; };
 		A7B109F9138387AC00C8A672 /* NSArray+IBASorting.h in Headers */ = {isa = PBXBuildFile; fileRef = A7B109F7138387AC00C8A672 /* NSArray+IBASorting.h */; };
 		A7B109FA138387AC00C8A672 /* NSArray+IBASorting.m in Sources */ = {isa = PBXBuildFile; fileRef = A7B109F8138387AC00C8A672 /* NSArray+IBASorting.m */; };
+		A7B10AAE1384AB5F00C8A672 /* IBAPreProcessorMagic.h in Headers */ = {isa = PBXBuildFile; fileRef = A7B10AAD1384AB5F00C8A672 /* IBAPreProcessorMagic.h */; };
 		A7B4DABD1367991200543D61 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7B4DABC1367991200543D61 /* Foundation.framework */; };
 		A7B4DACD13679F5E00543D61 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7B4DACC13679F5E00543D61 /* UIKit.framework */; };
 		A7B4DACE13679F5E00543D61 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7B4DABC1367991200543D61 /* Foundation.framework */; };
@@ -119,6 +120,7 @@
 		A7B109F413837F4C00C8A672 /* NSDictionary+IBAExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSDictionary+IBAExtensions.m"; path = "Foundation/NSDictionary+IBAExtensions.m"; sourceTree = SOURCE_ROOT; };
 		A7B109F7138387AC00C8A672 /* NSArray+IBASorting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSArray+IBASorting.h"; path = "Foundation/NSArray+IBASorting.h"; sourceTree = SOURCE_ROOT; };
 		A7B109F8138387AC00C8A672 /* NSArray+IBASorting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSArray+IBASorting.m"; path = "Foundation/NSArray+IBASorting.m"; sourceTree = SOURCE_ROOT; };
+		A7B10AAD1384AB5F00C8A672 /* IBAPreProcessorMagic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IBAPreProcessorMagic.h; path = Foundation/IBAPreProcessorMagic.h; sourceTree = SOURCE_ROOT; };
 		A7B4DAB91367991200543D61 /* libIttyBittyBits.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libIttyBittyBits.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7B4DABC1367991200543D61 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		A7B4DAC01367991200543D61 /* IttyBittyBits-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "IttyBittyBits-Prefix.pch"; sourceTree = "<group>"; };
@@ -327,6 +329,7 @@
 				A7014AF613718C0300BE32D2 /* NSTimer+IBABlocks.m */,
 				A7B109F313837F4C00C8A672 /* NSDictionary+IBAExtensions.h */,
 				A7B109F413837F4C00C8A672 /* NSDictionary+IBAExtensions.m */,
+				A7B10AAD1384AB5F00C8A672 /* IBAPreProcessorMagic.h */,
 			);
 			path = Foundation;
 			sourceTree = "<group>";
@@ -375,6 +378,7 @@
 				A706A6ED13821B8300429203 /* IBAActionSheet.h in Headers */,
 				A7B109F513837F4C00C8A672 /* NSDictionary+IBAExtensions.h in Headers */,
 				A7B109F9138387AC00C8A672 /* NSArray+IBASorting.h in Headers */,
+				A7B10AAE1384AB5F00C8A672 /* IBAPreProcessorMagic.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
