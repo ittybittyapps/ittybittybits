@@ -43,6 +43,8 @@
 		A7B109F613837F4C00C8A672 /* NSDictionary+IBAExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = A7B109F413837F4C00C8A672 /* NSDictionary+IBAExtensions.m */; };
 		A7B109F9138387AC00C8A672 /* NSArray+IBASorting.h in Headers */ = {isa = PBXBuildFile; fileRef = A7B109F7138387AC00C8A672 /* NSArray+IBASorting.h */; };
 		A7B109FA138387AC00C8A672 /* NSArray+IBASorting.m in Sources */ = {isa = PBXBuildFile; fileRef = A7B109F8138387AC00C8A672 /* NSArray+IBASorting.m */; };
+		A7B10AA71384987D00C8A672 /* IBAGeocoder.h in Headers */ = {isa = PBXBuildFile; fileRef = A7B10AA51384987D00C8A672 /* IBAGeocoder.h */; };
+		A7B10AA81384987D00C8A672 /* IBAGeocoder.m in Sources */ = {isa = PBXBuildFile; fileRef = A7B10AA61384987D00C8A672 /* IBAGeocoder.m */; };
 		A7B10AAE1384AB5F00C8A672 /* IBAPreProcessorMagic.h in Headers */ = {isa = PBXBuildFile; fileRef = A7B10AAD1384AB5F00C8A672 /* IBAPreProcessorMagic.h */; };
 		A7B10AB11384E4F500C8A672 /* JSONKit.h in Headers */ = {isa = PBXBuildFile; fileRef = A7B10AAF1384E4F500C8A672 /* JSONKit.h */; };
 		A7B10AB21384E4F500C8A672 /* JSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = A7B10AB01384E4F500C8A672 /* JSONKit.m */; };
@@ -122,6 +124,8 @@
 		A7B109F413837F4C00C8A672 /* NSDictionary+IBAExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSDictionary+IBAExtensions.m"; path = "Foundation/NSDictionary+IBAExtensions.m"; sourceTree = SOURCE_ROOT; };
 		A7B109F7138387AC00C8A672 /* NSArray+IBASorting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSArray+IBASorting.h"; path = "Foundation/NSArray+IBASorting.h"; sourceTree = SOURCE_ROOT; };
 		A7B109F8138387AC00C8A672 /* NSArray+IBASorting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSArray+IBASorting.m"; path = "Foundation/NSArray+IBASorting.m"; sourceTree = SOURCE_ROOT; };
+		A7B10AA51384987D00C8A672 /* IBAGeocoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IBAGeocoder.h; path = MapKit/IBAGeocoder.h; sourceTree = SOURCE_ROOT; };
+		A7B10AA61384987D00C8A672 /* IBAGeocoder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = IBAGeocoder.m; path = MapKit/IBAGeocoder.m; sourceTree = SOURCE_ROOT; };
 		A7B10AAD1384AB5F00C8A672 /* IBAPreProcessorMagic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IBAPreProcessorMagic.h; path = Foundation/IBAPreProcessorMagic.h; sourceTree = SOURCE_ROOT; };
 		A7B10AAF1384E4F500C8A672 /* JSONKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JSONKit.h; path = ../lib/JSONKit/JSONKit.h; sourceTree = "<group>"; };
 		A7B10AB01384E4F500C8A672 /* JSONKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JSONKit.m; path = ../lib/JSONKit/JSONKit.m; sourceTree = "<group>"; };
@@ -181,6 +185,8 @@
 		A706A6B7138100AD00429203 /* MapKit */ = {
 			isa = PBXGroup;
 			children = (
+				A7B10AA51384987D00C8A672 /* IBAGeocoder.h */,
+				A7B10AA61384987D00C8A672 /* IBAGeocoder.m */,
 				A706A6B8138100D400429203 /* MKMapView+IBAAnnotations.h */,
 				A706A6B9138100D400429203 /* MKMapView+IBAAnnotations.m */,
 				A706A6BC138101AC00429203 /* IBAMapKit.h */,
@@ -249,6 +255,7 @@
 			children = (
 				A7B4DABE1367991200543D61 /* Src */,
 				A7B4DAD113679F5E00543D61 /* Tests */,
+				A7B10A78138496FC00C8A672 /* Third Party */,
 				A7B4DABB1367991200543D61 /* Frameworks */,
 				A7B4DABA1367991200543D61 /* Products */,
 				A7B4DAB91367991200543D61 /* libIttyBittyBits.a */,
@@ -399,6 +406,7 @@
 				A706A6ED13821B8300429203 /* IBAActionSheet.h in Headers */,
 				A7B109F513837F4C00C8A672 /* NSDictionary+IBAExtensions.h in Headers */,
 				A7B109F9138387AC00C8A672 /* NSArray+IBASorting.h in Headers */,
+				A7B10AA71384987D00C8A672 /* IBAGeocoder.h in Headers */,
 				A7B10AAE1384AB5F00C8A672 /* IBAPreProcessorMagic.h in Headers */,
 				A7B10AB11384E4F500C8A672 /* JSONKit.h in Headers */,
 			);
@@ -502,6 +510,7 @@
 				A706A6EE13821B8300429203 /* IBAActionSheet.m in Sources */,
 				A7B109F613837F4C00C8A672 /* NSDictionary+IBAExtensions.m in Sources */,
 				A7B109FA138387AC00C8A672 /* NSArray+IBASorting.m in Sources */,
+				A7B10AA81384987D00C8A672 /* IBAGeocoder.m in Sources */,
 				A7B10AB21384E4F500C8A672 /* JSONKit.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
