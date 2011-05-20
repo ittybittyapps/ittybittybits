@@ -31,3 +31,4 @@
 #import "IBAActionSheet.h"
 #import "UIBarButtonItem+IBAFactories.h"
 #import "UIAlertView+IBAHelpers.h"
+#import "UISearchBar+IBAExtensions.h"
