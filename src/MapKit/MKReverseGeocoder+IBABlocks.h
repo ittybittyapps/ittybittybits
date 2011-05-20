@@ -1,8 +1,8 @@
 //
-//  IBAMapKit.h
+//  MKReverseGeocoder+IBABlocks.h
 //  IttyBittyBits
 //
-//  Created by Oliver Jones on 16/05/11.
+//  Created by Oliver Jones on 20/05/11.
 //  Copyright 2011 Itty Bitty Apps Pty. Ltd. All rights reserved.
 //
 //  Licensed under the Apache License, Version 2.0 (the "License");
@@ -17,5 +17,14 @@
 //  See the License for the specific language governing permissions and
 //  limitations under the License.
 
-#import "MKMapView+IBAAnnotations.h"
-#import "MKReverseGeocoder+IBABlocks.h"
+
+#import <Foundation/Foundation.h>
+#import <MapKit/MapKit.h>
+
+typedef void (^IBAReverseGeocoderBlock)(MKPlacemark *, NSError *);
+
+@interface MKReverseGeocoder (IBABlocks)
+
+- (void) ibaStartUsingBlock:(IBAReverseGeocoderBlock)block;
+
+@end
