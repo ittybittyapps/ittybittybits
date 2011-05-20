@@ -19,3 +19,4 @@
 
 #import "MKMapView+IBAAnnotations.h"
 #import "MKReverseGeocoder+IBABlocks.h"
+#import "IBAGeocoder.h"

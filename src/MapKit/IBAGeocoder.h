@@ -55,7 +55,7 @@
 
 - (id)initWithCoordinate:(CLLocationCoordinate2D)coordinate;
 - (id)initWithAddress:(NSString *)address inRegion:(MKCoordinateRegion)region;
-- (id)initWithAddress:(NSString *)address;
+- (id)initWithAddress:(NSString *)address inCountry:(NSString *)country;
 - (id)initWithRequestParams:(NSString *)params;
 
 - (void)start;
@@ -64,7 +64,7 @@
 
 @protocol IBAGeocoderDelegate
 
-- (void)geocoder:(IBAGeocoder *)geocoder didFindPlacemark:(MKPlacemark *)placemark;
+- (void)geocoder:(IBAGeocoder *)geocoder didFindPlacemarks:(NSArray *)placemarks;
 - (void)geocoder:(IBAGeocoder *)geocoder didFailWithError:(NSError *)error;
 
 @end

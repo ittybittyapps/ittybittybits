@@ -48,6 +48,11 @@
 		A7B10AAE1384AB5F00C8A672 /* IBAPreProcessorMagic.h in Headers */ = {isa = PBXBuildFile; fileRef = A7B10AAD1384AB5F00C8A672 /* IBAPreProcessorMagic.h */; };
 		A7B10AB11384E4F500C8A672 /* JSONKit.h in Headers */ = {isa = PBXBuildFile; fileRef = A7B10AAF1384E4F500C8A672 /* JSONKit.h */; };
 		A7B10AB21384E4F500C8A672 /* JSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = A7B10AB01384E4F500C8A672 /* JSONKit.m */; };
+		A7B10AC5138609F700C8A672 /* MKReverseGeocoder+IBABlocks.h in Headers */ = {isa = PBXBuildFile; fileRef = A7B10AC3138609F700C8A672 /* MKReverseGeocoder+IBABlocks.h */; };
+		A7B10AC6138609F800C8A672 /* MKReverseGeocoder+IBABlocks.m in Sources */ = {isa = PBXBuildFile; fileRef = A7B10AC4138609F700C8A672 /* MKReverseGeocoder+IBABlocks.m */; };
+		A7B10AC9138632E800C8A672 /* UISearchBar+IBAExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = A7B10AC7138632E800C8A672 /* UISearchBar+IBAExtensions.h */; };
+		A7B10ACA138632E800C8A672 /* UISearchBar+IBAExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = A7B10AC8138632E800C8A672 /* UISearchBar+IBAExtensions.m */; };
+		A7B10ACD138652F800C8A672 /* IBACoreLocation.h in Headers */ = {isa = PBXBuildFile; fileRef = A7B10ACC138652F800C8A672 /* IBACoreLocation.h */; };
 		A7B4DABD1367991200543D61 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7B4DABC1367991200543D61 /* Foundation.framework */; };
 		A7B4DACD13679F5E00543D61 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7B4DACC13679F5E00543D61 /* UIKit.framework */; };
 		A7B4DACE13679F5E00543D61 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7B4DABC1367991200543D61 /* Foundation.framework */; };
@@ -129,6 +134,11 @@
 		A7B10AAD1384AB5F00C8A672 /* IBAPreProcessorMagic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IBAPreProcessorMagic.h; path = Foundation/IBAPreProcessorMagic.h; sourceTree = SOURCE_ROOT; };
 		A7B10AAF1384E4F500C8A672 /* JSONKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JSONKit.h; path = ../lib/JSONKit/JSONKit.h; sourceTree = "<group>"; };
 		A7B10AB01384E4F500C8A672 /* JSONKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JSONKit.m; path = ../lib/JSONKit/JSONKit.m; sourceTree = "<group>"; };
+		A7B10AC3138609F700C8A672 /* MKReverseGeocoder+IBABlocks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "MKReverseGeocoder+IBABlocks.h"; path = "MapKit/MKReverseGeocoder+IBABlocks.h"; sourceTree = SOURCE_ROOT; };
+		A7B10AC4138609F700C8A672 /* MKReverseGeocoder+IBABlocks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "MKReverseGeocoder+IBABlocks.m"; path = "MapKit/MKReverseGeocoder+IBABlocks.m"; sourceTree = SOURCE_ROOT; };
+		A7B10AC7138632E800C8A672 /* UISearchBar+IBAExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UISearchBar+IBAExtensions.h"; path = "UIKit/UISearchBar+IBAExtensions.h"; sourceTree = SOURCE_ROOT; };
+		A7B10AC8138632E800C8A672 /* UISearchBar+IBAExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UISearchBar+IBAExtensions.m"; path = "UIKit/UISearchBar+IBAExtensions.m"; sourceTree = SOURCE_ROOT; };
+		A7B10ACC138652F800C8A672 /* IBACoreLocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IBACoreLocation.h; path = CoreLocation/IBACoreLocation.h; sourceTree = SOURCE_ROOT; };
 		A7B4DAB91367991200543D61 /* libIttyBittyBits.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libIttyBittyBits.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7B4DABC1367991200543D61 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		A7B4DAC01367991200543D61 /* IttyBittyBits-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "IttyBittyBits-Prefix.pch"; sourceTree = "<group>"; };
@@ -190,6 +200,8 @@
 				A706A6B8138100D400429203 /* MKMapView+IBAAnnotations.h */,
 				A706A6B9138100D400429203 /* MKMapView+IBAAnnotations.m */,
 				A706A6BC138101AC00429203 /* IBAMapKit.h */,
+				A7B10AC3138609F700C8A672 /* MKReverseGeocoder+IBABlocks.h */,
+				A7B10AC4138609F700C8A672 /* MKReverseGeocoder+IBABlocks.m */,
 			);
 			path = MapKit;
 			sourceTree = "<group>";
@@ -204,6 +216,8 @@
 				A722FA5E137B94D90066CC1A /* UIAlertView+IBAHelpers.m */,
 				A706A6EB13821B8300429203 /* IBAActionSheet.h */,
 				A706A6EC13821B8300429203 /* IBAActionSheet.m */,
+				A7B10AC7138632E800C8A672 /* UISearchBar+IBAExtensions.h */,
+				A7B10AC8138632E800C8A672 /* UISearchBar+IBAExtensions.m */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -250,6 +264,14 @@
 			name = JSONKit;
 			sourceTree = "<group>";
 		};
+		A7B10ACB138652D300C8A672 /* CoreLocation */ = {
+			isa = PBXGroup;
+			children = (
+				A7B10ACC138652F800C8A672 /* IBACoreLocation.h */,
+			);
+			path = CoreLocation;
+			sourceTree = "<group>";
+		};
 		A7B4DAAE1367991100543D61 = {
 			isa = PBXGroup;
 			children = (
@@ -285,6 +307,7 @@
 		A7B4DABE1367991200543D61 /* Src */ = {
 			isa = PBXGroup;
 			children = (
+				A7B10ACB138652D300C8A672 /* CoreLocation */,
 				A79602161373E41E00BA29E5 /* CoreGraphics */,
 				A7B4DAF31367BF8000543D61 /* Foundation */,
 				A706A6B7138100AD00429203 /* MapKit */,
@@ -409,6 +432,9 @@
 				A7B10AA71384987D00C8A672 /* IBAGeocoder.h in Headers */,
 				A7B10AAE1384AB5F00C8A672 /* IBAPreProcessorMagic.h in Headers */,
 				A7B10AB11384E4F500C8A672 /* JSONKit.h in Headers */,
+				A7B10AC5138609F700C8A672 /* MKReverseGeocoder+IBABlocks.h in Headers */,
+				A7B10AC9138632E800C8A672 /* UISearchBar+IBAExtensions.h in Headers */,
+				A7B10ACD138652F800C8A672 /* IBACoreLocation.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -512,6 +538,8 @@
 				A7B109FA138387AC00C8A672 /* NSArray+IBASorting.m in Sources */,
 				A7B10AA81384987D00C8A672 /* IBAGeocoder.m in Sources */,
 				A7B10AB21384E4F500C8A672 /* JSONKit.m in Sources */,
+				A7B10AC6138609F800C8A672 /* MKReverseGeocoder+IBABlocks.m in Sources */,
+				A7B10ACA138632E800C8A672 /* UISearchBar+IBAExtensions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
