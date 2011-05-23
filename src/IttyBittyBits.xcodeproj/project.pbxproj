@@ -25,6 +25,10 @@
 		A722FA47137B77550066CC1A /* UIBarButtonItem+IBAFactories.m in Sources */ = {isa = PBXBuildFile; fileRef = A722FA45137B77550066CC1A /* UIBarButtonItem+IBAFactories.m */; };
 		A722FA5F137B94D90066CC1A /* UIAlertView+IBAHelpers.h in Headers */ = {isa = PBXBuildFile; fileRef = A722FA5D137B94D90066CC1A /* UIAlertView+IBAHelpers.h */; };
 		A722FA60137B94D90066CC1A /* UIAlertView+IBAHelpers.m in Sources */ = {isa = PBXBuildFile; fileRef = A722FA5E137B94D90066CC1A /* UIAlertView+IBAHelpers.m */; };
+		A7286D701389D99A00C12FCB /* IBAExtendedPlacemark.h in Headers */ = {isa = PBXBuildFile; fileRef = A7286D6E1389D99A00C12FCB /* IBAExtendedPlacemark.h */; };
+		A7286D711389D99A00C12FCB /* IBAExtendedPlacemark.m in Sources */ = {isa = PBXBuildFile; fileRef = A7286D6F1389D99A00C12FCB /* IBAExtendedPlacemark.m */; };
+		A7286D8A138A1AFB00C12FCB /* NSMutableArray+IBASorting.h in Headers */ = {isa = PBXBuildFile; fileRef = A7286D88138A1AFB00C12FCB /* NSMutableArray+IBASorting.h */; };
+		A7286D8B138A1AFB00C12FCB /* NSMutableArray+IBASorting.m in Sources */ = {isa = PBXBuildFile; fileRef = A7286D89138A1AFB00C12FCB /* NSMutableArray+IBASorting.m */; };
 		A7656EB91377DF50002FB968 /* IBADelimitedTextFileReaderTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A7656EB61377DF3C002FB968 /* IBADelimitedTextFileReaderTests.m */; };
 		A7914160136FD62200209C96 /* IBALogger.h in Headers */ = {isa = PBXBuildFile; fileRef = A791415E136FD62200209C96 /* IBALogger.h */; };
 		A7914161136FD62200209C96 /* IBALogger.m in Sources */ = {isa = PBXBuildFile; fileRef = A791415F136FD62200209C96 /* IBALogger.m */; };
@@ -108,6 +112,10 @@
 		A722FA45137B77550066CC1A /* UIBarButtonItem+IBAFactories.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIBarButtonItem+IBAFactories.m"; path = "UIKit/UIBarButtonItem+IBAFactories.m"; sourceTree = SOURCE_ROOT; };
 		A722FA5D137B94D90066CC1A /* UIAlertView+IBAHelpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIAlertView+IBAHelpers.h"; path = "UIKit/UIAlertView+IBAHelpers.h"; sourceTree = SOURCE_ROOT; };
 		A722FA5E137B94D90066CC1A /* UIAlertView+IBAHelpers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIAlertView+IBAHelpers.m"; path = "UIKit/UIAlertView+IBAHelpers.m"; sourceTree = SOURCE_ROOT; };
+		A7286D6E1389D99A00C12FCB /* IBAExtendedPlacemark.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IBAExtendedPlacemark.h; path = MapKit/IBAExtendedPlacemark.h; sourceTree = SOURCE_ROOT; };
+		A7286D6F1389D99A00C12FCB /* IBAExtendedPlacemark.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = IBAExtendedPlacemark.m; path = MapKit/IBAExtendedPlacemark.m; sourceTree = SOURCE_ROOT; };
+		A7286D88138A1AFB00C12FCB /* NSMutableArray+IBASorting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSMutableArray+IBASorting.h"; path = "Foundation/NSMutableArray+IBASorting.h"; sourceTree = SOURCE_ROOT; };
+		A7286D89138A1AFB00C12FCB /* NSMutableArray+IBASorting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSMutableArray+IBASorting.m"; path = "Foundation/NSMutableArray+IBASorting.m"; sourceTree = SOURCE_ROOT; };
 		A7656EB51377DF3C002FB968 /* IBADelimitedTextFileReaderTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBADelimitedTextFileReaderTests.h; sourceTree = "<group>"; };
 		A7656EB61377DF3C002FB968 /* IBADelimitedTextFileReaderTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IBADelimitedTextFileReaderTests.m; sourceTree = "<group>"; };
 		A791415E136FD62200209C96 /* IBALogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IBALogger.h; path = Foundation/IBALogger.h; sourceTree = SOURCE_ROOT; };
@@ -195,6 +203,8 @@
 		A706A6B7138100AD00429203 /* MapKit */ = {
 			isa = PBXGroup;
 			children = (
+				A7286D6E1389D99A00C12FCB /* IBAExtendedPlacemark.h */,
+				A7286D6F1389D99A00C12FCB /* IBAExtendedPlacemark.m */,
 				A7B10AA51384987D00C8A672 /* IBAGeocoder.h */,
 				A7B10AA61384987D00C8A672 /* IBAGeocoder.m */,
 				A706A6B8138100D400429203 /* MKMapView+IBAAnnotations.h */,
@@ -372,6 +382,8 @@
 				A7B109F8138387AC00C8A672 /* NSArray+IBASorting.m */,
 				A7D58C571378CFA80041BBEB /* NSArray+IBAWhitespace.h */,
 				A7D58C581378CFA90041BBEB /* NSArray+IBAWhitespace.m */,
+				A7286D88138A1AFB00C12FCB /* NSMutableArray+IBASorting.h */,
+				A7286D89138A1AFB00C12FCB /* NSMutableArray+IBASorting.m */,
 				A7B69228137D13DD00E379F3 /* NSNumber+IBACompare.h */,
 				A7B69229137D13E000E379F3 /* NSNumber+IBACompare.m */,
 				A7D58C521378BF440041BBEB /* NSString+IBAWhitespace.h */,
@@ -435,6 +447,8 @@
 				A7B10AC5138609F700C8A672 /* MKReverseGeocoder+IBABlocks.h in Headers */,
 				A7B10AC9138632E800C8A672 /* UISearchBar+IBAExtensions.h in Headers */,
 				A7B10ACD138652F800C8A672 /* IBACoreLocation.h in Headers */,
+				A7286D701389D99A00C12FCB /* IBAExtendedPlacemark.h in Headers */,
+				A7286D8A138A1AFB00C12FCB /* NSMutableArray+IBASorting.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -540,6 +554,8 @@
 				A7B10AB21384E4F500C8A672 /* JSONKit.m in Sources */,
 				A7B10AC6138609F800C8A672 /* MKReverseGeocoder+IBABlocks.m in Sources */,
 				A7B10ACA138632E800C8A672 /* UISearchBar+IBAExtensions.m in Sources */,
+				A7286D711389D99A00C12FCB /* IBAExtendedPlacemark.m in Sources */,
+				A7286D8B138A1AFB00C12FCB /* NSMutableArray+IBASorting.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

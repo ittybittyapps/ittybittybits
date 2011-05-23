@@ -43,6 +43,7 @@
 
 #import "IBAGeocoder.h"
 #import "../Foundation/IBAFoundation.h"
+#import "IBAExtendedPlacemark.h"
 
 #import "JSONKit.h"
 
@@ -99,7 +100,6 @@ IBA_SYNTHESIZE(delegate, responseData, rConnection, request, requestURL);
     
     return [self initWithRequestParams:params];
 }
-
 
 - (id)initWithAddress:(NSString *)address inCountry:(NSString *)country;
 {
@@ -186,41 +186,74 @@ IBA_SYNTHESIZE(delegate, responseData, rConnection, request, requestURL);
     
     for (NSDictionary *result in results)
     {
-        NSDictionary *addressDict = [result valueForKey:@"address_components"];
-        NSDictionary *coordinateDict = [[result valueForKey:@"geometry"] valueForKey:@"location"];
-        
-        float lat = [[coordinateDict valueForKey:@"lat"] floatValue];
-        float lng = [[coordinateDict valueForKey:@"lng"] floatValue];
-        
+        NSDictionary *addressDict = [result valueForKey:@"address_components"];                        
         NSMutableDictionary *formattedAddressDict = [NSMutableDictionary new];
         
         for(NSDictionary *component in addressDict) 
         {
             NSArray *types = [component valueForKey:@"types"];
             
-            if([types containsObject:@"street_number"])
-                [formattedAddressDict setValue:[component valueForKey:@"long_name"] forKey:(NSString*)kABPersonAddressStreetKey];
+            if ([types containsObject:@"street_number"] || [types containsObject:@"route"])
+            {
+                NSString *streetAddress = nil;
+                
+                if ([types containsObject:@"street_number"])
+                {
+                    NSString *streetNumber = [component valueForKey:@"long_name"];
+                    NSString *streetName = [formattedAddressDict valueForKey:(NSString*)kABPersonAddressStreetKey];
+                   
+                    streetAddress = streetName ? [streetNumber stringByAppendingFormat:@" @%", streetName] : streetNumber;
+                }
+                
+                if ([types containsObject:@"route"])
+                {
+                    NSString *streetNumber = [formattedAddressDict valueForKey:(NSString*)kABPersonAddressStreetKey];
+                    NSString *streetName = [component valueForKey:@"long_name"];
+                    
+                    streetAddress = streetNumber ? [streetNumber stringByAppendingFormat:@" @%", streetName] : streetName; 
+                }
+                
+                [formattedAddressDict setValue:streetAddress forKey:(NSString*)kABPersonAddressStreetKey];
+            }
             
-            if([types containsObject:@"route"])
-                [formattedAddressDict setValue:[[formattedAddressDict valueForKey:(NSString*)kABPersonAddressStreetKey] stringByAppendingFormat:@" %@",[component valueForKey:@"long_name"]] forKey:(NSString*)kABPersonAddressStreetKey];
-            
-            if([types containsObject:@"locality"])
+            if ([types containsObject:@"locality"])
+            {
                 [formattedAddressDict setValue:[component valueForKey:@"long_name"] forKey:(NSString*)kABPersonAddressCityKey];
+            }
             
-            if([types containsObject:@"administrative_area_level_1"])
+            if ([types containsObject:@"administrative_area_level_1"])
+            {
                 [formattedAddressDict setValue:[component valueForKey:@"long_name"] forKey:(NSString*)kABPersonAddressStateKey];
+            }
             
-            if([types containsObject:@"postal_code"])
+            if ([types containsObject:@"postal_code"])
+            {
                 [formattedAddressDict setValue:[component valueForKey:@"long_name"] forKey:(NSString*)kABPersonAddressZIPKey];
+            }
             
-            if([types containsObject:@"country"]) {
+            if ([types containsObject:@"country"]) 
+            {
                 [formattedAddressDict setValue:[component valueForKey:@"long_name"] forKey:(NSString*)kABPersonAddressCountryKey];
                 [formattedAddressDict setValue:[component valueForKey:@"short_name"] forKey:(NSString*)kABPersonAddressCountryCodeKey];
             }
         }
+
+        NSDictionary *geometry = [result valueForKey:@"geometry"];
+        NSDictionary *coordinateDict = [geometry valueForKey:@"location"];
+        NSString *locationType = [geometry valueForKey:@"location_type"];
+        NSDictionary *viewport = [geometry valueForKey:@"viewport"];
+        NSDictionary *bounds = [geometry valueForKey:@"bounds"];
         
-        MKPlacemark *placemark = [[MKPlacemark alloc] initWithCoordinate:CLLocationCoordinate2DMake(lat, lng) 
+        float lat = [[coordinateDict valueForKey:@"lat"] floatValue];
+        float lng = [[coordinateDict valueForKey:@"lng"] floatValue];
+
+        IBAExtendedPlacemark *placemark = [[IBAExtendedPlacemark alloc] initWithCoordinate:CLLocationCoordinate2DMake(lat, lng) 
                                                        addressDictionary:formattedAddressDict];
+        
+        placemark.locationType = [IBAExtendedPlacemark locationTypeForString:locationType];
+        placemark.viewport = [IBAExtendedPlacemark coordinateRegionForDictionary:viewport];
+        placemark.bounds = [IBAExtendedPlacemark coordinateRegionForDictionary:bounds];
+        
         [formattedAddressDict release];
         
         IBALogDebug(@"IBAGeocoder -> Found Placemark: %@", placemark);
