@@ -27,12 +27,18 @@
     [(x) release]; (x) = nil
 
 /*!
+ \brief     Free and NULL the passed pointer variable.
+ \param     p   The pointer to free.
+ */
+#define IBA_FREE(p) if((p)) { free((p)); (p) = NULL; }
+
+/*!
  \def       IBA_PROPERTY_IVAR
  \brief     Returns gets the ivar name of a property with the specified \a name.
  \param     name        The name of the property.
  \return    The ivar name.
  */
-#define IBA_PROPERTY_IVAR(name) name##_
+#define IBA_PROPERTY_IVAR(name) IBA_CAT(name, _)
 
 /*!
  \brief     Release an nil the instance variable behind a property.
@@ -41,6 +47,19 @@
  */
 #define IBA_RELEASE_PROPERTY(propertyName) \
     IBA_RELEASE(IBA_PROPERTY_IVAR(propertyName));
+
+/*!
+ \brief     Macro that retains a new property value in a setter while releasing the old property value.
+ */
+#define IBA_RETAIN_PROPERTY(propertyName, newValue) \
+    do { \
+        if (IBA_PROPERTY_IVAR(propertyName) != newValue) \
+        { \
+            [newValue retain]; \
+            IBA_RELEASE_PROPERTY(propertyName); \
+            IBA_PROPERTY_IVAR(propertyName) = newValue; \
+        } \
+    } while(0)
 
 /*! 
  \def       IBA_FORMAT_FUNCTION
