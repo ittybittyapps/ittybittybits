@@ -1,8 +1,8 @@
 //
-//  IttyBittyBits.h
+//  NSString+IBAURLEncoding.h
 //  IttyBittyBits
 //
-//  Created by Oliver Jones on 6/05/11.
+//  Created by Sean Woodhouse on 25/05/11.
 //  Copyright 2011 Itty Bitty Apps Pty. Ltd. All rights reserved.
 //
 //  Licensed under the Apache License, Version 2.0 (the "License");
@@ -17,10 +17,9 @@
 //  See the License for the specific language governing permissions and
 //  limitations under the License.
 
-#import "Foundation/IBAFoundation.h"
-#import "Foundation/NSString+IBAURLEncoding.h"
-#import "CoreLocation/IBACoreLocation.h"
-#import "CoreGraphics/IBACoreGraphics.h"
-#import "Security/IBASecurity.h"
-#import "UIKit/IBAUIKit.h"
-#import "MapKit/IBAMapKit.h"
+#import <Foundation/Foundation.h>
+
+
+@interface NSString (IBAURLEncoding)
+-(NSString *)ibaURLEncoded;
+@end
