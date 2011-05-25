@@ -20,4 +20,7 @@
 
 #import <CoreLocation/CoreLocation.h>
 
+/*!
+ \brief     Compares to CLLocationCoordinate2D structs for equality.
+ */
 #define IBACLLocationCoordinate2DAreEqual(x, y) ((x).latitude == (y).latitude && (x).longitude == (y).longitude)

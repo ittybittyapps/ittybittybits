@@ -8,6 +8,9 @@
 
 #import <Foundation/Foundation.h>
 
+/*!
+ \brief     Identifies the accuracy of location that an IBAExtendedPlacemark has.
+ */
 typedef enum
 {
     IBAExtendedPlacemarkLocationTypeUnknown = 0,
@@ -25,6 +28,9 @@ typedef enum
     IBAExtendedPlacemarkLocationTypeApproximate
 } IBAExtendedPlacemarkLocationType;
 
+/*!
+ \brief     Extension to MKPlacemark that provides additional information properties and is serializable via NSCoding.
+ */
 @interface IBAExtendedPlacemark : MKPlacemark<NSCoding>
 {
 }
