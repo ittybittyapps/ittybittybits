@@ -18,7 +18,6 @@
 //  limitations under the License.
 
 #import "Foundation/IBAFoundation.h"
-#import "Foundation/NSString+IBAURLEncoding.h"
 #import "CoreLocation/IBACoreLocation.h"
 #import "CoreGraphics/IBACoreGraphics.h"
 #import "Security/IBASecurity.h"

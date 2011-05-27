@@ -30,5 +30,7 @@
 #import "NSArray+IBAWhitespace.h"
 #import "NSDictionary+IBAExtensions.h"
 #import "NSNumber+IBACompare.h"
+#import "NSString+IBAURLEncoding.h"
 #import "NSString+IBAWhitespace.h"
 #import "NSTimer+IBABlocks.h"
+
