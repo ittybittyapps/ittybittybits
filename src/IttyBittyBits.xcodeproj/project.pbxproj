@@ -46,6 +46,10 @@
 		A79602191373E46600BA29E5 /* IBARoundedRectPath.m in Sources */ = {isa = PBXBuildFile; fileRef = A79602171373E46600BA29E5 /* IBARoundedRectPath.m */; };
 		A796021A1373E46600BA29E5 /* IBARoundedRectPath.h in Headers */ = {isa = PBXBuildFile; fileRef = A79602181373E46600BA29E5 /* IBARoundedRectPath.h */; };
 		A796021C1373EAB000BA29E5 /* IBACoreGraphics.h in Headers */ = {isa = PBXBuildFile; fileRef = A796021B1373EAB000BA29E5 /* IBACoreGraphics.h */; };
+		A7966B45139378CB00F1B1A1 /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7966B43139378CB00F1B1A1 /* AddressBook.framework */; };
+		A7966B46139378CB00F1B1A1 /* AddressBookUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7966B44139378CB00F1B1A1 /* AddressBookUI.framework */; };
+		A7966B49139378EB00F1B1A1 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7966B48139378EB00F1B1A1 /* CoreLocation.framework */; };
+		A7966B4B139378FD00F1B1A1 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7966B4A139378FD00F1B1A1 /* MapKit.framework */; };
 		A7B109F513837F4C00C8A672 /* NSDictionary+IBAExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = A7B109F313837F4C00C8A672 /* NSDictionary+IBAExtensions.h */; };
 		A7B109F613837F4C00C8A672 /* NSDictionary+IBAExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = A7B109F413837F4C00C8A672 /* NSDictionary+IBAExtensions.m */; };
 		A7B109F9138387AC00C8A672 /* NSArray+IBASorting.h in Headers */ = {isa = PBXBuildFile; fileRef = A7B109F7138387AC00C8A672 /* NSArray+IBASorting.h */; };
@@ -138,6 +142,10 @@
 		A79602171373E46600BA29E5 /* IBARoundedRectPath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = IBARoundedRectPath.m; path = CoreGraphics/IBARoundedRectPath.m; sourceTree = SOURCE_ROOT; };
 		A79602181373E46600BA29E5 /* IBARoundedRectPath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IBARoundedRectPath.h; path = CoreGraphics/IBARoundedRectPath.h; sourceTree = SOURCE_ROOT; };
 		A796021B1373EAB000BA29E5 /* IBACoreGraphics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IBACoreGraphics.h; path = CoreGraphics/IBACoreGraphics.h; sourceTree = SOURCE_ROOT; };
+		A7966B43139378CB00F1B1A1 /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
+		A7966B44139378CB00F1B1A1 /* AddressBookUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBookUI.framework; path = System/Library/Frameworks/AddressBookUI.framework; sourceTree = SDKROOT; };
+		A7966B48139378EB00F1B1A1 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		A7966B4A139378FD00F1B1A1 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		A7B109F313837F4C00C8A672 /* NSDictionary+IBAExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSDictionary+IBAExtensions.h"; path = "Foundation/NSDictionary+IBAExtensions.h"; sourceTree = SOURCE_ROOT; };
 		A7B109F413837F4C00C8A672 /* NSDictionary+IBAExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSDictionary+IBAExtensions.m"; path = "Foundation/NSDictionary+IBAExtensions.m"; sourceTree = SOURCE_ROOT; };
 		A7B109F7138387AC00C8A672 /* NSArray+IBASorting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSArray+IBASorting.h"; path = "Foundation/NSArray+IBASorting.h"; sourceTree = SOURCE_ROOT; };
@@ -193,6 +201,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A7966B4B139378FD00F1B1A1 /* MapKit.framework in Frameworks */,
+				A7966B49139378EB00F1B1A1 /* CoreLocation.framework in Frameworks */,
+				A7966B45139378CB00F1B1A1 /* AddressBook.framework in Frameworks */,
+				A7966B46139378CB00F1B1A1 /* AddressBookUI.framework in Frameworks */,
 				A7B4DB051367C3F700543D61 /* GHUnitIOS.framework in Frameworks */,
 				A7B4DB031367C3EC00543D61 /* libIttyBittyBits.a in Frameworks */,
 				A7B4DACD13679F5E00543D61 /* UIKit.framework in Frameworks */,
@@ -310,6 +322,10 @@
 		A7B4DABB1367991200543D61 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A7966B4A139378FD00F1B1A1 /* MapKit.framework */,
+				A7966B48139378EB00F1B1A1 /* CoreLocation.framework */,
+				A7966B43139378CB00F1B1A1 /* AddressBook.framework */,
+				A7966B44139378CB00F1B1A1 /* AddressBookUI.framework */,
 				A7B4DB111367C65B00543D61 /* Security.framework */,
 				A7B4DB041367C3F700543D61 /* GHUnitIOS.framework */,
 				A7B4DABC1367991200543D61 /* Foundation.framework */,
