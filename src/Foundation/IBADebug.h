@@ -56,9 +56,9 @@
 void ALogImpl(BOOL assert, const char* functionName, const char* filename, int line, NSString* format, ...) IBA_FORMAT_FUNCTION(5, 6);
 
 #ifndef NDEBUG
-    void DLogImpl(const char* functionName, NSString* format, ...) IBA_FORMAT_FUNCTION(2, 3);
+    void DLogImpl(const char* functionName, const char* filename, int line, NSString* format, ...) IBA_FORMAT_FUNCTION(4, 5);
     #define DLog(format, ...) \
-        DLogImpl(__PRETTY_FUNCTION__, format, ##__VA_ARGS__)
+        DLogImpl(__PRETTY_FUNCTION__, __FILE__, __LINE__, format, ##__VA_ARGS__)
 
     #define ALog(format, ...) \
         ALogImpl(YES, __PRETTY_FUNCTION__, __FILE__, __LINE__, format, ##__VA_ARGS__)

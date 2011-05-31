@@ -32,21 +32,21 @@ IBA_SYNTHESIZE_SINGLETON_FOR_CLASS(IBALogger, sharedLogger)
 @synthesize name;
 
 /////////////////////////////////////////////////////////////////////////////////////////////////
-- (id) init
+- (id)init
 {
     return [self initWithName:[[NSBundle mainBundle] bundleIdentifier]
                      facility:@"com.ittybittyapps.debug"];
 }
 
 /////////////////////////////////////////////////////////////////////////////////////////////////
-- (id) initWithFacility:(NSString*) aFacility
+- (id)initWithFacility:(NSString *) aFacility
 {
     return [self initWithName:[[NSBundle mainBundle] bundleIdentifier] 
                      facility:aFacility];
 }
 
 /////////////////////////////////////////////////////////////////////////////////////////////////
-- (id) initWithName:(NSString*)aName facility:(NSString*) aFacility
+- (id)initWithName:(NSString *)aName facility:(NSString *)aFacility
 {
     if ((self = [super init]))
     {
@@ -69,7 +69,7 @@ IBA_SYNTHESIZE_SINGLETON_FOR_CLASS(IBALogger, sharedLogger)
 }
 
 /////////////////////////////////////////////////////////////////////////////////////////////////
-- (void) dealloc
+- (void)dealloc
 {
     dispatch_sync(logQueue, ^{        
         asl_free(aslMsg);
@@ -86,7 +86,7 @@ IBA_SYNTHESIZE_SINGLETON_FOR_CLASS(IBALogger, sharedLogger)
 }
 
 /////////////////////////////////////////////////////////////////////////////////////////////////
-- (void) setFacility:(NSString *)newFacility
+- (void)setFacility:(NSString *)newFacility
 {
     dispatch_sync(logQueue, ^{
         if (facility != newFacility)
@@ -99,7 +99,7 @@ IBA_SYNTHESIZE_SINGLETON_FOR_CLASS(IBALogger, sharedLogger)
 }
 
 /////////////////////////////////////////////////////////////////////////////////////////////////
-- (void) addLogFile:(NSString*)path
+- (void)addLogFile:(NSString *)path
 {
     dispatch_sync(logQueue, ^{
         if ([additionalFiles objectForKey:path] == nil)
@@ -116,7 +116,7 @@ IBA_SYNTHESIZE_SINGLETON_FOR_CLASS(IBALogger, sharedLogger)
 }
 
 /////////////////////////////////////////////////////////////////////////////////////////////////
-- (void) removeLogFile:(NSString*)path
+- (void)removeLogFile:(NSString *)path
 {
     dispatch_sync(logQueue, ^{
         
@@ -130,148 +130,216 @@ IBA_SYNTHESIZE_SINGLETON_FOR_CLASS(IBALogger, sharedLogger)
 }
 
 /////////////////////////////////////////////////////////////////////////////////////////////////
-- (void) log:(NSString*)format level:(NSInteger)level, ...
+- (void)log:(NSString*)format 
+      level:(NSInteger)level
+       file:(const char *)file
+       line:(NSUInteger)line
+   function:(const char *)function, ...
 {
     va_list args;
-    va_start(args, level);
-    [self log:format level:level args:args];
+    va_start(args, function);
+    [self log:format level:level file:file line:line function:function args:args];
     va_end(args);
 }
 
 /////////////////////////////////////////////////////////////////////////////////////////////////
-- (void) log:(NSString*)format level:(NSInteger)level args:(va_list)args
+- (void)log:(NSString *)format 
+      level:(NSInteger)level 
+       file:(const char *)file
+       line:(NSUInteger)line
+   function:(const char *)function
+       args:(va_list)args
 {
-    NSString* msg = [[NSString alloc] initWithFormat:format arguments:args];
+
+    NSString *msg = [[NSString alloc] initWithFormat:format arguments:args];
+    NSString *metaMsg = [[NSString alloc] initWithFormat:@"%@\t(%s:%d) %s", msg, file, line, function];
     
     dispatch_async(logQueue, ^ {
-        if (asl_log(aslClient, aslMsg, level, "%s", [msg UTF8String]))
+        if (asl_log(aslClient, aslMsg, level, "%s", [metaMsg UTF8String]))
         {
             // Log failed, try using NSLog to log message instead.
-            NSLog(@"%@", msg);
+            NSLog(@"%@", metaMsg);
         }
     });
     
     [msg release];
+    [metaMsg release];
 }
 
 /////////////////////////////////////////////////////////////////////////////////////////////////
-- (void) logDebug:(NSString*)format, ...
+- (void) logDebug:(NSString*)format
+             file:(const char *)file
+             line:(NSUInteger)line
+         function:(const char *)function, ...
 {
     va_list args;
-    va_start(args, format);
-    [self logDebug:format args:args];
+    va_start(args, function);
+    [self logDebug:format file:file line:line function:function args:args];
     va_end(args);
 }
 
 /////////////////////////////////////////////////////////////////////////////////////////////////
-- (void) logDebug:(NSString*)format args:(va_list)args
+- (void) logDebug:(NSString*)format
+             file:(const char *)file
+             line:(NSUInteger)line
+         function:(const char *)function
+             args:(va_list)args
 {
-    [self log:format level:ASL_LEVEL_DEBUG args:args];
+    [self log:format level:ASL_LEVEL_DEBUG file:file line:line function:function args:args];
 }
 
 /////////////////////////////////////////////////////////////////////////////////////////////////
-- (void) logInfo:(NSString*)format, ...
+- (void) logInfo:(NSString*)format
+            file:(const char *)file
+            line:(NSUInteger)line
+        function:(const char *)function, ...
 {
     va_list args;
-    va_start(args, format);
-    [self logInfo:format args:args];
+    va_start(args, function);
+    [self logInfo:format file:file line:line function:function args:args];
     va_end(args);
 }
 
 /////////////////////////////////////////////////////////////////////////////////////////////////
-- (void) logInfo:(NSString*)format args:(va_list)args
+- (void) logInfo:(NSString*)format
+            file:(const char *)file
+            line:(NSUInteger)line
+        function:(const char *)function
+            args:(va_list)args
 {
-    [self log:format level:ASL_LEVEL_INFO args:args];
+    [self log:format level:ASL_LEVEL_INFO file:file line:line function:function args:args];
 }
 
 /////////////////////////////////////////////////////////////////////////////////////////////////
-- (void) logNotice:(NSString*)format, ...
+- (void) logNotice:(NSString*)format
+              file:(const char *)file
+              line:(NSUInteger)line
+          function:(const char *)function, ...
 {
     va_list args;
-    va_start(args, format);
-    [self logNotice:format args:args];
+    va_start(args, function);
+    [self logNotice:format file:file line:line function:function args:args];
     va_end(args);
 }
 
 /////////////////////////////////////////////////////////////////////////////////////////////////
-- (void) logNotice:(NSString*)format args:(va_list)args
+- (void) logNotice:(NSString*)format
+              file:(const char *)file
+              line:(NSUInteger)line
+          function:(const char *)function
+              args:(va_list)args
 {
-    [self log:format level:ASL_LEVEL_NOTICE args:args];
+    [self log:format level:ASL_LEVEL_NOTICE file:file line:line function:function args:args];
 }
 
 /////////////////////////////////////////////////////////////////////////////////////////////////
-- (void) logWarning:(NSString*)format, ...
+- (void) logWarning:(NSString*)format
+               file:(const char *)file
+               line:(NSUInteger)line
+           function:(const char *)function, ...
 {
     va_list args;
-    va_start(args, format);
-    [self logWarning:format args:args];
+    va_start(args, function);
+    [self logWarning:format file:file line:line function:function args:args];
     va_end(args);
 }
 
 /////////////////////////////////////////////////////////////////////////////////////////////////
-- (void) logWarning:(NSString*)format args:(va_list)args
+- (void) logWarning:(NSString*)format
+               file:(const char *)file
+               line:(NSUInteger)line
+           function:(const char *)function
+               args:(va_list)args
 {
-    [self log:format level:ASL_LEVEL_WARNING args:args];
+    [self log:format level:ASL_LEVEL_WARNING file:file line:line function:function args:args];
 }
 
 /////////////////////////////////////////////////////////////////////////////////////////////////
-- (void) logError:(NSString*)format, ...
+- (void) logError:(NSString*)format
+             file:(const char *)file
+             line:(NSUInteger)line
+         function:(const char *)function, ...
 {
     va_list args;
-    va_start(args, format);
-    [self logError:format args:args];
+    va_start(args, function);
+    [self logError:format file:file line:line function:function args:args];
     va_end(args);
 }
 
 /////////////////////////////////////////////////////////////////////////////////////////////////
-- (void) logError:(NSString*)format args:(va_list)args
+- (void) logError:(NSString*)format
+             file:(const char *)file
+             line:(NSUInteger)line
+         function:(const char *)function
+             args:(va_list)args
 {
-    [self log:format level:ASL_LEVEL_ERR args:args];
+    [self log:format level:ASL_LEVEL_ERR file:file line:line function:function args:args];
 }
 
 /////////////////////////////////////////////////////////////////////////////////////////////////
-- (void) logCritical:(NSString*)format, ...
+- (void) logCritical:(NSString*)format
+                file:(const char *)file
+                line:(NSUInteger)line
+            function:(const char *)function, ...
 {
     va_list args;
-    va_start(args, format);
-    [self logCritical:format args:args];
+    va_start(args, function);
+    [self logCritical:format file:file line:line function:function args:args];
     va_end(args);
 }
 
 /////////////////////////////////////////////////////////////////////////////////////////////////
-- (void) logCritical:(NSString*)format args:(va_list)args
+- (void) logCritical:(NSString*)format
+                file:(const char *)file
+                line:(NSUInteger)line
+            function:(const char *)function
+                args:(va_list)args
 {
-    [self log:format level:ASL_LEVEL_CRIT args:args];
+    [self log:format level:ASL_LEVEL_CRIT file:file line:line function:function args:args];
 }
 
 /////////////////////////////////////////////////////////////////////////////////////////////////
-- (void) logAlert:(NSString*)format, ...
+- (void) logAlert:(NSString*)format
+             file:(const char *)file
+             line:(NSUInteger)line
+         function:(const char *)function, ...
 {
     va_list args;
-    va_start(args, format);
-    [self logAlert:format args:args];
+    va_start(args, function);
+    [self logAlert:format file:file line:line function:function args:args];
     va_end(args);
 }
 
 /////////////////////////////////////////////////////////////////////////////////////////////////
-- (void) logAlert:(NSString*)format args:(va_list)args
+- (void) logAlert:(NSString*)format
+             file:(const char *)file
+             line:(NSUInteger)line
+         function:(const char *)function
+             args:(va_list)args
 {
-    [self log:format level:ASL_LEVEL_ALERT args:args];
+    [self log:format level:ASL_LEVEL_ALERT file:file line:line function:function args:args];
 }
 
 /////////////////////////////////////////////////////////////////////////////////////////////////
-- (void) logEmergency:(NSString*)format, ...
+- (void) logEmergency:(NSString*)format
+                 file:(const char *)file
+                 line:(NSUInteger)line
+             function:(const char *)function, ...
 {
     va_list args;
-    va_start(args, format);
-    [self logEmergency:format args:args];
+    va_start(args, function);
+    [self logEmergency:format file:file line:line function:function args:args];
     va_end(args);
 }
 
 /////////////////////////////////////////////////////////////////////////////////////////////////
-- (void) logEmergency:(NSString*)format args:(va_list)args
+- (void) logEmergency:(NSString*)format
+                 file:(const char *)file
+                 line:(NSUInteger)line
+             function:(const char *)function
+                 args:(va_list)args
 {
-    [self log:format level:ASL_LEVEL_EMERG args:args];
+    [self log:format level:ASL_LEVEL_EMERG file:file line:line function:function args:args];
 }
 
 @end

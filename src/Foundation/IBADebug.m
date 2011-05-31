@@ -21,14 +21,14 @@
 #import "IBALogger.h"
 
 /////////////////////////////////////////////////////////////////////////////////////////////////
-void DLogImpl(const char* functionName, NSString* format, ...)
+void DLogImpl(const char* functionName, const char* filename, int line, NSString* format, ...)
 {
     NSAutoreleasePool* pool = [NSAutoreleasePool new];
-    NSString* logFormat = [[[NSString stringWithCString:__PRETTY_FUNCTION__ encoding:NSUTF8StringEncoding] stringByAppendingString: @" "] stringByAppendingString:format];
+    NSString* logFormat = [[[NSString stringWithCString:functionName encoding:NSUTF8StringEncoding] stringByAppendingString: @" "] stringByAppendingString:format];
     
     va_list args;
     va_start(args, format);
-    [[IBALogger sharedLogger] logDebug:logFormat args:args];
+    [[IBALogger sharedLogger] logDebug:logFormat file:filename line:line function:functionName args:args];
     va_end(args);
     
     [pool drain];
@@ -56,9 +56,9 @@ void ALogImpl(BOOL assert, const char* functionName, const char* filename, int l
     }
     else
     {
-        NSString* logFormat = [[NSString stringWithFormat:@"ALERT: %s %s(%d):", functionName, filename, line] stringByAppendingString: format];
-        
-        [[IBALogger sharedLogger] logNotice:logFormat args:args];
+        NSString* logFormat = [[NSString alloc] initWithFormat:@"ALERT: %s", format];
+        [[IBALogger sharedLogger] logNotice:logFormat file:filename line:line function:functionName args:args];
+        [logFormat release];
     }
     
     va_end(args);

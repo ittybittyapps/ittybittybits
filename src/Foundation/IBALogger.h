@@ -29,7 +29,7 @@
  \param lvl     The logging level. One of ASL_LEVEL_{DEBUG, INFO, NOTICE, WARNING, ERR, CRIT, ALERT, EMERG}.
  \param format  The format string (NSString).
  */
-#define IBALog(lvl, format, ...) [[IBALogger sharedLogger] log:(format) level:(lvl), ##__VA_ARGS__]
+#define IBALog(lvl, format, ...) [[IBALogger sharedLogger] log:(format) level:(lvl) file:(__FILE__) line:(__LINE__) function:(__PRETTY_FUNCTION__), ##__VA_ARGS__]
 
 /*!
  \brief Log a formatted message to the default logger at ASL_LEVEL_DEBUG.
@@ -102,7 +102,7 @@
  \param     name        The logger name.
  \param     facility    The logger facility name.
  */
-- (id) initWithName:(NSString*)name facility:(NSString*) facility;
+- (id)initWithName:(NSString *)name facility:(NSString *)facility;
 
 /*!
  \brief     The log "facility" name of the log.
@@ -119,109 +119,171 @@
 /*!
  \brief     Log a message with the specified level and format string.
  */
-- (void) log:(NSString*)format
-       level:(NSInteger)level, ... IBA_FORMAT_FUNCTION(1, 3);
+- (void)log:(NSString *)format
+      level:(NSInteger)level
+       file:(const char *)file
+       line:(NSUInteger)line
+   function:(const char *)function, ... IBA_FORMAT_FUNCTION(1, 6);
 
 /*!
  \brief     Log a message with the specified level and format string.
  */
-- (void) log:(NSString*)format
-       level:(NSInteger)level
-        args:(va_list)args IBA_FORMAT_FUNCTION(1, 0);
+- (void)log:(NSString *)format
+      level:(NSInteger)level
+       file:(const char *)file
+       line:(NSUInteger)line
+   function:(const char *)function
+       args:(va_list)args IBA_FORMAT_FUNCTION(1, 0);
 
 /*!
  \brief     Log a debug message with the specified format.
  */
-- (void) logDebug:(NSString*)format, ... IBA_FORMAT_FUNCTION(1, 2);
+- (void)logDebug:(NSString *)format
+            file:(const char *)file
+            line:(NSUInteger)line
+        function:(const char *)function, ... IBA_FORMAT_FUNCTION(1, 5);
 
 /*!
  \brief     Log a debug message with the specified format.
  */
-- (void) logDebug:(NSString*)format args:(va_list)args IBA_FORMAT_FUNCTION(1, 0);
+- (void)logDebug:(NSString *)format
+            file:(const char *)file
+            line:(NSUInteger)line
+        function:(const char *)function
+            args:(va_list)args IBA_FORMAT_FUNCTION(1, 0);
 
 /*!
  \brief     Log an info message with the specified format.
  */
-- (void) logInfo:(NSString*)format, ... IBA_FORMAT_FUNCTION(1, 2);
+- (void)logInfo:(NSString *)format
+           file:(const char *)file
+           line:(NSUInteger)line
+       function:(const char *)function, ... IBA_FORMAT_FUNCTION(1, 5);
 
 /*!
  \brief     Log an info message with the specified format.
  */
-- (void) logInfo:(NSString*)format args:(va_list)args IBA_FORMAT_FUNCTION(1, 0);
+- (void)logInfo:(NSString *)format
+           file:(const char *)file
+           line:(NSUInteger)line
+       function:(const char *)function
+           args:(va_list)args IBA_FORMAT_FUNCTION(1, 0);
 
 /*!
  \brief     Log a notice message with the specified format.
  */
-- (void) logNotice:(NSString*)format, ... IBA_FORMAT_FUNCTION(1, 2);
+- (void)logNotice:(NSString *)format
+             file:(const char *)file
+             line:(NSUInteger)line
+         function:(const char *)function, ... IBA_FORMAT_FUNCTION(1, 5);
 
 /*!
  \brief     Log a notice message with the specified format.
  */
-- (void) logNotice:(NSString*)format args:(va_list)args IBA_FORMAT_FUNCTION(1, 0);
+- (void)logNotice:(NSString *)format
+             file:(const char *)file
+             line:(NSUInteger)line
+         function:(const char *)function
+             args:(va_list)args IBA_FORMAT_FUNCTION(1, 0);
 
 /*!
  \brief     Log a warning message with the specified format.
  */
-- (void) logWarning:(NSString*)format, ... IBA_FORMAT_FUNCTION(1, 2);
+- (void)logWarning:(NSString *)format
+              file:(const char *)file
+              line:(NSUInteger)line
+          function:(const char *)function, ... IBA_FORMAT_FUNCTION(1, 5);
 
 /*!
  \brief     Log a warning message with the specified format.
  */
-- (void) logWarning:(NSString*)format args:(va_list)args IBA_FORMAT_FUNCTION(1, 0);
+- (void)logWarning:(NSString *)format
+              file:(const char *)file
+              line:(NSUInteger)line
+          function:(const char *)function
+              args:(va_list)args IBA_FORMAT_FUNCTION(1, 0);
 
 /*!
  \brief     Log a error message with the specified format.
  */
-- (void) logError:(NSString*)format, ... IBA_FORMAT_FUNCTION(1, 2);
+- (void)logError:(NSString *)format
+            file:(const char *)file
+            line:(NSUInteger)line
+        function:(const char *)function, ... IBA_FORMAT_FUNCTION(1, 5);
 
 /*!
  \brief     Log a error message with the specified format.
  */
-- (void) logError:(NSString*)format args:(va_list)args IBA_FORMAT_FUNCTION(1, 0);
+- (void)logError:(NSString *)format
+            file:(const char *)file
+            line:(NSUInteger)line
+        function:(const char *)function
+            args:(va_list)args IBA_FORMAT_FUNCTION(1, 0);
 
 /*!
  \brief     Log a critical error message with the specified format.
  */
-- (void) logCritical:(NSString*)format, ... IBA_FORMAT_FUNCTION(1, 2);
+- (void)logCritical:(NSString *)format
+               file:(const char *)file
+               line:(NSUInteger)line
+           function:(const char *)function, ... IBA_FORMAT_FUNCTION(1, 5);
 
 /*!
  \brief     Log a critical error message with the specified format.
  */
-- (void) logCritical:(NSString*)format args:(va_list)args IBA_FORMAT_FUNCTION(1, 0);
+- (void)logCritical:(NSString *)format
+               file:(const char *)file
+               line:(NSUInteger)line
+           function:(const char *)function
+               args:(va_list)args IBA_FORMAT_FUNCTION(1, 0);
 
 /*!
  \brief     Log an alert message with the specified format.
  */
-- (void) logAlert:(NSString*)format, ... IBA_FORMAT_FUNCTION(1, 2);
+- (void)logAlert:(NSString *)format
+            file:(const char *)file
+            line:(NSUInteger)line
+        function:(const char *)function, ... IBA_FORMAT_FUNCTION(1, 5);
 
 /*!
  \brief     Log an alert message with the specified format.
  */
-- (void) logAlert:(NSString*)format args:(va_list)args IBA_FORMAT_FUNCTION(1, 0);
+- (void)logAlert:(NSString *)format
+            file:(const char *)file
+            line:(NSUInteger)line
+        function:(const char *)function
+            args:(va_list)args IBA_FORMAT_FUNCTION(1, 0);
 
 /*!
  \brief     Log an emergency message with the specified format.
  \note      Emergency messages are written to the terminal of all logged in users.
  */
-- (void) logEmergency:(NSString*)format, ... IBA_FORMAT_FUNCTION(1, 2);
+- (void)logEmergency:(NSString *)format
+                file:(const char *)file
+                line:(NSUInteger)line
+            function:(const char *)function, ... IBA_FORMAT_FUNCTION(1, 5);
 
 /*!
  \brief     Log an emergency message with the specified format.
  \note      Emergency messages are written to the terminal of all logged in users.
  */
-- (void) logEmergency:(NSString*)format args:(va_list)args IBA_FORMAT_FUNCTION(1, 0);
+- (void)logEmergency:(NSString *)format
+                file:(const char *)file
+                line:(NSUInteger)line
+            function:(const char *)function
+                args:(va_list)args IBA_FORMAT_FUNCTION(1, 0);
 
 /*!
  \brief     Write log messages to the file at the specified path.
  \details   Log messages will be written to this file as well as to the server.
  \param     path    The path of the file to start writing to.
  */
-- (void) addLogFile:(NSString*)path;
+- (void)addLogFile:(NSString *)path;
 
 /*!
  \brief     Strop writing log messages to the file at the specified path.
  \param     path    The path of the file to stop writing to.
  */
-- (void) removeLogFile:(NSString*)path;
+- (void)removeLogFile:(NSString *)path;
 
 @end
