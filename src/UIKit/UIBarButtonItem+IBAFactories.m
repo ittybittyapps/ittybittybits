@@ -26,7 +26,7 @@
 /*!
  \brief     Factory method that creates an autoreleased flexible space bar item.
  */
-+ (UIBarButtonItem *)flexibleSpace 
++ (UIBarButtonItem *)ibaFlexibleSpace 
 {
     return [[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil] autorelease];
 }
@@ -34,7 +34,7 @@
 /*!
  \brief     Factory method that creates an autoreleased fixed space bar item.
  */
-+ (UIBarButtonItem *)fixedSpaceWithWidth:(CGFloat)width
++ (UIBarButtonItem *)ibaFixedSpaceWithWidth:(CGFloat)width
 {
     UIBarButtonItem *item = [[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFixedSpace target:nil action:nil] autorelease];
     item.width = width;

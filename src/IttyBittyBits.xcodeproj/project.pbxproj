@@ -10,6 +10,8 @@
 		75DA1E47138D413B0014C492 /* NSString+IBAURLEncoding.h in Headers */ = {isa = PBXBuildFile; fileRef = 75DA1E45138D413B0014C492 /* NSString+IBAURLEncoding.h */; };
 		75DA1E48138D413B0014C492 /* NSString+IBAURLEncoding.m in Sources */ = {isa = PBXBuildFile; fileRef = 75DA1E46138D413B0014C492 /* NSString+IBAURLEncoding.m */; };
 		75DA1E49138D413B0014C492 /* NSString+IBAURLEncoding.m in Sources */ = {isa = PBXBuildFile; fileRef = 75DA1E46138D413B0014C492 /* NSString+IBAURLEncoding.m */; };
+		A701064413947B8000D9AB8B /* MKPlacemark+IBAFormattedAddress.h in Headers */ = {isa = PBXBuildFile; fileRef = A701064213947B8000D9AB8B /* MKPlacemark+IBAFormattedAddress.h */; };
+		A701064513947B8000D9AB8B /* MKPlacemark+IBAFormattedAddress.m in Sources */ = {isa = PBXBuildFile; fileRef = A701064313947B8000D9AB8B /* MKPlacemark+IBAFormattedAddress.m */; };
 		A7014AF713718C0300BE32D2 /* NSTimer+IBABlocks.h in Headers */ = {isa = PBXBuildFile; fileRef = A7014AF513718C0300BE32D2 /* NSTimer+IBABlocks.h */; };
 		A7014AF813718C0300BE32D2 /* NSTimer+IBABlocks.m in Sources */ = {isa = PBXBuildFile; fileRef = A7014AF613718C0300BE32D2 /* NSTimer+IBABlocks.m */; };
 		A706A6BA138100D400429203 /* MKMapView+IBAAnnotations.h in Headers */ = {isa = PBXBuildFile; fileRef = A706A6B8138100D400429203 /* MKMapView+IBAAnnotations.h */; };
@@ -102,6 +104,8 @@
 /* Begin PBXFileReference section */
 		75DA1E45138D413B0014C492 /* NSString+IBAURLEncoding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString+IBAURLEncoding.h"; path = "Foundation/NSString+IBAURLEncoding.h"; sourceTree = SOURCE_ROOT; };
 		75DA1E46138D413B0014C492 /* NSString+IBAURLEncoding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+IBAURLEncoding.m"; path = "Foundation/NSString+IBAURLEncoding.m"; sourceTree = SOURCE_ROOT; };
+		A701064213947B8000D9AB8B /* MKPlacemark+IBAFormattedAddress.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "MKPlacemark+IBAFormattedAddress.h"; path = "MapKit/MKPlacemark+IBAFormattedAddress.h"; sourceTree = SOURCE_ROOT; };
+		A701064313947B8000D9AB8B /* MKPlacemark+IBAFormattedAddress.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "MKPlacemark+IBAFormattedAddress.m"; path = "MapKit/MKPlacemark+IBAFormattedAddress.m"; sourceTree = SOURCE_ROOT; };
 		A7014AF513718C0300BE32D2 /* NSTimer+IBABlocks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSTimer+IBABlocks.h"; path = "Foundation/NSTimer+IBABlocks.h"; sourceTree = SOURCE_ROOT; };
 		A7014AF613718C0300BE32D2 /* NSTimer+IBABlocks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSTimer+IBABlocks.m"; path = "Foundation/NSTimer+IBABlocks.m"; sourceTree = SOURCE_ROOT; };
 		A706A6B8138100D400429203 /* MKMapView+IBAAnnotations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "MKMapView+IBAAnnotations.h"; path = "MapKit/MKMapView+IBAAnnotations.h"; sourceTree = SOURCE_ROOT; };
@@ -229,6 +233,8 @@
 				A706A6BC138101AC00429203 /* IBAMapKit.h */,
 				A7B10AC3138609F700C8A672 /* MKReverseGeocoder+IBABlocks.h */,
 				A7B10AC4138609F700C8A672 /* MKReverseGeocoder+IBABlocks.m */,
+				A701064213947B8000D9AB8B /* MKPlacemark+IBAFormattedAddress.h */,
+				A701064313947B8000D9AB8B /* MKPlacemark+IBAFormattedAddress.m */,
 			);
 			path = MapKit;
 			sourceTree = "<group>";
@@ -473,6 +479,7 @@
 				A7286D701389D99A00C12FCB /* IBAExtendedPlacemark.h in Headers */,
 				A7286D8A138A1AFB00C12FCB /* NSMutableArray+IBASorting.h in Headers */,
 				75DA1E47138D413B0014C492 /* NSString+IBAURLEncoding.h in Headers */,
+				A701064413947B8000D9AB8B /* MKPlacemark+IBAFormattedAddress.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -581,6 +588,7 @@
 				A7286D711389D99A00C12FCB /* IBAExtendedPlacemark.m in Sources */,
 				A7286D8B138A1AFB00C12FCB /* NSMutableArray+IBASorting.m in Sources */,
 				75DA1E48138D413B0014C492 /* NSString+IBAURLEncoding.m in Sources */,
+				A701064513947B8000D9AB8B /* MKPlacemark+IBAFormattedAddress.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

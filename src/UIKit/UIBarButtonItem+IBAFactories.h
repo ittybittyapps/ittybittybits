@@ -23,7 +23,7 @@
 
 @interface UIBarButtonItem (Factories)
 
-+ (UIBarButtonItem *)flexibleSpace;
-+ (UIBarButtonItem *)fixedSpaceWithWidth:(CGFloat)width;
++ (UIBarButtonItem *)ibaFlexibleSpace;
++ (UIBarButtonItem *)ibaFixedSpaceWithWidth:(CGFloat)width;
 
 @end

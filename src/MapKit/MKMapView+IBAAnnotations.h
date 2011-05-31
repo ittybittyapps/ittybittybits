@@ -23,15 +23,18 @@
 
 @interface MKMapView (IBAAnnotations)
 
-- (void) setRegionForAnnotations:(NSArray *)annotations
-                        animated:(BOOL)animated;
+- (void)ibaSetRegionForAnnotations:(NSArray *)annotations
+                          animated:(BOOL)animated;
 
-- (void) setRegionForAnnotations:(NSArray *)annotations
-                        location:(CLLocationCoordinate2D)coordinate
-                        animated:(BOOL)animated;
+- (void)ibaSetRegionForAnnotations:(NSArray *)annotations
+                          location:(CLLocationCoordinate2D)coordinate
+                          animated:(BOOL)animated;
 
-- (void) setRegionForCoordinates:(CLLocationCoordinate2D *)coordinates
-                           count:(NSUInteger)number
-                        animated:(BOOL)animated;
+- (void)ibaSetRegionForCoordinates:(CLLocationCoordinate2D *)coordinates
+                             count:(NSUInteger)number
+                          animated:(BOOL)animated;
+
+- (void)ibaRemoveAllAnnotations;
+- (void)ibaRemoveAllOverlays;
 
 @end

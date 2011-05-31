@@ -25,8 +25,8 @@
 /*!
  \brief     Sets the region on the MKMapView so that all the specified \a annotations are visible.
  */
-- (void) setRegionForAnnotations:(NSArray *)annotations
-                        animated:(BOOL)animated
+- (void)ibaSetRegionForAnnotations:(NSArray *)annotations
+                          animated:(BOOL)animated
 {
     NSUInteger count = [annotations count];
     if(count == 0)
@@ -39,7 +39,7 @@
         coordinates[index++] = annotation.coordinate;
     }
     
-    [self setRegionForCoordinates:coordinates count:count animated:animated]; 
+    [self ibaSetRegionForCoordinates:coordinates count:count animated:animated]; 
     
     free(coordinates);
 }
@@ -47,9 +47,9 @@
 /*!
  \brief     Sets the region on the MKMapView so that all the specified \a annotations and \a coordinate are visible.
  */
-- (void) setRegionForAnnotations:(NSArray *)annotations
-                        location:(CLLocationCoordinate2D)coordinate
-                        animated:(BOOL)animated
+- (void)ibaSetRegionForAnnotations:(NSArray *)annotations
+                          location:(CLLocationCoordinate2D)coordinate
+                          animated:(BOOL)animated
  {
      NSUInteger count = [annotations count];
      
@@ -62,7 +62,7 @@
          coordinates[index++] = annotation.coordinate;
      }
      
-     [self setRegionForCoordinates:coordinates count:(count + 1) animated:animated]; 
+     [self ibaSetRegionForCoordinates:coordinates count:(count + 1) animated:animated]; 
      
      free(coordinates);
  }
@@ -70,9 +70,9 @@
 /*!
  \brief     Sets the region on the MKMapView so that all the specified \a number of \a coordinates are visible.
  */
-- (void) setRegionForCoordinates:(CLLocationCoordinate2D *)coordinates
-                           count:(NSUInteger)number
-                        animated:(BOOL)animated;
+- (void)ibaSetRegionForCoordinates:(CLLocationCoordinate2D *)coordinates
+                             count:(NSUInteger)number
+                          animated:(BOOL)animated
 {
     if(number == 0)
         return;
@@ -105,5 +105,22 @@
     [self setRegion:region animated:animated];
 
 }
+
+/*!
+ \brief     Remove all the annotations from the MKMapView.
+*/
+- (void)ibaRemoveAllAnnotations
+{
+    [self removeAnnotations:[self annotations]];
+}
+
+/*!
+ \brief     Remove all the overlays from the MKMapView.
+ */
+- (void)ibaRemoveAllOverlays
+{
+    [self removeOverlays:[self overlays]];
+}
+
 
 @end

@@ -19,6 +19,13 @@
 
 #import <Foundation/Foundation.h>
 
+/*!
+ \def       IBAIsNilOrEmptyString
+ \brief     Returns a value indicating whether the specified \a string is nil or empty.
+ \return    YES if the \a string is nil or empty; otherwise NO.
+ */
+#define IBAIsNilOrEmptyString(string) ((string) == nil || [@"" isEqualToString:(string)])
+
 @interface NSString (IBAWhitespace)
 
 - (NSString *)ibaStringByTrimmingWhitespaceAndNewline;

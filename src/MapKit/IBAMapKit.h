@@ -18,6 +18,7 @@
 //  limitations under the License.
 
 #import "MKMapView+IBAAnnotations.h"
+#import "MKPlacemark+IBAFormattedAddress.h"
 #import "MKReverseGeocoder+IBABlocks.h"
 #import "IBAGeocoder.h"
 #import "IBAExtendedPlacemark.h"
