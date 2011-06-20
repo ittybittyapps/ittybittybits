@@ -1,0 +1,13 @@
+//
+//  Debug.xcconfig
+//  IttyBittyBits
+//
+//  Created by Oliver Jones on 17/06/11.
+//  Copyright 2011 Itty Bitty Apps Pty. Ltd. All rights reserved.
+//
+#include "Shared.xcconfig"
+
+// No optimization
+GCC_OPTIMIZATION_LEVEL = 0
+
+GCC_PREPROCESSOR_DEFINITIONS = DEBUG
