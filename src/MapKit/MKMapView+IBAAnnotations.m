@@ -80,7 +80,7 @@
     CLLocationCoordinate2D topLeft = CLLocationCoordinate2DMake(-90, 180);    
     CLLocationCoordinate2D botRight = CLLocationCoordinate2DMake(90, -180);
     
-    for (int i = 0; i < number; ++i)
+    for (NSUInteger i = 0; i < number; ++i)
     {
         CLLocationCoordinate2D c = coordinates[i];
         

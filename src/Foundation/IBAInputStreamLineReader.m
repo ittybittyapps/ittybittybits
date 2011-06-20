@@ -155,7 +155,7 @@ const size_t kBufferSize = 4096;
     if (fetchedLine)
     {
         // remove the fetched line from the beginning of the line buffer
-        int fetchedLineBytes = [fetchedLine lengthOfBytesUsingEncoding:NSUTF8StringEncoding] + [self.linesEndWith lengthOfBytesUsingEncoding:NSUTF8StringEncoding];
+        NSUInteger fetchedLineBytes = [fetchedLine lengthOfBytesUsingEncoding:NSUTF8StringEncoding] + [self.linesEndWith lengthOfBytesUsingEncoding:NSUTF8StringEncoding];
         
         CFRange lineRange = CFRangeMake(0, MIN([self.lineBuffer length], fetchedLineBytes));
         CFDataDeleteBytes((CFMutableDataRef)self.lineBuffer, lineRange);

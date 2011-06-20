@@ -28,7 +28,8 @@ void IBACGContextAddRoundRect(CGContextRef context,
     if (!CGRectIsEmpty(rect)) {
         if (radius > 0.0) {
             // Clamp radius to be no larger than half the rect's width or height.
-            radius = MIN(radius, 0.5 * MIN(rect.size.width, rect.size.height));
+            CGFloat minWidthHeight = MIN(rect.size.width, rect.size.height);
+            radius = MIN(radius, 0.5 * minWidthHeight);
             
             CGPoint topLeft = CGPointMake(CGRectGetMinX(rect), CGRectGetMaxY(rect));
             CGPoint topRight = CGPointMake(CGRectGetMaxX(rect), CGRectGetMaxY(rect));
@@ -59,7 +60,8 @@ void IBACGPathAddRoundRect(CGMutablePathRef path,
     if (!CGRectIsEmpty(rect)) {
         if (radius > 0.0) {
             // Clamp radius to be no larger than half the rect's width or height.
-            radius = MIN(radius, 0.5 * MIN(rect.size.width, rect.size.height));
+            CGFloat minWidthHeight = MIN(rect.size.width, rect.size.height);
+            radius = MIN(radius, 0.5 * minWidthHeight);
             
             CGPoint topLeft = CGPointMake(CGRectGetMinX(rect), CGRectGetMaxY(rect));
             CGPoint topRight = CGPointMake(CGRectGetMaxX(rect), CGRectGetMaxY(rect));
