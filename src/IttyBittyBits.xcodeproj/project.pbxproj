@@ -90,6 +90,8 @@
 		A7B4DB171367C70D00543D61 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7B4DB111367C65B00543D61 /* Security.framework */; };
 		A7B6922A137D13E200E379F3 /* NSNumber+IBACompare.h in Headers */ = {isa = PBXBuildFile; fileRef = A7B69228137D13DD00E379F3 /* NSNumber+IBACompare.h */; };
 		A7B6922B137D13E200E379F3 /* NSNumber+IBACompare.m in Sources */ = {isa = PBXBuildFile; fileRef = A7B69229137D13E000E379F3 /* NSNumber+IBACompare.m */; };
+		A7C0DBDF13B1705E00860296 /* UIView+IBAPositionHelpers.h in Headers */ = {isa = PBXBuildFile; fileRef = A7C0DBDD13B1705E00860296 /* UIView+IBAPositionHelpers.h */; };
+		A7C0DBE013B1705E00860296 /* UIView+IBAPositionHelpers.m in Sources */ = {isa = PBXBuildFile; fileRef = A7C0DBDE13B1705E00860296 /* UIView+IBAPositionHelpers.m */; };
 		A7D58C541378BF440041BBEB /* NSString+IBAWhitespace.h in Headers */ = {isa = PBXBuildFile; fileRef = A7D58C521378BF440041BBEB /* NSString+IBAWhitespace.h */; };
 		A7D58C551378BF440041BBEB /* NSString+IBAWhitespace.m in Sources */ = {isa = PBXBuildFile; fileRef = A7D58C531378BF440041BBEB /* NSString+IBAWhitespace.m */; };
 		A7D58C591378CFAA0041BBEB /* NSArray+IBAWhitespace.h in Headers */ = {isa = PBXBuildFile; fileRef = A7D58C571378CFA80041BBEB /* NSArray+IBAWhitespace.h */; };
@@ -199,6 +201,8 @@
 		A7B4DB111367C65B00543D61 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		A7B69228137D13DD00E379F3 /* NSNumber+IBACompare.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSNumber+IBACompare.h"; path = "Foundation/NSNumber+IBACompare.h"; sourceTree = SOURCE_ROOT; };
 		A7B69229137D13E000E379F3 /* NSNumber+IBACompare.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSNumber+IBACompare.m"; path = "Foundation/NSNumber+IBACompare.m"; sourceTree = SOURCE_ROOT; };
+		A7C0DBDD13B1705E00860296 /* UIView+IBAPositionHelpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+IBAPositionHelpers.h"; sourceTree = "<group>"; };
+		A7C0DBDE13B1705E00860296 /* UIView+IBAPositionHelpers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+IBAPositionHelpers.m"; sourceTree = "<group>"; };
 		A7C2168C13AB29D40070DA6A /* Shared.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Shared.xcconfig; sourceTree = "<group>"; };
 		A7C2168D13AB2BAC0070DA6A /* Debug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Debug.xcconfig; sourceTree = "<group>"; };
 		A7C2168E13AB2BBC0070DA6A /* Release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Release.xcconfig; sourceTree = "<group>"; };
@@ -298,6 +302,8 @@
 				A706A6EC13821B8300429203 /* IBAActionSheet.m */,
 				A7B10AC7138632E800C8A672 /* UISearchBar+IBAExtensions.h */,
 				A7B10AC8138632E800C8A672 /* UISearchBar+IBAExtensions.m */,
+				A7C0DBDD13B1705E00860296 /* UIView+IBAPositionHelpers.h */,
+				A7C0DBDE13B1705E00860296 /* UIView+IBAPositionHelpers.m */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -547,6 +553,7 @@
 				751C605713B1CB1C00447BB4 /* IBACoreDataContextProvider.h in Headers */,
 				751C606113B216E200447BB4 /* IBACoreData.h in Headers */,
 				A7808BD013D2B6A500F76DB1 /* UIColor+IBAExtensions.h in Headers */,
+				A7C0DBDF13B1705E00860296 /* UIView+IBAPositionHelpers.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -658,6 +665,7 @@
 				A701064513947B8000D9AB8B /* MKPlacemark+IBAFormattedAddress.m in Sources */,
 				751C605813B1CB1C00447BB4 /* IBACoreDataContextProvider.m in Sources */,
 				A7808BD113D2B6A500F76DB1 /* UIColor+IBAExtensions.m in Sources */,
+				A7C0DBE013B1705E00860296 /* UIView+IBAPositionHelpers.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

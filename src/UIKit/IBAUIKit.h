@@ -22,3 +22,4 @@
 #import "UIBarButtonItem+IBAFactories.h"
 #import "UIColor+IBAExtensions.h"
 #import "UISearchBar+IBAExtensions.h"
+#import "UIView+IBAPositionHelpers.h"
