@@ -23,3 +23,4 @@
 #import "Security/IBASecurity.h"
 #import "UIKit/IBAUIKit.h"
 #import "MapKit/IBAMapKit.h"
+#import "CoreData/IBACoreData.h"
