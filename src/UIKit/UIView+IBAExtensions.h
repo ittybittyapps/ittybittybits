@@ -1,8 +1,8 @@
 //
-//  UISearchBar+IBAExtensions.h
+//  UIView+IBAExtensions.h
 //  IttyBittyBits
 //
-//  Created by Oliver Jones on 20/05/11.
+//  Created by Oliver Jones on 22/06/11.
 //  Copyright 2011 Itty Bitty Apps Pty. Ltd. All rights reserved.
 //
 //  Licensed under the Apache License, Version 2.0 (the "License");
@@ -18,10 +18,15 @@
 //  limitations under the License.
 
 #import <Foundation/Foundation.h>
+#import "../Foundation/IBACommon.h"
 
+@interface UIView (IBAExtensions)
 
-@interface UISearchBar (IBAExtensions)
-
-- (UIButton *) ibaCancelButton;
+@property (nonatomic, assign) CGFloat ibaLeft;
+@property (nonatomic, assign) CGFloat ibaRight;
+@property (nonatomic, assign) CGFloat ibaTop;
+@property (nonatomic, assign) CGFloat ibaBottom;
+@property (nonatomic, assign) CGFloat ibaWidth;
+@property (nonatomic, assign) CGFloat ibaHeight;
 
 @end

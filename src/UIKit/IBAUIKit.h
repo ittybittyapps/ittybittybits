@@ -18,8 +18,8 @@
 //  limitations under the License.
 
 #import "IBAActionSheet.h"
-#import "UIAlertView+IBAHelpers.h"
+#import "UIAlertView+IBAExtensions.h"
 #import "UIBarButtonItem+IBAFactories.h"
 #import "UIColor+IBAExtensions.h"
 #import "UISearchBar+IBAExtensions.h"
-#import "UIView+IBAPositionHelpers.h"
+#import "UIView+IBAExtensions.h"
