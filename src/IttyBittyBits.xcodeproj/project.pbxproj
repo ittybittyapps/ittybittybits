@@ -92,12 +92,16 @@
 		A7C0DBDF13B1705E00860296 /* UIView+IBAExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = A7C0DBDD13B1705E00860296 /* UIView+IBAExtensions.h */; };
 		A7C0DBE013B1705E00860296 /* UIView+IBAExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = A7C0DBDE13B1705E00860296 /* UIView+IBAExtensions.m */; };
 		A7C0DBF713B195A800860296 /* IBAMath.m in Sources */ = {isa = PBXBuildFile; fileRef = A7C0DBF613B195A800860296 /* IBAMath.m */; };
+		A7C2FB9813B3073F00F774CA /* IBAGradientButton.h in Headers */ = {isa = PBXBuildFile; fileRef = A7C2FB9613B3073F00F774CA /* IBAGradientButton.h */; };
+		A7C2FB9913B3073F00F774CA /* IBAGradientButton.m in Sources */ = {isa = PBXBuildFile; fileRef = A7C2FB9713B3073F00F774CA /* IBAGradientButton.m */; };
+		A7C2FB9C13B3083500F774CA /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7C2FB9B13B3083500F774CA /* QuartzCore.framework */; };
 		A7C2FB9D13B3085800F774CA /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 751C605A13B20E0800447BB4 /* CoreData.framework */; };
 		A7C2FB9E13B3085C00F774CA /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7966B4A139378FD00F1B1A1 /* MapKit.framework */; };
 		A7C2FB9F13B3086000F774CA /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7966B48139378EB00F1B1A1 /* CoreLocation.framework */; };
 		A7C2FBA013B3086400F774CA /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7966B43139378CB00F1B1A1 /* AddressBook.framework */; };
 		A7C2FBA113B3086800F774CA /* AddressBookUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7966B44139378CB00F1B1A1 /* AddressBookUI.framework */; };
 		A7C2FBA213B3087200F774CA /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7B4DACC13679F5E00543D61 /* UIKit.framework */; };
+		A7C2FBA313B3087500F774CA /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7C2FB9B13B3083500F774CA /* QuartzCore.framework */; };
 		A7C2FBA413B3087900F774CA /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7B4DACF13679F5E00543D61 /* CoreGraphics.framework */; };
 		A7D58C541378BF440041BBEB /* NSString+IBAWhitespace.h in Headers */ = {isa = PBXBuildFile; fileRef = A7D58C521378BF440041BBEB /* NSString+IBAWhitespace.h */; };
 		A7D58C551378BF440041BBEB /* NSString+IBAWhitespace.m in Sources */ = {isa = PBXBuildFile; fileRef = A7D58C531378BF440041BBEB /* NSString+IBAWhitespace.m */; };
@@ -215,6 +219,9 @@
 		A7C2168F13AB2DC70070DA6A /* IttyBittyBits-Shared.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = "IttyBittyBits-Shared.xcconfig"; sourceTree = "<group>"; };
 		A7C2169013AB2DD90070DA6A /* IttyBittyBits-Debug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = "IttyBittyBits-Debug.xcconfig"; sourceTree = "<group>"; };
 		A7C2169113AB2DE70070DA6A /* IttyBittyBits-Release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = "IttyBittyBits-Release.xcconfig"; sourceTree = "<group>"; };
+		A7C2FB9613B3073F00F774CA /* IBAGradientButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBAGradientButton.h; sourceTree = "<group>"; };
+		A7C2FB9713B3073F00F774CA /* IBAGradientButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IBAGradientButton.m; sourceTree = "<group>"; };
+		A7C2FB9B13B3083500F774CA /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		A7D58C521378BF440041BBEB /* NSString+IBAWhitespace.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString+IBAWhitespace.h"; path = "Foundation/NSString+IBAWhitespace.h"; sourceTree = SOURCE_ROOT; };
 		A7D58C531378BF440041BBEB /* NSString+IBAWhitespace.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+IBAWhitespace.m"; path = "Foundation/NSString+IBAWhitespace.m"; sourceTree = SOURCE_ROOT; };
 		A7D58C571378CFA80041BBEB /* NSArray+IBAWhitespace.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSArray+IBAWhitespace.h"; path = "Foundation/NSArray+IBAWhitespace.h"; sourceTree = SOURCE_ROOT; };
@@ -237,6 +244,7 @@
 				A7C2FBA013B3086400F774CA /* AddressBook.framework in Frameworks */,
 				A7C2FBA113B3086800F774CA /* AddressBookUI.framework in Frameworks */,
 				A7C2FBA213B3087200F774CA /* UIKit.framework in Frameworks */,
+				A7C2FBA313B3087500F774CA /* QuartzCore.framework in Frameworks */,
 				A7C2FBA413B3087900F774CA /* CoreGraphics.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -245,6 +253,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A7C2FB9C13B3083500F774CA /* QuartzCore.framework in Frameworks */,
 				A7966B4B139378FD00F1B1A1 /* MapKit.framework in Frameworks */,
 				A7966B49139378EB00F1B1A1 /* CoreLocation.framework in Frameworks */,
 				A7966B45139378CB00F1B1A1 /* AddressBook.framework in Frameworks */,
@@ -307,6 +316,8 @@
 				A7C0DBDE13B1705E00860296 /* UIView+IBAExtensions.m */,
 				A774CAD813B2DD89002B2FA1 /* UIScrollView+IBAExtensions.h */,
 				A774CAD913B2DD89002B2FA1 /* UIScrollView+IBAExtensions.m */,
+				A7C2FB9613B3073F00F774CA /* IBAGradientButton.h */,
+				A7C2FB9713B3073F00F774CA /* IBAGradientButton.m */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -394,6 +405,7 @@
 				A7B4DB041367C3F700543D61 /* GHUnitIOS.framework */,
 				A7B4DABC1367991200543D61 /* Foundation.framework */,
 				A7B4DACC13679F5E00543D61 /* UIKit.framework */,
+				A7C2FB9B13B3083500F774CA /* QuartzCore.framework */,
 				A7B4DACF13679F5E00543D61 /* CoreGraphics.framework */,
 			);
 			name = Frameworks;
@@ -557,6 +569,7 @@
 				751C605713B1CB1C00447BB4 /* IBACoreDataContextProvider.h in Headers */,
 				751C606113B216E200447BB4 /* IBACoreData.h in Headers */,
 				A774CADA13B2DD89002B2FA1 /* UIScrollView+IBAExtensions.h in Headers */,
+				A7C2FB9813B3073F00F774CA /* IBAGradientButton.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -671,6 +684,7 @@
 				751C605813B1CB1C00447BB4 /* IBACoreDataContextProvider.m in Sources */,
 				A774CADB13B2DD89002B2FA1 /* UIScrollView+IBAExtensions.m in Sources */,
 				A774CADE13B2E0B3002B2FA1 /* IBAUIKit.m in Sources */,
+				A7C2FB9913B3073F00F774CA /* IBAGradientButton.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
