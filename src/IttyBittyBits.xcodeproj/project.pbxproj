@@ -341,7 +341,6 @@
 		A7B4DAAE1367991100543D61 = {
 			isa = PBXGroup;
 			children = (
-				751C605A13B20E0800447BB4 /* CoreData.framework */,
 				A7C2168A13AB29100070DA6A /* Configuration */,
 				A7B4DABE1367991200543D61 /* Src */,
 				A7B4DAD113679F5E00543D61 /* Tests */,
@@ -363,6 +362,7 @@
 		A7B4DABB1367991200543D61 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				751C605A13B20E0800447BB4 /* CoreData.framework */,
 				A7966B4A139378FD00F1B1A1 /* MapKit.framework */,
 				A7966B48139378EB00F1B1A1 /* CoreLocation.framework */,
 				A7966B43139378CB00F1B1A1 /* AddressBook.framework */,
