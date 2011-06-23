@@ -21,6 +21,7 @@
 #import "UIBarButtonItem+IBAFactories.h"
 #import "UIAlertView+IBAExtensions.h"
 #import "UISearchBar+IBAExtensions.h"
+#import "UIScrollView+IBAExtensions.h"
 #import "UIView+IBAExtensions.h"
 
 /*!
@@ -46,3 +47,10 @@
     colorWithRed:((float)(((rgbValue) & 0xFF0000) >> 16))/255.0f \
     green:((float)(((rgbValue) & 0xFF00) >> 8))/255.0f \
     blue:((float)((rgbValue) & 0xFF))/255.0f alpha:(alphaValue)]
+
+
+IBA_EXTERN_C_BEGIN
+
+CGRect IBACGRectForApplicationOrientation(CGRect rect);
+
+IBA_EXTERN_C_END

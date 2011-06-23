@@ -152,6 +152,9 @@
 		A7286D89138A1AFB00C12FCB /* NSMutableArray+IBASorting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSMutableArray+IBASorting.m"; path = "Foundation/NSMutableArray+IBASorting.m"; sourceTree = SOURCE_ROOT; };
 		A7656EB51377DF3C002FB968 /* IBADelimitedTextFileReaderTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBADelimitedTextFileReaderTests.h; sourceTree = "<group>"; };
 		A7656EB61377DF3C002FB968 /* IBADelimitedTextFileReaderTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IBADelimitedTextFileReaderTests.m; sourceTree = "<group>"; };
+		A774CAD813B2DD89002B2FA1 /* UIScrollView+IBAExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+IBAExtensions.h"; sourceTree = "<group>"; };
+		A774CAD913B2DD89002B2FA1 /* UIScrollView+IBAExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+IBAExtensions.m"; sourceTree = "<group>"; };
+		A774CADD13B2E0B3002B2FA1 /* IBAUIKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IBAUIKit.m; sourceTree = "<group>"; };
 		A791415E136FD62200209C96 /* IBALogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IBALogger.h; path = Foundation/IBALogger.h; sourceTree = SOURCE_ROOT; };
 		A791415F136FD62200209C96 /* IBALogger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = IBALogger.m; path = Foundation/IBALogger.m; sourceTree = SOURCE_ROOT; };
 		A79141631370E01300209C96 /* IBALoggerTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBALoggerTests.h; sourceTree = "<group>"; };
@@ -291,6 +294,7 @@
 			isa = PBXGroup;
 			children = (
 				A722FA42137B73730066CC1A /* IBAUIKit.h */,
+				A774CADD13B2E0B3002B2FA1 /* IBAUIKit.m */,
 				A722FA44137B77550066CC1A /* UIBarButtonItem+IBAFactories.h */,
 				A722FA45137B77550066CC1A /* UIBarButtonItem+IBAFactories.m */,
 				A722FA5D137B94D90066CC1A /* UIAlertView+IBAExtensions.h */,
@@ -301,6 +305,8 @@
 				A7B10AC8138632E800C8A672 /* UISearchBar+IBAExtensions.m */,
 				A7C0DBDD13B1705E00860296 /* UIView+IBAExtensions.h */,
 				A7C0DBDE13B1705E00860296 /* UIView+IBAExtensions.m */,
+				A774CAD813B2DD89002B2FA1 /* UIScrollView+IBAExtensions.h */,
+				A774CAD913B2DD89002B2FA1 /* UIScrollView+IBAExtensions.m */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -550,6 +556,7 @@
 				A7C0DBDF13B1705E00860296 /* UIView+IBAExtensions.h in Headers */,
 				751C605713B1CB1C00447BB4 /* IBACoreDataContextProvider.h in Headers */,
 				751C606113B216E200447BB4 /* IBACoreData.h in Headers */,
+				A774CADA13B2DD89002B2FA1 /* UIScrollView+IBAExtensions.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -662,6 +669,8 @@
 				A7C0DBE013B1705E00860296 /* UIView+IBAExtensions.m in Sources */,
 				A7C0DBF713B195A800860296 /* IBAMath.m in Sources */,
 				751C605813B1CB1C00447BB4 /* IBACoreDataContextProvider.m in Sources */,
+				A774CADB13B2DD89002B2FA1 /* UIScrollView+IBAExtensions.m in Sources */,
+				A774CADE13B2E0B3002B2FA1 /* IBAUIKit.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
