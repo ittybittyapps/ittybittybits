@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		751C605713B1CB1C00447BB4 /* IBACoreDataContextProvider.h in Headers */ = {isa = PBXBuildFile; fileRef = 751C605513B1CB1C00447BB4 /* IBACoreDataContextProvider.h */; };
+		751C605813B1CB1C00447BB4 /* IBACoreDataContextProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 751C605613B1CB1C00447BB4 /* IBACoreDataContextProvider.m */; };
+		751C605B13B20E0800447BB4 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 751C605A13B20E0800447BB4 /* CoreData.framework */; };
+		751C606113B216E200447BB4 /* IBACoreData.h in Headers */ = {isa = PBXBuildFile; fileRef = 751C606013B216E200447BB4 /* IBACoreData.h */; };
 		75DA1E47138D413B0014C492 /* NSString+IBAURLEncoding.h in Headers */ = {isa = PBXBuildFile; fileRef = 75DA1E45138D413B0014C492 /* NSString+IBAURLEncoding.h */; };
 		75DA1E48138D413B0014C492 /* NSString+IBAURLEncoding.m in Sources */ = {isa = PBXBuildFile; fileRef = 75DA1E46138D413B0014C492 /* NSString+IBAURLEncoding.m */; };
 		75DA1E49138D413B0014C492 /* NSString+IBAURLEncoding.m in Sources */ = {isa = PBXBuildFile; fileRef = 75DA1E46138D413B0014C492 /* NSString+IBAURLEncoding.m */; };
@@ -105,6 +109,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		751C605513B1CB1C00447BB4 /* IBACoreDataContextProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBACoreDataContextProvider.h; sourceTree = "<group>"; };
+		751C605613B1CB1C00447BB4 /* IBACoreDataContextProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IBACoreDataContextProvider.m; sourceTree = "<group>"; };
+		751C605A13B20E0800447BB4 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		751C606013B216E200447BB4 /* IBACoreData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBACoreData.h; sourceTree = "<group>"; };
 		75DA1E45138D413B0014C492 /* NSString+IBAURLEncoding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString+IBAURLEncoding.h"; path = "Foundation/NSString+IBAURLEncoding.h"; sourceTree = SOURCE_ROOT; };
 		75DA1E46138D413B0014C492 /* NSString+IBAURLEncoding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+IBAURLEncoding.m"; path = "Foundation/NSString+IBAURLEncoding.m"; sourceTree = SOURCE_ROOT; };
 		A701064213947B8000D9AB8B /* MKPlacemark+IBAFormattedAddress.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "MKPlacemark+IBAFormattedAddress.h"; path = "MapKit/MKPlacemark+IBAFormattedAddress.h"; sourceTree = SOURCE_ROOT; };
@@ -208,6 +216,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				751C605B13B20E0800447BB4 /* CoreData.framework in Frameworks */,
 				A7B4DB121367C65B00543D61 /* Security.framework in Frameworks */,
 				A7B4DABD1367991200543D61 /* Foundation.framework in Frameworks */,
 			);
@@ -233,6 +242,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		751C605413B1CB1B00447BB4 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				751C605513B1CB1C00447BB4 /* IBACoreDataContextProvider.h */,
+				751C605613B1CB1C00447BB4 /* IBACoreDataContextProvider.m */,
+				751C606013B216E200447BB4 /* IBACoreData.h */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
 		A706A6B7138100AD00429203 /* MapKit */ = {
 			isa = PBXGroup;
 			children = (
@@ -322,6 +341,7 @@
 		A7B4DAAE1367991100543D61 = {
 			isa = PBXGroup;
 			children = (
+				751C605A13B20E0800447BB4 /* CoreData.framework */,
 				A7C2168A13AB29100070DA6A /* Configuration */,
 				A7B4DABE1367991200543D61 /* Src */,
 				A7B4DAD113679F5E00543D61 /* Tests */,
@@ -359,6 +379,7 @@
 		A7B4DABE1367991200543D61 /* Src */ = {
 			isa = PBXGroup;
 			children = (
+				751C605413B1CB1B00447BB4 /* CoreData */,
 				A7B10ACB138652D300C8A672 /* CoreLocation */,
 				A79602161373E41E00BA29E5 /* CoreGraphics */,
 				A7B4DAF31367BF8000543D61 /* Foundation */,
@@ -510,6 +531,8 @@
 				75DA1E47138D413B0014C492 /* NSString+IBAURLEncoding.h in Headers */,
 				A701064413947B8000D9AB8B /* MKPlacemark+IBAFormattedAddress.h in Headers */,
 				A7C0DBDF13B1705E00860296 /* UIView+IBAPositionHelpers.h in Headers */,
+				751C605713B1CB1C00447BB4 /* IBACoreDataContextProvider.h in Headers */,
+				751C606113B216E200447BB4 /* IBACoreData.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -621,6 +644,7 @@
 				A701064513947B8000D9AB8B /* MKPlacemark+IBAFormattedAddress.m in Sources */,
 				A7C0DBE013B1705E00860296 /* UIView+IBAPositionHelpers.m in Sources */,
 				A7C0DBF713B195A800860296 /* IBAMath.m in Sources */,
+				751C605813B1CB1C00447BB4 /* IBACoreDataContextProvider.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
