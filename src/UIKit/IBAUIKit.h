@@ -17,6 +17,12 @@
 //  See the License for the specific language governing permissions and
 //  limitations under the License.
 
+#import "IBAActionSheet.h"
+#import "UIBarButtonItem+IBAFactories.h"
+#import "UIAlertView+IBAExtensions.h"
+#import "UISearchBar+IBAExtensions.h"
+#import "UIView+IBAExtensions.h"
+
 /*!
  \brief     Create an autoreleased UIColor instance from the specified RGB value.
  Example:
@@ -40,10 +46,3 @@
     colorWithRed:((float)(((rgbValue) & 0xFF0000) >> 16))/255.0f \
     green:((float)(((rgbValue) & 0xFF00) >> 8))/255.0f \
     blue:((float)((rgbValue) & 0xFF))/255.0f alpha:(alphaValue)]
-
-
-#import "IBAActionSheet.h"
-#import "UIBarButtonItem+IBAFactories.h"
-#import "UIAlertView+IBAHelpers.h"
-#import "UISearchBar+IBAExtensions.h"
-#import "UIView+IBAPositionHelpers.h"

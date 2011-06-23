@@ -18,7 +18,7 @@
 //  See the License for the specific language governing permissions and
 //  limitations under the License.
 
-#import "UIAlertView+IBAHelpers.h"
+#import "UIAlertView+IBAExtensions.h"
 #import "../Foundation/IBACommon.h"
 
 @implementation UIAlertView (IBAHelpers)
