@@ -69,14 +69,10 @@ void IBACGPathAddRoundRect(CGMutablePathRef path,
                                               CGRectGetMinY(rect));
             
             CGPathMoveToPoint(path, m, CGRectGetMidX(rect), CGRectGetMaxY(rect));
-            CGPathAddArcToPoint(path, m, topLeft.x, topLeft.y, 
-                                rect.origin.x, rect.origin.y, radius);
-            CGPathAddArcToPoint(path, m, rect.origin.x, rect.origin.y, 
-                                bottomRight.x, bottomRight.y, radius);
-            CGPathAddArcToPoint(path, m, bottomRight.x, bottomRight.y, 
-                                topRight.x, topRight.y, radius);
-            CGPathAddArcToPoint(path, m, topRight.x, topRight.y, 
-                                topLeft.x, topLeft.y, radius);
+            CGPathAddArcToPoint(path, m, topLeft.x, topLeft.y, rect.origin.x, rect.origin.y, radius);
+            CGPathAddArcToPoint(path, m, rect.origin.x, rect.origin.y, bottomRight.x, bottomRight.y, radius);
+            CGPathAddArcToPoint(path, m, bottomRight.x, bottomRight.y, topRight.x, topRight.y, radius);
+            CGPathAddArcToPoint(path, m, topRight.x, topRight.y, topLeft.x, topLeft.y, radius);
             CGPathAddLineToPoint(path, m, CGRectGetMidX(rect), CGRectGetMaxY(rect));
         } else {
             CGPathAddRect(path, m, rect);

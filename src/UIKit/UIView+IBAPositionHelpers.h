@@ -15,5 +15,7 @@
 @property (nonatomic, assign) CGFloat ibaRight;
 @property (nonatomic, assign) CGFloat ibaTop;
 @property (nonatomic, assign) CGFloat ibaBottom;
+@property (nonatomic, assign) CGFloat ibaWidth;
+@property (nonatomic, assign) CGFloat ibaHeight;
 
 @end

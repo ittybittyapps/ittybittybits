@@ -19,6 +19,16 @@
 
 #include "IBAPreProcessorMagic.h"
 
+// Ensure compatibility with other non-clang compilers
+#ifndef __has_attribute             
+#   define __has_attribute(x) 0
+#endif
+
+#ifndef __has_extension             
+#   define __has_extension(x) 0
+#endif
+
+
 /*!
  \brief     Release and nil the passed variable.
  \param     x   The instance to release.
@@ -30,7 +40,13 @@
  \brief     Free and NULL the passed pointer variable.
  \param     p   The pointer to free.
  */
-#define IBA_FREE(p) if((p)) { free((p)); (p) = NULL; }
+#define IBA_FREE(p) { if(p) { free(p); (p) = NULL; } }
+
+/*!
+ \brief     Releae and nil a Core Foundation reference.
+ \param     ref The reference to release.
+ */
+#define IBA_CFRELEASE(ref) { if (ref) { CFRelease(ref); (ref) = nil; } }
 
 /*!
  \def       IBA_PROPERTY_IVAR
@@ -74,32 +90,45 @@
 // Perhaps one day this macro will actually do something in Clang.
 
 #ifdef NS_FORMAT_FUNCTION
-#define IBA_FORMAT_FUNCTION(F, A) NS_FORMAT_FUNCTION(F, A)
+#   define IBA_FORMAT_FUNCTION(F, A) NS_FORMAT_FUNCTION(F, A)
 #else
-#define IBA_FORMAT_FUNCTION(F, A)
+#   define IBA_FORMAT_FUNCTION(F, A)
 #endif
 
 #ifdef NS_FORMAT_ARGUMENT
-#define IBA_FORMAT_ARGUMENT(F, A) NS_FORMAT_ARGUMENT(F)
+#   define IBA_FORMAT_ARGUMENT(F, A) NS_FORMAT_ARGUMENT(F)
 #else
-#define IBA_FORMAT_ARGUMENT(F, A)
+#   define IBA_FORMAT_ARGUMENT(F, A)
+#endif
+
+/*!
+ \def   IBA_DEPRECATED
+ \brief     Macro to mark a method, function or variable as deprecated.
+ \details   This is useful when identifying things that are expected to be removed in a future version. 
+ */
+#if __has_attribute(deprecated)
+#   if __has_extension(attribute_deprecated_with_message)
+#       define IBA_DEPRECATED(msg) __attribute__((deprecated(msg)))
+#   else
+#       define IBA_DEPRECATED(msg) __attribute__((deprecated))
+#   endif
+#else
+#   define  IBA_DEPRECATED(msg)
 #endif
 
 // Give ourselves a consistent way of doing externs that links up nicely
 // when mixing objc and objc++
 #ifndef IBA_EXTERN
-    #ifdef __cplusplus
-        #define IBA_EXTERN extern "C"
-        #define IBA_EXTERN_C_BEGIN extern "C" {
-        #define IBA_EXTERN_C_END }
-    #else
-        #define IBA_EXTERN extern
-        #define IBA_EXTERN_C_BEGIN
-        #define IBA_EXTERN_C_END
-    #endif
+#   ifdef __cplusplus
+#       define IBA_EXTERN extern "C"
+#       define IBA_EXTERN_C_BEGIN extern "C" {
+#       define IBA_EXTERN_C_END }
+#   else
+#       define IBA_EXTERN extern
+#       define IBA_EXTERN_C_BEGIN
+#       define IBA_EXTERN_C_END
+#   endif
 #endif
-
-
 
 /*!
  \def       IBA_SYNTHESIZE

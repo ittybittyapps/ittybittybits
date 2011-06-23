@@ -92,6 +92,7 @@
 		A7B6922B137D13E200E379F3 /* NSNumber+IBACompare.m in Sources */ = {isa = PBXBuildFile; fileRef = A7B69229137D13E000E379F3 /* NSNumber+IBACompare.m */; };
 		A7C0DBDF13B1705E00860296 /* UIView+IBAPositionHelpers.h in Headers */ = {isa = PBXBuildFile; fileRef = A7C0DBDD13B1705E00860296 /* UIView+IBAPositionHelpers.h */; };
 		A7C0DBE013B1705E00860296 /* UIView+IBAPositionHelpers.m in Sources */ = {isa = PBXBuildFile; fileRef = A7C0DBDE13B1705E00860296 /* UIView+IBAPositionHelpers.m */; };
+		A7C0DBF713B195A800860296 /* IBAMath.m in Sources */ = {isa = PBXBuildFile; fileRef = A7C0DBF613B195A800860296 /* IBAMath.m */; };
 		A7D58C541378BF440041BBEB /* NSString+IBAWhitespace.h in Headers */ = {isa = PBXBuildFile; fileRef = A7D58C521378BF440041BBEB /* NSString+IBAWhitespace.h */; };
 		A7D58C551378BF440041BBEB /* NSString+IBAWhitespace.m in Sources */ = {isa = PBXBuildFile; fileRef = A7D58C531378BF440041BBEB /* NSString+IBAWhitespace.m */; };
 		A7D58C591378CFAA0041BBEB /* NSArray+IBAWhitespace.h in Headers */ = {isa = PBXBuildFile; fileRef = A7D58C571378CFA80041BBEB /* NSArray+IBAWhitespace.h */; };
@@ -203,6 +204,7 @@
 		A7B69229137D13E000E379F3 /* NSNumber+IBACompare.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSNumber+IBACompare.m"; path = "Foundation/NSNumber+IBACompare.m"; sourceTree = SOURCE_ROOT; };
 		A7C0DBDD13B1705E00860296 /* UIView+IBAPositionHelpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+IBAPositionHelpers.h"; sourceTree = "<group>"; };
 		A7C0DBDE13B1705E00860296 /* UIView+IBAPositionHelpers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+IBAPositionHelpers.m"; sourceTree = "<group>"; };
+		A7C0DBF613B195A800860296 /* IBAMath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IBAMath.m; sourceTree = "<group>"; };
 		A7C2168C13AB29D40070DA6A /* Shared.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Shared.xcconfig; sourceTree = "<group>"; };
 		A7C2168D13AB2BAC0070DA6A /* Debug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Debug.xcconfig; sourceTree = "<group>"; };
 		A7C2168E13AB2BBC0070DA6A /* Release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Release.xcconfig; sourceTree = "<group>"; };
@@ -458,6 +460,7 @@
 				A791415E136FD62200209C96 /* IBALogger.h */,
 				A791415F136FD62200209C96 /* IBALogger.m */,
 				A7D58C5F13792D960041BBEB /* IBAMath.h */,
+				A7C0DBF613B195A800860296 /* IBAMath.m */,
 				A7B4DAF51367BFEB00543D61 /* IBASynthesizeSingleton.h */,
 				A791416913711FC400209C96 /* IBATemporaryFile.h */,
 				A791416A13711FC400209C96 /* IBATemporaryFile.m */,
@@ -666,6 +669,7 @@
 				751C605813B1CB1C00447BB4 /* IBACoreDataContextProvider.m in Sources */,
 				A7808BD113D2B6A500F76DB1 /* UIColor+IBAExtensions.m in Sources */,
 				A7C0DBE013B1705E00860296 /* UIView+IBAPositionHelpers.m in Sources */,
+				A7C0DBF713B195A800860296 /* IBAMath.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

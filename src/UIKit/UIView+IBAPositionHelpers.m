@@ -62,4 +62,28 @@
     self.frame = frame;
 }
 
+- (CGFloat)ibaWidth
+{
+    return self.frame.size.width;
+}
+
+- (void)setIbaWidth:(CGFloat)width
+{
+    CGRect frame = self.frame;
+    frame.size.width = width;
+    self.frame = frame;
+}
+
+- (CGFloat)ibaHeight
+{
+    return self.frame.size.height;
+}
+
+- (void)setIbaHeight:(CGFloat)height 
+{
+    CGRect frame = self.frame;
+    frame.size.height = height;
+    self.frame = frame;
+}
+
 @end
