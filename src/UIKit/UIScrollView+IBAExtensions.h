@@ -1,8 +1,8 @@
 //
-//  IBAUIKit.h
+//  UIScrollView+IBAExtensions.h
 //  IttyBittyBits
 //
-//  Created by Oliver Jones on 12/05/11.
+//  Created by Oliver Jones on 23/06/11.
 //  Copyright 2011 Itty Bitty Apps Pty. Ltd. All rights reserved.
 //
 //  Licensed under the Apache License, Version 2.0 (the "License");
@@ -17,17 +17,11 @@
 //  See the License for the specific language governing permissions and
 //  limitations under the License.
 
-#import "IBAActionSheet.h"
-#import "UIAlertView+IBAExtensions.h"
-#import "UIBarButtonItem+IBAFactories.h"
-#import "UIColor+IBAExtensions.h"
-#import "UISearchBar+IBAExtensions.h"
-#import "UIScrollView+IBAExtensions.h"
-#import "UIView+IBAExtensions.h"
+#import <Foundation/Foundation.h>
 
 
-IBA_EXTERN_C_BEGIN
+@interface UIScrollView (IBAExtensions)
 
-CGRect IBACGRectForApplicationOrientation(CGRect rect);
+- (void)adjustInsetsForCoveringFrame:(CGRect)coveringFrame;
 
-IBA_EXTERN_C_END
+@end

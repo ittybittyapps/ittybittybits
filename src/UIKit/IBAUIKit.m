@@ -1,8 +1,8 @@
 //
-//  IBAUIKit.h
+//  IBAUIKit.m
 //  IttyBittyBits
 //
-//  Created by Oliver Jones on 12/05/11.
+//  Created by Oliver Jones on 23/06/11.
 //  Copyright 2011 Itty Bitty Apps Pty. Ltd. All rights reserved.
 //
 //  Licensed under the Apache License, Version 2.0 (the "License");
@@ -17,17 +17,19 @@
 //  See the License for the specific language governing permissions and
 //  limitations under the License.
 
-#import "IBAActionSheet.h"
-#import "UIAlertView+IBAExtensions.h"
-#import "UIBarButtonItem+IBAFactories.h"
-#import "UIColor+IBAExtensions.h"
-#import "UISearchBar+IBAExtensions.h"
-#import "UIScrollView+IBAExtensions.h"
-#import "UIView+IBAExtensions.h"
+#include "IBAUIKit.h"
 
-
-IBA_EXTERN_C_BEGIN
-
-CGRect IBACGRectForApplicationOrientation(CGRect rect);
-
-IBA_EXTERN_C_END
+/*!
+ \brief     Converts the specified \a rect to match the application's current orientation.
+ \param     rect    The CGRect to convert.
+ \return    The converted CGRect.
+ */
+CGRect IBACGRectForApplicationOrientation(CGRect rect)
+{
+	if (UIInterfaceOrientationIsPortrait([[UIApplication sharedApplication] statusBarOrientation])) 
+    {
+		return rect;
+	}
+	
+	return CGRectMake(rect.origin.y, rect.origin.x, rect.size.height, rect.size.width);
+}
