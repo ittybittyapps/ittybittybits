@@ -6,15 +6,14 @@
 //  Copyright 2011 GE Capital Australia & New Zealand. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import "../Foundation/IBAFoundation.h"
 #include <vector>
 
-#import "BreadCrumbPath.hh"
-
+#import "IBABreadCrumbPath.hh"
 
 #define MINIMUM_DELTA_METERS 5.0
 
-@interface BreadcrumbPathInternal : NSObject
+@interface IBABreadcrumbPathInternal : NSObject
 {
 @private
     pthread_rwlock_t rwLock;
@@ -26,7 +25,7 @@
 
 @end
 
-@implementation BreadcrumbPathInternal
+@implementation IBABreadcrumbPathInternal
 
 - (id)initWithCenterCoordinate:(CLLocationCoordinate2D)coord
 {
@@ -98,15 +97,13 @@
 
 @end
 
-
-@implementation BreadcrumbPath
-
+@implementation IBABreadcrumbPath
 
 - (id)initWithCenterCoordinate:(CLLocationCoordinate2D)coord
 {
     if ((self = [super init]))
     {
-        internal = [[BreadcrumbPathInternal alloc] initWithCenterCoordinate:coord];
+        internal = [[IBABreadcrumbPathInternal alloc] initWithCenterCoordinate:coord];
         
         // bite off up to 1/4 of the world to draw into.
         MKMapSize size = MKMapSizeMake(MKMapSizeWorld.width/4.0, MKMapSizeWorld.height / 4.0);
@@ -137,11 +134,17 @@
     return coord;
 }
 
+/*!
+ \brief     The bounding rectangle of the circular area. (read-only)
+ */
 - (MKMapRect)boundingMapRect
 {
     return boundingMapRect;
 }
 
+/*!
+ \brief     Add a coordinate to the breadcrumb path.
+ */
 - (MKMapRect)addCoordinate:(CLLocationCoordinate2D)coord
 {
     return [internal addCoordinate:coord];
