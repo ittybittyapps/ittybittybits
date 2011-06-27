@@ -21,3 +21,4 @@
 #import "../Foundation/IBAFoundation.h"
 
 #import "IBACoreDataContextProvider.h"
+#import "IBAAbstractCoreDataService.h"

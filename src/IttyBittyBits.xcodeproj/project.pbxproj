@@ -116,6 +116,8 @@
 		A7D58C5A1378CFAA0041BBEB /* NSArray+IBAWhitespace.m in Sources */ = {isa = PBXBuildFile; fileRef = A7D58C581378CFA90041BBEB /* NSArray+IBAWhitespace.m */; };
 		A7D58C5C1378DAE40041BBEB /* IBADelimitedTextFileReaderDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A7D58C5B1378DAE30041BBEB /* IBADelimitedTextFileReaderDelegate.m */; };
 		A7D58C6013792D970041BBEB /* IBAMath.h in Headers */ = {isa = PBXBuildFile; fileRef = A7D58C5F13792D960041BBEB /* IBAMath.h */; };
+		A7F0A6B613B438820009F601 /* IBAAbstractCoreDataService.h in Headers */ = {isa = PBXBuildFile; fileRef = A7F0A6B413B438820009F601 /* IBAAbstractCoreDataService.h */; };
+		A7F0A6B713B438820009F601 /* IBAAbstractCoreDataService.m in Sources */ = {isa = PBXBuildFile; fileRef = A7F0A6B513B438820009F601 /* IBAAbstractCoreDataService.m */; };
 		A7F0A6BD13B46ED80009F601 /* NSArray+IBAExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = A7F0A6BB13B46ED80009F601 /* NSArray+IBAExtensions.h */; };
 		A7F0A6BE13B46ED80009F601 /* NSArray+IBAExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = A7F0A6BC13B46ED80009F601 /* NSArray+IBAExtensions.m */; };
 		A7FB6B5C137148DC0088C4CD /* IBACommon.h in Headers */ = {isa = PBXBuildFile; fileRef = A7FB6B5B137148DC0088C4CD /* IBACommon.h */; };
@@ -246,6 +248,8 @@
 		A7D58C581378CFA90041BBEB /* NSArray+IBAWhitespace.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSArray+IBAWhitespace.m"; path = "Foundation/NSArray+IBAWhitespace.m"; sourceTree = SOURCE_ROOT; };
 		A7D58C5B1378DAE30041BBEB /* IBADelimitedTextFileReaderDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = IBADelimitedTextFileReaderDelegate.m; path = Foundation/IBADelimitedTextFileReaderDelegate.m; sourceTree = SOURCE_ROOT; };
 		A7D58C5F13792D960041BBEB /* IBAMath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IBAMath.h; path = Foundation/IBAMath.h; sourceTree = SOURCE_ROOT; };
+		A7F0A6B413B438820009F601 /* IBAAbstractCoreDataService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBAAbstractCoreDataService.h; sourceTree = "<group>"; };
+		A7F0A6B513B438820009F601 /* IBAAbstractCoreDataService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IBAAbstractCoreDataService.m; sourceTree = "<group>"; };
 		A7F0A6BB13B46ED80009F601 /* NSArray+IBAExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+IBAExtensions.h"; sourceTree = "<group>"; };
 		A7F0A6BC13B46ED80009F601 /* NSArray+IBAExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+IBAExtensions.m"; sourceTree = "<group>"; };
 		A7FB6B5B137148DC0088C4CD /* IBACommon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IBACommon.h; path = Foundation/IBACommon.h; sourceTree = SOURCE_ROOT; };
@@ -294,9 +298,11 @@
 		751C605413B1CB1B00447BB4 /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
+				751C606013B216E200447BB4 /* IBACoreData.h */,
 				751C605513B1CB1C00447BB4 /* IBACoreDataContextProvider.h */,
 				751C605613B1CB1C00447BB4 /* IBACoreDataContextProvider.m */,
-				751C606013B216E200447BB4 /* IBACoreData.h */,
+				A7F0A6B413B438820009F601 /* IBAAbstractCoreDataService.h */,
+				A7F0A6B513B438820009F601 /* IBAAbstractCoreDataService.m */,
 			);
 			path = CoreData;
 			sourceTree = "<group>";
@@ -610,6 +616,7 @@
 				A7808BD013D2B6A500F76DB1 /* UIColor+IBAExtensions.h in Headers */,
 				A774CADA13B2DD89002B2FA1 /* UIScrollView+IBAExtensions.h in Headers */,
 				A7C2FB9813B3073F00F774CA /* IBAGradientButton.h in Headers */,
+				A7F0A6B613B438820009F601 /* IBAAbstractCoreDataService.h in Headers */,
 				A7F0A6BD13B46ED80009F601 /* NSArray+IBAExtensions.h in Headers */,
 				A7A0A26B13B88E4800596FD4 /* IBABreadcrumbPath.hh in Headers */,
 				A7A0A26D13B88E4800596FD4 /* IBABreadcrumbPathView.h in Headers */,
@@ -729,6 +736,7 @@
 				A774CADB13B2DD89002B2FA1 /* UIScrollView+IBAExtensions.m in Sources */,
 				A774CADE13B2E0B3002B2FA1 /* IBAUIKit.m in Sources */,
 				A7C2FB9913B3073F00F774CA /* IBAGradientButton.m in Sources */,
+				A7F0A6B713B438820009F601 /* IBAAbstractCoreDataService.m in Sources */,
 				A7F0A6BE13B46ED80009F601 /* NSArray+IBAExtensions.m in Sources */,
 				A7A0A26C13B88E4800596FD4 /* IBABreadcrumbPath.mm in Sources */,
 				A7A0A26E13B88E4800596FD4 /* IBABreadcrumbPathView.mm in Sources */,
