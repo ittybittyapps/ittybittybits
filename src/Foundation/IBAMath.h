@@ -34,6 +34,7 @@
 IBA_EXTERN_C_BEGIN
 
 float IBAClampFloatValue(float val, float minval, float maxval);
+int32_t IBAClampIntValue(int32_t val, int32_t minval, int32_t maxval);
 float IBAConstrainFloatValue(float val, float minval, float maxval);
 int32_t IBAConstrainIntValue(int32_t val, int32_t minval, int32_t maxval);
 
@@ -42,6 +43,7 @@ IBA_EXTERN_C_END
 #ifdef __cplusplus
 
 inline float IBAClamp(float val, float minval, float maxval) { return IBAClampFloatValue(val, minval, maxval); }
+inline float IBAClamp(int32_t val, int32_t minval, int32_t maxval) { return IBAClampIntValue(val, minval, maxval); }
 inline float IBAConstrain(float val, float minval, float maxval) { return IBAConstrainFloatValue(val, minval, maxval); }
 inline int32_t IBAConstrain(int32_t val, int32_t minval, int32_t maxval) { return IBAConstrainIntValue(val, minval, maxval); }
 
