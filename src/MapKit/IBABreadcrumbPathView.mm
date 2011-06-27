@@ -5,11 +5,22 @@
 //  Created by Oliver Jones on 27/06/11.
 //  Copyright 2011 GE Capital Australia & New Zealand. All rights reserved.
 //
+//  Licensed under the Apache License, Version 2.0 (the "License");
+//  you may not use this file except in compliance with the License.
+//  You may obtain a copy of the License at
+//
+//    http://www.apache.org/licenses/LICENSE-2.0
+//
+//  Unless required by applicable law or agreed to in writing, software
+//  distributed under the License is distributed on an "AS IS" BASIS,
+//  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+//  See the License for the specific language governing permissions and
+//  limitations under the License.
 
-#import "BreadcrumbPathView.h"
+#import "IBABreadcrumbPathView.h"
 #import <vector>
 
-#import "../Model/BreadcrumbPath.hh"
+#import "IBABreadcrumbPath.hh"
 
 #define POW2(a) ((a) * (a))
 #define MIN_POINT_DELTA 5.0
@@ -25,7 +36,7 @@ static BOOL LineIntersectsRect(MKMapPoint p0, MKMapPoint p1, MKMapRect r)
     return MKMapRectIntersectsRect(r, r2);
 }
 
-@interface BreadcrumbPathView ()
+@interface IBABreadcrumbPathView ()
 
 - (CGPathRef)newPathForPoints:(const std::vector<MKMapPoint> &)points
                      clipRect:(MKMapRect)mapRect
@@ -34,13 +45,13 @@ static BOOL LineIntersectsRect(MKMapPoint p0, MKMapPoint p1, MKMapRect r)
 @end
 
 
-@implementation BreadcrumbPathView
+@implementation IBABreadcrumbPathView
 
 - (void)drawMapRect:(MKMapRect)mapRect
           zoomScale:(MKZoomScale)zoomScale
           inContext:(CGContextRef)context
 {
-    BreadcrumbPath *crumbs = (BreadcrumbPath *)self.overlay;
+    IBABreadcrumbPath *crumbs = (IBABreadcrumbPath *)self.overlay;
     
     CGFloat lineWidth = MKRoadWidthAtZoomScale(zoomScale);
     

@@ -22,3 +22,8 @@
 #import "MKReverseGeocoder+IBABlocks.h"
 #import "IBAGeocoder.h"
 #import "IBAExtendedPlacemark.h"
+#import "IBABreadcrumbPathView.h"
+
+#ifdef __cplusplus
+#   import "IBABreadcrumbPath.hh"
+#endif
