@@ -7,10 +7,21 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <CoreData/CoreData.h>
 
-
-@interface IBAAbstractCoreDataService : NSObject {
-    
+@interface IBAAbstractCoreDataService : NSObject 
+{
+@private
 }
+
+@property (nonatomic, retain, readonly) NSManagedObjectContext *defaultManagedObjectContext;
+
+- (id) initWithObjectModelURL:(NSURL *)modelURL
+                     storeURL:(NSURL *)storeURL;
+
+- (NSManagedObjectContext *)newManagedObjectContext;
+- (NSManagedObject *) insertNewObjectForEntityForName:(NSString *)entityName;
+- (void)save;
+
 
 @end
