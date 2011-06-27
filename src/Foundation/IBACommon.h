@@ -53,8 +53,15 @@
  \brief     Returns gets the ivar name of a property with the specified \a name.
  \param     name        The name of the property.
  \return    The ivar name.
+ \sa        IBA_PIVAR
  */
 #define IBA_PROPERTY_IVAR(name) IBA_CAT(name, _)
+
+/*!
+ \def       IBA_PIVAR
+ \brief     Alias for IBA_PROPERTY_IVAR
+ */
+#define IBA_PIVAR(name) IBA_PROPERTY_IVAR(name)
 
 /*!
  \brief     Release an nil the instance variable behind a property.
