@@ -109,6 +109,8 @@
 		A7D58C5A1378CFAA0041BBEB /* NSArray+IBAWhitespace.m in Sources */ = {isa = PBXBuildFile; fileRef = A7D58C581378CFA90041BBEB /* NSArray+IBAWhitespace.m */; };
 		A7D58C5C1378DAE40041BBEB /* IBADelimitedTextFileReaderDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A7D58C5B1378DAE30041BBEB /* IBADelimitedTextFileReaderDelegate.m */; };
 		A7D58C6013792D970041BBEB /* IBAMath.h in Headers */ = {isa = PBXBuildFile; fileRef = A7D58C5F13792D960041BBEB /* IBAMath.h */; };
+		A7F0A6BD13B46ED80009F601 /* NSArray+IBAExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = A7F0A6BB13B46ED80009F601 /* NSArray+IBAExtensions.h */; };
+		A7F0A6BE13B46ED80009F601 /* NSArray+IBAExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = A7F0A6BC13B46ED80009F601 /* NSArray+IBAExtensions.m */; };
 		A7FB6B5C137148DC0088C4CD /* IBACommon.h in Headers */ = {isa = PBXBuildFile; fileRef = A7FB6B5B137148DC0088C4CD /* IBACommon.h */; };
 /* End PBXBuildFile section */
 
@@ -228,6 +230,8 @@
 		A7D58C581378CFA90041BBEB /* NSArray+IBAWhitespace.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSArray+IBAWhitespace.m"; path = "Foundation/NSArray+IBAWhitespace.m"; sourceTree = SOURCE_ROOT; };
 		A7D58C5B1378DAE30041BBEB /* IBADelimitedTextFileReaderDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = IBADelimitedTextFileReaderDelegate.m; path = Foundation/IBADelimitedTextFileReaderDelegate.m; sourceTree = SOURCE_ROOT; };
 		A7D58C5F13792D960041BBEB /* IBAMath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IBAMath.h; path = Foundation/IBAMath.h; sourceTree = SOURCE_ROOT; };
+		A7F0A6BB13B46ED80009F601 /* NSArray+IBAExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+IBAExtensions.h"; sourceTree = "<group>"; };
+		A7F0A6BC13B46ED80009F601 /* NSArray+IBAExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+IBAExtensions.m"; sourceTree = "<group>"; };
 		A7FB6B5B137148DC0088C4CD /* IBACommon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IBACommon.h; path = Foundation/IBACommon.h; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
@@ -476,6 +480,8 @@
 				A7B4DAF51367BFEB00543D61 /* IBASynthesizeSingleton.h */,
 				A791416913711FC400209C96 /* IBATemporaryFile.h */,
 				A791416A13711FC400209C96 /* IBATemporaryFile.m */,
+				A7F0A6BB13B46ED80009F601 /* NSArray+IBAExtensions.h */,
+				A7F0A6BC13B46ED80009F601 /* NSArray+IBAExtensions.m */,
 				A7B109F7138387AC00C8A672 /* NSArray+IBASorting.h */,
 				A7B109F8138387AC00C8A672 /* NSArray+IBASorting.m */,
 				A7D58C571378CFA80041BBEB /* NSArray+IBAWhitespace.h */,
@@ -570,6 +576,7 @@
 				751C606113B216E200447BB4 /* IBACoreData.h in Headers */,
 				A774CADA13B2DD89002B2FA1 /* UIScrollView+IBAExtensions.h in Headers */,
 				A7C2FB9813B3073F00F774CA /* IBAGradientButton.h in Headers */,
+				A7F0A6BD13B46ED80009F601 /* NSArray+IBAExtensions.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -685,6 +692,7 @@
 				A774CADB13B2DD89002B2FA1 /* UIScrollView+IBAExtensions.m in Sources */,
 				A774CADE13B2E0B3002B2FA1 /* IBAUIKit.m in Sources */,
 				A7C2FB9913B3073F00F774CA /* IBAGradientButton.m in Sources */,
+				A7F0A6BE13B46ED80009F601 /* NSArray+IBAExtensions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
