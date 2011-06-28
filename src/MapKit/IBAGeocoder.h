@@ -62,7 +62,7 @@
 
 @end
 
-@protocol IBAGeocoderDelegate
+@protocol IBAGeocoderDelegate <NSObject>
 
 - (void)geocoder:(IBAGeocoder *)geocoder didFindPlacemarks:(NSArray *)placemarks;
 - (void)geocoder:(IBAGeocoder *)geocoder didFailWithError:(NSError *)error;
