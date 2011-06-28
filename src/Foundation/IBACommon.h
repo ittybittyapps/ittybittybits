@@ -76,11 +76,12 @@
  */
 #define IBA_RETAIN_PROPERTY(propertyName, newValue) \
     do { \
-        if (IBA_PROPERTY_IVAR(propertyName) != newValue) \
+        __typeof__(newValue) __A = (newValue); \
+        if (IBA_PROPERTY_IVAR(propertyName) != __A) \
         { \
-            [newValue retain]; \
+            [__A retain]; \
             IBA_RELEASE_PROPERTY(propertyName); \
-            IBA_PROPERTY_IVAR(propertyName) = newValue; \
+            IBA_PROPERTY_IVAR(propertyName) = __A; \
         } \
     } while(0)
 
