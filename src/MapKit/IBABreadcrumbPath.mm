@@ -69,7 +69,7 @@
     
     if (metersApart > MINIMUM_DELTA_METERS)
     {
-        NSLog(@"Added mappoint: %f, %f", newPoint.x, newPoint.y);
+        IBALogDebug(@"Added mappoint: %f, %f", newPoint.x, newPoint.y);
         mapPoints.push_back(newPoint);
         
         // Compute MKMapRect bounding prevPoint and newPoint
@@ -79,15 +79,10 @@
         double maxY = MAX(newPoint.y, prevPoint.y);
         
         updateRect = MKMapRectMake(minX, minY, maxX - minX, maxY - minY);
-        NSLog(@"updateRect: x:%f, y:%f, w:%f, h:%f", 
-              updateRect.origin.x, 
-              updateRect.origin.y, 
-              updateRect.size.width, 
-              updateRect.size.height);
     }
     else
     {
-        NSLog(@"Map points not min %fm apart (%fm)", MINIMUM_DELTA_METERS, metersApart);
+        IBALogDebug(@"Map points not min %fm apart (%fm)", MINIMUM_DELTA_METERS, metersApart);
     }
     
     pthread_rwlock_unlock(&rwLock);
