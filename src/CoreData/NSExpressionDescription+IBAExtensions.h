@@ -22,9 +22,9 @@
 
 @interface NSExpressionDescription (IBAExtensions)
 
-+ (NSExpressionDescription *)expressionForFunction:(NSString *)function 
-                                       onAttribute:(NSString *)attribute 
-                                          ofEntity:(NSEntityDescription*)entity
-                                            asName:(NSString*)name;
++ (NSExpressionDescription *)ibaExpressionForFunction:(NSString *)function 
+                                          onAttribute:(NSString *)attribute 
+                                             ofEntity:(NSEntityDescription*)entity
+                                               asName:(NSString*)name;
 
 @end

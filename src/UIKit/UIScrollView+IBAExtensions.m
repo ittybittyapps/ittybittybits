@@ -27,7 +27,7 @@
 /*!
  \brief     Adjusts the content and scrollIndicator insets for the specified \a coveringFrame.
  */
-- (void)adjustInsetsForCoveringFrame:(CGRect)coveringFrame 
+- (void)ibaAdjustInsetsForCoveringFrame:(CGRect)coveringFrame 
 {
     UIWindow * keyWindow = [UIApplication sharedApplication].keyWindow;
     CGRect normalisedWindowBounds = IBACGRectForApplicationOrientation(keyWindow.bounds);

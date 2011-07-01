@@ -22,6 +22,6 @@
 
 @interface UIScrollView (IBAExtensions)
 
-- (void)adjustInsetsForCoveringFrame:(CGRect)coveringFrame;
+- (void)ibaAdjustInsetsForCoveringFrame:(CGRect)coveringFrame;
 
 @end

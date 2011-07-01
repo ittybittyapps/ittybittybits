@@ -26,10 +26,10 @@
 @implementation NSExpressionDescription (IBAExtensions)
 
 
-+ (NSExpressionDescription *)expressionForFunction:(NSString *)function 
-                                       onAttribute:(NSString *)attribute 
-                                          ofEntity:(NSEntityDescription*)entity
-                                            asName:(NSString*)name
++ (NSExpressionDescription *)ibaExpressionForFunction:(NSString *)function 
+                                          onAttribute:(NSString *)attribute 
+                                             ofEntity:(NSEntityDescription*)entity
+                                               asName:(NSString*)name
 {
     NSExpression* keyPathExpression = [NSExpression expressionForKeyPath:attribute];
     NSExpression* expression = [NSExpression expressionForFunction:function
