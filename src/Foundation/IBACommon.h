@@ -128,11 +128,11 @@
 // when mixing objc and objc++
 #ifndef IBA_EXTERN
 #   ifdef __cplusplus
-#       define IBA_EXTERN extern "C"
+#       define IBA_EXTERN extern "C" __attribute__((visibility ("default")))
 #       define IBA_EXTERN_C_BEGIN extern "C" {
 #       define IBA_EXTERN_C_END }
 #   else
-#       define IBA_EXTERN extern
+#       define IBA_EXTERN extern __attribute__((visibility ("default")))
 #       define IBA_EXTERN_C_BEGIN
 #       define IBA_EXTERN_C_END
 #   endif
