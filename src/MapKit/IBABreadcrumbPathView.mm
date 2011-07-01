@@ -67,8 +67,6 @@ static BOOL LineIntersectsRect(MKMapPoint p0, MKMapPoint p1, MKMapRect r)
     
     if (path != nil)
     {
-        NSLog(@"Drawing path");
-        
         CGContextAddPath(context, path);
         CGContextSetRGBStrokeColor(context, 0.0f, 0.0f, 1.0f, 0.5f);
         CGContextSetLineJoin(context, kCGLineJoinRound);
