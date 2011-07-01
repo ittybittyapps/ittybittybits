@@ -1,8 +1,8 @@
 //
-//  IBAMapKit.h
+//  IBAMapKitUtils.h
 //  IttyBittyBits
 //
-//  Created by Oliver Jones on 16/05/11.
+//  Created by Oliver Jones on 30/06/11.
 //  Copyright 2011 Itty Bitty Apps Pty. Ltd. All rights reserved.
 //
 //  Licensed under the Apache License, Version 2.0 (the "License");
@@ -17,14 +17,17 @@
 //  See the License for the specific language governing permissions and
 //  limitations under the License.
 
-#import "MKMapView+IBAAnnotations.h"
-#import "MKPlacemark+IBAFormattedAddress.h"
-#import "MKReverseGeocoder+IBABlocks.h"
-#import "IBAGeocoder.h"
-#import "IBAExtendedPlacemark.h"
-#import "IBABreadcrumbPathView.h"
-#import "IBAMapKitUtils.h"
+#import "../Foundation/IBAFoundation.h"
+#import <MapKit/MapKit.h>
 
-#ifdef __cplusplus
-#   import "IBABreadcrumbPath.hh"
-#endif
+IBA_EXTERN_C_BEGIN
+
+MKCoordinateRegion IBAMKCoordinateRegionWithCoordinates(CLLocationCoordinate2D * coordinates, NSUInteger count);
+BOOL IBAMKCoordinateRegionIsNull(MKCoordinateRegion region);
+BOOL IBAMKCoordinateRegionIsEmpty(MKCoordinateRegion region);
+
+const MKCoordinateRegion IBAMKCoordinateRegionNull;
+
+NSString *IBAMKCoordinateRegionDebugDescription(MKCoordinateRegion region);
+
+IBA_EXTERN_C_END
