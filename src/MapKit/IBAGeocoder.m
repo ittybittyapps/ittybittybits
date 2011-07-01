@@ -70,6 +70,8 @@ typedef enum {
 
 @interface IBAGeocoder ()
 
+- (void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error;
+
 @property (nonatomic, retain) NSURL *requestURL;
 @property (nonatomic, retain) NSURLRequest *request;
 @property (nonatomic, retain) NSMutableData *responseData;
