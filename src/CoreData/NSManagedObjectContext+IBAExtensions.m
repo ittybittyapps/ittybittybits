@@ -18,11 +18,24 @@
 //  limitations under the License.
 
 #import "NSManagedObjectContext+IBAExtensions.h"
+#import "NSFetchRequest+IBAExtensions.h"
 #import <CoreData/CoreData.h>
 
 @implementation NSManagedObjectContext (IBAExtensions)
 
-- (NSArray *)executeFetchRequest:(NSFetchRequest*)request errorHandler:(void(^)(NSError *error))errorHandler
+- (NSUInteger)ibaCountForFetchRequest:(NSFetchRequest*)request errorHandler:(void(^)(NSError *error))errorHandler
+{
+    NSError *error = nil;
+    NSUInteger count = [self countForFetchRequest:request error:&error];
+    if (error != nil && errorHandler != nil)
+    {
+        errorHandler(error);
+    }
+    
+    return count;
+}
+
+- (NSArray *)ibaExecuteFetchRequest:(NSFetchRequest*)request errorHandler:(void(^)(NSError *error))errorHandler
 {
     NSError *error = nil;
     NSArray *results = [self executeFetchRequest:request error:&error];
@@ -34,5 +47,19 @@
     return results;
 }
 
+- (NSArray *)ibaExecuteFetchRequestForEntity:(NSString *)entityName 
+                            withErrorHandler:(void(^)(NSError *error))errorHandler 
+                                forPredicate:(id)stringOrPredicate, ...
+{
+    va_list variadicArguments;
+    va_start(variadicArguments, stringOrPredicate);
+
+    NSFetchRequest* request = [NSFetchRequest ibaFetchRequestForEntity:entityName 
+                                                             inContext:self
+                                                         withPredicate:stringOrPredicate 
+                                                                  args:variadicArguments];
+    
+    return [self ibaExecuteFetchRequest:request errorHandler:errorHandler];
+}
 
 @end

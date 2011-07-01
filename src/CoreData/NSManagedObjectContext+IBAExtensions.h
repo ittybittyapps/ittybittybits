@@ -22,6 +22,11 @@
 
 @interface NSManagedObjectContext (IBAExtensions)
 
-- (NSArray *)executeFetchRequest:(NSFetchRequest*)request errorHandler:(void(^)(NSError *error))errorHandler;
+- (NSUInteger)ibaCountForFetchRequest:(NSFetchRequest*)request errorHandler:(void(^)(NSError *error))errorHandler;
+- (NSArray *)ibaExecuteFetchRequest:(NSFetchRequest*)request errorHandler:(void(^)(NSError *error))errorHandler;
+
+- (NSArray *)ibaExecuteFetchRequestForEntity:(NSString *)entityName 
+                            withErrorHandler:(void(^)(NSError *error))errorHandler 
+                                forPredicate:(id)stringOrPredicate, ...;
 
 @end

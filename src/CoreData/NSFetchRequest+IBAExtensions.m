@@ -21,17 +21,67 @@
 #import "NSFetchRequest+IBAExtensions.h"
 #import "NSEntityDescription+IBAExtensions.h"
 
+#import <objc/runtime.h>
+
 @implementation NSFetchRequest (IBAExtensions)
 
-+ (id) newDictionaryFetchRequestForEntity:(NSString *)entityName inContext:(NSManagedObjectContext*)context
++ (id)ibaDictionaryFetchRequestForEntity:(NSString *)entityName inContext:(NSManagedObjectContext*)context
 {
     NSEntityDescription *entity = [NSEntityDescription entityForName:entityName inManagedObjectContext:context];
-    NSFetchRequest *request = [[NSFetchRequest alloc] init];
+    NSFetchRequest *request = [[[NSFetchRequest alloc] init] autorelease];
     
     [request setEntity:entity];
     [request setResultType:NSDictionaryResultType];
     
     return request;
 }
+
++ (id)ibaFetchRequestForEntity:(NSString *)entityName 
+                     inContext:(NSManagedObjectContext *)context
+                 withPredicate:(id)stringOrPredicate 
+                          args:(va_list)variadicArguments
+{
+    
+    NSEntityDescription *entity = [NSEntityDescription entityForName:entityName inManagedObjectContext:context];
+    
+    NSFetchRequest *request = [[[NSFetchRequest alloc] init] autorelease];
+    [request setEntity:entity];
+    
+    if (stringOrPredicate)
+    {
+        NSPredicate *predicate;
+        if ([stringOrPredicate isKindOfClass:[NSString class]])
+        {
+            predicate = [NSPredicate predicateWithFormat:stringOrPredicate
+                                               arguments:variadicArguments];
+        }
+        else
+        {
+            NSAssert2([stringOrPredicate isKindOfClass:[NSPredicate class]],
+                      @"Second parameter passed to %s is of unexpected class %@",
+                      sel_getName(_cmd), class_getName([stringOrPredicate class]));
+            predicate = (NSPredicate *)stringOrPredicate;
+        }
+        
+        [request setPredicate:predicate];
+    }
+    
+    return request;
+}
+
++ (id)ibaFetchRequestForEntity:(NSString *)entityName 
+                     inContext:(NSManagedObjectContext *)context
+                 withPredicate:(id)stringOrPredicate, ...
+{
+    va_list variadicArguments;
+    va_start(variadicArguments, stringOrPredicate);
+    NSFetchRequest *request = [[self class] ibaFetchRequestForEntity:entityName 
+                                                           inContext:context 
+                                                       withPredicate:stringOrPredicate 
+                                                                args:variadicArguments];
+    va_end(variadicArguments);
+    return request;
+}
+
 
 @end

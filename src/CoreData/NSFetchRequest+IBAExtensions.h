@@ -22,6 +22,15 @@
 
 @interface NSFetchRequest (IBAExtensions)
 
-+ (id) newDictionaryFetchRequestForEntity:(NSString *)entityName inContext:(NSManagedObjectContext*)context;
++ (id)ibaDictionaryFetchRequestForEntity:(NSString *)entityName inContext:(NSManagedObjectContext*)context;
+
++ (id)ibaFetchRequestForEntity:(NSString *)entityName 
+                     inContext:(NSManagedObjectContext *)context
+               withPredicate:(id)stringOrPredicate, ...;
+
++ (id)ibaFetchRequestForEntity:(NSString *)entityName 
+                     inContext:(NSManagedObjectContext *)context
+                 withPredicate:(NSString*)stringPredicate 
+                          args:(va_list)variadicArguments;
 
 @end
