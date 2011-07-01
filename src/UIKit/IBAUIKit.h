@@ -19,9 +19,12 @@
 
 #import "IBAActionSheet.h"
 #import "IBAGradientButton.h"
+
+// Extension categories.
 #import "UIAlertView+IBAExtensions.h"
 #import "UIBarButtonItem+IBAFactories.h"
 #import "UIColor+IBAExtensions.h"
+#import "UINib+IBAExtensions.h"
 #import "UISearchBar+IBAExtensions.h"
 #import "UIScrollView+IBAExtensions.h"
 #import "UIView+IBAExtensions.h"
