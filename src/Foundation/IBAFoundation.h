@@ -27,6 +27,7 @@
 #import "IBASynthesizeSingleton.h"
 #import "IBATemporaryFile.h"
 #import "NSArray+IBAExtensions.h"
+#import "NSDate+IBAExtensions.h"
 #import "NSDictionary+IBAExtensions.h"
 #import "NSNumber+IBACompare.h"
 #import "NSString+IBAURLEncoding.h"
