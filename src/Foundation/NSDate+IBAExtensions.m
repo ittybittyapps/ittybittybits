@@ -9,6 +9,18 @@
 #import "NSDate+IBAExtensions.h"
 
 
-@implementation NSDate (NSDate_IBAExtensions)
+@implementation NSDate (IBAExtensions)
+
+- (NSInteger)ibaNumberOfDaysUntil:(NSDate *)date 
+{
+    NSCalendar *gregorianCalendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
+    
+    NSDateComponents *components = [gregorianCalendar components:NSDayCalendarUnit 
+                                                        fromDate:self 
+                                                          toDate:date
+                                                         options:0];
+    
+    return [components day];
+}
 
 @end
