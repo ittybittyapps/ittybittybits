@@ -29,4 +29,6 @@
                             withErrorHandler:(void(^)(NSError *error))errorHandler 
                                 forPredicate:(id)stringOrPredicate, ...;
 
+- (BOOL)ibaSaveWithErrorHandler:(void(^)(NSError *error))errorHandler;
+
 @end
