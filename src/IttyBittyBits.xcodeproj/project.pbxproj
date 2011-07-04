@@ -247,12 +247,12 @@
 		A7C0DBDD13B1705E00860296 /* UIView+IBAExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+IBAExtensions.h"; sourceTree = "<group>"; };
 		A7C0DBDE13B1705E00860296 /* UIView+IBAExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+IBAExtensions.m"; sourceTree = "<group>"; };
 		A7C0DBF613B195A800860296 /* IBAMath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IBAMath.m; sourceTree = "<group>"; };
-		A7C2168C13AB29D40070DA6A /* Shared.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Shared.xcconfig; sourceTree = "<group>"; };
-		A7C2168D13AB2BAC0070DA6A /* Debug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Debug.xcconfig; sourceTree = "<group>"; };
-		A7C2168E13AB2BBC0070DA6A /* Release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Release.xcconfig; sourceTree = "<group>"; };
-		A7C2168F13AB2DC70070DA6A /* IttyBittyBits-Shared.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = "IttyBittyBits-Shared.xcconfig"; sourceTree = "<group>"; };
-		A7C2169013AB2DD90070DA6A /* IttyBittyBits-Debug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = "IttyBittyBits-Debug.xcconfig"; sourceTree = "<group>"; };
-		A7C2169113AB2DE70070DA6A /* IttyBittyBits-Release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = "IttyBittyBits-Release.xcconfig"; sourceTree = "<group>"; };
+		A7C2168C13AB29D40070DA6A /* Project-IttyBittyBits-Shared.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = "Project-IttyBittyBits-Shared.xcconfig"; sourceTree = "<group>"; };
+		A7C2168D13AB2BAC0070DA6A /* Project-IttyBittyBits-Debug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = "Project-IttyBittyBits-Debug.xcconfig"; sourceTree = "<group>"; };
+		A7C2168E13AB2BBC0070DA6A /* Project-IttyBittyBits-Release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = "Project-IttyBittyBits-Release.xcconfig"; sourceTree = "<group>"; };
+		A7C2168F13AB2DC70070DA6A /* Target-IttyBittyBits-Shared.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = "Target-IttyBittyBits-Shared.xcconfig"; sourceTree = "<group>"; };
+		A7C2169013AB2DD90070DA6A /* Target-IttyBittyBits-Debug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = "Target-IttyBittyBits-Debug.xcconfig"; sourceTree = "<group>"; };
+		A7C2169113AB2DE70070DA6A /* Target-IttyBittyBits-Release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = "Target-IttyBittyBits-Release.xcconfig"; sourceTree = "<group>"; };
 		A7C2FB9613B3073F00F774CA /* IBAGradientButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBAGradientButton.h; sourceTree = "<group>"; };
 		A7C2FB9713B3073F00F774CA /* IBAGradientButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IBAGradientButton.m; sourceTree = "<group>"; };
 		A7C2FB9B13B3083500F774CA /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
@@ -570,12 +570,12 @@
 		A7C2168A13AB29100070DA6A /* Configuration */ = {
 			isa = PBXGroup;
 			children = (
-				A7C2168C13AB29D40070DA6A /* Shared.xcconfig */,
-				A7C2168D13AB2BAC0070DA6A /* Debug.xcconfig */,
-				A7C2168E13AB2BBC0070DA6A /* Release.xcconfig */,
-				A7C2168F13AB2DC70070DA6A /* IttyBittyBits-Shared.xcconfig */,
-				A7C2169013AB2DD90070DA6A /* IttyBittyBits-Debug.xcconfig */,
-				A7C2169113AB2DE70070DA6A /* IttyBittyBits-Release.xcconfig */,
+				A7C2168C13AB29D40070DA6A /* Project-IttyBittyBits-Shared.xcconfig */,
+				A7C2168D13AB2BAC0070DA6A /* Project-IttyBittyBits-Debug.xcconfig */,
+				A7C2168E13AB2BBC0070DA6A /* Project-IttyBittyBits-Release.xcconfig */,
+				A7C2168F13AB2DC70070DA6A /* Target-IttyBittyBits-Shared.xcconfig */,
+				A7C2169013AB2DD90070DA6A /* Target-IttyBittyBits-Debug.xcconfig */,
+				A7C2169113AB2DE70070DA6A /* Target-IttyBittyBits-Release.xcconfig */,
 			);
 			name = Configuration;
 			path = ../config;
@@ -805,28 +805,28 @@
 /* Begin XCBuildConfiguration section */
 		A7B4DAC11367991200543D61 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A7C2168D13AB2BAC0070DA6A /* Debug.xcconfig */;
+			baseConfigurationReference = A7C2168D13AB2BAC0070DA6A /* Project-IttyBittyBits-Debug.xcconfig */;
 			buildSettings = {
 			};
 			name = Debug;
 		};
 		A7B4DAC21367991200543D61 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A7C2168E13AB2BBC0070DA6A /* Release.xcconfig */;
+			baseConfigurationReference = A7C2168E13AB2BBC0070DA6A /* Project-IttyBittyBits-Release.xcconfig */;
 			buildSettings = {
 			};
 			name = Release;
 		};
 		A7B4DAC41367991200543D61 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A7C2169013AB2DD90070DA6A /* IttyBittyBits-Debug.xcconfig */;
+			baseConfigurationReference = A7C2169013AB2DD90070DA6A /* Target-IttyBittyBits-Debug.xcconfig */;
 			buildSettings = {
 			};
 			name = Debug;
 		};
 		A7B4DAC51367991200543D61 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A7C2169113AB2DE70070DA6A /* IttyBittyBits-Release.xcconfig */;
+			baseConfigurationReference = A7C2169113AB2DE70070DA6A /* Target-IttyBittyBits-Release.xcconfig */;
 			buildSettings = {
 			};
 			name = Release;
