@@ -62,4 +62,18 @@
     return [self ibaExecuteFetchRequest:request errorHandler:errorHandler];
 }
 
+- (BOOL)ibaSaveWithErrorHandler:(void(^)(NSError *error))errorHandler
+{
+    NSError *error = nil;
+    
+    BOOL result = [self save:&error];
+    
+    if (error != nil && errorHandler)
+    {
+        errorHandler(error);
+    }
+    
+    return result;
+}
+
 @end

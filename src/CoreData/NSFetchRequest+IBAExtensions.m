@@ -25,6 +25,18 @@
 
 @implementation NSFetchRequest (IBAExtensions)
 
++ (id)ibaFetchRequestForEntity:(NSString *)entityName inContext:(NSManagedObjectContext*)context
+{
+    NSEntityDescription *entity = [NSEntityDescription entityForName:entityName inManagedObjectContext:context];
+    NSFetchRequest *request = [[[NSFetchRequest alloc] init] autorelease];
+    
+    [request setEntity:entity];
+    [request setResultType:NSManagedObjectResultType];
+    
+    return request;
+}
+
+
 + (id)ibaDictionaryFetchRequestForEntity:(NSString *)entityName inContext:(NSManagedObjectContext*)context
 {
     NSEntityDescription *entity = [NSEntityDescription entityForName:entityName inManagedObjectContext:context];

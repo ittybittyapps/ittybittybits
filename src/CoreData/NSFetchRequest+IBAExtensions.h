@@ -23,6 +23,7 @@
 @interface NSFetchRequest (IBAExtensions)
 
 + (id)ibaDictionaryFetchRequestForEntity:(NSString *)entityName inContext:(NSManagedObjectContext*)context;
++ (id)ibaFetchRequestForEntity:(NSString *)entityName inContext:(NSManagedObjectContext*)context;
 
 + (id)ibaFetchRequestForEntity:(NSString *)entityName 
                      inContext:(NSManagedObjectContext *)context
