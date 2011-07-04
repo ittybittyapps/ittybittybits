@@ -54,6 +54,8 @@
 		A7808BD013D2B6A500F76DB1 /* UIColor+IBAExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = A7808BCE13D2B6A500F76DB1 /* UIColor+IBAExtensions.h */; };
 		A7808BD113D2B6A500F76DB1 /* UIColor+IBAExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = A7808BCF13D2B6A500F76DB1 /* UIColor+IBAExtensions.m */; };
 		A7808BD713D2D76A00F76DB1 /* UIColor+IBAExtensionsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A7808BD613D2D76A00F76DB1 /* UIColor+IBAExtensionsTests.m */; };
+		A76C84DA13C1A13D00D2A866 /* IBATableViewAccessory.h in Headers */ = {isa = PBXBuildFile; fileRef = A76C84D813C1A13D00D2A866 /* IBATableViewAccessory.h */; };
+		A76C84DB13C1A13D00D2A866 /* IBATableViewAccessory.m in Sources */ = {isa = PBXBuildFile; fileRef = A76C84D913C1A13D00D2A866 /* IBATableViewAccessory.m */; };
 		A774CADA13B2DD89002B2FA1 /* UIScrollView+IBAExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = A774CAD813B2DD89002B2FA1 /* UIScrollView+IBAExtensions.h */; };
 		A774CADB13B2DD89002B2FA1 /* UIScrollView+IBAExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = A774CAD913B2DD89002B2FA1 /* UIScrollView+IBAExtensions.m */; };
 		A774CADE13B2E0B3002B2FA1 /* IBAUIKit.m in Sources */ = {isa = PBXBuildFile; fileRef = A774CADD13B2E0B3002B2FA1 /* IBAUIKit.m */; };
@@ -198,6 +200,8 @@
 		A7808BD313D2C83600F76DB1 /* IBACSSColors.x */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = IBACSSColors.x; sourceTree = "<group>"; };
 		A7808BD513D2D76A00F76DB1 /* UIColor+IBAExtensionsTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+IBAExtensionsTests.h"; sourceTree = "<group>"; };
 		A7808BD613D2D76A00F76DB1 /* UIColor+IBAExtensionsTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+IBAExtensionsTests.m"; sourceTree = "<group>"; };
+		A76C84D813C1A13D00D2A866 /* IBATableViewAccessory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBATableViewAccessory.h; sourceTree = "<group>"; };
+		A76C84D913C1A13D00D2A866 /* IBATableViewAccessory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IBATableViewAccessory.m; sourceTree = "<group>"; };
 		A774CAD813B2DD89002B2FA1 /* UIScrollView+IBAExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+IBAExtensions.h"; sourceTree = "<group>"; };
 		A774CAD913B2DD89002B2FA1 /* UIScrollView+IBAExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+IBAExtensions.m"; sourceTree = "<group>"; };
 		A774CADD13B2E0B3002B2FA1 /* IBAUIKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IBAUIKit.m; sourceTree = "<group>"; };
@@ -384,6 +388,8 @@
 				A774CADD13B2E0B3002B2FA1 /* IBAUIKit.m */,
 				A706A6EB13821B8300429203 /* IBAActionSheet.h */,
 				A706A6EC13821B8300429203 /* IBAActionSheet.m */,
+				A76C84D813C1A13D00D2A866 /* IBATableViewAccessory.h */,
+				A76C84D913C1A13D00D2A866 /* IBATableViewAccessory.m */,
 				A7C2FB9613B3073F00F774CA /* IBAGradientButton.h */,
 				A7C2FB9713B3073F00F774CA /* IBAGradientButton.m */,
 				A722FA5D137B94D90066CC1A /* UIAlertView+IBAExtensions.h */,
@@ -669,6 +675,7 @@
 				A71BB06D13BC0343008B5DEE /* IBAMapKitUtils.h in Headers */,
 				A7D5945D13BC684100141F15 /* UINib+IBAExtensions.h in Headers */,
 				A75FC05B13BD919D00C7AE82 /* NSDate+IBAExtensions.h in Headers */,
+				A76C84DA13C1A13D00D2A866 /* IBATableViewAccessory.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -796,6 +803,7 @@
 				A71BB06A13BC0324008B5DEE /* IBAMapKitUtils.m in Sources */,
 				A7D5945E13BC684100141F15 /* UINib+IBAExtensions.m in Sources */,
 				A75FC05C13BD919D00C7AE82 /* NSDate+IBAExtensions.m in Sources */,
+				A76C84DB13C1A13D00D2A866 /* IBATableViewAccessory.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
