@@ -51,6 +51,8 @@
 		A75FC05B13BD919D00C7AE82 /* NSDate+IBAExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = A75FC05913BD919D00C7AE82 /* NSDate+IBAExtensions.h */; };
 		A75FC05C13BD919D00C7AE82 /* NSDate+IBAExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = A75FC05A13BD919D00C7AE82 /* NSDate+IBAExtensions.m */; };
 		A7656EB91377DF50002FB968 /* IBADelimitedTextFileReaderTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A7656EB61377DF3C002FB968 /* IBADelimitedTextFileReaderTests.m */; };
+		A76C84DA13C1A13D00D2A866 /* IBATableViewAccessory.h in Headers */ = {isa = PBXBuildFile; fileRef = A76C84D813C1A13D00D2A866 /* IBATableViewAccessory.h */; };
+		A76C84DB13C1A13D00D2A866 /* IBATableViewAccessory.m in Sources */ = {isa = PBXBuildFile; fileRef = A76C84D913C1A13D00D2A866 /* IBATableViewAccessory.m */; };
 		A774CADA13B2DD89002B2FA1 /* UIScrollView+IBAExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = A774CAD813B2DD89002B2FA1 /* UIScrollView+IBAExtensions.h */; };
 		A774CADB13B2DD89002B2FA1 /* UIScrollView+IBAExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = A774CAD913B2DD89002B2FA1 /* UIScrollView+IBAExtensions.m */; };
 		A774CADE13B2E0B3002B2FA1 /* IBAUIKit.m in Sources */ = {isa = PBXBuildFile; fileRef = A774CADD13B2E0B3002B2FA1 /* IBAUIKit.m */; };
@@ -190,6 +192,8 @@
 		A75FC05A13BD919D00C7AE82 /* NSDate+IBAExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+IBAExtensions.m"; sourceTree = "<group>"; };
 		A7656EB51377DF3C002FB968 /* IBADelimitedTextFileReaderTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBADelimitedTextFileReaderTests.h; sourceTree = "<group>"; };
 		A7656EB61377DF3C002FB968 /* IBADelimitedTextFileReaderTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IBADelimitedTextFileReaderTests.m; sourceTree = "<group>"; };
+		A76C84D813C1A13D00D2A866 /* IBATableViewAccessory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBATableViewAccessory.h; sourceTree = "<group>"; };
+		A76C84D913C1A13D00D2A866 /* IBATableViewAccessory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IBATableViewAccessory.m; sourceTree = "<group>"; };
 		A774CAD813B2DD89002B2FA1 /* UIScrollView+IBAExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+IBAExtensions.h"; sourceTree = "<group>"; };
 		A774CAD913B2DD89002B2FA1 /* UIScrollView+IBAExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+IBAExtensions.m"; sourceTree = "<group>"; };
 		A774CADD13B2E0B3002B2FA1 /* IBAUIKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IBAUIKit.m; sourceTree = "<group>"; };
@@ -366,6 +370,8 @@
 				A774CADD13B2E0B3002B2FA1 /* IBAUIKit.m */,
 				A706A6EB13821B8300429203 /* IBAActionSheet.h */,
 				A706A6EC13821B8300429203 /* IBAActionSheet.m */,
+				A76C84D813C1A13D00D2A866 /* IBATableViewAccessory.h */,
+				A76C84D913C1A13D00D2A866 /* IBATableViewAccessory.m */,
 				A7C2FB9613B3073F00F774CA /* IBAGradientButton.h */,
 				A7C2FB9713B3073F00F774CA /* IBAGradientButton.m */,
 				A722FA5D137B94D90066CC1A /* UIAlertView+IBAExtensions.h */,
@@ -647,6 +653,7 @@
 				A71BB06D13BC0343008B5DEE /* IBAMapKitUtils.h in Headers */,
 				A7D5945D13BC684100141F15 /* UINib+IBAExtensions.h in Headers */,
 				A75FC05B13BD919D00C7AE82 /* NSDate+IBAExtensions.h in Headers */,
+				A76C84DA13C1A13D00D2A866 /* IBATableViewAccessory.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -773,6 +780,7 @@
 				A71BB06A13BC0324008B5DEE /* IBAMapKitUtils.m in Sources */,
 				A7D5945E13BC684100141F15 /* UINib+IBAExtensions.m in Sources */,
 				A75FC05C13BD919D00C7AE82 /* NSDate+IBAExtensions.m in Sources */,
+				A76C84DB13C1A13D00D2A866 /* IBATableViewAccessory.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

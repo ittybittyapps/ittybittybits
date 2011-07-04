@@ -19,6 +19,7 @@
 
 #import "IBAActionSheet.h"
 #import "IBAGradientButton.h"
+#import "IBATableViewAccessory.h"
 
 // Extension categories.
 #import "UIAlertView+IBAExtensions.h"
