@@ -1,8 +1,8 @@
 //
-//  IttyBittyBits-Debug.xcconfig
+//  Target-IttyBittyBits-Debug.xcconfig
 //  IttyBittyBits
 //
 //  Created by Oliver Jones on 17/06/11.
 //  Copyright 2011 Itty Bitty Apps Pty. Ltd. All rights reserved.
 //
-#include "IttyBittyBits-Shared.xcconfig"
+#include "Target-IttyBittyBits-Shared.xcconfig"
