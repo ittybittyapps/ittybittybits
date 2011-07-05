@@ -76,15 +76,26 @@ IBA_SYNTHESIZE(defaultManagedObjectContext,
  */
 - (void) handleUnresolvedError:(NSError *)error
 {
-    // FIXME: Not so much handling going on here.
-
+    IBALogCritical(@"Unresolved error %@, %@", error, [error localizedDescription]);
+    NSArray* detailedErrors = [[error userInfo] objectForKey:NSDetailedErrorsKey];
+    if (detailedErrors != nil && [detailedErrors count] > 0) 
+    {
+        for (NSError* detailedError in detailedErrors) 
+        {
+            IBALogCritical(@"  DetailedError: %@", [detailedError userInfo]);
+        }
+    }
+    else {
+        IBALogCritical(@"  %@", [error userInfo]);
+    }
+    
     /*
      Replace this implementation with code to handle the error appropriately.
      
      abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development. If it is not possible to recover from the error, display an alert panel that instructs the user to quit the application by pressing the Home button.
-     */
+     */ 
     
-    IBALogCritical(@"Unresolved error %@, %@", error, [error userInfo]);
+    // FIXME: Not so much handling going on here.
     abort();
 }
 
