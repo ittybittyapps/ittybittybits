@@ -34,11 +34,25 @@
 
 #define IBANSTimeIntervalForHours(hours) IBANSTimeIntervalForMinutes(60.0 * (hours))
 
+/*!
+ \def       IBAMinutesForTimeInterval
+ \brief     Retuns the number of minutes in the specified \a timeinterval.
+ \param     timeinterval    The NSTimeInterval value to convert.
+ */
+#define IBAMinutesForTimeInterval(timeinterval) ((timeinterval)/60.0)
+
+/*!
+ \def       IBAHoursForTimeInterval
+ \brief     Retuns the number of hours in the specified \a timeinterval.
+ \param     timeinterval    The NSTimeInterval value to convert.
+ */
+#define IBAHoursForTimeInterval(timeinterval) (IBAMinutesForTimeInterval(timeinterval)/60.0)
+
 @interface NSDate (IBAExtensions)
 
 /*!
  \brief Return the number of days from the receiver to the specified \a date.
 */
-- (NSInteger)ibaNumberOfDaysUntil:(NSDate *)date;
+- (NSInteger)ibaNumberOfDaysUntil:(NSDate *)date; 
 
 @end
