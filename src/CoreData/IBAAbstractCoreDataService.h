@@ -36,6 +36,12 @@
 - (BOOL)              dataService:(IBAAbstractCoreDataService *)dataService
 didFailToSaveManagedObjectContext:(NSManagedObjectContext*)context 
                         withError:(NSError*)error;
+
+- (BOOL)        shouldDataService:(IBAAbstractCoreDataService *)dataService
+          mergeChangesFromContext:(NSManagedObjectContext*)context;
+
+- (void)              dataService:(IBAAbstractCoreDataService *)dataService
+  didMergeSavedChangesFromContext:(NSManagedObjectContext*)context;
 @end
 
 @interface IBAAbstractCoreDataService : NSObject 
