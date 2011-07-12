@@ -1,8 +1,8 @@
 //
-//  NSDictionary+IBHelper.h
+//  NSMutableDictionary+IBAExtensions.m
 //  IttyBittyBits
 //
-//  Created by Oliver Jones on 18/05/11.
+//  Created by Oliver Jones on 11/07/11.
 //  Copyright 2011 Itty Bitty Apps Pty. Ltd. All rights reserved.
 //
 //  Licensed under the Apache License, Version 2.0 (the "License");
@@ -17,13 +17,19 @@
 //  See the License for the specific language governing permissions and
 //  limitations under the License.
 
-#import <Foundation/Foundation.h>
+#import "NSMutableDictionary+IBAExtensions.h"
+#import "IBACommon.h"
 
-@interface NSDictionary (IBAExtensions)
+@implementation NSMutableDictionary (IBAExtensions)
 
-- (id)ibaObjectForKey:(id)key default:(id)defaultValue;
-- (NSString *)ibaStringForKey:(id)key;
-- (id)ibaObjectForUIntegerKey:(NSUInteger)key;
-- (id)ibaObjectForIntegerKey:(NSInteger)key;
+- (void)ibaSetObject:(id)object forUIntegerKey:(NSUInteger)key
+{
+    [self setObject:object forKey:IBAUIntegerToNumber(key)];
+}
+
+- (void)ibaSetObject:(id)object forIntegerKey:(NSInteger)key
+{
+    [self setObject:object forKey:IBAIntegerToNumber(key)];
+}
 
 @end
