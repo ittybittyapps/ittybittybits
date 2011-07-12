@@ -22,14 +22,17 @@
 
 @interface NSNumber (IBACompare)
 
-- (BOOL) ibaLessThanInt:(int)n;
-- (BOOL) ibaGreaterThanInt:(int)n;
-- (BOOL) ibaEqualToInt:(int)n;
+- (BOOL)ibaLessThanInt:(int)n;
+- (BOOL)ibaGreaterThanInt:(int)n;
+- (BOOL)ibaEqualToInt:(int)n;
 
-- (BOOL) ibaLessThanFloat:(float)n;
-- (BOOL) ibaGreaterThanFloat:(float)n;
-- (BOOL) ibaEqualToFloat:(float)n;
+- (BOOL)ibaLessThanFloat:(float)n;
+- (BOOL)ibaGreaterThanFloat:(float)n;
+- (BOOL)ibaEqualToFloat:(float)n;
 
-
+- (BOOL)ibaIsLessThan:(NSNumber *)other;
+- (BOOL)ibaIsLessThanOrEqualTo:(NSNumber *)other;
+- (BOOL)ibaIsGreaterThan:(NSNumber *)other;
+- (BOOL)ibaIsGreaterThanOrEqualTo:(NSNumber *)other;
 
 @end

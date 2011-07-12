@@ -22,35 +22,74 @@
 
 @implementation NSNumber (IBACompare)
 
-- (BOOL) ibaLessThanInt:(int)n
+- (BOOL)ibaLessThanInt:(int)n
 {
-    return [self compare:[NSNumber numberWithInt:n]] < 0;
+    return [self compare:[NSNumber numberWithInt:n]] == NSOrderedAscending;
 }
 
-- (BOOL) ibaGreaterThanInt:(int)n
+- (BOOL)ibaGreaterThanInt:(int)n
 {
-    return [self compare:[NSNumber numberWithInt:n]] > 0;
+    return [self compare:[NSNumber numberWithInt:n]] == NSOrderedDescending;
 }
 
-- (BOOL) ibaEqualToInt:(int)n
+- (BOOL)ibaEqualToInt:(int)n
 {
-    return [self compare:[NSNumber numberWithInt:n]] == 0;
+    return [self compare:[NSNumber numberWithInt:n]] == NSOrderedSame;
 }
 
-- (BOOL) ibaLessThanFloat:(float)n
+- (BOOL)ibaLessThanFloat:(float)n
 {
-    return [self compare:[NSNumber numberWithFloat:n]] < 0;
+    return [self compare:[NSNumber numberWithFloat:n]] == NSOrderedAscending;
 }
 
-- (BOOL) ibaGreaterThanFloat:(float)n
+- (BOOL)ibaGreaterThanFloat:(float)n
 {
-    return [self compare:[NSNumber numberWithFloat:n]] > 0;
+    return [self compare:[NSNumber numberWithFloat:n]] == NSOrderedDescending;
 }
 
-- (BOOL) ibaEqualToFloat:(float)n
+- (BOOL)ibaEqualToFloat:(float)n
 {
-    return [self compare:[NSNumber numberWithFloat:n]] == 0;
+    return [self compare:[NSNumber numberWithFloat:n]] == NSOrderedSame;
 }
 
+/*!
+ \brief     Returns a Boolean value that indicates whether the receiver is less than another given number.
+ \param     other The other number to compare to the receiver.
+ \return    YES if the receiver is less than other, otherwise NO.
+ */
+- (BOOL)ibaIsLessThan:(NSNumber *)other 
+{
+    return [self compare:other] == NSOrderedAscending;
+}
+
+/*!
+ \brief     Returns a Boolean value that indicates whether the receiver is less than or equal to another given number.
+ \param     other The other number to compare to the receiver.
+ \return YES if the receiver is less than or equal to other, otherwise NO.
+ */
+- (BOOL)ibaIsLessThanOrEqualTo:(NSNumber *)other 
+{
+    return [self compare:other] == NSOrderedSame || [self compare:other] == NSOrderedAscending;
+}
+
+/*!
+ \brief     Returns a Boolean value that indicates whether the receiver is greater than another given number.
+ \param     other The other number to compare to the receiver.
+ \return    YES if the receiver is greater than other, otherwise NO.
+ */
+- (BOOL)ibaIsGreaterThan:(NSNumber *)other 
+{
+    return [self compare:other] == NSOrderedDescending;
+}
+
+/*!
+ \brief     Returns a Boolean value that indicates whether the receiver is greater than or equal to another given number.
+ \param     other The other number to compare to the receiver.
+ \return    YES if the receiver is greater than or equal to other, otherwise NO.
+ */
+- (BOOL)ibaIsGreaterThanOrEqualTo:(NSNumber *)other 
+{
+    return [self compare:other] == NSOrderedSame || [self compare:other] == NSOrderedDescending;
+}
 
 @end
