@@ -7,7 +7,7 @@
 //
 
 #import "UINib+IBAExtensions.h"
-
+#import "../Foundation/IBAFoundation.h"
 
 @implementation UINib (IBAExtensions)
 
@@ -16,7 +16,7 @@
  \param     ownerOrNil  The object to use as the owner of the nib file.
  \param     reuseIdentifier     The reuseIdentifier to search for.
  */
-- (UITableViewCell*) instantiateWithOwner:(id)ownerOrNil forTableViewCellWithReuseIdentifier:(NSString*)reuseIdentifier
+- (UITableViewCell*)ibaInstantiateWithOwner:(id)ownerOrNil forTableViewCellWithReuseIdentifier:(NSString*)reuseIdentifier
 {
     NSArray *contents = [self instantiateWithOwner:ownerOrNil options:nil];
     for (id o in contents) 
@@ -32,6 +32,21 @@
     }
     
     return nil;
+}
+
+/*!
+ \brief     Unarchives and instantiates the in-memory contents of the receiver’s nib file, creating a distinct object tree and set of top level objects.
+ 
+ \param     ownerOrNil      
+ The object to use as the owner of the nib file.
+ 
+ \param     dictionaryOrNil 
+ A dictionary that contains the runtime replacement objects for any proxy objects used in the nib file. In this dictionary, the keys are the names associated with the proxy objects and the values are the actual objects from your code that should be used in their place.
+ */
+- (NSArray *)ibaInstantiateWithOwner:(id)ownerOrNil proxyObjects:(NSDictionary *)dictionaryOrNil
+{
+    NSDictionary *nibOptions = dictionaryOrNil ? [NSDictionary dictionaryWithObjectsAndKeys:dictionaryOrNil, UINibExternalObjects, nil] : nil;
+    return [self instantiateWithOwner:ownerOrNil options:nibOptions];
 }
 
 @end
