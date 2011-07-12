@@ -60,6 +60,8 @@ IBA_SYNTHESIZE(defaultManagedObjectContext,
  */
 - (void)dealloc
 {
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+    
     self.delegate = nil;
     
     IBA_RELEASE_PROPERTY(defaultManagedObjectContext);
@@ -118,11 +120,18 @@ IBA_SYNTHESIZE(defaultManagedObjectContext,
 
 /*!
  \brief     Create a new object context tied to the service's persistent store.
+ \details   Changes made to managed object contexts constructed from this factory will be automatically merged into the defaultManagedObjectContext associated with the Data Service upon save.
  */
 - (NSManagedObjectContext *)newManagedObjectContext 
 {
 	NSManagedObjectContext *context = [NSManagedObjectContext new];
     context.persistentStoreCoordinator = self.persistentStoreCoordinator;
+    
+    // Listen for changes in other managed object contexts
+    [[NSNotificationCenter defaultCenter] addObserver:self 
+                                             selector:@selector(processManagedObjectContextDidSaveNotification:) 
+                                                 name:NSManagedObjectContextDidSaveNotification 
+                                               object:context];
     
 	return context;
 }
@@ -176,6 +185,28 @@ IBA_SYNTHESIZE(defaultManagedObjectContext,
     } while (retry);        
     
     return coordinator;
+}
+
+- (void)processManagedObjectContextDidSaveNotification:(NSNotification*)saveNotification
+{
+    BOOL shouldMerge = YES;
+    if (self.delegate && [self.delegate respondsToSelector:@selector(shouldDataService:mergeChangesFromContext:)])
+    {
+        shouldMerge = [self.delegate shouldDataService:self mergeChangesFromContext:saveNotification.object];
+    }
+    
+    if (shouldMerge)
+    {
+        // I don't think it is actually necessary to perform mergeChangesFromContextDidSaveNotification on the main thread but we do it anyway to be safe.
+        [self.defaultManagedObjectContext performSelectorOnMainThread:@selector(mergeChangesFromContextDidSaveNotification:) 
+                                                           withObject:saveNotification 
+                                                        waitUntilDone:YES];
+        
+        if (self.delegate && [self.delegate respondsToSelector:@selector(dataService:didMergeSavedChangesFromContext:)])
+        {
+            [self.delegate dataService:self didMergeSavedChangesFromContext:saveNotification.object];
+        }
+    }
 }
 
 @end
