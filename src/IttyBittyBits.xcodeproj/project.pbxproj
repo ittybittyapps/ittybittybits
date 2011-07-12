@@ -48,6 +48,7 @@
 		A7286D711389D99A00C12FCB /* IBAExtendedPlacemark.m in Sources */ = {isa = PBXBuildFile; fileRef = A7286D6F1389D99A00C12FCB /* IBAExtendedPlacemark.m */; };
 		A7286D8A138A1AFB00C12FCB /* NSMutableArray+IBASorting.h in Headers */ = {isa = PBXBuildFile; fileRef = A7286D88138A1AFB00C12FCB /* NSMutableArray+IBASorting.h */; };
 		A7286D8B138A1AFB00C12FCB /* NSMutableArray+IBASorting.m in Sources */ = {isa = PBXBuildFile; fileRef = A7286D89138A1AFB00C12FCB /* NSMutableArray+IBASorting.m */; };
+		A72ADC0D13CC54FB0052E2D4 /* IBACoreDataErrors.h in Headers */ = {isa = PBXBuildFile; fileRef = A72ADC0C13CC54FB0052E2D4 /* IBACoreDataErrors.h */; };
 		A75FC05B13BD919D00C7AE82 /* NSDate+IBAExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = A75FC05913BD919D00C7AE82 /* NSDate+IBAExtensions.h */; };
 		A75FC05C13BD919D00C7AE82 /* NSDate+IBAExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = A75FC05A13BD919D00C7AE82 /* NSDate+IBAExtensions.m */; };
 		A7656EB91377DF50002FB968 /* IBADelimitedTextFileReaderTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A7656EB61377DF3C002FB968 /* IBADelimitedTextFileReaderTests.m */; };
@@ -191,6 +192,7 @@
 		A7286D6F1389D99A00C12FCB /* IBAExtendedPlacemark.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = IBAExtendedPlacemark.m; path = MapKit/IBAExtendedPlacemark.m; sourceTree = SOURCE_ROOT; };
 		A7286D88138A1AFB00C12FCB /* NSMutableArray+IBASorting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSMutableArray+IBASorting.h"; path = "Foundation/NSMutableArray+IBASorting.h"; sourceTree = SOURCE_ROOT; };
 		A7286D89138A1AFB00C12FCB /* NSMutableArray+IBASorting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSMutableArray+IBASorting.m"; path = "Foundation/NSMutableArray+IBASorting.m"; sourceTree = SOURCE_ROOT; };
+		A72ADC0C13CC54FB0052E2D4 /* IBACoreDataErrors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBACoreDataErrors.h; sourceTree = "<group>"; };
 		A75FC05913BD919D00C7AE82 /* NSDate+IBAExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+IBAExtensions.h"; sourceTree = "<group>"; };
 		A75FC05A13BD919D00C7AE82 /* NSDate+IBAExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+IBAExtensions.m"; sourceTree = "<group>"; };
 		A7656EB51377DF3C002FB968 /* IBADelimitedTextFileReaderTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBADelimitedTextFileReaderTests.h; sourceTree = "<group>"; };
@@ -331,6 +333,7 @@
 			isa = PBXGroup;
 			children = (
 				751C606013B216E200447BB4 /* IBACoreData.h */,
+				A72ADC0C13CC54FB0052E2D4 /* IBACoreDataErrors.h */,
 				751C605513B1CB1C00447BB4 /* IBACoreDataContextProvider.h */,
 				751C605613B1CB1C00447BB4 /* IBACoreDataContextProvider.m */,
 				A7F0A6B413B438820009F601 /* IBAAbstractCoreDataService.h */,
@@ -676,6 +679,7 @@
 				A7D5945D13BC684100141F15 /* UINib+IBAExtensions.h in Headers */,
 				A75FC05B13BD919D00C7AE82 /* NSDate+IBAExtensions.h in Headers */,
 				A76C84DA13C1A13D00D2A866 /* IBATableViewAccessory.h in Headers */,
+				A72ADC0D13CC54FB0052E2D4 /* IBACoreDataErrors.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
