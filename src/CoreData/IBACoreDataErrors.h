@@ -1,8 +1,8 @@
 //
-//  IBACoreGraphics.h
+//  IBACoreDataErrors.h
 //  IttyBittyBits
 //
-//  Created by Oliver Jones on 6/05/11.
+//  Created by Oliver Jones on 12/07/11.
 //  Copyright 2011 Itty Bitty Apps Pty. Ltd. All rights reserved.
 //
 //  Licensed under the Apache License, Version 2.0 (the "License"); you may not
@@ -18,13 +18,4 @@
 //  the License.
 //
 
-#import "../Foundation/IBAFoundation.h"
-
-#import "IBACoreDataErrors.h"
-
-#import "IBACoreDataContextProvider.h"
-#import "IBAAbstractCoreDataService.h"
-#import "NSEntityDescription+IBAExtensions.h"
-#import "NSFetchRequest+IBAExtensions.h"
-#import "NSExpressionDescription+IBAExtensions.h"
-#import "NSManagedObjectContext+IBAExtensions.h"
+typedef void (^IBACoreDataErrorHandler)(NSError *error);
