@@ -31,6 +31,8 @@
 		A707FD8113779BFD0029FA76 /* IBAInputStreamLineReaderTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A707FD7E13779BCB0029FA76 /* IBAInputStreamLineReaderTests.m */; };
 		A71BB06A13BC0324008B5DEE /* IBAMapKitUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = A71BB06913BC0324008B5DEE /* IBAMapKitUtils.m */; };
 		A71BB06D13BC0343008B5DEE /* IBAMapKitUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = A71BB06C13BC0343008B5DEE /* IBAMapKitUtils.h */; };
+		A71E21D113CAD26900FB2695 /* NSMutableDictionary+IBAExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = A71E21CF13CAD26800FB2695 /* NSMutableDictionary+IBAExtensions.h */; };
+		A71E21D213CAD26900FB2695 /* NSMutableDictionary+IBAExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = A71E21D013CAD26800FB2695 /* NSMutableDictionary+IBAExtensions.m */; };
 		A71F422713B9964A001FD43D /* NSEntityDescription+IBAExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = A71F422513B9964A001FD43D /* NSEntityDescription+IBAExtensions.h */; };
 		A71F422813B9964A001FD43D /* NSEntityDescription+IBAExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = A71F422613B9964A001FD43D /* NSEntityDescription+IBAExtensions.m */; };
 		A71F422C13B998AB001FD43D /* NSFetchRequest+IBAExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = A71F422A13B998AB001FD43D /* NSFetchRequest+IBAExtensions.h */; };
@@ -172,6 +174,8 @@
 		A707FD7E13779BCB0029FA76 /* IBAInputStreamLineReaderTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IBAInputStreamLineReaderTests.m; sourceTree = "<group>"; };
 		A71BB06913BC0324008B5DEE /* IBAMapKitUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IBAMapKitUtils.m; sourceTree = "<group>"; };
 		A71BB06C13BC0343008B5DEE /* IBAMapKitUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBAMapKitUtils.h; sourceTree = "<group>"; };
+		A71E21CF13CAD26800FB2695 /* NSMutableDictionary+IBAExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableDictionary+IBAExtensions.h"; sourceTree = "<group>"; };
+		A71E21D013CAD26800FB2695 /* NSMutableDictionary+IBAExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableDictionary+IBAExtensions.m"; sourceTree = "<group>"; };
 		A71F422513B9964A001FD43D /* NSEntityDescription+IBAExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSEntityDescription+IBAExtensions.h"; sourceTree = "<group>"; };
 		A71F422613B9964A001FD43D /* NSEntityDescription+IBAExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSEntityDescription+IBAExtensions.m"; sourceTree = "<group>"; };
 		A71F422A13B998AB001FD43D /* NSFetchRequest+IBAExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSFetchRequest+IBAExtensions.h"; sourceTree = "<group>"; };
@@ -555,8 +559,12 @@
 				A7D58C581378CFA90041BBEB /* NSArray+IBAWhitespace.m */,
 				A75FC05913BD919D00C7AE82 /* NSDate+IBAExtensions.h */,
 				A75FC05A13BD919D00C7AE82 /* NSDate+IBAExtensions.m */,
+				A7B109F313837F4C00C8A672 /* NSDictionary+IBAExtensions.h */,
+				A7B109F413837F4C00C8A672 /* NSDictionary+IBAExtensions.m */,
 				A7286D88138A1AFB00C12FCB /* NSMutableArray+IBASorting.h */,
 				A7286D89138A1AFB00C12FCB /* NSMutableArray+IBASorting.m */,
+				A71E21CF13CAD26800FB2695 /* NSMutableDictionary+IBAExtensions.h */,
+				A71E21D013CAD26800FB2695 /* NSMutableDictionary+IBAExtensions.m */,
 				A7B69228137D13DD00E379F3 /* NSNumber+IBACompare.h */,
 				A7B69229137D13E000E379F3 /* NSNumber+IBACompare.m */,
 				A7D58C521378BF440041BBEB /* NSString+IBAWhitespace.h */,
@@ -565,8 +573,6 @@
 				75DA1E46138D413B0014C492 /* NSString+IBAURLEncoding.m */,
 				A7014AF513718C0300BE32D2 /* NSTimer+IBABlocks.h */,
 				A7014AF613718C0300BE32D2 /* NSTimer+IBABlocks.m */,
-				A7B109F313837F4C00C8A672 /* NSDictionary+IBAExtensions.h */,
-				A7B109F413837F4C00C8A672 /* NSDictionary+IBAExtensions.m */,
 				A7B10AAD1384AB5F00C8A672 /* IBAPreProcessorMagic.h */,
 			);
 			path = Foundation;
@@ -657,6 +663,7 @@
 				A7D5945D13BC684100141F15 /* UINib+IBAExtensions.h in Headers */,
 				A75FC05B13BD919D00C7AE82 /* NSDate+IBAExtensions.h in Headers */,
 				A76C84DA13C1A13D00D2A866 /* IBATableViewAccessory.h in Headers */,
+				A71E21D113CAD26900FB2695 /* NSMutableDictionary+IBAExtensions.h in Headers */,
 				A72ADC0D13CC54FB0052E2D4 /* IBACoreDataErrors.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -785,6 +792,7 @@
 				A7D5945E13BC684100141F15 /* UINib+IBAExtensions.m in Sources */,
 				A75FC05C13BD919D00C7AE82 /* NSDate+IBAExtensions.m in Sources */,
 				A76C84DB13C1A13D00D2A866 /* IBATableViewAccessory.m in Sources */,
+				A71E21D213CAD26900FB2695 /* NSMutableDictionary+IBAExtensions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

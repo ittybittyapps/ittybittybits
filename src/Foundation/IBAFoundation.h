@@ -29,6 +29,7 @@
 #import "NSArray+IBAExtensions.h"
 #import "NSDate+IBAExtensions.h"
 #import "NSDictionary+IBAExtensions.h"
+#import "NSMutableDictionary+IBAExtensions.h"
 #import "NSNumber+IBACompare.h"
 #import "NSString+IBAURLEncoding.h"
 #import "NSString+IBAWhitespace.h"
