@@ -1,8 +1,8 @@
 //
-//  IBAFoundation.h
+//  NSObject+IBAExtensions.h
 //  IttyBittyBits
 //
-//  Created by Oliver Jones on 6/05/11.
+//  Created by Oliver Jones on 7/07/11.
 //  Copyright 2011 Itty Bitty Apps Pty. Ltd. All rights reserved.
 //
 //  Licensed under the Apache License, Version 2.0 (the "License");
@@ -17,22 +17,15 @@
 //  See the License for the specific language governing permissions and
 //  limitations under the License.
 
-#import "IBACommon.h"
-#import "IBADebug.h"
-#import "IBADelimitedTextFileReader.h"
-#import "IBADelimitedTextFileReaderDelegate.h"
-#import "IBAInputStreamLineReader.h"
-#import "IBALogger.h"
-#import "IBAMath.h"
-#import "IBASynthesizeSingleton.h"
-#import "IBATemporaryFile.h"
-#import "NSArray+IBAExtensions.h"
-#import "NSDate+IBAExtensions.h"
-#import "NSDictionary+IBAExtensions.h"
-#import "NSMutableDictionary+IBAExtensions.h"
-#import "NSNumber+IBACompare.h"
-#import "NSObject+IBAExtensions.h"
-#import "NSString+IBAURLEncoding.h"
-#import "NSString+IBAWhitespace.h"
-#import "NSTimer+IBABlocks.h"
+#import <Foundation/Foundation.h>
 
+#import "IBACommon.h"
+
+@interface NSObject (IBAExtensions)
+
+
+- (void)ibaAddObserver:(NSObject *)anObserver forKeyPaths:(NSArray *)keyPaths options:(NSKeyValueObservingOptions)options context:(void *)context;
+
+- (void)ibaRemoveObserver:(NSObject *)anObserver forKeyPaths:(NSArray *)keyPaths;
+
+@end
