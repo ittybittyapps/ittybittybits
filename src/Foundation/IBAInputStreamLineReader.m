@@ -78,7 +78,7 @@ const size_t kBufferSize = 4096;
         self.stringEncoding = encoding;
         self.inputStream = anInputStream;
         self.linesEndWith = lineEnding;
-        self.lineBuffer = [[NSMutableData alloc] initWithCapacity:kBufferSize * 2];
+        self.lineBuffer = [[[NSMutableData alloc] initWithCapacity:kBufferSize * 2] autorelease];
     }
     
     return self;
