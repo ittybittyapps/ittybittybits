@@ -158,6 +158,16 @@ IBA_SYNTHESIZE(delegate, responseData, rConnection, request, requestURL);
 }
 
 /*!
+ Sent when a connection fails to load its request successfully.
+ */
+- (void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error 
+{	
+	IBALogDebug(@"IBAGeocoder -> Failed with error: %@, (%@)", [error localizedDescription], [[self.request URL] absoluteString]);
+	
+	[self.delegate geocoder:self didFailWithError:error];
+}
+
+/*!
  Sent when a connection has finished loading successfully.
  */
 - (void)connectionDidFinishLoading:(NSURLConnection *)connection 
@@ -263,16 +273,6 @@ IBA_SYNTHESIZE(delegate, responseData, rConnection, request, requestURL);
     }
     
     [self.delegate geocoder:self didFindPlacemarks:[NSArray arrayWithArray:placemarks]];
-}
-
-/*!
- Sent when a connection fails to load its request successfully.
- */
-- (void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error 
-{	
-	IBALogDebug(@"IBAGeocoder -> Failed with error: %@, (%@)", [error localizedDescription], [[self.request URL] absoluteString]);
-	
-	[self.delegate geocoder:self didFailWithError:error];
 }
 
 @end
