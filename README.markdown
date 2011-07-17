@@ -25,3 +25,5 @@ This library also contains modified versions of code copyright the following aut
     Jon Crosby
     Mike Malone
     Remy Demarest
+    Sam Vermette
+    Erica Sadun

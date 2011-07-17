@@ -39,6 +39,8 @@
 		A7286D8A138A1AFB00C12FCB /* NSMutableArray+IBASorting.h in Headers */ = {isa = PBXBuildFile; fileRef = A7286D88138A1AFB00C12FCB /* NSMutableArray+IBASorting.h */; };
 		A7286D8B138A1AFB00C12FCB /* NSMutableArray+IBASorting.m in Sources */ = {isa = PBXBuildFile; fileRef = A7286D89138A1AFB00C12FCB /* NSMutableArray+IBASorting.m */; };
 		A7656EB91377DF50002FB968 /* IBADelimitedTextFileReaderTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A7656EB61377DF3C002FB968 /* IBADelimitedTextFileReaderTests.m */; };
+		A7808BD013D2B6A500F76DB1 /* UIColor+IBAExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = A7808BCE13D2B6A500F76DB1 /* UIColor+IBAExtensions.h */; };
+		A7808BD113D2B6A500F76DB1 /* UIColor+IBAExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = A7808BCF13D2B6A500F76DB1 /* UIColor+IBAExtensions.m */; };
 		A7914160136FD62200209C96 /* IBALogger.h in Headers */ = {isa = PBXBuildFile; fileRef = A791415E136FD62200209C96 /* IBALogger.h */; };
 		A7914161136FD62200209C96 /* IBALogger.m in Sources */ = {isa = PBXBuildFile; fileRef = A791415F136FD62200209C96 /* IBALogger.m */; };
 		A79141671370E2EC00209C96 /* IBALoggerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A79141641370E01300209C96 /* IBALoggerTests.m */; };
@@ -139,6 +141,9 @@
 		A7286D89138A1AFB00C12FCB /* NSMutableArray+IBASorting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSMutableArray+IBASorting.m"; path = "Foundation/NSMutableArray+IBASorting.m"; sourceTree = SOURCE_ROOT; };
 		A7656EB51377DF3C002FB968 /* IBADelimitedTextFileReaderTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBADelimitedTextFileReaderTests.h; sourceTree = "<group>"; };
 		A7656EB61377DF3C002FB968 /* IBADelimitedTextFileReaderTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IBADelimitedTextFileReaderTests.m; sourceTree = "<group>"; };
+		A7808BCE13D2B6A500F76DB1 /* UIColor+IBAExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+IBAExtensions.h"; sourceTree = "<group>"; };
+		A7808BCF13D2B6A500F76DB1 /* UIColor+IBAExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+IBAExtensions.m"; sourceTree = "<group>"; };
+		A7808BD313D2C83600F76DB1 /* IBACSSColors.x */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = IBACSSColors.x; sourceTree = "<group>"; };
 		A791415E136FD62200209C96 /* IBALogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IBALogger.h; path = Foundation/IBALogger.h; sourceTree = SOURCE_ROOT; };
 		A791415F136FD62200209C96 /* IBALogger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = IBALogger.m; path = Foundation/IBALogger.m; sourceTree = SOURCE_ROOT; };
 		A79141631370E01300209C96 /* IBALoggerTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBALoggerTests.h; sourceTree = "<group>"; };
@@ -267,11 +272,14 @@
 		A791415C136FD5E200209C96 /* UIKit */ = {
 			isa = PBXGroup;
 			children = (
+				A7808BD313D2C83600F76DB1 /* IBACSSColors.x */,
 				A722FA42137B73730066CC1A /* IBAUIKit.h */,
-				A722FA44137B77550066CC1A /* UIBarButtonItem+IBAFactories.h */,
-				A722FA45137B77550066CC1A /* UIBarButtonItem+IBAFactories.m */,
 				A722FA5D137B94D90066CC1A /* UIAlertView+IBAHelpers.h */,
 				A722FA5E137B94D90066CC1A /* UIAlertView+IBAHelpers.m */,
+				A722FA44137B77550066CC1A /* UIBarButtonItem+IBAFactories.h */,
+				A722FA45137B77550066CC1A /* UIBarButtonItem+IBAFactories.m */,
+				A7808BCE13D2B6A500F76DB1 /* UIColor+IBAExtensions.h */,
+				A7808BCF13D2B6A500F76DB1 /* UIColor+IBAExtensions.m */,
 				A706A6EB13821B8300429203 /* IBAActionSheet.h */,
 				A706A6EC13821B8300429203 /* IBAActionSheet.m */,
 				A7B10AC7138632E800C8A672 /* UISearchBar+IBAExtensions.h */,
@@ -523,6 +531,7 @@
 				A701064413947B8000D9AB8B /* MKPlacemark+IBAFormattedAddress.h in Headers */,
 				751C605713B1CB1C00447BB4 /* IBACoreDataContextProvider.h in Headers */,
 				751C606113B216E200447BB4 /* IBACoreData.h in Headers */,
+				A7808BD013D2B6A500F76DB1 /* UIColor+IBAExtensions.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -633,6 +642,7 @@
 				75DA1E48138D413B0014C492 /* NSString+IBAURLEncoding.m in Sources */,
 				A701064513947B8000D9AB8B /* MKPlacemark+IBAFormattedAddress.m in Sources */,
 				751C605813B1CB1C00447BB4 /* IBACoreDataContextProvider.m in Sources */,
+				A7808BD113D2B6A500F76DB1 /* UIColor+IBAExtensions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

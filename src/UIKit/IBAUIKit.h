@@ -17,32 +17,8 @@
 //  See the License for the specific language governing permissions and
 //  limitations under the License.
 
-/*!
- \brief     Create an autoreleased UIColor instance from the specified RGB value.
- Example:
- \code
- UIColor *color = IBAUIColorFromRGB(0x333333);
- \endcode
- */
-#define IBAUIColorFromRGB(rgbValue) [UIColor \
-    colorWithRed:((float)(((rgbValue) & 0xFF0000) >> 16))/255.0f \
-    green:((float)(((rgbValue) & 0xFF00) >> 8))/255.0f \
-    blue:((float)((rgbValue) & 0xFF))/255.0f alpha:1.0f]
-
-/*!
- \brief     Create an autoreleased UIColor instance from the specified RGB and alpha values.
- Example:
- \code
- UIColor *color = IBAUIColorFromRGBA(0x333300, 0.5f);
- \endcode
-*/
-#define IBAUIColorFromRGBA(rgbValue, alphaValue) [UIColor \
-    colorWithRed:((float)(((rgbValue) & 0xFF0000) >> 16))/255.0f \
-    green:((float)(((rgbValue) & 0xFF00) >> 8))/255.0f \
-    blue:((float)((rgbValue) & 0xFF))/255.0f alpha:(alphaValue)]
-
-
 #import "IBAActionSheet.h"
-#import "UIBarButtonItem+IBAFactories.h"
 #import "UIAlertView+IBAHelpers.h"
+#import "UIBarButtonItem+IBAFactories.h"
+#import "UIColor+IBAExtensions.h"
 #import "UISearchBar+IBAExtensions.h"
