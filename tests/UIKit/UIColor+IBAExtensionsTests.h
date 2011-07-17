@@ -6,7 +6,7 @@
 //  Copyright 2011 Itty Bitty Apps Pty. Ltd. All rights reserved.
 //
 
-#import <GHUnitIOS/GHUnitIOS.h>
+#import <UIKit/UIKit.h>
 
 @interface UIColor_IBAExtensionsTests : GHTestCase
 

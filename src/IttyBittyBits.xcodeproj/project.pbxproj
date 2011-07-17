@@ -41,6 +41,7 @@
 		A7656EB91377DF50002FB968 /* IBADelimitedTextFileReaderTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A7656EB61377DF3C002FB968 /* IBADelimitedTextFileReaderTests.m */; };
 		A7808BD013D2B6A500F76DB1 /* UIColor+IBAExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = A7808BCE13D2B6A500F76DB1 /* UIColor+IBAExtensions.h */; };
 		A7808BD113D2B6A500F76DB1 /* UIColor+IBAExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = A7808BCF13D2B6A500F76DB1 /* UIColor+IBAExtensions.m */; };
+		A7808BD713D2D76A00F76DB1 /* UIColor+IBAExtensionsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A7808BD613D2D76A00F76DB1 /* UIColor+IBAExtensionsTests.m */; };
 		A7914160136FD62200209C96 /* IBALogger.h in Headers */ = {isa = PBXBuildFile; fileRef = A791415E136FD62200209C96 /* IBALogger.h */; };
 		A7914161136FD62200209C96 /* IBALogger.m in Sources */ = {isa = PBXBuildFile; fileRef = A791415F136FD62200209C96 /* IBALogger.m */; };
 		A79141671370E2EC00209C96 /* IBALoggerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A79141641370E01300209C96 /* IBALoggerTests.m */; };
@@ -58,6 +59,7 @@
 		A7966B46139378CB00F1B1A1 /* AddressBookUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7966B44139378CB00F1B1A1 /* AddressBookUI.framework */; };
 		A7966B49139378EB00F1B1A1 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7966B48139378EB00F1B1A1 /* CoreLocation.framework */; };
 		A7966B4B139378FD00F1B1A1 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7966B4A139378FD00F1B1A1 /* MapKit.framework */; };
+		A79A177C13D2DAEB00304EE4 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 751C605A13B20E0800447BB4 /* CoreData.framework */; };
 		A7B109F513837F4C00C8A672 /* NSDictionary+IBAExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = A7B109F313837F4C00C8A672 /* NSDictionary+IBAExtensions.h */; };
 		A7B109F613837F4C00C8A672 /* NSDictionary+IBAExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = A7B109F413837F4C00C8A672 /* NSDictionary+IBAExtensions.m */; };
 		A7B109F9138387AC00C8A672 /* NSArray+IBASorting.h in Headers */ = {isa = PBXBuildFile; fileRef = A7B109F7138387AC00C8A672 /* NSArray+IBASorting.h */; };
@@ -144,6 +146,8 @@
 		A7808BCE13D2B6A500F76DB1 /* UIColor+IBAExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+IBAExtensions.h"; sourceTree = "<group>"; };
 		A7808BCF13D2B6A500F76DB1 /* UIColor+IBAExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+IBAExtensions.m"; sourceTree = "<group>"; };
 		A7808BD313D2C83600F76DB1 /* IBACSSColors.x */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = IBACSSColors.x; sourceTree = "<group>"; };
+		A7808BD513D2D76A00F76DB1 /* UIColor+IBAExtensionsTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+IBAExtensionsTests.h"; sourceTree = "<group>"; };
+		A7808BD613D2D76A00F76DB1 /* UIColor+IBAExtensionsTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+IBAExtensionsTests.m"; sourceTree = "<group>"; };
 		A791415E136FD62200209C96 /* IBALogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IBALogger.h; path = Foundation/IBALogger.h; sourceTree = SOURCE_ROOT; };
 		A791415F136FD62200209C96 /* IBALogger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = IBALogger.m; path = Foundation/IBALogger.m; sourceTree = SOURCE_ROOT; };
 		A79141631370E01300209C96 /* IBALoggerTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBALoggerTests.h; sourceTree = "<group>"; };
@@ -235,6 +239,7 @@
 				A7B4DACE13679F5E00543D61 /* Foundation.framework in Frameworks */,
 				A7B4DAD013679F5E00543D61 /* CoreGraphics.framework in Frameworks */,
 				A7B4DB171367C70D00543D61 /* Security.framework in Frameworks */,
+				A79A177C13D2DAEB00304EE4 /* CoreData.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -267,6 +272,15 @@
 				A701064313947B8000D9AB8B /* MKPlacemark+IBAFormattedAddress.m */,
 			);
 			path = MapKit;
+			sourceTree = "<group>";
+		};
+		A7808BD413D2D73400F76DB1 /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				A7808BD513D2D76A00F76DB1 /* UIColor+IBAExtensionsTests.h */,
+				A7808BD613D2D76A00F76DB1 /* UIColor+IBAExtensionsTests.m */,
+			);
+			path = UIKit;
 			sourceTree = "<group>";
 		};
 		A791415C136FD5E200209C96 /* UIKit */ = {
@@ -341,7 +355,6 @@
 		A7B4DAAE1367991100543D61 = {
 			isa = PBXGroup;
 			children = (
-				751C605A13B20E0800447BB4 /* CoreData.framework */,
 				A7C2168A13AB29100070DA6A /* Configuration */,
 				A7B4DABE1367991200543D61 /* Src */,
 				A7B4DAD113679F5E00543D61 /* Tests */,
@@ -363,6 +376,7 @@
 		A7B4DABB1367991200543D61 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				751C605A13B20E0800447BB4 /* CoreData.framework */,
 				A7966B4A139378FD00F1B1A1 /* MapKit.framework */,
 				A7966B48139378EB00F1B1A1 /* CoreLocation.framework */,
 				A7966B43139378CB00F1B1A1 /* AddressBook.framework */,
@@ -404,6 +418,7 @@
 			isa = PBXGroup;
 			children = (
 				A79141621370DFE100209C96 /* Foundation */,
+				A7808BD413D2D73400F76DB1 /* UIKit */,
 				A7B4DAD213679F5E00543D61 /* Supporting Files */,
 			);
 			name = Tests;
@@ -656,6 +671,7 @@
 				A707FD8113779BFD0029FA76 /* IBAInputStreamLineReaderTests.m in Sources */,
 				A7656EB91377DF50002FB968 /* IBADelimitedTextFileReaderTests.m in Sources */,
 				75DA1E49138D413B0014C492 /* NSString+IBAURLEncoding.m in Sources */,
+				A7808BD713D2D76A00F76DB1 /* UIColor+IBAExtensionsTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
