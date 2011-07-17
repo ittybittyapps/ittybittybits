@@ -124,7 +124,17 @@
 #define _IBA_SYNTHESIZE_15(a, ...) _IBA_SYNTHESIZE_H(a), _IBA_SYNTHESIZE_14(__VA_ARGS__)
 #define _IBA_SYNTHESIZE_16(a, ...) _IBA_SYNTHESIZE_H(a), _IBA_SYNTHESIZE_15(__VA_ARGS__)
 #define _IBA_SYNTHESIZE_17(a, ...) _IBA_SYNTHESIZE_H(a), _IBA_SYNTHESIZE_16(__VA_ARGS__)
- 
+
+/*!
+ \def       IBA_NSDICTIONARY
+ \brief     Helper macro for creating an NSDictionary instance with a series of objects and keys.
+ \details   Usage example:
+ \code      NSDictionary *d = IBA_NSDICTIONARY(object, key, object, key);
+ \endcode
+ \sa        NSDictionary#dictionaryWithObjectsAndKeys
+ */
+#define IBA_NSDICTIONARY(...) [NSDictionary dictionaryWithObjectsAndKeys:__VA_ARGS__, nil]
+
 /*!
  \def       IBA_NSARRAY
  \brief     Helper macro for creating inline NSArray instances with a series of objects.
