@@ -30,6 +30,7 @@
                                                         fromDate:self 
                                                           toDate:date
                                                          options:0];
+    [gregorianCalendar release];
     
     return [components day];
 }

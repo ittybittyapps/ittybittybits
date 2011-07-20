@@ -19,15 +19,13 @@
 
 #import "IBAMapKitUtils.h"
 
-const MKCoordinateRegion IBAMKCoordinateRegionNull = { { INFINITY, INFINITY }, { 0.0, 0.0 } };
-
 /*!
  \brief     Retuns a MKCoordinateRegion that covers the specified \a number of \a coordinates.
  \return    A MKCoordinateRegion that covers the specified \a number of \a coordinates.  MKCoordinateRegionNull if \a number of coordinates is less than 1.
  */
 MKCoordinateRegion IBAMKCoordinateRegionWithCoordinates(CLLocationCoordinate2D * coordinates, NSUInteger number)
 {
-    MKCoordinateRegion region = IBAMKCoordinateRegionNull;
+    MKCoordinateRegion region = { { INFINITY, INFINITY }, { 0.0, 0.0 } };
     if(number > 0)
     {
         CLLocationCoordinate2D topLeft = CLLocationCoordinate2DMake(-90, 180);    

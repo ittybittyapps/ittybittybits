@@ -26,8 +26,6 @@ MKCoordinateRegion IBAMKCoordinateRegionWithCoordinates(CLLocationCoordinate2D *
 BOOL IBAMKCoordinateRegionIsNull(MKCoordinateRegion region);
 BOOL IBAMKCoordinateRegionIsEmpty(MKCoordinateRegion region);
 
-const MKCoordinateRegion IBAMKCoordinateRegionNull;
-
 NSString *IBAMKCoordinateRegionDebugDescription(MKCoordinateRegion region);
 
 IBA_EXTERN_C_END
