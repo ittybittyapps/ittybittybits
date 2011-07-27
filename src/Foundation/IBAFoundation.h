@@ -34,6 +34,7 @@
 #import "NSError+IBAExtensions.h"
 #import "NSMutableArray+IBAExtensions.h"
 #import "NSMutableDictionary+IBAExtensions.h"
+#import "NSMutableSet+IBAExtensions.h"
 #import "NSNumber+IBAExtensions.h"
 #import "NSObject+IBAExtensions.h"
 #import "NSString+IBAURLEncoding.h"
