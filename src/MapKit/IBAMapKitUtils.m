@@ -19,7 +19,7 @@
 
 #import "IBAMapKitUtils.h"
 
-const MKCoordinateRegion IBAMKCoordinateRegionNull = { { INFINITY, INFINITY }, { 0.0, 0.0 } };
+MKCoordinateRegion IBAMKCoordinateRegionNull = { { INFINITY, INFINITY }, { 0.0, 0.0 } };
 
 /*!
  \brief     Retuns a MKCoordinateRegion that covers the specified \a number of \a coordinates.
