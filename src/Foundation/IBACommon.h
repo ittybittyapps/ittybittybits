@@ -85,6 +85,22 @@
         } \
     } while(0)
 
+/*!
+ \brief     Macro that retains a new property value in a setter while releasing the old property value.  Change notifications willChangeValueForKey: and didChangeValueForKey: for the property are also called before and after the value changes.
+ */
+#define IBA_RETAIN_PROPERTY_WITH_CHANGE_NOTIFICATION(propertyName, newValue) \
+    do { \
+        __typeof__(newValue) __A = (newValue); \
+        if (IBA_PROPERTY_IVAR(propertyName) != __A) \
+        { \
+            [self willChangeValueForKey:@#propertyName]; \
+            [__A retain]; \
+            IBA_RELEASE_PROPERTY(propertyName); \
+            IBA_PROPERTY_IVAR(propertyName) = __A; \
+            [self didChangeValueForKey:@#propertyName]; \
+        } \
+    } while(0)
+
 /*! 
  \def       IBA_FORMAT_FUNCTION
  \brief     An alias for NS_FORMAT_FUNCTION
@@ -161,6 +177,14 @@
 #define _IBA_SYNTHESIZE_15(a, ...) _IBA_SYNTHESIZE_H(a), _IBA_SYNTHESIZE_14(__VA_ARGS__)
 #define _IBA_SYNTHESIZE_16(a, ...) _IBA_SYNTHESIZE_H(a), _IBA_SYNTHESIZE_15(__VA_ARGS__)
 #define _IBA_SYNTHESIZE_17(a, ...) _IBA_SYNTHESIZE_H(a), _IBA_SYNTHESIZE_16(__VA_ARGS__)
+
+/*!
+ \def       IBA_HAS_FLAG
+ \brief     Tests the specified \a flags value to determine whether the specified \a flag is set.
+ \param     flags       The flags variable to test.
+ \param     flag        The flag to test for.
+ */
+#define IBA_HAS_FLAG(flags, flag) (((flags) & (flag)) != 0)
 
 /*!
  \def       IBA_NSDICTIONARY
