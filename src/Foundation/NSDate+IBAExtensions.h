@@ -50,9 +50,11 @@
 
 @interface NSDate (IBAExtensions)
 
-/*!
- \brief Return the number of days from the receiver to the specified \a date.
-*/
 - (NSInteger)ibaNumberOfDaysUntil:(NSDate *)date; 
+
+- (BOOL)ibaIsEarlierThan:(NSDate *)date;
+- (BOOL)ibaIsEarlierThanOrEqualTo:(NSDate *)other;
+- (BOOL)ibaIsLaterThan:(NSDate *)date;
+- (BOOL)ibaIsLaterThanOrEqualTo:(NSDate *)other;
 
 @end
