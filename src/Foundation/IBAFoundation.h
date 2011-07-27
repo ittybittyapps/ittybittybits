@@ -18,6 +18,8 @@
 //  limitations under the License.
 
 #import "IBACommon.h"
+#import "IBABinding.h"
+#import "IBABindingManager.h"
 #import "IBADebug.h"
 #import "IBADelimitedTextFileReader.h"
 #import "IBADelimitedTextFileReaderDelegate.h"
