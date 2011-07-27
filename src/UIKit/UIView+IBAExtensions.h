@@ -29,4 +29,7 @@
 @property (nonatomic, assign) CGFloat ibaWidth;
 @property (nonatomic, assign) CGFloat ibaHeight;
 
+- (void)ibaSetHidden:(BOOL)hidden withAlphaTransistionDuration:(CGFloat)duration;
+- (void)ibaSetHidden:(BOOL)hidden withAlphaTransistionDuration:(CGFloat)duration completion:(void (^)(BOOL finished))completion;
+
 @end
