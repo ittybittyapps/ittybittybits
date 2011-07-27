@@ -26,9 +26,12 @@
 #import "IBAMath.h"
 #import "IBASynthesizeSingleton.h"
 #import "IBATemporaryFile.h"
+
+// Extension categories.
 #import "NSArray+IBAExtensions.h"
 #import "NSDate+IBAExtensions.h"
 #import "NSDictionary+IBAExtensions.h"
+#import "NSError+IBAExtensions.h"
 #import "NSMutableDictionary+IBAExtensions.h"
 #import "NSNumber+IBACompare.h"
 #import "NSObject+IBAExtensions.h"

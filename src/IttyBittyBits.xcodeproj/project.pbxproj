@@ -137,6 +137,8 @@
 		A7D5945E13BC684100141F15 /* UINib+IBAExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = A7D5945C13BC684100141F15 /* UINib+IBAExtensions.m */; };
 		A7DA82D713C564420083D453 /* NSObject+IBAExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = A7DA82D513C564420083D453 /* NSObject+IBAExtensions.h */; };
 		A7DA82D813C564420083D453 /* NSObject+IBAExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = A7DA82D613C564420083D453 /* NSObject+IBAExtensions.m */; };
+		A7E200C013D68D5A00731605 /* NSError+IBAExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = A7E200BE13D68D5A00731605 /* NSError+IBAExtensions.h */; };
+		A7E200C113D68D5A00731605 /* NSError+IBAExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = A7E200BF13D68D5A00731605 /* NSError+IBAExtensions.m */; };
 		A7F0A6B613B438820009F601 /* IBAAbstractCoreDataService.h in Headers */ = {isa = PBXBuildFile; fileRef = A7F0A6B413B438820009F601 /* IBAAbstractCoreDataService.h */; };
 		A7F0A6B713B438820009F601 /* IBAAbstractCoreDataService.m in Sources */ = {isa = PBXBuildFile; fileRef = A7F0A6B513B438820009F601 /* IBAAbstractCoreDataService.m */; };
 		A7F0A6BD13B46ED80009F601 /* NSArray+IBAExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = A7F0A6BB13B46ED80009F601 /* NSArray+IBAExtensions.h */; };
@@ -290,6 +292,8 @@
 		A7D5945C13BC684100141F15 /* UINib+IBAExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINib+IBAExtensions.m"; sourceTree = "<group>"; };
 		A7DA82D513C564420083D453 /* NSObject+IBAExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+IBAExtensions.h"; sourceTree = "<group>"; };
 		A7DA82D613C564420083D453 /* NSObject+IBAExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+IBAExtensions.m"; sourceTree = "<group>"; };
+		A7E200BE13D68D5A00731605 /* NSError+IBAExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSError+IBAExtensions.h"; sourceTree = "<group>"; };
+		A7E200BF13D68D5A00731605 /* NSError+IBAExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSError+IBAExtensions.m"; sourceTree = "<group>"; };
 		A7F0A6B413B438820009F601 /* IBAAbstractCoreDataService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBAAbstractCoreDataService.h; sourceTree = "<group>"; };
 		A7F0A6B513B438820009F601 /* IBAAbstractCoreDataService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IBAAbstractCoreDataService.m; sourceTree = "<group>"; };
 		A7F0A6BB13B46ED80009F601 /* NSArray+IBAExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+IBAExtensions.h"; sourceTree = "<group>"; };
@@ -588,6 +592,8 @@
 				A7B109F413837F4C00C8A672 /* NSDictionary+IBAExtensions.m */,
 				A7286D88138A1AFB00C12FCB /* NSMutableArray+IBASorting.h */,
 				A7286D89138A1AFB00C12FCB /* NSMutableArray+IBASorting.m */,
+				A7E200BE13D68D5A00731605 /* NSError+IBAExtensions.h */,
+				A7E200BF13D68D5A00731605 /* NSError+IBAExtensions.m */,
 				A71E21CF13CAD26800FB2695 /* NSMutableDictionary+IBAExtensions.h */,
 				A71E21D013CAD26800FB2695 /* NSMutableDictionary+IBAExtensions.m */,
 				A7B69228137D13DD00E379F3 /* NSNumber+IBACompare.h */,
@@ -694,6 +700,7 @@
 				A7DA82D713C564420083D453 /* NSObject+IBAExtensions.h in Headers */,
 				A71E21D113CAD26900FB2695 /* NSMutableDictionary+IBAExtensions.h in Headers */,
 				A72ADC0D13CC54FB0052E2D4 /* IBACoreDataErrors.h in Headers */,
+				A7E200C013D68D5A00731605 /* NSError+IBAExtensions.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -824,6 +831,7 @@
 				A76C84DB13C1A13D00D2A866 /* IBATableViewAccessory.m in Sources */,
 				A7DA82D813C564420083D453 /* NSObject+IBAExtensions.m in Sources */,
 				A71E21D213CAD26900FB2695 /* NSMutableDictionary+IBAExtensions.m in Sources */,
+				A7E200C113D68D5A00731605 /* NSError+IBAExtensions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
