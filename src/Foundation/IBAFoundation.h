@@ -32,6 +32,7 @@
 #import "NSDate+IBAExtensions.h"
 #import "NSDictionary+IBAExtensions.h"
 #import "NSError+IBAExtensions.h"
+#import "NSMutableArray+IBAExtensions.h"
 #import "NSMutableDictionary+IBAExtensions.h"
 #import "NSNumber+IBAExtensions.h"
 #import "NSObject+IBAExtensions.h"
