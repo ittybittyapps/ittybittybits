@@ -20,6 +20,7 @@
 
 #import "IBAActionSheet.h"
 #import "../Foundation/IBACommon.h"
+#import "../Foundation/NSNumber+IBAExtensions.h"
 
 @interface IBAActionSheet ()
 @property (nonatomic, assign) id<UIActionSheetDelegate> actionSheetDelegate;

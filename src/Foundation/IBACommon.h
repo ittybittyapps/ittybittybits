@@ -184,17 +184,6 @@
  */
 #define IBA_NSMUTABLEARRAY(...) [NSMutableArray arrayWithObjects:__VA_ARGS__, nil]
 
-#define IBAFloatToNumber(x) [NSNumber numberWithFloat:(x)]
-#define IBADoubleToNumber(x) [NSNumber numberWithDouble:(x)]
-#define IBAIntToNumber(x) [NSNumber numberWithInt:(x)]
-#define IBAIntegerToNumber(x) [NSNumber numberWithInteger:(x)]
-#define IBAUIntToNumber(x) [NSNumber numberWithUnsignedInt:(x)]
-#define IBAUIntegerToNumber(x) [NSNumber numberWithUnsignedInteger:(x)]
-#define IBALongToNumber(x) [NSNumber numberWithLong:(x)]
-#define IBAULongToNumber(x) [NSNumber numberWithUnsignedLong:(x)]
-#define IBALongLongToNumber(x) [NSNumber numberWithLongLong:(x)]
-#define IBAULongLongToNumber(x) [NSNumber numberWithUnsignedLongLong:(x)]
-
 /*!
  \def       IBALocalizedString
  \brief     Returns a localized version of a string.

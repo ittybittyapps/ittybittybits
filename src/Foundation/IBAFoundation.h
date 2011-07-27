@@ -33,7 +33,7 @@
 #import "NSDictionary+IBAExtensions.h"
 #import "NSError+IBAExtensions.h"
 #import "NSMutableDictionary+IBAExtensions.h"
-#import "NSNumber+IBACompare.h"
+#import "NSNumber+IBAExtensions.h"
 #import "NSObject+IBAExtensions.h"
 #import "NSString+IBAURLEncoding.h"
 #import "NSString+IBAWhitespace.h"
