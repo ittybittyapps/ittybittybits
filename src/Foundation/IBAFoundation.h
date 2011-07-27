@@ -21,6 +21,7 @@
 #import "IBADebug.h"
 #import "IBADelimitedTextFileReader.h"
 #import "IBADelimitedTextFileReaderDelegate.h"
+#import "IBAErrors.h"
 #import "IBAInputStreamLineReader.h"
 #import "IBALogger.h"
 #import "IBAMath.h"

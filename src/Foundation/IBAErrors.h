@@ -1,5 +1,5 @@
 //
-//  IBACoreDataErrors.h
+//  IBAErrors.h
 //  IttyBittyBits
 //
 //  Created by Oliver Jones on 12/07/11.
@@ -18,4 +18,12 @@
 //  the License.
 //
 
-typedef void (^IBACoreDataErrorHandler)(NSError *error);
+typedef void (^IBAErrorHandler)(NSError *error);
+
+
+/*!
+ \def       IBASetError
+ \brief     Helper macro to set an pointer to a NSError.
+ \details   Ensures that the pointer references a valid NSError pointer before assigning to it.
+ */
+#define IBASetOutError(error, value) do { if (error) { (*(error)) = (value); } } while(0)

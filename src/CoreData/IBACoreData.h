@@ -20,8 +20,6 @@
 
 #import "../Foundation/IBAFoundation.h"
 
-#import "IBACoreDataErrors.h"
-
 #import "IBACoreDataContextProvider.h"
 #import "IBAAbstractCoreDataService.h"
 #import "NSEntityDescription+IBAExtensions.h"

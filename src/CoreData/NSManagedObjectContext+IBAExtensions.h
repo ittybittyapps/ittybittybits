@@ -20,17 +20,24 @@
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
 
-#import "IBACoreDataErrors.h"
+#import "../Foundation/IBAErrors.h"
 
 @interface NSManagedObjectContext (IBAExtensions)
 
-- (NSUInteger)ibaCountForFetchRequest:(NSFetchRequest*)request errorHandler:(IBACoreDataErrorHandler)errorHandler;
-- (NSArray *)ibaExecuteFetchRequest:(NSFetchRequest*)request errorHandler:(IBACoreDataErrorHandler)errorHandler;
+- (NSUInteger)ibaCountForFetchRequest:(NSFetchRequest*)request 
+                         errorHandler:(IBAErrorHandler)errorHandler;
+
+- (NSArray *)ibaExecuteFetchRequest:(NSFetchRequest*)request 
+                       errorHandler:(IBAErrorHandler)errorHandler;
 
 - (NSArray *)ibaExecuteFetchRequestForEntity:(NSString *)entityName 
-                            withErrorHandler:(IBACoreDataErrorHandler)errorHandler 
+                            withErrorHandler:(IBAErrorHandler)errorHandler 
                                 forPredicate:(id)stringOrPredicate, ...;
 
-- (BOOL)ibaSaveWithErrorHandler:(IBACoreDataErrorHandler)errorHandler;
+- (BOOL)ibaSaveWithErrorHandler:(IBAErrorHandler)errorHandler;
+
+- (void)ibaDeleteEntitiesNamed:(NSString *)entityName 
+              withErrorHandler:(IBAErrorHandler)errorHandler 
+             matchingPredicate:(id)stringOrPredicate, ...;
 
 @end

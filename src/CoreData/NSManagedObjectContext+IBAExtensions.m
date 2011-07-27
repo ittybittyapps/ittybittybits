@@ -22,11 +22,11 @@
 #import "NSManagedObjectContext+IBAExtensions.h"
 #import "NSFetchRequest+IBAExtensions.h"
 
-#import "IBACoreDataErrors.h"
+#import "../Foundation/IBAErrors.h"
 
 @implementation NSManagedObjectContext (IBAExtensions)
 
-- (NSUInteger)ibaCountForFetchRequest:(NSFetchRequest*)request errorHandler:(IBACoreDataErrorHandler)errorHandler
+- (NSUInteger)ibaCountForFetchRequest:(NSFetchRequest*)request errorHandler:(IBAErrorHandler)errorHandler
 {
     NSError *error = nil;
     NSUInteger count = [self countForFetchRequest:request error:&error];
@@ -38,7 +38,7 @@
     return count;
 }
 
-- (NSArray *)ibaExecuteFetchRequest:(NSFetchRequest*)request errorHandler:(IBACoreDataErrorHandler)errorHandler
+- (NSArray *)ibaExecuteFetchRequest:(NSFetchRequest*)request errorHandler:(IBAErrorHandler)errorHandler
 {
     NSError *error = nil;
     NSArray *results = [self executeFetchRequest:request error:&error];
@@ -51,7 +51,7 @@
 }
 
 - (NSArray *)ibaExecuteFetchRequestForEntity:(NSString *)entityName 
-                            withErrorHandler:(IBACoreDataErrorHandler)errorHandler 
+                            withErrorHandler:(IBAErrorHandler)errorHandler 
                                 forPredicate:(id)stringOrPredicate, ...
 {
     va_list variadicArguments;
@@ -65,7 +65,7 @@
     return [self ibaExecuteFetchRequest:request errorHandler:errorHandler];
 }
 
-- (BOOL)ibaSaveWithErrorHandler:(IBACoreDataErrorHandler)errorHandler
+- (BOOL)ibaSaveWithErrorHandler:(IBAErrorHandler)errorHandler
 {
     NSError *error = nil;
     
@@ -77,6 +77,37 @@
     }
     
     return result;
+}
+
+/*!
+ \brief     Delete the entities matching the specified predicate.
+ \param     entityName      The name of the entities to delete.
+ \param     errorHandler    The error handler to invoke if the delete operation fails.
+ \param     stringOrPredicate   The predicate instance or string predicate to match with.
+ */
+- (void)ibaDeleteEntitiesNamed:(NSString *)entityName 
+              withErrorHandler:(IBAErrorHandler)errorHandler 
+             matchingPredicate:(id)stringOrPredicate, ...
+{
+    va_list args;
+    va_start(args, stringOrPredicate);
+    NSFetchRequest *request = [NSFetchRequest ibaFetchRequestForEntity:entityName
+                                                             inContext:self
+                                                         withPredicate:stringOrPredicate 
+                                                                  args:args];
+    va_end(args);
+    
+    [request setIncludesPropertyValues:NO];
+    [request setIncludesSubentities:NO];
+    
+    NSArray *a = [self ibaExecuteFetchRequest:request errorHandler:errorHandler];
+    if (a)
+    {
+        for (NSManagedObject *o in a) 
+        {
+            [self deleteObject:o];
+        }
+    }
 }
 
 @end
