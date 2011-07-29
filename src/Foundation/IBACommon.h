@@ -255,3 +255,8 @@
         return NO;
     }
 #endif
+
+/*!
+ \brief     A generic action block.
+ */
+typedef void (^IBAAction)(void);
