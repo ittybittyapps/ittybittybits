@@ -29,7 +29,18 @@
 @property (nonatomic, assign) CGFloat ibaWidth;
 @property (nonatomic, assign) CGFloat ibaHeight;
 
+typedef enum 
+{
+    IBACompassDirectionNorth,
+    IBACompassDirectionSouth,
+    IBACompassDirectionEast,
+    IBACompassDirectionWest
+} IBACompassDirection;
+
 - (void)ibaSetHidden:(BOOL)hidden withAlphaTransistionDuration:(CGFloat)duration;
 - (void)ibaSetHidden:(BOOL)hidden withAlphaTransistionDuration:(CGFloat)duration completion:(void (^)(BOOL finished))completion;
+- (void)ibaSetHidden:(BOOL)hidden withSlideTransistionDirection:(IBACompassDirection)direction 
+            duration:(CGFloat)duration 
+          completion:(void (^)(BOOL finished))completion;
 
 @end
