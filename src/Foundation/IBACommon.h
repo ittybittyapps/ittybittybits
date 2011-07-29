@@ -101,6 +101,20 @@
         } \
     } while(0)
 
+/*!
+ \brief     Macro that assigns a new property value.  Change notifications willChangeValueForKey: and didChangeValueForKey: for the property are also called before and after the value changes.
+ */
+#define IBA_ASSIGN_PROPERTY_WITH_CHANGE_NOTIFICATION(propertyName, newValue) \
+    do { \
+        __typeof__(newValue) __A = (newValue); \
+        if (IBA_PROPERTY_IVAR(propertyName) != __A) \
+        { \
+            [self willChangeValueForKey:@#propertyName]; \
+            IBA_PROPERTY_IVAR(propertyName) = __A; \
+            [self didChangeValueForKey:@#propertyName]; \
+        } \
+    } while(0)
+
 /*! 
  \def       IBA_FORMAT_FUNCTION
  \brief     An alias for NS_FORMAT_FUNCTION
