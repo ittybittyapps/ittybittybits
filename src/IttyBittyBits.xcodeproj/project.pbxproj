@@ -92,6 +92,8 @@
 		A7A0A26C13B88E4800596FD4 /* IBABreadcrumbPath.mm in Sources */ = {isa = PBXBuildFile; fileRef = A7A0A26813B88E4800596FD4 /* IBABreadcrumbPath.mm */; };
 		A7A0A26D13B88E4800596FD4 /* IBABreadcrumbPathView.h in Headers */ = {isa = PBXBuildFile; fileRef = A7A0A26913B88E4800596FD4 /* IBABreadcrumbPathView.h */; };
 		A7A0A26E13B88E4800596FD4 /* IBABreadcrumbPathView.mm in Sources */ = {isa = PBXBuildFile; fileRef = A7A0A26A13B88E4800596FD4 /* IBABreadcrumbPathView.mm */; };
+		A7A0E10C13E0EF24006CEC5A /* NSError+IBACoreDataErrors.h in Headers */ = {isa = PBXBuildFile; fileRef = A7A0E10A13E0EF24006CEC5A /* NSError+IBACoreDataErrors.h */; };
+		A7A0E10D13E0EF24006CEC5A /* NSError+IBACoreDataErrors.mm in Sources */ = {isa = PBXBuildFile; fileRef = A7A0E10B13E0EF24006CEC5A /* NSError+IBACoreDataErrors.mm */; };
 		A7A0E11113E12DB0006CEC5A /* IBAStateMachine.h in Headers */ = {isa = PBXBuildFile; fileRef = A7A0E10F13E12DB0006CEC5A /* IBAStateMachine.h */; };
 		A7A0E11213E12DB0006CEC5A /* IBAStateMachine.m in Sources */ = {isa = PBXBuildFile; fileRef = A7A0E11013E12DB0006CEC5A /* IBAStateMachine.m */; };
 		A7A0E11313E12DB0006CEC5A /* IBAStateMachine.m in Sources */ = {isa = PBXBuildFile; fileRef = A7A0E11013E12DB0006CEC5A /* IBAStateMachine.m */; };
@@ -256,6 +258,8 @@
 		A7A0A26813B88E4800596FD4 /* IBABreadcrumbPath.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = IBABreadcrumbPath.mm; sourceTree = "<group>"; };
 		A7A0A26913B88E4800596FD4 /* IBABreadcrumbPathView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBABreadcrumbPathView.h; sourceTree = "<group>"; };
 		A7A0A26A13B88E4800596FD4 /* IBABreadcrumbPathView.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = IBABreadcrumbPathView.mm; sourceTree = "<group>"; };
+		A7A0E10A13E0EF24006CEC5A /* NSError+IBACoreDataErrors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSError+IBACoreDataErrors.h"; sourceTree = "<group>"; };
+		A7A0E10B13E0EF24006CEC5A /* NSError+IBACoreDataErrors.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = "NSError+IBACoreDataErrors.mm"; sourceTree = "<group>"; };
 		A7A0E10F13E12DB0006CEC5A /* IBAStateMachine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBAStateMachine.h; sourceTree = "<group>"; };
 		A7A0E11013E12DB0006CEC5A /* IBAStateMachine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IBAStateMachine.m; sourceTree = "<group>"; };
 		A7B109F313837F4C00C8A672 /* NSDictionary+IBAExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSDictionary+IBAExtensions.h"; path = "Foundation/NSDictionary+IBAExtensions.h"; sourceTree = SOURCE_ROOT; };
@@ -373,6 +377,8 @@
 				A71F422613B9964A001FD43D /* NSEntityDescription+IBAExtensions.m */,
 				A71F422A13B998AB001FD43D /* NSFetchRequest+IBAExtensions.h */,
 				A71F422B13B998AB001FD43D /* NSFetchRequest+IBAExtensions.m */,
+				A7A0E10A13E0EF24006CEC5A /* NSError+IBACoreDataErrors.h */,
+				A7A0E10B13E0EF24006CEC5A /* NSError+IBACoreDataErrors.mm */,
 				A71F422E13B99BEB001FD43D /* NSExpressionDescription+IBAExtensions.h */,
 				A71F422F13B99BEC001FD43D /* NSExpressionDescription+IBAExtensions.m */,
 				A71F423213B99F46001FD43D /* NSManagedObjectContext+IBAExtensions.h */,
@@ -732,6 +738,7 @@
 				A78E41C613DCFB2F0042FF9E /* IBABinding.h in Headers */,
 				A78E41CC13DD04280042FF9E /* IBABindingManager.h in Headers */,
 				A78E41D613DD0C8E0042FF9E /* NSMutableSet+IBAExtensions.h in Headers */,
+				A7A0E10C13E0EF24006CEC5A /* NSError+IBACoreDataErrors.h in Headers */,
 				A7A0E11113E12DB0006CEC5A /* IBAStateMachine.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -867,6 +874,7 @@
 				A78E41C713DCFB2F0042FF9E /* IBABinding.m in Sources */,
 				A78E41CD13DD04280042FF9E /* IBABindingManager.m in Sources */,
 				A78E41D713DD0C8E0042FF9E /* NSMutableSet+IBAExtensions.m in Sources */,
+				A7A0E10D13E0EF24006CEC5A /* NSError+IBACoreDataErrors.mm in Sources */,
 				A7A0E11213E12DB0006CEC5A /* IBAStateMachine.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
