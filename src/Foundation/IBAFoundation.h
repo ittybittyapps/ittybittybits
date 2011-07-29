@@ -27,6 +27,7 @@
 #import "IBAInputStreamLineReader.h"
 #import "IBALogger.h"
 #import "IBAMath.h"
+#import "IBAStateMachine.h"
 #import "IBASynthesizeSingleton.h"
 #import "IBATemporaryFile.h"
 
