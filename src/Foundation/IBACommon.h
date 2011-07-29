@@ -229,3 +229,11 @@
  \sa        NSLocalizedString
  */
 #define IBALocalizedString(x) NSLocalizedString((x), @"")
+
+/*!
+ \def       IBA_ARRAYCOUNT
+ \brief     Returns the count of elements in an array.
+ \param     array   The array for which to get the count of elements.
+ */
+#define IBA_ARRAYCOUNT(array) ((sizeof(array)/sizeof(0[array])) / ((size_t)(!(sizeof(array) % sizeof(0[array])))))
+
