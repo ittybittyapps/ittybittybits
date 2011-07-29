@@ -23,6 +23,6 @@
 
 @interface UIAlertView (IBAHelpers)
 
-+ (void)showSimpleAlertWithTitle:(NSString *)title message:(NSString *)message;
++ (void)ibaShowSimpleAlertWithTitle:(NSString *)title message:(NSString *)message;
 
 @end
