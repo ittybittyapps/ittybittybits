@@ -20,6 +20,8 @@
 #import "../Foundation/IBAFoundation.h"
 #import <MapKit/MapKit.h>
 
+IBA_EXTERN MKCoordinateRegion IBAMKCoordinateRegionNull;
+
 IBA_EXTERN_C_BEGIN
 
 MKCoordinateRegion IBAMKCoordinateRegionWithCoordinates(CLLocationCoordinate2D * coordinates, NSUInteger count);
