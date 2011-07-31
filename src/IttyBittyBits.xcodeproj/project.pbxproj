@@ -53,6 +53,8 @@
 		A72ADC0D13CC54FB0052E2D4 /* IBACoreDataErrors.h in Headers */ = {isa = PBXBuildFile; fileRef = A72ADC0C13CC54FB0052E2D4 /* IBACoreDataErrors.h */; };
 		A75FC05B13BD919D00C7AE82 /* NSDate+IBAExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = A75FC05913BD919D00C7AE82 /* NSDate+IBAExtensions.h */; };
 		A75FC05C13BD919D00C7AE82 /* NSDate+IBAExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = A75FC05A13BD919D00C7AE82 /* NSDate+IBAExtensions.m */; };
+		A7652BD213E581530023D4B3 /* IBATiledImageView.h in Headers */ = {isa = PBXBuildFile; fileRef = A7652BD013E581530023D4B3 /* IBATiledImageView.h */; };
+		A7652BD313E581530023D4B3 /* IBATiledImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = A7652BD113E581530023D4B3 /* IBATiledImageView.m */; };
 		A7656EB91377DF50002FB968 /* IBADelimitedTextFileReaderTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A7656EB61377DF3C002FB968 /* IBADelimitedTextFileReaderTests.m */; };
 		A76C84DA13C1A13D00D2A866 /* IBATableViewAccessory.h in Headers */ = {isa = PBXBuildFile; fileRef = A76C84D813C1A13D00D2A866 /* IBATableViewAccessory.h */; };
 		A76C84DB13C1A13D00D2A866 /* IBATableViewAccessory.m in Sources */ = {isa = PBXBuildFile; fileRef = A76C84D913C1A13D00D2A866 /* IBATableViewAccessory.m */; };
@@ -201,6 +203,8 @@
 		A72ADC0C13CC54FB0052E2D4 /* IBACoreDataErrors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBACoreDataErrors.h; sourceTree = "<group>"; };
 		A75FC05913BD919D00C7AE82 /* NSDate+IBAExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+IBAExtensions.h"; sourceTree = "<group>"; };
 		A75FC05A13BD919D00C7AE82 /* NSDate+IBAExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+IBAExtensions.m"; sourceTree = "<group>"; };
+		A7652BD013E581530023D4B3 /* IBATiledImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBATiledImageView.h; sourceTree = "<group>"; };
+		A7652BD113E581530023D4B3 /* IBATiledImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IBATiledImageView.m; sourceTree = "<group>"; };
 		A7656EB51377DF3C002FB968 /* IBADelimitedTextFileReaderTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBADelimitedTextFileReaderTests.h; sourceTree = "<group>"; };
 		A7656EB61377DF3C002FB968 /* IBADelimitedTextFileReaderTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IBADelimitedTextFileReaderTests.m; sourceTree = "<group>"; };
 		A76C84D813C1A13D00D2A866 /* IBATableViewAccessory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBATableViewAccessory.h; sourceTree = "<group>"; };
@@ -399,10 +403,12 @@
 				A774CADD13B2E0B3002B2FA1 /* IBAUIKit.m */,
 				A706A6EB13821B8300429203 /* IBAActionSheet.h */,
 				A706A6EC13821B8300429203 /* IBAActionSheet.m */,
-				A76C84D813C1A13D00D2A866 /* IBATableViewAccessory.h */,
-				A76C84D913C1A13D00D2A866 /* IBATableViewAccessory.m */,
 				A7C2FB9613B3073F00F774CA /* IBAGradientButton.h */,
 				A7C2FB9713B3073F00F774CA /* IBAGradientButton.m */,
+				A76C84D813C1A13D00D2A866 /* IBATableViewAccessory.h */,
+				A76C84D913C1A13D00D2A866 /* IBATableViewAccessory.m */,
+				A7652BD013E581530023D4B3 /* IBATiledImageView.h */,
+				A7652BD113E581530023D4B3 /* IBATiledImageView.m */,
 				A722FA5D137B94D90066CC1A /* UIAlertView+IBAExtensions.h */,
 				A722FA5E137B94D90066CC1A /* UIAlertView+IBAExtensions.m */,
 				A722FA44137B77550066CC1A /* UIBarButtonItem+IBAFactories.h */,
@@ -694,6 +700,7 @@
 				A7DA82D713C564420083D453 /* NSObject+IBAExtensions.h in Headers */,
 				A71E21D113CAD26900FB2695 /* NSMutableDictionary+IBAExtensions.h in Headers */,
 				A72ADC0D13CC54FB0052E2D4 /* IBACoreDataErrors.h in Headers */,
+				A7652BD213E581530023D4B3 /* IBATiledImageView.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -824,6 +831,7 @@
 				A76C84DB13C1A13D00D2A866 /* IBATableViewAccessory.m in Sources */,
 				A7DA82D813C564420083D453 /* NSObject+IBAExtensions.m in Sources */,
 				A71E21D213CAD26900FB2695 /* NSMutableDictionary+IBAExtensions.m in Sources */,
+				A7652BD313E581530023D4B3 /* IBATiledImageView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

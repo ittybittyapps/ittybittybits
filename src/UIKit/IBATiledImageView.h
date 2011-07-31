@@ -1,8 +1,8 @@
 //
-//  IBAUIKit.h
+//  IBATiledScrollView.h
 //  IttyBittyBits
 //
-//  Created by Oliver Jones on 12/05/11.
+//  Created by Oliver Jones on 31/07/11.
 //  Copyright 2011 Itty Bitty Apps Pty. Ltd. All rights reserved.
 //
 //  Licensed under the Apache License, Version 2.0 (the "License");
@@ -17,23 +17,23 @@
 //  See the License for the specific language governing permissions and
 //  limitations under the License.
 
-#import "IBAActionSheet.h"
-#import "IBAGradientButton.h"
-#import "IBATableViewAccessory.h"
-#import "IBATiledImageView.h"
+#import <UIKit/UIKit.h>
+#import <QuartzCore/QuartzCore.h>
 
-// Extension categories.
-#import "UIAlertView+IBAExtensions.h"
-#import "UIBarButtonItem+IBAFactories.h"
-#import "UIColor+IBAExtensions.h"
-#import "UINib+IBAExtensions.h"
-#import "UISearchBar+IBAExtensions.h"
-#import "UIScrollView+IBAExtensions.h"
-#import "UIView+IBAExtensions.h"
+@class IBATiledImageView;
 
+@protocol IBATiledImageViewDataSource <NSObject>
 
-IBA_EXTERN_C_BEGIN
+- (UIImage *)tileForView:(IBATiledImageView*)view
+                   scale:(CGFloat)scale
+                     row:(NSInteger)row
+                  column:(NSInteger)column;
 
-CGRect IBACGRectForApplicationOrientation(CGRect rect);
+@end
 
-IBA_EXTERN_C_END
+@interface IBATiledImageView : UIView
+
+@property (nonatomic, readonly) CATiledLayer *tiledLayer;
+@property (nonatomic, assign) id<IBATiledImageViewDataSource> dataSource;
+
+@end
