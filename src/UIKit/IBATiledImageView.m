@@ -79,7 +79,7 @@ IBA_SYNTHESIZE(dataSource, tiledLayer);
                                                   column:col];
             [tile drawInRect:tileRect];
             
-#if DEBUG
+#if 0
             [[UIColor whiteColor] set];
             CGContextSetLineWidth(context, 6.0 / scale);
             CGContextStrokeRect(context, tileRect);
