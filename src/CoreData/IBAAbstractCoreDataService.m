@@ -174,10 +174,14 @@ IBA_SYNTHESIZE(defaultManagedObjectContext,
     BOOL retry = NO;
     do {
         NSError *error = nil;
+        
+        NSDictionary *options = IBA_NSDICTIONARY(IBABoolToNumber(YES), NSMigratePersistentStoresAutomaticallyOption,
+                                                 IBABoolToNumber(YES), NSInferMappingModelAutomaticallyOption);
+        
         if ([coordinator addPersistentStoreWithType:NSSQLiteStoreType 
                                       configuration:nil 
                                                 URL:storeURL 
-                                            options:nil 
+                                            options:options 
                                               error:&error] == NO)
         {
             retry = [self shouldRetryAddingPersistentStoreForModel:model storeURL:storeURL withError:error];   
