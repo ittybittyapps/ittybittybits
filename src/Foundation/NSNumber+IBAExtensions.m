@@ -1,5 +1,5 @@
 //
-//  NSNumber+IBACompare.m
+//  NSNumber+IBAExtensions.m
 //  IttyBittyBits
 //
 //  Created by Oliver Jones on 13/05/11.
@@ -17,37 +17,36 @@
 //  See the License for the specific language governing permissions and
 //  limitations under the License.
 
-#import "NSNumber+IBACompare.h"
+#import "NSNumber+IBAExtensions.h"
 
+@implementation NSNumber (IBAExtensions)
 
-@implementation NSNumber (IBACompare)
-
-- (BOOL)ibaLessThanInt:(int)n
+- (BOOL)ibaIsLessThanInt:(int)n
 {
     return [self compare:[NSNumber numberWithInt:n]] == NSOrderedAscending;
 }
 
-- (BOOL)ibaGreaterThanInt:(int)n
+- (BOOL)ibaIsGreaterThanInt:(int)n
 {
     return [self compare:[NSNumber numberWithInt:n]] == NSOrderedDescending;
 }
 
-- (BOOL)ibaEqualToInt:(int)n
+- (BOOL)ibaIsEqualToInt:(int)n
 {
     return [self compare:[NSNumber numberWithInt:n]] == NSOrderedSame;
 }
 
-- (BOOL)ibaLessThanFloat:(float)n
+- (BOOL)ibaIsLessThanFloat:(float)n
 {
     return [self compare:[NSNumber numberWithFloat:n]] == NSOrderedAscending;
 }
 
-- (BOOL)ibaGreaterThanFloat:(float)n
+- (BOOL)ibaIsGreaterThanFloat:(float)n
 {
     return [self compare:[NSNumber numberWithFloat:n]] == NSOrderedDescending;
 }
 
-- (BOOL)ibaEqualToFloat:(float)n
+- (BOOL)ibaIsEqualToFloat:(float)n
 {
     return [self compare:[NSNumber numberWithFloat:n]] == NSOrderedSame;
 }

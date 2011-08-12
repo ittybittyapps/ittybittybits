@@ -21,7 +21,7 @@
 #import <Foundation/Foundation.h>
 
 
-@interface NSMutableArray (IBASorting)
+@interface NSMutableArray (IBAExtensions)
 
 - (void)ibaReverse;
 

@@ -18,10 +18,10 @@
 //  limitations under the License.
 
 
-#import "NSMutableArray+IBASorting.h"
+#import "NSMutableArray+IBAExtensions.h"
 
 
-@implementation NSMutableArray (IBASorting)
+@implementation NSMutableArray (IBAExtensions)
 
 /*!
  \brief     Reverses the order of elements in the receiving array.

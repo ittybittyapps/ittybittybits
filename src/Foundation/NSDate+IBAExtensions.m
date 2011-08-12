@@ -22,9 +22,12 @@
 
 @implementation NSDate (IBAExtensions)
 
+/*!
+ \brief Return the number of days from the receiver to the specified \a date.
+ */
 - (NSInteger)ibaNumberOfDaysUntil:(NSDate *)date 
 {
-    NSCalendar *gregorianCalendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
+    NSCalendar *gregorianCalendar = [[[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar] autorelease];
     
     NSDateComponents *components = [gregorianCalendar components:NSDayCalendarUnit 
                                                         fromDate:self 
@@ -33,6 +36,48 @@
     [gregorianCalendar release];
     
     return [components day];
+}
+
+/*!
+ \brief     Returns a Boolean value that indicates whether the receiver is earlier than another given date.
+ \param     other The other date to compare to the receiver.
+ \return    YES if the receiver is earlier than other, otherwise NO.
+ */
+- (BOOL)ibaIsEarlierThan:(NSDate *)other
+{
+    return [self compare:other] == NSOrderedAscending;
+}
+
+/*!
+ \brief     Returns a Boolean value that indicates whether the receiver is earlier than or equal to another given date.
+ \param     other The other date to compare to the receiver.
+ \return    YES if the receiver is earlier than or equal to other, otherwise NO.
+ */
+- (BOOL)ibaIsEarlierThanOrEqualTo:(NSDate *)other
+{
+    NSComparisonResult result = [self compare:other];
+    return result == NSOrderedAscending || result == NSOrderedSame;
+}
+
+/*!
+ \brief     Returns a Boolean value that indicates whether the receiver is later than another given date.
+ \param     other The other date to compare to the receiver.
+ \return    YES if the receiver is later than other, otherwise NO.
+ */
+- (BOOL)ibaIsLaterThan:(NSDate *)other
+{
+    return [self compare:other] == NSOrderedDescending;
+}
+
+/*!
+ \brief     Returns a Boolean value that indicates whether the receiver is later than or equal to another given date.
+ \param     other The other date to compare to the receiver.
+ \return    YES if the receiver is later than or equal to other, otherwise NO.
+ */
+- (BOOL)ibaIsLaterThanOrEqualTo:(NSDate *)other
+{
+    NSComparisonResult result = [self compare:other];
+    return result == NSOrderedDescending || result == NSOrderedSame;
 }
 
 @end

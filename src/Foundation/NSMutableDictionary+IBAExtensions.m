@@ -18,7 +18,7 @@
 //  limitations under the License.
 
 #import "NSMutableDictionary+IBAExtensions.h"
-#import "IBACommon.h"
+#import "NSNumber+IBAExtensions.h"
 
 @implementation NSMutableDictionary (IBAExtensions)
 

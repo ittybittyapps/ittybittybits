@@ -72,11 +72,17 @@
     self.frame = frame;
 }
 
+/*!
+ \brief     Returns the frame height of the view.
+ */
 - (CGFloat)ibaWidth
 {
     return self.frame.size.width;
 }
 
+/*!
+ \brief     Sets the frame width of the view.
+ */
 - (void)setIbaWidth:(CGFloat)width
 {
     CGRect frame = self.frame;
@@ -84,16 +90,68 @@
     self.frame = frame;
 }
 
+/*!
+ \brief     Returns the frame height of the view.
+ */
 - (CGFloat)ibaHeight
 {
     return self.frame.size.height;
 }
 
+/*!
+ \brief     Sets the frame height of the view.
+ */
 - (void)setIbaHeight:(CGFloat)height 
 {
     CGRect frame = self.frame;
     frame.size.height = height;
     self.frame = frame;
+}
+
+/*!
+ \brief     Sets the view to be hidden or shown with an alpha fade in/out transition of the specified \a duration.
+ \param     hidden      YES to hide the view; NO to show the view.
+ \param     duration    The duration in seconds of the alpha fade in/out transition.
+ */
+- (void)ibaSetHidden:(BOOL)hidden withAlphaTransistionDuration:(CGFloat)duration
+{
+    [self ibaSetHidden:hidden withAlphaTransistionDuration:duration completion:nil];    
+}
+
+/*!
+ \brief     Sets the view to be hidden or shown with an alpha fade in/out transition of the specified \a duration.
+ \param     hidden      YES to hide the view; NO to show the view.
+ \param     duration    The duration in seconds of the alpha fade in/out transition.
+ \param     completion  A block to invoke when the animation is complete.
+ */
+- (void)ibaSetHidden:(BOOL)hidden withAlphaTransistionDuration:(CGFloat)duration completion:(void (^)(BOOL finished))completion
+{
+    void (^setHidden)() = ^{
+        self.hidden = hidden;
+    };
+    
+    CGFloat newAlpha = hidden ? 0 : 1;
+    if (hidden == NO)
+    {
+        setHidden();
+    }
+    
+    [UIView animateWithDuration:duration
+                          delay:0.0
+                        options:UIViewAnimationOptionBeginFromCurrentState 
+                     animations:^{
+                         self.alpha = newAlpha;
+                     } completion:^(BOOL finished) {
+                         if (hidden)
+                         {
+                             setHidden();
+                         }
+                         
+                         if (completion)
+                         {
+                             completion(finished);
+                         }
+                     }];
 }
 
 @end
