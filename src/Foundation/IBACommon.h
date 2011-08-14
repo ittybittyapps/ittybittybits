@@ -215,3 +215,15 @@
  \sa        NSLocalizedString
  */
 #define IBALocalizedString(x) NSLocalizedString((x), @"")
+
+/*!
+ \def       IBA_WEAK
+ \brief     Helper macro for platform compatibility and weak block pointers
+*/
+#if defined(__IPHONE_5_0) && __has_feature(objc_arc) && (__IPHONE_OS_VERSION_MAX_ALLOWED >= __IPHONE_5_0)
+#   define IBA_WEAK __weak 
+#elif defined(__IPHONE_5_0) && defined(__IPHONE_4_3) && __has_feature(objc_arc) && (__IPHONE_OS_VERSION_MAX_ALLOWED < __IPHONE_5_0) && (__IPHONE_OS_VERSION_MAX_ALLOWED >= __IPHONE_4_3)
+#	define IBA_WEAK __unsafe_unretained
+#else
+#	define IBA_WEAK __block
+#endif
