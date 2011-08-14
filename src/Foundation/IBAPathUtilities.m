@@ -8,16 +8,19 @@
 
 #import "IBAPathUtilities.h"
 
-@implementation IBAPathUtilities
-
-- (id)init
+/*!
+ \brief     Returns the current application's Caches directory.
+ */
+NSString *IBAApplicationCachesDirectory(void)
 {
-    self = [super init];
-    if (self) {
-        // Initialization code here.
+    NSString *path = nil;
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES);
+    
+    if ([paths count])
+    {
+        NSString *bundleName = [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleIdentifier"];
+        path = [[paths objectAtIndex:0] stringByAppendingPathComponent:bundleName];
     }
     
-    return self;
+    return path;
 }
-
-@end

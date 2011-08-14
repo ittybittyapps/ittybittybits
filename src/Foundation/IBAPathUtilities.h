@@ -7,7 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "IBACommon.h"
 
-@interface IBAPathUtilities : NSObject
+IBA_EXTERN_C_BEGIN
 
-@end
+NSString *IBAApplicationCachesDirectory(void);
+
+IBA_EXTERN_C_END
