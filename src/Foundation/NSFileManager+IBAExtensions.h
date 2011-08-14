@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
-@interface NSFileManager (NSFileManager_IBAExtensions)
+@interface NSFileManager (IBAExtensions)
+
+- (BOOL)ibaDirectoryExistsAtPath:(NSString *)directory;
 
 @end

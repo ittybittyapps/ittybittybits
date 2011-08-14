@@ -67,6 +67,8 @@
 		A77874D813F4F6CA008FF846 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A713975613F4F62C00CE8FF2 /* SystemConfiguration.framework */; };
 		A77874DD13F7B215008FF846 /* IBAPathUtilities.h in Headers */ = {isa = PBXBuildFile; fileRef = A77874DB13F7B215008FF846 /* IBAPathUtilities.h */; };
 		A77874DE13F7B215008FF846 /* IBAPathUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = A77874DC13F7B215008FF846 /* IBAPathUtilities.m */; };
+		A77874E113F7B8D9008FF846 /* NSFileManager+IBAExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = A77874DF13F7B8D9008FF846 /* NSFileManager+IBAExtensions.h */; };
+		A77874E213F7B8D9008FF846 /* NSFileManager+IBAExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = A77874E013F7B8D9008FF846 /* NSFileManager+IBAExtensions.m */; };
 		A7808BD013D2B6A500F76DB1 /* UIColor+IBAExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = A7808BCE13D2B6A500F76DB1 /* UIColor+IBAExtensions.h */; };
 		A7808BD113D2B6A500F76DB1 /* UIColor+IBAExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = A7808BCF13D2B6A500F76DB1 /* UIColor+IBAExtensions.m */; };
 		A7808BD713D2D76A00F76DB1 /* UIColor+IBAExtensionsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A7808BD613D2D76A00F76DB1 /* UIColor+IBAExtensionsTests.m */; };
@@ -228,6 +230,8 @@
 		A774CADD13B2E0B3002B2FA1 /* IBAUIKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IBAUIKit.m; sourceTree = "<group>"; };
 		A77874DB13F7B215008FF846 /* IBAPathUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBAPathUtilities.h; sourceTree = "<group>"; };
 		A77874DC13F7B215008FF846 /* IBAPathUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IBAPathUtilities.m; sourceTree = "<group>"; };
+		A77874DF13F7B8D9008FF846 /* NSFileManager+IBAExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSFileManager+IBAExtensions.h"; sourceTree = "<group>"; };
+		A77874E013F7B8D9008FF846 /* NSFileManager+IBAExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSFileManager+IBAExtensions.m"; sourceTree = "<group>"; };
 		A7808BCE13D2B6A500F76DB1 /* UIColor+IBAExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+IBAExtensions.h"; sourceTree = "<group>"; };
 		A7808BCF13D2B6A500F76DB1 /* UIColor+IBAExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+IBAExtensions.m"; sourceTree = "<group>"; };
 		A7808BD313D2C83600F76DB1 /* IBACSSColors.x */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = IBACSSColors.x; sourceTree = "<group>"; };
@@ -622,6 +626,8 @@
 				A7B109F413837F4C00C8A672 /* NSDictionary+IBAExtensions.m */,
 				A7E200BE13D68D5A00731605 /* NSError+IBAExtensions.h */,
 				A7E200BF13D68D5A00731605 /* NSError+IBAExtensions.m */,
+				A77874DF13F7B8D9008FF846 /* NSFileManager+IBAExtensions.h */,
+				A77874E013F7B8D9008FF846 /* NSFileManager+IBAExtensions.m */,
 				A7286D88138A1AFB00C12FCB /* NSMutableArray+IBAExtensions.h */,
 				A7286D89138A1AFB00C12FCB /* NSMutableArray+IBAExtensions.m */,
 				A71E21CF13CAD26800FB2695 /* NSMutableDictionary+IBAExtensions.h */,
@@ -736,6 +742,7 @@
 				A78E41D613DD0C8E0042FF9E /* NSMutableSet+IBAExtensions.h in Headers */,
 				A713975313F4E5AF00CE8FF2 /* IBANetworkReachability.h in Headers */,
 				A77874DD13F7B215008FF846 /* IBAPathUtilities.h in Headers */,
+				A77874E113F7B8D9008FF846 /* NSFileManager+IBAExtensions.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -871,6 +878,7 @@
 				A78E41D713DD0C8E0042FF9E /* NSMutableSet+IBAExtensions.m in Sources */,
 				A713975413F4E5AF00CE8FF2 /* IBANetworkReachability.m in Sources */,
 				A77874DE13F7B215008FF846 /* IBAPathUtilities.m in Sources */,
+				A77874E213F7B8D9008FF846 /* NSFileManager+IBAExtensions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
