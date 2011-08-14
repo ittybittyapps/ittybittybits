@@ -26,5 +26,6 @@
 @interface NSArray (IBAExtensions)
 
 - (id)ibaFirstObject;
+- (BOOL)ibaIsEmpty;
 
 @end

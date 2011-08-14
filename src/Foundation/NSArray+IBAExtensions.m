@@ -36,4 +36,13 @@
     return nil;
 }
 
+/*!
+ \brief     Returns a value indicating whether the array is empty.
+ \return    A value indicating whether the array is empty.
+ */
+- (BOOL)ibaIsEmpty
+{
+    return [self count] == 0;
+}
+
 @end
