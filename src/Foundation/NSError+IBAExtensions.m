@@ -29,4 +29,24 @@
     return [[[NSError alloc] initWithDomain:domain code:errorCode userInfo:userInfo] autorelease];
 }
 
++ (NSError *)ibaErrorWithDomain:(NSString *)domain 
+                           code:(NSInteger)errorCode 
+           localizedDescription:(NSString *)description
+                          cause:(NSError *)cause
+{
+    NSMutableDictionary *userInfo = [NSMutableDictionary dictionaryWithObject:description forKey:NSLocalizedDescriptionKey];
+    
+    if (cause != nil)
+    {
+        [userInfo setObject:cause forKey:NSUnderlyingErrorKey];
+    }
+    
+    return [[[NSError alloc] initWithDomain:domain code:errorCode userInfo:[NSDictionary dictionaryWithDictionary:userInfo]] autorelease];
+}
+
++ (NSError *)ibaErrorWithPOSIXErrorCode:(int)code
+{
+    return [self ibaErrorWithDomain:NSPOSIXErrorDomain code:code localizedDescription:[NSString stringWithUTF8String:strerror(code)]];
+}
+
 @end

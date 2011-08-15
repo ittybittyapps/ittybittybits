@@ -25,4 +25,11 @@
                            code:(NSInteger)errorCode 
            localizedDescription:(NSString *)description;
 
++ (NSError *)ibaErrorWithDomain:(NSString *)domain 
+                           code:(NSInteger)errorCode 
+           localizedDescription:(NSString *)description
+                          cause:(NSError *)cause;
+
++ (NSError *)ibaErrorWithPOSIXErrorCode:(int)code;
+
 @end
