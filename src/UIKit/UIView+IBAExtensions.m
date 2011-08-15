@@ -126,6 +126,15 @@
  */
 - (void)ibaSetHidden:(BOOL)hidden withAlphaTransistionDuration:(CGFloat)duration completion:(void (^)(BOOL finished))completion
 {
+    if (self.hidden == hidden)
+    {
+        if (completion)
+        {
+            completion(YES);
+        }
+        return;
+    }
+    
     void (^setHidden)() = ^{
         self.hidden = hidden;
     };
@@ -153,5 +162,72 @@
                          }
                      }];
 }
+
+/*!
+ \brief     Sets the view to be hidden or shown with a slide transition to or from the specified \a direction.
+ \details   The ultimate position of the view does not change.  It is returned to its original location after being hidden.
+ */
+- (void)ibaSetHidden:(BOOL)hidden withSlideTransistionDirection:(IBACompassDirection)direction duration:(CGFloat)duration completion:(void (^)(BOOL finished))completion
+{
+    
+    if (self.hidden == hidden)
+    {
+        if (completion)
+        {
+            completion(YES);
+        }
+        return;
+    }
+    
+    CGFloat xTranslation = 0.0f;
+    CGFloat yTranslation = 0.0f;
+    CGRect screenBounds = self.window.screen.bounds;
+    switch (direction) 
+    {
+        case IBACompassDirectionEast:
+            xTranslation = screenBounds.size.width - self.ibaLeft;
+            break;
+        case IBACompassDirectionWest:
+            xTranslation = -self.ibaRight;
+            break;
+        case IBACompassDirectionNorth:
+            yTranslation = -self.ibaBottom;
+            break;
+        case IBACompassDirectionSouth:
+            yTranslation = screenBounds.size.height - self.ibaTop;
+            break;
+            
+        default:
+            NSAssert(NO, @"Unknown compass direction!");
+            return;
+    }
+
+    CGPoint offScreen = CGPointMake(self.center.x + xTranslation, self.center.y + yTranslation);
+    CGPoint onScreen = self.center;
+    CGPoint newCenter = hidden ? offScreen : onScreen;
+    
+    if (hidden == NO)
+    {
+        self.center = offScreen;
+        self.hidden = hidden;
+    }
+    
+    [UIView animateWithDuration:duration
+                     animations:^{
+                         self.center = newCenter;
+                     } completion:^(BOOL finished) {
+                         if (hidden)
+                         {
+                             self.hidden = hidden;
+                             self.center = onScreen;
+                         }
+                         
+                         if (completion)
+                         {
+                             completion(finished);
+                         }
+                     }];
+}
+
 
 @end

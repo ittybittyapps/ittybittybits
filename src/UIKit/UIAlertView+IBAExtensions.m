@@ -28,7 +28,7 @@
  \param     title       The alert title.
  \param     message     The alert message.
  */
-+ (void)showSimpleAlertWithTitle:(NSString *)title message:(NSString *)message
++ (void)ibaShowSimpleAlertWithTitle:(NSString *)title message:(NSString *)message
 {
     UIAlertView *alert = [[UIAlertView alloc] initWithTitle:title
                                                     message:message

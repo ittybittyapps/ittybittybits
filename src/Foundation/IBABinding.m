@@ -80,27 +80,25 @@ IBA_SYNTHESIZE(source,
         // Don't re-enter binding code while setting original.
         if (OSAtomicCompareAndSwap32(0, 1, &isSettingValue))
         {
+            NSNumber *changeKind = [change objectForKey:NSKeyValueChangeKindKey];
+            NSAssert([changeKind intValue] == NSKeyValueChangeSetting, @"Binding collections is not supported yet.");
+
             NSObject *newValue = [change objectForKey:NSKeyValueChangeNewKey];
             NSObject *oldValue = [change objectForKey:NSKeyValueChangeOldKey];
 
             newValue = [newValue isKindOfClass:[NSNull class]] ? nil : newValue;
             oldValue = [oldValue isKindOfClass:[NSNull class]] ? nil : oldValue;
             
-            IBALogDebug(@"%@ observed change in value from '%@' to '%@'.", self, oldValue, newValue);
+            IBALogDebug(@"Observed change in keyPath '%@' from '%@' to '%@' for binding %@.", 
+                        keyPath, oldValue, newValue, self);
             
-            if ([newValue isEqual:oldValue] == NO)
+            if (self.action)
             {
-                if (object == self.source)
-                {
-                    if (self.action)
-                    {
-                        self.action(self, oldValue, newValue);
-                    }
-                    else
-                    {
-                        [self.target setValue:newValue forKey:self.targetKeyPath];
-                    }
-                }
+                self.action(self, oldValue, newValue);
+            }
+            else
+            {
+                [self.target setValue:newValue forKey:self.targetKeyPath];
             }
             
             // remove re-entrancy guard.

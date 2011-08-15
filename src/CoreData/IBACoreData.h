@@ -23,6 +23,7 @@
 #import "IBACoreDataContextProvider.h"
 #import "IBAAbstractCoreDataService.h"
 #import "NSEntityDescription+IBAExtensions.h"
+#import "NSError+IBACoreDataErrors.h"
 #import "NSFetchRequest+IBAExtensions.h"
 #import "NSExpressionDescription+IBAExtensions.h"
 #import "NSManagedObjectContext+IBAExtensions.h"

@@ -249,3 +249,26 @@
  */
 #define IBA_ARRAYCOUNT(array) ((sizeof(array)/sizeof(0[array])) / ((size_t)(!(sizeof(array) % sizeof(0[array])))))
 
+#ifdef __cplusplus
+    /*!
+     \brief     Returns a value indicating whether the specified \a array contains the specified \a value.
+     \param     array   The array to test.
+     \param     value   The value to look for.
+     \retruns   YES if the \a value is contained in the \a array.
+     */
+    template<typename T, size_t N>
+    BOOL IBAArrayContains(T (&array)[N], const T value)
+    {
+        for (size_t i = 0; i < IBA_ARRAYCOUNT(array); ++i) 
+        {
+            if (array[i] == value) return YES;
+        }
+        
+        return NO;
+    }
+#endif
+
+/*!
+ \brief     A generic action block.
+ */
+typedef void (^IBAAction)(void);
