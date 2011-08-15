@@ -72,6 +72,12 @@
 		A7808BD013D2B6A500F76DB1 /* UIColor+IBAExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = A7808BCE13D2B6A500F76DB1 /* UIColor+IBAExtensions.h */; };
 		A7808BD113D2B6A500F76DB1 /* UIColor+IBAExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = A7808BCF13D2B6A500F76DB1 /* UIColor+IBAExtensions.m */; };
 		A7808BD713D2D76A00F76DB1 /* UIColor+IBAExtensionsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A7808BD613D2D76A00F76DB1 /* UIColor+IBAExtensionsTests.m */; };
+		A78E41C613DCFB2F0042FF9E /* IBABinding.h in Headers */ = {isa = PBXBuildFile; fileRef = A78E41C413DCFB2F0042FF9E /* IBABinding.h */; };
+		A78E41C713DCFB2F0042FF9E /* IBABinding.m in Sources */ = {isa = PBXBuildFile; fileRef = A78E41C513DCFB2F0042FF9E /* IBABinding.m */; };
+		A78E41C813DCFB2F0042FF9E /* IBABinding.m in Sources */ = {isa = PBXBuildFile; fileRef = A78E41C513DCFB2F0042FF9E /* IBABinding.m */; };
+		A78E41CC13DD04280042FF9E /* IBABindingManager.h in Headers */ = {isa = PBXBuildFile; fileRef = A78E41CA13DD04280042FF9E /* IBABindingManager.h */; };
+		A78E41CD13DD04280042FF9E /* IBABindingManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A78E41CB13DD04280042FF9E /* IBABindingManager.m */; };
+		A78E41CE13DD04280042FF9E /* IBABindingManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A78E41CB13DD04280042FF9E /* IBABindingManager.m */; };
 		A78E41D613DD0C8E0042FF9E /* NSMutableSet+IBAExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = A78E41D413DD0C8E0042FF9E /* NSMutableSet+IBAExtensions.h */; };
 		A78E41D713DD0C8E0042FF9E /* NSMutableSet+IBAExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = A78E41D513DD0C8E0042FF9E /* NSMutableSet+IBAExtensions.m */; };
 		A78E41D813DD0C8E0042FF9E /* NSMutableSet+IBAExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = A78E41D513DD0C8E0042FF9E /* NSMutableSet+IBAExtensions.m */; };
@@ -237,6 +243,10 @@
 		A7808BD313D2C83600F76DB1 /* IBACSSColors.x */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = IBACSSColors.x; sourceTree = "<group>"; };
 		A7808BD513D2D76A00F76DB1 /* UIColor+IBAExtensionsTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+IBAExtensionsTests.h"; sourceTree = "<group>"; };
 		A7808BD613D2D76A00F76DB1 /* UIColor+IBAExtensionsTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+IBAExtensionsTests.m"; sourceTree = "<group>"; };
+		A78E41C413DCFB2F0042FF9E /* IBABinding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBABinding.h; sourceTree = "<group>"; };
+		A78E41C513DCFB2F0042FF9E /* IBABinding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IBABinding.m; sourceTree = "<group>"; };
+		A78E41CA13DD04280042FF9E /* IBABindingManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBABindingManager.h; sourceTree = "<group>"; };
+		A78E41CB13DD04280042FF9E /* IBABindingManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IBABindingManager.m; sourceTree = "<group>"; };
 		A78E41D413DD0C8E0042FF9E /* NSMutableSet+IBAExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableSet+IBAExtensions.h"; sourceTree = "<group>"; };
 		A78E41D513DD0C8E0042FF9E /* NSMutableSet+IBAExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableSet+IBAExtensions.m"; sourceTree = "<group>"; };
 		A791415E136FD62200209C96 /* IBALogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IBALogger.h; path = Foundation/IBALogger.h; sourceTree = SOURCE_ROOT; };
@@ -592,6 +602,10 @@
 			isa = PBXGroup;
 			children = (
 				A7FB6B5B137148DC0088C4CD /* IBACommon.h */,
+				A78E41C413DCFB2F0042FF9E /* IBABinding.h */,
+				A78E41C513DCFB2F0042FF9E /* IBABinding.m */,
+				A78E41CA13DD04280042FF9E /* IBABindingManager.h */,
+				A78E41CB13DD04280042FF9E /* IBABindingManager.m */,
 				A7B4DB0D1367C5F900543D61 /* IBADebug.h */,
 				A791416D1371370A00209C96 /* IBADebug.m */,
 				A707FD72137761570029FA76 /* IBADelimitedTextFileReader.h */,
@@ -739,6 +753,8 @@
 				A7652BD213E581530023D4B3 /* IBATiledImageView.h in Headers */,
 				A72ADC0D13CC54FB0052E2D4 /* IBAErrors.h in Headers */,
 				A7E200C013D68D5A00731605 /* NSError+IBAExtensions.h in Headers */,
+				A78E41C613DCFB2F0042FF9E /* IBABinding.h in Headers */,
+				A78E41CC13DD04280042FF9E /* IBABindingManager.h in Headers */,
 				A78E41D613DD0C8E0042FF9E /* NSMutableSet+IBAExtensions.h in Headers */,
 				A713975313F4E5AF00CE8FF2 /* IBANetworkReachability.h in Headers */,
 				A77874DD13F7B215008FF846 /* IBAPathUtilities.h in Headers */,
@@ -875,6 +891,8 @@
 				A71E21D213CAD26900FB2695 /* NSMutableDictionary+IBAExtensions.m in Sources */,
 				A7652BD313E581530023D4B3 /* IBATiledImageView.m in Sources */,
 				A7E200C113D68D5A00731605 /* NSError+IBAExtensions.m in Sources */,
+				A78E41C713DCFB2F0042FF9E /* IBABinding.m in Sources */,
+				A78E41CD13DD04280042FF9E /* IBABindingManager.m in Sources */,
 				A78E41D713DD0C8E0042FF9E /* NSMutableSet+IBAExtensions.m in Sources */,
 				A713975413F4E5AF00CE8FF2 /* IBANetworkReachability.m in Sources */,
 				A77874DE13F7B215008FF846 /* IBAPathUtilities.m in Sources */,
@@ -893,6 +911,8 @@
 				A7656EB91377DF50002FB968 /* IBADelimitedTextFileReaderTests.m in Sources */,
 				75DA1E49138D413B0014C492 /* NSString+IBAURLEncoding.m in Sources */,
 				A7808BD713D2D76A00F76DB1 /* UIColor+IBAExtensionsTests.m in Sources */,
+				A78E41C813DCFB2F0042FF9E /* IBABinding.m in Sources */,
+				A78E41CE13DD04280042FF9E /* IBABindingManager.m in Sources */,
 				A78E41D813DD0C8E0042FF9E /* NSMutableSet+IBAExtensions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
