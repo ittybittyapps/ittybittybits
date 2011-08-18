@@ -10,6 +10,10 @@
 
 @interface UINib (IBAExtensions)
 
-- (UITableViewCell*)ibaInstantiateWithOwner:(id)ownerOrNil forTableViewCellWithReuseIdentifier:(NSString*)reuseIdentifier;
+- (NSArray *)ibaInstantiate;
+- (NSArray *)ibaInstantiateWithOwner:(id)ownerOrNil;
 - (NSArray *)ibaInstantiateWithOwner:(id)ownerOrNil proxyObjects:(NSDictionary *)dictionaryOrNil;
+
+- (UITableViewCell*)ibaInstantiateWithOwner:(id)ownerOrNil forTableViewCellWithReuseIdentifier:(NSString*)reuseIdentifier;
+
 @end

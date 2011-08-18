@@ -36,6 +36,26 @@
 
 /*!
  \brief     Unarchives and instantiates the in-memory contents of the receiver’s nib file, creating a distinct object tree and set of top level objects.
+ */
+- (NSArray *)ibaInstantiate
+{
+    return [self ibaInstantiateWithOwner:nil];
+}
+
+/*!
+ \brief     Unarchives and instantiates the in-memory contents of the receiver’s nib file, creating a distinct object tree and set of top level objects.
+ 
+ \param     ownerOrNil      
+ The object to use as the owner of the nib file.
+ 
+ */
+- (NSArray *)ibaInstantiateWithOwner:(id)ownerOrNil
+{
+    return [self ibaInstantiateWithOwner:ownerOrNil proxyObjects:nil];
+}
+
+/*!
+ \brief     Unarchives and instantiates the in-memory contents of the receiver’s nib file, creating a distinct object tree and set of top level objects.
  
  \param     ownerOrNil      
  The object to use as the owner of the nib file.
