@@ -27,7 +27,7 @@
  */
 - (NSInteger)ibaNumberOfDaysUntil:(NSDate *)date 
 {
-    NSCalendar *gregorianCalendar = [[[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar] autorelease];
+    NSCalendar *gregorianCalendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
     
     NSDateComponents *components = [gregorianCalendar components:NSDayCalendarUnit 
                                                         fromDate:self 
