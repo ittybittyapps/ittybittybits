@@ -63,6 +63,8 @@
 		A76C84DB13C1A13D00D2A866 /* IBATableViewAccessory.m in Sources */ = {isa = PBXBuildFile; fileRef = A76C84D913C1A13D00D2A866 /* IBATableViewAccessory.m */; };
 		A772038D13FD59890094476D /* UIImage+IBAExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = A772038B13FD59890094476D /* UIImage+IBAExtensions.h */; };
 		A772038E13FD59890094476D /* UIImage+IBAExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = A772038C13FD59890094476D /* UIImage+IBAExtensions.m */; };
+		A772039913FE3A1F0094476D /* UIApplication+IBAExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = A772039713FE3A1F0094476D /* UIApplication+IBAExtensions.h */; };
+		A772039A13FE3A1F0094476D /* UIApplication+IBAExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = A772039813FE3A1F0094476D /* UIApplication+IBAExtensions.m */; };
 		A774CADA13B2DD89002B2FA1 /* UIScrollView+IBAExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = A774CAD813B2DD89002B2FA1 /* UIScrollView+IBAExtensions.h */; };
 		A774CADB13B2DD89002B2FA1 /* UIScrollView+IBAExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = A774CAD913B2DD89002B2FA1 /* UIScrollView+IBAExtensions.m */; };
 		A774CADE13B2E0B3002B2FA1 /* IBAUIKit.m in Sources */ = {isa = PBXBuildFile; fileRef = A774CADD13B2E0B3002B2FA1 /* IBAUIKit.m */; };
@@ -240,6 +242,8 @@
 		A76C84D913C1A13D00D2A866 /* IBATableViewAccessory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IBATableViewAccessory.m; sourceTree = "<group>"; };
 		A772038B13FD59890094476D /* UIImage+IBAExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+IBAExtensions.h"; sourceTree = "<group>"; };
 		A772038C13FD59890094476D /* UIImage+IBAExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+IBAExtensions.m"; sourceTree = "<group>"; };
+		A772039713FE3A1F0094476D /* UIApplication+IBAExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIApplication+IBAExtensions.h"; sourceTree = "<group>"; };
+		A772039813FE3A1F0094476D /* UIApplication+IBAExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIApplication+IBAExtensions.m"; sourceTree = "<group>"; };
 		A774CAD813B2DD89002B2FA1 /* UIScrollView+IBAExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+IBAExtensions.h"; sourceTree = "<group>"; };
 		A774CAD913B2DD89002B2FA1 /* UIScrollView+IBAExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+IBAExtensions.m"; sourceTree = "<group>"; };
 		A774CADD13B2E0B3002B2FA1 /* IBAUIKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IBAUIKit.m; sourceTree = "<group>"; };
@@ -461,6 +465,8 @@
 				A7652BD113E581530023D4B3 /* IBATiledImageView.m */,
 				A722FA5D137B94D90066CC1A /* UIAlertView+IBAExtensions.h */,
 				A722FA5E137B94D90066CC1A /* UIAlertView+IBAExtensions.m */,
+				A772039713FE3A1F0094476D /* UIApplication+IBAExtensions.h */,
+				A772039813FE3A1F0094476D /* UIApplication+IBAExtensions.m */,
 				A722FA44137B77550066CC1A /* UIBarButtonItem+IBAFactories.h */,
 				A722FA45137B77550066CC1A /* UIBarButtonItem+IBAFactories.m */,
 				A7808BCE13D2B6A500F76DB1 /* UIColor+IBAExtensions.h */,
@@ -781,6 +787,7 @@
 				A7A0E10C13E0EF24006CEC5A /* NSError+IBACoreDataErrors.h in Headers */,
 				A7A0E11113E12DB0006CEC5A /* IBAStateMachine.h in Headers */,
 				A772038D13FD59890094476D /* UIImage+IBAExtensions.h in Headers */,
+				A772039913FE3A1F0094476D /* UIApplication+IBAExtensions.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -922,6 +929,7 @@
 				A7A0E10D13E0EF24006CEC5A /* NSError+IBACoreDataErrors.mm in Sources */,
 				A7A0E11213E12DB0006CEC5A /* IBAStateMachine.m in Sources */,
 				A772038E13FD59890094476D /* UIImage+IBAExtensions.m in Sources */,
+				A772039A13FE3A1F0094476D /* UIApplication+IBAExtensions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
