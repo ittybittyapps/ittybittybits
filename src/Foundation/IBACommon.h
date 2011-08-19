@@ -272,3 +272,13 @@
  \brief     A generic action block.
  */
 typedef void (^IBAAction)(void);
+
+
+/*!
+ \def       IBA_SIZE_IS_WITHIN
+ \brief     Tests whether the height and width of size1 are both smaller than the height and width of size2.
+ \param     size1       The flags variable to test.
+ \param     size2       The flag to test for.
+ */
+#define IBA_SIZE_IS_WITHIN(size1, size2) ((size1.width <= size2.width) && (size1.height <= size2.height))
+
