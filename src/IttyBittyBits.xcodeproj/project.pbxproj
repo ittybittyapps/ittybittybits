@@ -54,6 +54,10 @@
 		A7286D8A138A1AFB00C12FCB /* NSMutableArray+IBAExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = A7286D88138A1AFB00C12FCB /* NSMutableArray+IBAExtensions.h */; };
 		A7286D8B138A1AFB00C12FCB /* NSMutableArray+IBAExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = A7286D89138A1AFB00C12FCB /* NSMutableArray+IBAExtensions.m */; };
 		A72ADC0D13CC54FB0052E2D4 /* IBAErrors.h in Headers */ = {isa = PBXBuildFile; fileRef = A72ADC0C13CC54FB0052E2D4 /* IBAErrors.h */; };
+		A7422E6814012A3600D9C54F /* IBANavigationBar.h in Headers */ = {isa = PBXBuildFile; fileRef = A7422E6614012A3600D9C54F /* IBANavigationBar.h */; };
+		A7422E6914012A3600D9C54F /* IBANavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = A7422E6714012A3600D9C54F /* IBANavigationBar.m */; };
+		A7422E711401331F00D9C54F /* UINavigationController+IBAExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = A7422E6F1401331F00D9C54F /* UINavigationController+IBAExtensions.h */; };
+		A7422E721401331F00D9C54F /* UINavigationController+IBAExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = A7422E701401331F00D9C54F /* UINavigationController+IBAExtensions.m */; };
 		A75FC05B13BD919D00C7AE82 /* NSDate+IBAExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = A75FC05913BD919D00C7AE82 /* NSDate+IBAExtensions.h */; };
 		A75FC05C13BD919D00C7AE82 /* NSDate+IBAExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = A75FC05A13BD919D00C7AE82 /* NSDate+IBAExtensions.m */; };
 		A7652BD213E581530023D4B3 /* IBATiledImageView.h in Headers */ = {isa = PBXBuildFile; fileRef = A7652BD013E581530023D4B3 /* IBATiledImageView.h */; };
@@ -232,6 +236,10 @@
 		A7286D88138A1AFB00C12FCB /* NSMutableArray+IBAExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSMutableArray+IBAExtensions.h"; path = "Foundation/NSMutableArray+IBAExtensions.h"; sourceTree = SOURCE_ROOT; };
 		A7286D89138A1AFB00C12FCB /* NSMutableArray+IBAExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSMutableArray+IBAExtensions.m"; path = "Foundation/NSMutableArray+IBAExtensions.m"; sourceTree = SOURCE_ROOT; };
 		A72ADC0C13CC54FB0052E2D4 /* IBAErrors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBAErrors.h; sourceTree = "<group>"; };
+		A7422E6614012A3600D9C54F /* IBANavigationBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBANavigationBar.h; sourceTree = "<group>"; };
+		A7422E6714012A3600D9C54F /* IBANavigationBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IBANavigationBar.m; sourceTree = "<group>"; };
+		A7422E6F1401331F00D9C54F /* UINavigationController+IBAExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+IBAExtensions.h"; sourceTree = "<group>"; };
+		A7422E701401331F00D9C54F /* UINavigationController+IBAExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+IBAExtensions.m"; sourceTree = "<group>"; };
 		A75FC05913BD919D00C7AE82 /* NSDate+IBAExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+IBAExtensions.h"; sourceTree = "<group>"; };
 		A75FC05A13BD919D00C7AE82 /* NSDate+IBAExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+IBAExtensions.m"; sourceTree = "<group>"; };
 		A7652BD013E581530023D4B3 /* IBATiledImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBATiledImageView.h; sourceTree = "<group>"; };
@@ -459,6 +467,8 @@
 				A706A6EC13821B8300429203 /* IBAActionSheet.m */,
 				A7C2FB9613B3073F00F774CA /* IBAGradientButton.h */,
 				A7C2FB9713B3073F00F774CA /* IBAGradientButton.m */,
+				A7422E6614012A3600D9C54F /* IBANavigationBar.h */,
+				A7422E6714012A3600D9C54F /* IBANavigationBar.m */,
 				A76C84D813C1A13D00D2A866 /* IBATableViewAccessory.h */,
 				A76C84D913C1A13D00D2A866 /* IBATableViewAccessory.m */,
 				A7652BD013E581530023D4B3 /* IBATiledImageView.h */,
@@ -473,6 +483,8 @@
 				A7808BCF13D2B6A500F76DB1 /* UIColor+IBAExtensions.m */,
 				A772038B13FD59890094476D /* UIImage+IBAExtensions.h */,
 				A772038C13FD59890094476D /* UIImage+IBAExtensions.m */,
+				A7422E6F1401331F00D9C54F /* UINavigationController+IBAExtensions.h */,
+				A7422E701401331F00D9C54F /* UINavigationController+IBAExtensions.m */,
 				A7D5945B13BC684100141F15 /* UINib+IBAExtensions.h */,
 				A7D5945C13BC684100141F15 /* UINib+IBAExtensions.m */,
 				A774CAD813B2DD89002B2FA1 /* UIScrollView+IBAExtensions.h */,
@@ -788,6 +800,8 @@
 				A7A0E11113E12DB0006CEC5A /* IBAStateMachine.h in Headers */,
 				A772038D13FD59890094476D /* UIImage+IBAExtensions.h in Headers */,
 				A772039913FE3A1F0094476D /* UIApplication+IBAExtensions.h in Headers */,
+				A7422E6814012A3600D9C54F /* IBANavigationBar.h in Headers */,
+				A7422E711401331F00D9C54F /* UINavigationController+IBAExtensions.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -930,6 +944,8 @@
 				A7A0E11213E12DB0006CEC5A /* IBAStateMachine.m in Sources */,
 				A772038E13FD59890094476D /* UIImage+IBAExtensions.m in Sources */,
 				A772039A13FE3A1F0094476D /* UIApplication+IBAExtensions.m in Sources */,
+				A7422E6914012A3600D9C54F /* IBANavigationBar.m in Sources */,
+				A7422E721401331F00D9C54F /* UINavigationController+IBAExtensions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

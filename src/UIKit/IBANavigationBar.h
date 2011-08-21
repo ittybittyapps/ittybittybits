@@ -1,8 +1,8 @@
 //
-//  UINib+IBAExtensions.h
+//  IBANavigationBar.h
 //  IttyBittyBits
 //
-//  Created by Oliver Jones on 30/06/11.
+//  Created by Oliver Jones on 21/08/11.
 //  Copyright 2011 Itty Bitty Apps Pty. Ltd. All rights reserved.
 //
 //  Licensed under the Apache License, Version 2.0 (the "License");
@@ -19,13 +19,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface UINib (IBAExtensions)
+@interface IBANavigationBar : UINavigationBar
 
-- (NSArray *)ibaInstantiate;
-- (NSArray *)ibaInstantiateWithOwner:(id)ownerOrNil;
-- (NSArray *)ibaInstantiateWithOwner:(id)ownerOrNil proxyObjects:(NSDictionary *)dictionaryOrNil;
+@property (nonatomic, retain) UIImage *portraitBackgroundImage;
+@property (nonatomic, retain) UIImage *landscapeBackgroundImage;
 
-- (UITableViewCell *)ibaInstantiateWithOwner:(id)ownerOrNil forTableViewCellWithReuseIdentifier:(NSString*)reuseIdentifier;
-
-- (UINavigationController *)ibaInstantiateNavigationControllerWithRootViewController:(UIViewController *)rootViewController;
 @end
