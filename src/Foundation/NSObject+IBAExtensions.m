@@ -29,7 +29,7 @@
  
  \return    A new instance of this class.
   */
-+ (id)instanceFromDictionary:(NSDictionary *)dictionary;
++ (id)ibaInstanceFromDictionary:(NSDictionary *)dictionary;
 {
     id result = [[[self class] alloc] init];
     [result setValuesForKeysWithDictionary:dictionary];

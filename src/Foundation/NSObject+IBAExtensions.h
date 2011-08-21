@@ -23,7 +23,7 @@
 
 @interface NSObject (IBAExtensions)
 
-+ (id)instanceFromDictionary:(NSDictionary *)dictionary;
++ (id)ibaInstanceFromDictionary:(NSDictionary *)dictionary;
 
 - (void)ibaAddObserver:(NSObject *)anObserver forKeyPaths:(NSArray *)keyPaths options:(NSKeyValueObservingOptions)options context:(void *)context;
 
