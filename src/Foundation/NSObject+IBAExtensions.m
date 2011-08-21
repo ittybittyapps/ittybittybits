@@ -22,6 +22,22 @@
 @implementation NSObject (IBAExtensions)
 
 /*!
+ \brief     Creates an instance of this class with its properties populated KVC-style with the keys and values of the passed dictionary 
+ 
+ \param     dictionary
+ A dictionary whose keys and values are mapped to the properties of the instance returned by this method.
+ 
+ \return    A new instance of this class.
+  */
++ (id)instanceFromDictionary:(NSDictionary *)dictionary;
+{
+    id result = [[[self class] alloc] init];
+    [result setValuesForKeysWithDictionary:dictionary];
+    
+    return [result autorelease];
+}
+
+/*!
  \brief     Registers \ anObserver to receive KVO notifications for the specified \a keyPaths relative to the receiver.
  \details   Neither the receiver, nor anObserver, are retained.
  
@@ -64,5 +80,6 @@
         [self removeObserver:anObserver forKeyPath:keyPath];
     }
 }
+
 
 @end
