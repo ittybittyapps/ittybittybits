@@ -11,6 +11,8 @@
 		751C605813B1CB1C00447BB4 /* IBACoreDataContextProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 751C605613B1CB1C00447BB4 /* IBACoreDataContextProvider.m */; };
 		751C605B13B20E0800447BB4 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 751C605A13B20E0800447BB4 /* CoreData.framework */; };
 		751C606113B216E200447BB4 /* IBACoreData.h in Headers */ = {isa = PBXBuildFile; fileRef = 751C606013B216E200447BB4 /* IBACoreData.h */; };
+		75C832441401475C00F476B9 /* UIGestureRecognizer+IBAExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = 75C832421401475900F476B9 /* UIGestureRecognizer+IBAExtensions.h */; };
+		75C832451401475C00F476B9 /* UIGestureRecognizer+IBAExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 75C832431401475B00F476B9 /* UIGestureRecognizer+IBAExtensions.m */; };
 		75DA1E47138D413B0014C492 /* NSString+IBAURLEncoding.h in Headers */ = {isa = PBXBuildFile; fileRef = 75DA1E45138D413B0014C492 /* NSString+IBAURLEncoding.h */; };
 		75DA1E48138D413B0014C492 /* NSString+IBAURLEncoding.m in Sources */ = {isa = PBXBuildFile; fileRef = 75DA1E46138D413B0014C492 /* NSString+IBAURLEncoding.m */; };
 		75DA1E49138D413B0014C492 /* NSString+IBAURLEncoding.m in Sources */ = {isa = PBXBuildFile; fileRef = 75DA1E46138D413B0014C492 /* NSString+IBAURLEncoding.m */; };
@@ -189,6 +191,8 @@
 		751C605613B1CB1C00447BB4 /* IBACoreDataContextProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IBACoreDataContextProvider.m; sourceTree = "<group>"; };
 		751C605A13B20E0800447BB4 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		751C606013B216E200447BB4 /* IBACoreData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBACoreData.h; sourceTree = "<group>"; };
+		75C832421401475900F476B9 /* UIGestureRecognizer+IBAExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIGestureRecognizer+IBAExtensions.h"; sourceTree = "<group>"; };
+		75C832431401475B00F476B9 /* UIGestureRecognizer+IBAExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIGestureRecognizer+IBAExtensions.m"; sourceTree = "<group>"; };
 		75DA1E45138D413B0014C492 /* NSString+IBAURLEncoding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString+IBAURLEncoding.h"; path = "Foundation/NSString+IBAURLEncoding.h"; sourceTree = SOURCE_ROOT; };
 		75DA1E46138D413B0014C492 /* NSString+IBAURLEncoding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+IBAURLEncoding.m"; path = "Foundation/NSString+IBAURLEncoding.m"; sourceTree = SOURCE_ROOT; };
 		A701064213947B8000D9AB8B /* MKPlacemark+IBAFormattedAddress.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "MKPlacemark+IBAFormattedAddress.h"; path = "MapKit/MKPlacemark+IBAFormattedAddress.h"; sourceTree = SOURCE_ROOT; };
@@ -471,6 +475,8 @@
 				A722FA45137B77550066CC1A /* UIBarButtonItem+IBAFactories.m */,
 				A7808BCE13D2B6A500F76DB1 /* UIColor+IBAExtensions.h */,
 				A7808BCF13D2B6A500F76DB1 /* UIColor+IBAExtensions.m */,
+				75C832421401475900F476B9 /* UIGestureRecognizer+IBAExtensions.h */,
+				75C832431401475B00F476B9 /* UIGestureRecognizer+IBAExtensions.m */,
 				A772038B13FD59890094476D /* UIImage+IBAExtensions.h */,
 				A772038C13FD59890094476D /* UIImage+IBAExtensions.m */,
 				A7D5945B13BC684100141F15 /* UINib+IBAExtensions.h */,
@@ -788,6 +794,7 @@
 				A7A0E11113E12DB0006CEC5A /* IBAStateMachine.h in Headers */,
 				A772038D13FD59890094476D /* UIImage+IBAExtensions.h in Headers */,
 				A772039913FE3A1F0094476D /* UIApplication+IBAExtensions.h in Headers */,
+				75C832441401475C00F476B9 /* UIGestureRecognizer+IBAExtensions.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -930,6 +937,7 @@
 				A7A0E11213E12DB0006CEC5A /* IBAStateMachine.m in Sources */,
 				A772038E13FD59890094476D /* UIImage+IBAExtensions.m in Sources */,
 				A772039A13FE3A1F0094476D /* UIApplication+IBAExtensions.m in Sources */,
+				75C832451401475C00F476B9 /* UIGestureRecognizer+IBAExtensions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

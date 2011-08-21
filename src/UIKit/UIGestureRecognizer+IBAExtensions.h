@@ -1,9 +1,11 @@
 //
-//  UIView+IBAExtensions.h
+//
+//  UIGestureRecognizer+IBAExtensions.h
 //  IttyBittyBits
 //
-//  Created by Oliver Jones on 22/06/11.
+//  Created by Sean Woodhouse on 22/08/11.
 //  Copyright 2011 Itty Bitty Apps Pty. Ltd. All rights reserved.
+//
 //
 //  Licensed under the Apache License, Version 2.0 (the "License");
 //  you may not use this file except in compliance with the License.
@@ -45,38 +47,15 @@
 //  ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 //  (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
 //  SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-//
 
-#import <Foundation/Foundation.h>
-#import "../Foundation/IBACommon.h"
+#import <UIKit/UIGestureRecognizer.h>
 
-@interface UIView (IBAExtensions)
+typedef void (^IBAGestureActionBlock) (id);
 
-@property (nonatomic, assign) CGFloat ibaLeft;
-@property (nonatomic, assign) CGFloat ibaRight;
-@property (nonatomic, assign) CGFloat ibaTop;
-@property (nonatomic, assign) CGFloat ibaBottom;
-@property (nonatomic, assign) CGFloat ibaWidth;
-@property (nonatomic, assign) CGFloat ibaHeight;
+@interface UIGestureRecognizer (IBAExtensions)
 
-typedef enum 
-{
-    IBACompassDirectionNorth,
-    IBACompassDirectionSouth,
-    IBACompassDirectionEast,
-    IBACompassDirectionWest
-} IBACompassDirection;
++ (id)ibaInstanceWithActionBlock:(IBAGestureActionBlock)action;
+- (id)ibaInitWithActionBlock:(IBAGestureActionBlock)action;
 
-- (void)ibaSetHidden:(BOOL)hidden withAlphaTransistionDuration:(CGFloat)duration;
-- (void)ibaSetHidden:(BOOL)hidden withAlphaTransistionDuration:(CGFloat)duration completion:(void (^)(BOOL finished))completion;
-- (void)ibaSetHidden:(BOOL)hidden withSlideTransistionDirection:(IBACompassDirection)direction 
-            duration:(CGFloat)duration 
-          completion:(void (^)(BOOL finished))completion;
-
-- (void)ibaOnTaps:(NSUInteger)taps touches:(NSUInteger)touches action:(void (^) (id sender))action; 
-- (void)ibaOnTap:(void (^) (id sender))action;
-- (void)ibaOnDoubleTap:(void (^) (id sender))action;
-- (void)ibaOnTap:(void (^) (id sender))action touches:(NSUInteger)touches; 
-- (void)ibaOnDoubleTap:(void (^) (id sender))action touches:(NSUInteger)touches;
 
 @end

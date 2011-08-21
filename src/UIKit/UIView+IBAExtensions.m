@@ -16,8 +16,40 @@
 //  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 //  See the License for the specific language governing permissions and
 //  limitations under the License.
+//
+//  Portions:
+//  Copyright (c) 2011, Kevin O'Neill
+//  All rights reserved.
+//
+//  Redistribution and use in source and binary forms, with or without
+//  modification, are permitted provided that the following conditions are met:
+//
+//  * Redistributions of source code must retain the above copyright
+//   notice, this list of conditions and the following disclaimer.
+//
+//  * Redistributions in binary form must reproduce the above copyright
+//   notice, this list of conditions and the following disclaimer in the
+//   documentation and/or other materials provided with the distribution.
+//
+//  * Neither the name UsefulBits nor the names of its contributors may be used
+//   to endorse or promote products derived from this software without specific
+//   prior written permission.
+//
+//  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND
+//  ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
+//  WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+//  DISCLAIMED. IN NO EVENT SHALL <COPYRIGHT HOLDER> BE LIABLE FOR ANY
+//  DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
+//  (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
+//  LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND
+//  ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+//  (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
+//  SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+//
 
 #import "UIView+IBAExtensions.h"
+#import "UIGestureRecognizer+IBAExtensions.h"
+#import "NSArray+IBAExtensions.h"
 
 @implementation UIView (IBAExtensions)
 
@@ -227,6 +259,48 @@
                              completion(finished);
                          }
                      }];
+}
+
+
+- (void)ibaOnTap:(void (^) (id sender))action;
+{
+    [self ibaOnTaps:1 touches:1 action:action];
+}
+
+- (void)ibaOnDoubleTap:(void (^) (id sender))action;
+{
+    [self ibaOnTaps:2 touches:1 action:action];
+}
+
+- (void)ibaOnTaps:(NSUInteger)taps touches:(NSUInteger)touches action:(void (^) (id sender))action; 
+{
+    UITapGestureRecognizer *gesture = [[UITapGestureRecognizer alloc] ibaInitWithActionBlock:^(UIGestureRecognizer* recognizer) {
+        action([recognizer view]);
+    }];
+    
+    [gesture setNumberOfTapsRequired:taps];
+    [gesture setNumberOfTouchesRequired:touches];
+    
+    [[[self gestureRecognizers] ibaFilter:^BOOL(id gestureRecognizer) {
+        return [gestureRecognizer isKindOfClass:[UITapGestureRecognizer class]]
+        && ((NSUInteger)[gestureRecognizer numberOfTouchesRequired] == touches)
+        && ((NSUInteger)[gestureRecognizer numberOfTapsRequired] < taps);
+    }] ibaEach:^(id tap_gesture_recognizer) {
+        [gesture requireGestureRecognizerToFail:tap_gesture_recognizer];
+    }];
+    
+    [self addGestureRecognizer:gesture];
+    [gesture release];
+}
+
+- (void)ibaOnTap:(void (^) (id sender))action touches:(NSUInteger)touches; 
+{
+    [self ibaOnTaps:1 touches:touches action:action];
+}
+
+- (void)ibaOnDoubleTap:(void (^) (id sender))action touches:(NSUInteger)touches;
+{
+    [self ibaOnTaps:2 touches:touches action:action];
 }
 
 
