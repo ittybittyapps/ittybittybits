@@ -1,9 +1,10 @@
 //
-//  UIView+IBAExtensions.h
+//  UIGestureRecognizer+IBAExtensions.h
 //  IttyBittyBits
 //
-//  Created by Oliver Jones on 22/06/11.
+//  Created by Sean Woodhouse on 22/08/11.
 //  Copyright 2011 Itty Bitty Apps Pty. Ltd. All rights reserved.
+//
 //
 //  Licensed under the Apache License, Version 2.0 (the "License");
 //  you may not use this file except in compliance with the License.
@@ -45,38 +46,57 @@
 //  ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 //  (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
 //  SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-//
 
-#import <Foundation/Foundation.h>
-#import "../Foundation/IBACommon.h"
+#import "UIGestureRecognizer+IBAExtensions.h"
 
-@interface UIView (IBAExtensions)
+#import <objc/runtime.h>
 
-@property (nonatomic, assign) CGFloat ibaLeft;
-@property (nonatomic, assign) CGFloat ibaRight;
-@property (nonatomic, assign) CGFloat ibaTop;
-@property (nonatomic, assign) CGFloat ibaBottom;
-@property (nonatomic, assign) CGFloat ibaWidth;
-@property (nonatomic, assign) CGFloat ibaHeight;
+@interface UIGestureRecognizer (IBAExtensions_Internal)
 
-typedef enum 
+@property (nonatomic, copy) IBAGestureActionBlock actionBlock;
+
+- (void)handleAction:(UIGestureRecognizer *)recognizer;
+
+@end
+
+@implementation UIGestureRecognizer (IBAExtensions)
+
+static char block_key; 
+
++ (id)ibaInstanceWithActionBlock:(IBAGestureActionBlock)action;
 {
-    IBACompassDirectionNorth,
-    IBACompassDirectionSouth,
-    IBACompassDirectionEast,
-    IBACompassDirectionWest
-} IBACompassDirection;
+  id instance = [[[self class] alloc] ibaInitWithActionBlock:action];
+  
+  return [instance autorelease];
+}
 
-- (void)ibaSetHidden:(BOOL)hidden withAlphaTransistionDuration:(CGFloat)duration;
-- (void)ibaSetHidden:(BOOL)hidden withAlphaTransistionDuration:(CGFloat)duration completion:(void (^)(BOOL finished))completion;
-- (void)ibaSetHidden:(BOOL)hidden withSlideTransistionDirection:(IBACompassDirection)direction 
-            duration:(CGFloat)duration 
-          completion:(void (^)(BOOL finished))completion;
+- (id)ibaInitWithActionBlock:(IBAGestureActionBlock)action;
+{
+  if (self == [self initWithTarget:self action:@selector(handleAction:)])
+  {
+    [self setActionBlock:action];
+  }
+  
+  return self;
+}
 
-- (void)ibaOnTaps:(NSUInteger)taps touches:(NSUInteger)touches action:(void (^) (id sender))action; 
-- (void)ibaOnTap:(void (^) (id sender))action;
-- (void)ibaOnDoubleTap:(void (^) (id sender))action;
-- (void)ibaOnTap:(void (^) (id sender))action touches:(NSUInteger)touches; 
-- (void)ibaOnDoubleTap:(void (^) (id sender))action touches:(NSUInteger)touches;
+- (void)handleAction:(UIGestureRecognizer *)recognizer;
+{
+  IBAGestureActionBlock block = [self actionBlock];
+  if(nil != block)
+  {
+    block(recognizer);
+  }
+}
+
+- (IBAGestureActionBlock)actionBlock;
+{
+  return objc_getAssociatedObject(self, &block_key);
+}
+
+- (void)setActionBlock:(IBAGestureActionBlock)block;
+{
+  objc_setAssociatedObject(self, &block_key, block, OBJC_ASSOCIATION_COPY);
+}
 
 @end
