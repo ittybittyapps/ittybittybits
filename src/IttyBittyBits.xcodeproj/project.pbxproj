@@ -989,6 +989,43 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		7585D4ED1400924B00A2A54C /* UAT */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A7C2168D13AB2BAC0070DA6A /* Project-IttyBittyBits-Debug.xcconfig */;
+			buildSettings = {
+			};
+			name = UAT;
+		};
+		7585D4EE1400924B00A2A54C /* UAT */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A7C2169013AB2DD90070DA6A /* Target-IttyBittyBits-Debug.xcconfig */;
+			buildSettings = {
+			};
+			name = UAT;
+		};
+		7585D4EF1400924B00A2A54C /* UAT */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../lib/gh-unit\"",
+				);
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "../tests/IttyBittyBitsTests-Prefix.pch";
+				INFOPLIST_FILE = "../tests/IttyBittyBitsTests-Info.plist";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-all_load",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = UAT;
+		};
 		A7B4DAC11367991200543D61 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = A7C2168D13AB2BAC0070DA6A /* Project-IttyBittyBits-Debug.xcconfig */;
@@ -1071,6 +1108,7 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A7B4DAC11367991200543D61 /* Debug */,
+				7585D4ED1400924B00A2A54C /* UAT */,
 				A7B4DAC21367991200543D61 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
@@ -1080,6 +1118,7 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A7B4DAC41367991200543D61 /* Debug */,
+				7585D4EE1400924B00A2A54C /* UAT */,
 				A7B4DAC51367991200543D61 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
@@ -1089,6 +1128,7 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A7B4DAE713679F5E00543D61 /* Debug */,
+				7585D4EF1400924B00A2A54C /* UAT */,
 				A7B4DAE813679F5E00543D61 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
