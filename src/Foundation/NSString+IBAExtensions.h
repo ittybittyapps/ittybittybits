@@ -4,6 +4,7 @@
 //
 //  Created by Oliver Jones on 10/05/11.
 //  Copyright 2011 Itty Bitty Apps Pty. Ltd. All rights reserved.
+//  Copyright 2006-2008 Google Inc.
 //
 //  Licensed under the Apache License, Version 2.0 (the "License");
 //  you may not use this file except in compliance with the License.
@@ -26,10 +27,16 @@
  */
 #define IBAIsNilOrEmptyString(string) ((string) == nil || [@"" isEqualToString:(string)])
 
-@interface NSString (IBAWhitespace)
+@interface NSString (IBAExtensions)
 
 - (NSString *)ibaStringByTrimmingWhitespaceAndNewline;
 - (NSString *)ibaStringByCompressingWhitespaceAndNewlineTo:(NSString *)seperator;
 - (BOOL)ibaNotBlank;
+
+- (NSString *)ibaURLEncoded;
+
+- (NSString *)ibaStringByEscapingForHTML;
+- (NSString *)ibaStringByEscapingForAsciiHTML;
+- (NSString *)ibaStringByUnescapingFromHTML;
 
 @end

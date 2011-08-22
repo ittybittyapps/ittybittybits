@@ -18,7 +18,7 @@
 //  limitations under the License.
 
 #import "MKPLacemark+IBAFormattedAddress.h"
-#import "../Foundation/NSString+IBAWhitespace.h"
+#import "../Foundation/NSString+IBAExtensions.h"
 
 @implementation MKPlacemark (IBAFormattedAddress)
 

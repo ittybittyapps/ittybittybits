@@ -44,7 +44,6 @@
 #import "NSMutableSet+IBAExtensions.h"
 #import "NSNumber+IBAExtensions.h"
 #import "NSObject+IBAExtensions.h"
-#import "NSString+IBAURLEncoding.h"
-#import "NSString+IBAWhitespace.h"
+#import "NSString+IBAExtensions.h"
 #import "NSTimer+IBABlocks.h"
 
