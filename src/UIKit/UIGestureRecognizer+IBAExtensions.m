@@ -53,50 +53,45 @@
 
 @interface UIGestureRecognizer (IBAExtensions_Internal)
 
-@property (nonatomic, copy) IBAGestureActionBlock actionBlock;
-
-- (void)handleAction:(UIGestureRecognizer *)recognizer;
+- (void)_ibaHandleAction:(UIGestureRecognizer *)recognizer;
+- (void)_ibaSetActionBlock:(IBAGestureActionBlock)block;
+- (IBAGestureActionBlock)_ibaActionBlock;
 
 @end
 
 @implementation UIGestureRecognizer (IBAExtensions)
 
-static char block_key; 
-
-+ (id)ibaInstanceWithActionBlock:(IBAGestureActionBlock)action;
++ (id)ibaGestureRecognizerWithActionBlock:(IBAGestureActionBlock)action
 {
-  id instance = [[[self class] alloc] ibaInitWithActionBlock:action];
+    id instance = [[[[self class] alloc] initWithTarget:self action:@selector(_ibaHandleAction)] autorelease];
+    [instance _ibaSetActionBlock:action];
   
-  return [instance autorelease];
+    return instance;
 }
 
-- (id)ibaInitWithActionBlock:(IBAGestureActionBlock)action;
+@end
+
+static char block_key;
+
+@implementation UIGestureRecognizer (IBAExtensions_Internal)
+
+- (void)_ibaHandleAction:(UIGestureRecognizer *)recognizer
 {
-  if (self == [self initWithTarget:self action:@selector(handleAction:)])
-  {
-    [self setActionBlock:action];
-  }
-  
-  return self;
+    IBAGestureActionBlock block = [self _ibaActionBlock];
+    if(nil != block)
+    {
+        block(recognizer);
+    }
 }
 
-- (void)handleAction:(UIGestureRecognizer *)recognizer;
+- (IBAGestureActionBlock)_ibaActionBlock
 {
-  IBAGestureActionBlock block = [self actionBlock];
-  if(nil != block)
-  {
-    block(recognizer);
-  }
+    return objc_getAssociatedObject(self, &block_key);
 }
 
-- (IBAGestureActionBlock)actionBlock;
+- (void)_ibaSetActionBlock:(IBAGestureActionBlock)block;
 {
-  return objc_getAssociatedObject(self, &block_key);
-}
-
-- (void)setActionBlock:(IBAGestureActionBlock)block;
-{
-  objc_setAssociatedObject(self, &block_key, block, OBJC_ASSOCIATION_COPY);
+    objc_setAssociatedObject(self, &block_key, block, OBJC_ASSOCIATION_COPY);
 }
 
 @end

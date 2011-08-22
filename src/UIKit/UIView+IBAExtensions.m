@@ -274,7 +274,7 @@
 
 - (void)ibaOnTaps:(NSUInteger)taps touches:(NSUInteger)touches action:(void (^) (id sender))action; 
 {
-    UITapGestureRecognizer *gesture = [[UITapGestureRecognizer alloc] ibaInitWithActionBlock:^(UIGestureRecognizer* recognizer) {
+    UITapGestureRecognizer *gesture = [UITapGestureRecognizer ibaGestureRecognizerWithActionBlock:^(UIGestureRecognizer* recognizer) {
         action([recognizer view]);
     }];
     

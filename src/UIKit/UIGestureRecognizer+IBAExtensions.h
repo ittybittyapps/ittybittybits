@@ -54,8 +54,6 @@ typedef void (^IBAGestureActionBlock) (id);
 
 @interface UIGestureRecognizer (IBAExtensions)
 
-+ (id)ibaInstanceWithActionBlock:(IBAGestureActionBlock)action;
-- (id)ibaInitWithActionBlock:(IBAGestureActionBlock)action;
-
++ (id)ibaGestureRecognizerWithActionBlock:(IBAGestureActionBlock)action;
 
 @end
