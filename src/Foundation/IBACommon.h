@@ -28,7 +28,6 @@
 #   define __has_extension(x) 0
 #endif
 
-
 /*!
  \brief     Release and nil the passed variable.
  \param     x   The instance to release.
@@ -191,6 +190,20 @@
 #define _IBA_SYNTHESIZE_15(a, ...) _IBA_SYNTHESIZE_H(a), _IBA_SYNTHESIZE_14(__VA_ARGS__)
 #define _IBA_SYNTHESIZE_16(a, ...) _IBA_SYNTHESIZE_H(a), _IBA_SYNTHESIZE_15(__VA_ARGS__)
 #define _IBA_SYNTHESIZE_17(a, ...) _IBA_SYNTHESIZE_H(a), _IBA_SYNTHESIZE_16(__VA_ARGS__)
+
+/*!
+ \def       IBA_NONNULL
+ \brief     Macro that specifies that the parameters of a method of function should not be null.  
+ \details   The compiler will warn if a nil or NULL is passed to the function for the specified parameters.  The parameters are specified as a numeric list.  eg, IBA_NONNULL(1, 2) specifies that the 1st and 2nd parameters to the method/function should not be null.  
+ 
+ \note      LLVM's static analyser does more thorough checking for non-nullness than the compiler does by default.
+ */
+
+#if __has_attribute(nonnull)
+#   define IBA_NONNULL(...) __attribute__((nonnull(__VA_ARGS__)))
+#else
+#   define IBA_NONNULL(...)
+#endif
 
 /*!
  \def       IBA_HAS_FLAG
