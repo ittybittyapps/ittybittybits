@@ -63,10 +63,11 @@
 
 + (id)ibaGestureRecognizerWithActionBlock:(IBAGestureActionBlock)action
 {
-    id instance = [[[[self class] alloc] initWithTarget:self action:@selector(_ibaHandleAction)] autorelease];
+    id instance = [[self class] alloc];
+    instance = [instance initWithTarget:instance action:@selector(_ibaHandleAction:)];
     [instance _ibaSetActionBlock:action];
   
-    return instance;
+    return [instance autorelease];
 }
 
 @end
