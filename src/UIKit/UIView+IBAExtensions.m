@@ -49,7 +49,7 @@
 
 #import "UIView+IBAExtensions.h"
 #import "UIGestureRecognizer+IBAExtensions.h"
-#import "NSArray+IBAExtensions.h"
+#import "../Foundation/NSArray+IBAExtensions.h"
 
 @implementation UIView (IBAExtensions)
 
@@ -290,7 +290,6 @@
     }];
     
     [self addGestureRecognizer:gesture];
-    [gesture release];
 }
 
 - (void)ibaOnTap:(void (^) (id sender))action touches:(NSUInteger)touches; 
