@@ -145,7 +145,7 @@
  \param     hidden      YES to hide the view; NO to show the view.
  \param     duration    The duration in seconds of the alpha fade in/out transition.
  */
-- (void)ibaSetHidden:(BOOL)hidden withAlphaTransistionDuration:(CGFloat)duration
+- (void)ibaSetHidden:(BOOL)hidden withAlphaTransistionDuration:(NSTimeInterval)duration
 {
     [self ibaSetHidden:hidden withAlphaTransistionDuration:duration completion:nil];    
 }
@@ -156,7 +156,7 @@
  \param     duration    The duration in seconds of the alpha fade in/out transition.
  \param     completion  A block to invoke when the animation is complete.
  */
-- (void)ibaSetHidden:(BOOL)hidden withAlphaTransistionDuration:(CGFloat)duration completion:(void (^)(BOOL finished))completion
+- (void)ibaSetHidden:(BOOL)hidden withAlphaTransistionDuration:(NSTimeInterval)duration completion:(void (^)(BOOL finished))completion
 {
     if (self.hidden == hidden)
     {
@@ -199,7 +199,7 @@
  \brief     Sets the view to be hidden or shown with a slide transition to or from the specified \a direction.
  \details   The ultimate position of the view does not change.  It is returned to its original location after being hidden.
  */
-- (void)ibaSetHidden:(BOOL)hidden withSlideTransistionDirection:(IBACompassDirection)direction duration:(CGFloat)duration completion:(void (^)(BOOL finished))completion
+- (void)ibaSetHidden:(BOOL)hidden withSlideTransistionDirection:(IBACompassDirection)direction duration:(NSTimeInterval)duration completion:(void (^)(BOOL finished))completion
 {
     
     if (self.hidden == hidden)
