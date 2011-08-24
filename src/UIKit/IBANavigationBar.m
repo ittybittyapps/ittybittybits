@@ -41,4 +41,12 @@ IBA_SYNTHESIZE(landscapeBackgroundImage, portraitBackgroundImage);
     }
 }
 
+- (void)dealloc
+{
+    IBA_RELEASE_PROPERTY(portraitBackgroundImage);
+    IBA_RELEASE_PROPERTY(landscapeBackgroundImage);
+    
+    [super dealloc];
+}
+
 @end
