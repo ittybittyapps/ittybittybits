@@ -27,3 +27,4 @@ This library also contains modified versions of code copyright the following aut
     Remy Demarest
     Sam Vermette
     Erica Sadun
+    Kevin O'Neill
