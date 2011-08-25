@@ -20,6 +20,8 @@
 #import "UIColor+IBAExtensions.h"
 #import "../Foundation/IBAFoundation.h"
 
+static CGFloat _ibaGetColorComponent(CGColorRef color, NSUInteger index);
+
 @implementation UIColor (IBAExtensions)
 
 #pragma mark -
@@ -72,6 +74,97 @@
                            alpha:1.0f];
 }
 
+/*!
+ \brief
+ Create an autorleased UIColor instance from the specified HTML style hex string.
+ Example:
+ \code
+ UIColor *color = [UIColor ibaColorWithHTMLHEx:@"#cccccc"];
+ \endcode
+ \return
+ An auto-released UIColor instance for the specified HTML \a hexString.
+ */
++ (UIColor *)ibaColorWithHTMLHex:(NSString *)hexString
+{
+    NSScanner * scanner = [NSScanner scannerWithString:hexString];
+    
+    uint32_t value;
+    scanner.scanLocation = [hexString hasPrefix:@"#"] ? 1 : 0;
+    if ([scanner scanHexInt:&value])
+    {
+        return [UIColor ibaColorWithRGBHex:value];
+    }
+    
+    return nil;
+}
+
++ (UIColor *)ibaColorWithCSSRGB:(NSString *)cssRGBString
+{
+    NSString *pattern = @"rgb(a)?\\(([\\d\\.]+)(%)?,\\s*([\\d\\.]+)(%)?,\\s*([\\d\\.]+)(%)?(,\\s*([\\d\\.]+)(%)?)?\\)";
+    NSError *error = nil;
+    NSRegularExpression *regex = [[[NSRegularExpression alloc] initWithPattern:pattern 
+                                                                      options:NSRegularExpressionCaseInsensitive|NSRegularExpressionAnchorsMatchLines 
+                                                                        error:&error] autorelease];
+    
+    if (regex && error == nil)
+    {    
+        __block NSString *red = nil;
+        __block NSString *green = nil;
+        __block NSString *blue = nil;
+        __block NSString *alpha = nil;
+        __block BOOL redIsPercent = NO;
+        __block BOOL greenIsPercent = NO;
+        __block BOOL blueIsPercent = NO;
+        __block BOOL alphaIsPercent = NO;
+        
+        [regex enumerateMatchesInString:cssRGBString 
+                                options:0 
+                                  range:NSMakeRange(0, [cssRGBString length]) 
+                             usingBlock:^(NSTextCheckingResult *result, NSMatchingFlags flags, BOOL *stop) {
+                                 
+                                 NSRange alphaExpectedRange = [result rangeAtIndex:1];
+                                 NSRange redRange = [result rangeAtIndex:2];
+                                 NSRange redPercentRange = [result rangeAtIndex:3];
+                                 NSRange greenRange = [result rangeAtIndex:4];
+                                 NSRange greenPercentRange = [result rangeAtIndex:5];
+                                 NSRange blueRange = [result rangeAtIndex:6];
+                                 NSRange bluePercentRange = [result rangeAtIndex:7];
+                                 NSRange alphaRange = [result rangeAtIndex:9];
+                                 NSRange alphaPercentRange = [result rangeAtIndex:10];
+                                 
+                                 red = [cssRGBString substringWithRange:redRange];
+                                 green = [cssRGBString substringWithRange:greenRange];
+                                 blue = [cssRGBString substringWithRange:blueRange];
+ 
+                                 if (alphaExpectedRange.location != NSNotFound)
+                                 {    
+                                     alpha = alphaRange.location != NSNotFound ? [cssRGBString substringWithRange:alphaRange] : @"1.0";
+                                 }
+                                 
+                                 redIsPercent = redPercentRange.location != NSNotFound;
+                                 greenIsPercent = greenPercentRange.location != NSNotFound;
+                                 blueIsPercent = bluePercentRange.location != NSNotFound;
+                                 alphaIsPercent = alphaPercentRange.location != NSNotFound;
+                                 
+                                 *stop = YES;
+                             }];
+        
+        if (red && green && blue)
+        {
+            return [UIColor colorWithRed:[red floatValue]/(redIsPercent ? 100.0f : 255.0f)
+                                   green:[green floatValue]/(greenIsPercent ? 100.0f : 255.0f)
+                                    blue:[blue floatValue]/(blueIsPercent ? 100.0f : 255.0f)
+                                   alpha:(alpha ? [alpha floatValue]/(alphaIsPercent ? 100.0f : 1.0f) : 1.0f)];
+        }
+    }
+    else
+    {
+        IBALogError(@"failed to create regular expression with pattern: %@. Error: %@", pattern, error);
+    }
+    
+    return nil;
+}
+
 #pragma mark -
 #pragma mark Instance Methods
 
@@ -105,4 +198,64 @@
 	return CGColorGetAlpha(self.CGColor);
 }
 
+/*!
+ \brief         Returns the components of the receiving color instance.
+ 
+ \param[out]    outRed     
+ The red component value.
+ 
+ \param[out]    outGreen
+ The green component value.
+ 
+ \param[out]    outBlue
+ The blue component value.
+ */
+- (void)ibaColorComponentsRed:(CGFloat*)outRed green:(CGFloat*)outGreen blue:(CGFloat*)outBlue
+{
+    CGColorSpaceModel colorSpaceModel = self.ibaColorSpaceModel;
+    NSAssert(CGColorSpaceGetNumberOfComponents(self.ibaColorSpace) >= 3 && 
+             (colorSpaceModel == kCGColorSpaceModelMonochrome ||
+              colorSpaceModel == kCGColorSpaceModelRGB), 
+             @"only RGB and Monochrome color spaces supported.");
+    
+    const CGFloat *components = CGColorGetComponents(self.CGColor);
+    if (outRed) *outRed = components[0];
+    if (outGreen) *outGreen = components[1];
+    if (outBlue) *outBlue = components[2];
+}
+
+/*!
+ \brief     Returns the red component of the receiving color instance.
+ */
+- (CGFloat)ibaRed
+{
+    CGFloat component = 0.0f;
+    [self ibaColorComponentsRed:&component green:NULL blue:NULL];
+    return component;
+}
+
+/*!
+ \brief     Returns the green component of the receiving color instance.
+ */
+
+- (CGFloat)ibaGreen
+{
+    CGFloat component = 0.0f;
+    [self ibaColorComponentsRed:NULL green:&component blue:NULL];
+    return component;
+}
+
+/*!
+ \brief     Returns the blue component of the receiving color instance.
+ */
+- (CGFloat)ibaBlue
+{
+    CGFloat component = 0.0f;
+    [self ibaColorComponentsRed:NULL green:NULL blue:&component];
+    return component;
+}
+
+
 @end
+
+

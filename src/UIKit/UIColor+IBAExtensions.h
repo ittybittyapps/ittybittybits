@@ -46,8 +46,15 @@
 @property (nonatomic, assign, readonly) CGColorSpaceRef ibaColorSpace;
 @property (nonatomic, assign, readonly) CGColorSpaceModel ibaColorSpaceModel;
 @property (nonatomic, assign, readonly) CGFloat ibaAlpha;
+@property (nonatomic, assign, readonly) CGFloat ibaRed;
+@property (nonatomic, assign, readonly) CGFloat ibaGreen;
+@property (nonatomic, assign, readonly) CGFloat ibaBlue;
+
+- (void)ibaColorComponentsRed:(CGFloat*)outRed green:(CGFloat*)outGreen blue:(CGFloat*)outBlue;
 
 + (UIColor *)ibaColorWithCSSName:(NSString *)cssColorName;
 + (UIColor *)ibaColorWithRGBHex:(uint32_t)hex;
++ (UIColor *)ibaColorWithHTMLHex:(NSString *)hexString;
++ (UIColor *)ibaColorWithCSSRGB:(NSString *)cssRGBString;
 
 @end
