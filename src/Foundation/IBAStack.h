@@ -8,6 +8,17 @@
 
 #import <Foundation/Foundation.h>
 
-@interface IBAStack : NSObject
+@interface IBAStack : NSObject<NSFastEnumeration>
+
++ (IBAStack *)stack;
++ (IBAStack *)stackWithCapacity:(NSUInteger)numItems;
+
+- (id)initWithCapacity:(NSUInteger)numItems;
+- (void)pushObject:(id)object;
+- (id)popObject;
+- (NSArray *)popAllObjects;
+- (id)peekObject;
+- (BOOL)isEmpty;
+- (NSUInteger)count;
 
 @end
