@@ -1,5 +1,5 @@
-WORKSPACE ?= IttyBittyBits.xcworkspace
-SCHEME ?= IttyBittyBitsTests
+XCODE_WORKSPACE ?= IttyBittyBits.xcworkspace
+XCODE_SCHEME ?= IttyBittyBitsTests
 CONFIG ?= Debug
 SDK ?= iphonesimulator4.3 
 KEYCHAIN_NAME ?= Xcode
@@ -25,11 +25,11 @@ default:
 	@echo "Available Targets: clean, build, test"
 
 clean:
-	xcodebuild -workspace $(WORKSPACE) -scheme $(SCHEME) -configuration $(CONFIG) -sdk $(SDK) clean $(BUILD_OPTS)
+	xcodebuild -workspace $(XCODE_WORKSPACE) -scheme $(XCODE_SCHEME) -configuration $(CONFIG) -sdk $(SDK) clean $(BUILD_OPTS)
 	rm -rf $(BUILD_DIR) 
 
 build:
-	GHUNIT_CLI=1 xcodebuild -workspace $(WORKSPACE) -scheme $(SCHEME) -configuration $(CONFIG) -sdk $(SDK) build $(BUILD_OPTS)
+	GHUNIT_CLI=1 xcodebuild -workspace $(XCODE_WORKSPACE) -scheme $(XCODE_SCHEME) -configuration $(CONFIG) -sdk $(SDK) build $(BUILD_OPTS)
 
 test: unlock-keychain build restore-default-keychain
 
