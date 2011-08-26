@@ -4,7 +4,7 @@ CONFIG=Debug
 SDK=iphonesimulator4.3 
 KEYCHAIN_NAME=Xcode
 KEYCHAIN_PASSWORD=keychain-password-placeholder
-KEYCHAIN_DEFAULT=`security default-keychain`
+KEYCHAIN_DEFAULT=$(shell security default-keychain)
 
 .PHONY: clean test
 
