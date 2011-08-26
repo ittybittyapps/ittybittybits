@@ -905,7 +905,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = $PROJECT_DIR/../scripts/RunTests.sh;
+			shellScript = "WRITE_JUNIT_XML=YES $PROJECT_DIR/../scripts/RunTests.sh";
 		};
 /* End PBXShellScriptBuildPhase section */
 
