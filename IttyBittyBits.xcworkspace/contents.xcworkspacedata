@@ -1,12 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Workspace
    version = "1.0">
-   <FileRef
-      location = "group:LICENSE.txt">
-   </FileRef>
-   <FileRef
-      location = "group:README.markdown">
-   </FileRef>
+   <Group
+      location = "container:"
+      name = "Documentation">
+      <FileRef
+         location = "group:LICENSE.txt">
+      </FileRef>
+      <FileRef
+         location = "group:README.markdown">
+      </FileRef>
+   </Group>
    <FileRef
       location = "group:src/IttyBittyBits.xcodeproj">
    </FileRef>
@@ -15,6 +19,13 @@
       name = "Samples">
       <FileRef
          location = "group:samples/DebugConsole/DebugConsole.xcodeproj">
+      </FileRef>
+   </Group>
+   <Group
+      location = "container:"
+      name = "Scripts">
+      <FileRef
+         location = "group:scripts/RunTests.sh">
       </FileRef>
    </Group>
 </Workspace>
