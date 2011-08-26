@@ -52,6 +52,11 @@
             isEnabled = "YES">
          </EnvironmentVariable>
          <EnvironmentVariable
+            key = "GHUNIT_AUTORUN"
+            value = "YES"
+            isEnabled = "YES">
+         </EnvironmentVariable>
+         <EnvironmentVariable
             key = "NSDeallocateZombies"
             value = "YES"
             isEnabled = "YES">
