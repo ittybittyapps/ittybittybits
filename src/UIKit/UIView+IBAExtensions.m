@@ -303,4 +303,16 @@
 }
 
 
+- (void)ibaAddSubviewsWithImagesNamed:(NSString *)firstImageName, ...
+{    
+    va_list arguments;
+    va_start(arguments, firstImageName);
+    for (NSString *imageName = firstImageName; imageName != nil; imageName = va_arg(arguments, NSString *))
+    {
+        UIImageView *imageView = [[[UIImageView alloc] initWithImage:[UIImage imageNamed:imageName]] autorelease];
+        [self addSubview:imageView];
+    }
+    va_end(arguments);
+}
+
 @end

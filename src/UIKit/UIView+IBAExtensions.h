@@ -79,4 +79,6 @@ typedef enum
 - (void)ibaOnTap:(void (^) (id sender))action touches:(NSUInteger)touches; 
 - (void)ibaOnDoubleTap:(void (^) (id sender))action touches:(NSUInteger)touches;
 
+- (void)ibaAddSubviewsWithImagesNamed:(NSString *)firstImageName, ... NS_REQUIRES_NIL_TERMINATION;
+
 @end
