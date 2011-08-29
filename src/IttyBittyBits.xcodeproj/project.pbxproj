@@ -905,7 +905,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "WRITE_JUNIT_XML=YES $PROJECT_DIR/../scripts/RunTests.sh";
+			shellScript = "WRITE_JUNIT_XML=YES $PROJECT_DIR/../lib/jenkins-xcode-support/project/scripts/RunGHUnitTests.sh";
 		};
 /* End PBXShellScriptBuildPhase section */
 
