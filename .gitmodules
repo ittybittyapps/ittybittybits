@@ -1,3 +1,6 @@
 [submodule "lib/JSONKit"]
 	path = lib/JSONKit
 	url = https://github.com/johnezang/JSONKit.git
+[submodule "lib/jenkins-xcode-support"]
+	path = lib/jenkins-xcode-support
+	url = git@github.com:ittybittyapps/jenkins-xcode-support.git
