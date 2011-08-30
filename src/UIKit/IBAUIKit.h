@@ -22,6 +22,7 @@
 #import "IBANavigationBar.h"
 #import "IBATableViewAccessory.h"
 #import "IBATiledImageView.h"
+#import "IBAViewController.h"
 
 // Extension categories.
 #import "UIAlertView+IBAExtensions.h"

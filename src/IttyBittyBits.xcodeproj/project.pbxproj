@@ -144,6 +144,8 @@
 		A7B4DB171367C70D00543D61 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7B4DB111367C65B00543D61 /* Security.framework */; };
 		A7B6922A137D13E200E379F3 /* NSNumber+IBAExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = A7B69228137D13DD00E379F3 /* NSNumber+IBAExtensions.h */; };
 		A7B6922B137D13E200E379F3 /* NSNumber+IBAExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = A7B69229137D13E000E379F3 /* NSNumber+IBAExtensions.m */; };
+		A7C05856140C771600339F5B /* IBAViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = A7C05854140C771600339F5B /* IBAViewController.h */; };
+		A7C05857140C771600339F5B /* IBAViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A7C05855140C771600339F5B /* IBAViewController.m */; };
 		A7C0DBDF13B1705E00860296 /* UIView+IBAExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = A7C0DBDD13B1705E00860296 /* UIView+IBAExtensions.h */; };
 		A7C0DBE013B1705E00860296 /* UIView+IBAExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = A7C0DBDE13B1705E00860296 /* UIView+IBAExtensions.m */; };
 		A7C0DBF713B195A800860296 /* IBAMath.m in Sources */ = {isa = PBXBuildFile; fileRef = A7C0DBF613B195A800860296 /* IBAMath.m */; };
@@ -334,6 +336,8 @@
 		A7B4DB111367C65B00543D61 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		A7B69228137D13DD00E379F3 /* NSNumber+IBAExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSNumber+IBAExtensions.h"; path = "Foundation/NSNumber+IBAExtensions.h"; sourceTree = SOURCE_ROOT; };
 		A7B69229137D13E000E379F3 /* NSNumber+IBAExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSNumber+IBAExtensions.m"; path = "Foundation/NSNumber+IBAExtensions.m"; sourceTree = SOURCE_ROOT; };
+		A7C05854140C771600339F5B /* IBAViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBAViewController.h; sourceTree = "<group>"; };
+		A7C05855140C771600339F5B /* IBAViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IBAViewController.m; sourceTree = "<group>"; };
 		A7C0DBDD13B1705E00860296 /* UIView+IBAExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+IBAExtensions.h"; sourceTree = "<group>"; };
 		A7C0DBDE13B1705E00860296 /* UIView+IBAExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+IBAExtensions.m"; sourceTree = "<group>"; };
 		A7C0DBF613B195A800860296 /* IBAMath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IBAMath.m; sourceTree = "<group>"; };
@@ -478,6 +482,8 @@
 				A76C84D913C1A13D00D2A866 /* IBATableViewAccessory.m */,
 				A7652BD013E581530023D4B3 /* IBATiledImageView.h */,
 				A7652BD113E581530023D4B3 /* IBATiledImageView.m */,
+				A7C05854140C771600339F5B /* IBAViewController.h */,
+				A7C05855140C771600339F5B /* IBAViewController.m */,
 				A722FA5D137B94D90066CC1A /* UIAlertView+IBAExtensions.h */,
 				A722FA5E137B94D90066CC1A /* UIAlertView+IBAExtensions.m */,
 				A772039713FE3A1F0094476D /* UIApplication+IBAExtensions.h */,
@@ -814,6 +820,7 @@
 				A7422E711401331F00D9C54F /* UINavigationController+IBAExtensions.h in Headers */,
 				75C832441401475C00F476B9 /* UIGestureRecognizer+IBAExtensions.h in Headers */,
 				A7ACE49B1405CE1700CC2138 /* IBAStack.h in Headers */,
+				A7C05856140C771600339F5B /* IBAViewController.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -976,6 +983,7 @@
 				A7422E721401331F00D9C54F /* UINavigationController+IBAExtensions.m in Sources */,
 				75C832451401475C00F476B9 /* UIGestureRecognizer+IBAExtensions.m in Sources */,
 				A7ACE49C1405CE1700CC2138 /* IBAStack.m in Sources */,
+				A7C05857140C771600339F5B /* IBAViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
