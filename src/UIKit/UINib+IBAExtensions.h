@@ -28,4 +28,5 @@
 - (UITableViewCell *)ibaInstantiateWithOwner:(id)ownerOrNil forTableViewCellWithReuseIdentifier:(NSString*)reuseIdentifier;
 
 - (UINavigationController *)ibaInstantiateNavigationControllerWithRootViewController:(UIViewController *)rootViewController;
+
 @end

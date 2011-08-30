@@ -42,6 +42,7 @@
         }
     }
     
+    IBALogDebug(@"Failed to find UITableViewCell instance with reuseIdentifier '%@', returning nil.", reuseIdentifier);
     return nil;
 }
 
@@ -98,6 +99,7 @@
         }
     }
 
+    IBALogDebug(@"Failed to find UINavigationController instance in NIB, returning nil.");
     return nil;
 }
 
