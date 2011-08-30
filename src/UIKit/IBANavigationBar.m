@@ -24,6 +24,10 @@
 
 IBA_SYNTHESIZE(landscapeBackgroundImage, portraitBackgroundImage);
 
+/*!
+ \brief     Draws the receiver’s image within the passed-in rectangle.
+ \param     rect         The portion of the view’s bounds that needs to be updated.
+ */
 -(void)drawRect:(CGRect)rect
 {
     UIInterfaceOrientation orientation = [[UIApplication sharedApplication] statusBarOrientation];
@@ -41,6 +45,9 @@ IBA_SYNTHESIZE(landscapeBackgroundImage, portraitBackgroundImage);
     }
 }
 
+/*!
+ \brief     Deallocates the memory occupied by the receiver.
+ */
 - (void)dealloc
 {
     IBA_RELEASE_PROPERTY(portraitBackgroundImage);

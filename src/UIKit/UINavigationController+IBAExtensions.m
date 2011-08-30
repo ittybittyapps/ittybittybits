@@ -23,6 +23,10 @@
 
 @implementation UINavigationController (IBAExtensions)
 
+
+/*!
+ \brief     Returns the IBANavigationBar associated with the UINavigationController (if any).
+ */
 - (IBANavigationBar *)ibaNavigationBar
 {
     if ([self.navigationBar isKindOfClass:[IBANavigationBar class]])
