@@ -111,6 +111,10 @@
 		A7A0E10D13E0EF24006CEC5A /* NSError+IBACoreDataErrors.mm in Sources */ = {isa = PBXBuildFile; fileRef = A7A0E10B13E0EF24006CEC5A /* NSError+IBACoreDataErrors.mm */; };
 		A7A0E11113E12DB0006CEC5A /* IBAStateMachine.h in Headers */ = {isa = PBXBuildFile; fileRef = A7A0E10F13E12DB0006CEC5A /* IBAStateMachine.h */; };
 		A7A0E11213E12DB0006CEC5A /* IBAStateMachine.m in Sources */ = {isa = PBXBuildFile; fileRef = A7A0E11013E12DB0006CEC5A /* IBAStateMachine.m */; };
+		A7ACE4921405C93000CC2138 /* IBAThemeManager.h in Headers */ = {isa = PBXBuildFile; fileRef = A7ACE4901405C93000CC2138 /* IBAThemeManager.h */; };
+		A7ACE4931405C93000CC2138 /* IBAThemeManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A7ACE4911405C93000CC2138 /* IBAThemeManager.m */; };
+		A7ACE4971405CC5600CC2138 /* IBAThemeBundle.h in Headers */ = {isa = PBXBuildFile; fileRef = A7ACE4951405CC5600CC2138 /* IBAThemeBundle.h */; };
+		A7ACE4981405CC5600CC2138 /* IBAThemeBundle.m in Sources */ = {isa = PBXBuildFile; fileRef = A7ACE4961405CC5600CC2138 /* IBAThemeBundle.m */; };
 		A7ACE49B1405CE1700CC2138 /* IBAStack.h in Headers */ = {isa = PBXBuildFile; fileRef = A7ACE4991405CE1700CC2138 /* IBAStack.h */; };
 		A7ACE49C1405CE1700CC2138 /* IBAStack.m in Sources */ = {isa = PBXBuildFile; fileRef = A7ACE49A1405CE1700CC2138 /* IBAStack.m */; };
 		A7ACE49F140637C900CC2138 /* IBAStackTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A7ACE49E140637C900CC2138 /* IBAStackTests.m */; };
@@ -146,6 +150,8 @@
 		A7B6922B137D13E200E379F3 /* NSNumber+IBAExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = A7B69229137D13E000E379F3 /* NSNumber+IBAExtensions.m */; };
 		A7C05856140C771600339F5B /* IBAViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = A7C05854140C771600339F5B /* IBAViewController.h */; };
 		A7C05857140C771600339F5B /* IBAViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A7C05855140C771600339F5B /* IBAViewController.m */; };
+		A7C0585D140C888600339F5B /* IBAThemeBundleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A7C0585A140C887C00339F5B /* IBAThemeBundleTests.m */; };
+		A7C0585F140C893C00339F5B /* IBAThemeBundleTests.bundle in Resources */ = {isa = PBXBuildFile; fileRef = A7C0585E140C893C00339F5B /* IBAThemeBundleTests.bundle */; };
 		A7C0DBDF13B1705E00860296 /* UIView+IBAExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = A7C0DBDD13B1705E00860296 /* UIView+IBAExtensions.h */; };
 		A7C0DBE013B1705E00860296 /* UIView+IBAExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = A7C0DBDE13B1705E00860296 /* UIView+IBAExtensions.m */; };
 		A7C0DBF713B195A800860296 /* IBAMath.m in Sources */ = {isa = PBXBuildFile; fileRef = A7C0DBF613B195A800860296 /* IBAMath.m */; };
@@ -303,6 +309,10 @@
 		A7A0E10B13E0EF24006CEC5A /* NSError+IBACoreDataErrors.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = "NSError+IBACoreDataErrors.mm"; sourceTree = "<group>"; };
 		A7A0E10F13E12DB0006CEC5A /* IBAStateMachine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBAStateMachine.h; sourceTree = "<group>"; };
 		A7A0E11013E12DB0006CEC5A /* IBAStateMachine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IBAStateMachine.m; sourceTree = "<group>"; };
+		A7ACE4901405C93000CC2138 /* IBAThemeManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBAThemeManager.h; sourceTree = "<group>"; };
+		A7ACE4911405C93000CC2138 /* IBAThemeManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IBAThemeManager.m; sourceTree = "<group>"; };
+		A7ACE4951405CC5600CC2138 /* IBAThemeBundle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBAThemeBundle.h; sourceTree = "<group>"; };
+		A7ACE4961405CC5600CC2138 /* IBAThemeBundle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IBAThemeBundle.m; sourceTree = "<group>"; };
 		A7ACE4991405CE1700CC2138 /* IBAStack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBAStack.h; sourceTree = "<group>"; };
 		A7ACE49A1405CE1700CC2138 /* IBAStack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IBAStack.m; sourceTree = "<group>"; };
 		A7ACE49D140637C900CC2138 /* IBAStackTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBAStackTests.h; sourceTree = "<group>"; };
@@ -341,6 +351,9 @@
 		A7B69229137D13E000E379F3 /* NSNumber+IBAExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSNumber+IBAExtensions.m"; path = "Foundation/NSNumber+IBAExtensions.m"; sourceTree = SOURCE_ROOT; };
 		A7C05854140C771600339F5B /* IBAViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBAViewController.h; sourceTree = "<group>"; };
 		A7C05855140C771600339F5B /* IBAViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IBAViewController.m; sourceTree = "<group>"; };
+		A7C05859140C887C00339F5B /* IBAThemeBundleTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBAThemeBundleTests.h; sourceTree = "<group>"; };
+		A7C0585A140C887C00339F5B /* IBAThemeBundleTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IBAThemeBundleTests.m; sourceTree = "<group>"; };
+		A7C0585E140C893C00339F5B /* IBAThemeBundleTests.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = IBAThemeBundleTests.bundle; sourceTree = "<group>"; };
 		A7C0DBDD13B1705E00860296 /* UIView+IBAExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+IBAExtensions.h"; sourceTree = "<group>"; };
 		A7C0DBDE13B1705E00860296 /* UIView+IBAExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+IBAExtensions.m"; sourceTree = "<group>"; };
 		A7C0DBF613B195A800860296 /* IBAMath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IBAMath.m; sourceTree = "<group>"; };
@@ -480,8 +493,11 @@
 		A7808BD413D2D73400F76DB1 /* UIKit */ = {
 			isa = PBXGroup;
 			children = (
+				A7C0585E140C893C00339F5B /* IBAThemeBundleTests.bundle */,
 				A7808BD513D2D76A00F76DB1 /* UIColor+IBAExtensionsTests.h */,
 				A7808BD613D2D76A00F76DB1 /* UIColor+IBAExtensionsTests.m */,
+				A7C05859140C887C00339F5B /* IBAThemeBundleTests.h */,
+				A7C0585A140C887C00339F5B /* IBAThemeBundleTests.m */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -502,6 +518,10 @@
 				A76C84D913C1A13D00D2A866 /* IBATableViewAccessory.m */,
 				A7652BD013E581530023D4B3 /* IBATiledImageView.h */,
 				A7652BD113E581530023D4B3 /* IBATiledImageView.m */,
+				A7ACE4901405C93000CC2138 /* IBAThemeManager.h */,
+				A7ACE4911405C93000CC2138 /* IBAThemeManager.m */,
+				A7ACE4951405CC5600CC2138 /* IBAThemeBundle.h */,
+				A7ACE4961405CC5600CC2138 /* IBAThemeBundle.m */,
 				A7C05854140C771600339F5B /* IBAViewController.h */,
 				A7C05855140C771600339F5B /* IBAViewController.m */,
 				A722FA5D137B94D90066CC1A /* UIAlertView+IBAExtensions.h */,
@@ -842,6 +862,8 @@
 				A7422E6814012A3600D9C54F /* IBANavigationBar.h in Headers */,
 				A7422E711401331F00D9C54F /* UINavigationController+IBAExtensions.h in Headers */,
 				75C832441401475C00F476B9 /* UIGestureRecognizer+IBAExtensions.h in Headers */,
+				A7ACE4921405C93000CC2138 /* IBAThemeManager.h in Headers */,
+				A7ACE4971405CC5600CC2138 /* IBAThemeBundle.h in Headers */,
 				A7ACE49B1405CE1700CC2138 /* IBAStack.h in Headers */,
 				A7C05856140C771600339F5B /* IBAViewController.h in Headers */,
 			);
@@ -918,6 +940,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A7B4DAD613679F5E00543D61 /* InfoPlist.strings in Resources */,
+				A7C0585F140C893C00339F5B /* IBAThemeBundleTests.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1005,6 +1028,8 @@
 				A7422E6914012A3600D9C54F /* IBANavigationBar.m in Sources */,
 				A7422E721401331F00D9C54F /* UINavigationController+IBAExtensions.m in Sources */,
 				75C832451401475C00F476B9 /* UIGestureRecognizer+IBAExtensions.m in Sources */,
+				A7ACE4931405C93000CC2138 /* IBAThemeManager.m in Sources */,
+				A7ACE4981405CC5600CC2138 /* IBAThemeBundle.m in Sources */,
 				A7ACE49C1405CE1700CC2138 /* IBAStack.m in Sources */,
 				A7C05857140C771600339F5B /* IBAViewController.m in Sources */,
 			);
@@ -1022,6 +1047,7 @@
 				A7808BD713D2D76A00F76DB1 /* UIColor+IBAExtensionsTests.m in Sources */,
 				A78065631404DCED0075FDA7 /* NSString+IBAExtensionsTests.m in Sources */,
 				A7ACE49F140637C900CC2138 /* IBAStackTests.m in Sources */,
+				A7C0585D140C888600339F5B /* IBAThemeBundleTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
