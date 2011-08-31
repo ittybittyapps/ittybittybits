@@ -1,0 +1,14 @@
+//
+//  Target-Samples-Shared.xcconfig
+//  IttyBittyBits
+//
+//  Created by Oliver Jones on 30/08/11.
+//  Copyright 2011 Itty Bitty Apps Pty. Ltd. All rights reserved.
+//
+WRAPPER_EXTENSION = app
+GCC_DYNAMIC_NO_PIC = NO
+GCC_PRECOMPILE_PREFIX_HEADER = YES
+COPY_PHASE_STRIP = NO
+VALIDATE_PRODUCT = NO
+
+SAMPLES_SRCROOT = $(SRCROOT)/../samples

@@ -241,6 +241,9 @@
 		A7422E6714012A3600D9C54F /* IBANavigationBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IBANavigationBar.m; sourceTree = "<group>"; };
 		A7422E6F1401331F00D9C54F /* UINavigationController+IBAExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+IBAExtensions.h"; sourceTree = "<group>"; };
 		A7422E701401331F00D9C54F /* UINavigationController+IBAExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+IBAExtensions.m"; sourceTree = "<group>"; };
+		A7541C94140CC25F0098586E /* Target-Samples-Shared.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Target-Samples-Shared.xcconfig"; sourceTree = "<group>"; };
+		A7541C9C140CC4FB0098586E /* Target-Samples-Debug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = "Target-Samples-Debug.xcconfig"; sourceTree = "<group>"; };
+		A7541C9D140CC50C0098586E /* Target-Samples-Release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = "Target-Samples-Release.xcconfig"; sourceTree = "<group>"; };
 		A75FC05913BD919D00C7AE82 /* NSDate+IBAExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+IBAExtensions.h"; sourceTree = "<group>"; };
 		A75FC05A13BD919D00C7AE82 /* NSDate+IBAExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+IBAExtensions.m"; sourceTree = "<group>"; };
 		A7652BD013E581530023D4B3 /* IBATiledImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBATiledImageView.h; sourceTree = "<group>"; };
@@ -457,6 +460,23 @@
 			path = MapKit;
 			sourceTree = "<group>";
 		};
+		A7345F88140CC146005ED52E /* Samples */ = {
+			isa = PBXGroup;
+			children = (
+				A7541C94140CC25F0098586E /* Target-Samples-Shared.xcconfig */,
+				A7541C9C140CC4FB0098586E /* Target-Samples-Debug.xcconfig */,
+				A7541C9D140CC50C0098586E /* Target-Samples-Release.xcconfig */,
+			);
+			path = Samples;
+			sourceTree = "<group>";
+		};
+		A7345F89140CC158005ED52E /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Tests;
+			sourceTree = "<group>";
+		};
 		A7808BD413D2D73400F76DB1 /* UIKit */ = {
 			isa = PBXGroup;
 			children = (
@@ -567,11 +587,12 @@
 		A7B4DAAE1367991100543D61 = {
 			isa = PBXGroup;
 			children = (
-				A7C2168A13AB29100070DA6A /* Configuration */,
 				A7B4DABE1367991200543D61 /* Src */,
 				A7B4DAD113679F5E00543D61 /* Tests */,
+				A7345F6D140CC026005ED52E /* Samples */,
 				A7B10A78138496FC00C8A672 /* Third Party */,
 				A7B4DABB1367991200543D61 /* Frameworks */,
+				A7C2168A13AB29100070DA6A /* Configuration */,
 				A7B4DABA1367991200543D61 /* Products */,
 				A7B4DAB91367991200543D61 /* libIttyBittyBits.a */,
 			);
@@ -735,6 +756,8 @@
 				A7C2168F13AB2DC70070DA6A /* Target-IttyBittyBits-Shared.xcconfig */,
 				A7C2169013AB2DD90070DA6A /* Target-IttyBittyBits-Debug.xcconfig */,
 				A7C2169113AB2DE70070DA6A /* Target-IttyBittyBits-Release.xcconfig */,
+				A7345F88140CC146005ED52E /* Samples */,
+				A7345F89140CC158005ED52E /* Tests */,
 			);
 			name = Configuration;
 			path = ../config;
