@@ -146,6 +146,7 @@
 		A7B6922B137D13E200E379F3 /* NSNumber+IBAExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = A7B69229137D13E000E379F3 /* NSNumber+IBAExtensions.m */; };
 		A7C05856140C771600339F5B /* IBAViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = A7C05854140C771600339F5B /* IBAViewController.h */; };
 		A7C05857140C771600339F5B /* IBAViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A7C05855140C771600339F5B /* IBAViewController.m */; };
+		A7C05862140C9F7D00339F5B /* IBACarouselView.m in Sources */ = {isa = PBXBuildFile; fileRef = A7C05861140C9F7D00339F5B /* IBACarouselView.m */; };
 		A7C0DBDF13B1705E00860296 /* UIView+IBAExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = A7C0DBDD13B1705E00860296 /* UIView+IBAExtensions.h */; };
 		A7C0DBE013B1705E00860296 /* UIView+IBAExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = A7C0DBDE13B1705E00860296 /* UIView+IBAExtensions.m */; };
 		A7C0DBF713B195A800860296 /* IBAMath.m in Sources */ = {isa = PBXBuildFile; fileRef = A7C0DBF613B195A800860296 /* IBAMath.m */; };
@@ -341,6 +342,8 @@
 		A7B69229137D13E000E379F3 /* NSNumber+IBAExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSNumber+IBAExtensions.m"; path = "Foundation/NSNumber+IBAExtensions.m"; sourceTree = SOURCE_ROOT; };
 		A7C05854140C771600339F5B /* IBAViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBAViewController.h; sourceTree = "<group>"; };
 		A7C05855140C771600339F5B /* IBAViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IBAViewController.m; sourceTree = "<group>"; };
+		A7C05860140C9F7D00339F5B /* IBACarouselView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBACarouselView.h; sourceTree = "<group>"; };
+		A7C05861140C9F7D00339F5B /* IBACarouselView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IBACarouselView.m; sourceTree = "<group>"; };
 		A7C0DBDD13B1705E00860296 /* UIView+IBAExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+IBAExtensions.h"; sourceTree = "<group>"; };
 		A7C0DBDE13B1705E00860296 /* UIView+IBAExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+IBAExtensions.m"; sourceTree = "<group>"; };
 		A7C0DBF613B195A800860296 /* IBAMath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IBAMath.m; sourceTree = "<group>"; };
@@ -526,6 +529,8 @@
 				A7B10AC8138632E800C8A672 /* UISearchBar+IBAExtensions.m */,
 				A7C0DBDD13B1705E00860296 /* UIView+IBAExtensions.h */,
 				A7C0DBDE13B1705E00860296 /* UIView+IBAExtensions.m */,
+				A7C05860140C9F7D00339F5B /* IBACarouselView.h */,
+				A7C05861140C9F7D00339F5B /* IBACarouselView.m */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -1022,6 +1027,7 @@
 				A7808BD713D2D76A00F76DB1 /* UIColor+IBAExtensionsTests.m in Sources */,
 				A78065631404DCED0075FDA7 /* NSString+IBAExtensionsTests.m in Sources */,
 				A7ACE49F140637C900CC2138 /* IBAStackTests.m in Sources */,
+				A7C05862140C9F7D00339F5B /* IBACarouselView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
