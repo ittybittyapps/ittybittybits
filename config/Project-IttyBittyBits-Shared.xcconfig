@@ -19,8 +19,12 @@ RUN_CLANG_STATIC_ANALYZER = YES
 // Don't "install" static library
 SKIP_INSTALL = YES
 
+// User header paths should not take precedence over system header paths.
+ALWAYS_SEARCH_USER_PATHS = NO
+
 // Additional header search path for submodules.
-HEADER_SEARCH_PATHS = $(SRCROOT)/lib/JSONKit
+ITTYBITTYBITS_HEADER_SEARCH_PATHS = $(SRCROOT)/lib/JSONKit
+HEADER_SEARCH_PATHS = $(ITTYBITTYBITS_HEADER_SEARCH_PATHS)
 
 // Don't hide symbols by default
 GCC_SYMBOLS_PRIVATE_EXTERN = NO
