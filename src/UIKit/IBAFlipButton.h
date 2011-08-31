@@ -8,20 +8,16 @@
 
 #import <UIKit/UIKit.h>
 
-/*!
- The side of an IBAFlipButton.
- */
-typedef enum 
-{
-    IBAFlipButtonSideFront,
-    IBAFlipButtonSideBack
-} IBAFlipButtonSide;
-
 typedef enum
 {
     IBAFlipButtonDirectionFromLeft,
     IBAFlipButtonDirectionFromRight
 } IBAFlipButtonDirection;
+
+typedef enum
+{
+    IBAFlipButtonControlStateFlipped = ((1 << 16 ) & UIControlStateApplication)
+} IBAFlipButtonControlState;
 
 /*!
  \brief     An IBAFlipButton is a button that has two sides.  When pressed it flips over exposing the back side.  When pressed again it flips over again presenting the front side.
@@ -31,10 +27,10 @@ typedef enum
 + (IBAFlipButton *)flipButton;
 + (IBAFlipButton *)flipButtonWithFrame:(CGRect)frame;
 
-- (void)configureButtonsWithBlock:(void (^)(IBAFlipButtonSide side, UIButton *button))block;
-
-@property (nonatomic, assign, readonly) IBAFlipButtonSide currentSide;
 @property (nonatomic, assign) NSTimeInterval animationDuration;
 @property (nonatomic, assign) IBAFlipButtonDirection flipDirection;
+@property (nonatomic, assign) BOOL flipped;
+
+- (void)setFlipped:(BOOL)flipped animated:(BOOL)animated;
 
 @end

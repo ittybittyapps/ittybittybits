@@ -9,8 +9,7 @@
 #import "IBAFlipButtonSampleViewController.h"
 
 @interface IBAFlipButtonSampleViewController ()
-- (void)backPressed:(id)sender forEvent:(UIEvent *)event;
-- (void)frontPressed:(id)sender forEvent:(UIEvent *)event;
+- (void)barButtonPressed:(IBAFlipButton *)sender forEvent:(UIEvent *)event;
 - (IBAction)buttonPressed:(id)sender forEvent:(UIEvent *)event;
 @end
 
@@ -33,70 +32,44 @@ IBA_SYNTHESIZE(flipButton);
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
+
+    // set up the bar button item.
     IBAFlipButton *flipButton = [IBAFlipButton flipButton];
-    [flipButton configureButtonsWithBlock:^(IBAFlipButtonSide side, UIButton *button) {
-
-        SEL selector = (side == IBAFlipButtonSideBack ? @selector(barButtonBackPressed:forEvent:) : @selector(barButtonFrontPressed:forEvent:));
-        NSString *imageName = (side == IBAFlipButtonSideBack ? @"back" : @"front");
-        
-        [button setImage:[UIImage imageNamed:imageName] forState:UIControlStateNormal];
-        
-        [button addTarget:self action:selector forControlEvents:UIControlEventTouchUpInside];
-    }];
+  
+    flipButton.adjustsImageWhenHighlighted = YES;
+    [flipButton setImage:[UIImage imageNamed:@"front"] forState:UIControlStateNormal];
+    [flipButton setImage:[UIImage imageNamed:@"front"] forState:UIControlStateHighlighted];
+    [flipButton setImage:[UIImage imageNamed:@"back"] forState:IBAFlipButtonControlStateFlipped];
+    [flipButton setImage:[UIImage imageNamed:@"back"] forState:IBAFlipButtonControlStateFlipped | UIControlStateHighlighted];
     
+    [flipButton addTarget:self action:@selector(barButtonPressed:forEvent:) forControlEvents:UIControlEventTouchUpInside];
+
     self.navigationItem.leftBarButtonItem = [[[UIBarButtonItem alloc] initWithCustomView:flipButton] autorelease];
+
+    // self.flipButton is configured mainly in the XIB, only the control state that IB doesn't support needs to be configured in code.
+    self.flipButton.animationDuration = 2.0;
+    self.flipButton.adjustsImageWhenHighlighted = YES;
+    [self.flipButton  setImage:[UIImage imageNamed:@"back"] forState:IBAFlipButtonControlStateFlipped];
+    [self.flipButton  setImage:[UIImage imageNamed:@"back"] forState:IBAFlipButtonControlStateFlipped | UIControlStateHighlighted];
     
+    [self.flipButton  setTitle:@"Back" forState:IBAFlipButtonControlStateFlipped];
+    [self.flipButton  setTitle:@"Back" forState:IBAFlipButtonControlStateFlipped | UIControlStateHighlighted];
+
+    [self.flipButton  setTitleColor:[UIColor greenColor] forState:IBAFlipButtonControlStateFlipped];
+    [self.flipButton  setTitleColor:[UIColor blueColor] forState:(IBAFlipButtonControlStateFlipped | UIControlStateHighlighted)];
     
-    [self.flipButton configureButtonsWithBlock:^(IBAFlipButtonSide side, UIButton *button) {
-        
-        SEL selector = (side == IBAFlipButtonSideBack ? @selector(backPressed:forEvent:) : @selector(frontPressed:forEvent:));
-        
-        NSString *imageName = (side == IBAFlipButtonSideBack ? @"back" : @"front");
-
-        [button setImage:[UIImage imageNamed:imageName] forState:UIControlStateNormal];
-        [button setTitle:imageName forState:UIControlStateNormal];
-        [button setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-        [button setTitleColor:[UIColor redColor] forState:UIControlStateSelected];
-        [button setContentEdgeInsets:UIEdgeInsetsMake(20, 20, 20, 20)];
-        [button setImageEdgeInsets:UIEdgeInsetsMake(10, 10, 10, 10)];
-
-        [button setShowsTouchWhenHighlighted:YES];
-        [button setAdjustsImageWhenDisabled:YES];
-        
-        button.imageView.layer.borderColor = [UIColor blueColor].CGColor;
-        button.imageView.layer.borderWidth = 1.0f;
-        button.titleLabel.layer.borderColor = [UIColor greenColor].CGColor;
-        button.titleLabel.layer.borderWidth = 1.0f;
-        
-        [button addTarget:self action:selector forControlEvents:UIControlEventTouchUpInside];
-    }];
+    [self.flipButton  setContentEdgeInsets:UIEdgeInsetsMake(20, 20, 20, 20)];
+    [self.flipButton  setImageEdgeInsets:UIEdgeInsetsMake(10, 10, 10, 10)];
 }
 
-- (void)barButtonBackPressed:(id)sender forEvent:(UIEvent *)event
+- (void)barButtonPressed:(IBAFlipButton *)sender forEvent:(UIEvent *)event
 {
-    NSLog(@"Bar Button Back Pressed");
+    NSLog(@"Bar Button Pressed, flipped? %@", sender.flipped ? @"YES" : @"NO");
 }
 
-- (void)barButtonFrontPressed:(id)sender forEvent:(UIEvent *)event
+- (IBAction)buttonPressed:(IBAFlipButton *)sender forEvent:(UIEvent *)event
 {
-    NSLog(@"Bar Button Front Pressed");    
-}
-
-
-- (void)backPressed:(id)sender forEvent:(UIEvent *)event
-{
-    NSLog(@"Button Back Pressed");
-}
-
-- (void)frontPressed:(id)sender forEvent:(UIEvent *)event
-{
-    NSLog(@"Button Front Pressed");    
-}
-
-- (IBAction)buttonPressed:(id)sender forEvent:(UIEvent *)event
-{
-    NSLog(@"Button Pressed");
+    NSLog(@"Button Pressed, flipped? %@", sender.flipped ? @"YES" : @"NO");
 }
 
 - (void)viewDidUnload
