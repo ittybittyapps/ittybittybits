@@ -53,6 +53,15 @@
 		A7286D8A138A1AFB00C12FCB /* NSMutableArray+IBAExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = A7286D88138A1AFB00C12FCB /* NSMutableArray+IBAExtensions.h */; };
 		A7286D8B138A1AFB00C12FCB /* NSMutableArray+IBAExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = A7286D89138A1AFB00C12FCB /* NSMutableArray+IBAExtensions.m */; };
 		A72ADC0D13CC54FB0052E2D4 /* IBAErrors.h in Headers */ = {isa = PBXBuildFile; fileRef = A72ADC0C13CC54FB0052E2D4 /* IBAErrors.h */; };
+		A7345F6A140CC026005ED52E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7B4DACC13679F5E00543D61 /* UIKit.framework */; };
+		A7345F6B140CC026005ED52E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7B4DABC1367991200543D61 /* Foundation.framework */; };
+		A7345F6C140CC026005ED52E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7B4DACF13679F5E00543D61 /* CoreGraphics.framework */; };
+		A7345F72140CC026005ED52E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A7345F70140CC026005ED52E /* InfoPlist.strings */; };
+		A7345F74140CC027005ED52E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A7345F73140CC027005ED52E /* main.m */; };
+		A7345F78140CC027005ED52E /* IBAFlipButtonSampleAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A7345F77140CC027005ED52E /* IBAFlipButtonSampleAppDelegate.m */; };
+		A7345F7B140CC027005ED52E /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = A7345F79140CC027005ED52E /* MainWindow.xib */; };
+		A7345F7E140CC027005ED52E /* IBAFlipButtonSampleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A7345F7D140CC027005ED52E /* IBAFlipButtonSampleViewController.m */; };
+		A7345F81140CC027005ED52E /* IBAFlipButtonSampleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A7345F7F140CC027005ED52E /* IBAFlipButtonSampleViewController.xib */; };
 		A7422E6814012A3600D9C54F /* IBANavigationBar.h in Headers */ = {isa = PBXBuildFile; fileRef = A7422E6614012A3600D9C54F /* IBANavigationBar.h */; };
 		A7422E6914012A3600D9C54F /* IBANavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = A7422E6714012A3600D9C54F /* IBANavigationBar.m */; };
 		A7422E711401331F00D9C54F /* UINavigationController+IBAExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = A7422E6F1401331F00D9C54F /* UINavigationController+IBAExtensions.h */; };
@@ -64,6 +73,11 @@
 		A7656EB91377DF50002FB968 /* IBADelimitedTextFileReaderTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A7656EB61377DF3C002FB968 /* IBADelimitedTextFileReaderTests.m */; };
 		A76C84DA13C1A13D00D2A866 /* IBATableViewAccessory.h in Headers */ = {isa = PBXBuildFile; fileRef = A76C84D813C1A13D00D2A866 /* IBATableViewAccessory.h */; };
 		A76C84DB13C1A13D00D2A866 /* IBATableViewAccessory.m in Sources */ = {isa = PBXBuildFile; fileRef = A76C84D913C1A13D00D2A866 /* IBATableViewAccessory.m */; };
+		A7708F13140DBD1B005FDA05 /* libIttyBittyBits.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A7B4DAB91367991200543D61 /* libIttyBittyBits.a */; };
+		A7708F17140DC29C005FDA05 /* back@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A7708F15140DC29C005FDA05 /* back@2x.png */; };
+		A7708F18140DC29C005FDA05 /* front@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A7708F16140DC29C005FDA05 /* front@2x.png */; };
+		A7708F1B140DC2C0005FDA05 /* back.png in Resources */ = {isa = PBXBuildFile; fileRef = A7708F19140DC2C0005FDA05 /* back.png */; };
+		A7708F1C140DC2C0005FDA05 /* front.png in Resources */ = {isa = PBXBuildFile; fileRef = A7708F1A140DC2C0005FDA05 /* front.png */; };
 		A772038D13FD59890094476D /* UIImage+IBAExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = A772038B13FD59890094476D /* UIImage+IBAExtensions.h */; };
 		A772038E13FD59890094476D /* UIImage+IBAExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = A772038C13FD59890094476D /* UIImage+IBAExtensions.m */; };
 		A772039913FE3A1F0094476D /* UIApplication+IBAExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = A772039713FE3A1F0094476D /* UIApplication+IBAExtensions.h */; };
@@ -147,6 +161,8 @@
 		A7C05856140C771600339F5B /* IBAViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = A7C05854140C771600339F5B /* IBAViewController.h */; };
 		A7C05857140C771600339F5B /* IBAViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A7C05855140C771600339F5B /* IBAViewController.m */; };
 		A7C05862140C9F7D00339F5B /* IBACarouselView.m in Sources */ = {isa = PBXBuildFile; fileRef = A7C05861140C9F7D00339F5B /* IBACarouselView.m */; };
+		A7C05865140CA04000339F5B /* IBAFlipButton.h in Headers */ = {isa = PBXBuildFile; fileRef = A7C05863140CA04000339F5B /* IBAFlipButton.h */; };
+		A7C05866140CA04000339F5B /* IBAFlipButton.m in Sources */ = {isa = PBXBuildFile; fileRef = A7C05864140CA04000339F5B /* IBAFlipButton.m */; };
 		A7C0DBDF13B1705E00860296 /* UIView+IBAExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = A7C0DBDD13B1705E00860296 /* UIView+IBAExtensions.h */; };
 		A7C0DBE013B1705E00860296 /* UIView+IBAExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = A7C0DBDE13B1705E00860296 /* UIView+IBAExtensions.m */; };
 		A7C0DBF713B195A800860296 /* IBAMath.m in Sources */ = {isa = PBXBuildFile; fileRef = A7C0DBF613B195A800860296 /* IBAMath.m */; };
@@ -181,6 +197,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		A7708F11140DBD15005FDA05 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A7B4DAB01367991100543D61 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A7B4DAB81367991200543D61;
+			remoteInfo = IttyBittyBits;
+		};
 		A7B4DB061367C40C00543D61 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = A7B4DAB01367991100543D61 /* Project object */;
@@ -238,11 +261,25 @@
 		A7286D88138A1AFB00C12FCB /* NSMutableArray+IBAExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSMutableArray+IBAExtensions.h"; path = "Foundation/NSMutableArray+IBAExtensions.h"; sourceTree = SOURCE_ROOT; };
 		A7286D89138A1AFB00C12FCB /* NSMutableArray+IBAExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSMutableArray+IBAExtensions.m"; path = "Foundation/NSMutableArray+IBAExtensions.m"; sourceTree = SOURCE_ROOT; };
 		A72ADC0C13CC54FB0052E2D4 /* IBAErrors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBAErrors.h; sourceTree = "<group>"; };
+		A7345F68140CC026005ED52E /* IBAFlipButtonSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IBAFlipButtonSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A7345F6F140CC026005ED52E /* IBAFlipButtonSample-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "IBAFlipButtonSample-Info.plist"; sourceTree = "<group>"; };
+		A7345F71140CC026005ED52E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		A7345F73140CC027005ED52E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		A7345F75140CC027005ED52E /* IBAFlipButtonSample-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "IBAFlipButtonSample-Prefix.pch"; sourceTree = "<group>"; };
+		A7345F76140CC027005ED52E /* IBAFlipButtonSampleAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IBAFlipButtonSampleAppDelegate.h; sourceTree = "<group>"; };
+		A7345F77140CC027005ED52E /* IBAFlipButtonSampleAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IBAFlipButtonSampleAppDelegate.m; sourceTree = "<group>"; };
+		A7345F7A140CC027005ED52E /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
+		A7345F7C140CC027005ED52E /* IBAFlipButtonSampleViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IBAFlipButtonSampleViewController.h; sourceTree = "<group>"; };
+		A7345F7D140CC027005ED52E /* IBAFlipButtonSampleViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IBAFlipButtonSampleViewController.m; sourceTree = "<group>"; };
+		A7345F80140CC027005ED52E /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/IBAFlipButtonSampleViewController.xib; sourceTree = "<group>"; };
+		A7345F8A140CC19A005ED52E /* Target-IBAFlipButtonSample-Debug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = "Target-IBAFlipButtonSample-Debug.xcconfig"; sourceTree = "<group>"; };
 		A7422E6614012A3600D9C54F /* IBANavigationBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBANavigationBar.h; sourceTree = "<group>"; };
 		A7422E6714012A3600D9C54F /* IBANavigationBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IBANavigationBar.m; sourceTree = "<group>"; };
 		A7422E6F1401331F00D9C54F /* UINavigationController+IBAExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+IBAExtensions.h"; sourceTree = "<group>"; };
 		A7422E701401331F00D9C54F /* UINavigationController+IBAExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+IBAExtensions.m"; sourceTree = "<group>"; };
 		A7541C94140CC25F0098586E /* Target-Samples-Shared.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Target-Samples-Shared.xcconfig"; sourceTree = "<group>"; };
+		A7541C9A140CC46F0098586E /* Target-IBAFlipButtonSample-Shared.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Target-IBAFlipButtonSample-Shared.xcconfig"; sourceTree = "<group>"; };
+		A7541C9B140CC4B50098586E /* Target-IBAFlipButtonSample-Release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = "Target-IBAFlipButtonSample-Release.xcconfig"; sourceTree = "<group>"; };
 		A7541C9C140CC4FB0098586E /* Target-Samples-Debug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = "Target-Samples-Debug.xcconfig"; sourceTree = "<group>"; };
 		A7541C9D140CC50C0098586E /* Target-Samples-Release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = "Target-Samples-Release.xcconfig"; sourceTree = "<group>"; };
 		A75FC05913BD919D00C7AE82 /* NSDate+IBAExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+IBAExtensions.h"; sourceTree = "<group>"; };
@@ -253,6 +290,10 @@
 		A7656EB61377DF3C002FB968 /* IBADelimitedTextFileReaderTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IBADelimitedTextFileReaderTests.m; sourceTree = "<group>"; };
 		A76C84D813C1A13D00D2A866 /* IBATableViewAccessory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBATableViewAccessory.h; sourceTree = "<group>"; };
 		A76C84D913C1A13D00D2A866 /* IBATableViewAccessory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IBATableViewAccessory.m; sourceTree = "<group>"; };
+		A7708F15140DC29C005FDA05 /* back@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "back@2x.png"; sourceTree = "<group>"; };
+		A7708F16140DC29C005FDA05 /* front@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "front@2x.png"; sourceTree = "<group>"; };
+		A7708F19140DC2C0005FDA05 /* back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = back.png; sourceTree = "<group>"; };
+		A7708F1A140DC2C0005FDA05 /* front.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = front.png; sourceTree = "<group>"; };
 		A772038B13FD59890094476D /* UIImage+IBAExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+IBAExtensions.h"; sourceTree = "<group>"; };
 		A772038C13FD59890094476D /* UIImage+IBAExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+IBAExtensions.m"; sourceTree = "<group>"; };
 		A772039713FE3A1F0094476D /* UIApplication+IBAExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIApplication+IBAExtensions.h"; sourceTree = "<group>"; };
@@ -344,6 +385,8 @@
 		A7C05855140C771600339F5B /* IBAViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IBAViewController.m; sourceTree = "<group>"; };
 		A7C05860140C9F7D00339F5B /* IBACarouselView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBACarouselView.h; sourceTree = "<group>"; };
 		A7C05861140C9F7D00339F5B /* IBACarouselView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IBACarouselView.m; sourceTree = "<group>"; };
+		A7C05863140CA04000339F5B /* IBAFlipButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = IBAFlipButton.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		A7C05864140CA04000339F5B /* IBAFlipButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = IBAFlipButton.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		A7C0DBDD13B1705E00860296 /* UIView+IBAExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+IBAExtensions.h"; sourceTree = "<group>"; };
 		A7C0DBDE13B1705E00860296 /* UIView+IBAExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+IBAExtensions.m"; sourceTree = "<group>"; };
 		A7C0DBF613B195A800860296 /* IBAMath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IBAMath.m; sourceTree = "<group>"; };
@@ -376,6 +419,17 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		A7345F65140CC026005ED52E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A7708F13140DBD1B005FDA05 /* libIttyBittyBits.a in Frameworks */,
+				A7345F6A140CC026005ED52E /* UIKit.framework in Frameworks */,
+				A7345F6B140CC026005ED52E /* Foundation.framework in Frameworks */,
+				A7345F6C140CC026005ED52E /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		A7B4DAB61367991200543D61 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -463,12 +517,48 @@
 			path = MapKit;
 			sourceTree = "<group>";
 		};
+		A7345F6D140CC026005ED52E /* Samples */ = {
+			isa = PBXGroup;
+			children = (
+				A7345F87140CC054005ED52E /* IBAFlipButtonSample */,
+			);
+			name = Samples;
+			path = ../samples;
+			sourceTree = "<group>";
+		};
+		A7345F6E140CC026005ED52E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A7345F6F140CC026005ED52E /* IBAFlipButtonSample-Info.plist */,
+				A7345F70140CC026005ED52E /* InfoPlist.strings */,
+				A7345F73140CC027005ED52E /* main.m */,
+				A7345F75140CC027005ED52E /* IBAFlipButtonSample-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A7345F87140CC054005ED52E /* IBAFlipButtonSample */ = {
+			isa = PBXGroup;
+			children = (
+				A7708F14140DC132005FDA05 /* Resources */,
+				A7345F76140CC027005ED52E /* IBAFlipButtonSampleAppDelegate.h */,
+				A7345F77140CC027005ED52E /* IBAFlipButtonSampleAppDelegate.m */,
+				A7345F79140CC027005ED52E /* MainWindow.xib */,
+				A7345F7C140CC027005ED52E /* IBAFlipButtonSampleViewController.h */,
+				A7345F7D140CC027005ED52E /* IBAFlipButtonSampleViewController.m */,
+				A7345F7F140CC027005ED52E /* IBAFlipButtonSampleViewController.xib */,
+				A7345F6E140CC026005ED52E /* Supporting Files */,
+			);
+			path = IBAFlipButtonSample;
+			sourceTree = "<group>";
+		};
 		A7345F88140CC146005ED52E /* Samples */ = {
 			isa = PBXGroup;
 			children = (
 				A7541C94140CC25F0098586E /* Target-Samples-Shared.xcconfig */,
 				A7541C9C140CC4FB0098586E /* Target-Samples-Debug.xcconfig */,
 				A7541C9D140CC50C0098586E /* Target-Samples-Release.xcconfig */,
+				A7541C93140CC21D0098586E /* IBAFlipButtonSample */,
 			);
 			path = Samples;
 			sourceTree = "<group>";
@@ -478,6 +568,27 @@
 			children = (
 			);
 			name = Tests;
+			sourceTree = "<group>";
+		};
+		A7541C93140CC21D0098586E /* IBAFlipButtonSample */ = {
+			isa = PBXGroup;
+			children = (
+				A7541C9A140CC46F0098586E /* Target-IBAFlipButtonSample-Shared.xcconfig */,
+				A7345F8A140CC19A005ED52E /* Target-IBAFlipButtonSample-Debug.xcconfig */,
+				A7541C9B140CC4B50098586E /* Target-IBAFlipButtonSample-Release.xcconfig */,
+			);
+			name = IBAFlipButtonSample;
+			sourceTree = "<group>";
+		};
+		A7708F14140DC132005FDA05 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				A7708F19140DC2C0005FDA05 /* back.png */,
+				A7708F15140DC29C005FDA05 /* back@2x.png */,
+				A7708F1A140DC2C0005FDA05 /* front.png */,
+				A7708F16140DC29C005FDA05 /* front@2x.png */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 		A7808BD413D2D73400F76DB1 /* UIKit */ = {
@@ -497,6 +608,8 @@
 				A774CADD13B2E0B3002B2FA1 /* IBAUIKit.m */,
 				A706A6EB13821B8300429203 /* IBAActionSheet.h */,
 				A706A6EC13821B8300429203 /* IBAActionSheet.m */,
+				A7C05863140CA04000339F5B /* IBAFlipButton.h */,
+				A7C05864140CA04000339F5B /* IBAFlipButton.m */,
 				A7C2FB9613B3073F00F774CA /* IBAGradientButton.h */,
 				A7C2FB9713B3073F00F774CA /* IBAGradientButton.m */,
 				A7422E6614012A3600D9C54F /* IBANavigationBar.h */,
@@ -607,6 +720,7 @@
 			isa = PBXGroup;
 			children = (
 				A7B4DACA13679F5D00543D61 /* IttyBittyBitsTests.app */,
+				A7345F68140CC026005ED52E /* IBAFlipButtonSample.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -849,12 +963,31 @@
 				75C832441401475C00F476B9 /* UIGestureRecognizer+IBAExtensions.h in Headers */,
 				A7ACE49B1405CE1700CC2138 /* IBAStack.h in Headers */,
 				A7C05856140C771600339F5B /* IBAViewController.h in Headers */,
+				A7C05865140CA04000339F5B /* IBAFlipButton.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		A7345F67140CC026005ED52E /* IBAFlipButtonSample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A7345F85140CC027005ED52E /* Build configuration list for PBXNativeTarget "IBAFlipButtonSample" */;
+			buildPhases = (
+				A7345F64140CC026005ED52E /* Sources */,
+				A7345F65140CC026005ED52E /* Frameworks */,
+				A7345F66140CC026005ED52E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A7708F12140DBD15005FDA05 /* PBXTargetDependency */,
+			);
+			name = IBAFlipButtonSample;
+			productName = IBAFlipButtonSample;
+			productReference = A7345F68140CC026005ED52E /* IBAFlipButtonSample.app */;
+			productType = "com.apple.product-type.application";
+		};
 		A7B4DAB81367991200543D61 /* IttyBittyBits */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = A7B4DAC31367991200543D61 /* Build configuration list for PBXNativeTarget "IttyBittyBits" */;
@@ -897,6 +1030,7 @@
 		A7B4DAB01367991100543D61 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastUpgradeCheck = 0420;
 				ORGANIZATIONNAME = "Itty Bitty Apps Pty. Ltd.";
 			};
 			buildConfigurationList = A7B4DAB31367991100543D61 /* Build configuration list for PBXProject "IttyBittyBits" */;
@@ -913,11 +1047,26 @@
 			targets = (
 				A7B4DAB81367991200543D61 /* IttyBittyBits */,
 				A7B4DAC913679F5D00543D61 /* IttyBittyBitsTests */,
+				A7345F67140CC026005ED52E /* IBAFlipButtonSample */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		A7345F66140CC026005ED52E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A7345F72140CC026005ED52E /* InfoPlist.strings in Resources */,
+				A7345F7B140CC027005ED52E /* MainWindow.xib in Resources */,
+				A7345F81140CC027005ED52E /* IBAFlipButtonSampleViewController.xib in Resources */,
+				A7708F17140DC29C005FDA05 /* back@2x.png in Resources */,
+				A7708F18140DC29C005FDA05 /* front@2x.png in Resources */,
+				A7708F1B140DC2C0005FDA05 /* back.png in Resources */,
+				A7708F1C140DC2C0005FDA05 /* front.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		A7B4DAC813679F5D00543D61 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -945,6 +1094,16 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		A7345F64140CC026005ED52E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A7345F74140CC027005ED52E /* main.m in Sources */,
+				A7345F78140CC027005ED52E /* IBAFlipButtonSampleAppDelegate.m in Sources */,
+				A7345F7E140CC027005ED52E /* IBAFlipButtonSampleViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		A7B4DAB51367991200543D61 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -1012,6 +1171,7 @@
 				75C832451401475C00F476B9 /* UIGestureRecognizer+IBAExtensions.m in Sources */,
 				A7ACE49C1405CE1700CC2138 /* IBAStack.m in Sources */,
 				A7C05857140C771600339F5B /* IBAViewController.m in Sources */,
+				A7C05866140CA04000339F5B /* IBAFlipButton.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1034,6 +1194,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		A7708F12140DBD15005FDA05 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A7B4DAB81367991200543D61 /* IttyBittyBits */;
+			targetProxy = A7708F11140DBD15005FDA05 /* PBXContainerItemProxy */;
+		};
 		A7B4DB071367C40C00543D61 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = A7B4DAB81367991200543D61 /* IttyBittyBits */;
@@ -1042,6 +1207,30 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		A7345F70140CC026005ED52E /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A7345F71140CC026005ED52E /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		A7345F79140CC027005ED52E /* MainWindow.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A7345F7A140CC027005ED52E /* en */,
+			);
+			name = MainWindow.xib;
+			sourceTree = "<group>";
+		};
+		A7345F7F140CC027005ED52E /* IBAFlipButtonSampleViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A7345F80140CC027005ED52E /* en */,
+			);
+			name = IBAFlipButtonSampleViewController.xib;
+			sourceTree = "<group>";
+		};
 		A7B4DAD413679F5E00543D61 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -1089,6 +1278,26 @@
 				WRAPPER_EXTENSION = app;
 			};
 			name = UAT;
+		};
+		A7345F82140CC027005ED52E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A7345F8A140CC19A005ED52E /* Target-IBAFlipButtonSample-Debug.xcconfig */;
+			buildSettings = {
+			};
+			name = Debug;
+		};
+		A7345F83140CC027005ED52E /* UAT */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = UAT;
+		};
+		A7345F84140CC027005ED52E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A7541C9B140CC4B50098586E /* Target-IBAFlipButtonSample-Release.xcconfig */;
+			buildSettings = {
+			};
+			name = Release;
 		};
 		A7B4DAC11367991200543D61 /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -1168,6 +1377,16 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		A7345F85140CC027005ED52E /* Build configuration list for PBXNativeTarget "IBAFlipButtonSample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A7345F82140CC027005ED52E /* Debug */,
+				A7345F83140CC027005ED52E /* UAT */,
+				A7345F84140CC027005ED52E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		A7B4DAB31367991100543D61 /* Build configuration list for PBXProject "IttyBittyBits" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
