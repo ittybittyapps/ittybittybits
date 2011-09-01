@@ -15,7 +15,7 @@
 
 @implementation IBAFlipButtonSampleViewController
 
-IBA_SYNTHESIZE(flipButton);
+IBA_SYNTHESIZE(flipButton, flipButton2);
 
 - (void)didReceiveMemoryWarning
 {
@@ -60,6 +60,16 @@ IBA_SYNTHESIZE(flipButton);
     
     [self.flipButton  setContentEdgeInsets:UIEdgeInsetsMake(20, 20, 20, 20)];
     [self.flipButton  setImageEdgeInsets:UIEdgeInsetsMake(10, 10, 10, 10)];
+    
+    // self.flipButton2 is configured mainly in the XIB
+    self.flipButton2.flipType = IBAFlipButtonFlipTypeImageOnly;
+    [self.flipButton2  setImage:[UIImage imageNamed:@"back"] forState:IBAFlipButtonControlStateFlipped];
+    [self.flipButton2  setImage:[UIImage imageNamed:@"back"] forState:IBAFlipButtonControlStateFlipped | UIControlStateHighlighted];
+
+    [self.flipButton2  setTitle:@"Back" forState:IBAFlipButtonControlStateFlipped];
+    [self.flipButton2  setTitle:@"Back" forState:IBAFlipButtonControlStateFlipped | UIControlStateHighlighted];
+
+    
 }
 
 - (void)barButtonPressed:(IBAFlipButton *)sender forEvent:(UIEvent *)event

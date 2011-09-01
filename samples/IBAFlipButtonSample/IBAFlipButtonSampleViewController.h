@@ -13,5 +13,6 @@
 @interface IBAFlipButtonSampleViewController : UIViewController
 
 @property (nonatomic, retain) IBOutlet IBAFlipButton *flipButton;
+@property (nonatomic, retain) IBOutlet IBAFlipButton *flipButton2;
 
 @end

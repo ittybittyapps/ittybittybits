@@ -30,7 +30,7 @@
     UIControlState customState;
 }
 
-IBA_SYNTHESIZE(animationDuration, flipDirection);
+IBA_SYNTHESIZE(animationDuration, flipDirection, flipType);
 
 #pragma mark - Private Methods
 
@@ -119,8 +119,10 @@ IBA_SYNTHESIZE(animationDuration, flipDirection);
     
     if (animated)
     {
+        UIView *flipView = (self.flipType == IBAFlipButtonFlipTypeImageOnly ? self.imageView : self);
+
         // do the flip animation
-        [UIView transitionWithView:self
+        [UIView transitionWithView:flipView
                           duration:self.animationDuration
                            options:(self.flipDirection == IBAFlipButtonDirectionFromLeft ?  UIViewAnimationOptionTransitionFlipFromLeft : UIViewAnimationOptionTransitionFlipFromRight) | UIViewAnimationOptionAllowAnimatedContent
                         animations:^{

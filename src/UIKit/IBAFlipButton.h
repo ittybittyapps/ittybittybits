@@ -19,12 +19,28 @@
 
 #import <UIKit/UIKit.h>
 
+/*!
+ \brief     The type of flip to perform.
+ */
+typedef enum 
+{
+    
+    IBAFlipButtonFlipTypeDefault,   //!< Flip the entire button over.
+    IBAFlipButtonFlipTypeImageOnly  //!< Flip only the image on the button.
+} IBAFlipButtonFlipType;
+
+/*!
+ \brief     The direction in which to flip the button.
+ */
 typedef enum
 {
-    IBAFlipButtonDirectionFromLeft,
-    IBAFlipButtonDirectionFromRight
+    IBAFlipButtonDirectionFromLeft,     //!< Flip from the left edge
+    IBAFlipButtonDirectionFromRight     //!< Flip from the right edge
 } IBAFlipButtonDirection;
 
+/*!
+ \brief     Additional UIControlStates for the IBAFlipButton.
+ */
 typedef enum
 {
     IBAFlipButtonControlStateFlipped = ((1 << 16 ) & UIControlStateApplication)
@@ -38,6 +54,7 @@ typedef enum
 + (IBAFlipButton *)flipButton;
 + (IBAFlipButton *)flipButtonWithFrame:(CGRect)frame;
 
+@property (nonatomic, assign) IBAFlipButtonFlipType flipType;
 @property (nonatomic, assign) NSTimeInterval animationDuration;
 @property (nonatomic, assign) IBAFlipButtonDirection flipDirection;
 @property (nonatomic, assign) BOOL flipped;
