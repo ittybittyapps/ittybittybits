@@ -5,7 +5,7 @@
 //  Created by Oliver Jones on 17/06/11.
 //  Copyright 2011 Itty Bitty Apps Pty. Ltd. All rights reserved.
 //
-OTHER_LDFLAGS = -ObjC
+OTHER_LDFLAGS = -ObjC -all_load
 PRODUCT_NAME = $(TARGET_NAME)
 ALWAYS_SEARCH_USER_PATHS = NO
 GCC_PRECOMPILE_PREFIX_HEADER = YES
