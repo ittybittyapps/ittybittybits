@@ -28,3 +28,4 @@ This library also contains modified versions of code copyright the following aut
     Sam Vermette
     Erica Sadun
     Kevin O'Neill
+    Robert Penner

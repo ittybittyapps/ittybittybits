@@ -21,6 +21,7 @@
 #import "IBABinding.h"
 #import "IBABindingManager.h"
 #import "IBADebug.h"
+#import "IBAEasing.h"
 #import "IBADelimitedTextFileReader.h"
 #import "IBADelimitedTextFileReaderDelegate.h"
 #import "IBAErrors.h"

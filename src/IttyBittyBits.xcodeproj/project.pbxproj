@@ -66,6 +66,8 @@
 		A7422E6914012A3600D9C54F /* IBANavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = A7422E6714012A3600D9C54F /* IBANavigationBar.m */; };
 		A7422E711401331F00D9C54F /* UINavigationController+IBAExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = A7422E6F1401331F00D9C54F /* UINavigationController+IBAExtensions.h */; };
 		A7422E721401331F00D9C54F /* UINavigationController+IBAExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = A7422E701401331F00D9C54F /* UINavigationController+IBAExtensions.m */; };
+		A749CF34140F4F1100751EF5 /* IBAEasing.m in Sources */ = {isa = PBXBuildFile; fileRef = A749CF33140F4F1100751EF5 /* IBAEasing.m */; };
+		A749CF36140F4F6A00751EF5 /* IBAEasing.h in Headers */ = {isa = PBXBuildFile; fileRef = A749CF35140F4F6A00751EF5 /* IBAEasing.h */; };
 		A75FC05B13BD919D00C7AE82 /* NSDate+IBAExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = A75FC05913BD919D00C7AE82 /* NSDate+IBAExtensions.h */; };
 		A75FC05C13BD919D00C7AE82 /* NSDate+IBAExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = A75FC05A13BD919D00C7AE82 /* NSDate+IBAExtensions.m */; };
 		A7652BD213E581530023D4B3 /* IBATiledImageView.h in Headers */ = {isa = PBXBuildFile; fileRef = A7652BD013E581530023D4B3 /* IBATiledImageView.h */; };
@@ -277,6 +279,8 @@
 		A7422E6714012A3600D9C54F /* IBANavigationBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IBANavigationBar.m; sourceTree = "<group>"; };
 		A7422E6F1401331F00D9C54F /* UINavigationController+IBAExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+IBAExtensions.h"; sourceTree = "<group>"; };
 		A7422E701401331F00D9C54F /* UINavigationController+IBAExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+IBAExtensions.m"; sourceTree = "<group>"; };
+		A749CF33140F4F1100751EF5 /* IBAEasing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IBAEasing.m; sourceTree = "<group>"; };
+		A749CF35140F4F6A00751EF5 /* IBAEasing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBAEasing.h; sourceTree = "<group>"; };
 		A7541C94140CC25F0098586E /* Target-Samples-Shared.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Target-Samples-Shared.xcconfig"; sourceTree = "<group>"; };
 		A7541C9A140CC46F0098586E /* Target-IBAFlipButtonSample-Shared.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Target-IBAFlipButtonSample-Shared.xcconfig"; sourceTree = "<group>"; };
 		A7541C9B140CC4B50098586E /* Target-IBAFlipButtonSample-Release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = "Target-IBAFlipButtonSample-Release.xcconfig"; sourceTree = "<group>"; };
@@ -804,6 +808,8 @@
 				A707FD73137761570029FA76 /* IBADelimitedTextFileReader.m */,
 				A707FD77137776AB0029FA76 /* IBADelimitedTextFileReaderDelegate.h */,
 				A7D58C5B1378DAE30041BBEB /* IBADelimitedTextFileReaderDelegate.m */,
+				A749CF35140F4F6A00751EF5 /* IBAEasing.h */,
+				A749CF33140F4F1100751EF5 /* IBAEasing.m */,
 				A72ADC0C13CC54FB0052E2D4 /* IBAErrors.h */,
 				A79602121373D50700BA29E5 /* IBAFoundation.h */,
 				A707FD7913777B280029FA76 /* IBAInputStreamLineReader.h */,
@@ -964,6 +970,7 @@
 				A7ACE49B1405CE1700CC2138 /* IBAStack.h in Headers */,
 				A7C05856140C771600339F5B /* IBAViewController.h in Headers */,
 				A7C05865140CA04000339F5B /* IBAFlipButton.h in Headers */,
+				A749CF36140F4F6A00751EF5 /* IBAEasing.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1172,6 +1179,7 @@
 				A7ACE49C1405CE1700CC2138 /* IBAStack.m in Sources */,
 				A7C05857140C771600339F5B /* IBAViewController.m in Sources */,
 				A7C05866140CA04000339F5B /* IBAFlipButton.m in Sources */,
+				A749CF34140F4F1100751EF5 /* IBAEasing.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
