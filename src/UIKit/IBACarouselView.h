@@ -57,11 +57,6 @@
 @property (nonatomic, assign) NSTimeInterval throwDuration;
 
 /*!
- \brief     The frames to per second to render the throw animation at.  Defaults to 60fps.
- */
-@property (nonatomic, assign) CGFloat throwFramesPerSecond;
-
-/*!
  \brief      A factor to multiply the throw velocity with.  Values higher than one increase velocity; lower values decrease velocity. Defaults to 0.5.
  */
 @property (assign, nonatomic) CGFloat throwVelocityFactor;

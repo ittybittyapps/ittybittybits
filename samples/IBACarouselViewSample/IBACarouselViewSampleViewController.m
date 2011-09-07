@@ -19,8 +19,9 @@ static CGFloat MyCustomEasingFunction(NSTimeInterval t, CGFloat b, CGFloat c, NS
 
 @implementation IBACarouselViewSampleViewController
 {
-    NSCache *imageViewCache1;
-    NSCache *imageViewCache2;
+    NSCache *imageCache;
+    UIImageView *imageView1;
+    UIImageView *imageView2;
 }
 
 IBA_SYNTHESIZE(carousel1, carousel2);
@@ -29,8 +30,9 @@ IBA_SYNTHESIZE(carousel1, carousel2);
 {
     if ((self = [super initWithCoder:aDecoder]))
     {
-        imageViewCache1 = [[NSCache alloc] init];
-        imageViewCache2 = [[NSCache alloc] init];
+        imageCache = [[NSCache alloc] init];
+        imageView1 = [[UIImageView alloc] init];
+        imageView2 = [[UIImageView alloc] init];
     }
     
     return self;
@@ -41,8 +43,10 @@ IBA_SYNTHESIZE(carousel1, carousel2);
     IBA_RELEASE_PROPERTY(carousel1);
     IBA_RELEASE_PROPERTY(carousel2);
     
-    IBA_RELEASE(imageViewCache1);
-    IBA_RELEASE(imageViewCache2);
+    IBA_RELEASE(imageCache);
+    IBA_RELEASE(imageView1);
+    IBA_RELEASE(imageView2);
+    
     [super dealloc];
 }
 
@@ -91,10 +95,11 @@ IBA_SYNTHESIZE(carousel1, carousel2);
  */
 - (UIView *)carouselView:(IBACarouselView *)carouselView viewForItemAtIndex:(NSUInteger)index
 {
-    NSCache *cache = carouselView.tag == 1 ? imageViewCache1 : imageViewCache2;
+    UIImageView *imageView = carouselView.tag == 1 ? imageView1 : imageView2;
 
-    UIImageView *view = [cache objectForKey:IBAIntToNumber(index)];
-    if (view == nil)
+    NSNumber *key = IBAIntToNumber(index);
+    UIImage *image = [imageCache objectForKey:key];
+    if (image == nil)
     { 
         NSString *filename = [NSString stringWithFormat:@"Seq_v04_640x378_%02d", index + 1];
         NSString *path = [[NSBundle mainBundle] pathForResource:filename ofType:@"jpg"];
@@ -103,14 +108,14 @@ IBA_SYNTHESIZE(carousel1, carousel2);
         NSData *data = [NSData dataWithContentsOfMappedFile:path];
         IBAAssertNotNil(data);
         
-        UIImage *image = [UIImage imageWithData:data];
+        image = [UIImage imageWithData:data];
         IBAAssertNotNil(image);
         
-        view = [[[UIImageView alloc] initWithImage:image] autorelease];
-        [cache setObject:view forKey:IBAIntToNumber(index)];
+        [imageCache setObject:image forKey:key];
     }
     
-    return view;
+    imageView.image = image;
+    return imageView;
 }
 
 @end

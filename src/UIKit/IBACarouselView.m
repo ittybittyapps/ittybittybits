@@ -19,6 +19,7 @@
 
 #import "IBACarouselView.h"
 #import "../Foundation/IBAFoundation.h"
+#import "../CoreAnimation/IBACoreAnimation.h"
 
 @interface IBACarouselView ()
 - (id)commonInitialization NS_RETURNS_RETAINED;
@@ -32,10 +33,10 @@
 @implementation IBACarouselView
 {
     CGPoint lastTranslation;
-    NSTimer *spinTimer;
+    CADisplayLink *spinTimer;
 }
 
-IBA_SYNTHESIZE(dataSource, throwDuration, throwVelocityFactor, minimumThrowVelocity, currentRotation, easingFunction, throwFramesPerSecond);
+IBA_SYNTHESIZE(dataSource, throwDuration, throwVelocityFactor, minimumThrowVelocity, currentRotation, easingFunction);
 
 #pragma mark - Private Methods
 
@@ -50,7 +51,6 @@ IBA_SYNTHESIZE(dataSource, throwDuration, throwVelocityFactor, minimumThrowVeloc
     self.throwVelocityFactor = 0.25f;
     self.minimumThrowVelocity = 5.0f;
     self.easingFunction = &IBACubicEaseOut;
-    self.throwFramesPerSecond = 60.0;
     
     return self;
 }
@@ -154,12 +154,11 @@ IBA_SYNTHESIZE(dataSource, throwDuration, throwVelocityFactor, minimumThrowVeloc
     CGFloat throwDistance = (velocity * duration);
     CGFloat startRotation = self.currentRotation;
     
-    NSDate *start = [NSDate date];
+    CFTimeInterval start = CACurrentMediaTime();
     
     IBA_BLOCK_WEAK IBACarouselView *weakself = self;
-    spinTimer = [[NSTimer ibaScheduledTimerWithTimeInterval:1.0/self.throwFramesPerSecond repeats:YES usingBlock:^(NSTimer *timer) {
-        
-        NSTimeInterval elapsedTime = fabs([start timeIntervalSinceNow]);
+    spinTimer = [[CADisplayLink ibaDisplayLinkWithBlock:^(CADisplayLink *displayLink) {
+        CFTimeInterval elapsedTime = displayLink.timestamp - start;
         
         weakself.currentRotation = weakself.easingFunction(elapsedTime, startRotation, throwDistance, duration);
         if (elapsedTime >= duration)
@@ -169,6 +168,8 @@ IBA_SYNTHESIZE(dataSource, throwDuration, throwVelocityFactor, minimumThrowVeloc
         
         [weakself setNeedsLayout];
     }] retain];
+
+    [spinTimer addToRunLoop:[NSRunLoop mainRunLoop] forMode:NSDefaultRunLoopMode];
 }
 
 /*!
@@ -186,22 +187,23 @@ IBA_SYNTHESIZE(dataSource, throwDuration, throwVelocityFactor, minimumThrowVeloc
     [self stopSpin];
 }
 
-- (void)setCurrentRotation:(CGFloat)currentRotation
-{
-    currentRotation_ = currentRotation;
-}
 /*!
  */
 - (void)layoutSubviews
 {
     UIView *view = [self viewForRotation:self.currentRotation];
     view.frame = CGRectMake(0, 0, self.bounds.size.width, self.bounds.size.height);
-    if ([self.subviews count] > 0)
+
+    // Only insert the view in the view heirarchy if it isn't already there.
+    if (view.superview != self)
     {
-        [[self.subviews objectAtIndex:0] removeFromSuperview];
+        if ([self.subviews count] > 0)
+        {
+            [[self.subviews objectAtIndex:0] removeFromSuperview];
+        }
+        
+        [self addSubview:view];
     }
-    
-    [self addSubview:view];
 }
 
 /*!

@@ -43,6 +43,9 @@
 		A71F423113B99BEC001FD43D /* NSExpressionDescription+IBAExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = A71F422F13B99BEC001FD43D /* NSExpressionDescription+IBAExtensions.m */; };
 		A71F423413B99F47001FD43D /* NSManagedObjectContext+IBAExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = A71F423213B99F46001FD43D /* NSManagedObjectContext+IBAExtensions.h */; };
 		A71F423513B99F47001FD43D /* NSManagedObjectContext+IBAExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = A71F423313B99F46001FD43D /* NSManagedObjectContext+IBAExtensions.m */; };
+		A721B2C214173B9500BC9E23 /* CADisplayLink+IBAExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = A721B2C014173B9500BC9E23 /* CADisplayLink+IBAExtensions.h */; };
+		A721B2C314173B9500BC9E23 /* CADisplayLink+IBAExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = A721B2C114173B9500BC9E23 /* CADisplayLink+IBAExtensions.m */; };
+		A721B2C614173ED600BC9E23 /* IBACoreAnimation.h in Headers */ = {isa = PBXBuildFile; fileRef = A721B2C414173ED600BC9E23 /* IBACoreAnimation.h */; };
 		A722FA43137B73730066CC1A /* IBAUIKit.h in Headers */ = {isa = PBXBuildFile; fileRef = A722FA42137B73730066CC1A /* IBAUIKit.h */; };
 		A722FA46137B77550066CC1A /* UIBarButtonItem+IBAFactories.h in Headers */ = {isa = PBXBuildFile; fileRef = A722FA44137B77550066CC1A /* UIBarButtonItem+IBAFactories.h */; };
 		A722FA47137B77550066CC1A /* UIBarButtonItem+IBAFactories.m in Sources */ = {isa = PBXBuildFile; fileRef = A722FA45137B77550066CC1A /* UIBarButtonItem+IBAFactories.m */; };
@@ -356,6 +359,9 @@
 		A71F422F13B99BEC001FD43D /* NSExpressionDescription+IBAExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSExpressionDescription+IBAExtensions.m"; sourceTree = "<group>"; };
 		A71F423213B99F46001FD43D /* NSManagedObjectContext+IBAExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSManagedObjectContext+IBAExtensions.h"; sourceTree = "<group>"; };
 		A71F423313B99F46001FD43D /* NSManagedObjectContext+IBAExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSManagedObjectContext+IBAExtensions.m"; sourceTree = "<group>"; };
+		A721B2C014173B9500BC9E23 /* CADisplayLink+IBAExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CADisplayLink+IBAExtensions.h"; sourceTree = "<group>"; };
+		A721B2C114173B9500BC9E23 /* CADisplayLink+IBAExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CADisplayLink+IBAExtensions.m"; sourceTree = "<group>"; };
+		A721B2C414173ED600BC9E23 /* IBACoreAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBACoreAnimation.h; sourceTree = "<group>"; };
 		A722FA42137B73730066CC1A /* IBAUIKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IBAUIKit.h; path = UIKit/IBAUIKit.h; sourceTree = SOURCE_ROOT; };
 		A722FA44137B77550066CC1A /* UIBarButtonItem+IBAFactories.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIBarButtonItem+IBAFactories.h"; path = "UIKit/UIBarButtonItem+IBAFactories.h"; sourceTree = SOURCE_ROOT; };
 		A722FA45137B77550066CC1A /* UIBarButtonItem+IBAFactories.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIBarButtonItem+IBAFactories.m"; path = "UIKit/UIBarButtonItem+IBAFactories.m"; sourceTree = SOURCE_ROOT; };
@@ -737,6 +743,16 @@
 			path = MapKit;
 			sourceTree = "<group>";
 		};
+		A721B2BE14173B5F00BC9E23 /* CoreAnimation */ = {
+			isa = PBXGroup;
+			children = (
+				A721B2C414173ED600BC9E23 /* IBACoreAnimation.h */,
+				A721B2C014173B9500BC9E23 /* CADisplayLink+IBAExtensions.h */,
+				A721B2C114173B9500BC9E23 /* CADisplayLink+IBAExtensions.m */,
+			);
+			path = CoreAnimation;
+			sourceTree = "<group>";
+		};
 		A7345F6D140CC026005ED52E /* Samples */ = {
 			isa = PBXGroup;
 			children = (
@@ -1095,6 +1111,7 @@
 		A7B4DABE1367991200543D61 /* Src */ = {
 			isa = PBXGroup;
 			children = (
+				A721B2BE14173B5F00BC9E23 /* CoreAnimation */,
 				751C605413B1CB1B00447BB4 /* CoreData */,
 				A7B10ACB138652D300C8A672 /* CoreLocation */,
 				A79602161373E41E00BA29E5 /* CoreGraphics */,
@@ -1315,6 +1332,8 @@
 				A7C05856140C771600339F5B /* IBAViewController.h in Headers */,
 				A7C05865140CA04000339F5B /* IBAFlipButton.h in Headers */,
 				A749CF36140F4F6A00751EF5 /* IBAEasing.h in Headers */,
+				A721B2C214173B9500BC9E23 /* CADisplayLink+IBAExtensions.h in Headers */,
+				A721B2C614173ED600BC9E23 /* IBACoreAnimation.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1636,6 +1655,7 @@
 				A7C05866140CA04000339F5B /* IBAFlipButton.m in Sources */,
 				A749CF34140F4F1100751EF5 /* IBAEasing.m in Sources */,
 				A749CFCC140F66C300751EF5 /* IBACarouselView.m in Sources */,
+				A721B2C314173B9500BC9E23 /* CADisplayLink+IBAExtensions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
