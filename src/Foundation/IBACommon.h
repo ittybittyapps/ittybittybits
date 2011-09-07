@@ -214,6 +214,26 @@
 #define IBA_HAS_FLAG(flags, flag) (((flags) & (flag)) != 0)
 
 /*!
+ \def       IBA_ADD_FLAG
+ \brief     Adds a \flag to an existing set of \a flags and returns the new combined value.
+ */
+#define IBA_ADD_FLAG(flags, flag) ((flags) | (flag))
+
+/*!
+ \def       IBA_ADD_FLAG
+ \brief     Removes a \flag from an existing set of \a flags and returns the new value.
+ */
+#define IBA_DEL_FLAG(flags, flag) ((flags) & (~(flag)))
+
+/*!
+ \def       IBA_SET_FLAG
+ \brief     Sets or unsets a \flag from an existing set of \a flags and returns the new value.
+ \param     set     If true then sets the flag in the flagset; otherwise unsets the flag.
+ */
+#define IBA_SET_FLAG(flags, flag, set) ((set) ? IBA_ADD_FLAG((flags), (flag)) : IBA_DEL_FLAG((flags), (flag)))
+
+
+/*!
  \def       IBA_NSDICTIONARY
  \brief     Helper macro for creating an NSDictionary instance with a series of objects and keys.
  \details   Usage example:

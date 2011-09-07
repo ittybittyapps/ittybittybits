@@ -212,10 +212,9 @@ static CGFloat _ibaGetColorComponent(CGColorRef color, NSUInteger index);
  */
 - (void)ibaColorComponentsRed:(CGFloat*)outRed green:(CGFloat*)outGreen blue:(CGFloat*)outBlue
 {
-    CGColorSpaceModel colorSpaceModel = self.ibaColorSpaceModel;
     NSAssert(CGColorSpaceGetNumberOfComponents(self.ibaColorSpace) >= 3 && 
-             (colorSpaceModel == kCGColorSpaceModelMonochrome ||
-              colorSpaceModel == kCGColorSpaceModelRGB), 
+             (self.ibaColorSpaceModel == kCGColorSpaceModelMonochrome ||
+              self.ibaColorSpaceModel == kCGColorSpaceModelRGB), 
              @"only RGB and Monochrome color spaces supported.");
     
     const CGFloat *components = CGColorGetComponents(self.CGColor);

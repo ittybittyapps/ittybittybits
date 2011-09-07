@@ -18,6 +18,8 @@
 //  limitations under the License.
 
 #import "IBAActionSheet.h"
+#import "IBACarouselView.h"
+#import "IBAFlipButton.h"
 #import "IBAGradientButton.h"
 #import "IBANavigationBar.h"
 #import "IBATableViewAccessory.h"

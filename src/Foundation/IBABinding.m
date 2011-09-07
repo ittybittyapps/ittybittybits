@@ -80,8 +80,8 @@ IBA_SYNTHESIZE(source,
         // Don't re-enter binding code while setting original.
         if (OSAtomicCompareAndSwap32(0, 1, &isSettingValue))
         {
-            NSNumber *changeKind = [change objectForKey:NSKeyValueChangeKindKey];
-            NSAssert([changeKind intValue] == NSKeyValueChangeSetting, @"Binding collections is not supported yet.");
+            NSAssert([[change objectForKey:NSKeyValueChangeKindKey] intValue] == NSKeyValueChangeSetting,
+                     @"Binding collections is not supported yet.");
 
             NSObject *newValue = [change objectForKey:NSKeyValueChangeNewKey];
             NSObject *oldValue = [change objectForKey:NSKeyValueChangeOldKey];

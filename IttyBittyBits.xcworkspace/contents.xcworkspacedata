@@ -27,8 +27,5 @@
       <FileRef
          location = "group:Makefile">
       </FileRef>
-      <FileRef
-         location = "group:scripts/RunTests.sh">
-      </FileRef>
    </Group>
 </Workspace>

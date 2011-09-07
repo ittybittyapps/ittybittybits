@@ -29,6 +29,24 @@
  */
 #define IBA_RAD_TO_DEG(x) ((x) * (180.0f/M_PI))
 
+/*!
+ \def       IBA_SQUARE
+ \brief     Macro to square (raise to the 2nd power) the specified value \a x.
+ */
+#define IBA_SQUARE(x) ((x)*(x))
+
+/*!
+ \def       IBA_CUBE
+ \brief     Macro to cube (raise to the 3rd power) the specified value \a x.
+ */
+#define IBA_CUBE(x) ((x)*(x)*(x))
+
+/*!
+ \def       IBA_POW4
+ \brief     Macro to raise the specified \a x value to the 4th power.
+ */
+#define IBA_QUARTIC(x) ((x)*(x)*(x)*(x))
+
 #import "../Foundation/IBACommon.h"
 
 IBA_EXTERN_C_BEGIN
