@@ -212,6 +212,27 @@
 #endif
 
 /*!
+ \def       IBA_PURE
+ \brief     Macro for marking functions as "pure".
+ 
+ \details   Many functions have no effects except the return value and their return value depends only on the parameters and/or global variables. Such a function can be subject to common subexpression elimination and loop optimization just as an arithmetic operator would be. These functions should be declared with the attribute pure.
+ 
+ For example,
+ \code
+ int square (int) IBA_PURE;
+ \endcode
+ 
+ says that the hypothetical function square is safe to call fewer times than the program says.
+ 
+ Some of common examples of pure functions are strlen or memcmp. Interesting non-pure functions are functions with infinite loops or those depending on volatile memory or other system resource, that may change between two consecutive calls (such as feof in a multithreading environment).
+ */
+#if __has_attribute(pure)
+#   define IBA_PURE __attribute__((pure))
+#else
+#   define IBA_PURE
+#endif
+
+/*!
  \def       IBA_HAS_FLAG
  \brief     Tests the specified \a flags value to determine whether the specified \a flag is set.
  \param     flags       The flags variable to test.
