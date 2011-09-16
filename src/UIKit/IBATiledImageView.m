@@ -58,10 +58,10 @@ IBA_SYNTHESIZE(dataSource, tiledLayer);
     tileSize.width /= scale;
     tileSize.height /= scale;
     
-    NSInteger firstCol = floorf(CGRectGetMinX(rect) / tileSize.width);
-    NSInteger lastCol = floorf((CGRectGetMaxX(rect)-1) / tileSize.width);
-    NSInteger firstRow = floorf(CGRectGetMinY(rect) / tileSize.height);
-    NSInteger lastRow = floorf((CGRectGetMaxY(rect)-1) / tileSize.height);
+    NSInteger firstCol = (NSInteger)floorf(CGRectGetMinX(rect) / tileSize.width);
+    NSInteger lastCol  = (NSInteger)floorf((CGRectGetMaxX(rect)-1) / tileSize.width);
+    NSInteger firstRow = (NSInteger)floorf(CGRectGetMinY(rect) / tileSize.height);
+    NSInteger lastRow  = (NSInteger)floorf((CGRectGetMaxY(rect)-1) / tileSize.height);
     
     
     for (NSInteger row = firstRow; row <= lastRow; ++row) 
