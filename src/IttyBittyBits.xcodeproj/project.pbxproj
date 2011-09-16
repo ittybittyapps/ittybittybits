@@ -58,7 +58,6 @@
 		A72ADC0D13CC54FB0052E2D4 /* IBAErrors.h in Headers */ = {isa = PBXBuildFile; fileRef = A72ADC0C13CC54FB0052E2D4 /* IBAErrors.h */; };
 		A7345F6A140CC026005ED52E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7B4DACC13679F5E00543D61 /* UIKit.framework */; };
 		A7345F6B140CC026005ED52E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7B4DABC1367991200543D61 /* Foundation.framework */; };
-		A7345F6C140CC026005ED52E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7B4DACF13679F5E00543D61 /* CoreGraphics.framework */; };
 		A7345F72140CC026005ED52E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A7345F70140CC026005ED52E /* InfoPlist.strings */; };
 		A7345F74140CC027005ED52E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A7345F73140CC027005ED52E /* main.m */; };
 		A7345F78140CC027005ED52E /* IBAFlipButtonSampleAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A7345F77140CC027005ED52E /* IBAFlipButtonSampleAppDelegate.m */; };
@@ -67,7 +66,6 @@
 		A7345F81140CC027005ED52E /* IBAFlipButtonSampleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A7345F7F140CC027005ED52E /* IBAFlipButtonSampleViewController.xib */; };
 		A73C53CE140F19D6003CE7CF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7B4DACC13679F5E00543D61 /* UIKit.framework */; };
 		A73C53CF140F19D6003CE7CF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7B4DABC1367991200543D61 /* Foundation.framework */; };
-		A73C53D0140F19D6003CE7CF /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7B4DACF13679F5E00543D61 /* CoreGraphics.framework */; };
 		A73C53D6140F19D6003CE7CF /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A73C53D4140F19D6003CE7CF /* InfoPlist.strings */; };
 		A73C53D8140F19D6003CE7CF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A73C53D7140F19D6003CE7CF /* main.m */; };
 		A73C53DC140F19D6003CE7CF /* IBACarouselViewSampleAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A73C53DB140F19D6003CE7CF /* IBACarouselViewSampleAppDelegate.m */; };
@@ -154,6 +152,8 @@
 		A749CFCA140F612800751EF5 /* Seq_v04_640x378_71.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A749CF82140F612800751EF5 /* Seq_v04_640x378_71.jpg */; };
 		A749CFCB140F612800751EF5 /* Seq_v04_640x378_72.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A749CF83140F612800751EF5 /* Seq_v04_640x378_72.jpg */; };
 		A749CFCC140F66C300751EF5 /* IBACarouselView.m in Sources */ = {isa = PBXBuildFile; fileRef = A7C05861140C9F7D00339F5B /* IBACarouselView.m */; };
+		A7555E5C14206752002E5E57 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7555E5B14206752002E5E57 /* QuartzCore.framework */; };
+		A7555E5E142067A8002E5E57 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7555E5D142067A8002E5E57 /* CoreGraphics.framework */; };
 		A75FC05B13BD919D00C7AE82 /* NSDate+IBAExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = A75FC05913BD919D00C7AE82 /* NSDate+IBAExtensions.h */; };
 		A75FC05C13BD919D00C7AE82 /* NSDate+IBAExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = A75FC05A13BD919D00C7AE82 /* NSDate+IBAExtensions.m */; };
 		A7652BD213E581530023D4B3 /* IBATiledImageView.h in Headers */ = {isa = PBXBuildFile; fileRef = A7652BD013E581530023D4B3 /* IBATiledImageView.h */; };
@@ -233,7 +233,6 @@
 		A7B4DABD1367991200543D61 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7B4DABC1367991200543D61 /* Foundation.framework */; };
 		A7B4DACD13679F5E00543D61 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7B4DACC13679F5E00543D61 /* UIKit.framework */; };
 		A7B4DACE13679F5E00543D61 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7B4DABC1367991200543D61 /* Foundation.framework */; };
-		A7B4DAD013679F5E00543D61 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7B4DACF13679F5E00543D61 /* CoreGraphics.framework */; };
 		A7B4DAD613679F5E00543D61 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A7B4DAD413679F5E00543D61 /* InfoPlist.strings */; };
 		A7B4DAD913679F5E00543D61 /* GHUnitIOSTestMain.mm in Sources */ = {isa = PBXBuildFile; fileRef = A7B4DAD813679F5E00543D61 /* GHUnitIOSTestMain.mm */; };
 		A7B4DAF71367BFEB00543D61 /* IBASynthesizeSingleton.h in Headers */ = {isa = PBXBuildFile; fileRef = A7B4DAF51367BFEB00543D61 /* IBASynthesizeSingleton.h */; };
@@ -254,8 +253,6 @@
 		A7B65778141094D40046142B /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7966B4A139378FD00F1B1A1 /* MapKit.framework */; };
 		A7B65779141094D70046142B /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7B4DB111367C65B00543D61 /* Security.framework */; };
 		A7B6577A141094D80046142B /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7B4DB111367C65B00543D61 /* Security.framework */; };
-		A7B6577B141094DA0046142B /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7C2FB9B13B3083500F774CA /* QuartzCore.framework */; };
-		A7B6577C141094DB0046142B /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7C2FB9B13B3083500F774CA /* QuartzCore.framework */; };
 		A7B6577D141094DD0046142B /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A713975613F4F62C00CE8FF2 /* SystemConfiguration.framework */; };
 		A7B6577E141094E00046142B /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A713975613F4F62C00CE8FF2 /* SystemConfiguration.framework */; };
 		A7B6922A137D13E200E379F3 /* NSNumber+IBAExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = A7B69228137D13DD00E379F3 /* NSNumber+IBAExtensions.h */; };
@@ -269,15 +266,12 @@
 		A7C0DBF713B195A800860296 /* IBAMath.m in Sources */ = {isa = PBXBuildFile; fileRef = A7C0DBF613B195A800860296 /* IBAMath.m */; };
 		A7C2FB9813B3073F00F774CA /* IBAGradientButton.h in Headers */ = {isa = PBXBuildFile; fileRef = A7C2FB9613B3073F00F774CA /* IBAGradientButton.h */; };
 		A7C2FB9913B3073F00F774CA /* IBAGradientButton.m in Sources */ = {isa = PBXBuildFile; fileRef = A7C2FB9713B3073F00F774CA /* IBAGradientButton.m */; };
-		A7C2FB9C13B3083500F774CA /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7C2FB9B13B3083500F774CA /* QuartzCore.framework */; };
 		A7C2FB9D13B3085800F774CA /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 751C605A13B20E0800447BB4 /* CoreData.framework */; };
 		A7C2FB9E13B3085C00F774CA /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7966B4A139378FD00F1B1A1 /* MapKit.framework */; };
 		A7C2FB9F13B3086000F774CA /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7966B48139378EB00F1B1A1 /* CoreLocation.framework */; };
 		A7C2FBA013B3086400F774CA /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7966B43139378CB00F1B1A1 /* AddressBook.framework */; };
 		A7C2FBA113B3086800F774CA /* AddressBookUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7966B44139378CB00F1B1A1 /* AddressBookUI.framework */; };
 		A7C2FBA213B3087200F774CA /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7B4DACC13679F5E00543D61 /* UIKit.framework */; };
-		A7C2FBA313B3087500F774CA /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7C2FB9B13B3083500F774CA /* QuartzCore.framework */; };
-		A7C2FBA413B3087900F774CA /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7B4DACF13679F5E00543D61 /* CoreGraphics.framework */; };
 		A7CD3F8C1420356C0022F7AD /* NSIndexPath+IBAExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = A7CD3F8A1420356C0022F7AD /* NSIndexPath+IBAExtensions.h */; };
 		A7CD3F8D1420356C0022F7AD /* NSIndexPath+IBAExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = A7CD3F8B1420356C0022F7AD /* NSIndexPath+IBAExtensions.m */; };
 		A7D58C541378BF440041BBEB /* NSString+IBAExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = A7D58C521378BF440041BBEB /* NSString+IBAExtensions.h */; };
@@ -483,6 +477,8 @@
 		A7541C9B140CC4B50098586E /* Target-IBAFlipButtonSample-Release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = "Target-IBAFlipButtonSample-Release.xcconfig"; sourceTree = "<group>"; };
 		A7541C9C140CC4FB0098586E /* Target-Samples-Debug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = "Target-Samples-Debug.xcconfig"; sourceTree = "<group>"; };
 		A7541C9D140CC50C0098586E /* Target-Samples-Release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = "Target-Samples-Release.xcconfig"; sourceTree = "<group>"; };
+		A7555E5B14206752002E5E57 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		A7555E5D142067A8002E5E57 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		A75FC05913BD919D00C7AE82 /* NSDate+IBAExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+IBAExtensions.h"; sourceTree = "<group>"; };
 		A75FC05A13BD919D00C7AE82 /* NSDate+IBAExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+IBAExtensions.m"; sourceTree = "<group>"; };
 		A7652BD013E581530023D4B3 /* IBATiledImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBATiledImageView.h; sourceTree = "<group>"; };
@@ -569,7 +565,6 @@
 		A7B4DAC01367991200543D61 /* IttyBittyBits-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "IttyBittyBits-Prefix.pch"; sourceTree = "<group>"; };
 		A7B4DACA13679F5D00543D61 /* IttyBittyBitsTests.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IttyBittyBitsTests.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7B4DACC13679F5E00543D61 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		A7B4DACF13679F5E00543D61 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		A7B4DAD313679F5E00543D61 /* IttyBittyBitsTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "IttyBittyBitsTests-Info.plist"; sourceTree = "<group>"; };
 		A7B4DAD513679F5E00543D61 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		A7B4DAD713679F5E00543D61 /* IttyBittyBitsTests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "IttyBittyBitsTests-Prefix.pch"; sourceTree = "<group>"; };
@@ -601,7 +596,6 @@
 		A7C2169113AB2DE70070DA6A /* Target-IttyBittyBits-Release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = "Target-IttyBittyBits-Release.xcconfig"; sourceTree = "<group>"; };
 		A7C2FB9613B3073F00F774CA /* IBAGradientButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBAGradientButton.h; sourceTree = "<group>"; };
 		A7C2FB9713B3073F00F774CA /* IBAGradientButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IBAGradientButton.m; sourceTree = "<group>"; };
-		A7C2FB9B13B3083500F774CA /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		A7CD3F8A1420356C0022F7AD /* NSIndexPath+IBAExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSIndexPath+IBAExtensions.h"; sourceTree = "<group>"; };
 		A7CD3F8B1420356C0022F7AD /* NSIndexPath+IBAExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSIndexPath+IBAExtensions.m"; sourceTree = "<group>"; };
 		A7D58C521378BF440041BBEB /* NSString+IBAExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString+IBAExtensions.h"; path = "Foundation/NSString+IBAExtensions.h"; sourceTree = SOURCE_ROOT; };
@@ -631,13 +625,11 @@
 				A7708F13140DBD1B005FDA05 /* libIttyBittyBits.a in Frameworks */,
 				A7345F6A140CC026005ED52E /* UIKit.framework in Frameworks */,
 				A7345F6B140CC026005ED52E /* Foundation.framework in Frameworks */,
-				A7345F6C140CC026005ED52E /* CoreGraphics.framework in Frameworks */,
 				A7B6576F1410948E0046142B /* AddressBook.framework in Frameworks */,
 				A7B65770141094990046142B /* CoreLocation.framework in Frameworks */,
 				A7B65774141094C80046142B /* CoreData.framework in Frameworks */,
 				A7B65777141094D40046142B /* MapKit.framework in Frameworks */,
 				A7B65779141094D70046142B /* Security.framework in Frameworks */,
-				A7B6577B141094DA0046142B /* QuartzCore.framework in Frameworks */,
 				A7B6577D141094DD0046142B /* SystemConfiguration.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -649,13 +641,11 @@
 				A749CF39140F5F5D00751EF5 /* libIttyBittyBits.a in Frameworks */,
 				A73C53CE140F19D6003CE7CF /* UIKit.framework in Frameworks */,
 				A73C53CF140F19D6003CE7CF /* Foundation.framework in Frameworks */,
-				A73C53D0140F19D6003CE7CF /* CoreGraphics.framework in Frameworks */,
 				A7B65771141094BF0046142B /* AddressBook.framework in Frameworks */,
 				A7B65775141094C90046142B /* CoreData.framework in Frameworks */,
 				A7B65776141094CD0046142B /* CoreLocation.framework in Frameworks */,
 				A7B65778141094D40046142B /* MapKit.framework in Frameworks */,
 				A7B6577A141094D80046142B /* Security.framework in Frameworks */,
-				A7B6577C141094DB0046142B /* QuartzCore.framework in Frameworks */,
 				A7B6577E141094E00046142B /* SystemConfiguration.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -664,6 +654,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A7555E5E142067A8002E5E57 /* CoreGraphics.framework in Frameworks */,
+				A7555E5C14206752002E5E57 /* QuartzCore.framework in Frameworks */,
 				A713975713F4F62C00CE8FF2 /* SystemConfiguration.framework in Frameworks */,
 				751C605B13B20E0800447BB4 /* CoreData.framework in Frameworks */,
 				A7B4DB121367C65B00543D61 /* Security.framework in Frameworks */,
@@ -673,8 +665,6 @@
 				A7C2FBA013B3086400F774CA /* AddressBook.framework in Frameworks */,
 				A7C2FBA113B3086800F774CA /* AddressBookUI.framework in Frameworks */,
 				A7C2FBA213B3087200F774CA /* UIKit.framework in Frameworks */,
-				A7C2FBA313B3087500F774CA /* QuartzCore.framework in Frameworks */,
-				A7C2FBA413B3087900F774CA /* CoreGraphics.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -682,7 +672,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A7C2FB9C13B3083500F774CA /* QuartzCore.framework in Frameworks */,
 				A7966B4B139378FD00F1B1A1 /* MapKit.framework in Frameworks */,
 				A7966B49139378EB00F1B1A1 /* CoreLocation.framework in Frameworks */,
 				A7966B45139378CB00F1B1A1 /* AddressBook.framework in Frameworks */,
@@ -691,7 +680,6 @@
 				A7B4DB031367C3EC00543D61 /* libIttyBittyBits.a in Frameworks */,
 				A7B4DACD13679F5E00543D61 /* UIKit.framework in Frameworks */,
 				A7B4DACE13679F5E00543D61 /* Foundation.framework in Frameworks */,
-				A7B4DAD013679F5E00543D61 /* CoreGraphics.framework in Frameworks */,
 				A7B4DB171367C70D00543D61 /* Security.framework in Frameworks */,
 				A7C2FB9D13B3085800F774CA /* CoreData.framework in Frameworks */,
 				A77874D813F4F6CA008FF846 /* SystemConfiguration.framework in Frameworks */,
@@ -1099,13 +1087,13 @@
 				A7966B43139378CB00F1B1A1 /* AddressBook.framework */,
 				A7966B44139378CB00F1B1A1 /* AddressBookUI.framework */,
 				751C605A13B20E0800447BB4 /* CoreData.framework */,
-				A7B4DACF13679F5E00543D61 /* CoreGraphics.framework */,
+				A7555E5D142067A8002E5E57 /* CoreGraphics.framework */,
 				A7966B48139378EB00F1B1A1 /* CoreLocation.framework */,
 				A7B4DABC1367991200543D61 /* Foundation.framework */,
 				A7B4DB041367C3F700543D61 /* GHUnitIOS.framework */,
 				A7966B4A139378FD00F1B1A1 /* MapKit.framework */,
+				A7555E5B14206752002E5E57 /* QuartzCore.framework */,
 				A7B4DB111367C65B00543D61 /* Security.framework */,
-				A7C2FB9B13B3083500F774CA /* QuartzCore.framework */,
 				A713975613F4F62C00CE8FF2 /* SystemConfiguration.framework */,
 				A7B4DACC13679F5E00543D61 /* UIKit.framework */,
 			);
