@@ -53,26 +53,26 @@ typedef CGFloat (*IBAEasingFunction)(NSTimeInterval time, CGFloat begin, CGFloat
 
 IBA_EXTERN_C_BEGIN
 
-CGFloat IBALinearEase(NSTimeInterval time, CGFloat begin, CGFloat change, NSTimeInterval duration) IBA_PURE;
+CGFloat IBALinearEase(NSTimeInterval time, CGFloat begin, CGFloat change, NSTimeInterval duration) IBA_PURECONST;
 
-CGFloat IBACubicEaseIn(NSTimeInterval time, CGFloat begin, CGFloat change, NSTimeInterval duration) IBA_PURE;
-CGFloat IBACubicEaseOut(NSTimeInterval time, CGFloat begin, CGFloat change, NSTimeInterval duration) IBA_PURE;
-CGFloat IBACubicEaseInOut(NSTimeInterval time, CGFloat begin, CGFloat change, NSTimeInterval duration) IBA_PURE;
+CGFloat IBACubicEaseIn(NSTimeInterval time, CGFloat begin, CGFloat change, NSTimeInterval duration) IBA_PURECONST;
+CGFloat IBACubicEaseOut(NSTimeInterval time, CGFloat begin, CGFloat change, NSTimeInterval duration) IBA_PURECONST;
+CGFloat IBACubicEaseInOut(NSTimeInterval time, CGFloat begin, CGFloat change, NSTimeInterval duration) IBA_PURECONST;
 
-CGFloat IBAExpoEaseIn(NSTimeInterval time, CGFloat begin, CGFloat change, NSTimeInterval duration) IBA_PURE;
-CGFloat IBAExpoEaseOut(NSTimeInterval time, CGFloat begin, CGFloat change, NSTimeInterval duration) IBA_PURE;
-CGFloat IBAExpoEaseInOut(NSTimeInterval time, CGFloat begin, CGFloat change, NSTimeInterval duration) IBA_PURE;
+CGFloat IBAExpoEaseIn(NSTimeInterval time, CGFloat begin, CGFloat change, NSTimeInterval duration) IBA_PURECONST;
+CGFloat IBAExpoEaseOut(NSTimeInterval time, CGFloat begin, CGFloat change, NSTimeInterval duration) IBA_PURECONST;
+CGFloat IBAExpoEaseInOut(NSTimeInterval time, CGFloat begin, CGFloat change, NSTimeInterval duration) IBA_PURECONST;
 
-CGFloat IBASineEaseIn(NSTimeInterval time, CGFloat begin, CGFloat change, NSTimeInterval duration) IBA_PURE;
-CGFloat IBASineEaseOut(NSTimeInterval time, CGFloat begin, CGFloat change, NSTimeInterval duration) IBA_PURE;
-CGFloat IBASineEaseInOut(NSTimeInterval time, CGFloat begin, CGFloat change, NSTimeInterval duration) IBA_PURE;
+CGFloat IBASineEaseIn(NSTimeInterval time, CGFloat begin, CGFloat change, NSTimeInterval duration) IBA_PURECONST;
+CGFloat IBASineEaseOut(NSTimeInterval time, CGFloat begin, CGFloat change, NSTimeInterval duration) IBA_PURECONST;
+CGFloat IBASineEaseInOut(NSTimeInterval time, CGFloat begin, CGFloat change, NSTimeInterval duration) IBA_PURECONST;
 
-CGFloat IBAQuartEaseIn(NSTimeInterval time, CGFloat begin, CGFloat change, NSTimeInterval duration) IBA_PURE;
-CGFloat IBAQuartEaseOut(NSTimeInterval time, CGFloat begin, CGFloat change, NSTimeInterval duration) IBA_PURE;
-CGFloat IBAQuartEaseInOut(NSTimeInterval time, CGFloat begin, CGFloat change, NSTimeInterval duration) IBA_PURE;
+CGFloat IBAQuartEaseIn(NSTimeInterval time, CGFloat begin, CGFloat change, NSTimeInterval duration) IBA_PURECONST;
+CGFloat IBAQuartEaseOut(NSTimeInterval time, CGFloat begin, CGFloat change, NSTimeInterval duration) IBA_PURECONST;
+CGFloat IBAQuartEaseInOut(NSTimeInterval time, CGFloat begin, CGFloat change, NSTimeInterval duration) IBA_PURECONST;
 
-CGFloat IBAQuintEaseIn(NSTimeInterval time, CGFloat begin, CGFloat change, NSTimeInterval duration) IBA_PURE;
-CGFloat IBAQuintEaseOut(NSTimeInterval time, CGFloat begin, CGFloat change, NSTimeInterval duration) IBA_PURE;
-CGFloat IBAQuintEaseInOut(NSTimeInterval time, CGFloat begin, CGFloat change, NSTimeInterval duration) IBA_PURE;
+CGFloat IBAQuintEaseIn(NSTimeInterval time, CGFloat begin, CGFloat change, NSTimeInterval duration) IBA_PURECONST;
+CGFloat IBAQuintEaseOut(NSTimeInterval time, CGFloat begin, CGFloat change, NSTimeInterval duration) IBA_PURECONST;
+CGFloat IBAQuintEaseInOut(NSTimeInterval time, CGFloat begin, CGFloat change, NSTimeInterval duration) IBA_PURECONST;
 
 IBA_EXTERN_C_END
