@@ -141,6 +141,66 @@
 }
 
 /*!
+ \brief     Returns a value indicating whether the receiver is the frontmost view within its superview.
+ */
+- (BOOL)ibaFrontmost
+{
+	return self == [self.superview.subviews lastObject];
+}
+
+/*!
+ \brief     Returns a value indicating whether the receiver is the backmost view within its superview.
+ */
+- (BOOL)ibaBackmost
+{
+	return self == [self.superview.subviews objectAtIndex:0];
+}
+
+/*!
+ \brief     Moves the receiving view so that it appears on top of its siblings.
+ */
+- (void)ibaBringToFront
+{
+	[self.superview bringSubviewToFront:self];
+}
+
+/*!
+ \brief     Moves the receiving view so that it appears behind its siblings.
+ */
+- (void)ibaSendToBack
+{
+	[self.superview sendSubviewToBack:self];
+}
+
+/*!
+ \brief     Send the receiving view forward in it's superview's subview heirachy placing it in front of its sibling.
+ */
+- (void)ibaBringForward
+{
+    if ([self.superview.subviews count] > 1)
+    {
+        NSUInteger currentIndex = [self.superview.subviews indexOfObject:self];
+        NSUInteger maxIndex = [self.superview.subviews count] - 1;
+        if (currentIndex < maxIndex)
+        {
+            [self.superview exchangeSubviewAtIndex:currentIndex withSubviewAtIndex:currentIndex + 1];
+        }
+    }
+}
+
+/*!
+ \brief     Send the receiving view backward in it's superview's subview heirachy placing it behind its sibling.
+ */
+- (void)ibaSendBackward
+{
+	NSUInteger currentIndex = [self.superview.subviews indexOfObject:self];
+    if (currentIndex > 0)
+    {
+        [self.superview exchangeSubviewAtIndex:currentIndex withSubviewAtIndex:currentIndex - 1];
+    }
+}
+
+/*!
  \brief     Sets the view to be hidden or shown with an alpha fade in/out transition of the specified \a duration.
  \param     hidden      YES to hide the view; NO to show the view.
  \param     duration    The duration in seconds of the alpha fade in/out transition.
