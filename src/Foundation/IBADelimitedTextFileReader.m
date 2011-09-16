@@ -93,12 +93,12 @@
     
     NSInteger lineCount = 0;
     NSString* line = nil;
-    NSInteger columnCount = [self.columnNames count];
+    NSUInteger columnCount = [self.columnNames count];
     
     while ([lineReader readLine:&line] > 0)
     {
         NSArray* fields = [line componentsSeparatedByString:self.fieldDelimiter];
-        NSInteger fieldCount = [fields count];
+        NSUInteger fieldCount = [fields count];
         if(lineCount == 0 && self.hasColumnHeaders)
         {
             self.columnNames = fields;
@@ -108,10 +108,10 @@
         else
         {
             NSMutableDictionary* record = [[NSMutableDictionary alloc] init];
-            for (int i = 0; i < fieldCount; ++i)
+            for (NSUInteger i = 0; i < fieldCount; ++i)
             {
                 id fieldValue = [fields objectAtIndex:i];
-                [record setObject:fieldValue forKey:[NSNumber numberWithInt:i]];
+                [record setObject:fieldValue forKey:[NSNumber numberWithUnsignedInteger:i]];
                 if (i < columnCount)
                 {
                     [record setObject:fieldValue forKey:[self.columnNames objectAtIndex:i]];
