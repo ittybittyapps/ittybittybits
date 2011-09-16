@@ -168,7 +168,7 @@ const size_t kBufferSize = 4096;
         // remove the fetched line from the beginning of the line buffer
         NSUInteger fetchedLineBytes = [fetchedLine lengthOfBytesUsingEncoding:NSUTF8StringEncoding] + [self.linesEndWith lengthOfBytesUsingEncoding:NSUTF8StringEncoding];
         
-        CFRange lineRange = CFRangeMake(0, MIN([self.lineBuffer length], fetchedLineBytes));
+        CFRange lineRange = CFRangeMake(0, (CFIndex)MIN([self.lineBuffer length], fetchedLineBytes));
         CFDataDeleteBytes((CFMutableDataRef)self.lineBuffer, lineRange);
     }
     
@@ -193,7 +193,7 @@ const size_t kBufferSize = 4096;
         buffer[bytesRead] = 0;
 
         // append the read data to the current character buffer
-        [self.lineBuffer appendBytes:buffer length:bytesRead];
+        [self.lineBuffer appendBytes:buffer length:(NSUInteger)bytesRead];
     }
     else
     {                    
