@@ -597,7 +597,7 @@ static int EscapeMapCompare(const void *ucharVoid, const void *mapVoid)
 	
 	unichar *buffer2 = (unichar *)[data2 mutableBytes];
 	
-	NSUInteger buffer2Length = 0;
+	CFIndex buffer2Length = 0;
 	
 	for (NSUInteger i = 0; i < length; ++i) 
     {
