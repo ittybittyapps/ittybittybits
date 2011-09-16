@@ -64,7 +64,7 @@ IBA_SYNTHESIZE(accessoryColor, highlightedColor);
 	CGContextRef ctxt = UIGraphicsGetCurrentContext();
     
 	// (x,y) is the tip of the arrow
-	CGFloat x = CGRectGetMaxX(self.bounds)-3.0;
+	CGFloat x = CGRectGetMaxX(self.bounds)-3.0f;
 	CGFloat y = CGRectGetMidY(self.bounds);
 
 	CGContextMoveToPoint(ctxt, x-R, y-R);

@@ -78,7 +78,7 @@ IBA_SYNTHESIZE(dataSource, throwDuration, throwVelocityFactor, minimumThrowVeloc
         CGPoint vel = [gesture velocityInView:self];
         if (fabs(vel.x) >= self.minimumThrowVelocity)
         {
-            [self spinWithVelocity:((-vel.x * self.throwVelocityFactor)/(180.0f/M_PI)) 
+            [self spinWithVelocity:((-vel.x * self.throwVelocityFactor)/(180.0f/IBA_PI)) 
                        forDuration: self.throwDuration];
         }
     }
@@ -89,7 +89,7 @@ IBA_SYNTHESIZE(dataSource, throwDuration, throwVelocityFactor, minimumThrowVeloc
  */
 - (CGFloat) rotationForTranslation:(CGFloat)horizontalTranslation
 {
-    CGFloat radiansPerPoint = M_PI / self.frame.size.width;
+    CGFloat radiansPerPoint = IBA_PI / self.frame.size.width;
     return horizontalTranslation * radiansPerPoint;
 }
 
@@ -98,7 +98,7 @@ IBA_SYNTHESIZE(dataSource, throwDuration, throwVelocityFactor, minimumThrowVeloc
  */
 - (UIView*) viewForRotation:(CGFloat)rotation
 {
-    const float TWOPI = 2*M_PI;
+    const CGFloat TWOPI = 2 * IBA_PI;
     
     NSUInteger viewCount = [self.dataSource numberOfItemsInCarouselView:self];
     if (viewCount > 0)
@@ -151,7 +151,7 @@ IBA_SYNTHESIZE(dataSource, throwDuration, throwVelocityFactor, minimumThrowVeloc
     [self stopSpin];
         
     // Just use the velocity as the target translation/rotation value.
-    CGFloat throwDistance = (velocity * duration);
+    CGFloat throwDistance = (velocity * ((CGFloat)duration));
     CGFloat startRotation = self.currentRotation;
     
     CFTimeInterval start = CACurrentMediaTime();
