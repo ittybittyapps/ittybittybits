@@ -250,7 +250,7 @@
  \def       IBA_ADD_FLAG
  \brief     Removes a \flag from an existing set of \a flags and returns the new value.
  */
-#define IBA_DEL_FLAG(flags, flag) ((flags) & (~(flag)))
+#define IBA_DEL_FLAG(flags, flag) ((flags) & (~((unsigned)flag)))
 
 /*!
  \def       IBA_SET_FLAG
