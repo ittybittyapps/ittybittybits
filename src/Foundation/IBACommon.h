@@ -29,6 +29,12 @@
 #endif
 
 /*!
+ \def       IBA_INLINE
+ \brief     A macro for marking C functions as inline.
+ */
+#define IBA_INLINE CF_INLINE
+
+/*!
  \brief     Release and nil the passed variable.
  \param     x   The instance to release.
  */
@@ -315,3 +321,12 @@ typedef void (^IBAAction)(void);
  */
 #define IBA_SIZE_IS_WITHIN(size1, size2) ((size1.width <= size2.width) && (size1.height <= size2.height))
 
+/*!
+ \brief     Safely compare an NSInteger to an NSUInteger.
+ \details   Returns YES if the specified value \a i is less than the specifief value \a ui; otherwise NO.
+ 
+ */
+IBA_INLINE BOOL IBANSIntegerLessThanNSUInteger(NSInteger i, NSUInteger ui)
+{
+    return (i < 0) ? YES : (((NSUInteger)i) < ui);
+}
