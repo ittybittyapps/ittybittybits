@@ -17,6 +17,8 @@
 //  See the License for the specific language governing permissions and
 //  limitations under the License.
 
+#import <math.h>
+
 /*!
  \def       IBA_DEG_TO_RAD
  \brief     Macro to convert degrees to radians.
@@ -48,6 +50,97 @@
 #define IBA_QUARTIC(x) ((x)*(x)*(x)*(x))
 
 #import "../Foundation/IBACommon.h"
+
+/*!
+ \def       IBA_E
+ \brief     The mathmatical constant e
+ \details   M_E from math.h cast to CGFloat.
+ */
+#define IBA_E         ((CGFloat)M_E)
+
+/*!
+ \def       IBA_LOG2E
+ \brief     The mathmatical constant log2(e).
+ \details   M_LOG2E from math.h cast to CGFloat.
+ */
+#define IBA_LOG2E     ((CGFloat)M_LOG2E)
+
+/*!
+ \def       IBA_LOG10E 
+ \brief     The mathmatical constant log10(e). 
+ \details   M_LOG2E cast to CGFloat.
+ */
+#define IBA_LOG10E      ((CGFloat)M_LOG10E)
+
+/*!
+ \def       IBA_LN2 
+ \brief     The mathmatical constant loge(2). 
+ \details   M_LN2 cast to CGFloat.
+ */
+#define IBA_LN2         ((CGFloat)M_LN2)
+
+/*!
+ \def       IBA_LN10 
+ \brief     The mathmatical constant loge(10). 
+ \details   M_LN10 cast to CGFloat.
+ */
+#define IBA_LN10        ((CGFloat)M_LN10)
+
+/*!
+ \def       IBA_PI 
+ \brief     The mathmatical constant pi. 
+ \details   M_PI cast to CGFloat.
+ */
+#define IBA_PI          ((CGFloat)M_PI)
+
+/*!
+ \def       IBA_PI_2 
+ \brief     The mathmatical constant pi/2. 
+ \details   M_PI_2 cast to CGFloat.
+ */
+#define IBA_PI_2        ((CGFloat)M_PI_2)
+
+/*!
+ \def       IBA_PI_4 
+ \brief     The mathmatical constant pi/4. 
+ \details   M_PI_4 cast to CGFloat.
+ */
+#define IBA_PI_4        ((CGFloat)M_PI_4)
+
+/*!
+ \def       IBA_1_PI 
+ \brief     The mathmatical constant 1/pi. 
+ \details   M_1_PI cast to CGFloat.
+ */
+#define IBA_1_PI        ((CGFloat)M_1_PI)
+
+/*!
+ \def       IBA_2_PI 
+ \brief     The mathmatical constant 2/pi. 
+ \details   M_2_PI cast to CGFloat.
+ */
+#define IBA_2_PI        ((CGFloat)M_2_PI)
+
+/*!
+ \def       IBA_2_SQRTPI 
+ \brief     The mathmatical constant 2/sqrt(pi). 
+ \details   M_2_SQRTPI cast to CGFloat.
+ */
+#define IBA_2_SQRTPI    ((CGFloat)M_2_SQRTPI)
+
+/*!
+ \def       IBA_SQRT2 
+ \brief     The mathmatical constant sqrt(2). 
+ \details   M_SQRT2 cast to CGFloat.
+ */
+#define IBA_SQRT2       ((CGFloat)M_SQRT2)
+
+/*!
+ \def       IBA_SQRT1_2 
+ \brief     The mathmatical constant 1/sqrt(2). 
+ \details   M_SQRT1_2 cast to CGFloat.
+ */
+#define IBA_SQRT1_2     ((CGFloat)M_SQRT1_2)
 
 IBA_EXTERN_C_BEGIN
 
