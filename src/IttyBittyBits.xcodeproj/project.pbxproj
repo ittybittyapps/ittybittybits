@@ -224,7 +224,7 @@
 		A7B10AA81384987D00C8A672 /* IBAGeocoder.m in Sources */ = {isa = PBXBuildFile; fileRef = A7B10AA61384987D00C8A672 /* IBAGeocoder.m */; };
 		A7B10AAE1384AB5F00C8A672 /* IBAPreProcessorMagic.h in Headers */ = {isa = PBXBuildFile; fileRef = A7B10AAD1384AB5F00C8A672 /* IBAPreProcessorMagic.h */; };
 		A7B10AB11384E4F500C8A672 /* JSONKit.h in Headers */ = {isa = PBXBuildFile; fileRef = A7B10AAF1384E4F500C8A672 /* JSONKit.h */; };
-		A7B10AB21384E4F500C8A672 /* JSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = A7B10AB01384E4F500C8A672 /* JSONKit.m */; };
+		A7B10AB21384E4F500C8A672 /* JSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = A7B10AB01384E4F500C8A672 /* JSONKit.m */; settings = {COMPILER_FLAGS = "-Wno-sign-conversion -Wno-conversion -Wno-deprecated-implementations -Wno-strict-selector-match"; }; };
 		A7B10AC5138609F700C8A672 /* MKReverseGeocoder+IBABlocks.h in Headers */ = {isa = PBXBuildFile; fileRef = A7B10AC3138609F700C8A672 /* MKReverseGeocoder+IBABlocks.h */; };
 		A7B10AC6138609F800C8A672 /* MKReverseGeocoder+IBABlocks.m in Sources */ = {isa = PBXBuildFile; fileRef = A7B10AC4138609F700C8A672 /* MKReverseGeocoder+IBABlocks.m */; };
 		A7B10AC9138632E800C8A672 /* UISearchBar+IBAExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = A7B10AC7138632E800C8A672 /* UISearchBar+IBAExtensions.h */; };
