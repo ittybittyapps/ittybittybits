@@ -45,106 +45,156 @@
 //  POSSIBILITY OF SUCH DAMAGE.
 
 #import "IBAEasing.h"
+#import "IBACommon.h"
 #import "IBAMath.h"
+
 #import <math.h>
 
 CGFloat IBALinearEase(NSTimeInterval time, CGFloat begin, CGFloat change, NSTimeInterval duration)
 {
-    return (change * (time/duration)) + begin;
+    CGFloat timef = (CGFloat)time;
+    CGFloat durationf = (CGFloat)duration;
+    
+    return (change * (timef/durationf)) + begin;
 }
 
 CGFloat IBACubicEaseIn (NSTimeInterval time, CGFloat begin, CGFloat change, NSTimeInterval duration)
 {
-    return (change * (time /= duration) * IBA_SQUARE(time)) + begin;
+    CGFloat timef = (CGFloat)time;
+    CGFloat durationf = (CGFloat)duration;
+    
+    return (change * (timef /= durationf) * IBA_SQUARE(timef)) + begin;
 }
 
 CGFloat IBACubicEaseOut(NSTimeInterval time, CGFloat begin, CGFloat change, NSTimeInterval duration)
 {
-    return change * ((time = time/duration - 1.0) * IBA_SQUARE(time) + 1.0) + begin;
+    CGFloat timef = (CGFloat)time;
+    CGFloat durationf = (CGFloat)duration;
+    
+    return (change * ((timef = timef/durationf - 1.0f) * IBA_SQUARE(timef) + 1.0f) + begin);
 }
 
 CGFloat IBACubicEaseInOut(NSTimeInterval time, CGFloat begin, CGFloat change, NSTimeInterval duration)
 {
-    if ((time /= duration/2.0) < 1.0) 
+    CGFloat timef = (CGFloat)time;
+    CGFloat durationf = (CGFloat)duration;
+
+    if ((timef /= durationf/2.0f) < 1.0f) 
     {
-        return (change / 2.0 * IBA_CUBE(time)) + begin;
+        return (change / 2.0f * IBA_CUBE(timef)) + begin;
     }
     
-    return (change / 2.0f * ((time -= 2.0) * IBA_SQUARE(time) + 2.0)) + begin;
+    return (CGFloat) ((change / 2.0f * ((time -= 2.0) * IBA_SQUARE(time) + 2.0)) + begin);
 }
 
-CGFloat IBAExpoEaseIn(NSTimeInterval t, CGFloat b, CGFloat c, NSTimeInterval d)
+CGFloat IBAExpoEaseIn(NSTimeInterval time, CGFloat begin, CGFloat change, NSTimeInterval duration)
 {
-    return ( t == 0) ? b : c * pow(2, 10 * (t/d - 1)) + b;
+    CGFloat timef = (CGFloat)time;
+    CGFloat durationf = (CGFloat)duration;
+    
+    return (timef == 0.0f) ? begin : change * powf(2.0f, 10.0f * (timef/durationf - 1.0f)) + begin;
 }
 
-CGFloat IBAExpoEaseOut(NSTimeInterval t, CGFloat b, CGFloat c, NSTimeInterval d)
+CGFloat IBAExpoEaseOut(NSTimeInterval time, CGFloat begin, CGFloat change, NSTimeInterval duration)
 {
-    return (t == d) ? (b + c) : (c * (-pow(2, -10 * t/d) + 1) + b);
+    CGFloat timef = (CGFloat)time;
+    CGFloat durationf = (CGFloat)duration;
+    
+    return (timef == durationf) ? (begin + change) : (change * (-powf(2.0f, -10.0f * timef/durationf) + 1.0f) + begin);
 }
 
 CGFloat IBAExpoEaseInOut(NSTimeInterval time, CGFloat begin, CGFloat change, NSTimeInterval duration)
 {
-    if (time == 0.0) 
+    CGFloat timef = (CGFloat)time;
+    CGFloat durationf = (CGFloat)duration;
+    
+    if (timef == 0.0f) 
         return begin;
     
-    if (time == duration) 
+    if (timef == durationf) 
         return begin + change;
 
-    if ((time /= (duration/2.0)) < 1.0) 
-        return (change/2.0f * powf(2.0f, 10.0f * (time - 1.0f))) + begin;
+    if ((timef /= (durationf/2.0f)) < 1.0f) 
+        return (change/2.0f * powf(2.0f, 10.0f * (timef - 1.0f))) + begin;
     
-    return (change/2.0f * (-powf(2.0f, -10.0f * --time) + 2.0f)) + begin;
+    return (change/2.0f * (-powf(2.0f, -10.0f * --timef) + 2.0f)) + begin;
 }
 
 CGFloat IBASineEaseIn(NSTimeInterval time, CGFloat begin, CGFloat change, NSTimeInterval duration)
 {
-    return (-change * cosf(time/duration * (M_PI/2.0))) + change + begin;
+    CGFloat timef = (CGFloat)time;
+    CGFloat durationf = (CGFloat)duration;
+
+    return (-change * cosf((timef/durationf) * (IBA_PI/2.0f))) + change + begin;
 }
 
 CGFloat IBASineEaseOut(NSTimeInterval time, CGFloat begin, CGFloat change, NSTimeInterval duration)
 {
-    return (change * sinf(time/duration * (M_PI/2.0))) + begin;
+    CGFloat timef = (CGFloat)time;
+    CGFloat durationf = (CGFloat)duration;
+
+    return (change * sinf((timef/durationf) * (IBA_PI/2.0f))) + begin;
 }
 
 CGFloat IBASineEaseInOut(NSTimeInterval time, CGFloat begin, CGFloat change, NSTimeInterval duration)
 {
-    return (-change/2.0f * (cosf(M_PI * time/duration) - 1.0)) + begin;
+    CGFloat timef = (CGFloat)time;
+    CGFloat durationf = (CGFloat)duration;
+
+    return (-change/2.0f * (cosf(IBA_PI * (timef/durationf)) - 1.0f)) + begin;
 }
 
 CGFloat IBAQuartEaseIn(NSTimeInterval time, CGFloat begin, CGFloat change, NSTimeInterval duration)
 {
-    return (change * (time /= duration) * IBA_CUBE(time)) + begin;
+    CGFloat timef = (CGFloat)time;
+    CGFloat durationf = (CGFloat)duration;
+
+    return (change * (timef /= durationf) * IBA_CUBE(timef)) + begin;
 }
 
 CGFloat IBAQuartEaseOut(NSTimeInterval time, CGFloat begin, CGFloat change, NSTimeInterval duration)
 {
-    return (-change * ((time = time/duration - 1) * IBA_CUBE(time) - 1.0)) + begin;
+    CGFloat timef = (CGFloat)time;
+    CGFloat durationf = (CGFloat)duration;
+
+    return (-change * ((timef = timef/durationf - 1.0f) * IBA_CUBE(timef) - 1.0f)) + begin;
 }
 
 CGFloat IBAQuartEaseInOut(NSTimeInterval time, CGFloat begin, CGFloat change, NSTimeInterval duration)
 {
-    if ((time /= duration/2.0) < 1.0) 
-        return (change/2.0f * IBA_QUARTIC(time)) + begin;
+    CGFloat timef = (CGFloat)time;
+    CGFloat durationf = (CGFloat)duration;
+
+    if ((timef /= durationf/2.0f) < 1.0f) 
+        return (change/2.0f * IBA_QUARTIC(timef)) + begin;
     
-    return (-change/2.0f * ((time -= 2.0) * IBA_CUBE(time) - 2.0)) + begin;
+    return (-change/2.0f * ((timef -= 2.0f) * IBA_CUBE(timef) - 2.0f)) + begin;
 }
 
 CGFloat IBAQuintEaseIn(NSTimeInterval time, CGFloat begin, CGFloat change, NSTimeInterval duration)
 {
-    return (change * (time /= duration) * IBA_QUARTIC(time)) + begin;
+    CGFloat timef = (CGFloat)time;
+    CGFloat durationf = (CGFloat)duration;
+
+    return (change * (timef /= durationf) * IBA_QUARTIC(timef)) + begin;
 }
 
 CGFloat IBAQuintEaseOut(NSTimeInterval time, CGFloat begin, CGFloat change, NSTimeInterval duration)
 {
-    return (change * ((time = (time/duration - 1)) * IBA_QUARTIC(time) + 1)) + begin;
+    CGFloat timef = (CGFloat)time;
+    CGFloat durationf = (CGFloat)duration;
+
+    return (change * ((timef = (timef/durationf - 1.0f)) * IBA_QUARTIC(timef) + 1.0f)) + begin;
 }
 
 CGFloat IBAQuintEaseInOut(NSTimeInterval time, CGFloat begin, CGFloat change, NSTimeInterval duration)
 {
-    if ((time /= (duration/2.0)) < 1.0) 
-        return (change/2.0f * IBA_QUARTIC(time) * time) + begin;
+    CGFloat timef = (CGFloat)time;
+    CGFloat durationf = (CGFloat)duration;
+
+    if ((timef /= (durationf/2.0f)) < 1.0f) 
+        return (change/2.0f * IBA_QUARTIC(timef) * timef) + begin;
     
-    return (change/2.0f * ((time -= 2.0) * IBA_QUARTIC(time) + 2.0)) + begin;
+    return (change/2.0f * ((timef -= 2.0f) * IBA_QUARTIC(timef) + 2.0f)) + begin;
 }
 
