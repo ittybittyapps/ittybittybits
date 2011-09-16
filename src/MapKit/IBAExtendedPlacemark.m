@@ -67,7 +67,7 @@ IBA_SYNTHESIZE(locationType, bounds, viewport);
     
     if ((self = [super initWithCoordinate:coordinate addressDictionary:addressDictionary]))
     {
-        self.locationType = [decoder decodeIntForKey:kLocationTypeEncoderKey];
+        self.locationType = (IBAExtendedPlacemarkLocationType)[decoder decodeIntForKey:kLocationTypeEncoderKey];
         self.viewport = MKCoordinateRegionMake(CLLocationCoordinate2DMake([decoder decodeDoubleForKey:kViewportCenterLatitudeEncoderKey], 
                                                                           [decoder decodeDoubleForKey:kViewportCenterLongitudeEncoderKey]), 
                                                MKCoordinateSpanMake([decoder decodeDoubleForKey:kViewportSpanLatitudeDeltaEncoderKey], 
