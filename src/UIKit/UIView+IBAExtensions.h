@@ -50,6 +50,14 @@
 #import <Foundation/Foundation.h>
 #import "../Foundation/IBACommon.h"
 
+typedef enum 
+{
+    IBACompassDirectionNorth,
+    IBACompassDirectionSouth,
+    IBACompassDirectionEast,
+    IBACompassDirectionWest
+} IBACompassDirection;
+
 @interface UIView (IBAExtensions)
 
 @property (nonatomic, assign) CGFloat ibaLeft;
@@ -58,14 +66,6 @@
 @property (nonatomic, assign) CGFloat ibaBottom;
 @property (nonatomic, assign) CGFloat ibaWidth;
 @property (nonatomic, assign) CGFloat ibaHeight;
-
-typedef enum 
-{
-    IBACompassDirectionNorth,
-    IBACompassDirectionSouth,
-    IBACompassDirectionEast,
-    IBACompassDirectionWest
-} IBACompassDirection;
 
 - (void)ibaSetHidden:(BOOL)hidden withAlphaTransistionDuration:(NSTimeInterval)duration;
 - (void)ibaSetHidden:(BOOL)hidden withAlphaTransistionDuration:(NSTimeInterval)duration completion:(void (^)(BOOL finished))completion;
@@ -80,5 +80,12 @@ typedef enum
 - (void)ibaOnDoubleTap:(void (^) (id sender))action touches:(NSUInteger)touches;
 
 - (void)ibaAddSubviewsWithImagesNamed:(NSString *)firstImageName, ... NS_REQUIRES_NIL_TERMINATION;
+
+- (BOOL)ibaFrontmost;
+- (BOOL)ibaBackmost;
+- (void)ibaBringToFront;
+- (void)ibaSendToBack;
+- (void)ibaBringForward;
+- (void)ibaSendBackward;
 
 @end

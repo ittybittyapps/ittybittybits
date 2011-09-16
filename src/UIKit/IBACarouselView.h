@@ -18,7 +18,7 @@
 //  limitations under the License.
 
 #import <UIKit/UIKit.h>
-#import "IBAEasing.h"
+#import "../Foundation/IBAEasing.h"
 
 @class IBACarouselView;
 
