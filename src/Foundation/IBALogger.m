@@ -133,7 +133,7 @@ IBA_SYNTHESIZE_SINGLETON_FOR_CLASS(IBALogger, sharedLogger)
 - (void)log:(NSString*)format 
       level:(NSInteger)level
        file:(const char *)file
-       line:(NSUInteger)line
+       line:(NSInteger)line
    function:(const char *)function, ...
 {
     va_list args;
@@ -146,7 +146,7 @@ IBA_SYNTHESIZE_SINGLETON_FOR_CLASS(IBALogger, sharedLogger)
 - (void)log:(NSString *)format 
       level:(NSInteger)level 
        file:(const char *)file
-       line:(NSUInteger)line
+       line:(NSInteger)line
    function:(const char *)function
        args:(va_list)args
 {
@@ -169,7 +169,7 @@ IBA_SYNTHESIZE_SINGLETON_FOR_CLASS(IBALogger, sharedLogger)
 /////////////////////////////////////////////////////////////////////////////////////////////////
 - (void) logDebug:(NSString*)format
              file:(const char *)file
-             line:(NSUInteger)line
+             line:(NSInteger)line
          function:(const char *)function, ...
 {
     va_list args;
@@ -181,7 +181,7 @@ IBA_SYNTHESIZE_SINGLETON_FOR_CLASS(IBALogger, sharedLogger)
 /////////////////////////////////////////////////////////////////////////////////////////////////
 - (void) logDebug:(NSString*)format
              file:(const char *)file
-             line:(NSUInteger)line
+             line:(NSInteger)line
          function:(const char *)function
              args:(va_list)args
 {
@@ -191,7 +191,7 @@ IBA_SYNTHESIZE_SINGLETON_FOR_CLASS(IBALogger, sharedLogger)
 /////////////////////////////////////////////////////////////////////////////////////////////////
 - (void) logInfo:(NSString*)format
             file:(const char *)file
-            line:(NSUInteger)line
+            line:(NSInteger)line
         function:(const char *)function, ...
 {
     va_list args;
@@ -203,7 +203,7 @@ IBA_SYNTHESIZE_SINGLETON_FOR_CLASS(IBALogger, sharedLogger)
 /////////////////////////////////////////////////////////////////////////////////////////////////
 - (void) logInfo:(NSString*)format
             file:(const char *)file
-            line:(NSUInteger)line
+            line:(NSInteger)line
         function:(const char *)function
             args:(va_list)args
 {
@@ -213,7 +213,7 @@ IBA_SYNTHESIZE_SINGLETON_FOR_CLASS(IBALogger, sharedLogger)
 /////////////////////////////////////////////////////////////////////////////////////////////////
 - (void) logNotice:(NSString*)format
               file:(const char *)file
-              line:(NSUInteger)line
+              line:(NSInteger)line
           function:(const char *)function, ...
 {
     va_list args;
@@ -225,7 +225,7 @@ IBA_SYNTHESIZE_SINGLETON_FOR_CLASS(IBALogger, sharedLogger)
 /////////////////////////////////////////////////////////////////////////////////////////////////
 - (void) logNotice:(NSString*)format
               file:(const char *)file
-              line:(NSUInteger)line
+              line:(NSInteger)line
           function:(const char *)function
               args:(va_list)args
 {
@@ -235,7 +235,7 @@ IBA_SYNTHESIZE_SINGLETON_FOR_CLASS(IBALogger, sharedLogger)
 /////////////////////////////////////////////////////////////////////////////////////////////////
 - (void) logWarning:(NSString*)format
                file:(const char *)file
-               line:(NSUInteger)line
+               line:(NSInteger)line
            function:(const char *)function, ...
 {
     va_list args;
@@ -247,7 +247,7 @@ IBA_SYNTHESIZE_SINGLETON_FOR_CLASS(IBALogger, sharedLogger)
 /////////////////////////////////////////////////////////////////////////////////////////////////
 - (void) logWarning:(NSString*)format
                file:(const char *)file
-               line:(NSUInteger)line
+               line:(NSInteger)line
            function:(const char *)function
                args:(va_list)args
 {
@@ -257,7 +257,7 @@ IBA_SYNTHESIZE_SINGLETON_FOR_CLASS(IBALogger, sharedLogger)
 /////////////////////////////////////////////////////////////////////////////////////////////////
 - (void) logError:(NSString*)format
              file:(const char *)file
-             line:(NSUInteger)line
+             line:(NSInteger)line
          function:(const char *)function, ...
 {
     va_list args;
@@ -269,7 +269,7 @@ IBA_SYNTHESIZE_SINGLETON_FOR_CLASS(IBALogger, sharedLogger)
 /////////////////////////////////////////////////////////////////////////////////////////////////
 - (void) logError:(NSString*)format
              file:(const char *)file
-             line:(NSUInteger)line
+             line:(NSInteger)line
          function:(const char *)function
              args:(va_list)args
 {
@@ -279,7 +279,7 @@ IBA_SYNTHESIZE_SINGLETON_FOR_CLASS(IBALogger, sharedLogger)
 /////////////////////////////////////////////////////////////////////////////////////////////////
 - (void) logCritical:(NSString*)format
                 file:(const char *)file
-                line:(NSUInteger)line
+                line:(NSInteger)line
             function:(const char *)function, ...
 {
     va_list args;
@@ -291,7 +291,7 @@ IBA_SYNTHESIZE_SINGLETON_FOR_CLASS(IBALogger, sharedLogger)
 /////////////////////////////////////////////////////////////////////////////////////////////////
 - (void) logCritical:(NSString*)format
                 file:(const char *)file
-                line:(NSUInteger)line
+                line:(NSInteger)line
             function:(const char *)function
                 args:(va_list)args
 {
@@ -301,7 +301,7 @@ IBA_SYNTHESIZE_SINGLETON_FOR_CLASS(IBALogger, sharedLogger)
 /////////////////////////////////////////////////////////////////////////////////////////////////
 - (void) logAlert:(NSString*)format
              file:(const char *)file
-             line:(NSUInteger)line
+             line:(NSInteger)line
          function:(const char *)function, ...
 {
     va_list args;
@@ -313,7 +313,7 @@ IBA_SYNTHESIZE_SINGLETON_FOR_CLASS(IBALogger, sharedLogger)
 /////////////////////////////////////////////////////////////////////////////////////////////////
 - (void) logAlert:(NSString*)format
              file:(const char *)file
-             line:(NSUInteger)line
+             line:(NSInteger)line
          function:(const char *)function
              args:(va_list)args
 {
@@ -323,7 +323,7 @@ IBA_SYNTHESIZE_SINGLETON_FOR_CLASS(IBALogger, sharedLogger)
 /////////////////////////////////////////////////////////////////////////////////////////////////
 - (void) logEmergency:(NSString*)format
                  file:(const char *)file
-                 line:(NSUInteger)line
+                 line:(NSInteger)line
              function:(const char *)function, ...
 {
     va_list args;
@@ -335,7 +335,7 @@ IBA_SYNTHESIZE_SINGLETON_FOR_CLASS(IBALogger, sharedLogger)
 /////////////////////////////////////////////////////////////////////////////////////////////////
 - (void) logEmergency:(NSString*)format
                  file:(const char *)file
-                 line:(NSUInteger)line
+                 line:(NSInteger)line
              function:(const char *)function
                  args:(va_list)args
 {

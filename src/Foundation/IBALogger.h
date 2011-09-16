@@ -122,7 +122,7 @@
 - (void)log:(NSString *)format
       level:(NSInteger)level
        file:(const char *)file
-       line:(NSUInteger)line
+       line:(NSInteger)line
    function:(const char *)function, ... IBA_FORMAT_FUNCTION(1, 6);
 
 /*!
@@ -131,7 +131,7 @@
 - (void)log:(NSString *)format
       level:(NSInteger)level
        file:(const char *)file
-       line:(NSUInteger)line
+       line:(NSInteger)line
    function:(const char *)function
        args:(va_list)args IBA_FORMAT_FUNCTION(1, 0);
 
@@ -140,7 +140,7 @@
  */
 - (void)logDebug:(NSString *)format
             file:(const char *)file
-            line:(NSUInteger)line
+            line:(NSInteger)line
         function:(const char *)function, ... IBA_FORMAT_FUNCTION(1, 5);
 
 /*!
@@ -148,7 +148,7 @@
  */
 - (void)logDebug:(NSString *)format
             file:(const char *)file
-            line:(NSUInteger)line
+            line:(NSInteger)line
         function:(const char *)function
             args:(va_list)args IBA_FORMAT_FUNCTION(1, 0);
 
@@ -157,7 +157,7 @@
  */
 - (void)logInfo:(NSString *)format
            file:(const char *)file
-           line:(NSUInteger)line
+           line:(NSInteger)line
        function:(const char *)function, ... IBA_FORMAT_FUNCTION(1, 5);
 
 /*!
@@ -165,7 +165,7 @@
  */
 - (void)logInfo:(NSString *)format
            file:(const char *)file
-           line:(NSUInteger)line
+           line:(NSInteger)line
        function:(const char *)function
            args:(va_list)args IBA_FORMAT_FUNCTION(1, 0);
 
@@ -174,7 +174,7 @@
  */
 - (void)logNotice:(NSString *)format
              file:(const char *)file
-             line:(NSUInteger)line
+             line:(NSInteger)line
          function:(const char *)function, ... IBA_FORMAT_FUNCTION(1, 5);
 
 /*!
@@ -182,7 +182,7 @@
  */
 - (void)logNotice:(NSString *)format
              file:(const char *)file
-             line:(NSUInteger)line
+             line:(NSInteger)line
          function:(const char *)function
              args:(va_list)args IBA_FORMAT_FUNCTION(1, 0);
 
@@ -191,7 +191,7 @@
  */
 - (void)logWarning:(NSString *)format
               file:(const char *)file
-              line:(NSUInteger)line
+              line:(NSInteger)line
           function:(const char *)function, ... IBA_FORMAT_FUNCTION(1, 5);
 
 /*!
@@ -199,7 +199,7 @@
  */
 - (void)logWarning:(NSString *)format
               file:(const char *)file
-              line:(NSUInteger)line
+              line:(NSInteger)line
           function:(const char *)function
               args:(va_list)args IBA_FORMAT_FUNCTION(1, 0);
 
@@ -208,7 +208,7 @@
  */
 - (void)logError:(NSString *)format
             file:(const char *)file
-            line:(NSUInteger)line
+            line:(NSInteger)line
         function:(const char *)function, ... IBA_FORMAT_FUNCTION(1, 5);
 
 /*!
@@ -216,7 +216,7 @@
  */
 - (void)logError:(NSString *)format
             file:(const char *)file
-            line:(NSUInteger)line
+            line:(NSInteger)line
         function:(const char *)function
             args:(va_list)args IBA_FORMAT_FUNCTION(1, 0);
 
@@ -225,7 +225,7 @@
  */
 - (void)logCritical:(NSString *)format
                file:(const char *)file
-               line:(NSUInteger)line
+               line:(NSInteger)line
            function:(const char *)function, ... IBA_FORMAT_FUNCTION(1, 5);
 
 /*!
@@ -233,7 +233,7 @@
  */
 - (void)logCritical:(NSString *)format
                file:(const char *)file
-               line:(NSUInteger)line
+               line:(NSInteger)line
            function:(const char *)function
                args:(va_list)args IBA_FORMAT_FUNCTION(1, 0);
 
@@ -242,7 +242,7 @@
  */
 - (void)logAlert:(NSString *)format
             file:(const char *)file
-            line:(NSUInteger)line
+            line:(NSInteger)line
         function:(const char *)function, ... IBA_FORMAT_FUNCTION(1, 5);
 
 /*!
@@ -250,7 +250,7 @@
  */
 - (void)logAlert:(NSString *)format
             file:(const char *)file
-            line:(NSUInteger)line
+            line:(NSInteger)line
         function:(const char *)function
             args:(va_list)args IBA_FORMAT_FUNCTION(1, 0);
 
@@ -260,7 +260,7 @@
  */
 - (void)logEmergency:(NSString *)format
                 file:(const char *)file
-                line:(NSUInteger)line
+                line:(NSInteger)line
             function:(const char *)function, ... IBA_FORMAT_FUNCTION(1, 5);
 
 /*!
@@ -269,7 +269,7 @@
  */
 - (void)logEmergency:(NSString *)format
                 file:(const char *)file
-                line:(NSUInteger)line
+                line:(NSInteger)line
             function:(const char *)function
                 args:(va_list)args IBA_FORMAT_FUNCTION(1, 0);
 
