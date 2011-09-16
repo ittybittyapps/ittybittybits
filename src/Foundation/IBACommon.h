@@ -233,6 +233,21 @@
 #endif
 
 /*!
+ \def       IBA_PURECONST
+ \brief     Macro for marking functions as extra pure (i.e., using __attribute__((const)).
+
+ \details
+ Many functions do not examine any values except their arguments, and have no effects except the return value. Basically this is just slightly more strict class than the IBA_PURE attribute, since function is not allowed to read global memory.
+ 
+ Note that a function that has pointer arguments and examines the data pointed to must not be declared IBA_PURECONST. Likewise, a function that calls a non-IBA_PURECONST function usually must not be IBA_PURECONST. It does not make sense for a IBA_PURECONST function to return void.
+ */
+#ifdef __pure2
+#   define IBA_PURECONST __pure2
+#else
+#   define IBA_PURECONST
+#endif
+
+/*!
  \def       IBA_HAS_FLAG
  \brief     Tests the specified \a flags value to determine whether the specified \a flag is set.
  \param     flags       The flags variable to test.
