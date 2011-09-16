@@ -38,7 +38,7 @@ float IBAClampFloatValue(float val, float minval, float maxval)
 int32_t IBAClampIntValue(int32_t val, int32_t minval, int32_t maxval)
 {  
     float minOfMax = MIN(val, maxval);
-    return MAX(minOfMax, minval);
+    return (int32_t)MAX(minOfMax, minval);
 }
 
 /*!
