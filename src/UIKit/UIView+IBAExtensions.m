@@ -179,8 +179,11 @@
 {
     if ([self.superview.subviews count] > 1)
     {
-        NSUInteger currentIndex = [self.superview.subviews indexOfObject:self];
-        NSUInteger maxIndex = [self.superview.subviews count] - 1;
+        NSInteger currentIndex = (NSInteger) [self.superview.subviews indexOfObject:self];
+        NSAssert(currentIndex != NSNotFound, @"view in inconsistent state!");
+        
+        NSInteger maxIndex = ((NSInteger)[self.superview.subviews count]) - 1;
+
         if (currentIndex < maxIndex)
         {
             [self.superview exchangeSubviewAtIndex:currentIndex withSubviewAtIndex:currentIndex + 1];
@@ -193,7 +196,7 @@
  */
 - (void)ibaSendBackward
 {
-	NSUInteger currentIndex = [self.superview.subviews indexOfObject:self];
+	NSInteger currentIndex = (NSInteger) [self.superview.subviews indexOfObject:self];
     if (currentIndex > 0)
     {
         [self.superview exchangeSubviewAtIndex:currentIndex withSubviewAtIndex:currentIndex - 1];
@@ -342,9 +345,14 @@
     [gesture setNumberOfTouchesRequired:touches];
     
     [[[self gestureRecognizers] ibaFilter:^BOOL(id gestureRecognizer) {
-        return [gestureRecognizer isKindOfClass:[UITapGestureRecognizer class]]
-        && ((NSUInteger)[gestureRecognizer numberOfTouchesRequired] == touches)
-        && ((NSUInteger)[gestureRecognizer numberOfTapsRequired] < taps);
+        if ([gestureRecognizer isKindOfClass:[UITapGestureRecognizer class]])
+        {
+            UITapGestureRecognizer *tapRecognizer = (UITapGestureRecognizer*)gestureRecognizer;
+            return ([tapRecognizer numberOfTouchesRequired] == touches)
+                && ([tapRecognizer numberOfTapsRequired] < taps);
+        }
+        
+        return NO;
     }] ibaEach:^(id tap_gesture_recognizer) {
         [gesture requireGestureRecognizerToFail:tap_gesture_recognizer];
     }];
