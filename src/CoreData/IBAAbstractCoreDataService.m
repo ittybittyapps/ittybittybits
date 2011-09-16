@@ -30,7 +30,9 @@
 - (NSPersistentStoreCoordinator *)newPersistentStoreCoordinatorWithObjectModel:(NSManagedObjectModel *)model 
                                                                       storeURL:(NSURL*)storeURL;
 
-- (void) handleUnresolvedError:(NSError *)error;
+- (void)handleUnresolvedError:(NSError *)error;
+- (void)processManagedObjectContextDidSaveNotification:(NSNotification*)saveNotification;
+
 @end
 
 @implementation IBAAbstractCoreDataService
