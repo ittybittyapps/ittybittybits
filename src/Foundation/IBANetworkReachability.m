@@ -146,7 +146,7 @@ static IBANetworkReachabilityStatus NetworkStatusForFlags(SCNetworkReachabilityF
         return IBANetworkReachabilityStatusNotReachable;
     }
     
-    BOOL retVal = IBANetworkReachabilityStatusNotReachable;
+    IBANetworkReachabilityStatus retVal = IBANetworkReachabilityStatusNotReachable;
     
     if (IBA_HAS_FLAG(flags, kSCNetworkReachabilityFlagsConnectionRequired) == NO)
     {
