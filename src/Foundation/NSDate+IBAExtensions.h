@@ -48,6 +48,9 @@
  */
 #define IBAHoursForTimeInterval(timeinterval) (IBAMinutesForTimeInterval(timeinterval)/60.0)
 
+// Date format hints for parsing date from internet string
+typedef enum { IBADateFormatHintNone, IBADateFormatHintRFC822, IBADateFormatHintRFC3339 } IBADateFormatHint;
+
 @interface NSDate (IBAExtensions)
 
 - (NSInteger)ibaNumberOfDaysUntil:(NSDate *)date; 
@@ -56,5 +59,9 @@
 - (BOOL)ibaIsEarlierThanOrEqualTo:(NSDate *)other;
 - (BOOL)ibaIsLaterThan:(NSDate *)date;
 - (BOOL)ibaIsLaterThanOrEqualTo:(NSDate *)other;
+
++ (NSDate *)ibaDateFromInternetDateTimeString:(NSString *)dateString formatHint:(IBADateFormatHint)hint;
++ (NSDate *)ibaDateFromRFC3339String:(NSString *)dateString;
++ (NSDate *)ibaDateFromRFC822String:(NSString *)dateString;
 
 @end

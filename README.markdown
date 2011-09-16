@@ -29,3 +29,4 @@ This library also contains modified versions of code copyright the following aut
     Erica Sadun
     Kevin O'Neill
     Robert Penner
+    Michael Waterfall
