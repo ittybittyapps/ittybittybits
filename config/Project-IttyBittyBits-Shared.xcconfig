@@ -10,7 +10,7 @@ ARCHS = $(ARCHS_STANDARD_32_BIT)
 SDKROOT = iphoneos
 IPHONEOS_DEPLOYMENT_TARGET = 4.2
 
-// Use Clang/LLVM 2.0
+// Use Clang/LLVM 3.0
 GCC_VERSION = com.apple.compilers.llvm.clang.1_0
 
 // Always run the Static Analyzer with each build (increases build times but worth while).
@@ -29,11 +29,13 @@ HEADER_SEARCH_PATHS = $(ITTYBITTYBITS_HEADER_SEARCH_PATHS)
 // Don't hide symbols by default
 GCC_SYMBOLS_PRIVATE_EXTERN = NO
 
-// Use C99.
+// Allow GNU extensions to C99.
 GCC_C_LANGUAGE_STANDARD = gnu99
 
 // All warnings should be treated as errors.
 GCC_TREAT_WARNINGS_AS_ERRORS = YES
+GCC_TREAT_INCOMPATIBLE_POINTER_TYPE_WARNINGS_AS_ERRORS = YES
+GCC_TREAT_IMPLICIT_FUNCTION_DECLARATIONS_AS_ERRORS = YES
 
 // Increase the strictness of warning.
 GCC_WARN_FOUR_CHARACTER_CONSTANTS = YES
@@ -59,5 +61,22 @@ GCC_WARN_CHECK_SWITCH_STATEMENTS = YES
 GCC_WARN_SHADOW = YES
 GCC_WARN_UNINITIALIZED_AUTOS = YES
 
+CLANG_WARN_CXX0X_EXTENSIONS = YES
+CLANG_WARN_IMPLICIT_SIGN_CONVERSION = YES
+CLANG_WARN_OBJC_IMPLICIT_ATOMIC_PROPERTIES = YES
+CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES
+CLANG_WARN_SUSPICIOUS_IMPLICIT_CONVERSION = YES
+
+// Optimize code by making more aggressive assumptions about whether pointers can point to the same objects as other pointers. 
+GCC_STRICT_ALIASING = YES
+
+// The optimizer will not look across object files in your program and optimize across file boundaries during linking.
+LLVM_LTO = NO
+
+// Disable ARC (for the time being - will adopt later)
+CLANG_ENABLE_OBJC_ARC = NO
+
 // Unfortunately setting this to YES breaks the build of JSONKit
 GCC_WARN_MULTIPLE_DEFINITION_TYPES_FOR_SELECTOR = NO
+GCC_WARN_STRICT_SELECTOR_MATCH = YES
+GCC_WARN_UNDECLARED_SELECTOR = YES
