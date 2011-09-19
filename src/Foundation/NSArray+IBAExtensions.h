@@ -74,4 +74,6 @@
 - (BOOL)ibaAny:(BOOL (^)(id))block;
 - (BOOL)ibaAll:(BOOL (^)(id))block;
 
+- (BOOL)ibaIntegerIsWithinIndexBounds:(NSInteger)index;
+
 @end

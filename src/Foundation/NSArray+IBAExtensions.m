@@ -207,4 +207,12 @@
     return NSNotFound == [self ibaIndexOfFirst:^ BOOL (id item) { return !block(item); }];
 }
 
+/*!
+ \brief     Returns a value indicating whether the specified integer \a index is within the bounds of the receiving array.
+ */
+- (BOOL)ibaIntegerIsWithinIndexBounds:(NSInteger)index
+{
+    return (index >= 0 && ((NSUInteger)index) < [self count]);
+}
+
 @end
