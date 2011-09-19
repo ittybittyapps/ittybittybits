@@ -95,6 +95,9 @@
 // Run before the tests are run for this class
 - (void)tearDownClass {}
 
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wstrict-selector-match"
+
 - (void)testReadOfTabDelimitedDataWithColumnHeaders
 {
     const char* testData = "A\tB\tC\n1\t2\t3\n4\t5\t6\n";
@@ -230,5 +233,7 @@
     
     [[self class] closeInputStream:stream];
 }
+
+#pragma clang diagnostic pop
 
 @end
