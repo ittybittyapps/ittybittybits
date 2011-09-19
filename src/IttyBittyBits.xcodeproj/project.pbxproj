@@ -154,6 +154,10 @@
 		A749CFCC140F66C300751EF5 /* IBACarouselView.m in Sources */ = {isa = PBXBuildFile; fileRef = A7C05861140C9F7D00339F5B /* IBACarouselView.m */; };
 		A7555E5C14206752002E5E57 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7555E5B14206752002E5E57 /* QuartzCore.framework */; };
 		A7555E5E142067A8002E5E57 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7555E5D142067A8002E5E57 /* CoreGraphics.framework */; };
+		A7555E6514207B7D002E5E57 /* IBATableViewModel.h in Headers */ = {isa = PBXBuildFile; fileRef = A7555E6314207B7D002E5E57 /* IBATableViewModel.h */; };
+		A7555E6614207B7D002E5E57 /* IBATableViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A7555E6414207B7D002E5E57 /* IBATableViewModel.m */; };
+		A7555E6914207FB1002E5E57 /* IBATableViewSectionModel.h in Headers */ = {isa = PBXBuildFile; fileRef = A7555E6714207FB1002E5E57 /* IBATableViewSectionModel.h */; };
+		A7555E6A14207FB1002E5E57 /* IBATableViewSectionModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A7555E6814207FB1002E5E57 /* IBATableViewSectionModel.m */; };
 		A75FC05B13BD919D00C7AE82 /* NSDate+IBAExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = A75FC05913BD919D00C7AE82 /* NSDate+IBAExtensions.h */; };
 		A75FC05C13BD919D00C7AE82 /* NSDate+IBAExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = A75FC05A13BD919D00C7AE82 /* NSDate+IBAExtensions.m */; };
 		A7652BD213E581530023D4B3 /* IBATiledImageView.h in Headers */ = {isa = PBXBuildFile; fileRef = A7652BD013E581530023D4B3 /* IBATiledImageView.h */; };
@@ -257,6 +261,10 @@
 		A7B6577E141094E00046142B /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A713975613F4F62C00CE8FF2 /* SystemConfiguration.framework */; };
 		A7B6922A137D13E200E379F3 /* NSNumber+IBAExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = A7B69228137D13DD00E379F3 /* NSNumber+IBAExtensions.h */; };
 		A7B6922B137D13E200E379F3 /* NSNumber+IBAExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = A7B69229137D13E000E379F3 /* NSNumber+IBAExtensions.m */; };
+		A7B9E5B31426D3FE00DEA745 /* IBATableViewModelTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A7B9E5B21426D3FE00DEA745 /* IBATableViewModelTests.m */; };
+		A7B9E5B61426D45900DEA745 /* IBATableViewSectionModelTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A7B9E5B51426D45900DEA745 /* IBATableViewSectionModelTests.m */; };
+		A7B9E5B71426DA8200DEA745 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7555E5B14206752002E5E57 /* QuartzCore.framework */; };
+		A7B9E5B81426DA9500DEA745 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7555E5D142067A8002E5E57 /* CoreGraphics.framework */; };
 		A7C05856140C771600339F5B /* IBAViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = A7C05854140C771600339F5B /* IBAViewController.h */; };
 		A7C05857140C771600339F5B /* IBAViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A7C05855140C771600339F5B /* IBAViewController.m */; };
 		A7C05865140CA04000339F5B /* IBAFlipButton.h in Headers */ = {isa = PBXBuildFile; fileRef = A7C05863140CA04000339F5B /* IBAFlipButton.h */; };
@@ -479,6 +487,10 @@
 		A7541C9D140CC50C0098586E /* Target-Samples-Release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = "Target-Samples-Release.xcconfig"; sourceTree = "<group>"; };
 		A7555E5B14206752002E5E57 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		A7555E5D142067A8002E5E57 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		A7555E6314207B7D002E5E57 /* IBATableViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBATableViewModel.h; sourceTree = "<group>"; };
+		A7555E6414207B7D002E5E57 /* IBATableViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IBATableViewModel.m; sourceTree = "<group>"; };
+		A7555E6714207FB1002E5E57 /* IBATableViewSectionModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBATableViewSectionModel.h; sourceTree = "<group>"; };
+		A7555E6814207FB1002E5E57 /* IBATableViewSectionModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IBATableViewSectionModel.m; sourceTree = "<group>"; };
 		A75FC05913BD919D00C7AE82 /* NSDate+IBAExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+IBAExtensions.h"; sourceTree = "<group>"; };
 		A75FC05A13BD919D00C7AE82 /* NSDate+IBAExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+IBAExtensions.m"; sourceTree = "<group>"; };
 		A7652BD013E581530023D4B3 /* IBATiledImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBATiledImageView.h; sourceTree = "<group>"; };
@@ -579,6 +591,10 @@
 		A7B6576E141093980046142B /* README.markdown */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.markdown; sourceTree = "<group>"; };
 		A7B69228137D13DD00E379F3 /* NSNumber+IBAExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSNumber+IBAExtensions.h"; path = "Foundation/NSNumber+IBAExtensions.h"; sourceTree = SOURCE_ROOT; };
 		A7B69229137D13E000E379F3 /* NSNumber+IBAExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSNumber+IBAExtensions.m"; path = "Foundation/NSNumber+IBAExtensions.m"; sourceTree = SOURCE_ROOT; };
+		A7B9E5AE1426D3AA00DEA745 /* IBATableViewModelTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBATableViewModelTests.h; sourceTree = "<group>"; };
+		A7B9E5B21426D3FE00DEA745 /* IBATableViewModelTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IBATableViewModelTests.m; sourceTree = "<group>"; };
+		A7B9E5B41426D45900DEA745 /* IBATableViewSectionModelTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBATableViewSectionModelTests.h; sourceTree = "<group>"; };
+		A7B9E5B51426D45900DEA745 /* IBATableViewSectionModelTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IBATableViewSectionModelTests.m; sourceTree = "<group>"; };
 		A7C05854140C771600339F5B /* IBAViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBAViewController.h; sourceTree = "<group>"; };
 		A7C05855140C771600339F5B /* IBAViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IBAViewController.m; sourceTree = "<group>"; };
 		A7C05860140C9F7D00339F5B /* IBACarouselView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBACarouselView.h; sourceTree = "<group>"; };
@@ -683,6 +699,8 @@
 				A7B4DB171367C70D00543D61 /* Security.framework in Frameworks */,
 				A7C2FB9D13B3085800F774CA /* CoreData.framework in Frameworks */,
 				A77874D813F4F6CA008FF846 /* SystemConfiguration.framework in Frameworks */,
+				A7B9E5B71426DA8200DEA745 /* QuartzCore.framework in Frameworks */,
+				A7B9E5B81426DA9500DEA745 /* CoreGraphics.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -951,6 +969,10 @@
 			children = (
 				A7808BD513D2D76A00F76DB1 /* UIColor+IBAExtensionsTests.h */,
 				A7808BD613D2D76A00F76DB1 /* UIColor+IBAExtensionsTests.m */,
+				A7B9E5AE1426D3AA00DEA745 /* IBATableViewModelTests.h */,
+				A7B9E5B21426D3FE00DEA745 /* IBATableViewModelTests.m */,
+				A7B9E5B41426D45900DEA745 /* IBATableViewSectionModelTests.h */,
+				A7B9E5B51426D45900DEA745 /* IBATableViewSectionModelTests.m */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -973,6 +995,10 @@
 				A7422E6714012A3600D9C54F /* IBANavigationBar.m */,
 				A76C84D813C1A13D00D2A866 /* IBATableViewAccessory.h */,
 				A76C84D913C1A13D00D2A866 /* IBATableViewAccessory.m */,
+				A7555E6714207FB1002E5E57 /* IBATableViewSectionModel.h */,
+				A7555E6814207FB1002E5E57 /* IBATableViewSectionModel.m */,
+				A7555E6314207B7D002E5E57 /* IBATableViewModel.h */,
+				A7555E6414207B7D002E5E57 /* IBATableViewModel.m */,
 				A7652BD013E581530023D4B3 /* IBATiledImageView.h */,
 				A7652BD113E581530023D4B3 /* IBATiledImageView.m */,
 				A7C05854140C771600339F5B /* IBAViewController.h */,
@@ -1329,6 +1355,8 @@
 				A721B2C214173B9500BC9E23 /* CADisplayLink+IBAExtensions.h in Headers */,
 				A721B2C614173ED600BC9E23 /* IBACoreAnimation.h in Headers */,
 				A7CD3F8C1420356C0022F7AD /* NSIndexPath+IBAExtensions.h in Headers */,
+				A7555E6514207B7D002E5E57 /* IBATableViewModel.h in Headers */,
+				A7555E6914207FB1002E5E57 /* IBATableViewSectionModel.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1652,6 +1680,8 @@
 				A749CFCC140F66C300751EF5 /* IBACarouselView.m in Sources */,
 				A721B2C314173B9500BC9E23 /* CADisplayLink+IBAExtensions.m in Sources */,
 				A7CD3F8D1420356C0022F7AD /* NSIndexPath+IBAExtensions.m in Sources */,
+				A7555E6614207B7D002E5E57 /* IBATableViewModel.m in Sources */,
+				A7555E6A14207FB1002E5E57 /* IBATableViewSectionModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1667,6 +1697,8 @@
 				A7808BD713D2D76A00F76DB1 /* UIColor+IBAExtensionsTests.m in Sources */,
 				A78065631404DCED0075FDA7 /* NSString+IBAExtensionsTests.m in Sources */,
 				A7ACE49F140637C900CC2138 /* IBAStackTests.m in Sources */,
+				A7B9E5B31426D3FE00DEA745 /* IBATableViewModelTests.m in Sources */,
+				A7B9E5B61426D45900DEA745 /* IBATableViewSectionModelTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1759,7 +1791,7 @@
 		};
 		7585D4EE1400924B00A2A54C /* UAT */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A7C2169013AB2DD90070DA6A /* Target-IttyBittyBits-Debug.xcconfig */;
+			baseConfigurationReference = A7C2169113AB2DE70070DA6A /* Target-IttyBittyBits-Release.xcconfig */;
 			buildSettings = {
 			};
 			name = UAT;

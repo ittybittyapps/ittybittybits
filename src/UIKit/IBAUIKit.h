@@ -23,6 +23,8 @@
 #import "IBAGradientButton.h"
 #import "IBANavigationBar.h"
 #import "IBATableViewAccessory.h"
+#import "IBATableViewSectionModel.h"
+#import "IBATableViewModel.h"
 #import "IBATiledImageView.h"
 #import "IBAViewController.h"
 
