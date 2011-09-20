@@ -28,7 +28,11 @@
  */
 - (BOOL)ibaRowIsWithinBoundsOfArray:(NSArray *)array
 {
+#if __IPHONE_OS_VERSION_MAX_ALLOWED > __IPHONE_4_3
     return (self.row >= 0 && IBANSIntegerLessThanNSUInteger(self.row, [array count]));
+#else
+    return (self.row < [array count]);
+#endif
 }
 
 @end
