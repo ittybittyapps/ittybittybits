@@ -130,7 +130,7 @@
 
 /////////////////////////////////////////////////////////////////////////////////////////////////
 - (void) readRecordsFromFile:(NSString*)path 
-                    delegate:(id<IBADelimitedTextFileReaderDelegate>)delegate;
+                    delegate:(id<IBADelimitedTextFileReaderDelegate>)delegate
 {
     IBAAssertNotNilOrEmptyString(path);
 

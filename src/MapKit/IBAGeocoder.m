@@ -103,7 +103,7 @@ IBA_SYNTHESIZE(delegate, responseData, rConnection, request, requestURL);
     return [self initWithRequestParams:params];
 }
 
-- (id)initWithAddress:(NSString *)address inCountry:(NSString *)country;
+- (id)initWithAddress:(NSString *)address inCountry:(NSString *)country
 {
 	NSString *urlParams = [NSString stringWithFormat:@"address=%@&region=%@", address, country];
     return [self initWithRequestParams:urlParams];

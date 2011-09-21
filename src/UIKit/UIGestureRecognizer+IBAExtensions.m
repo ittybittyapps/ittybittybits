@@ -90,7 +90,7 @@ static char block_key;
     return objc_getAssociatedObject(self, &block_key);
 }
 
-- (void)_ibaSetActionBlock:(IBAGestureActionBlock)block;
+- (void)_ibaSetActionBlock:(IBAGestureActionBlock)block
 {
     objc_setAssociatedObject(self, &block_key, block, OBJC_ASSOCIATION_COPY);
 }

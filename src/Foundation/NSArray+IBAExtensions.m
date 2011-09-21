@@ -74,18 +74,18 @@
 }
 
 
-- (void)ibaEach:(void (^)(id))block;
+- (void)ibaEach:(void (^)(id))block
 {
     [self enumerateObjectsUsingBlock: ^(id item, NSUInteger i, BOOL *stop) { block(item); }];
 }
 
-- (void)ibaEachWithIndex:(void (^)(id, NSUInteger))block;
+- (void)ibaEachWithIndex:(void (^)(id, NSUInteger))block
 {
     [self enumerateObjectsUsingBlock: ^(id item, NSUInteger i, BOOL *stop) { block(item, i); }];
 }
 
 
-- (NSArray *)ibaFilter:(BOOL (^)(id))block;
+- (NSArray *)ibaFilter:(BOOL (^)(id))block
 {
     NSMutableArray *result = [NSMutableArray arrayWithCapacity:[self count]];
     
@@ -100,7 +100,7 @@
     return [NSArray arrayWithArray:result];
 }
 
-- (NSArray *)ibaPick:(BOOL (^)(id))block;
+- (NSArray *)ibaPick:(BOOL (^)(id))block
 {
     NSMutableArray *result = [NSMutableArray arrayWithCapacity:[self count]];
     
@@ -115,7 +115,7 @@
     return [NSArray arrayWithArray:result];
 }
 
-- (id)ibaFirst:(BOOL (^)(id))block;
+- (id)ibaFirst:(BOOL (^)(id))block
 {
 	id result = nil;
     
@@ -131,7 +131,7 @@
     return result;
 }
 
-- (NSUInteger)ibaIndexOfFirst:(BOOL (^)(id item))block;
+- (NSUInteger)ibaIndexOfFirst:(BOOL (^)(id item))block
 {
     return [self indexOfObjectPassingTest:^ BOOL (id item, NSUInteger idx, BOOL *stop) {
 		if (block(item))
@@ -144,7 +144,7 @@
     }];
 }
 
-- (id)ibaLast:(BOOL (^)(id))block;
+- (id)ibaLast:(BOOL (^)(id))block
 {
 	id result = nil;
     
@@ -160,7 +160,7 @@
     return result;
 }
 
-- (NSUInteger)ibaIndexOfLast:(BOOL (^)(id item))block;
+- (NSUInteger)ibaIndexOfLast:(BOOL (^)(id item))block
 {
     return [self indexOfObjectWithOptions:NSEnumerationReverse passingTest:^ BOOL (id item, NSUInteger idx, BOOL *stop) {
 		if (block(item))
@@ -173,7 +173,7 @@
     }];
 }
 
-- (NSArray *)ibaMap:(id<NSObject> (^)(id<NSObject> item))block;
+- (NSArray *)ibaMap:(id<NSObject> (^)(id<NSObject> item))block
 {
     NSMutableArray *result = [NSMutableArray arrayWithCapacity:[self count]];
     
@@ -185,7 +185,7 @@
     return [NSArray arrayWithArray:result];
 }
 
-- (id)ibaReduce:(id (^)(id current, id item))block initial:(id)initial;
+- (id)ibaReduce:(id (^)(id current, id item))block initial:(id)initial
 {
     id result = initial;
     
@@ -197,12 +197,12 @@
     return result;
 }
 
-- (BOOL)ibaAny:(BOOL (^)(id))block;
+- (BOOL)ibaAny:(BOOL (^)(id))block
 {
     return NSNotFound != [self ibaIndexOfFirst:block];
 }
 
-- (BOOL)ibaAll:(BOOL (^)(id))block;
+- (BOOL)ibaAll:(BOOL (^)(id))block
 {
     return NSNotFound == [self ibaIndexOfFirst:^ BOOL (id item) { return !block(item); }];
 }

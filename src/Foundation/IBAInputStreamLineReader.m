@@ -79,7 +79,7 @@ const size_t kBufferSize = 4096;
 /////////////////////////////////////////////////////////////////////////////////////////////////
 - (id) initWithStream:(NSInputStream*)anInputStream 
       linesEndingWith:(NSString*)lineEnding 
-             encoding:(NSStringEncoding)encoding;
+             encoding:(NSStringEncoding)encoding
 
 {
     if ((self = [super init]))

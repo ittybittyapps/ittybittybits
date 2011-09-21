@@ -325,17 +325,17 @@
 }
 
 
-- (void)ibaOnTap:(void (^) (id sender))action;
+- (void)ibaOnTap:(void (^) (id sender))action
 {
     [self ibaOnTaps:1 touches:1 action:action];
 }
 
-- (void)ibaOnDoubleTap:(void (^) (id sender))action;
+- (void)ibaOnDoubleTap:(void (^) (id sender))action
 {
     [self ibaOnTaps:2 touches:1 action:action];
 }
 
-- (void)ibaOnTaps:(NSUInteger)taps touches:(NSUInteger)touches action:(void (^) (id sender))action; 
+- (void)ibaOnTaps:(NSUInteger)taps touches:(NSUInteger)touches action:(void (^) (id sender))action
 {
     UITapGestureRecognizer *gesture = [UITapGestureRecognizer ibaGestureRecognizerWithActionBlock:^(UIGestureRecognizer* recognizer) {
         action([recognizer view]);
@@ -360,12 +360,12 @@
     [self addGestureRecognizer:gesture];
 }
 
-- (void)ibaOnTap:(void (^) (id sender))action touches:(NSUInteger)touches; 
+- (void)ibaOnTap:(void (^) (id sender))action touches:(NSUInteger)touches
 {
     [self ibaOnTaps:1 touches:touches action:action];
 }
 
-- (void)ibaOnDoubleTap:(void (^) (id sender))action touches:(NSUInteger)touches;
+- (void)ibaOnDoubleTap:(void (^) (id sender))action touches:(NSUInteger)touches
 {
     [self ibaOnTaps:2 touches:touches action:action];
 }

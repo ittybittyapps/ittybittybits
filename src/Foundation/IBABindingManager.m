@@ -58,7 +58,7 @@
        withKeyPath:(NSString *)sourceKeyPath 
           toTarget:(NSObject *)target 
  withTargetKeyPath:(NSString *)targetKeyPath
-           options:(IBABindingManagerOptions)options;
+           options:(IBABindingManagerOptions)options
 {
     [self bindSource:source 
          withKeyPath:sourceKeyPath 
@@ -73,7 +73,7 @@
           toTarget:(NSObject *)target 
  withTargetKeyPath:(NSString *)targetKeyPath
            options:(IBABindingManagerOptions)options
-            action:(IBABindingActionBlock)blockOrNil;
+            action:(IBABindingActionBlock)blockOrNil
 {
     IBABinding *binding = [IBABinding bindingWithSourceObject:source
                                                 sourceKeyPath:sourceKeyPath
