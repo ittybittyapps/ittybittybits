@@ -20,8 +20,6 @@
 #import "UIColor+IBAExtensions.h"
 #import "../Foundation/IBAFoundation.h"
 
-static CGFloat _ibaGetColorComponent(CGColorRef color, NSUInteger index);
-
 @implementation UIColor (IBAExtensions)
 
 #pragma mark -
