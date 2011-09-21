@@ -1,5 +1,5 @@
 //
-//  NSIndexPath+IBAExtensions.m
+//  NSIndexPath+IBAExtensions.h
 //  IttyBittyBits
 //
 //  Created by Oliver Jones on 14/09/11.
@@ -17,22 +17,19 @@
 //  See the License for the specific language governing permissions and
 //  limitations under the License.
 
-#import "NSIndexPath+IBAExtensions.h"
-#import "IBACommon.h"
+#import <Foundation/Foundation.h>
 
-@implementation NSIndexPath (IBAExtension)
-
-/*!
- \brief     Returns a value indicating whether the NSIndexPath's row property value is within the index bounds of the specified \a array.
- \return    YES if the NSIndexPath's row property value is within the index bounds of the specified \a array; otherwise NO.
- */
-- (BOOL)ibaRowIsWithinBoundsOfArray:(NSArray *)array
-{
-#if __IPHONE_OS_VERSION_MAX_ALLOWED > __IPHONE_4_3
-    return (self.row >= 0 && IBANSIntegerLessThanNSUInteger(self.row, [array count]));
+#if defined(__IPHONE_5_0)
+// fucking iOS SDK bugs!
+typedef NSInteger IBAIndexPathRowType;
+typedef NSInteger IBAIndexPathSectionType;
 #else
-    return (self.row < [array count]);
+typedef NSUInteger IBAIndexPathRowType;
+typedef NSUInteger IBAIndexPathSectionType;
 #endif
-}
+
+@interface NSIndexPath (UITableView_IBAExtension)
+
+- (BOOL)ibaRowIsWithinBoundsOfArray:(NSArray *)array;
 
 @end

@@ -29,6 +29,7 @@
 #import "IBAViewController.h"
 
 // Extension categories.
+#import "NSIndexPath+UITableView+IBAExtensions.h"
 #import "UIAlertView+IBAExtensions.h"
 #import "UIApplication+IBAExtensions.h"
 #import "UIBarButtonItem+IBAFactories.h"

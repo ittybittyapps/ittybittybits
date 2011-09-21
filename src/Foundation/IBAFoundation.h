@@ -40,7 +40,6 @@
 #import "NSDate+IBAExtensions.h"
 #import "NSDictionary+IBAExtensions.h"
 #import "NSError+IBAExtensions.h"
-#import "NSIndexPath+IBAExtensions.h"
 #import "NSFileManager+IBAExtensions.h"
 #import "NSMutableArray+IBAExtensions.h"
 #import "NSMutableDictionary+IBAExtensions.h"
