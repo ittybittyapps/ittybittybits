@@ -56,7 +56,7 @@
     [self.records addObject:record];
 }
 
-- (void) didReadColumnHeaders:(NSArray*)theColumnHeaders;
+- (void) didReadColumnHeaders:(NSArray*)theColumnHeaders
 {
     self.columnHeaders = theColumnHeaders;
 }
