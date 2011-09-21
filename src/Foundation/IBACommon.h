@@ -247,6 +247,12 @@
 #   define IBA_PURECONST
 #endif
 
+#if __has_attribute(unused)
+#   define IBA_UNUSED __attribute__((unused))
+#else
+#   define IBA_UNUSED
+#endif
+
 /*!
  \def       IBA_HAS_FLAG
  \brief     Tests the specified \a flags value to determine whether the specified \a flag is set.

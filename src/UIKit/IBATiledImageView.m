@@ -39,7 +39,7 @@ IBA_SYNTHESIZE(dataSource, tiledLayer);
     return 1.0;
 }
 
-- (void)setContentScaleFactor:(CGFloat)contentScaleFactor
+- (void)setContentScaleFactor:(CGFloat)IBA_UNUSED contentScaleFactor
 {
     // To handle the interaction between CATiledLayer and high resolution screens, we need to manually set the tiling view's contentScaleFactor to 1.0. (If we omitted this, it would be 2.0 on high resolution screens, which would cause the CATiledLayer to ask us for tiles of the wrong scales.)
 

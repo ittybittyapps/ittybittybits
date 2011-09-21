@@ -154,7 +154,7 @@ IBA_SYNTHESIZE(delegate, responseData, rConnection, request, requestURL);
 /*!
  Sent as a connection loads data incrementally.
  */
-- (void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data 
+- (void)connection:(NSURLConnection *)IBA_UNUSED connection didReceiveData:(NSData *)data 
 {	
 	[self.responseData appendData:data];
 }
@@ -162,7 +162,7 @@ IBA_SYNTHESIZE(delegate, responseData, rConnection, request, requestURL);
 /*!
  Sent when a connection fails to load its request successfully.
  */
-- (void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error 
+- (void)connection:(NSURLConnection *)IBA_UNUSED connection didFailWithError:(NSError *)error 
 {	
 	IBALogDebug(@"IBAGeocoder -> Failed with error: %@, (%@)", [error localizedDescription], [[self.request URL] absoluteString]);
 	

@@ -158,8 +158,8 @@ IBA_SYNTHESIZE(defaultManagedObjectContext,
  
  Lightweight migration will only work for a limited set of schema changes; consult "Core Data Model Versioning and Data Migration Programming Guide" for details.
  */
-- (BOOL) shouldRetryAddingPersistentStoreForModel:(NSManagedObjectModel *)model 
-                                         storeURL:(NSURL *)storeURL 
+- (BOOL) shouldRetryAddingPersistentStoreForModel:(NSManagedObjectModel *)IBA_UNUSED model 
+                                         storeURL:(NSURL *)IBA_UNUSED storeURL 
                                         withError:(NSError *)error
 {
     [self handleUnresolvedError:error];

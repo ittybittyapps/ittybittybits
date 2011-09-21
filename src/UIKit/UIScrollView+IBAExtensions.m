@@ -46,7 +46,7 @@
                          self.contentInset = contentInsets;
                          self.scrollIndicatorInsets = contentInsets;
                      }
-                     completion: ^(BOOL finished){
+                     completion: ^(BOOL IBA_UNUSED finished){
                      }];
 }
 

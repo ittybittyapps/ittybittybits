@@ -54,7 +54,7 @@ static classname *shared##classname = nil; \
     }); \
     return temp; \
 } \
-- (id)copyWithZone:(NSZone *)zone { return self; } \
+- (id)copyWithZone:(NSZone *)IBA_UNUSED zone { return self; } \
 - (id)retain { return self; } \
 - (NSUInteger)retainCount { return NSUIntegerMax; } \
 - (oneway void)release { } \

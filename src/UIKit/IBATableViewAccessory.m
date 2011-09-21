@@ -58,7 +58,7 @@ IBA_SYNTHESIZE(accessoryColor, highlightedColor);
 /*!
  Draws the receiver’s image within the passed-in rectangle.
  */
-- (void)drawRect:(CGRect)rect
+- (void)drawRect:(CGRect)IBA_UNUSED rect
 {
 	const CGFloat R = 4.5;
 	CGContextRef ctxt = UIGraphicsGetCurrentContext();

@@ -45,7 +45,7 @@ IBA_SYNTHESIZE(animationDuration, flipDirection, flipType);
     return self;
 }
 
-- (void)touchUpInside:(id)sender forEvent:(UIEvent *)event
+- (void)touchUpInside:(id)IBA_UNUSED sender forEvent:(UIEvent *)IBA_UNUSED event
 {
     [self setFlipped:!self.flipped animated:YES];
 }

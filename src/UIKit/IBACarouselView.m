@@ -181,7 +181,7 @@ IBA_SYNTHESIZE(dataSource, throwDuration, throwVelocityFactor, minimumThrowVeloc
     IBA_RELEASE(spinTimer);
 }
 
-- (void) touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
+- (void) touchesBegan:(NSSet *)IBA_UNUSED touches withEvent:(UIEvent *)IBA_UNUSED event
 {
     // Stop any existing spin as soon as the view is touched.
     [self stopSpin];

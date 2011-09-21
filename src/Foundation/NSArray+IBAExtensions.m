@@ -47,6 +47,7 @@
 //  SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 #import "NSArray+IBAExtensions.h"
+#import "IBACommon.h"
 
 @implementation NSArray (IBAExtensions)
 
@@ -76,12 +77,12 @@
 
 - (void)ibaEach:(void (^)(id))block
 {
-    [self enumerateObjectsUsingBlock: ^(id item, NSUInteger i, BOOL *stop) { block(item); }];
+    [self enumerateObjectsUsingBlock: ^(id item, NSUInteger IBA_UNUSED i, BOOL IBA_UNUSED *stop) { block(item); }];
 }
 
 - (void)ibaEachWithIndex:(void (^)(id, NSUInteger))block
 {
-    [self enumerateObjectsUsingBlock: ^(id item, NSUInteger i, BOOL *stop) { block(item, i); }];
+    [self enumerateObjectsUsingBlock: ^(id item, NSUInteger IBA_UNUSED i, BOOL IBA_UNUSED *stop) { block(item, i); }];
 }
 
 
@@ -133,7 +134,7 @@
 
 - (NSUInteger)ibaIndexOfFirst:(BOOL (^)(id item))block
 {
-    return [self indexOfObjectPassingTest:^ BOOL (id item, NSUInteger idx, BOOL *stop) {
+    return [self indexOfObjectPassingTest:^ BOOL (id item, NSUInteger IBA_UNUSED idx, BOOL *stop) {
 		if (block(item))
         {
             *stop = YES;
@@ -162,7 +163,7 @@
 
 - (NSUInteger)ibaIndexOfLast:(BOOL (^)(id item))block
 {
-    return [self indexOfObjectWithOptions:NSEnumerationReverse passingTest:^ BOOL (id item, NSUInteger idx, BOOL *stop) {
+    return [self indexOfObjectWithOptions:NSEnumerationReverse passingTest:^ BOOL (id item, NSUInteger IBA_UNUSED idx, BOOL *stop) {
 		if (block(item))
         {
             *stop = YES;

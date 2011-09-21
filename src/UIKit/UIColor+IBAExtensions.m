@@ -118,7 +118,7 @@
         [regex enumerateMatchesInString:cssRGBString 
                                 options:0 
                                   range:NSMakeRange(0, [cssRGBString length]) 
-                             usingBlock:^(NSTextCheckingResult *result, NSMatchingFlags flags, BOOL *stop) {
+                             usingBlock:^(NSTextCheckingResult *result, NSMatchingFlags IBA_UNUSED flags, BOOL *stop) {
                                  
                                  NSRange alphaExpectedRange = [result rangeAtIndex:1];
                                  NSRange redRange = [result rangeAtIndex:2];

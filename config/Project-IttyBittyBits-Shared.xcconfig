@@ -64,9 +64,7 @@ GCC_WARN_STRICT_SELECTOR_MATCH = YES
 GCC_WARN_UNDECLARED_SELECTOR = YES
 GCC_WARN_UNKNOWN_PRAGMAS = YES
 GCC_WARN_UNUSED_FUNCTION = YES
-
-// We're ok with unused parameters (sometimes parameters are optional).
-GCC_WARN_UNUSED_PARAMETER = NO
+GCC_WARN_UNUSED_PARAMETER = YES
 
 // Unfortunately this warning tends to generate false positives.  Not sure why.  Therefore we turn it off.
 GCC_WARN_MULTIPLE_DEFINITION_TYPES_FOR_SELECTOR = NO

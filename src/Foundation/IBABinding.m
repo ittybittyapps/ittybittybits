@@ -73,7 +73,7 @@ IBA_SYNTHESIZE(source,
     return self;
 }
 
-- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context
+- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *) IBA_UNUSED context
 {
     if (object == self.source)
     {
