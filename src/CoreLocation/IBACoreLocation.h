@@ -23,4 +23,4 @@
 /*!
  \brief     Compares to CLLocationCoordinate2D structs for equality.
  */
-#define IBACLLocationCoordinate2DAreEqual(x, y) ((x).latitude == (y).latitude && (x).longitude == (y).longitude)
+#define IBACLLocationCoordinate2DAreEqual(x, y) (((x).latitude - (y).latitude) == 0.0f && ((x).longitude - (y).longitude) == 0.0f)
