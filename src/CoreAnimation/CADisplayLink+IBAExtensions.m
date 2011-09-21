@@ -23,14 +23,14 @@
 static void *kAssociatedBlockKey = 0;
 
 #pragma mark -
-#pragma Private Interface
+#pragma mark Private Interface
 
 @interface CADisplayLink (IBAExtensionsPrivate)
 + (void)iba_executeBlockWithDisplayLink:(CADisplayLink *)displayLink;
 @end
 
 #pragma mark -
-#pragma Private Implmention
+#pragma mark Private Implmention
 
 @implementation CADisplayLink (IBAExtensionsPrivate)
 

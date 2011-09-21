@@ -27,7 +27,7 @@
 #import "NSTimer+IBABlocks.h"
 
 #pragma mark -
-#pragma Private Interface
+#pragma mark Private Interface
 
 @interface NSTimer (IBABlocksPrivate)
 + (void)iba_executeBlockWithTimer:(NSTimer *)timer;
@@ -84,7 +84,7 @@
 @end
 
 #pragma mark -
-#pragma Private Implmention
+#pragma mark Private Implmention
 
 @implementation NSTimer (IBABlocksPrivate)
 
