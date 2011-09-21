@@ -19,7 +19,10 @@
 
 #import "IBATableViewModel.h"
 #import "IBATableViewSectionModel.h"
+#import "NSIndexPath+UITableView+IBAExtensions.h"
+
 #import "../Foundation/IBAFoundation.h"
+
 #import <objc/runtime.h>
 
 @interface IBATableViewModel ()
@@ -168,7 +171,7 @@ IBA_SYNTHESIZE(sections);
  */
 - (id)objectAtIndexPath:(NSIndexPath*)indexPath
 {
-    return indexPath ? [[self sectionAtIndex:indexPath.section] rowAtIndex:indexPath.row] : nil;
+    return indexPath ? [[self sectionAtIndex:(NSInteger)indexPath.section] rowAtIndex:(NSInteger)indexPath.row] : nil;
 }
 
 @end
