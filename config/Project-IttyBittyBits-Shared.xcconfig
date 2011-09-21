@@ -71,8 +71,9 @@ GCC_WARN_MULTIPLE_DEFINITION_TYPES_FOR_SELECTOR = NO
 
 // Additional warning flags that arn't covered by the GCC_WARN options
 // See http://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html for details on these options.
-WARNING_CFLAGS = -Wall -Wextra -Wunused -Wno-unused-parameter -Wfloat-equal -Wundef -Wc++-compat -Wstrict-prototypes -Wnested-externs -Wwrite-strings
+WARNING_CFLAGS = -Wall -Wextra -Wunused -Wconversion -Wsign-conversion -Wfloat-equal -Wundef -Wc++-compat -Wstrict-prototypes -Wnested-externs -Wwrite-strings
 
+// These options duplicate a couple above but they are only available in Xcode 4.2 with LLVM 3.0.
 CLANG_WARN_CXX0X_EXTENSIONS = YES
 CLANG_WARN_IMPLICIT_SIGN_CONVERSION = YES
 CLANG_WARN_OBJC_IMPLICIT_ATOMIC_PROPERTIES = YES
