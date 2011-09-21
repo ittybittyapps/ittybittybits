@@ -50,6 +50,13 @@
 
 #import <math.h>
 
+/*!
+ \brief     A linear easing/interpolation function.
+ \param     time    The current elapsed time (should be in the range of [0.0, duration])
+ \param     begin   The starting/beginning value.
+ \param     change  The change in value for the \a duration (at end of duration the returned value should equal begin+change).
+ \return    The interpolated value.
+ */
 CGFloat IBALinearEase(NSTimeInterval time, CGFloat begin, CGFloat change, NSTimeInterval duration)
 {
     CGFloat timef = (CGFloat)time;
@@ -100,7 +107,7 @@ CGFloat IBAExpoEaseOut(NSTimeInterval time, CGFloat begin, CGFloat change, NSTim
     CGFloat timef = (CGFloat)time;
     CGFloat durationf = (CGFloat)duration;
     
-    return (timef == durationf) ? (begin + change) : (change * (-powf(2.0f, -10.0f * timef/durationf) + 1.0f) + begin);
+    return (timef >= durationf) ? (begin + change) : (change * (-powf(2.0f, -10.0f * timef/durationf) + 1.0f) + begin);
 }
 
 CGFloat IBAExpoEaseInOut(NSTimeInterval time, CGFloat begin, CGFloat change, NSTimeInterval duration)
@@ -111,7 +118,7 @@ CGFloat IBAExpoEaseInOut(NSTimeInterval time, CGFloat begin, CGFloat change, NST
     if (timef == 0.0f) 
         return begin;
     
-    if (timef == durationf) 
+    if (timef >= durationf) 
         return begin + change;
 
     if ((timef /= (durationf/2.0f)) < 1.0f) 

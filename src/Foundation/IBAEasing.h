@@ -47,7 +47,11 @@
 #import "IBACommon.h"
 
 /*!
- \brief     A function pointer type for easing functions.
+ \brief     A function pointer type for easing/interpolation functions.
+ \param     time    The current elapsed time (should be in the range of [0.0, duration])
+ \param     begin   The starting/beginning value.
+ \param     change  The change in value for the \a duration (at end of duration the returned value should equal begin+change).
+ \return    The interpolated value.
  */
 typedef CGFloat (*IBAEasingFunction)(NSTimeInterval time, CGFloat begin, CGFloat change, NSTimeInterval duration);
 
