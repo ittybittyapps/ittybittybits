@@ -25,6 +25,10 @@
  */
 @interface IBAViewController : UIViewController
 
++ (id)controller;
++ (NSString *)nibName;
++ (NSBundle *)bundle;
+
 - (void)releaseViews;
 
 @end

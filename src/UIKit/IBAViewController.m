@@ -22,6 +22,33 @@
 @implementation IBAViewController
 
 /*!
+ \brief     Basic factory method for IBAViewController subclasses.
+ \return    Returns an autoreleased instance of the IBAViewController subclass.
+ */
++ (id)controller
+{
+    return [[[self alloc] initWithNibName:[self nibName] bundle:[self bundle]] autorelease];
+}
+
+/*!
+ \brief     Subclasses can override this method to return the name of the nib to load.
+ \return    The name of the NIB to load.
+ */
++ (NSString *)nibName
+{
+    return nil;
+}
+
+/*!
+ \brief     Subclass can override this method to return the bundle to load the nib from.
+ \return    The bundle to load the NIB from.
+ */
++ (NSBundle *)bundle
+{
+    return nil;
+}
+
+/*!
  \brief     Subclasses should override this method to release their views by clearing outlets that point to views in their view heirarchy (not by clearing self.view)
  \details   This method is called from both dealloc and viewDidUnload.
  */
