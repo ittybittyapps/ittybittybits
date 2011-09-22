@@ -68,6 +68,30 @@
  */
 #define IBA_PIVAR(name) IBA_PROPERTY_IVAR(name)
 
+#define IBA_PROPERTY(policy, ...) IBA_CAT(_IBA_PROPERTY_, IBA_N_ARGS(__VA_ARGS__))(policy, __VA_ARGS__)
+
+#define IBA_PROPERTY_STRONG(...) IBA_PROPERTY(retain, __VA_ARGS__)
+#define IBA_PROPERTY_WEAK(...) IBA_PROPERTY(assign, __VA_ARGS__)
+
+#define _IBA_PROPERTY_H(policy, a) @property(nonatomic, policy) a
+#define _IBA_PROPERTY_1(policy, a) _IBA_PROPERTY_H(policy, a)
+#define _IBA_PROPERTY_2(policy, a, b) _IBA_PROPERTY_H(policy, a); _IBA_PROPERTY_H(policy, b)
+#define _IBA_PROPERTY_3(policy, a, ...) _IBA_PROPERTY_H(policy, a); _IBA_PROPERTY_2(policy, __VA_ARGS__)
+#define _IBA_PROPERTY_4(policy, a, ...) _IBA_PROPERTY_H(policy, a); _IBA_PROPERTY_3(policy, __VA_ARGS__)
+#define _IBA_PROPERTY_5(policy, a, ...) _IBA_PROPERTY_H(policy, a); _IBA_PROPERTY_4(policy, __VA_ARGS__)
+#define _IBA_PROPERTY_6(policy, a, ...) _IBA_PROPERTY_H(policy, a); _IBA_PROPERTY_5(policy, __VA_ARGS__)
+#define _IBA_PROPERTY_7(policy, a, ...) _IBA_PROPERTY_H(policy, a); _IBA_PROPERTY_6(policy, __VA_ARGS__)
+#define _IBA_PROPERTY_8(policy, a, ...) _IBA_PROPERTY_H(policy, a); _IBA_PROPERTY_7(policy, __VA_ARGS__)
+#define _IBA_PROPERTY_9(policy, a, ...) _IBA_PROPERTY_H(policy, a); _IBA_PROPERTY_8(policy, __VA_ARGS__)
+#define _IBA_PROPERTY_10(policy, a, ...) _IBA_PROPERTY_H(policy, a); _IBA_PROPERTY_9(policy, __VA_ARGS__)
+#define _IBA_PROPERTY_11(policy, a, ...) _IBA_PROPERTY_H(policy, a); _IBA_PROPERTY_10(policy, __VA_ARGS__)
+#define _IBA_PROPERTY_12(policy, a, ...) _IBA_PROPERTY_H(policy, a); _IBA_PROPERTY_11(policy, __VA_ARGS__)
+#define _IBA_PROPERTY_13(policy, a, ...) _IBA_PROPERTY_H(policy, a); _IBA_PROPERTY_12(policy, __VA_ARGS__)
+#define _IBA_PROPERTY_14(policy, a, ...) _IBA_PROPERTY_H(policy, a); _IBA_PROPERTY_13(policy, __VA_ARGS__)
+#define _IBA_PROPERTY_15(policy, a, ...) _IBA_PROPERTY_H(policy, a); _IBA_PROPERTY_14(policy, __VA_ARGS__)
+#define _IBA_PROPERTY_16(policy, a, ...) _IBA_PROPERTY_H(policy, a); _IBA_PROPERTY_15(policy, __VA_ARGS__)
+#define _IBA_PROPERTY_17(policy, a, ...) _IBA_PROPERTY_H(policy, a); _IBA_PROPERTY_16(policy, __VA_ARGS__)
+
 /*!
  \brief     Release an nil the instance variable behind a property.
  \details   Useful for releasing ivars backing readonly properties.
