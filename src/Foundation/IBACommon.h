@@ -336,6 +336,13 @@
 #define IBALocalizedString(x) NSLocalizedString((x), @"")
 
 /*!
+ \def       IBA_RUN_BLOCK
+ \brief     Macro to safely invoke a block.
+ \param     block   The block to invoke.
+ */
+#define IBA_RUN_BLOCK(block, ...) if (block) { (block)(__VA_ARGS__); }
+
+/*!
  \def       IBA_BLOCK_WEAK
  \brief     Helper macro for platform compatibility and weak block pointers.
 */
