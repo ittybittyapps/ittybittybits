@@ -22,5 +22,6 @@
 @interface NSOperationQueue (IBAExtensions)
 
 + (NSOperationQueue *)ibaOperationQueueWithName:(NSString *)name;
++ (NSOperationQueue *)ibaSerialOperationQueueWithName:(NSString *)name;
 
 @end

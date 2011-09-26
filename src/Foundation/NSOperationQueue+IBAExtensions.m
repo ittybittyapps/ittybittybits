@@ -33,4 +33,15 @@
     return [q autorelease];
 }
 
+/*!
+ \brief     Returns an auto-released NSOperationQueue instance with the specified \a name and maxConcurrentOperationCount set to 1.
+ \param     name        The name of the queue.
+ */
++ (NSOperationQueue *)ibaSerialOperationQueueWithName:(NSString *)name
+{
+    NSOperationQueue *q = [self ibaOperationQueueWithName:name];
+    q.maxConcurrentOperationCount = 1;
+    return q;
+}
+
 @end
