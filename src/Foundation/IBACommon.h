@@ -343,6 +343,14 @@
 #define IBA_RUN_BLOCK(block, ...) if (block) { (block)(__VA_ARGS__); }
 
 /*!
+ \def       IBA_SET_NSERROR
+ \brief     Macro to safely set an NSError out param.
+ \param     errorOut    The NSError out parameter.
+ \param     error       The error to assign to \a errorOut.
+ */
+#define     IBA_SET_NSERROR(errorOutParam, error) if (errorOut) { *(errorOut) = error; }
+
+/*!
  \def       IBA_BLOCK_WEAK
  \brief     Helper macro for platform compatibility and weak block pointers.
 */
