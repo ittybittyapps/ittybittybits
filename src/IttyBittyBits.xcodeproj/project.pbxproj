@@ -165,6 +165,7 @@
 		A7656EB91377DF50002FB968 /* IBADelimitedTextFileReaderTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A7656EB61377DF3C002FB968 /* IBADelimitedTextFileReaderTests.m */; };
 		A76992AE14303C98002A9BEE /* NSOperationQueue+IBAExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = A76992AC14303C98002A9BEE /* NSOperationQueue+IBAExtensions.h */; };
 		A76992AF14303C98002A9BEE /* NSOperationQueue+IBAExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = A76992AD14303C98002A9BEE /* NSOperationQueue+IBAExtensions.m */; };
+		A76992C914306768002A9BEE /* IBADispatch.h in Headers */ = {isa = PBXBuildFile; fileRef = A76992C814306768002A9BEE /* IBADispatch.h */; };
 		A76C84DA13C1A13D00D2A866 /* IBATableViewAccessory.h in Headers */ = {isa = PBXBuildFile; fileRef = A76C84D813C1A13D00D2A866 /* IBATableViewAccessory.h */; };
 		A76C84DB13C1A13D00D2A866 /* IBATableViewAccessory.m in Sources */ = {isa = PBXBuildFile; fileRef = A76C84D913C1A13D00D2A866 /* IBATableViewAccessory.m */; };
 		A7708F13140DBD1B005FDA05 /* libIttyBittyBits.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A7B4DAB91367991200543D61 /* libIttyBittyBits.a */; };
@@ -503,6 +504,7 @@
 		A7656EB61377DF3C002FB968 /* IBADelimitedTextFileReaderTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IBADelimitedTextFileReaderTests.m; sourceTree = "<group>"; };
 		A76992AC14303C98002A9BEE /* NSOperationQueue+IBAExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSOperationQueue+IBAExtensions.h"; sourceTree = "<group>"; };
 		A76992AD14303C98002A9BEE /* NSOperationQueue+IBAExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSOperationQueue+IBAExtensions.m"; sourceTree = "<group>"; };
+		A76992C814306768002A9BEE /* IBADispatch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBADispatch.h; sourceTree = "<group>"; };
 		A76C84D813C1A13D00D2A866 /* IBATableViewAccessory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBATableViewAccessory.h; sourceTree = "<group>"; };
 		A76C84D913C1A13D00D2A866 /* IBATableViewAccessory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IBATableViewAccessory.m; sourceTree = "<group>"; };
 		A7708F15140DC29C005FDA05 /* back@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "back@2x.png"; sourceTree = "<group>"; };
@@ -1197,6 +1199,7 @@
 				A707FD73137761570029FA76 /* IBADelimitedTextFileReader.m */,
 				A707FD77137776AB0029FA76 /* IBADelimitedTextFileReaderDelegate.h */,
 				A7D58C5B1378DAE30041BBEB /* IBADelimitedTextFileReaderDelegate.m */,
+				A76992C814306768002A9BEE /* IBADispatch.h */,
 				A749CF35140F4F6A00751EF5 /* IBAEasing.h */,
 				A749CF33140F4F1100751EF5 /* IBAEasing.m */,
 				A72ADC0C13CC54FB0052E2D4 /* IBAErrors.h */,
@@ -1371,6 +1374,7 @@
 				A7555E6914207FB1002E5E57 /* IBATableViewSectionModel.h in Headers */,
 				A7A1D43B142C51FA008EA4A6 /* NSPropertyListSerialization+IBAExtensions.h in Headers */,
 				A76992AE14303C98002A9BEE /* NSOperationQueue+IBAExtensions.h in Headers */,
+				A76992C914306768002A9BEE /* IBADispatch.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

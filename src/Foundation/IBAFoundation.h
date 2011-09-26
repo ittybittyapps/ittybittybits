@@ -24,6 +24,7 @@
 #import "IBAEasing.h"
 #import "IBADelimitedTextFileReader.h"
 #import "IBADelimitedTextFileReaderDelegate.h"
+#import "IBADispatch.h"
 #import "IBAErrors.h"
 #import "IBAInputStreamLineReader.h"
 #import "IBALogger.h"
