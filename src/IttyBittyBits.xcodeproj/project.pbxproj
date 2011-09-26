@@ -219,6 +219,8 @@
 		A7A0E10D13E0EF24006CEC5A /* NSError+IBACoreDataErrors.mm in Sources */ = {isa = PBXBuildFile; fileRef = A7A0E10B13E0EF24006CEC5A /* NSError+IBACoreDataErrors.mm */; };
 		A7A0E11113E12DB0006CEC5A /* IBAStateMachine.h in Headers */ = {isa = PBXBuildFile; fileRef = A7A0E10F13E12DB0006CEC5A /* IBAStateMachine.h */; };
 		A7A0E11213E12DB0006CEC5A /* IBAStateMachine.m in Sources */ = {isa = PBXBuildFile; fileRef = A7A0E11013E12DB0006CEC5A /* IBAStateMachine.m */; };
+		A7A1D43B142C51FA008EA4A6 /* NSPropertyListSerialization+IBAExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = A7A1D439142C51FA008EA4A6 /* NSPropertyListSerialization+IBAExtensions.h */; };
+		A7A1D43C142C51FA008EA4A6 /* NSPropertyListSerialization+IBAExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = A7A1D43A142C51FA008EA4A6 /* NSPropertyListSerialization+IBAExtensions.m */; };
 		A7ACE49B1405CE1700CC2138 /* IBAStack.h in Headers */ = {isa = PBXBuildFile; fileRef = A7ACE4991405CE1700CC2138 /* IBAStack.h */; };
 		A7ACE49C1405CE1700CC2138 /* IBAStack.m in Sources */ = {isa = PBXBuildFile; fileRef = A7ACE49A1405CE1700CC2138 /* IBAStack.m */; };
 		A7ACE49F140637C900CC2138 /* IBAStackTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A7ACE49E140637C900CC2138 /* IBAStackTests.m */; };
@@ -558,6 +560,8 @@
 		A7A0E10B13E0EF24006CEC5A /* NSError+IBACoreDataErrors.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = "NSError+IBACoreDataErrors.mm"; sourceTree = "<group>"; };
 		A7A0E10F13E12DB0006CEC5A /* IBAStateMachine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBAStateMachine.h; sourceTree = "<group>"; };
 		A7A0E11013E12DB0006CEC5A /* IBAStateMachine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IBAStateMachine.m; sourceTree = "<group>"; };
+		A7A1D439142C51FA008EA4A6 /* NSPropertyListSerialization+IBAExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSPropertyListSerialization+IBAExtensions.h"; sourceTree = "<group>"; };
+		A7A1D43A142C51FA008EA4A6 /* NSPropertyListSerialization+IBAExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSPropertyListSerialization+IBAExtensions.m"; sourceTree = "<group>"; };
 		A7ACE4991405CE1700CC2138 /* IBAStack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBAStack.h; sourceTree = "<group>"; };
 		A7ACE49A1405CE1700CC2138 /* IBAStack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IBAStack.m; sourceTree = "<group>"; };
 		A7ACE49D140637C900CC2138 /* IBAStackTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBAStackTests.h; sourceTree = "<group>"; };
@@ -1241,6 +1245,8 @@
 				A7DA82D613C564420083D453 /* NSObject+IBAExtensions.m */,
 				A76992AC14303C98002A9BEE /* NSOperationQueue+IBAExtensions.h */,
 				A76992AD14303C98002A9BEE /* NSOperationQueue+IBAExtensions.m */,
+				A7A1D439142C51FA008EA4A6 /* NSPropertyListSerialization+IBAExtensions.h */,
+				A7A1D43A142C51FA008EA4A6 /* NSPropertyListSerialization+IBAExtensions.m */,
 				A7D58C521378BF440041BBEB /* NSString+IBAExtensions.h */,
 				A7D58C531378BF440041BBEB /* NSString+IBAExtensions.m */,
 				A7014AF513718C0300BE32D2 /* NSTimer+IBABlocks.h */,
@@ -1363,6 +1369,7 @@
 				A7CD3F8C1420356C0022F7AD /* NSIndexPath+UITableView+IBAExtensions.h in Headers */,
 				A7555E6514207B7D002E5E57 /* IBATableViewModel.h in Headers */,
 				A7555E6914207FB1002E5E57 /* IBATableViewSectionModel.h in Headers */,
+				A7A1D43B142C51FA008EA4A6 /* NSPropertyListSerialization+IBAExtensions.h in Headers */,
 				A76992AE14303C98002A9BEE /* NSOperationQueue+IBAExtensions.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1689,6 +1696,7 @@
 				A7CD3F8D1420356C0022F7AD /* NSIndexPath+UITableView+IBAExtensions.m in Sources */,
 				A7555E6614207B7D002E5E57 /* IBATableViewModel.m in Sources */,
 				A7555E6A14207FB1002E5E57 /* IBATableViewSectionModel.m in Sources */,
+				A7A1D43C142C51FA008EA4A6 /* NSPropertyListSerialization+IBAExtensions.m in Sources */,
 				A76992AF14303C98002A9BEE /* NSOperationQueue+IBAExtensions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

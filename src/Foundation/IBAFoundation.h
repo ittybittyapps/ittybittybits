@@ -47,6 +47,7 @@
 #import "NSNumber+IBAExtensions.h"
 #import "NSObject+IBAExtensions.h"
 #import "NSOperationQueue+IBAExtensions.h"
+#import "NSPropertyListSerialization+IBAExtensions.h"
 #import "NSString+IBAExtensions.h"
 #import "NSTimer+IBABlocks.h"
 
