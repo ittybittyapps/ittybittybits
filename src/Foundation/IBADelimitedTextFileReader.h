@@ -76,11 +76,13 @@
 - (void) readRecordsFromStream:(NSInputStream*)stream 
                       delegate:(id<IBADelimitedTextFileReaderDelegate>)delegate;
 
+- (void) readRecordsFromStream:(NSInputStream*)stream
+                    usingBlock:(IBADelimitedTextFileReaderDidReadRecordBlock)block;
+
 - (void) readRecordsFromFile:(NSString*)path 
                     delegate:(id<IBADelimitedTextFileReaderDelegate>)delegate;
 
 - (void) readRecordsFromFile:(NSString*)path
                   usingBlock:(IBADelimitedTextFileReaderDidReadRecordBlock)block;
-
 
 @end

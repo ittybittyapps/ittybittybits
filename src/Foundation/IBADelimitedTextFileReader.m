@@ -82,6 +82,14 @@
     [super dealloc];
 }
 
+- (void) readRecordsFromStream:(NSInputStream*)stream
+                    usingBlock:(IBADelimitedTextFileReaderDidReadRecordBlock)block
+{
+    IBADelimitedTextFileReaderDelegateBlockAdapter* adapter = [[IBADelimitedTextFileReaderDelegateBlockAdapter alloc] initWithDidReadRecordBlock:block];
+    [self readRecordsFromStream:stream delegate:adapter];
+    [adapter release];
+}
+
 /////////////////////////////////////////////////////////////////////////////////////////////////
 - (void) readRecordsFromStream:(NSInputStream*)stream 
                       delegate:(id<IBADelimitedTextFileReaderDelegate>)delegate
