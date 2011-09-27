@@ -109,7 +109,7 @@
 #define _IBA_PROPERTY_17(policy, a, ...) _IBA_PROPERTY_H(policy, a); _IBA_PROPERTY_16(policy, __VA_ARGS__)
 
 /*!
- \brief     Release an nil the instance variable behind a property.
+ \brief     Release and nil the instance variable behind a property.
  \details   Useful for releasing ivars backing readonly properties.
  \param     The names of the properties to release.
  */
@@ -131,6 +131,29 @@
 #define _IBA_RELEASE_PROPERTY_14(a, ...) _IBA_RELEASE_PROPERTY_H(a); _IBA_RELEASE_PROPERTY_13(__VA_ARGS__)
 #define _IBA_RELEASE_PROPERTY_15(a, ...) _IBA_RELEASE_PROPERTY_H(a); _IBA_RELEASE_PROPERTY_14(__VA_ARGS__)
 #define _IBA_RELEASE_PROPERTY_16(a, ...) _IBA_RELEASE_PROPERTY_H(a); _IBA_RELEASE_PROPERTY_15(__VA_ARGS__)
+
+/*!
+ \brief     Macro to nil the specified properties.
+ \details   Useful when clearing weak (delegate) properties.
+ */
+#define IBA_NIL_PROPERTY(...) IBA_CAT(_IBA_NIL_PROPERTY_, IBA_N_ARGS(__VA_ARGS__))(__VA_ARGS__)
+#define _IBA_NIL_PROPERTY_H(a) IBA_PROPERTY_IVAR(a) = nil
+#define _IBA_NIL_PROPERTY_1(a) _IBA_NIL_PROPERTY_H(a)
+#define _IBA_NIL_PROPERTY_2(a, b) _IBA_NIL_PROPERTY_H(a); _IBA_NIL_PROPERTY_H(b)
+#define _IBA_NIL_PROPERTY_3(a, ...) _IBA_NIL_PROPERTY_H(a); _IBA_NIL_PROPERTY_2(__VA_ARGS__)
+#define _IBA_NIL_PROPERTY_4(a, ...) _IBA_NIL_PROPERTY_H(a); _IBA_NIL_PROPERTY_3(__VA_ARGS__)
+#define _IBA_NIL_PROPERTY_5(a, ...) _IBA_NIL_PROPERTY_H(a); _IBA_NIL_PROPERTY_4(__VA_ARGS__)
+#define _IBA_NIL_PROPERTY_6(a, ...) _IBA_NIL_PROPERTY_H(a); _IBA_NIL_PROPERTY_5(__VA_ARGS__)
+#define _IBA_NIL_PROPERTY_7(a, ...) _IBA_NIL_PROPERTY_H(a); _IBA_NIL_PROPERTY_6(__VA_ARGS__)
+#define _IBA_NIL_PROPERTY_8(a, ...) _IBA_NIL_PROPERTY_H(a); _IBA_NIL_PROPERTY_7(__VA_ARGS__)
+#define _IBA_NIL_PROPERTY_9(a, ...) _IBA_NIL_PROPERTY_H(a); _IBA_NIL_PROPERTY_8(__VA_ARGS__)
+#define _IBA_NIL_PROPERTY_10(a, ...) _IBA_NIL_PROPERTY_H(a); _IBA_NIL_PROPERTY_9(__VA_ARGS__)
+#define _IBA_NIL_PROPERTY_11(a, ...) _IBA_NIL_PROPERTY_H(a); _IBA_NIL_PROPERTY_10(__VA_ARGS__)
+#define _IBA_NIL_PROPERTY_12(a, ...) _IBA_NIL_PROPERTY_H(a); _IBA_NIL_PROPERTY_11(__VA_ARGS__)
+#define _IBA_NIL_PROPERTY_13(a, ...) _IBA_NIL_PROPERTY_H(a); _IBA_NIL_PROPERTY_12(__VA_ARGS__)
+#define _IBA_NIL_PROPERTY_14(a, ...) _IBA_NIL_PROPERTY_H(a); _IBA_NIL_PROPERTY_13(__VA_ARGS__)
+#define _IBA_NIL_PROPERTY_15(a, ...) _IBA_NIL_PROPERTY_H(a); _IBA_NIL_PROPERTY_14(__VA_ARGS__)
+#define _IBA_NIL_PROPERTY_16(a, ...) _IBA_NIL_PROPERTY_H(a); _IBA_NIL_PROPERTY_15(__VA_ARGS__)
 
 /*!
  \brief     Macro that retains a new property value in a setter while releasing the old property value.
