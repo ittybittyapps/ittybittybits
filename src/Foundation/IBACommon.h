@@ -36,10 +36,26 @@
 
 /*!
  \brief     Release and nil the passed variable.
- \param     x   The instance to release.
+ \param     The variables to release and nil.
  */
-#define IBA_RELEASE(x) \
-    [(x) release]; (x) = nil
+#define IBA_RELEASE(...) IBA_CAT(_IBA_RELEASE_, IBA_N_ARGS(__VA_ARGS__))(__VA_ARGS__)
+#define _IBA_RELEASE_H(a) [(a) release]; (a) = nil
+#define _IBA_RELEASE_1(a) _IBA_RELEASE_H(a)
+#define _IBA_RELEASE_2(a, b) _IBA_RELEASE_H(a); _IBA_RELEASE_H(b)
+#define _IBA_RELEASE_3(a, ...) _IBA_RELEASE_H(a); _IBA_RELEASE_2(__VA_ARGS__)
+#define _IBA_RELEASE_4(a, ...) _IBA_RELEASE_H(a); _IBA_RELEASE_3(__VA_ARGS__)
+#define _IBA_RELEASE_5(a, ...) _IBA_RELEASE_H(a); _IBA_RELEASE_4(__VA_ARGS__)
+#define _IBA_RELEASE_6(a, ...) _IBA_RELEASE_H(a); _IBA_RELEASE_5(__VA_ARGS__)
+#define _IBA_RELEASE_7(a, ...) _IBA_RELEASE_H(a); _IBA_RELEASE_6(__VA_ARGS__)
+#define _IBA_RELEASE_8(a, ...) _IBA_RELEASE_H(a); _IBA_RELEASE_7(__VA_ARGS__)
+#define _IBA_RELEASE_9(a, ...) _IBA_RELEASE_H(a); _IBA_RELEASE_8(__VA_ARGS__)
+#define _IBA_RELEASE_10(a, ...) _IBA_RELEASE_H(a); _IBA_RELEASE_9(__VA_ARGS__)
+#define _IBA_RELEASE_11(a, ...) _IBA_RELEASE_H(a); _IBA_RELEASE_10(__VA_ARGS__)
+#define _IBA_RELEASE_12(a, ...) _IBA_RELEASE_H(a); _IBA_RELEASE_11(__VA_ARGS__)
+#define _IBA_RELEASE_13(a, ...) _IBA_RELEASE_H(a); _IBA_RELEASE_12(__VA_ARGS__)
+#define _IBA_RELEASE_14(a, ...) _IBA_RELEASE_H(a); _IBA_RELEASE_13(__VA_ARGS__)
+#define _IBA_RELEASE_15(a, ...) _IBA_RELEASE_H(a); _IBA_RELEASE_14(__VA_ARGS__)
+#define _IBA_RELEASE_16(a, ...) _IBA_RELEASE_H(a); _IBA_RELEASE_15(__VA_ARGS__)
 
 /*!
  \brief     Free and NULL the passed pointer variable.
