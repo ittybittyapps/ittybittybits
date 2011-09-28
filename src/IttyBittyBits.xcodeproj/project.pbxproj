@@ -13,6 +13,8 @@
 		751C606113B216E200447BB4 /* IBACoreData.h in Headers */ = {isa = PBXBuildFile; fileRef = 751C606013B216E200447BB4 /* IBACoreData.h */; };
 		75C832441401475C00F476B9 /* UIGestureRecognizer+IBAExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = 75C832421401475900F476B9 /* UIGestureRecognizer+IBAExtensions.h */; };
 		75C832451401475C00F476B9 /* UIGestureRecognizer+IBAExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 75C832431401475B00F476B9 /* UIGestureRecognizer+IBAExtensions.m */; };
+		8806703A1433C97A004487A5 /* IBAAlertView.h in Headers */ = {isa = PBXBuildFile; fileRef = 880670381433C97A004487A5 /* IBAAlertView.h */; };
+		8806703B1433C97A004487A5 /* IBAAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 880670391433C97A004487A5 /* IBAAlertView.m */; };
 		A701064413947B8000D9AB8B /* MKPlacemark+IBAFormattedAddress.h in Headers */ = {isa = PBXBuildFile; fileRef = A701064213947B8000D9AB8B /* MKPlacemark+IBAFormattedAddress.h */; };
 		A701064513947B8000D9AB8B /* MKPlacemark+IBAFormattedAddress.m in Sources */ = {isa = PBXBuildFile; fileRef = A701064313947B8000D9AB8B /* MKPlacemark+IBAFormattedAddress.m */; };
 		A7014AF713718C0300BE32D2 /* NSTimer+IBABlocks.h in Headers */ = {isa = PBXBuildFile; fileRef = A7014AF513718C0300BE32D2 /* NSTimer+IBABlocks.h */; };
@@ -337,6 +339,8 @@
 		751C606013B216E200447BB4 /* IBACoreData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBACoreData.h; sourceTree = "<group>"; };
 		75C832421401475900F476B9 /* UIGestureRecognizer+IBAExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIGestureRecognizer+IBAExtensions.h"; sourceTree = "<group>"; };
 		75C832431401475B00F476B9 /* UIGestureRecognizer+IBAExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIGestureRecognizer+IBAExtensions.m"; sourceTree = "<group>"; };
+		880670381433C97A004487A5 /* IBAAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBAAlertView.h; sourceTree = "<group>"; };
+		880670391433C97A004487A5 /* IBAAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IBAAlertView.m; sourceTree = "<group>"; };
 		A701064213947B8000D9AB8B /* MKPlacemark+IBAFormattedAddress.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "MKPlacemark+IBAFormattedAddress.h"; path = "MapKit/MKPlacemark+IBAFormattedAddress.h"; sourceTree = SOURCE_ROOT; };
 		A701064313947B8000D9AB8B /* MKPlacemark+IBAFormattedAddress.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "MKPlacemark+IBAFormattedAddress.m"; path = "MapKit/MKPlacemark+IBAFormattedAddress.m"; sourceTree = SOURCE_ROOT; };
 		A7014AF513718C0300BE32D2 /* NSTimer+IBABlocks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSTimer+IBABlocks.h"; path = "Foundation/NSTimer+IBABlocks.h"; sourceTree = SOURCE_ROOT; };
@@ -1015,6 +1019,8 @@
 				A7C05855140C771600339F5B /* IBAViewController.m */,
 				A7CD3F8A1420356C0022F7AD /* NSIndexPath+UITableView+IBAExtensions.h */,
 				A7CD3F8B1420356C0022F7AD /* NSIndexPath+UITableView+IBAExtensions.m */,
+				880670381433C97A004487A5 /* IBAAlertView.h */,
+				880670391433C97A004487A5 /* IBAAlertView.m */,
 				A722FA5D137B94D90066CC1A /* UIAlertView+IBAExtensions.h */,
 				A722FA5E137B94D90066CC1A /* UIAlertView+IBAExtensions.m */,
 				A772039713FE3A1F0094476D /* UIApplication+IBAExtensions.h */,
@@ -1375,6 +1381,7 @@
 				A7A1D43B142C51FA008EA4A6 /* NSPropertyListSerialization+IBAExtensions.h in Headers */,
 				A76992AE14303C98002A9BEE /* NSOperationQueue+IBAExtensions.h in Headers */,
 				A76992C914306768002A9BEE /* IBADispatch.h in Headers */,
+				8806703A1433C97A004487A5 /* IBAAlertView.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1702,6 +1709,7 @@
 				A7555E6A14207FB1002E5E57 /* IBATableViewSectionModel.m in Sources */,
 				A7A1D43C142C51FA008EA4A6 /* NSPropertyListSerialization+IBAExtensions.m in Sources */,
 				A76992AF14303C98002A9BEE /* NSOperationQueue+IBAExtensions.m in Sources */,
+				8806703B1433C97A004487A5 /* IBAAlertView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

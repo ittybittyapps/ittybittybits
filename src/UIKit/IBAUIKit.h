@@ -27,6 +27,7 @@
 #import "IBATableViewModel.h"
 #import "IBATiledImageView.h"
 #import "IBAViewController.h"
+#import "IBAAlertView.h"
 
 // Extension categories.
 #import "NSIndexPath+UITableView+IBAExtensions.h"
