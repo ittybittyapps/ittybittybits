@@ -39,12 +39,10 @@
   NSMutableArray* buttonBlocks_;
 }
 
--(id)initWithTitle:(NSString*)title message:(NSString*)msg;
++ (IBAAlertView *)alertViewWithTitle:(NSString *)title message:(NSString *)message;
 
--(void)alertViewCancel:(UIAlertView *)alertView;
++ (IBAAlertView *)alertViewWithTitle:(NSString *)title message:(NSString *)message cancelButtonTitle:(NSString *)cancelButtonTitle;
 
 -(void)addButtonWithTitle:(NSString*)title block:(void(^)(IBAAlertView*, NSInteger))block;
-
--(void)setAlertViewCancelBlock:(void(^)(IBAAlertView*))block;
 
 @end

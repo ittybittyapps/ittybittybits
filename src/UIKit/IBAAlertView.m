@@ -32,7 +32,30 @@
 #import "IBAAlertView.h"
 #import "IBACommon.h"
 
+@interface IBAAlertView()
+-(void)alertViewCancel:(UIAlertView *)alertView;
+-(id)initWithTitle:(NSString*)title message:(NSString*)msg;
+-(void)setAlertViewCancelBlock:(void(^)(IBAAlertView*))block;
+@end
+
 @implementation IBAAlertView
+
++ (IBAAlertView *)alertViewWithTitle:(NSString *)title message:(NSString *)message
+{
+    return [IBAAlertView alertViewWithTitle:title message:message cancelButtonTitle:IBALocalizedString(@"OK")];
+}
+
++ (IBAAlertView *)alertViewWithTitle:(NSString *)title message:(NSString *)message cancelButtonTitle:(NSString *)cancelButtonTitle
+{
+    IBAAlertView *alertView = [[[IBAAlertView alloc] initWithTitle:title message:message] autorelease];
+
+    if (cancelButtonTitle)
+    {
+        [alertView addButtonWithTitle:cancelButtonTitle block:nil];
+        [alertView setCancelButtonIndex:0];
+    }
+    return alertView;
+}
 
 - (id)initWithTitle:(NSString*)title message:(NSString*)msg
 {
