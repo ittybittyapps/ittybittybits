@@ -88,7 +88,7 @@
 
 -(void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
 {
-  ((void(^)(IBAAlertView*, NSInteger))[buttonBlocks_ objectAtIndex:(NSUInteger)buttonIndex])((IBAAlertView*)alertView, buttonIndex);
+  ((void(^)(IBAAlertView*, NSInteger))[buttonBlocks_ objectAtIndex:IBANSIntegerToNSUInteger(buttonIndex)])((IBAAlertView*)alertView, buttonIndex);
 }
 
 -(void)alertViewCancel:(UIAlertView *)alertView
