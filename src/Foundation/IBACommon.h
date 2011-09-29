@@ -466,3 +466,23 @@ IBA_INLINE BOOL IBANSIntegerLessThanNSUInteger(NSInteger i, NSUInteger ui)
 {
     return (i < 0) ? YES : (((NSUInteger)i) < ui);
 }
+
+/*!
+ \brief     Safely convert an NSUInteger to an NSInteger.
+ \details   Values greater than NSIntegerMax are clipped to NSIntegerMax.
+ \return    The NSInteger value equal to NSUInteger value \a ui; unless ui is greater than the bounds of NSInteger then it returns NSIntegerMax.
+ */
+IBA_INLINE NSInteger IBANSUIntegerToNSInteger(NSUInteger ui)
+{
+    return (ui > NSIntegerMax) ? NSIntegerMax : (NSInteger)ui;
+}
+
+/*!
+ \brief     Safely convert an NSInteger to an NSUInteger.
+ \details   Values less than 0 are clipped to 0.
+ \return    The NSUInteger value equal to input NSInteger value \a i; unless \a i is less than the 0, then it returns 0.
+ */
+IBA_INLINE NSUInteger IBANSIntegerToNSUInteger(NSInteger i)
+{
+    return (i < 0) ? 0 : (NSUInteger)i;
+}

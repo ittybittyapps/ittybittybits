@@ -58,6 +58,8 @@
 		A7286D8A138A1AFB00C12FCB /* NSMutableArray+IBAExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = A7286D88138A1AFB00C12FCB /* NSMutableArray+IBAExtensions.h */; };
 		A7286D8B138A1AFB00C12FCB /* NSMutableArray+IBAExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = A7286D89138A1AFB00C12FCB /* NSMutableArray+IBAExtensions.m */; };
 		A72ADC0D13CC54FB0052E2D4 /* IBAErrors.h in Headers */ = {isa = PBXBuildFile; fileRef = A72ADC0C13CC54FB0052E2D4 /* IBAErrors.h */; };
+		A7335B711433F76900D9DE14 /* IBACommonTests.h in Headers */ = {isa = PBXBuildFile; fileRef = A7335B6F1433F76900D9DE14 /* IBACommonTests.h */; };
+		A7335B741433F77200D9DE14 /* IBACommonTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A7335B701433F76900D9DE14 /* IBACommonTests.m */; };
 		A7345F6A140CC026005ED52E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7B4DACC13679F5E00543D61 /* UIKit.framework */; };
 		A7345F6B140CC026005ED52E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7B4DABC1367991200543D61 /* Foundation.framework */; };
 		A7345F72140CC026005ED52E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A7345F70140CC026005ED52E /* InfoPlist.strings */; };
@@ -385,6 +387,8 @@
 		A7286D88138A1AFB00C12FCB /* NSMutableArray+IBAExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSMutableArray+IBAExtensions.h"; path = "Foundation/NSMutableArray+IBAExtensions.h"; sourceTree = SOURCE_ROOT; };
 		A7286D89138A1AFB00C12FCB /* NSMutableArray+IBAExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSMutableArray+IBAExtensions.m"; path = "Foundation/NSMutableArray+IBAExtensions.m"; sourceTree = SOURCE_ROOT; };
 		A72ADC0C13CC54FB0052E2D4 /* IBAErrors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBAErrors.h; sourceTree = "<group>"; };
+		A7335B6F1433F76900D9DE14 /* IBACommonTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBACommonTests.h; sourceTree = "<group>"; };
+		A7335B701433F76900D9DE14 /* IBACommonTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IBACommonTests.m; sourceTree = "<group>"; };
 		A7345F68140CC026005ED52E /* IBAFlipButtonSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IBAFlipButtonSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7345F6F140CC026005ED52E /* IBAFlipButtonSample-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "IBAFlipButtonSample-Info.plist"; sourceTree = "<group>"; };
 		A7345F71140CC026005ED52E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -1062,6 +1066,8 @@
 				A7ACE49E140637C900CC2138 /* IBAStackTests.m */,
 				A780655F1404DCD60075FDA7 /* NSString+IBAExtensionsTests.h */,
 				A78065601404DCD60075FDA7 /* NSString+IBAExtensionsTests.m */,
+				A7335B6F1433F76900D9DE14 /* IBACommonTests.h */,
+				A7335B701433F76900D9DE14 /* IBACommonTests.m */,
 			);
 			path = Foundation;
 			sourceTree = "<group>";
@@ -1382,6 +1388,7 @@
 				A76992AE14303C98002A9BEE /* NSOperationQueue+IBAExtensions.h in Headers */,
 				A76992C914306768002A9BEE /* IBADispatch.h in Headers */,
 				8806703A1433C97A004487A5 /* IBAAlertView.h in Headers */,
+				A7335B711433F76900D9DE14 /* IBACommonTests.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1727,6 +1734,7 @@
 				A7ACE49F140637C900CC2138 /* IBAStackTests.m in Sources */,
 				A7B9E5B31426D3FE00DEA745 /* IBATableViewModelTests.m in Sources */,
 				A7B9E5B61426D45900DEA745 /* IBATableViewSectionModelTests.m in Sources */,
+				A7335B741433F77200D9DE14 /* IBACommonTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
