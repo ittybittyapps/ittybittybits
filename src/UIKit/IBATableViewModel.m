@@ -171,7 +171,43 @@ IBA_SYNTHESIZE(sections);
  */
 - (id)objectAtIndexPath:(NSIndexPath*)indexPath
 {
-    return indexPath ? [[self sectionAtIndex:indexPath.section] rowAtIndex:indexPath.row] : nil;
+    return indexPath ? [[self sectionAtIndex:indexPath.ibaTableViewModelSection] rowAtIndex:indexPath.ibaTableViewModelRow] : nil;
+}
+
+/*!
+ \brief     Returns a value that indicates whether the specified \a indexPath references the last row in a section.
+ \return    YES if the \a indexPath references the last row in a table model section; otherwise NO.
+ */
+- (BOOL)isLastRowInSectionForIndexPath:(NSIndexPath *)indexPath
+{
+    return indexPath.ibaTableViewModelRow == ([self numberOfRowsInSection:indexPath.ibaTableViewModelSection] - 1);
+}
+
+/*!
+ \brief     Returns a value that indicates whether the specified \a indexPath references the last row in the table model.
+ \return    YES if the \a indexPath references the last row in the table model; otherwise NO.
+ */
+- (BOOL)isLastRowForIndexPath:(NSIndexPath *)indexPath
+{
+    NSInteger section = indexPath.ibaTableViewModelSection;
+    NSInteger row = indexPath.ibaTableViewModelRow;
+
+    return (section == ([self sectionCount] -1)  && row == ([self numberOfRowsInSection:section] - 1));
 }
 
 @end
+        
+@implementation NSIndexPath (IBATableViewModel)
+
+- (NSInteger)ibaTableViewModelSection
+{
+    return IBAIndexPathSectionTypeToNSInteger(self.section);
+}
+
+- (NSInteger)ibaTableViewModelRow
+{
+    return IBAIndexPathRowTypeToNSInteger(self.row);    
+}
+
+@end
+

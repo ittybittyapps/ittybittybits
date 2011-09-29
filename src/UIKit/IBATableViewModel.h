@@ -44,4 +44,14 @@
 
 - (void)removeAllSections;
 
+- (BOOL)isLastRowInSectionForIndexPath:(NSIndexPath *)indexPath;
+- (BOOL)isLastRowForIndexPath:(NSIndexPath *)indexPath;
+
+@end
+
+@interface NSIndexPath (IBATableViewModel)
+
+- (NSInteger)ibaTableViewModelSection;
+- (NSInteger)ibaTableViewModelRow;
+
 @end
