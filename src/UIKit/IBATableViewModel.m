@@ -174,26 +174,7 @@ IBA_SYNTHESIZE(sections);
     return indexPath ? [[self sectionAtIndex:indexPath.ibaTableViewModelSection] rowAtIndex:indexPath.ibaTableViewModelRow] : nil;
 }
 
-/*!
- \brief     Returns a value that indicates whether the specified \a indexPath references the last row in a section.
- \return    YES if the \a indexPath references the last row in a table model section; otherwise NO.
- */
-- (BOOL)isLastRowInSectionForIndexPath:(NSIndexPath *)indexPath
-{
-    return indexPath.ibaTableViewModelRow == ([self numberOfRowsInSection:indexPath.ibaTableViewModelSection] - 1);
-}
 
-/*!
- \brief     Returns a value that indicates whether the specified \a indexPath references the last row in the table model.
- \return    YES if the \a indexPath references the last row in the table model; otherwise NO.
- */
-- (BOOL)isLastRowForIndexPath:(NSIndexPath *)indexPath
-{
-    NSInteger section = indexPath.ibaTableViewModelSection;
-    NSInteger row = indexPath.ibaTableViewModelRow;
-
-    return (section == ([self sectionCount] -1)  && row == ([self numberOfRowsInSection:section] - 1));
-}
 
 @end
         
@@ -208,6 +189,28 @@ IBA_SYNTHESIZE(sections);
 {
     return IBAIndexPathRowTypeToNSInteger(self.row);    
 }
+
+/*!
+ \brief     Returns a value that indicates whether the specified \a indexPath references the last row in a section.
+ \return    YES if the \a indexPath references the last row in a table model section; otherwise NO.
+ */
+- (BOOL)isLastRowOfSectionInTableViewModel:(IBATableViewModel *)tableViewModel
+{
+    return self.ibaTableViewModelRow == ([tableViewModel numberOfRowsInSection:self.ibaTableViewModelSection] - 1);
+}
+
+/*!
+ \brief     Returns a value that indicates whether the specified \a indexPath references the last row in the table model.
+ \return    YES if the \a indexPath references the last row in the table model; otherwise NO.
+ */
+- (BOOL)isLastRowInTableViewModel:(IBATableViewModel *)tableViewModel
+{
+    NSInteger section = self.ibaTableViewModelSection;
+    NSInteger row = self.ibaTableViewModelRow;
+    
+    return section == ([tableViewModel sectionCount] - 1)  && row == ([tableViewModel numberOfRowsInSection:section] - 1);
+}
+
 
 @end
 
