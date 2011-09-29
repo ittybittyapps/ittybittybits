@@ -161,7 +161,7 @@ IBA_SYNTHESIZE(sections);
  */
 - (IBATableViewSectionModel *)sectionAtIndex:(NSInteger)sectionIndex
 {
-    return sectionIndex >= 0 ? [self.sections objectAtIndex:IBANSIntegerToNSUInteger(sectionIndex)] : nil;
+    return [self.sections ibaIntegerIsWithinIndexBounds:sectionIndex] ? [self.sections objectAtIndex:IBANSIntegerToNSUInteger(sectionIndex)] : nil;
 }
 
 /*!
@@ -173,8 +173,6 @@ IBA_SYNTHESIZE(sections);
 {
     return indexPath ? [[self sectionAtIndex:indexPath.ibaTableViewModelSection] rowAtIndex:indexPath.ibaTableViewModelRow] : nil;
 }
-
-
 
 @end
         

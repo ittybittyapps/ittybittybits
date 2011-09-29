@@ -39,7 +39,7 @@
 {
     IBATableViewModel *m = [IBATableViewModel tableViewModel];
     GHAssertNotNil(m, @"model should not be nil");
-    GHAssertEquals([m sectionCount], (IBAIndexPathSectionType)0, @"model should contain no sections");
+    GHAssertEquals([m sectionCount], 0, @"model should contain no sections");
 }
 
 - (void)testShouldCreateTableViewModelWithSection
@@ -47,8 +47,8 @@
     IBATableViewSectionModel *s = [IBATableViewSectionModel tableViewSectionModel];
     IBATableViewModel *m = [IBATableViewModel tableViewModelWithSection:s];
     GHAssertNotNil(m, @"model should not be nil");
-    GHAssertEquals([m sectionCount], (IBAIndexPathSectionType)1, @"model should contain 1 section");
-    GHAssertEquals([m numberOfRowsInSection:0], (IBAIndexPathRowType)0, @"model section should contain no rows");
+    GHAssertEquals([m sectionCount], 1, @"model should contain 1 section");
+    GHAssertEquals([m numberOfRowsInSection:0], 0, @"model section should contain no rows");
 }
 
 - (void)testShouldCreateTableViewModelWithSections
@@ -58,16 +58,16 @@
     NSArray *sections = IBA_NSARRAY(s1, s2);
     IBATableViewModel *m = [IBATableViewModel tableViewModelWithSections:sections];
     GHAssertNotNil(m, @"model should not be nil");
-    GHAssertEquals([m sectionCount], (IBAIndexPathSectionType)2, @"model should contain 2 sections");
-    GHAssertEquals([m numberOfRowsInSection:0], (IBAIndexPathRowType)2, @"model section 0 should contain 2 rows");
-    GHAssertEquals([m numberOfRowsInSection:1], (IBAIndexPathRowType)3, @"model section 1 should contain 3 rows");
+    GHAssertEquals([m sectionCount], 2, @"model should contain 2 sections");
+    GHAssertEquals([m numberOfRowsInSection:0], 2, @"model section 0 should contain 2 rows");
+    GHAssertEquals([m numberOfRowsInSection:1], 3, @"model section 1 should contain 3 rows");
 }
 
 - (void)testShouldCreateTableViewModelWithSectionTitles
 {
     IBATableViewModel *m = [IBATableViewModel tableViewModelWithSectionTitles:IBA_NSARRAY(@"A", @"B")];
     GHAssertNotNil(m, @"model should not be nil");
-    GHAssertEquals([m sectionCount], (IBAIndexPathSectionType)2, @"model should contain 2 sections");
+    GHAssertEquals([m sectionCount], 2, @"model should contain 2 sections");
     GHAssertEqualStrings([m sectionAtIndex:0].title, @"A", @"model section 0 title should be 'A'");
     GHAssertEqualStrings([m sectionAtIndex:1].title, @"B", @"model section 1 title should be 'B'");
 }
@@ -77,20 +77,20 @@
     IBATableViewSectionModel *s = [IBATableViewSectionModel tableViewSectionModel];
     IBATableViewModel *m = [[[IBATableViewModel alloc] initWithSection:s] autorelease];
     GHAssertNotNil(m, @"model should not be nil");
-    GHAssertEquals([m sectionCount], (IBAIndexPathSectionType)1, @"model should contain 1 section");
-    GHAssertEquals([m numberOfRowsInSection:0], (IBAIndexPathRowType)0, @"model section should contain no rows");
+    GHAssertEquals([m sectionCount], 1, @"model should contain 1 section");
+    GHAssertEquals([m numberOfRowsInSection:0], 0, @"model section should contain no rows");
 }
 
 - (void)testShouldInitTableViewModelWithNoSection
 {
     IBATableViewModel *m = [[[IBATableViewModel alloc] initWithSection:nil] autorelease];
-    GHAssertEquals([m sectionCount], (IBAIndexPathSectionType)0, @"model should contain no sections");
+    GHAssertEquals([m sectionCount], 0, @"model should contain no sections");
 }
 
 - (void)testShouldInitTableViewModelWithNoSections
 {
     IBATableViewModel *m = [[[IBATableViewModel alloc] initWithSections:nil] autorelease];
-    GHAssertEquals([m sectionCount], (IBAIndexPathSectionType)0, @"model should contain no sections");
+    GHAssertEquals([m sectionCount], 0, @"model should contain no sections");
 }
 
 - (void)testShouldInitTableViewModelWithSections
@@ -100,16 +100,16 @@
     NSArray *sections = IBA_NSARRAY(s1, s2);
     IBATableViewModel *m = [[[IBATableViewModel alloc] initWithSections:sections] autorelease];
     GHAssertNotNil(m, @"model should not be nil");
-    GHAssertEquals([m sectionCount], (IBAIndexPathSectionType)2, @"model should contain 1 section");
-    GHAssertEquals([m numberOfRowsInSection:0], (IBAIndexPathRowType)2, @"model section 0 should contain 2 rows");
-    GHAssertEquals([m numberOfRowsInSection:1], (IBAIndexPathRowType)3, @"model section 1 should contain 3 rows");
+    GHAssertEquals([m sectionCount], 2, @"model should contain 1 section");
+    GHAssertEquals([m numberOfRowsInSection:0], 2, @"model section 0 should contain 2 rows");
+    GHAssertEquals([m numberOfRowsInSection:1], 3, @"model section 1 should contain 3 rows");
 }
 
 - (void)testShouldInitTableViewModelWithSectionTitles
 {
     IBATableViewModel *m = [[[IBATableViewModel alloc] initWithSectionTitles:IBA_NSARRAY(@"A", @"B")] autorelease];
     GHAssertNotNil(m, @"model should not be nil");
-    GHAssertEquals([m sectionCount], (IBAIndexPathSectionType)2, @"model should contain 2 sections");
+    GHAssertEquals([m sectionCount], 2, @"model should contain 2 sections");
     GHAssertEqualStrings([m sectionAtIndex:0].title, @"A", @"model section 0 title should be 'A'");
     GHAssertEqualStrings([m sectionAtIndex:1].title, @"B", @"model section 1 title should be 'B'");
 }
@@ -128,7 +128,7 @@
     IBATableViewModel *m = [IBATableViewModel tableViewModel];
     [m addSection:s];
     
-    GHAssertEquals([m sectionCount], (IBAIndexPathSectionType)1, @"section count should be 1");
+    GHAssertEquals([m sectionCount], 1, @"section count should be 1");
     GHAssertEquals([m sectionAtIndex:0], s, @"section at index 0 should be s");
 }
 
@@ -149,9 +149,9 @@
     IBATableViewModel *m = [IBATableViewModel tableViewModel];
     [m addSections:sections];
     
-    GHAssertEquals([m sectionCount], (IBAIndexPathSectionType)2, @"model should contain 1 section");
-    GHAssertEquals([m numberOfRowsInSection:0], (IBAIndexPathRowType)2, @"model section 0 should contain 2 rows");
-    GHAssertEquals([m numberOfRowsInSection:1], (IBAIndexPathRowType)3, @"model section 1 should contain 3 rows");
+    GHAssertEquals([m sectionCount], 2, @"model should contain 1 section");
+    GHAssertEquals([m numberOfRowsInSection:0], 2, @"model section 0 should contain 2 rows");
+    GHAssertEquals([m numberOfRowsInSection:1], 3, @"model section 1 should contain 3 rows");
 }
 
 - (void)testShouldReturnZeroOnNumberOfRowsInSectionForUnknownSection
@@ -160,7 +160,7 @@
     IBATableViewModel *m = [[[IBATableViewModel alloc] initWithSection:s] autorelease];
     GHAssertNotNil(m, @"model should not be nil");
 
-    GHAssertEquals([m numberOfRowsInSection:12],(IBAIndexPathSectionType) 0, @"should return zero for unknown section");
+    GHAssertEquals([m numberOfRowsInSection:12], 0, @"should return zero for unknown section");
 }
 
 - (void)testShouldReturnNilOnSectionAtIndexForUnknownSection
@@ -231,7 +231,7 @@
     
     
     [m replaceSectionAtIndex:0 withSection:s2];
-    GHAssertEquals([m sectionCount], (IBAIndexPathSectionType)1, @"section count should be zero");
+    GHAssertEquals([m sectionCount], 1, @"section count should be zero");
     GHAssertEquals([m sectionAtIndex:0], s2, @"section at index 0 should be s2");
 }
 
@@ -241,11 +241,11 @@
     IBATableViewSectionModel *s2 = [IBATableViewSectionModel tableViewSectionModelWithRows:IBA_NSARRAY(@"A", @"B", @"C")];
     IBATableViewModel *m = [[[IBATableViewModel alloc] initWithSections:IBA_NSARRAY(s1, s2)] autorelease];
     
-    GHAssertEquals([m sectionCount], (IBAIndexPathSectionType)2, @"should contain two sections");
+    GHAssertEquals([m sectionCount], 2, @"should contain two sections");
     
     [m removeAllSections];
     
-    GHAssertEquals([m sectionCount], (IBAIndexPathSectionType)0, @"should contain no sections");
+    GHAssertEquals([m sectionCount], 0, @"should contain no sections");
 }
 
 @end
