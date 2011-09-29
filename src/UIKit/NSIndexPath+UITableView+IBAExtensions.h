@@ -1,5 +1,5 @@
 //
-//  NSIndexPath+IBAExtensions.h
+//  NSIndexPath+UITableView+IBAExtensions.h
 //  IttyBittyBits
 //
 //  Created by Oliver Jones on 14/09/11.
@@ -18,6 +18,10 @@
 //  limitations under the License.
 
 #import <Foundation/Foundation.h>
+#import "../Foundation/IBACommon.h"
+
+#define IBA_NSINDEXPATH_ROW_IS_SIGNED defined(__IPHONE_5_0)
+#define IBA_NSINDEXPATH_SECTION_IS_SIGNED defined(__IPHONE_5_0)
 
 #if defined(__IPHONE_5_0)
 // fucking iOS SDK bugs!
@@ -26,6 +30,22 @@ typedef NSInteger IBAIndexPathSectionType;
 #else
 typedef NSUInteger IBAIndexPathRowType;
 typedef NSUInteger IBAIndexPathSectionType;
+#endif
+
+#if IBA_NSINDEXPATH_ROW_IS_SIGNED
+#   define IBANSUIntegerToIBAIndexPathRowType(value) IBANSUIntegerToNSInteger((value))
+#   define IBAIndexPathRowTypeToNSUInteger(value) IBANSIntegerToNSUInteger((value))
+#else
+#   define IBANSUIntegerToIBAIndexPathRowType(value) (value)
+#   define IBAIndexPathRowTypeToNSUInteger(value) (value)
+#endif
+
+#if IBA_NSINDEXPATH_SECTION_IS_SIGNED
+#   define IBANSUIntegerToIBAIndexPathSectionType(value) IBANSUIntegerToNSInteger((value))
+#   define IBAIndexPathSectionTypeToNSUInteger(value) IBANSIntegerToNSUInteger((value))
+#else
+#   define IBANSUIntegerToIBAIndexPathSectionType(value) (value)
+#   define IBAIndexPathSectionTypeToNSUInteger(value) (value)
 #endif
 
 @interface NSIndexPath (UITableView_IBAExtension)

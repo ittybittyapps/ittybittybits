@@ -19,6 +19,7 @@
 
 #import <UIKit/UIKit.h>
 #import "IBATableViewSectionModel.h"
+#import "NSIndexPath+UITableView+IBAExtensions.h"
 
 @interface IBATableViewModel : NSObject
 
@@ -35,10 +36,10 @@
 - (void)addSections:(NSArray *)sections;
 - (void)replaceSectionAtIndex:(NSInteger)sectionIndex withSection:(IBATableViewSectionModel *)section;
 
-- (NSInteger)sectionCount;
-- (NSInteger)numberOfRowsInSection:(NSInteger)section;
+- (IBAIndexPathSectionType)sectionCount;
+- (IBAIndexPathRowType)numberOfRowsInSection:(IBAIndexPathSectionType)sectionIndex;
 
-- (IBATableViewSectionModel *)sectionAtIndex:(NSInteger)sectionIndex;
+- (IBATableViewSectionModel *)sectionAtIndex:(IBAIndexPathSectionType)sectionIndex;
 - (id)objectAtIndexPath:(NSIndexPath*)indexPath;
 
 - (void)removeAllSections;

@@ -40,7 +40,7 @@
     IBATableViewSectionModel *m = [IBATableViewSectionModel tableViewSectionModel];
     GHAssertNotNil(m, @"model should not be nil");
     GHAssertNil(m.title, @"section title should be nil");
-    GHAssertEquals(m.rowCount, 0, @"model rowCount should be zero");
+    GHAssertEquals(m.rowCount, (IBAIndexPathRowType)0, @"model rowCount should be zero");
 }
 
 - (void)testShouldCreateTableViewSectionModelWithNoRows
@@ -48,7 +48,7 @@
     IBATableViewSectionModel *m = [IBATableViewSectionModel tableViewSectionModelWithRows:[NSArray array]];
     GHAssertNotNil(m, @"model should not be nil");
     GHAssertNil(m.title, @"section title should be nil");
-    GHAssertEquals(m.rowCount, 0, @"model rowCount should be zero");
+    GHAssertEquals(m.rowCount, (IBAIndexPathRowType)0, @"model rowCount should be zero");
 }
 
 - (void)testShouldCreateTableViewSectionModelWithTitle
@@ -57,7 +57,7 @@
     IBATableViewSectionModel *m = [IBATableViewSectionModel tableViewSectionModelWithTitle:title];
     GHAssertNotNil(m, @"model should not be nil");
     GHAssertEqualStrings(m.title, title, @"title should be set");
-    GHAssertEquals(m.rowCount, 0, @"model rowCount should be 0");
+    GHAssertEquals(m.rowCount, (IBAIndexPathRowType)0, @"model rowCount should be 0");
 }
 
 - (void)testShouldCreateTableViewSectionModelWithSomeRowsAndTitle
@@ -68,7 +68,7 @@
     IBATableViewSectionModel *m = [IBATableViewSectionModel tableViewSectionModelWithRows:rows title:title];
     GHAssertNotNil(m, @"model should not be nil");
     GHAssertEqualStrings(m.title, title, @"title should be set");
-    GHAssertEquals(m.rowCount, (int)[rows count], @"model rowCount should be %d", [rows count]);
+    GHAssertEquals(m.rowCount, IBANSUIntegerToIBAIndexPathRowType([rows count]), @"model rowCount should be %d", [rows count]);
 }
 
 - (void)testShouldInitTableViewSectionModelWithTitle
@@ -77,7 +77,7 @@
     IBATableViewSectionModel *m = [[[IBATableViewSectionModel alloc] initWithTitle:title] autorelease];
     GHAssertNotNil(m, @"model should not be nil");
     GHAssertEqualStrings(m.title, title, @"title should be set");
-    GHAssertEquals(m.rowCount, 0, @"model rowCount should be 0");
+    GHAssertEquals(m.rowCount, (IBAIndexPathRowType)0, @"model rowCount should be 0");
 }
 
 - (void)testShouldInitTableViewSectionModelWithSomeRowsAndTitle
@@ -88,7 +88,7 @@
     IBATableViewSectionModel *m = [[[IBATableViewSectionModel alloc] initWithRows:rows title:title] autorelease];
     GHAssertNotNil(m, @"model should not be nil");
     GHAssertEqualStrings(m.title, title, @"title should be set");
-    GHAssertEquals(m.rowCount, (int)[rows count], @"model rowCount should be %d", [rows count]);
+    GHAssertEquals(m.rowCount, IBANSUIntegerToIBAIndexPathRowType([rows count]), @"model rowCount should be %d", [rows count]);
 }
 
 - (void)testShouldInitTableViewSectionModelWithSomeRowsAndNoTitle
@@ -99,7 +99,7 @@
     IBATableViewSectionModel *m = [[[IBATableViewSectionModel alloc] initWithRows:rows title:title] autorelease];
     GHAssertNotNil(m, @"model should not be nil");
     GHAssertNil(m.title, @"title should be nil");
-    GHAssertEquals(m.rowCount, (int)[rows count], @"model rowCount should be %d", [rows count]);
+    GHAssertEquals(m.rowCount, IBANSUIntegerToIBAIndexPathRowType([rows count]), @"model rowCount should be %d", [rows count]);
 }
 
 - (void)testShouldInitTableViewSectionModelWithNoRowsAndNoTitle
@@ -110,7 +110,7 @@
     IBATableViewSectionModel *m = [[[IBATableViewSectionModel alloc] initWithRows:rows title:title] autorelease];
     GHAssertNotNil(m, @"model should not be nil");
     GHAssertNil(m.title, @"title should be nil");
-    GHAssertEquals(m.rowCount, 0, @"model rowCount should be zero");
+    GHAssertEquals(m.rowCount, (IBAIndexPathRowType)0, @"model rowCount should be zero");
 }
 
 

@@ -108,18 +108,26 @@ IBA_SYNTHESIZE(title, rows);
 /*!
  \brief     Returns the number of rows in the section.
  */
-- (NSInteger)rowCount
+- (IBAIndexPathRowType)rowCount
 {   
-    return (NSInteger) [self.rows count];
+    return IBANSUIntegerToIBAIndexPathRowType([self.rows count]);
 }
 
 /*!
  \brief     Returns the row in the section for the specified index.
- \note      We use a signed \a index because NSIndexPath.row is signed.  Normally you would use an unsigned index.  Silly UITableView API design.
+ \note      On iOS 5 we use a signed \a index because NSIndexPath.row is signed.  Normally you would use an unsigned index.  Silly UITableView API design.
  */
-- (id)rowAtIndex:(NSInteger)index
+- (id)rowAtIndex:(IBAIndexPathRowType)index
 {
-    return index >= 0 ? [self.rows objectAtIndex:(NSUInteger)index] : nil;
+    BOOL withinBounds = 
+#if IBA_NSINDEXPATH_ROW_IS_SIGNED
+    [self.rows ibaIntegerIsWithinIndexBounds:index]
+#else
+    index < [self.rows count] 
+#endif
+    ;
+    
+    return withinBounds ? [self.rows objectAtIndex:IBAIndexPathRowTypeToNSUInteger(index)] : nil;
 }
 
 /*!

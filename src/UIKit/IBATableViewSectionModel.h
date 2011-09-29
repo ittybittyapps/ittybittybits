@@ -18,6 +18,7 @@
 //  limitations under the License.
 
 #import <Foundation/Foundation.h>
+#import "NSIndexPath+UITableView+IBAExtensions.h"
 
 @interface IBATableViewSectionModel : NSObject
 
@@ -32,8 +33,8 @@
 - (id)initWithRows:(NSArray *)rows;
 - (id)initWithTitle:(NSString *)title;
 
-- (NSInteger)rowCount;
-- (id)rowAtIndex:(NSInteger)index;
+- (IBAIndexPathRowType)rowCount;
+- (id)rowAtIndex:(IBAIndexPathRowType)indexRow;
 - (void)addRow:(id)row;
 
 @end

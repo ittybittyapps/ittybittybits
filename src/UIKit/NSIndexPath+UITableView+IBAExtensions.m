@@ -1,5 +1,5 @@
 //
-//  NSIndexPath+IBAExtensions.m
+//  NSIndexPath+UITableView+IBAExtensions.m
 //  IttyBittyBits
 //
 //  Created by Oliver Jones on 14/09/11.

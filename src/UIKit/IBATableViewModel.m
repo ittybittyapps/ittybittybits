@@ -93,15 +93,15 @@ IBA_SYNTHESIZE(sections);
 /*!
  \return        Returns the count of sections in the model.
  */
-- (NSInteger)sectionCount
+- (IBAIndexPathSectionType)sectionCount
 {
-    return (NSInteger) [self.sections count];
+    return (IBAIndexPathSectionType) [self.sections count];
 }
 
 /*!
  \return        Returns the number of rows in a section.
  */
-- (NSInteger)numberOfRowsInSection:(NSInteger)section
+- (IBAIndexPathRowType)numberOfRowsInSection:(IBAIndexPathSectionType)section
 {
     return [[self sectionAtIndex:section] rowCount];
 }
@@ -159,9 +159,17 @@ IBA_SYNTHESIZE(sections);
 /*!
  \brief     Returns the section at the specified \a sectionIndex (or nil of none exists).
  */
-- (IBATableViewSectionModel *)sectionAtIndex:(NSInteger)sectionIndex
+- (IBATableViewSectionModel *)sectionAtIndex:(IBAIndexPathSectionType)sectionIndex
 {
-    return ([self.sections ibaIntegerIsWithinIndexBounds:sectionIndex]) ? [self.sections objectAtIndex:(NSUInteger)sectionIndex] : nil;
+    BOOL withinBounds = 
+#if IBA_NSINDEXPATH_SECTION_IS_SIGNED
+    [self.sections ibaIntegerIsWithinIndexBounds:sectionIndex]
+#else
+    sectionIndex < [self.sections count] 
+#endif
+    ;
+    
+    return withinBounds ? [self.sections objectAtIndex:IBAIndexPathSectionTypeToNSUInteger(sectionIndex)] : nil;
 }
 
 /*!
@@ -171,7 +179,7 @@ IBA_SYNTHESIZE(sections);
  */
 - (id)objectAtIndexPath:(NSIndexPath*)indexPath
 {
-    return indexPath ? [[self sectionAtIndex:(NSInteger)indexPath.section] rowAtIndex:(NSInteger)indexPath.row] : nil;
+    return indexPath ? [[self sectionAtIndex:indexPath.section] rowAtIndex:indexPath.row] : nil;
 }
 
 @end
