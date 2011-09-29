@@ -33,8 +33,8 @@
 - (id)initWithRows:(NSArray *)rows;
 - (id)initWithTitle:(NSString *)title;
 
-- (IBAIndexPathRowType)rowCount;
-- (id)rowAtIndex:(IBAIndexPathRowType)indexRow;
+- (NSInteger)rowCount;
+- (id)rowAtIndex:(NSInteger)indexRow;
 - (void)addRow:(id)row;
 
 @end

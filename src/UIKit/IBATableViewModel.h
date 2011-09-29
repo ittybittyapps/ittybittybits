@@ -36,10 +36,10 @@
 - (void)addSections:(NSArray *)sections;
 - (void)replaceSectionAtIndex:(NSInteger)sectionIndex withSection:(IBATableViewSectionModel *)section;
 
-- (IBAIndexPathSectionType)sectionCount;
-- (IBAIndexPathRowType)numberOfRowsInSection:(IBAIndexPathSectionType)sectionIndex;
+- (NSInteger)sectionCount;
+- (NSInteger)numberOfRowsInSection:(NSInteger)sectionIndex;
 
-- (IBATableViewSectionModel *)sectionAtIndex:(IBAIndexPathSectionType)sectionIndex;
+- (IBATableViewSectionModel *)sectionAtIndex:(NSInteger)sectionIndex;
 - (id)objectAtIndexPath:(NSIndexPath*)indexPath;
 
 - (void)removeAllSections;
