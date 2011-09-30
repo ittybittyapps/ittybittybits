@@ -1,9 +1,9 @@
 //
-//  IBACoreLocation.h
+//  IBACoreLocation.m
 //  IttyBittyBits
 //
-//  Created by Oliver Jones on 20/05/11.
-//  Copyright 2011 Itty Bitty Apps Pty. Ltd. All rights reserved.
+//  Created by Oliver Jones on 29/09/11.
+//  Copyright (c) 2011 Itty Bitty Apps Pty. Ltd. All rights reserved.
 //
 //  Licensed under the Apache License, Version 2.0 (the "License"); you may not
 //  use this file except in compliance with the License.  You may obtain a copy
@@ -18,9 +18,5 @@
 //  the License.
 //
 
-#import <CoreLocation/CoreLocation.h>
+#import "IBACoreLocation.h"
 
-/*!
- \brief     Compares to CLLocationCoordinate2D structs for equality.
- */
-#define IBACLLocationCoordinate2DAreEqual(x, y) (((x).latitude - (y).latitude) == 0.0 && ((x).longitude - (y).longitude) == 0.0)

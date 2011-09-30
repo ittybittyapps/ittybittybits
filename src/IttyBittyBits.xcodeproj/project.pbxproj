@@ -303,6 +303,7 @@
 		A7DA82D813C564420083D453 /* NSObject+IBAExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = A7DA82D613C564420083D453 /* NSObject+IBAExtensions.m */; };
 		A7E200C013D68D5A00731605 /* NSError+IBAExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = A7E200BE13D68D5A00731605 /* NSError+IBAExtensions.h */; };
 		A7E200C113D68D5A00731605 /* NSError+IBAExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = A7E200BF13D68D5A00731605 /* NSError+IBAExtensions.m */; };
+		A7E8BD9B1434532100DE7861 /* IBACoreLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = A7E8BD9A1434532100DE7861 /* IBACoreLocation.m */; };
 		A7F0A6B613B438820009F601 /* IBAAbstractCoreDataService.h in Headers */ = {isa = PBXBuildFile; fileRef = A7F0A6B413B438820009F601 /* IBAAbstractCoreDataService.h */; };
 		A7F0A6B713B438820009F601 /* IBAAbstractCoreDataService.m in Sources */ = {isa = PBXBuildFile; fileRef = A7F0A6B513B438820009F601 /* IBAAbstractCoreDataService.m */; };
 		A7F0A6BD13B46ED80009F601 /* NSArray+IBAExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = A7F0A6BB13B46ED80009F601 /* NSArray+IBAExtensions.h */; };
@@ -644,6 +645,7 @@
 		A7DA82D613C564420083D453 /* NSObject+IBAExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+IBAExtensions.m"; sourceTree = "<group>"; };
 		A7E200BE13D68D5A00731605 /* NSError+IBAExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSError+IBAExtensions.h"; sourceTree = "<group>"; };
 		A7E200BF13D68D5A00731605 /* NSError+IBAExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSError+IBAExtensions.m"; sourceTree = "<group>"; };
+		A7E8BD9A1434532100DE7861 /* IBACoreLocation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IBACoreLocation.m; sourceTree = "<group>"; };
 		A7F0A6B413B438820009F601 /* IBAAbstractCoreDataService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBAAbstractCoreDataService.h; sourceTree = "<group>"; };
 		A7F0A6B513B438820009F601 /* IBAAbstractCoreDataService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IBAAbstractCoreDataService.m; sourceTree = "<group>"; };
 		A7F0A6BB13B46ED80009F601 /* NSArray+IBAExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+IBAExtensions.h"; sourceTree = "<group>"; };
@@ -1103,6 +1105,7 @@
 			isa = PBXGroup;
 			children = (
 				A7B10ACC138652F800C8A672 /* IBACoreLocation.h */,
+				A7E8BD9A1434532100DE7861 /* IBACoreLocation.m */,
 			);
 			path = CoreLocation;
 			sourceTree = "<group>";
@@ -1178,6 +1181,7 @@
 		A7B4DAD113679F5E00543D61 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
+				A7E8BD9D1434576E00DE7861 /* CoreLocation */,
 				A79141621370DFE100209C96 /* Foundation */,
 				A7808BD413D2D73400F76DB1 /* UIKit */,
 				A7B4DAD213679F5E00543D61 /* Supporting Files */,
@@ -1294,6 +1298,13 @@
 			);
 			name = Configuration;
 			path = ../config;
+			sourceTree = "<group>";
+		};
+		A7E8BD9D1434576E00DE7861 /* CoreLocation */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = CoreLocation;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1717,6 +1728,7 @@
 				A7A1D43C142C51FA008EA4A6 /* NSPropertyListSerialization+IBAExtensions.m in Sources */,
 				A76992AF14303C98002A9BEE /* NSOperationQueue+IBAExtensions.m in Sources */,
 				8806703B1433C97A004487A5 /* IBAAlertView.m in Sources */,
+				A7E8BD9B1434532100DE7861 /* IBACoreLocation.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
