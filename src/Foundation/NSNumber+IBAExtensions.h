@@ -31,6 +31,37 @@
 #define IBALongLongToNumber(x) [NSNumber numberWithLongLong:(x)]
 #define IBAULongLongToNumber(x) [NSNumber numberWithUnsignedLongLong:(x)]
 
+#define IBALiteralsToNumbers(type, ...) IBA_CAT(_IBALiteralsToNumbers_, IBA_N_ARGS(__VA_ARGS__))(type, __VA_ARGS__)
+#define _IBALiteralsToNumbers_H(type, x) [NSNumber numberWith##type:(x)]
+#define _IBALiteralsToNumbers_1(type, a) _IBALiteralsToNumbers_H(type, a)
+#define _IBALiteralsToNumbers_2(type, a, b) _IBALiteralsToNumbers_H(type, a), _IBALiteralsToNumbers_H(type, b)
+#define _IBALiteralsToNumbers_3(type, a, ...) _IBALiteralsToNumbers_H(type, a), _IBALiteralsToNumbers_2(type, __VA_ARGS__)
+#define _IBALiteralsToNumbers_4(type, a, ...) _IBALiteralsToNumbers_H(type, a), _IBALiteralsToNumbers_3(type, __VA_ARGS__)
+#define _IBALiteralsToNumbers_5(type, a, ...) _IBALiteralsToNumbers_H(type, a), _IBALiteralsToNumbers_4(type, __VA_ARGS__)
+#define _IBALiteralsToNumbers_6(type, a, ...) _IBALiteralsToNumbers_H(type, a), _IBALiteralsToNumbers_5(type, __VA_ARGS__)
+#define _IBALiteralsToNumbers_7(type, a, ...) _IBALiteralsToNumbers_H(type, a), _IBALiteralsToNumbers_6(type, __VA_ARGS__)
+#define _IBALiteralsToNumbers_8(type, a, ...) _IBALiteralsToNumbers_H(type, a), _IBALiteralsToNumbers_7(type, __VA_ARGS__)
+#define _IBALiteralsToNumbers_9(type, a, ...) _IBALiteralsToNumbers_H(type, a), _IBALiteralsToNumbers_8(type, __VA_ARGS__)
+#define _IBALiteralsToNumbers_10(type, a, ...) _IBALiteralsToNumbers_H(type, a), _IBALiteralsToNumbers_9(type, __VA_ARGS__)
+#define _IBALiteralsToNumbers_11(type, a, ...) _IBALiteralsToNumbers_H(type, a), _IBALiteralsToNumbers_10(type, __VA_ARGS__)
+#define _IBALiteralsToNumbers_12(type, a, ...) _IBALiteralsToNumbers_H(type, a), _IBALiteralsToNumbers_11(type, __VA_ARGS__)
+#define _IBALiteralsToNumbers_13(type, a, ...) _IBALiteralsToNumbers_H(type, a), _IBALiteralsToNumbers_12(type, __VA_ARGS__)
+#define _IBALiteralsToNumbers_14(type, a, ...) _IBALiteralsToNumbers_H(type, a), _IBALiteralsToNumbers_13(type, __VA_ARGS__)
+#define _IBALiteralsToNumbers_15(type, a, ...) _IBALiteralsToNumbers_H(type, a), _IBALiteralsToNumbers_14(type, __VA_ARGS__)
+#define _IBALiteralsToNumbers_16(type, a, ...) _IBALiteralsToNumbers_H(type, a), _IBALiteralsToNumbers_15(type, __VA_ARGS__)
+
+#define IBAFloatsToNumbers(...) IBALiteralsToNumbers(Float, __VA_ARGS__)
+#define IBADoublesToNumbers(...) IBALiteralsToNumbers(Double, __VA_ARGS__)
+#define IBABoolsToNumbers(...) IBALiteralsToNumbers(Bool, __VA_ARGS__)
+#define IBAIntsToNumbers(...) IBALiteralsToNumbers(Int, __VA_ARGS__)
+#define IBAIntegersToNumbers(...) IBALiteralsToNumbers(Integer, __VA_ARGS__)
+#define IBAUIntsToNumbers(...) IBALiteralsToNumbers(UnsignedInt, __VA_ARGS__)
+#define IBAUIntegersToNumbers(...) IBALiteralsToNumbers(UsignedInteger, __VA_ARGS__)
+#define IBALongsToNumbers(...) IBALiteralsToNumbers(Long, __VA_ARGS__)
+#define IBAULongsToNumbers(...) IBALiteralsToNumbers(UnsignedLong, __VA_ARGS__)
+#define IBALongLongsToNumbers(...) IBALiteralsToNumbers(LongLong, __VA_ARGS__)
+#define IBAULongLongsToNumbers(...) IBALiteralsToNumbers(UnsignedLongLong, __VA_ARGS__)
+
 /*!
  \def       IBANSNumberZero
  \brief     Macro that defines a NSNumber "zero".
@@ -54,3 +85,5 @@
 - (BOOL)ibaIsGreaterThanOrEqualTo:(NSNumber *)other;
 
 @end
+
+
