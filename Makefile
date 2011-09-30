@@ -2,7 +2,7 @@ XCODE_WORKSPACE ?= IttyBittyBits.xcworkspace
 XCODE_SCHEME ?= IttyBittyBitsTests
 CONFIG ?= Debug
 SDK ?= iphonesimulator4.3 
-KEYCHAIN_PATH ?= "$(HOME)/Library/Keychains/Xcode.keychain"
+KEYCHAIN_NAME := IttyBittyApps
 
 BUILD_DIR ?= ../build
 
