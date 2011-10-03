@@ -42,6 +42,7 @@
 #import "NSDictionary+IBAExtensions.h"
 #import "NSError+IBAExtensions.h"
 #import "NSFileManager+IBAExtensions.h"
+#import "NSHTTPURLResponse+IBAExtensions.h"
 #import "NSMutableArray+IBAExtensions.h"
 #import "NSMutableDictionary+IBAExtensions.h"
 #import "NSMutableSet+IBAExtensions.h"
@@ -51,4 +52,4 @@
 #import "NSPropertyListSerialization+IBAExtensions.h"
 #import "NSString+IBAExtensions.h"
 #import "NSTimer+IBABlocks.h"
-
+#import "NSURLRequest+IBAExtensions.h"

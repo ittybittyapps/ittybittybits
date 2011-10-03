@@ -216,6 +216,10 @@
 		A7966B46139378CB00F1B1A1 /* AddressBookUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7966B44139378CB00F1B1A1 /* AddressBookUI.framework */; };
 		A7966B49139378EB00F1B1A1 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7966B48139378EB00F1B1A1 /* CoreLocation.framework */; };
 		A7966B4B139378FD00F1B1A1 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7966B4A139378FD00F1B1A1 /* MapKit.framework */; };
+		A79B837E1439843F0002C8D5 /* NSHTTPURLResponse+IBAExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = A79B837C1439843F0002C8D5 /* NSHTTPURLResponse+IBAExtensions.h */; };
+		A79B837F1439843F0002C8D5 /* NSHTTPURLResponse+IBAExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = A79B837D1439843F0002C8D5 /* NSHTTPURLResponse+IBAExtensions.m */; };
+		A79B838314398E790002C8D5 /* NSURLRequest+IBAExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = A79B838114398E790002C8D5 /* NSURLRequest+IBAExtensions.h */; };
+		A79B838414398E790002C8D5 /* NSURLRequest+IBAExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = A79B838214398E790002C8D5 /* NSURLRequest+IBAExtensions.m */; };
 		A7A0A26B13B88E4800596FD4 /* IBABreadcrumbPath.hh in Headers */ = {isa = PBXBuildFile; fileRef = A7A0A26713B88E4800596FD4 /* IBABreadcrumbPath.hh */; };
 		A7A0A26C13B88E4800596FD4 /* IBABreadcrumbPath.mm in Sources */ = {isa = PBXBuildFile; fileRef = A7A0A26813B88E4800596FD4 /* IBABreadcrumbPath.mm */; };
 		A7A0A26D13B88E4800596FD4 /* IBABreadcrumbPathView.h in Headers */ = {isa = PBXBuildFile; fileRef = A7A0A26913B88E4800596FD4 /* IBABreadcrumbPathView.h */; };
@@ -563,6 +567,10 @@
 		A7966B44139378CB00F1B1A1 /* AddressBookUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBookUI.framework; path = System/Library/Frameworks/AddressBookUI.framework; sourceTree = SDKROOT; };
 		A7966B48139378EB00F1B1A1 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		A7966B4A139378FD00F1B1A1 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		A79B837C1439843F0002C8D5 /* NSHTTPURLResponse+IBAExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSHTTPURLResponse+IBAExtensions.h"; sourceTree = "<group>"; };
+		A79B837D1439843F0002C8D5 /* NSHTTPURLResponse+IBAExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSHTTPURLResponse+IBAExtensions.m"; sourceTree = "<group>"; };
+		A79B838114398E790002C8D5 /* NSURLRequest+IBAExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSURLRequest+IBAExtensions.h"; sourceTree = "<group>"; };
+		A79B838214398E790002C8D5 /* NSURLRequest+IBAExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSURLRequest+IBAExtensions.m"; sourceTree = "<group>"; };
 		A7A0A26713B88E4800596FD4 /* IBABreadcrumbPath.hh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = IBABreadcrumbPath.hh; sourceTree = "<group>"; };
 		A7A0A26813B88E4800596FD4 /* IBABreadcrumbPath.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = IBABreadcrumbPath.mm; sourceTree = "<group>"; };
 		A7A0A26913B88E4800596FD4 /* IBABreadcrumbPathView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBABreadcrumbPathView.h; sourceTree = "<group>"; };
@@ -1252,6 +1260,8 @@
 				A7E200BF13D68D5A00731605 /* NSError+IBAExtensions.m */,
 				A77874DF13F7B8D9008FF846 /* NSFileManager+IBAExtensions.h */,
 				A77874E013F7B8D9008FF846 /* NSFileManager+IBAExtensions.m */,
+				A79B837C1439843F0002C8D5 /* NSHTTPURLResponse+IBAExtensions.h */,
+				A79B837D1439843F0002C8D5 /* NSHTTPURLResponse+IBAExtensions.m */,
 				A7286D88138A1AFB00C12FCB /* NSMutableArray+IBAExtensions.h */,
 				A7286D89138A1AFB00C12FCB /* NSMutableArray+IBAExtensions.m */,
 				A71E21CF13CAD26800FB2695 /* NSMutableDictionary+IBAExtensions.h */,
@@ -1270,6 +1280,8 @@
 				A7D58C531378BF440041BBEB /* NSString+IBAExtensions.m */,
 				A7014AF513718C0300BE32D2 /* NSTimer+IBABlocks.h */,
 				A7014AF613718C0300BE32D2 /* NSTimer+IBABlocks.m */,
+				A79B838114398E790002C8D5 /* NSURLRequest+IBAExtensions.h */,
+				A79B838214398E790002C8D5 /* NSURLRequest+IBAExtensions.m */,
 			);
 			path = Foundation;
 			sourceTree = "<group>";
@@ -1400,6 +1412,8 @@
 				A76992C914306768002A9BEE /* IBADispatch.h in Headers */,
 				8806703A1433C97A004487A5 /* IBAAlertView.h in Headers */,
 				A7335B711433F76900D9DE14 /* IBACommonTests.h in Headers */,
+				A79B837E1439843F0002C8D5 /* NSHTTPURLResponse+IBAExtensions.h in Headers */,
+				A79B838314398E790002C8D5 /* NSURLRequest+IBAExtensions.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1729,6 +1743,8 @@
 				A76992AF14303C98002A9BEE /* NSOperationQueue+IBAExtensions.m in Sources */,
 				8806703B1433C97A004487A5 /* IBAAlertView.m in Sources */,
 				A7E8BD9B1434532100DE7861 /* IBACoreLocation.m in Sources */,
+				A79B837F1439843F0002C8D5 /* NSHTTPURLResponse+IBAExtensions.m in Sources */,
+				A79B838414398E790002C8D5 /* NSURLRequest+IBAExtensions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
