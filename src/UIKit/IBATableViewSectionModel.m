@@ -130,4 +130,9 @@ IBA_SYNTHESIZE(title, rows);
     [self.rows addObject:row];
 }
 
+- (NSString *)description
+{
+    return [NSString stringWithFormat:@"<%@ %@:[\n\t%@\n]>", self.class, self.title, self.rows];
+}
+
 @end

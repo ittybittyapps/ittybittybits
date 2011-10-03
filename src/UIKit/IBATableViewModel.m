@@ -174,6 +174,11 @@ IBA_SYNTHESIZE(sections);
     return indexPath ? [[self sectionAtIndex:indexPath.ibaTableViewModelSection] rowAtIndex:indexPath.ibaTableViewModelRow] : nil;
 }
 
+- (NSString *)description
+{
+    return [NSString stringWithFormat:@"<%@ [\n\t%@\n]>", self.class, [[self.sections ibaMap:^(id i) { return [i description]; }] componentsJoinedByString:@",\n\t"]];
+}
+
 @end
         
 @implementation NSIndexPath (IBATableViewModel)
@@ -208,7 +213,6 @@ IBA_SYNTHESIZE(sections);
     
     return section == ([tableViewModel sectionCount] - 1)  && row == ([tableViewModel numberOfRowsInSection:section] - 1);
 }
-
 
 @end
 
