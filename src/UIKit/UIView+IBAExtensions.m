@@ -141,6 +141,23 @@
 }
 
 /*!
+ \brief     Returns the size of a the view.
+ */
+- (CGSize)ibaSize
+{
+    return self.frame.size;
+}
+
+/*!
+ \brief     Sets the size of a view
+ */
+- (void)setIbaSize:(CGSize)ibaSize
+{
+    self.ibaHeight = ibaSize.height;
+    self.ibaWidth = ibaSize.width;
+}
+
+/*!
  \brief     Centers view frame in a boundary rect
  */
 - (void)ibaCenterInRect:(CGRect)rect

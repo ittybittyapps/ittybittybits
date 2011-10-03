@@ -66,6 +66,7 @@ typedef enum
 @property (nonatomic, assign) CGFloat ibaBottom;
 @property (nonatomic, assign) CGFloat ibaWidth;
 @property (nonatomic, assign) CGFloat ibaHeight;
+@property (nonatomic, assign) CGSize ibaSize;
 
 - (void)ibaCenterInRect:(CGRect)rect;
 - (void)ibaCenterVerticallyInRect:(CGRect)rect;
