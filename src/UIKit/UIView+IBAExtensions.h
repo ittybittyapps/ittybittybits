@@ -67,6 +67,13 @@ typedef enum
 @property (nonatomic, assign) CGFloat ibaWidth;
 @property (nonatomic, assign) CGFloat ibaHeight;
 
+- (void)ibaCenterInRect:(CGRect)rect;
+- (void)ibaCenterVerticallyInRect:(CGRect)rect;
+- (void)ibaCenterHorizontallyInRect:(CGRect)rect;
+- (void)ibaCenterInSuperView;
+- (void)ibaCenterVerticallyInSuperView;
+- (void)ibaCenterHorizontallyInSuperView;
+
 - (void)ibaSetHidden:(BOOL)hidden withAlphaTransistionDuration:(NSTimeInterval)duration;
 - (void)ibaSetHidden:(BOOL)hidden withAlphaTransistionDuration:(NSTimeInterval)duration completion:(void (^)(BOOL finished))completion;
 - (void)ibaSetHidden:(BOOL)hidden withSlideTransistionDirection:(IBACompassDirection)direction 

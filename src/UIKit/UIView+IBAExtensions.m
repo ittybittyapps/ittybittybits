@@ -141,6 +141,54 @@
 }
 
 /*!
+ \brief     Centers view frame in a boundary rect
+ */
+- (void)ibaCenterInRect:(CGRect)rect
+{
+    [self setCenter:CGPointMake(floorf(CGRectGetMidX(rect)) + ((int)floorf([self ibaWidth]) % 2 ? .5f : 0) , floorf(CGRectGetMidY(rect)) + ((int)floorf([self ibaHeight]) % 2 ? .5f : 0))];
+}
+
+/*!
+ \brief     Centers view frame vertically in a boundary rect
+ */
+- (void)ibaCenterVerticallyInRect:(CGRect)rect
+{
+    [self setCenter:CGPointMake([self center].x, floorf(CGRectGetMidY(rect)) + ((int)floorf([self ibaHeight]) % 2 ? .5f : 0))];
+}
+
+/*!
+ \brief     Centers view frame horizontally in a boundary rect
+ */
+- (void)ibaCenterHorizontallyInRect:(CGRect)rect
+{
+    [self setCenter:CGPointMake(floorf(CGRectGetMidX(rect)) + ((int)floorf([self ibaWidth]) % 2 ? .5f : 0), [self center].y)];
+}
+
+/*!
+ \brief     Centers view in the boundary of the superview
+ */
+- (void)ibaCenterInSuperView
+{
+    [self ibaCenterInRect:[[self superview] bounds]];
+}
+
+/*!
+ \brief     Centers view vertically in the boundary of the superview
+ */
+- (void)ibaCenterVerticallyInSuperView
+{
+    [self ibaCenterVerticallyInRect:[[self superview] bounds]];
+}
+
+/*!
+ \brief     Centers view horizontally in the boundary of the superview
+ */
+- (void)ibaCenterHorizontallyInSuperView
+{
+    [self ibaCenterHorizontallyInRect:[[self superview] bounds]];
+}
+
+/*!
  \brief     Returns a value indicating whether the receiver is the frontmost view within its superview.
  */
 - (BOOL)ibaFrontmost
