@@ -34,6 +34,7 @@
 - (BOOL)ibaNotBlank;
 
 - (NSString *)ibaURLEncoded;
+- (NSString *)ibaURLDecoded;
 
 - (NSString *)ibaStringByEscapingForHTML;
 - (NSString *)ibaStringByEscapingForAsciiHTML;

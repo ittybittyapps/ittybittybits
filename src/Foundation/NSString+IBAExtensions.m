@@ -437,6 +437,17 @@ static int EscapeMapCompare(const void *ucharVoid, const void *mapVoid)
 }
 
 /*!
+ \brief     Returns a a copy of the receiver that has been URL decoded.
+ */
+- (NSString *)ibaURLDecoded
+{
+    return [(NSString *)CFURLCreateStringByReplacingPercentEscapesUsingEncoding(kCFAllocatorDefault, 
+                                                                                (CFStringRef)self,
+                                                                                CFSTR(""), 
+                                                                                kCFStringEncodingUTF8) autorelease];
+}
+
+/*!
  \brief     Get a string where internal characters that need escaping for HTML are escaped 
  \details   For example, '&' become '&amp;'. This will only cover characters from table A.2.2 of http://www.w3.org/TR/xhtml1/dtds.html#a_dtd_Special_characters which is what you want for a unicode encoded webpage. If you have a ascii or non-encoded webpage, please use stringByEscapingAsciiHTML which will encode all characters.
  
