@@ -18,12 +18,13 @@
 //  limitations under the License.
 
 #import "NSURLRequest+IBAExtensions.h"
+#import "NSString+IBAExtensions.h"
 
 @implementation NSURLRequest (IBAExtensions)
 
 - (NSString *)ibaDebugDescription
 {
-    return [NSString stringWithFormat:@"%@, Headers: %@", self.URL, self.allHTTPHeaderFields];
+    return [NSString stringWithFormat:@"%@, Headers: %@", [[self.URL description] ibaURLDecoded], self.allHTTPHeaderFields];
 }
 
 @end
