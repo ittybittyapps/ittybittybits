@@ -18,12 +18,28 @@
 //  limitations under the License.
 
 #import "NSHTTPURLResponse+IBAExtensions.h"
+#import "NSDate+IBAExtensions.h"
 
 @implementation NSHTTPURLResponse (IBAExtensions)
 
 - (NSString *)ibaDebugDescription
 {
     return [NSString stringWithFormat:@"%d: %@, Expected Content Length: %lld, Headers: %@", self.statusCode, [[self class] localizedStringForStatusCode:self.statusCode], self.expectedContentLength, self.allHeaderFields];
+}
+
+/*!
+ \brief     Returns the date header from the HTTP response (if the header exists & is parseable).
+ \return    The response header date/time if available; otherwise nil.
+ */
+- (NSDate *)ibaDateHeader
+{
+    NSString *dateString = [[self allHeaderFields] objectForKey:@"Date"];
+    if (dateString)
+    {
+        return [NSDate ibaDateFromRFC822String:dateString];
+    }
+    
+    return nil;
 }
 
 @end

@@ -22,5 +22,6 @@
 @interface NSHTTPURLResponse (IBAExtensions)
 
 - (NSString *)ibaDebugDescription;
+- (NSDate *)ibaDateHeader;
 
 @end
