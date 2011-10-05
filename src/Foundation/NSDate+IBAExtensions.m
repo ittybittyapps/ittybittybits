@@ -107,13 +107,15 @@
 {    
 	// Create date formatter
 	static NSDateFormatter *dateFormatter = nil;
-	if (!dateFormatter) {
-		NSLocale *en_US_POSIX = [[NSLocale alloc] initWithLocaleIdentifier:@"en_US_POSIX"];
-		dateFormatter = [[NSDateFormatter alloc] init];
-		[dateFormatter setLocale:en_US_POSIX];
-		[dateFormatter setTimeZone:[NSTimeZone timeZoneForSecondsFromGMT:0]];
-		[en_US_POSIX release];
-	}
+
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{            
+        NSLocale *en_US_POSIX = [[NSLocale alloc] initWithLocaleIdentifier:@"en_US_POSIX"];
+        dateFormatter = [[NSDateFormatter alloc] init];
+        [dateFormatter setLocale:en_US_POSIX];
+        [dateFormatter setTimeZone:[NSTimeZone timeZoneForSecondsFromGMT:0]];
+        [en_US_POSIX release];    
+    });
     
 	// Process
 	NSDate *date = nil;
