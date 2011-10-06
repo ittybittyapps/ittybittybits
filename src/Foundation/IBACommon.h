@@ -186,6 +186,18 @@
     } while(0)
 
 /*!
+ \brief     Macro that assigns a new property value.
+ */
+#define IBA_ASSIGN_PROPERTY(propertyName, newValue) \
+    do { \
+        __typeof__(newValue) __A = (newValue); \
+        if (IBA_PROPERTY_IVAR(propertyName) != __A) \
+        { \
+            IBA_PROPERTY_IVAR(propertyName) = __A; \
+        } \
+    } while(0)
+
+/*!
  \brief     Macro that assigns a new property value.  Change notifications willChangeValueForKey: and didChangeValueForKey: for the property are also called before and after the value changes.
  */
 #define IBA_ASSIGN_PROPERTY_WITH_CHANGE_NOTIFICATION(propertyName, newValue) \
