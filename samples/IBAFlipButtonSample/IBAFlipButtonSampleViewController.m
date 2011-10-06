@@ -72,12 +72,12 @@ IBA_SYNTHESIZE(flipButton, flipButton2);
     
 }
 
-- (void)barButtonPressed:(IBAFlipButton *)sender forEvent:(UIEvent *)event
+- (void)barButtonPressed:(IBAFlipButton *)sender forEvent:(UIEvent *)IBA_UNUSED event
 {
     NSLog(@"Bar Button Pressed, flipped? %@", sender.flipped ? @"YES" : @"NO");
 }
 
-- (IBAction)buttonPressed:(IBAFlipButton *)sender forEvent:(UIEvent *)event
+- (IBAction)buttonPressed:(IBAFlipButton *)sender forEvent:(UIEvent *)IBA_UNUSED event
 {
     NSLog(@"Button Pressed, flipped? %@", sender.flipped ? @"YES" : @"NO");
 }

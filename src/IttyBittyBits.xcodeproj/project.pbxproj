@@ -312,6 +312,8 @@
 		A7F0A6B713B438820009F601 /* IBAAbstractCoreDataService.m in Sources */ = {isa = PBXBuildFile; fileRef = A7F0A6B513B438820009F601 /* IBAAbstractCoreDataService.m */; };
 		A7F0A6BD13B46ED80009F601 /* NSArray+IBAExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = A7F0A6BB13B46ED80009F601 /* NSArray+IBAExtensions.h */; };
 		A7F0A6BE13B46ED80009F601 /* NSArray+IBAExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = A7F0A6BC13B46ED80009F601 /* NSArray+IBAExtensions.m */; };
+		A7F836F1143D203D00196396 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7555E5D142067A8002E5E57 /* CoreGraphics.framework */; };
+		A7F836F3143D204B00196396 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7555E5B14206752002E5E57 /* QuartzCore.framework */; };
 		A7FB6B5C137148DC0088C4CD /* IBACommon.h in Headers */ = {isa = PBXBuildFile; fileRef = A7FB6B5B137148DC0088C4CD /* IBACommon.h */; };
 /* End PBXBuildFile section */
 
@@ -675,6 +677,8 @@
 				A7B65777141094D40046142B /* MapKit.framework in Frameworks */,
 				A7B65779141094D70046142B /* Security.framework in Frameworks */,
 				A7B6577D141094DD0046142B /* SystemConfiguration.framework in Frameworks */,
+				A7F836F1143D203D00196396 /* CoreGraphics.framework in Frameworks */,
+				A7F836F3143D204B00196396 /* QuartzCore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
