@@ -32,4 +32,21 @@
     [self setObject:object forKey:IBAIntegerToNumber(key)];
 }
 
+/*!
+ \brief     Returns the value associated with a given key.  If no value exists in the dictionary for the specified \a key the \a factory block is invoked and the retured result is added to the dictionary for \a key.
+ \return    The value associated with \a key, or the result of invoking the \a factory if no value is associated with \a key.
+ */
+- (id)ibaObjectForKey:(id)key setDefaultUsingBlock:(IBAObjectFactory)factory
+{
+    id o = [self objectForKey:key];
+    if (o == nil)
+    {
+        o = factory();
+        [self setObject:o forKey:key];
+    }
+    
+    return o;
+}
+
+
 @end

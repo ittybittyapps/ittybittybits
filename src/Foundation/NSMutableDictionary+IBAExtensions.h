@@ -19,10 +19,12 @@
 
 #import <Foundation/Foundation.h>
 #import "NSDictionary+IBAExtensions.h"
+#import "IBACommon.h"
 
 @interface NSMutableDictionary (IBAExtensions)
 
 - (void)ibaSetObject:(id)object forUIntegerKey:(NSUInteger)key;
 - (void)ibaSetObject:(id)object forIntegerKey:(NSInteger)key;
+- (id)ibaObjectForKey:(id)key setDefaultUsingBlock:(IBAObjectFactory)factory;
 
 @end
