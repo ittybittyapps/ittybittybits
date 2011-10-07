@@ -460,6 +460,10 @@
  */
 typedef void (^IBAAction)(void);
 
+/*!
+ \brief     A generic object factory block.
+ */
+typedef id (^IBAObjectFactory)(void);
 
 /*!
  \def       IBA_SIZE_IS_WITHIN
