@@ -170,6 +170,20 @@
     } while(0)
 
 /*!
+ \brief     Macro that copies a new property value in a setter while releasing the old property value.
+ */
+#define IBA_COPY_PROPERTY(propertyName, newValue) \
+    do { \
+        __typeof__(newValue) __A = (newValue); \
+        if (IBA_PROPERTY_IVAR(propertyName) != __A) \
+        { \
+            __A = [__A copy]; \
+            IBA_RELEASE_PROPERTY(propertyName); \
+            IBA_PROPERTY_IVAR(propertyName) = __A; \
+        } \
+    } while(0)
+
+/*!
  \brief     Macro that retains a new property value in a setter while releasing the old property value.  Change notifications willChangeValueForKey: and didChangeValueForKey: for the property are also called before and after the value changes.
  */
 #define IBA_RETAIN_PROPERTY_WITH_CHANGE_NOTIFICATION(propertyName, newValue) \
