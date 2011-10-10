@@ -40,4 +40,8 @@
 - (NSString *)ibaStringByEscapingForAsciiHTML;
 - (NSString *)ibaStringByUnescapingFromHTML;
 
+- (NSData *)ibaObfuscateWithKey:(NSString *)key;
+
++ (NSString *)ibaStringByDeobfuscateingData:(NSData *)data withKey:(NSString *)key;
+
 @end

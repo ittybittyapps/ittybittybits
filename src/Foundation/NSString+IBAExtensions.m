@@ -355,6 +355,26 @@ static HTMLEscapeMap gUnicodeHTMLEscapeMap[] = {
     { @"&euro;", 8364 },
 };
 
+/*!
+ \brief     XOR the bytes of \a data with those in \a key.
+ */
+static void XORBytes(uint8_t *data, size_t dataLen, const uint8_t *key, size_t kenLen)
+{
+    size_t keyIndex = 0;
+    
+    for (size_t x = 0; x < dataLen; x++) 
+    {
+        *data = *data ^ key[keyIndex];
+        
+        ++data;
+        ++keyIndex;
+        
+        if (keyIndex >= kenLen)
+        {
+            keyIndex = 0;
+        }
+    }
+}
 
 // Utility function for Bsearching table above
 static int EscapeMapCompare(const void *ucharVoid, const void *mapVoid) 
@@ -567,6 +587,26 @@ static int EscapeMapCompare(const void *ucharVoid, const void *mapVoid)
     return [NSString stringWithString:finalString];
 }
 
+- (NSData *)ibaObfuscateWithKey:(NSString *)key
+{
+    NSMutableData *data = [NSMutableData dataWithData:[self dataUsingEncoding:NSUTF8StringEncoding]];
+    NSData *keyData = [key dataUsingEncoding:NSUTF8StringEncoding];
+ 
+    XORBytes([data mutableBytes], [data length], [keyData bytes], [keyData length]);
+    
+    // Return a readonly data object
+    return [NSData dataWithData:data];
+}
+
++ (NSString *)ibaStringByDeobfuscateingData:(NSData *)data withKey:(NSString *)key
+{
+    NSMutableData *mutableData = [NSMutableData dataWithData:data];
+    NSData *keyData = [key dataUsingEncoding:NSUTF8StringEncoding];
+
+    XORBytes([mutableData mutableBytes], [mutableData length], [keyData bytes], [keyData length]);
+    
+    return [[[NSString alloc] initWithData:mutableData encoding:NSUTF8StringEncoding] autorelease];
+}
 
 @end
 

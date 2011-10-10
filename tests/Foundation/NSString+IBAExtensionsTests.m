@@ -102,7 +102,7 @@
 
 // TODO: test ibaStringByEscapingForAsciiHTML;
 
--(void)testStringByUnescapingFromHTML
+- (void)testStringByUnescapingFromHTML
 {
     GHAssertEqualStrings([@"test" ibaStringByUnescapingFromHTML],
                          @"test",
@@ -151,6 +151,22 @@
                          @"should be HTML escaped");
 
     // TODO: more ascii characters
+}
+
+- (void)testObfuscateWithKey
+{
+    NSString *input = @"this string is what I want to obfuscate";
+    NSString *key = @"this is my key";
+    
+    NSData *obfuscated = [input ibaObfuscateWithKey:key];
+    
+    GHAssertNotNil(obfuscated, @"obfuscated string should not be nil");
+    
+    NSString *obfuscatedAsString = [[[NSString alloc] initWithData:obfuscated encoding:NSMacOSRomanStringEncoding] autorelease];
+    GHAssertFalse([input isEqualToString:obfuscatedAsString], @"input string should not equal obfuscated string");
+    
+    NSString *deobfuscated = [NSString ibaStringByDeobfuscateingData:obfuscated withKey:key];
+    GHAssertEqualStrings(input, deobfuscated, @"input and deobfuscated strings should be equal");
 }
 
 @end
