@@ -598,7 +598,7 @@ static int EscapeMapCompare(const void *ucharVoid, const void *mapVoid)
     return [NSData dataWithData:data];
 }
 
-+ (NSString *)ibaStringByDeobfuscateingData:(NSData *)data withKey:(NSString *)key
++ (NSString *)ibaStringByDeobfuscatingData:(NSData *)data withKey:(NSString *)key
 {
     NSMutableData *mutableData = [NSMutableData dataWithData:data];
     NSData *keyData = [key dataUsingEncoding:NSUTF8StringEncoding];

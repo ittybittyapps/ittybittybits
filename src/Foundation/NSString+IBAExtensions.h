@@ -42,6 +42,6 @@
 
 - (NSData *)ibaObfuscateWithKey:(NSString *)key;
 
-+ (NSString *)ibaStringByDeobfuscateingData:(NSData *)data withKey:(NSString *)key;
++ (NSString *)ibaStringByDeobfuscatingData:(NSData *)data withKey:(NSString *)key;
 
 @end

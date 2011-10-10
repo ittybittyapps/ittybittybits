@@ -165,7 +165,7 @@
     NSString *obfuscatedAsString = [[[NSString alloc] initWithData:obfuscated encoding:NSMacOSRomanStringEncoding] autorelease];
     GHAssertFalse([input isEqualToString:obfuscatedAsString], @"input string should not equal obfuscated string");
     
-    NSString *deobfuscated = [NSString ibaStringByDeobfuscateingData:obfuscated withKey:key];
+    NSString *deobfuscated = [NSString ibaStringByDeobfuscatingData:obfuscated withKey:key];
     GHAssertEqualStrings(input, deobfuscated, @"input and deobfuscated strings should be equal");
 }
 
