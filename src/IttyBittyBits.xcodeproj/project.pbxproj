@@ -314,6 +314,9 @@
 		A7F0A6BE13B46ED80009F601 /* NSArray+IBAExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = A7F0A6BC13B46ED80009F601 /* NSArray+IBAExtensions.m */; };
 		A7F836F1143D203D00196396 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7555E5D142067A8002E5E57 /* CoreGraphics.framework */; };
 		A7F836F3143D204B00196396 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7555E5B14206752002E5E57 /* QuartzCore.framework */; };
+		A7F83716143D5E7300196396 /* NSData+IBAExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = A7F83714143D5E7300196396 /* NSData+IBAExtensions.h */; };
+		A7F83717143D5E7300196396 /* NSData+IBAExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = A7F83715143D5E7300196396 /* NSData+IBAExtensions.m */; };
+		A7F8371B143D66B700196396 /* NSData+IBAExtensionsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A7F8371A143D66B700196396 /* NSData+IBAExtensionsTests.m */; };
 		A7FB6B5C137148DC0088C4CD /* IBACommon.h in Headers */ = {isa = PBXBuildFile; fileRef = A7FB6B5B137148DC0088C4CD /* IBACommon.h */; };
 /* End PBXBuildFile section */
 
@@ -660,6 +663,10 @@
 		A7F0A6B513B438820009F601 /* IBAAbstractCoreDataService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IBAAbstractCoreDataService.m; sourceTree = "<group>"; };
 		A7F0A6BB13B46ED80009F601 /* NSArray+IBAExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+IBAExtensions.h"; sourceTree = "<group>"; };
 		A7F0A6BC13B46ED80009F601 /* NSArray+IBAExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+IBAExtensions.m"; sourceTree = "<group>"; };
+		A7F83714143D5E7300196396 /* NSData+IBAExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+IBAExtensions.h"; sourceTree = "<group>"; };
+		A7F83715143D5E7300196396 /* NSData+IBAExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+IBAExtensions.m"; sourceTree = "<group>"; };
+		A7F83719143D66B700196396 /* NSData+IBAExtensionsTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+IBAExtensionsTests.h"; sourceTree = "<group>"; };
+		A7F8371A143D66B700196396 /* NSData+IBAExtensionsTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+IBAExtensionsTests.m"; sourceTree = "<group>"; };
 		A7FB6B5B137148DC0088C4CD /* IBACommon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IBACommon.h; path = Foundation/IBACommon.h; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
@@ -1068,20 +1075,22 @@
 		A79141621370DFE100209C96 /* Foundation */ = {
 			isa = PBXGroup;
 			children = (
-				A791416F13713EF800209C96 /* IBADebugTests.h */,
-				A791417013713EF800209C96 /* IBADebugTests.m */,
-				A79141631370E01300209C96 /* IBALoggerTests.h */,
-				A79141641370E01300209C96 /* IBALoggerTests.m */,
-				A707FD7D13779BCB0029FA76 /* IBAInputStreamLineReaderTests.h */,
-				A707FD7E13779BCB0029FA76 /* IBAInputStreamLineReaderTests.m */,
-				A7656EB51377DF3C002FB968 /* IBADelimitedTextFileReaderTests.h */,
-				A7656EB61377DF3C002FB968 /* IBADelimitedTextFileReaderTests.m */,
-				A7ACE49D140637C900CC2138 /* IBAStackTests.h */,
-				A7ACE49E140637C900CC2138 /* IBAStackTests.m */,
-				A780655F1404DCD60075FDA7 /* NSString+IBAExtensionsTests.h */,
-				A78065601404DCD60075FDA7 /* NSString+IBAExtensionsTests.m */,
 				A7335B6F1433F76900D9DE14 /* IBACommonTests.h */,
 				A7335B701433F76900D9DE14 /* IBACommonTests.m */,
+				A791416F13713EF800209C96 /* IBADebugTests.h */,
+				A791417013713EF800209C96 /* IBADebugTests.m */,
+				A7656EB51377DF3C002FB968 /* IBADelimitedTextFileReaderTests.h */,
+				A7656EB61377DF3C002FB968 /* IBADelimitedTextFileReaderTests.m */,
+				A707FD7D13779BCB0029FA76 /* IBAInputStreamLineReaderTests.h */,
+				A707FD7E13779BCB0029FA76 /* IBAInputStreamLineReaderTests.m */,
+				A79141631370E01300209C96 /* IBALoggerTests.h */,
+				A79141641370E01300209C96 /* IBALoggerTests.m */,
+				A7ACE49D140637C900CC2138 /* IBAStackTests.h */,
+				A7ACE49E140637C900CC2138 /* IBAStackTests.m */,
+				A7F83719143D66B700196396 /* NSData+IBAExtensionsTests.h */,
+				A7F8371A143D66B700196396 /* NSData+IBAExtensionsTests.m */,
+				A780655F1404DCD60075FDA7 /* NSString+IBAExtensionsTests.h */,
+				A78065601404DCD60075FDA7 /* NSString+IBAExtensionsTests.m */,
 			);
 			path = Foundation;
 			sourceTree = "<group>";
@@ -1286,6 +1295,8 @@
 				A7014AF613718C0300BE32D2 /* NSTimer+IBABlocks.m */,
 				A79B838114398E790002C8D5 /* NSURLRequest+IBAExtensions.h */,
 				A79B838214398E790002C8D5 /* NSURLRequest+IBAExtensions.m */,
+				A7F83714143D5E7300196396 /* NSData+IBAExtensions.h */,
+				A7F83715143D5E7300196396 /* NSData+IBAExtensions.m */,
 			);
 			path = Foundation;
 			sourceTree = "<group>";
@@ -1418,6 +1429,7 @@
 				A7335B711433F76900D9DE14 /* IBACommonTests.h in Headers */,
 				A79B837E1439843F0002C8D5 /* NSHTTPURLResponse+IBAExtensions.h in Headers */,
 				A79B838314398E790002C8D5 /* NSURLRequest+IBAExtensions.h in Headers */,
+				A7F83716143D5E7300196396 /* NSData+IBAExtensions.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1749,6 +1761,7 @@
 				A7E8BD9B1434532100DE7861 /* IBACoreLocation.m in Sources */,
 				A79B837F1439843F0002C8D5 /* NSHTTPURLResponse+IBAExtensions.m in Sources */,
 				A79B838414398E790002C8D5 /* NSURLRequest+IBAExtensions.m in Sources */,
+				A7F83717143D5E7300196396 /* NSData+IBAExtensions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1767,6 +1780,7 @@
 				A7B9E5B31426D3FE00DEA745 /* IBATableViewModelTests.m in Sources */,
 				A7B9E5B61426D45900DEA745 /* IBATableViewSectionModelTests.m in Sources */,
 				A7335B741433F77200D9DE14 /* IBACommonTests.m in Sources */,
+				A7F8371B143D66B700196396 /* NSData+IBAExtensionsTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

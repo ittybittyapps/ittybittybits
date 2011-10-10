@@ -38,6 +38,7 @@
 
 // Extension categories.
 #import "NSArray+IBAExtensions.h"
+#import "NSData+IBAExtensions.h"
 #import "NSDate+IBAExtensions.h"
 #import "NSDictionary+IBAExtensions.h"
 #import "NSError+IBAExtensions.h"
