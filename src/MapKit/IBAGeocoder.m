@@ -121,7 +121,7 @@ IBA_SYNTHESIZE(delegate, responseData, connection, request, requestURL, cancelle
  */
 - (void)dealloc 
 {
-    IBA_ASSIGN_PROPERTY(delegate, nil);
+    IBA_NIL_PROPERTY(delegate);
     IBA_RELEASE_PROPERTY(requestURL);
     IBA_RELEASE_PROPERTY(request);
     IBA_RELEASE_PROPERTY(responseData);
