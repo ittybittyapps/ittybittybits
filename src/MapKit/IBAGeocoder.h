@@ -44,8 +44,18 @@
 #import <AddressBook/AddressBook.h>
 #import <CoreLocation/CoreLocation.h>
 #import <MapKit/MapKit.h>
+#import "../Foundation/IBAFoundation.h"
 
 @protocol IBAGeocoderDelegate;
+
+IBA_EXTERN NSString *kIBAGeocoderErrorDomain;
+
+typedef enum {
+    kIBAGeocoderErrorCodeUnknown = 9000,
+    kIBAGeocoderErrorCodeOverQueryLimit = 9001,
+    kIBAGeocoderErrorCodeRequestDenied = 9002,
+    kIBAGeocoderErrorCodeInvalidRequest = 9003
+} IBAGeocoderErrorCode;
 
 @interface IBAGeocoder : NSObject {
 

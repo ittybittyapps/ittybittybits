@@ -49,18 +49,9 @@
 
 static NSString *kDefaultGeocoderURL = @"http://maps.googleapis.com/maps/api/geocode/json?sensor=true&";
 
-static NSString *kIBAGeocoderErrorDomain = @"IBAGeocoderErrorDomain";
-
-typedef enum {
-    kIBAGeocoderErrorCodeUnknown = 9000,
-    kIBAGeocoderErrorCodeOverQueryLimit = 9001,
-    kIBAGeocoderErrorCodeRequestDenied = 9002,
-    kIBAGeocoderErrorCodeInvalidRequest = 9003
-} IBAGeocoderErrorCode;
+NSString *kIBAGeocoderErrorDomain = @"IBAGeocoderErrorDomain";
 
 @interface IBAGeocoderError : NSError
-{
-}
 
 + (BOOL) requestStatusIsError:(NSString *)status;
 + (id)errorWithStatus:(NSString *)status;
