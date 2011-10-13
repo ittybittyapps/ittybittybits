@@ -18,6 +18,7 @@
 //  limitations under the License.
 
 #import <Foundation/Foundation.h>
+#import <MapKit/MapKit.h>
 
 /*!
  \brief     Identifies the accuracy of location that an IBAExtendedPlacemark has.
@@ -43,8 +44,6 @@ typedef enum
  \brief     Extension to MKPlacemark that provides additional information properties and is serializable via NSCoding.
  */
 @interface IBAExtendedPlacemark : MKPlacemark<NSCoding>
-{
-}
 
 @property (nonatomic, assign) IBAExtendedPlacemarkLocationType locationType;
 

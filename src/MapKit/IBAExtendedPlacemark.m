@@ -20,6 +20,7 @@
 #import "IBAExtendedPlacemark.h"
 #import "../Foundation/IBACommon.h"
 #import <AddressBook/AddressBook.h>
+#import <AddressBookUI/AddressBookUI.h>
 
 static NSString *kCoordinateLatitudeEncoderKey = @"coordinate.latitude";
 static NSString *kCoordinateLongitudeEncoderKey = @"cooridinate.longitude";
@@ -155,6 +156,12 @@ IBA_SYNTHESIZE(locationType, bounds, viewport);
     MKMapRect rect = MKMapRectMake(northeastPoint.y, southwestPoint.x, northeastPoint.x - southwestPoint.x, southwestPoint.y - northeastPoint.y);
     
     return MKCoordinateRegionForMapRect(rect);
+}
+
+- (NSString *)description
+{
+    NSString *address = [[ABCreateStringWithAddressDictionary(self.addressDictionary, YES) autorelease] stringByReplacingOccurrencesOfString:@"\n" withString:@", "];
+    return [NSString stringWithFormat:@"<%@: %@ @ [%f, %f]>", self.class, address, self.coordinate.latitude, self.coordinate.longitude];
 }
 
 @end
