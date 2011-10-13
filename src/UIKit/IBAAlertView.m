@@ -1,7 +1,7 @@
 //  Copyright (c) 2011, Kevin O'Neill
 //  All rights reserved.
 //
-//  Modified by Jason Morrissey
+//  Modified by Jason Morrissey & Oliver Jones
 //  Original Source: UBAlertView at https://github.com/kevinoneill/Useful-Bits
 //
 //  Redistribution and use in source and binary forms, with or without
@@ -33,9 +33,14 @@
 #import "IBACommon.h"
 
 @interface IBAAlertView()
--(void)alertViewCancel:(UIAlertView *)alertView;
--(id)initWithTitle:(NSString*)title message:(NSString*)msg;
--(void)setAlertViewCancelBlock:(void(^)(IBAAlertView*))block;
+
+- (void)alertViewCancel:(UIAlertView *)alertView;
+- (id)initWithTitle:(NSString*)title message:(NSString*)msg;
+- (void)setAlertViewCancelBlock:(void(^)(IBAAlertView*))block;
+
+@property (nonatomic, copy) IBAlertViewCancelActionBlock cancel;
+@property (nonatomic, retain) NSMutableArray *buttonBlocks;
+
 @end
 
 @implementation IBAAlertView
@@ -48,7 +53,7 @@
 + (IBAAlertView *)alertViewWithTitle:(NSString *)title message:(NSString *)message cancelButtonTitle:(NSString *)cancelButtonTitle
 {
     IBAAlertView *alertView = [[[IBAAlertView alloc] initWithTitle:title message:message] autorelease];
-
+    
     if (cancelButtonTitle)
     {
         [alertView addButtonWithTitle:cancelButtonTitle block:nil];
@@ -57,59 +62,68 @@
     return alertView;
 }
 
+IBA_SYNTHESIZE(cancel, buttonBlocks);
+
 - (id)initWithTitle:(NSString*)title message:(NSString*)msg
 {
-  if((self = [super initWithTitle:title message:msg delegate:nil cancelButtonTitle:nil otherButtonTitles:nil]))
-  {
-    [self setDelegate:self];
-    buttonBlocks_ = [[NSMutableArray alloc] init];
-  }
-  
-  return self;
+    if ((self = [super initWithTitle:title message:msg delegate:nil cancelButtonTitle:nil otherButtonTitles:nil]))
+    {
+        IBA_RETAIN_PROPERTY(buttonBlocks, [NSMutableArray array]);
+        self.delegate = self;
+    }
+    
+    return self;
 }
 
 - (void)dealloc
 {
-  [cancel_ release];
-  [buttonBlocks_ release];
-  
-  [super dealloc];
+    IBA_RELEASE_PROPERTY(cancel);
+    IBA_RELEASE_PROPERTY(buttonBlocks);
+    
+    [super dealloc];
 }
 
--(void)addButtonWithTitle:(NSString*)title block:(void(^)(IBAAlertView*, NSInteger))block
+- (void)addButtonWithTitle:(NSString*)title block:(IBAlertViewActionBlock)block
 {
-  [self addButtonWithTitle:title];
-  if (!block)
-  {
-      block = ^(IBAAlertView * IBA_UNUSED alertView, NSInteger IBA_UNUSED i){};
-  }
-  [buttonBlocks_ addObject:[[block copy] autorelease]];
+    [self addButtonWithTitle:title];
+    if (block == nil)
+    {
+        block = ^(IBAAlertView * IBA_UNUSED alertView, NSInteger IBA_UNUSED i){};
+    }
+    
+    [self.buttonBlocks addObject:[[block copy] autorelease]];
 }
 
--(void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
 {
-  ((void(^)(IBAAlertView*, NSInteger))[buttonBlocks_ objectAtIndex:IBANSIntegerToNSUInteger(buttonIndex)])((IBAAlertView*)alertView, buttonIndex);
+    if (buttonIndex > 0) 
+    {
+        ((IBAlertViewActionBlock)[self.buttonBlocks objectAtIndex:IBANSIntegerToNSUInteger(buttonIndex)])((IBAAlertView*)alertView, buttonIndex);
+    }
+    else
+    {
+        IBA_RUN_BLOCK(self.cancel, (IBAAlertView*)alertView);
+    }
 }
 
--(void)alertViewCancel:(UIAlertView *)alertView
+- (void)alertViewCancel:(UIAlertView *)alertView
 {
-  if(nil != cancel_)
-  {
-    cancel_((IBAAlertView*)alertView);
-  }
-  else
-  {
-    [self dismissWithClickedButtonIndex:self.cancelButtonIndex animated:NO];
-  }
+    if (self.cancel)
+    {
+        self.cancel((IBAAlertView*)alertView);
+    }
+    else
+    {
+        [self dismissWithClickedButtonIndex:self.cancelButtonIndex animated:YES];
+    }
 }
 
--(void)setAlertViewCancelBlock:(void(^)(IBAAlertView*))block
+- (void)setAlertViewCancelBlock:(IBAlertViewCancelActionBlock)block
 {
-  if (block != cancel_)
-  {
-    [cancel_ release];
-    cancel_ = [block copy];
-  }
+    if (block != self.cancel)
+    {
+        self.cancel = block;
+    }
 }
 
 @end

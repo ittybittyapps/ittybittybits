@@ -33,16 +33,15 @@
 
 @class IBAAlertView;
 
+typedef void (^IBAlertViewActionBlock)(IBAAlertView* alertView, NSInteger buttonIndex);
+typedef void (^IBAlertViewCancelActionBlock)(IBAAlertView* alertView);
+
 @interface IBAAlertView : UIAlertView<UIAlertViewDelegate>
-{
-  void(^cancel_)(IBAAlertView* alertView);
-  NSMutableArray* buttonBlocks_;
-}
 
 + (IBAAlertView *)alertViewWithTitle:(NSString *)title message:(NSString *)message;
-
 + (IBAAlertView *)alertViewWithTitle:(NSString *)title message:(NSString *)message cancelButtonTitle:(NSString *)cancelButtonTitle;
 
--(void)addButtonWithTitle:(NSString*)title block:(void(^)(IBAAlertView*, NSInteger))block;
+- (void)addButtonWithTitle:(NSString*)title block:(IBAlertViewActionBlock)block;
+- (void)setAlertViewCancelBlock:(IBAlertViewCancelActionBlock)block;
 
 @end
