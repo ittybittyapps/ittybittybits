@@ -21,7 +21,7 @@
 #import "UIAlertView+IBAExtensions.h"
 #import "../Foundation/IBACommon.h"
 
-@implementation UIAlertView (IBAHelpers)
+@implementation UIAlertView (IBAExtensions)
 
 /*!
  \brief     Show a simple modal alert with a \a title, \a message, and OK button.

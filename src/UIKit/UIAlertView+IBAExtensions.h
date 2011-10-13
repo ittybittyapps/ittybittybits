@@ -21,7 +21,7 @@
 #import <Foundation/Foundation.h>
 
 
-@interface UIAlertView (IBAHelpers)
+@interface UIAlertView (IBAExtensions)
 
 + (void)ibaShowSimpleAlertWithTitle:(NSString *)title message:(NSString *)message;
 
