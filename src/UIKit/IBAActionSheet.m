@@ -84,7 +84,7 @@ IBA_SYNTHESIZE(actions);
  \param     blk         The block to invoke when the action button is pressed.
  \return    The index of the new button. Button indices start at 0 and increase in the order they are added.
  */
-- (NSInteger)addButtonWithTitle:(NSString *)title block:(IBAActionSheetActionBlock) blk
+- (NSInteger)addButtonWithTitle:(NSString *)title block:(IBAActionSheetActionBlock)blk
 {
     if (self.actions == nil)
     {
