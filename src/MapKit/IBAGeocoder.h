@@ -69,6 +69,7 @@ typedef enum {
 - (id)initWithRequestParams:(NSString *)params;
 
 - (void)start;
+- (void)cancel;
 
 @end
 
@@ -76,6 +77,10 @@ typedef enum {
 
 - (void)geocoder:(IBAGeocoder *)geocoder didFindPlacemarks:(NSArray *)placemarks;
 - (void)geocoder:(IBAGeocoder *)geocoder didFailWithError:(NSError *)error;
+
+@optional
+- (void)geocoderWillBeginFindingPlacemarks:(IBAGeocoder *)geocoder;
+- (void)geocoderWasCancelled:(IBAGeocoder *)geocoder;
 
 @end
 
