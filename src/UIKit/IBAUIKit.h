@@ -22,6 +22,7 @@
 #import "IBAFlipButton.h"
 #import "IBAGradientButton.h"
 #import "IBANavigationBar.h"
+#import "IBANavigationController.h"
 #import "IBATableViewAccessory.h"
 #import "IBATableViewSectionModel.h"
 #import "IBATableViewModel.h"

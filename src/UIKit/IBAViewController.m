@@ -18,6 +18,7 @@
 //  limitations under the License.
 
 #import "IBAViewController.h"
+#import "../Foundation/IBAFoundation.h"
 
 @implementation IBAViewController
 
@@ -48,6 +49,8 @@
     return nil;
 }
 
+IBA_SYNTHESIZE(delegate);
+
 /*!
  \brief     Subclasses should override this method to release their views by clearing outlets that point to views in their view heirarchy (not by clearing self.view)
  \details   This method is called from both dealloc and viewDidUnload.
@@ -61,6 +64,7 @@
  */
 - (void)dealloc
 {
+    IBA_NIL_PROPERTY(delegate);
     [self releaseViews];
     [super dealloc];
 }
@@ -73,6 +77,29 @@
 {
     [self releaseViews];
     [super viewDidUnload];
+}
+
+- (void)presentModalViewController:(UIViewController *)modalViewController animated:(BOOL)animated
+{
+    if ([self.delegate respondsToSelector:@selector(viewController:willPresentModalViewController:animated:)])
+    {
+        [self.delegate viewController:self willPresentModalViewController:modalViewController animated:animated];
+    }
+    
+    [super presentModalViewController:modalViewController animated:animated];
+}
+
+- (void)dismissModalViewControllerAnimated:(BOOL)animated
+{
+    UIViewController *modalViewController = [self.modalViewController retain];
+    [super dismissModalViewControllerAnimated:animated];
+    
+    if ([self.delegate respondsToSelector:@selector(viewController:didDismissModalViewController:animated:)])
+    {
+        [self.delegate viewController:self didDismissModalViewController:modalViewController animated:animated];
+    }
+    
+    [modalViewController release];
 }
 
 @end

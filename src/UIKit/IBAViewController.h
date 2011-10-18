@@ -19,6 +19,23 @@
 
 #import <UIKit/UIKit.h>
 
+@class IBAViewController;
+
+@protocol IBAViewControllerDelegate <NSObject>
+
+@optional
+/*!
+ \brief     Called when the navigation controller presents a new view controller via presentModalViewController.
+ */
+- (void)viewController:(UIViewController *)viewController willPresentModalViewController:(UIViewController *)modalViewController animated:(BOOL)animated;
+
+/*!
+ \brief     Called when the navigation controller dismisses a new view controller via dismissModalViewController.
+ */
+- (void)viewController:(UIViewController *)viewController didDismissModalViewController:(UIViewController *)modalViewController animated:(BOOL)animated;
+
+@end
+
 /*!
  \brief     A simple wrapper around UIViewController that provides some additional conveniences.  
  \details   This class is not meant to be instantiated directly, you should subclass it to define your own view controllers.
@@ -28,6 +45,8 @@
 + (id)controller;
 + (NSString *)nibName;
 + (NSBundle *)bundle;
+
+@property (nonatomic, assign) id<IBAViewControllerDelegate> delegate;
 
 - (void)releaseViews;
 
