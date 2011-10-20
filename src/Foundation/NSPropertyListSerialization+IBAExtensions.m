@@ -40,14 +40,11 @@ NSString * const IBAPropertyListSerializationErrorDomain = @"com.ittybittyapps.e
                                                           mutabilityOption:NSPropertyListImmutable
                                                                     format:&format
                                                           errorDescription:&errorDesc];
-    if (temp == nil) 
+    if (temp == nil && error)
     {
-        if (error)
-        {
-            *error = [NSError ibaErrorWithDomain:IBAPropertyListSerializationErrorDomain 
-                                            code:IBAPropertyListSerializationErrorLoadFailed 
-                            localizedDescription:errorDesc];
-        }
+        *error = [NSError ibaErrorWithDomain:IBAPropertyListSerializationErrorDomain 
+                                        code:IBAPropertyListSerializationErrorLoadFailed 
+                        localizedDescription:errorDesc];
     }
     
     IBA_RELEASE(errorDesc);

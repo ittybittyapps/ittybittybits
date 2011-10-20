@@ -30,7 +30,7 @@
 {
     NSError *error = nil;
     NSUInteger count = [self countForFetchRequest:request error:&error];
-    if (error != nil && errorHandler != nil)
+    if (count == NSNotFound && errorHandler)
     {
         errorHandler(error);
     }
@@ -42,7 +42,7 @@
 {
     NSError *error = nil;
     NSArray *results = [self executeFetchRequest:request error:&error];
-    if (error != nil && errorHandler != nil)
+    if (results == nil && errorHandler)
     {
         errorHandler(error);
     }
@@ -71,7 +71,7 @@
     
     BOOL result = [self save:&error];
     
-    if (error != nil && errorHandler)
+    if (result == NO && errorHandler)
     {
         errorHandler(error);
     }
