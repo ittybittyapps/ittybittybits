@@ -21,6 +21,9 @@
 #import "../Foundation/IBAFoundation.h"
 
 @implementation IBAViewController
+{
+    IBAStack *toolbarItemsStack;
+}
 
 /*!
  \brief     Basic factory method for IBAViewController subclasses.
@@ -51,6 +54,16 @@
 
 IBA_SYNTHESIZE(delegate);
 
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+{
+    if ((self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil]))
+    {
+        toolbarItemsStack = [[IBAStack alloc] init];
+    }
+    
+    return self;
+}
+
 /*!
  \brief     Subclasses should override this method to release their views by clearing outlets that point to views in their view heirarchy (not by clearing self.view)
  \details   This method is called from both dealloc and viewDidUnload.
@@ -65,7 +78,11 @@ IBA_SYNTHESIZE(delegate);
 - (void)dealloc
 {
     IBA_NIL_PROPERTY(delegate);
+
     [self releaseViews];
+    
+    IBA_RELEASE(toolbarItemsStack);
+    
     [super dealloc];
 }
 
@@ -77,6 +94,36 @@ IBA_SYNTHESIZE(delegate);
 {
     [self releaseViews];
     [super viewDidUnload];
+}
+
+/*!
+ \brief     Pushes the current toolbar items (if any) into the toolbar item stack and replaces the current toolbar items with the specified \a items array.
+ \details   The pushed items should be restored via popToolbarItemsAnimated:.
+ \sa        popToolbarItemsAnimated:
+ */
+- (void)pushToolbarItems:(NSArray *)items animated:(BOOL)animated
+{
+    if (self.toolbarItems)
+    {
+        [toolbarItemsStack pushObject:self.toolbarItems];
+    }
+    
+    [self setToolbarItems:items animated:animated];
+}
+
+/*!
+ \brief     Discards the current toolbar items and restores the toolbar items previously pushed by pushToolbarItems:animated:.
+ \sa        pushToolbarItems:animated:
+ */
+- (void)popToolbarItemsAnimated:(BOOL)animated
+{
+    NSArray *items = nil;
+    if ([toolbarItemsStack isEmpty] == NO)
+    {
+        items = [toolbarItemsStack popObject];
+    }
+    
+    [self setToolbarItems:items animated:animated];
 }
 
 - (void)presentModalViewController:(UIViewController *)modalViewController animated:(BOOL)animated

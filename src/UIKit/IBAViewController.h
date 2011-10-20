@@ -50,4 +50,7 @@
 
 - (void)releaseViews;
 
+- (void)pushToolbarItems:(NSArray *)items animated:(BOOL)animated;
+- (void)popToolbarItemsAnimated:(BOOL)animated;
+
 @end
