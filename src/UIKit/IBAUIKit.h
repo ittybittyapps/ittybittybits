@@ -20,6 +20,7 @@
 #import "IBAActionSheet.h"
 #import "IBACarouselView.h"
 #import "IBAFlipButton.h"
+#import "IBAFlipViewController.h"
 #import "IBAGradientButton.h"
 #import "IBANavigationBar.h"
 #import "IBANavigationController.h"

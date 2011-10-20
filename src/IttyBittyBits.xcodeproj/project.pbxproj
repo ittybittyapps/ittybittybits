@@ -174,6 +174,8 @@
 		A76992C914306768002A9BEE /* IBADispatch.h in Headers */ = {isa = PBXBuildFile; fileRef = A76992C814306768002A9BEE /* IBADispatch.h */; };
 		A76C84DA13C1A13D00D2A866 /* IBATableViewAccessory.h in Headers */ = {isa = PBXBuildFile; fileRef = A76C84D813C1A13D00D2A866 /* IBATableViewAccessory.h */; };
 		A76C84DB13C1A13D00D2A866 /* IBATableViewAccessory.m in Sources */ = {isa = PBXBuildFile; fileRef = A76C84D913C1A13D00D2A866 /* IBATableViewAccessory.m */; };
+		A76C9BDC144FBA79006623E6 /* IBAFlipViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = A76C9BDA144FBA79006623E6 /* IBAFlipViewController.h */; };
+		A76C9BDD144FBA79006623E6 /* IBAFlipViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A76C9BDB144FBA79006623E6 /* IBAFlipViewController.m */; };
 		A7708F13140DBD1B005FDA05 /* libIttyBittyBits.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A7B4DAB91367991200543D61 /* libIttyBittyBits.a */; };
 		A7708F17140DC29C005FDA05 /* back@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A7708F15140DC29C005FDA05 /* back@2x.png */; };
 		A7708F18140DC29C005FDA05 /* front@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A7708F16140DC29C005FDA05 /* front@2x.png */; };
@@ -529,6 +531,8 @@
 		A76992C814306768002A9BEE /* IBADispatch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBADispatch.h; sourceTree = "<group>"; };
 		A76C84D813C1A13D00D2A866 /* IBATableViewAccessory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBATableViewAccessory.h; sourceTree = "<group>"; };
 		A76C84D913C1A13D00D2A866 /* IBATableViewAccessory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IBATableViewAccessory.m; sourceTree = "<group>"; };
+		A76C9BDA144FBA79006623E6 /* IBAFlipViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBAFlipViewController.h; sourceTree = "<group>"; };
+		A76C9BDB144FBA79006623E6 /* IBAFlipViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IBAFlipViewController.m; sourceTree = "<group>"; };
 		A7708F15140DC29C005FDA05 /* back@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "back@2x.png"; sourceTree = "<group>"; };
 		A7708F16140DC29C005FDA05 /* front@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "front@2x.png"; sourceTree = "<group>"; };
 		A7708F19140DC2C0005FDA05 /* back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = back.png; sourceTree = "<group>"; };
@@ -1032,6 +1036,8 @@
 				A7C05861140C9F7D00339F5B /* IBACarouselView.m */,
 				A7C05863140CA04000339F5B /* IBAFlipButton.h */,
 				A7C05864140CA04000339F5B /* IBAFlipButton.m */,
+				A76C9BDA144FBA79006623E6 /* IBAFlipViewController.h */,
+				A76C9BDB144FBA79006623E6 /* IBAFlipViewController.m */,
 				A7C2FB9613B3073F00F774CA /* IBAGradientButton.h */,
 				A7C2FB9713B3073F00F774CA /* IBAGradientButton.m */,
 				A7422E6614012A3600D9C54F /* IBANavigationBar.h */,
@@ -1437,6 +1443,7 @@
 				A79B838314398E790002C8D5 /* NSURLRequest+IBAExtensions.h in Headers */,
 				A7F83716143D5E7300196396 /* NSData+IBAExtensions.h in Headers */,
 				A7127A41144CF42B00392A99 /* IBANavigationController.h in Headers */,
+				A76C9BDC144FBA79006623E6 /* IBAFlipViewController.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1770,6 +1777,7 @@
 				A79B838414398E790002C8D5 /* NSURLRequest+IBAExtensions.m in Sources */,
 				A7F83717143D5E7300196396 /* NSData+IBAExtensions.m in Sources */,
 				A7127A42144CF42B00392A99 /* IBANavigationController.m in Sources */,
+				A76C9BDD144FBA79006623E6 /* IBAFlipViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
