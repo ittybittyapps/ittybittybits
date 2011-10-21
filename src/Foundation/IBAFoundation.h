@@ -20,6 +20,7 @@
 #import "IBACommon.h"
 #import "IBABinding.h"
 #import "IBABindingManager.h"
+#import "IBACancelToken.h"
 #import "IBADebug.h"
 #import "IBAEasing.h"
 #import "IBADelimitedTextFileReader.h"

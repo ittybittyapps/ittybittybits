@@ -299,6 +299,8 @@
 		A7C2FBA213B3087200F774CA /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7B4DACC13679F5E00543D61 /* UIKit.framework */; };
 		A7CD3F8C1420356C0022F7AD /* NSIndexPath+UITableView+IBAExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = A7CD3F8A1420356C0022F7AD /* NSIndexPath+UITableView+IBAExtensions.h */; };
 		A7CD3F8D1420356C0022F7AD /* NSIndexPath+UITableView+IBAExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = A7CD3F8B1420356C0022F7AD /* NSIndexPath+UITableView+IBAExtensions.m */; };
+		A7D35F4A1451553F004AE3EF /* IBACancelToken.h in Headers */ = {isa = PBXBuildFile; fileRef = A7D35F481451553F004AE3EF /* IBACancelToken.h */; };
+		A7D35F4B1451553F004AE3EF /* IBACancelToken.m in Sources */ = {isa = PBXBuildFile; fileRef = A7D35F491451553F004AE3EF /* IBACancelToken.m */; };
 		A7D58C541378BF440041BBEB /* NSString+IBAExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = A7D58C521378BF440041BBEB /* NSString+IBAExtensions.h */; };
 		A7D58C551378BF440041BBEB /* NSString+IBAExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = A7D58C531378BF440041BBEB /* NSString+IBAExtensions.m */; };
 		A7D58C591378CFAA0041BBEB /* NSArray+IBAWhitespace.h in Headers */ = {isa = PBXBuildFile; fileRef = A7D58C571378CFA80041BBEB /* NSArray+IBAWhitespace.h */; };
@@ -654,6 +656,8 @@
 		A7C2FB9713B3073F00F774CA /* IBAGradientButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IBAGradientButton.m; sourceTree = "<group>"; };
 		A7CD3F8A1420356C0022F7AD /* NSIndexPath+UITableView+IBAExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSIndexPath+UITableView+IBAExtensions.h"; sourceTree = "<group>"; };
 		A7CD3F8B1420356C0022F7AD /* NSIndexPath+UITableView+IBAExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSIndexPath+UITableView+IBAExtensions.m"; sourceTree = "<group>"; };
+		A7D35F481451553F004AE3EF /* IBACancelToken.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBACancelToken.h; sourceTree = "<group>"; };
+		A7D35F491451553F004AE3EF /* IBACancelToken.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IBACancelToken.m; sourceTree = "<group>"; };
 		A7D58C521378BF440041BBEB /* NSString+IBAExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString+IBAExtensions.h"; path = "Foundation/NSString+IBAExtensions.h"; sourceTree = SOURCE_ROOT; };
 		A7D58C531378BF440041BBEB /* NSString+IBAExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+IBAExtensions.m"; path = "Foundation/NSString+IBAExtensions.m"; sourceTree = SOURCE_ROOT; };
 		A7D58C571378CFA80041BBEB /* NSArray+IBAWhitespace.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSArray+IBAWhitespace.h"; path = "Foundation/NSArray+IBAWhitespace.h"; sourceTree = SOURCE_ROOT; };
@@ -1242,6 +1246,8 @@
 				A78E41C513DCFB2F0042FF9E /* IBABinding.m */,
 				A78E41CA13DD04280042FF9E /* IBABindingManager.h */,
 				A78E41CB13DD04280042FF9E /* IBABindingManager.m */,
+				A7D35F481451553F004AE3EF /* IBACancelToken.h */,
+				A7D35F491451553F004AE3EF /* IBACancelToken.m */,
 				A7B4DB0D1367C5F900543D61 /* IBADebug.h */,
 				A791416D1371370A00209C96 /* IBADebug.m */,
 				A707FD72137761570029FA76 /* IBADelimitedTextFileReader.h */,
@@ -1444,6 +1450,7 @@
 				A7F83716143D5E7300196396 /* NSData+IBAExtensions.h in Headers */,
 				A7127A41144CF42B00392A99 /* IBANavigationController.h in Headers */,
 				A76C9BDC144FBA79006623E6 /* IBAFlipViewController.h in Headers */,
+				A7D35F4A1451553F004AE3EF /* IBACancelToken.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1778,6 +1785,7 @@
 				A7F83717143D5E7300196396 /* NSData+IBAExtensions.m in Sources */,
 				A7127A42144CF42B00392A99 /* IBANavigationController.m in Sources */,
 				A76C9BDD144FBA79006623E6 /* IBAFlipViewController.m in Sources */,
+				A7D35F4B1451553F004AE3EF /* IBACancelToken.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
