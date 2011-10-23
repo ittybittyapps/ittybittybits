@@ -38,7 +38,9 @@ IBA_SYNTHESIZE(flipped,
     
     self.frontViewCoordinator.view.frame = self.view.bounds;
     self.backViewCoordinator.view.frame = self.view.bounds;
-    [self.view addSubview:self.frontViewCoordinator.view];
+    
+    id<IBAFlipViewSideProtocol> frontFacingCoordinator = (self.flipped) ? self.backViewCoordinator : self.frontViewCoordinator;
+    [self.view addSubview:frontFacingCoordinator.view];
 }
 
 #pragma mark - View Management
