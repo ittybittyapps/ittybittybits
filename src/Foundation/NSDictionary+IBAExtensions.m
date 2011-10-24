@@ -26,7 +26,7 @@
 /*!
  \brief     Returns the value associated with a given \a key; or \a defaultValue if no value is associated with the given \a key.
  */
-- (id)ibaObjectForKey:(id)key default:(id)defaultValue
+- (id)ibaObjectForKey:(id)key withDefault:(id)defaultValue
 {
     id o = [self objectForKey:key];
     return o != nil ? o : defaultValue;   

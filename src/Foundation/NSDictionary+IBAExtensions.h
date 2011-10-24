@@ -21,7 +21,7 @@
 
 @interface NSDictionary (IBAExtensions)
 
-- (id)ibaObjectForKey:(id)key default:(id)defaultValue;
+- (id)ibaObjectForKey:(id)key withDefault:(id)defaultValue;
 - (NSString *)ibaStringForKey:(id)key;
 - (id)ibaObjectForUIntegerKey:(NSUInteger)key;
 - (id)ibaObjectForIntegerKey:(NSInteger)key;
