@@ -31,9 +31,10 @@
 @interface IBAFlipViewController : IBAViewController
 
 IBA_PROPERTY(assign, BOOL flipped);
-
 IBA_PROPERTY_STRONG(id<IBAFlipViewSideProtocol> frontViewCoordinator,
                     id<IBAFlipViewSideProtocol> backViewCoordinator);
+IBA_PROPERTY(copy, IBAAction animateBlockDuringFlip);
+
 
 - (void)switchViews;
 

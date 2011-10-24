@@ -23,12 +23,14 @@
 
 IBA_SYNTHESIZE(flipped,
                frontViewCoordinator,
-               backViewCoordinator);
+               backViewCoordinator,
+               animateBlockDuringFlip);
 
 - (void)dealloc
 {
     IBA_RELEASE_PROPERTY(frontViewCoordinator,
-                         backViewCoordinator);
+                         backViewCoordinator,
+                         animateBlockDuringFlip);
     [super dealloc];
 }
 
@@ -83,16 +85,15 @@ IBA_SYNTHESIZE(flipped,
     if ([backFacingCoordinator respondsToSelector:@selector(flipSideWillAppear)])
         [backFacingCoordinator flipSideWillAppear];
     
-    [UIView transitionFromView:frontFacingCoordinator.view
-                        toView:backFacingCoordinator.view
-                      duration:0.75
-                       options:animationOptions
-                    completion:^(BOOL IBA_UNUSED finished){
-                        
-                        if ([backFacingCoordinator respondsToSelector:@selector(flipSideDidAppear)])
-                            [backFacingCoordinator flipSideDidAppear];
-                        
-                    }];
+    IBA_BLOCK_WEAK IBAFlipViewController *weakSelf = self;
+    [UIView transitionWithView:self.view duration:0.75 options:animationOptions animations:^{
+        [frontFacingCoordinator.view removeFromSuperview];
+        [weakSelf.view addSubview:backFacingCoordinator.view];
+        IBA_RUN_BLOCK(weakSelf.animateBlockDuringFlip);
+    } completion:^(BOOL IBA_UNUSED finished) {
+        if ([backFacingCoordinator respondsToSelector:@selector(flipSideDidAppear)])
+            [backFacingCoordinator flipSideDidAppear];
+    }];
     
     self.flipped = !self.flipped;
 }
