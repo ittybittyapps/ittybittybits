@@ -25,27 +25,30 @@
 #import <stdarg.h>
 
 @implementation IBALogger
+{
+    dispatch_queue_t logQueue;
+    aslmsg aslMsg;
+    aslclient aslClient;
+    NSMutableDictionary* additionalFiles;
+}
 
 IBA_SYNTHESIZE_SINGLETON_FOR_CLASS(IBALogger, sharedLogger)
 
 @synthesize facility;
 @synthesize name;
 
-/////////////////////////////////////////////////////////////////////////////////////////////////
 - (id)init
 {
     return [self initWithName:[[NSBundle mainBundle] bundleIdentifier]
                      facility:@"com.ittybittyapps.debug"];
 }
 
-/////////////////////////////////////////////////////////////////////////////////////////////////
 - (id)initWithFacility:(NSString *) aFacility
 {
     return [self initWithName:[[NSBundle mainBundle] bundleIdentifier] 
                      facility:aFacility];
 }
 
-/////////////////////////////////////////////////////////////////////////////////////////////////
 - (id)initWithName:(NSString *)aName facility:(NSString *)aFacility
 {
     if ((self = [super init]))
@@ -68,7 +71,6 @@ IBA_SYNTHESIZE_SINGLETON_FOR_CLASS(IBALogger, sharedLogger)
     return self;
 }
 
-/////////////////////////////////////////////////////////////////////////////////////////////////
 - (void)dealloc
 {
     dispatch_sync(logQueue, ^{        
@@ -85,7 +87,16 @@ IBA_SYNTHESIZE_SINGLETON_FOR_CLASS(IBALogger, sharedLogger)
     [super dealloc];
 }
 
-/////////////////////////////////////////////////////////////////////////////////////////////////
+- (NSInteger)setFilter:(NSInteger)filter
+{
+    __block NSInteger previousValue = 0;
+    dispatch_sync(logQueue, ^{
+        previousValue = asl_set_filter(aslClient, filter);
+    });
+    
+    return previousValue;
+}
+
 - (void)setFacility:(NSString *)newFacility
 {
     dispatch_sync(logQueue, ^{
@@ -98,7 +109,6 @@ IBA_SYNTHESIZE_SINGLETON_FOR_CLASS(IBALogger, sharedLogger)
     });
 }
 
-/////////////////////////////////////////////////////////////////////////////////////////////////
 - (void)addLogFile:(NSString *)path
 {
     dispatch_sync(logQueue, ^{
@@ -115,7 +125,6 @@ IBA_SYNTHESIZE_SINGLETON_FOR_CLASS(IBALogger, sharedLogger)
     });
 }
 
-/////////////////////////////////////////////////////////////////////////////////////////////////
 - (void)removeLogFile:(NSString *)path
 {
     dispatch_sync(logQueue, ^{
@@ -129,7 +138,6 @@ IBA_SYNTHESIZE_SINGLETON_FOR_CLASS(IBALogger, sharedLogger)
     });
 }
 
-/////////////////////////////////////////////////////////////////////////////////////////////////
 - (void)log:(NSString*)format 
       level:(NSInteger)level
        file:(const char *)file
@@ -142,7 +150,6 @@ IBA_SYNTHESIZE_SINGLETON_FOR_CLASS(IBALogger, sharedLogger)
     va_end(args);
 }
 
-/////////////////////////////////////////////////////////////////////////////////////////////////
 - (void)log:(NSString *)format 
       level:(NSInteger)level 
        file:(const char *)file
@@ -166,7 +173,6 @@ IBA_SYNTHESIZE_SINGLETON_FOR_CLASS(IBALogger, sharedLogger)
     [metaMsg release];
 }
 
-/////////////////////////////////////////////////////////////////////////////////////////////////
 - (void) logDebug:(NSString*)format
              file:(const char *)file
              line:(NSInteger)line
@@ -178,7 +184,6 @@ IBA_SYNTHESIZE_SINGLETON_FOR_CLASS(IBALogger, sharedLogger)
     va_end(args);
 }
 
-/////////////////////////////////////////////////////////////////////////////////////////////////
 - (void) logDebug:(NSString*)format
              file:(const char *)file
              line:(NSInteger)line
@@ -188,7 +193,6 @@ IBA_SYNTHESIZE_SINGLETON_FOR_CLASS(IBALogger, sharedLogger)
     [self log:format level:ASL_LEVEL_DEBUG file:file line:line function:function args:args];
 }
 
-/////////////////////////////////////////////////////////////////////////////////////////////////
 - (void) logInfo:(NSString*)format
             file:(const char *)file
             line:(NSInteger)line
@@ -200,7 +204,6 @@ IBA_SYNTHESIZE_SINGLETON_FOR_CLASS(IBALogger, sharedLogger)
     va_end(args);
 }
 
-/////////////////////////////////////////////////////////////////////////////////////////////////
 - (void) logInfo:(NSString*)format
             file:(const char *)file
             line:(NSInteger)line
@@ -210,7 +213,6 @@ IBA_SYNTHESIZE_SINGLETON_FOR_CLASS(IBALogger, sharedLogger)
     [self log:format level:ASL_LEVEL_INFO file:file line:line function:function args:args];
 }
 
-/////////////////////////////////////////////////////////////////////////////////////////////////
 - (void) logNotice:(NSString*)format
               file:(const char *)file
               line:(NSInteger)line
@@ -222,7 +224,6 @@ IBA_SYNTHESIZE_SINGLETON_FOR_CLASS(IBALogger, sharedLogger)
     va_end(args);
 }
 
-/////////////////////////////////////////////////////////////////////////////////////////////////
 - (void) logNotice:(NSString*)format
               file:(const char *)file
               line:(NSInteger)line
@@ -232,7 +233,6 @@ IBA_SYNTHESIZE_SINGLETON_FOR_CLASS(IBALogger, sharedLogger)
     [self log:format level:ASL_LEVEL_NOTICE file:file line:line function:function args:args];
 }
 
-/////////////////////////////////////////////////////////////////////////////////////////////////
 - (void) logWarning:(NSString*)format
                file:(const char *)file
                line:(NSInteger)line
@@ -244,7 +244,6 @@ IBA_SYNTHESIZE_SINGLETON_FOR_CLASS(IBALogger, sharedLogger)
     va_end(args);
 }
 
-/////////////////////////////////////////////////////////////////////////////////////////////////
 - (void) logWarning:(NSString*)format
                file:(const char *)file
                line:(NSInteger)line
@@ -254,7 +253,6 @@ IBA_SYNTHESIZE_SINGLETON_FOR_CLASS(IBALogger, sharedLogger)
     [self log:format level:ASL_LEVEL_WARNING file:file line:line function:function args:args];
 }
 
-/////////////////////////////////////////////////////////////////////////////////////////////////
 - (void) logError:(NSString*)format
              file:(const char *)file
              line:(NSInteger)line
@@ -266,7 +264,6 @@ IBA_SYNTHESIZE_SINGLETON_FOR_CLASS(IBALogger, sharedLogger)
     va_end(args);
 }
 
-/////////////////////////////////////////////////////////////////////////////////////////////////
 - (void) logError:(NSString*)format
              file:(const char *)file
              line:(NSInteger)line
@@ -276,7 +273,6 @@ IBA_SYNTHESIZE_SINGLETON_FOR_CLASS(IBALogger, sharedLogger)
     [self log:format level:ASL_LEVEL_ERR file:file line:line function:function args:args];
 }
 
-/////////////////////////////////////////////////////////////////////////////////////////////////
 - (void) logCritical:(NSString*)format
                 file:(const char *)file
                 line:(NSInteger)line
@@ -288,7 +284,6 @@ IBA_SYNTHESIZE_SINGLETON_FOR_CLASS(IBALogger, sharedLogger)
     va_end(args);
 }
 
-/////////////////////////////////////////////////////////////////////////////////////////////////
 - (void) logCritical:(NSString*)format
                 file:(const char *)file
                 line:(NSInteger)line
@@ -298,7 +293,6 @@ IBA_SYNTHESIZE_SINGLETON_FOR_CLASS(IBALogger, sharedLogger)
     [self log:format level:ASL_LEVEL_CRIT file:file line:line function:function args:args];
 }
 
-/////////////////////////////////////////////////////////////////////////////////////////////////
 - (void) logAlert:(NSString*)format
              file:(const char *)file
              line:(NSInteger)line
@@ -310,7 +304,6 @@ IBA_SYNTHESIZE_SINGLETON_FOR_CLASS(IBALogger, sharedLogger)
     va_end(args);
 }
 
-/////////////////////////////////////////////////////////////////////////////////////////////////
 - (void) logAlert:(NSString*)format
              file:(const char *)file
              line:(NSInteger)line
@@ -320,7 +313,6 @@ IBA_SYNTHESIZE_SINGLETON_FOR_CLASS(IBALogger, sharedLogger)
     [self log:format level:ASL_LEVEL_ALERT file:file line:line function:function args:args];
 }
 
-/////////////////////////////////////////////////////////////////////////////////////////////////
 - (void) logEmergency:(NSString*)format
                  file:(const char *)file
                  line:(NSInteger)line
@@ -332,7 +324,6 @@ IBA_SYNTHESIZE_SINGLETON_FOR_CLASS(IBALogger, sharedLogger)
     va_end(args);
 }
 
-/////////////////////////////////////////////////////////////////////////////////////////////////
 - (void) logEmergency:(NSString*)format
                  file:(const char *)file
                  line:(NSInteger)line

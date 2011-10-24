@@ -84,13 +84,6 @@
  \details   Actual logging is performed asynchronously on the GCD low priority queue in an effort to reduce the performance impact.  This also means that the logger is thread safe and can be used from any thread or other queue.
  */
 @interface IBALogger : NSObject 
-{
-@private
-    dispatch_queue_t logQueue;
-    aslmsg aslMsg;
-    aslclient aslClient;
-    NSMutableDictionary* additionalFiles;
-}
 
 /*!
  \brief     Returns the shared logger singleton instance.
@@ -115,6 +108,13 @@
  \details   The name defaults to the application's bundle identifier.
  */
 @property (nonatomic, readonly) NSString* name;
+
+/*!
+ \brief     Set a filter for messages being sent to the server. 
+ \details   The filter is a bitmask representing priorities.  The ASL_FILTER_MASK macro may be used to convert a priority level into a bitmask for that level.  The ASL_FILTER_MASK_UPTO macro creates a bitmask for all priorities up to and including a given priority. Messages with priority levels that do not have a corresponding bit set in the filter are not sent to the server, although they will be sent to any files added with addLogFile. The default setting is ASL_FILTER_MASK_UPTO(ASL_LEVEL_NOTICE).
+ \return    Returns the previous filter value.
+ */
+- (NSInteger)setFilter:(NSInteger)filter;
 
 /*!
  \brief     Log a message with the specified level and format string.
