@@ -95,7 +95,15 @@
 */
 - (void)ibaRemoveAllAnnotations
 {
-    [self removeAnnotations:[self annotations]];
+    // Not just passing in the annotations array just in case it modifies in place.  That would be a stupid thing for the framework to do, but hey - better safe than sorry.
+    if ([self.annotations ibaIsEmpty] == NO)
+    {
+        NSArray *annotationsToRemove = [[NSArray alloc] initWithArray:self.annotations];
+        [self removeAnnotations:annotationsToRemove];
+        
+        NSAssert([self.annotations count] == 0, @"No annotations should exist!");
+        IBA_RELEASE(annotationsToRemove);
+    }
 }
 
 /*!
@@ -103,7 +111,16 @@
  */
 - (void)ibaRemoveAllOverlays
 {
-    [self removeOverlays:[self overlays]];
+    // Not just passing in the overlays array just in case (it modifies in place).  That would be a stupid thing for the framework to do, but hey - better safe than sorry.
+
+    if ([self.overlays ibaIsEmpty] == NO)
+    {
+        NSArray *overlaysToRemove = [[NSArray alloc] initWithArray:self.overlays];
+        [self removeOverlays:overlaysToRemove];
+
+        NSAssert([self.overlays count] == 0, @"No overlays should exist!");
+        IBA_RELEASE(overlaysToRemove);
+    }
 }
 
 
