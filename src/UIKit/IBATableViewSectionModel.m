@@ -114,6 +114,25 @@ IBA_SYNTHESIZE(title, rows);
 }
 
 /*!
+ \brief     Removes the specified \a row from the section.
+ */
+- (void)removeRow:(id)row
+{
+    [self.rows removeObject:row];
+}
+
+/*!
+ \brief     Removes the row at the specified \a index.
+ */
+- (void)removeRowAtIndex:(NSInteger)index
+{
+    if (index >= 0) 
+    {
+        [self.rows removeObjectAtIndex:IBANSIntegerToNSUInteger(index)];
+    }
+}
+
+/*!
  \brief     Returns the row in the section for the specified index.
  \note      UITableViewDelegate and NSIndexPath(UITableView) have historically been inconsistent.  This has changed in iOS5 betas.  Not sure if it will remain that way.  But we try and deal with it here.
  */
@@ -128,6 +147,15 @@ IBA_SYNTHESIZE(title, rows);
 - (void)addRow:(id)row
 {
     [self.rows addObject:row];
+}
+
+/*!
+ \brief     Returns all the rows in the section model.
+ \return    An array of all the rows in the section model.
+ */
+- (NSArray *)allRows
+{
+    return [NSArray arrayWithArray:self.rows];
 }
 
 - (NSString *)description
