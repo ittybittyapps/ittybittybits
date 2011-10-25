@@ -24,6 +24,7 @@
 #import "IBAExtendedPlacemark.h"
 #import "IBABreadcrumbPathView.h"
 #import "IBAMapKitUtils.h"
+#import "IBAPointAnnotation.h"
 
 #ifdef __cplusplus
 #   import "IBABreadcrumbPath.hh"

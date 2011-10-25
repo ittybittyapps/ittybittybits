@@ -197,6 +197,8 @@
 		A7808BD013D2B6A500F76DB1 /* UIColor+IBAExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = A7808BCE13D2B6A500F76DB1 /* UIColor+IBAExtensions.h */; };
 		A7808BD113D2B6A500F76DB1 /* UIColor+IBAExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = A7808BCF13D2B6A500F76DB1 /* UIColor+IBAExtensions.m */; };
 		A7808BD713D2D76A00F76DB1 /* UIColor+IBAExtensionsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A7808BD613D2D76A00F76DB1 /* UIColor+IBAExtensionsTests.m */; };
+		A781C6ED1456980A009F4CA4 /* IBAPointAnnotation.h in Headers */ = {isa = PBXBuildFile; fileRef = A781C6EB1456980A009F4CA4 /* IBAPointAnnotation.h */; };
+		A781C6EE1456980A009F4CA4 /* IBAPointAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = A781C6EC1456980A009F4CA4 /* IBAPointAnnotation.m */; };
 		A78E41C613DCFB2F0042FF9E /* IBABinding.h in Headers */ = {isa = PBXBuildFile; fileRef = A78E41C413DCFB2F0042FF9E /* IBABinding.h */; };
 		A78E41C713DCFB2F0042FF9E /* IBABinding.m in Sources */ = {isa = PBXBuildFile; fileRef = A78E41C513DCFB2F0042FF9E /* IBABinding.m */; };
 		A78E41CC13DD04280042FF9E /* IBABindingManager.h in Headers */ = {isa = PBXBuildFile; fileRef = A78E41CA13DD04280042FF9E /* IBABindingManager.h */; };
@@ -557,6 +559,8 @@
 		A7808BD313D2C83600F76DB1 /* IBACSSColors.x */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = IBACSSColors.x; sourceTree = "<group>"; };
 		A7808BD513D2D76A00F76DB1 /* UIColor+IBAExtensionsTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+IBAExtensionsTests.h"; sourceTree = "<group>"; };
 		A7808BD613D2D76A00F76DB1 /* UIColor+IBAExtensionsTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+IBAExtensionsTests.m"; sourceTree = "<group>"; };
+		A781C6EB1456980A009F4CA4 /* IBAPointAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBAPointAnnotation.h; sourceTree = "<group>"; };
+		A781C6EC1456980A009F4CA4 /* IBAPointAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IBAPointAnnotation.m; sourceTree = "<group>"; };
 		A78E41C413DCFB2F0042FF9E /* IBABinding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBABinding.h; sourceTree = "<group>"; };
 		A78E41C513DCFB2F0042FF9E /* IBABinding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IBABinding.m; sourceTree = "<group>"; };
 		A78E41CA13DD04280042FF9E /* IBABindingManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBABindingManager.h; sourceTree = "<group>"; };
@@ -796,6 +800,8 @@
 				A706A6B9138100D400429203 /* MKMapView+IBAAnnotations.m */,
 				A71BB06C13BC0343008B5DEE /* IBAMapKitUtils.h */,
 				A71BB06913BC0324008B5DEE /* IBAMapKitUtils.m */,
+				A781C6EB1456980A009F4CA4 /* IBAPointAnnotation.h */,
+				A781C6EC1456980A009F4CA4 /* IBAPointAnnotation.m */,
 				A7B10AC3138609F700C8A672 /* MKReverseGeocoder+IBABlocks.h */,
 				A7B10AC4138609F700C8A672 /* MKReverseGeocoder+IBABlocks.m */,
 				A701064213947B8000D9AB8B /* MKPlacemark+IBAFormattedAddress.h */,
@@ -1451,6 +1457,7 @@
 				A7127A41144CF42B00392A99 /* IBANavigationController.h in Headers */,
 				A76C9BDC144FBA79006623E6 /* IBAFlipViewController.h in Headers */,
 				A7D35F4A1451553F004AE3EF /* IBACancelToken.h in Headers */,
+				A781C6ED1456980A009F4CA4 /* IBAPointAnnotation.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1786,6 +1793,7 @@
 				A7127A42144CF42B00392A99 /* IBANavigationController.m in Sources */,
 				A76C9BDD144FBA79006623E6 /* IBAFlipViewController.m in Sources */,
 				A7D35F4B1451553F004AE3EF /* IBACancelToken.m in Sources */,
+				A781C6EE1456980A009F4CA4 /* IBAPointAnnotation.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
