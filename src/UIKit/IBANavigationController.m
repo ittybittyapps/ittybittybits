@@ -23,7 +23,7 @@
 
 - (UIViewController *)popViewControllerAnimated:(BOOL)animated
 {
-    UIViewController *popped = [self popViewControllerAnimated:animated];
+    UIViewController *popped = [super popViewControllerAnimated:animated];
     if ([self.delegate respondsToSelector:@selector(navigationController:didPopViewController:animated:)])
     {
         [((id<IBANavigationControllerDelegate>)self.delegate) navigationController:self didPopViewController:popped animated:animated];
