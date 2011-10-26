@@ -96,7 +96,7 @@
 - (void)ibaRemoveAllAnnotations
 {
     // Not just passing in the annotations array just in case it modifies in place.  That would be a stupid thing for the framework to do, but hey - better safe than sorry.
-    if ([self.annotations ibaIsEmpty] == NO)
+    if (self.annotations && [self.annotations ibaIsEmpty] == NO)
     {
         NSArray *annotationsToRemove = [[NSArray alloc] initWithArray:self.annotations];
         [self removeAnnotations:annotationsToRemove];
@@ -113,7 +113,7 @@
 {
     // Not just passing in the overlays array just in case (it modifies in place).  That would be a stupid thing for the framework to do, but hey - better safe than sorry.
 
-    if ([self.overlays ibaIsEmpty] == NO)
+    if (self.overlays && [self.overlays ibaIsEmpty] == NO)
     {
         NSArray *overlaysToRemove = [[NSArray alloc] initWithArray:self.overlays];
         [self removeOverlays:overlaysToRemove];
