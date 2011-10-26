@@ -20,7 +20,11 @@
 #import <UIKit/UIKit.h>
 #import "IBAViewController.h"
 
+@class IBANavigationController;
+
 @protocol IBANavigationControllerDelegate <IBAViewControllerDelegate, UINavigationControllerDelegate>
+@optional
+- (void)navigationController:(IBANavigationController *)navigationController didPopViewController:(UIViewController *)viewController animated:(BOOL)animated;
 @end
 
 @interface IBANavigationController : UINavigationController
