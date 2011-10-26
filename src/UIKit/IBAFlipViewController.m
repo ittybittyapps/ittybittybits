@@ -85,11 +85,10 @@ IBA_SYNTHESIZE(flipped,
     if ([backFacingCoordinator respondsToSelector:@selector(flipSideWillAppear)])
         [backFacingCoordinator flipSideWillAppear];
     
-    IBA_BLOCK_WEAK IBAFlipViewController *weakSelf = self;
     [UIView transitionWithView:self.view duration:0.75 options:animationOptions animations:^{
         [frontFacingCoordinator.view removeFromSuperview];
-        [weakSelf.view addSubview:backFacingCoordinator.view];
-        IBA_RUN_BLOCK(weakSelf.animateBlockDuringFlip);
+        [self.view addSubview:backFacingCoordinator.view];
+        IBA_RUN_BLOCK(self.animateBlockDuringFlip);
     } completion:^(BOOL IBA_UNUSED finished) {
         if ([backFacingCoordinator respondsToSelector:@selector(flipSideDidAppear)])
             [backFacingCoordinator flipSideDidAppear];
