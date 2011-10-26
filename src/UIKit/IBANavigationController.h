@@ -25,6 +25,7 @@
 @protocol IBANavigationControllerDelegate <IBAViewControllerDelegate, UINavigationControllerDelegate>
 @optional
 - (void)navigationController:(IBANavigationController *)navigationController didPopViewController:(UIViewController *)viewController animated:(BOOL)animated;
+- (void)navigationController:(IBANavigationController *)navigationController willPushViewController:(UIViewController *)viewController animated:(BOOL)animated;
 @end
 
 @interface IBANavigationController : UINavigationController

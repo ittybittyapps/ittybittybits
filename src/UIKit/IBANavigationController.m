@@ -32,6 +32,16 @@
     return popped;
 }
 
+- (void)pushViewController:(UIViewController *)viewController animated:(BOOL)animated
+{
+    if ([self.delegate respondsToSelector:@selector(navigationController:willPushViewController:animated:)])
+    {
+        [((id<IBANavigationControllerDelegate>)self.delegate) navigationController:self willPushViewController:viewController animated:animated];
+    }
+
+    [super pushViewController:viewController animated:animated];
+}
+
 - (void)presentModalViewController:(UIViewController *)modalViewController animated:(BOOL)animated
 {
     if ([self.delegate respondsToSelector:@selector(viewController:willPresentModalViewController:animated:)])
