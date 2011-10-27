@@ -35,25 +35,41 @@
  \brief Log a formatted message to the default logger at ASL_LEVEL_DEBUG.
  \param format  The format string (NSString). 
  */
-#define IBALogDebug(format, ...)		IBALog(ASL_LEVEL_DEBUG, (format), ##__VA_ARGS__)
+#ifndef IBA_LOG_DEBUG_DISABLED
+#   define IBALogDebug(format, ...)		IBALog(ASL_LEVEL_DEBUG, (format), ##__VA_ARGS__)
+#else
+#   define IBALogDebug(format, ...)
+#endif
 
 /*!
  \brief Log a formatted message to the default logger at ASL_LEVEL_INFO.
  \param format  The format string (NSString). 
  */
-#define IBALogInfo(format, ...)         IBALog(ASL_LEVEL_INFO, (format), ##__VA_ARGS__)
+#ifndef IBA_LOG_INFO_DISABLED
+#   define IBALogInfo(format, ...)         IBALog(ASL_LEVEL_INFO, (format), ##__VA_ARGS__)
+#else
+#   define IBALogInfo(format, ...)
+#endif
 
 /*!
  \brief Log a formatted message to the default logger at ASL_LEVEL_NOTICE.
  \param format  The format string (NSString). 
  */
-#define IBALogNotice(format, ...)       IBALog(ASL_LEVEL_NOTICE, (format), ##__VA_ARGS__)
+#ifndef IBA_LOG_NOTICE_DISABLED
+#   define IBALogNotice(format, ...)       IBALog(ASL_LEVEL_NOTICE, (format), ##__VA_ARGS__)
+#else
+#   define IBALogNotice(format, ...)
+#endif
 
 /*!
  \brief Log a formatted message to the default logger at ASL_LEVEL_WARNING.
  \param format  The format string (NSString). 
  */
-#define IBALogWarning(format, ...)      IBALog(ASL_LEVEL_WARNING, (format), ##__VA_ARGS__)
+#ifndef IBA_LOG_WARNING_DISABLED
+#   define IBALogWarning(format, ...)      IBALog(ASL_LEVEL_WARNING, (format), ##__VA_ARGS__)
+#else
+#   define IBALogWarning(format, ...)
+#endif
 
 /*!
  \brief Log a formatted message to the default logger at ASL_LEVEL_ERR.
