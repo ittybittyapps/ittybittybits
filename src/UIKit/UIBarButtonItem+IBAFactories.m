@@ -1,5 +1,5 @@
 //
-//  Factories.m
+//  UIBarButtonItem+IBAFactories.m
 //  IttyBittyBits
 //
 //  Created by Oliver Jones on 12/05/11.

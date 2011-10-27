@@ -1,5 +1,5 @@
 //
-//  IBADisclosureControl.m
+//  IBATableViewAccessory.m
 //  IttyBittyBits
 //
 //  Created by Oliver Jones on 4/07/11.

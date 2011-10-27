@@ -5,7 +5,7 @@
 //  Based partly on code by Jonathan Wight, Jon Crosby, and Mike Malone.
 //  Copyright 2008 Sci-Fi Hi-Fi. All rights reserved.
 //
-//  Modified by Oliver Jones (oliver@ittybittyapps.com)
+//  Modified by Oliver Jones
 //
 //  Permission is hereby granted, free of charge, to any person
 //  obtaining a copy of this software and associated documentation

@@ -1,5 +1,5 @@
 //
-//  Factories.h
+//  UIBarButtonItem+IBAFactories.h
 //  IttyBittyBits
 //
 //  Created by Oliver Jones on 12/05/11.
@@ -21,7 +21,7 @@
 #import <Foundation/Foundation.h>
 
 
-@interface UIBarButtonItem (Factories)
+@interface UIBarButtonItem (IBAFactories)
 
 + (UIBarButtonItem *)ibaFlexibleSpace;
 + (UIBarButtonItem *)ibaFixedSpaceWithWidth:(CGFloat)width;
