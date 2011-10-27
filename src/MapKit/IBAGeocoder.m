@@ -100,7 +100,10 @@ IBA_SYNTHESIZE(delegate, responseData, connection, request, requestURL, cancelle
 
 - (id)initWithAddress:(NSString *)address inCountry:(NSString *)country
 {
-	NSString *urlParams = [NSString stringWithFormat:@"address=%@&region=%@", address, country];
+    IBAAssertNotNilOrEmptyString(address);
+    
+    NSString *urlParams = (country && [country ibaNotBlank]) ? [NSString stringWithFormat:@"address=%@&region=%@", address, country] : [NSString stringWithFormat:@"address=%@", address];
+	 
     return [self initWithRequestParams:urlParams];
 }
 
