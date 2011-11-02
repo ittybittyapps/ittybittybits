@@ -226,6 +226,8 @@
 		A79B837F1439843F0002C8D5 /* NSHTTPURLResponse+IBAExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = A79B837D1439843F0002C8D5 /* NSHTTPURLResponse+IBAExtensions.m */; };
 		A79B838314398E790002C8D5 /* NSURLRequest+IBAExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = A79B838114398E790002C8D5 /* NSURLRequest+IBAExtensions.h */; };
 		A79B838414398E790002C8D5 /* NSURLRequest+IBAExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = A79B838214398E790002C8D5 /* NSURLRequest+IBAExtensions.m */; };
+		A79BD9E71460F06400DDD422 /* IBATableViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = A79BD9E51460F06400DDD422 /* IBATableViewController.h */; };
+		A79BD9E81460F06400DDD422 /* IBATableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A79BD9E61460F06400DDD422 /* IBATableViewController.m */; };
 		A7A0A26B13B88E4800596FD4 /* IBABreadcrumbPath.hh in Headers */ = {isa = PBXBuildFile; fileRef = A7A0A26713B88E4800596FD4 /* IBABreadcrumbPath.hh */; };
 		A7A0A26C13B88E4800596FD4 /* IBABreadcrumbPath.mm in Sources */ = {isa = PBXBuildFile; fileRef = A7A0A26813B88E4800596FD4 /* IBABreadcrumbPath.mm */; };
 		A7A0A26D13B88E4800596FD4 /* IBABreadcrumbPathView.h in Headers */ = {isa = PBXBuildFile; fileRef = A7A0A26913B88E4800596FD4 /* IBABreadcrumbPathView.h */; };
@@ -590,6 +592,8 @@
 		A79B837D1439843F0002C8D5 /* NSHTTPURLResponse+IBAExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSHTTPURLResponse+IBAExtensions.m"; sourceTree = "<group>"; };
 		A79B838114398E790002C8D5 /* NSURLRequest+IBAExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSURLRequest+IBAExtensions.h"; sourceTree = "<group>"; };
 		A79B838214398E790002C8D5 /* NSURLRequest+IBAExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSURLRequest+IBAExtensions.m"; sourceTree = "<group>"; };
+		A79BD9E51460F06400DDD422 /* IBATableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBATableViewController.h; sourceTree = "<group>"; };
+		A79BD9E61460F06400DDD422 /* IBATableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IBATableViewController.m; sourceTree = "<group>"; };
 		A7A0A26713B88E4800596FD4 /* IBABreadcrumbPath.hh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = IBABreadcrumbPath.hh; sourceTree = "<group>"; };
 		A7A0A26813B88E4800596FD4 /* IBABreadcrumbPath.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = IBABreadcrumbPath.mm; sourceTree = "<group>"; };
 		A7A0A26913B88E4800596FD4 /* IBABreadcrumbPathView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBABreadcrumbPathView.h; sourceTree = "<group>"; };
@@ -1056,6 +1060,8 @@
 				A7127A40144CF42B00392A99 /* IBANavigationController.m */,
 				A76C84D813C1A13D00D2A866 /* IBATableViewAccessory.h */,
 				A76C84D913C1A13D00D2A866 /* IBATableViewAccessory.m */,
+				A79BD9E51460F06400DDD422 /* IBATableViewController.h */,
+				A79BD9E61460F06400DDD422 /* IBATableViewController.m */,
 				A7555E6714207FB1002E5E57 /* IBATableViewSectionModel.h */,
 				A7555E6814207FB1002E5E57 /* IBATableViewSectionModel.m */,
 				A7555E6314207B7D002E5E57 /* IBATableViewModel.h */,
@@ -1458,6 +1464,7 @@
 				A76C9BDC144FBA79006623E6 /* IBAFlipViewController.h in Headers */,
 				A7D35F4A1451553F004AE3EF /* IBACancelToken.h in Headers */,
 				A781C6ED1456980A009F4CA4 /* IBAPointAnnotation.h in Headers */,
+				A79BD9E71460F06400DDD422 /* IBATableViewController.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1794,6 +1801,7 @@
 				A76C9BDD144FBA79006623E6 /* IBAFlipViewController.m in Sources */,
 				A7D35F4B1451553F004AE3EF /* IBACancelToken.m in Sources */,
 				A781C6EE1456980A009F4CA4 /* IBAPointAnnotation.m in Sources */,
+				A79BD9E81460F06400DDD422 /* IBATableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

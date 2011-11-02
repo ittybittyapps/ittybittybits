@@ -25,6 +25,7 @@
 #import "IBANavigationBar.h"
 #import "IBANavigationController.h"
 #import "IBATableViewAccessory.h"
+#import "IBATableViewController.h"
 #import "IBATableViewSectionModel.h"
 #import "IBATableViewModel.h"
 #import "IBATiledImageView.h"
