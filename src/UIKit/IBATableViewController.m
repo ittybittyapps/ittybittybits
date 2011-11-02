@@ -22,6 +22,8 @@
 
 #import "IBATableViewModel.h"
 
+#import "UITableView+IBAExtensions.h"
+
 @implementation IBATableViewController
 {
     UITableViewStyle defaultTableViewStyle;

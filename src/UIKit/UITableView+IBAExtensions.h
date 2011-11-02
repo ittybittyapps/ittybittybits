@@ -10,4 +10,14 @@
 
 @interface UITableView (IBAExtensions)
 
+#pragma mark - iOS 5 Backwards Compatibility
+
+#if !defined(__IPHONE_5_0) || __IPHONE_OS_VERSION_MAX_ALLOWED < __IPHONE_5_0
+
+@property(nonatomic) BOOL allowsMultipleSelection;
+- (NSArray *)indexPathsForSelectedRows;
+
+#endif
+
+
 @end

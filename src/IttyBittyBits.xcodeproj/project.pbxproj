@@ -164,6 +164,8 @@
 		A7555E6614207B7D002E5E57 /* IBATableViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A7555E6414207B7D002E5E57 /* IBATableViewModel.m */; };
 		A7555E6914207FB1002E5E57 /* IBATableViewSectionModel.h in Headers */ = {isa = PBXBuildFile; fileRef = A7555E6714207FB1002E5E57 /* IBATableViewSectionModel.h */; };
 		A7555E6A14207FB1002E5E57 /* IBATableViewSectionModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A7555E6814207FB1002E5E57 /* IBATableViewSectionModel.m */; };
+		A75E2CE11461772600070ABB /* UITableView+IBAExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = A75E2CDF1461772600070ABB /* UITableView+IBAExtensions.h */; };
+		A75E2CE21461772600070ABB /* UITableView+IBAExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = A75E2CE01461772600070ABB /* UITableView+IBAExtensions.m */; };
 		A75FC05B13BD919D00C7AE82 /* NSDate+IBAExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = A75FC05913BD919D00C7AE82 /* NSDate+IBAExtensions.h */; };
 		A75FC05C13BD919D00C7AE82 /* NSDate+IBAExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = A75FC05A13BD919D00C7AE82 /* NSDate+IBAExtensions.m */; };
 		A7652BD213E581530023D4B3 /* IBATiledImageView.h in Headers */ = {isa = PBXBuildFile; fileRef = A7652BD013E581530023D4B3 /* IBATiledImageView.h */; };
@@ -526,6 +528,8 @@
 		A7555E6414207B7D002E5E57 /* IBATableViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IBATableViewModel.m; sourceTree = "<group>"; };
 		A7555E6714207FB1002E5E57 /* IBATableViewSectionModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBATableViewSectionModel.h; sourceTree = "<group>"; };
 		A7555E6814207FB1002E5E57 /* IBATableViewSectionModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IBATableViewSectionModel.m; sourceTree = "<group>"; };
+		A75E2CDF1461772600070ABB /* UITableView+IBAExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+IBAExtensions.h"; sourceTree = "<group>"; };
+		A75E2CE01461772600070ABB /* UITableView+IBAExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+IBAExtensions.m"; sourceTree = "<group>"; };
 		A75FC05913BD919D00C7AE82 /* NSDate+IBAExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+IBAExtensions.h"; sourceTree = "<group>"; };
 		A75FC05A13BD919D00C7AE82 /* NSDate+IBAExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+IBAExtensions.m"; sourceTree = "<group>"; };
 		A7652BD013E581530023D4B3 /* IBATiledImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBATiledImageView.h; sourceTree = "<group>"; };
@@ -1094,6 +1098,8 @@
 				A774CAD913B2DD89002B2FA1 /* UIScrollView+IBAExtensions.m */,
 				A7B10AC7138632E800C8A672 /* UISearchBar+IBAExtensions.h */,
 				A7B10AC8138632E800C8A672 /* UISearchBar+IBAExtensions.m */,
+				A75E2CDF1461772600070ABB /* UITableView+IBAExtensions.h */,
+				A75E2CE01461772600070ABB /* UITableView+IBAExtensions.m */,
 				A7C0DBDD13B1705E00860296 /* UIView+IBAExtensions.h */,
 				A7C0DBDE13B1705E00860296 /* UIView+IBAExtensions.m */,
 			);
@@ -1465,6 +1471,7 @@
 				A7D35F4A1451553F004AE3EF /* IBACancelToken.h in Headers */,
 				A781C6ED1456980A009F4CA4 /* IBAPointAnnotation.h in Headers */,
 				A79BD9E71460F06400DDD422 /* IBATableViewController.h in Headers */,
+				A75E2CE11461772600070ABB /* UITableView+IBAExtensions.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1802,6 +1809,7 @@
 				A7D35F4B1451553F004AE3EF /* IBACancelToken.m in Sources */,
 				A781C6EE1456980A009F4CA4 /* IBAPointAnnotation.m in Sources */,
 				A79BD9E81460F06400DDD422 /* IBATableViewController.m in Sources */,
+				A75E2CE21461772600070ABB /* UITableView+IBAExtensions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

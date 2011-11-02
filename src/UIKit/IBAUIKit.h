@@ -43,6 +43,7 @@
 #import "UINib+IBAExtensions.h"
 #import "UISearchBar+IBAExtensions.h"
 #import "UIScrollView+IBAExtensions.h"
+#import "UITableView+IBAExtensions.h"
 #import "UIView+IBAExtensions.h"
 
 
