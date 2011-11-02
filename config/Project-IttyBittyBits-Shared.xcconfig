@@ -98,3 +98,8 @@ LLVM_LTO = NO
 // Disable ARC (for the time being - will adopt later)
 CLANG_ENABLE_OBJC_ARC = NO
 
+// Turn off color diagnostics by default (disable this for commandline builds for better looking output - Jenkins can use the color if the ANSI logfile parsing plugin is enabled)
+COLOR_DIAGNOSTICS=no-
+
+// Turn on other Clang compiler flags (mainly for diagnostics formatting)
+OTHER_CFLAGS = -fshow-source-location -fcaret-diagnostics -fdiagnostics-show-option -fdiagnostics-print-source-range-info -fdiagnostics-fixit-info -fdiagnostics-parseable-fixits -f$(COLOR_DIAGNOSTICS)color-diagnostics
