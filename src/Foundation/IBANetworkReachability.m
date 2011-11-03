@@ -105,7 +105,7 @@ NSString * const IBANetworkReachabilityChangedNotification = @"IBANetworkReachab
 
 #define kShouldPrintReachabilityFlags 1
 
-static void PrintReachabilityFlags(SCNetworkReachabilityFlags flags, const char* comment)
+static void PrintReachabilityFlags(SCNetworkReachabilityFlags IBA_UNUSED flags, const char* IBA_UNUSED comment)
 {
 #if kShouldPrintReachabilityFlags
     IBALogDebug(@"Reachability Flag Status: %c%c %c%c%c%c%c%c%c %s\n",
