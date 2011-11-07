@@ -1,5 +1,5 @@
 //
-//  IBAThemeManager.h
+//  IBAResourceManager.h
 //  IttyBittyBits
 //
 //  Created by Oliver Jones on 25/08/11.
@@ -19,17 +19,17 @@
 
 #import <UIKit/UIKit.h>
 
-@class IBAThemeBundle;
+@class IBAResourceBundle;
 
-@interface IBAThemeManager : NSObject
+@interface IBAResourceManager : NSObject
 
 /*!
  \brief     Returns a shared singleton instance of the theme manager.
  */
-+ (IBAThemeManager *)sharedInstance;
++ (IBAResourceManager *)sharedInstance;
 
-- (void)pushThemeBundle:(IBAThemeBundle *)bundle;
-- (void)popThemeBundle;
+- (void)pushResourceBundle:(IBAResourceBundle *)bundle;
+- (void)popResourceBundle;
 
 - (UIColor *)colorNamed:(NSString *)name;
 - (UIImage *)imageNamed:(NSString *)name;

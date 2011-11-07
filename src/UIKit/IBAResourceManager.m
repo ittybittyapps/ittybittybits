@@ -1,5 +1,5 @@
 //
-//  IBAThemeManager.m
+//  IBAResourceManager.m
 //  IttyBittyBits
 //
 //  Created by Oliver Jones on 25/08/11.
@@ -17,17 +17,17 @@
 //  See the License for the specific language governing permissions and
 //  limitations under the License.
 
-#import "IBAThemeManager.h"
-#import "IBAThemeBundle.h"
+#import "IBAResourceManager.h"
+#import "IBAResourceBundle.h"
 
 #import "../Foundation/IBAFoundation.h"
 
-@implementation IBAThemeManager
+@implementation IBAResourceManager
 {
     IBAStack *bundleStack;
 }
 
-IBA_SYNTHESIZE_SINGLETON_FOR_CLASS(IBAThemeManager, sharedInstance);
+IBA_SYNTHESIZE_SINGLETON_FOR_CLASS(IBAResourceManager, sharedInstance);
 
 - (id)init
 {
@@ -46,19 +46,19 @@ IBA_SYNTHESIZE_SINGLETON_FOR_CLASS(IBAThemeManager, sharedInstance);
     [super dealloc];
 }
 
-- (void)pushThemeBundle:(IBAThemeBundle *)bundle
+- (void)pushResourceBundle:(IBAResourceBundle *)bundle
 {
     [bundleStack pushObject:bundle];
 }
 
-- (void)popThemeBundle
+- (void)popResourceBundle
 {
     [bundleStack popObject];
 }
 
 - (UIColor *)colorNamed:(NSString *)name
 {
-    for (IBAThemeBundle *bundle in bundleStack) 
+    for (IBAResourceBundle *bundle in bundleStack) 
     {
         if ([bundle hasColorNamed:name])
         {
@@ -71,7 +71,7 @@ IBA_SYNTHESIZE_SINGLETON_FOR_CLASS(IBAThemeManager, sharedInstance);
 
 - (UIImage *)imageNamed:(NSString *)name
 {
-    for (IBAThemeBundle *bundle in bundleStack) 
+    for (IBAResourceBundle *bundle in bundleStack) 
     {
         if ([bundle hasImageNamed:name])
         {
@@ -84,7 +84,7 @@ IBA_SYNTHESIZE_SINGLETON_FOR_CLASS(IBAThemeManager, sharedInstance);
 
 - (UIFont *)fontNamed:(NSString *)name
 {
-    for (IBAThemeBundle *bundle in bundleStack) 
+    for (IBAResourceBundle *bundle in bundleStack) 
     {
         if ([bundle hasFontNamed:name])
         {
@@ -97,7 +97,7 @@ IBA_SYNTHESIZE_SINGLETON_FOR_CLASS(IBAThemeManager, sharedInstance);
 
 - (CGSize)sizeNamed:(NSString *)name
 {
-    for (IBAThemeBundle *bundle in bundleStack) 
+    for (IBAResourceBundle *bundle in bundleStack) 
     {
         if ([bundle hasSizeNamed:name])
         {
@@ -110,7 +110,7 @@ IBA_SYNTHESIZE_SINGLETON_FOR_CLASS(IBAThemeManager, sharedInstance);
 
 - (CGRect)rectNamed:(NSString *)name
 {
-    for (IBAThemeBundle *bundle in bundleStack) 
+    for (IBAResourceBundle *bundle in bundleStack) 
     {
         if ([bundle hasRectNamed:name])
         {
@@ -123,7 +123,7 @@ IBA_SYNTHESIZE_SINGLETON_FOR_CLASS(IBAThemeManager, sharedInstance);
 
 - (CGPoint)pointNamed:(NSString *)name
 {
-    for (IBAThemeBundle *bundle in bundleStack) 
+    for (IBAResourceBundle *bundle in bundleStack) 
     {
         if ([bundle hasPointNamed:name])
         {

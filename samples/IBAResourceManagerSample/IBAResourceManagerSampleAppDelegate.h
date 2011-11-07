@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface IBAThemeManagerSampleAppDelegate : NSObject <UIApplicationDelegate>
+@interface IBAResourceManagerSampleAppDelegate : NSObject <UIApplicationDelegate>
 
 @property (nonatomic, retain) IBOutlet UIWindow *window;
 

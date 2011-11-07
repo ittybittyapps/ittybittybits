@@ -230,10 +230,10 @@
 		A7A0E10D13E0EF24006CEC5A /* NSError+IBACoreDataErrors.mm in Sources */ = {isa = PBXBuildFile; fileRef = A7A0E10B13E0EF24006CEC5A /* NSError+IBACoreDataErrors.mm */; };
 		A7A0E11113E12DB0006CEC5A /* IBAStateMachine.h in Headers */ = {isa = PBXBuildFile; fileRef = A7A0E10F13E12DB0006CEC5A /* IBAStateMachine.h */; };
 		A7A0E11213E12DB0006CEC5A /* IBAStateMachine.m in Sources */ = {isa = PBXBuildFile; fileRef = A7A0E11013E12DB0006CEC5A /* IBAStateMachine.m */; };
-		A7ACE4921405C93000CC2138 /* IBAThemeManager.h in Headers */ = {isa = PBXBuildFile; fileRef = A7ACE4901405C93000CC2138 /* IBAThemeManager.h */; };
-		A7ACE4931405C93000CC2138 /* IBAThemeManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A7ACE4911405C93000CC2138 /* IBAThemeManager.m */; };
-		A7ACE4971405CC5600CC2138 /* IBAThemeBundle.h in Headers */ = {isa = PBXBuildFile; fileRef = A7ACE4951405CC5600CC2138 /* IBAThemeBundle.h */; };
-		A7ACE4981405CC5600CC2138 /* IBAThemeBundle.m in Sources */ = {isa = PBXBuildFile; fileRef = A7ACE4961405CC5600CC2138 /* IBAThemeBundle.m */; };
+		A7ACE4921405C93000CC2138 /* IBAResourceManager.h in Headers */ = {isa = PBXBuildFile; fileRef = A7ACE4901405C93000CC2138 /* IBAResourceManager.h */; };
+		A7ACE4931405C93000CC2138 /* IBAResourceManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A7ACE4911405C93000CC2138 /* IBAResourceManager.m */; };
+		A7ACE4971405CC5600CC2138 /* IBAResourceBundle.h in Headers */ = {isa = PBXBuildFile; fileRef = A7ACE4951405CC5600CC2138 /* IBAResourceBundle.h */; };
+		A7ACE4981405CC5600CC2138 /* IBAResourceBundle.m in Sources */ = {isa = PBXBuildFile; fileRef = A7ACE4961405CC5600CC2138 /* IBAResourceBundle.m */; };
 		A7ACE49B1405CE1700CC2138 /* IBAStack.h in Headers */ = {isa = PBXBuildFile; fileRef = A7ACE4991405CE1700CC2138 /* IBAStack.h */; };
 		A7ACE49C1405CE1700CC2138 /* IBAStack.m in Sources */ = {isa = PBXBuildFile; fileRef = A7ACE49A1405CE1700CC2138 /* IBAStack.m */; };
 		A7ACE49F140637C900CC2138 /* IBAStackTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A7ACE49E140637C900CC2138 /* IBAStackTests.m */; };
@@ -580,10 +580,10 @@
 		A7A0E10B13E0EF24006CEC5A /* NSError+IBACoreDataErrors.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = "NSError+IBACoreDataErrors.mm"; sourceTree = "<group>"; };
 		A7A0E10F13E12DB0006CEC5A /* IBAStateMachine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBAStateMachine.h; sourceTree = "<group>"; };
 		A7A0E11013E12DB0006CEC5A /* IBAStateMachine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IBAStateMachine.m; sourceTree = "<group>"; };
-		A7ACE4901405C93000CC2138 /* IBAThemeManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBAThemeManager.h; sourceTree = "<group>"; };
-		A7ACE4911405C93000CC2138 /* IBAThemeManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IBAThemeManager.m; sourceTree = "<group>"; };
-		A7ACE4951405CC5600CC2138 /* IBAThemeBundle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBAThemeBundle.h; sourceTree = "<group>"; };
-		A7ACE4961405CC5600CC2138 /* IBAThemeBundle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IBAThemeBundle.m; sourceTree = "<group>"; };
+		A7ACE4901405C93000CC2138 /* IBAResourceManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBAResourceManager.h; sourceTree = "<group>"; };
+		A7ACE4911405C93000CC2138 /* IBAResourceManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IBAResourceManager.m; sourceTree = "<group>"; };
+		A7ACE4951405CC5600CC2138 /* IBAResourceBundle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBAResourceBundle.h; sourceTree = "<group>"; };
+		A7ACE4961405CC5600CC2138 /* IBAResourceBundle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IBAResourceBundle.m; sourceTree = "<group>"; };
 		A7ACE4991405CE1700CC2138 /* IBAStack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBAStack.h; sourceTree = "<group>"; };
 		A7ACE49A1405CE1700CC2138 /* IBAStack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IBAStack.m; sourceTree = "<group>"; };
 		A7ACE49D140637C900CC2138 /* IBAStackTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBAStackTests.h; sourceTree = "<group>"; };
@@ -1053,10 +1053,10 @@
 				A76C84D913C1A13D00D2A866 /* IBATableViewAccessory.m */,
 				A7652BD013E581530023D4B3 /* IBATiledImageView.h */,
 				A7652BD113E581530023D4B3 /* IBATiledImageView.m */,
-				A7ACE4901405C93000CC2138 /* IBAThemeManager.h */,
-				A7ACE4911405C93000CC2138 /* IBAThemeManager.m */,
-				A7ACE4951405CC5600CC2138 /* IBAThemeBundle.h */,
-				A7ACE4961405CC5600CC2138 /* IBAThemeBundle.m */,
+				A7ACE4901405C93000CC2138 /* IBAResourceManager.h */,
+				A7ACE4911405C93000CC2138 /* IBAResourceManager.m */,
+				A7ACE4951405CC5600CC2138 /* IBAResourceBundle.h */,
+				A7ACE4961405CC5600CC2138 /* IBAResourceBundle.m */,
 				A7C05854140C771600339F5B /* IBAViewController.h */,
 				A7C05855140C771600339F5B /* IBAViewController.m */,
 				A722FA5D137B94D90066CC1A /* UIAlertView+IBAExtensions.h */,
@@ -1403,8 +1403,8 @@
 				A7422E6814012A3600D9C54F /* IBANavigationBar.h in Headers */,
 				A7422E711401331F00D9C54F /* UINavigationController+IBAExtensions.h in Headers */,
 				75C832441401475C00F476B9 /* UIGestureRecognizer+IBAExtensions.h in Headers */,
-				A7ACE4921405C93000CC2138 /* IBAThemeManager.h in Headers */,
-				A7ACE4971405CC5600CC2138 /* IBAThemeBundle.h in Headers */,
+				A7ACE4921405C93000CC2138 /* IBAResourceManager.h in Headers */,
+				A7ACE4971405CC5600CC2138 /* IBAResourceBundle.h in Headers */,
 				A7ACE49B1405CE1700CC2138 /* IBAStack.h in Headers */,
 				A7C05856140C771600339F5B /* IBAViewController.h in Headers */,
 				A7C05865140CA04000339F5B /* IBAFlipButton.h in Headers */,
@@ -1767,8 +1767,8 @@
 				A7422E6914012A3600D9C54F /* IBANavigationBar.m in Sources */,
 				A7422E721401331F00D9C54F /* UINavigationController+IBAExtensions.m in Sources */,
 				75C832451401475C00F476B9 /* UIGestureRecognizer+IBAExtensions.m in Sources */,
-				A7ACE4931405C93000CC2138 /* IBAThemeManager.m in Sources */,
-				A7ACE4981405CC5600CC2138 /* IBAThemeBundle.m in Sources */,
+				A7ACE4931405C93000CC2138 /* IBAResourceManager.m in Sources */,
+				A7ACE4981405CC5600CC2138 /* IBAResourceBundle.m in Sources */,
 				A7ACE49C1405CE1700CC2138 /* IBAStack.m in Sources */,
 				A7C05857140C771600339F5B /* IBAViewController.m in Sources */,
 				A7C05866140CA04000339F5B /* IBAFlipButton.m in Sources */,

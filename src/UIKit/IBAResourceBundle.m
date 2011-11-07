@@ -1,5 +1,5 @@
 //
-//  IBAThemeBundle.m
+//  IBAResourceBundle.m
 //  IttyBittyBits
 //
 //  Created by Oliver Jones on 25/08/11.
@@ -17,12 +17,12 @@
 //  See the License for the specific language governing permissions and
 //  limitations under the License.
 
-#import "IBAThemeBundle.h"
+#import "IBAResourceBundle.h"
 #import "../Foundation/IBAFoundation.h"
 
 #import "UIColor+IBAExtensions.h"
 
-@implementation IBAThemeBundle
+@implementation IBAResourceBundle
 {
     NSBundle *bundle;
     NSCache *cache;

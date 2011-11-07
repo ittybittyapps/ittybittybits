@@ -1,5 +1,5 @@
 //
-//  IBAThemeBundle.h
+//  IBAResourceBundle.h
 //  IttyBittyBits
 //
 //  Created by Oliver Jones on 25/08/11.
@@ -18,7 +18,7 @@
 //  limitations under the License.
 #import <UIKit/UIKit.h>
 
-@interface IBAThemeBundle : NSObject
+@interface IBAResourceBundle : NSObject
 
 - (BOOL)hasColorNamed:(NSString *)name;
 - (BOOL)hasImageNamed:(NSString *)name;
