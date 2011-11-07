@@ -152,7 +152,7 @@ static NSString * const kStructElementSeparators = @"\t ,|:;";
             }
             else if ([resource isKindOfClass:[NSString class]])
             {
-                size = CGSizeFromString((NSString *)resource);
+                size = [resource hasPrefix:@"$"] ? [self sizeNamed:[resource substringFromIndex:1]] : CGSizeFromString((NSString *)resource);
             }
             
             value = [NSValue valueWithBytes:&size objCType:@encode(CGSize)];
@@ -187,7 +187,7 @@ static NSString * const kStructElementSeparators = @"\t ,|:;";
             }
             else if ([resource isKindOfClass:[NSString class]])
             {
-                rect = CGRectFromString((NSString *)resource);
+                rect =  [resource hasPrefix:@"$"] ? [self rectNamed:[resource substringFromIndex:1]] : CGRectFromString((NSString *)resource);
             }
             
             value = [NSValue valueWithBytes:&rect objCType:@encode(CGRect)];
@@ -222,7 +222,7 @@ static NSString * const kStructElementSeparators = @"\t ,|:;";
             }
             else if ([resource isKindOfClass:[NSString class]])
             {
-                point = CGPointFromString((NSString *)resource);
+                point = [resource hasPrefix:@"$"] ? [self pointNamed:[resource substringFromIndex:1]] : CGPointFromString((NSString *)resource);
             }
             
             value = [NSValue valueWithBytes:&point objCType:@encode(CGPoint)];

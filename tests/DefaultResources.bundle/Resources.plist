@@ -14,10 +14,16 @@
 	<string>$colorHex</string>
 	<key>sizeAsString</key>
 	<string>{1,2}</string>
+	<key>sizeAsRedirect</key>
+	<string>$sizeAsString</string>
 	<key>pointAsString</key>
 	<string>{1,2}</string>
+	<key>pointAsRedirect</key>
+	<string>$pointAsString</string>
 	<key>rectAsString</key>
 	<string>{{1,2},{3,4}}</string>
+	<key>rectAsRedirect</key>
+	<string>$rectAsString</string>
 	<key>sizeAsDict</key>
 	<dict>
 		<key>Width</key>
