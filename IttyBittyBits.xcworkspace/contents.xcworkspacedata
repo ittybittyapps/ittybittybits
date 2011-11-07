@@ -16,13 +16,6 @@
    </FileRef>
    <Group
       location = "container:"
-      name = "Samples">
-      <FileRef
-         location = "group:samples/DebugConsole/DebugConsole.xcodeproj">
-      </FileRef>
-   </Group>
-   <Group
-      location = "container:"
       name = "Scripts">
       <FileRef
          location = "group:Makefile">
