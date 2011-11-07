@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@class IBACarouselViewSampleViewController;
-
 @interface IBACarouselViewSampleAppDelegate : NSObject <UIApplicationDelegate>
 
 @property (nonatomic, retain) IBOutlet UIWindow *window;
