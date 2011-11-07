@@ -20,12 +20,9 @@
 
 @interface IBAResourceBundle : NSObject
 
-- (BOOL)hasColorNamed:(NSString *)name;
-- (BOOL)hasImageNamed:(NSString *)name;
-- (BOOL)hasSizeNamed:(NSString *)name;
-- (BOOL)hasRectNamed:(NSString *)name;
-- (BOOL)hasPointNamed:(NSString *)name;
-- (BOOL)hasFontNamed:(NSString *)name;
+- (id)initWithBundleName:(NSString*)name;
+
+- (BOOL)hasResourceNamed:(NSString *)name;
 
 - (UIColor *)colorNamed:(NSString *)name;
 - (UIImage *)imageNamed:(NSString *)name;

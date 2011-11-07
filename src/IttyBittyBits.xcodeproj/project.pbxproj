@@ -45,6 +45,7 @@
 		A70D627C1467A2770097AF5E /* RootViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A70D627A1467A2770097AF5E /* RootViewController.xib */; };
 		A70D627F1467A28A0097AF5E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A70D627D1467A28A0097AF5E /* InfoPlist.strings */; };
 		A70D62801467A2E40097AF5E /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = A70D62821467A2E40097AF5E /* MainWindow.xib */; };
+		A70D62841467AF650097AF5E /* DefaultResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = A70D62831467AF650097AF5E /* DefaultResources.bundle */; };
 		A713975313F4E5AF00CE8FF2 /* IBANetworkReachability.h in Headers */ = {isa = PBXBuildFile; fileRef = A713975113F4E5AF00CE8FF2 /* IBANetworkReachability.h */; };
 		A713975413F4E5AF00CE8FF2 /* IBANetworkReachability.m in Sources */ = {isa = PBXBuildFile; fileRef = A713975213F4E5AF00CE8FF2 /* IBANetworkReachability.m */; };
 		A713975713F4F62C00CE8FF2 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A713975613F4F62C00CE8FF2 /* SystemConfiguration.framework */; };
@@ -283,8 +284,7 @@
 		A7B6922B137D13E200E379F3 /* NSNumber+IBAExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = A7B69229137D13E000E379F3 /* NSNumber+IBAExtensions.m */; };
 		A7C05856140C771600339F5B /* IBAViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = A7C05854140C771600339F5B /* IBAViewController.h */; };
 		A7C05857140C771600339F5B /* IBAViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A7C05855140C771600339F5B /* IBAViewController.m */; };
-		A7C0585D140C888600339F5B /* IBAThemeBundleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A7C0585A140C887C00339F5B /* IBAThemeBundleTests.m */; };
-		A7C0585F140C893C00339F5B /* IBAThemeBundleTests.bundle in Resources */ = {isa = PBXBuildFile; fileRef = A7C0585E140C893C00339F5B /* IBAThemeBundleTests.bundle */; };
+		A7C0585D140C888600339F5B /* IBAResourceBundleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A7C0585A140C887C00339F5B /* IBAResourceBundleTests.m */; };
 		A7C05865140CA04000339F5B /* IBAFlipButton.h in Headers */ = {isa = PBXBuildFile; fileRef = A7C05863140CA04000339F5B /* IBAFlipButton.h */; };
 		A7C05866140CA04000339F5B /* IBAFlipButton.m in Sources */ = {isa = PBXBuildFile; fileRef = A7C05864140CA04000339F5B /* IBAFlipButton.m */; };
 		A7C0DBDF13B1705E00860296 /* UIView+IBAExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = A7C0DBDD13B1705E00860296 /* UIView+IBAExtensions.h */; };
@@ -386,6 +386,7 @@
 		A70D627B1467A2770097AF5E /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/RootViewController.xib; sourceTree = "<group>"; };
 		A70D627E1467A28A0097AF5E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		A70D62811467A2E40097AF5E /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
+		A70D62831467AF650097AF5E /* DefaultResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = DefaultResources.bundle; path = ../DefaultResources.bundle; sourceTree = "<group>"; };
 		A713975113F4E5AF00CE8FF2 /* IBANetworkReachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBANetworkReachability.h; sourceTree = "<group>"; };
 		A713975213F4E5AF00CE8FF2 /* IBANetworkReachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IBANetworkReachability.m; sourceTree = "<group>"; };
 		A713975613F4F62C00CE8FF2 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
@@ -624,9 +625,8 @@
 		A7B69229137D13E000E379F3 /* NSNumber+IBAExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSNumber+IBAExtensions.m"; path = "Foundation/NSNumber+IBAExtensions.m"; sourceTree = SOURCE_ROOT; };
 		A7C05854140C771600339F5B /* IBAViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBAViewController.h; sourceTree = "<group>"; };
 		A7C05855140C771600339F5B /* IBAViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IBAViewController.m; sourceTree = "<group>"; };
-		A7C05859140C887C00339F5B /* IBAThemeBundleTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBAThemeBundleTests.h; sourceTree = "<group>"; };
-		A7C0585A140C887C00339F5B /* IBAThemeBundleTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IBAThemeBundleTests.m; sourceTree = "<group>"; };
-		A7C0585E140C893C00339F5B /* IBAThemeBundleTests.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = IBAThemeBundleTests.bundle; sourceTree = "<group>"; };
+		A7C05859140C887C00339F5B /* IBAResourceBundleTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBAResourceBundleTests.h; sourceTree = "<group>"; };
+		A7C0585A140C887C00339F5B /* IBAResourceBundleTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IBAResourceBundleTests.m; sourceTree = "<group>"; };
 		A7C05860140C9F7D00339F5B /* IBACarouselView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBACarouselView.h; sourceTree = "<group>"; };
 		A7C05861140C9F7D00339F5B /* IBACarouselView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IBACarouselView.m; sourceTree = "<group>"; };
 		A7C05863140CA04000339F5B /* IBAFlipButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = IBAFlipButton.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
@@ -1024,11 +1024,11 @@
 		A7808BD413D2D73400F76DB1 /* UIKit */ = {
 			isa = PBXGroup;
 			children = (
-				A7C0585E140C893C00339F5B /* IBAThemeBundleTests.bundle */,
+				A70D62831467AF650097AF5E /* DefaultResources.bundle */,
 				A7808BD513D2D76A00F76DB1 /* UIColor+IBAExtensionsTests.h */,
 				A7808BD613D2D76A00F76DB1 /* UIColor+IBAExtensionsTests.m */,
-				A7C05859140C887C00339F5B /* IBAThemeBundleTests.h */,
-				A7C0585A140C887C00339F5B /* IBAThemeBundleTests.m */,
+				A7C05859140C887C00339F5B /* IBAResourceBundleTests.h */,
+				A7C0585A140C887C00339F5B /* IBAResourceBundleTests.m */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -1649,7 +1649,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A7B4DAD613679F5E00543D61 /* InfoPlist.strings in Resources */,
-				A7C0585F140C893C00339F5B /* IBAThemeBundleTests.bundle in Resources */,
+				A70D62841467AF650097AF5E /* DefaultResources.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1790,7 +1790,7 @@
 				A7808BD713D2D76A00F76DB1 /* UIColor+IBAExtensionsTests.m in Sources */,
 				A78065631404DCED0075FDA7 /* NSString+IBAExtensionsTests.m in Sources */,
 				A7ACE49F140637C900CC2138 /* IBAStackTests.m in Sources */,
-				A7C0585D140C888600339F5B /* IBAThemeBundleTests.m in Sources */,
+				A7C0585D140C888600339F5B /* IBAResourceBundleTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

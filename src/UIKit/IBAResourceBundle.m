@@ -22,6 +22,14 @@
 
 #import "UIColor+IBAExtensions.h"
 
+static NSString * const kSizeWidthKey = @"width";
+static NSString * const kSizeHeightKey = @"height";
+static NSString * const kPointXKey = @"x";
+static NSString * const kPointYKey = @"y";
+static NSString * const kRectSizeKey = @"size";
+static NSString * const kRectOriginKey = @"origin";
+static NSString * const kStructElementSeparators = @"\t ,|:;";
+
 @implementation IBAResourceBundle
 {
     NSBundle *bundle;
@@ -45,7 +53,7 @@
             IBALogError(@"Unable to find bundle named '%@' (%@).", name, path);
         }
         
-        NSString *resourcePlistPath = [[NSBundle mainBundle] pathForResource:@"Resources" ofType:@"plist"];
+        NSString *resourcePlistPath = [bundle pathForResource:@"Resources" ofType:@"plist"];
         resources = [[NSDictionary dictionaryWithContentsOfFile:resourcePlistPath] retain];
         if (resources == nil)
         {
@@ -75,9 +83,10 @@
 
 - (UIColor *)colorNamed:(NSString *)name
 {
-    if ([self hasColorNamed:name])
+    UIColor *color = nil;
+    if ([self hasResourceNamed:name])
     {
-        UIColor *color = (UIColor  *)[cache objectForKey:name];
+        color = (UIColor  *)[cache objectForKey:name];
         if (color == nil)
         {
             id<NSObject> colorResource = [resources valueForKey:name];
@@ -89,28 +98,34 @@
             {
                 NSString *colorAsString = (NSString *)colorResource;
                 
-                // try using HTML style string encoding first
-                color = [UIColor ibaColorWithHTMLHex:colorAsString];
-                if (color == nil)
+                // Handle property redirects.
+                if ([colorAsString hasPrefix:@"$"])
                 {
-                    // try css rgb() style encoding now.
-                    color = [UIColor ibaColorWithCSSRGB:colorAsString];
-                    
+                    color = [self colorNamed:[colorAsString substringFromIndex:1]];
+                }
+                else
+                {
+                    // try using HTML style string encoding first
+                    color = [UIColor ibaColorWithHTMLHex:colorAsString];
                     if (color == nil)
                     {
-                        // try matching against predefined CSS color names.
-                        color = [UIColor ibaColorWithCSSName:colorAsString];
+                        // try css rgb() style encoding now.
+                        color = [UIColor ibaColorWithCSSRGB:colorAsString];
+                        
+                        if (color == nil)
+                        {
+                            // try matching against predefined CSS color names.
+                            color = [UIColor ibaColorWithCSSName:colorAsString];
+                        }
                     }
                 }
             }
             
             [cache setObject:color forKey:name];
         }
-        
-        return color;
     }
     
-    return nil;
+    return color;
 }
 
 - (UIImage *)imageNamed:(NSString *)name
@@ -120,16 +135,107 @@
 
 - (CGSize)sizeNamed:(NSString *)name
 {
-    return CGSizeZero;
+    CGSize size = CGSizeZero;
+    if ([self hasResourceNamed:name])
+    {
+        NSValue *value = [cache objectForKey:name];
+        if (value == nil)
+        {
+            id resource = [resources valueForKey:name];
+            if ([resource isKindOfClass:[NSDictionary class]])
+            {
+                if (CGSizeMakeWithDictionaryRepresentation((CFDictionaryRef)resource, &size) == NO)
+                {
+                    IBALogError(@"Failed to make CGSize from dictionary representation for resource named '%@'.", name);
+                    size = CGSizeZero;
+                }
+            }
+            else if ([resource isKindOfClass:[NSString class]])
+            {
+                size = CGSizeFromString((NSString *)resource);
+            }
+            
+            value = [NSValue valueWithBytes:&size objCType:@encode(CGSize)];
+            [cache setObject:value forKey:name cost:sizeof(CGSizeZero)];
+        }
+        else
+        {
+            [value getValue:&size];
+        }
+    }
+    
+    return size;
 }
 
 - (CGRect)rectNamed:(NSString *)name
 {
-    return CGRectZero;
+    CGRect rect = CGRectZero;
+    
+    if ([self hasResourceNamed:name])
+    {
+        NSValue *value = [cache objectForKey:name];
+        if (value == nil)
+        {
+            id resource = [resources valueForKey:name];
+            if ([resource isKindOfClass:[NSDictionary class]])
+            {
+                if (CGRectMakeWithDictionaryRepresentation((CFDictionaryRef)resource, &rect) == NO)
+                {
+                    IBALogError(@"Failed to make CGRect from dictionary representation for resource named '%@'.", name);
+                    rect = CGRectZero;
+                }
+            }
+            else if ([resource isKindOfClass:[NSString class]])
+            {
+                rect = CGRectFromString((NSString *)resource);
+            }
+            
+            value = [NSValue valueWithBytes:&rect objCType:@encode(CGRect)];
+            [cache setObject:value forKey:name cost:sizeof(CGRect)];
+        }
+        else
+        {
+            [value getValue:&rect];
+        }
+    }
+
+    return rect;
 }
 
 - (CGPoint)pointNamed:(NSString *)name
 {
+    if ([self hasResourceNamed:name])
+    {
+        CGPoint point = CGPointZero;
+        
+        NSValue *value = [cache objectForKey:name];
+        if (value == nil)
+        {
+            id resource = [resources valueForKey:name];
+            if ([resource isKindOfClass:[NSDictionary class]])
+            {
+                if (CGPointMakeWithDictionaryRepresentation((CFDictionaryRef)resource, &point) == NO)
+                {
+                    IBALogError(@"Failed to make CGPoint from dictionary representation for resource named '%@'.", name);
+                    point = CGPointZero;
+                }
+            }
+            else if ([resource isKindOfClass:[NSString class]])
+            {
+                point = CGPointFromString((NSString *)resource);
+            }
+            
+            value = [NSValue valueWithBytes:&point objCType:@encode(CGPoint)];
+            [cache setObject:value forKey:name cost:sizeof(CGPoint)];
+        }
+        else
+        {
+            [value getValue:&point];
+        }
+        
+        return point;
+    }
+
     return CGPointZero;
 }
 
@@ -138,34 +244,10 @@
     return nil;
 }
 
-- (BOOL)hasColorNamed:(NSString *)name
+- (BOOL)hasResourceNamed:(NSString *)name
 {
     return [resources valueForKey:name] != nil;
-}
-
-- (BOOL)hasImageNamed:(NSString *)name
-{
-    return NO;
-}
-
-- (BOOL)hasSizeNamed:(NSString *)name
-{
-    return NO;
-}
-
-- (BOOL)hasRectNamed:(NSString *)name
-{
-    return NO;
-}
-
-- (BOOL)hasPointNamed:(NSString *)name
-{
-    return NO;
-}
-
-- (BOOL)hasFontNamed:(NSString *)name
-{
-    return NO;
+    // TODO: deal with files.
 }
 
 @end

@@ -60,7 +60,7 @@ IBA_SYNTHESIZE_SINGLETON_FOR_CLASS(IBAResourceManager, sharedInstance);
 {
     for (IBAResourceBundle *bundle in bundleStack) 
     {
-        if ([bundle hasColorNamed:name])
+        if ([bundle hasResourceNamed:name])
         {
             return [bundle colorNamed:name];
         }
@@ -73,7 +73,7 @@ IBA_SYNTHESIZE_SINGLETON_FOR_CLASS(IBAResourceManager, sharedInstance);
 {
     for (IBAResourceBundle *bundle in bundleStack) 
     {
-        if ([bundle hasImageNamed:name])
+        if ([bundle hasResourceNamed:name])
         {
             return [bundle imageNamed:name];
         }
@@ -86,7 +86,7 @@ IBA_SYNTHESIZE_SINGLETON_FOR_CLASS(IBAResourceManager, sharedInstance);
 {
     for (IBAResourceBundle *bundle in bundleStack) 
     {
-        if ([bundle hasFontNamed:name])
+        if ([bundle hasResourceNamed:name])
         {
             return [bundle fontNamed:name];
         }
@@ -99,7 +99,7 @@ IBA_SYNTHESIZE_SINGLETON_FOR_CLASS(IBAResourceManager, sharedInstance);
 {
     for (IBAResourceBundle *bundle in bundleStack) 
     {
-        if ([bundle hasSizeNamed:name])
+        if ([bundle hasResourceNamed:name])
         {
             return [bundle sizeNamed:name];
         }
@@ -112,7 +112,7 @@ IBA_SYNTHESIZE_SINGLETON_FOR_CLASS(IBAResourceManager, sharedInstance);
 {
     for (IBAResourceBundle *bundle in bundleStack) 
     {
-        if ([bundle hasRectNamed:name])
+        if ([bundle hasResourceNamed:name])
         {
             return [bundle rectNamed:name];
         }
@@ -125,7 +125,7 @@ IBA_SYNTHESIZE_SINGLETON_FOR_CLASS(IBAResourceManager, sharedInstance);
 {
     for (IBAResourceBundle *bundle in bundleStack) 
     {
-        if ([bundle hasPointNamed:name])
+        if ([bundle hasResourceNamed:name])
         {
             return [bundle pointNamed:name];
         }

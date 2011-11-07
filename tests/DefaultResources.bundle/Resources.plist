@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>colorHex</key>
+	<string>112233</string>
+	<key>colorNumber</key>
+	<integer>3346722</integer>
+	<key>colorCSSRGB</key>
+	<string>rgb(22, 33, 44)</string>
+	<key>colorCSSName</key>
+	<string>green</string>
+	<key>colorRedirect</key>
+	<string>$colorHex</string>
+	<key>sizeAsString</key>
+	<string>{1,2}</string>
+	<key>pointAsString</key>
+	<string>{1,2}</string>
+	<key>rectAsString</key>
+	<string>{{1,2},{3,4}}</string>
+	<key>sizeAsDict</key>
+	<dict>
+		<key>Width</key>
+		<integer>3</integer>
+		<key>Height</key>
+		<integer>4</integer>
+	</dict>
+	<key>pointAsDict</key>
+	<dict>
+		<key>X</key>
+		<integer>3</integer>
+		<key>Y</key>
+		<integer>4</integer>
+	</dict>
+	<key>rectAsDict</key>
+	<dict>
+		<key>X</key>
+		<integer>5</integer>
+		<key>Y</key>
+		<integer>6</integer>
+		<key>Width</key>
+		<integer>7</integer>
+		<key>Height</key>
+		<integer>8</integer>
+	</dict>
+</dict>
+</plist>

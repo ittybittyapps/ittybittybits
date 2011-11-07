@@ -8,6 +8,6 @@
 
 #import <GHUnitIOS/GHUnit.h>
 
-@interface IBAThemeBundleTests : GHTestCase
+@interface IBAResourceBundleTests : GHTestCase
 
 @end
