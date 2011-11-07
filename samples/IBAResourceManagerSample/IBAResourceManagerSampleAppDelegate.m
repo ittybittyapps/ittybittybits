@@ -1,14 +1,14 @@
 //
-//  IBAThemeManagerSampleAppDelegate.m
-//  IBAThemeManagerSample
+//  IBAResourceManagerSampleAppDelegate.m
+//  IBAResourceManagerSample
 //
 //  Created by Oliver Jones on 7/11/11.
 //  Copyright 2011 Deeper Design. All rights reserved.
 //
 
-#import "IBAThemeManagerSampleAppDelegate.h"
+#import "IBAResourceManagerSampleAppDelegate.h"
 
-@implementation IBAThemeManagerSampleAppDelegate
+@implementation IBAResourceManagerSampleAppDelegate
 
 @synthesize window = _window;
 

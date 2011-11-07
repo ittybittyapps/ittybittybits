@@ -1,6 +1,6 @@
 //
-//  IBAThemeManagerSampleAppDelegate.h
-//  IBAThemeManagerSample
+//  IBAResourceManagerSampleAppDelegate.h
+//  IBAResourceManagerSample
 //
 //  Created by Oliver Jones on 7/11/11.
 //  Copyright 2011 Deeper Design. All rights reserved.

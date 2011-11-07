@@ -15,7 +15,7 @@
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "A70D6205146797470097AF5E"
                BuildableName = "IBAThemeManagerSample.app"
-               BlueprintName = "IBAThemeManagerSample"
+               BlueprintName = "IBAResourceManagerSample"
                ReferencedContainer = "container:IttyBittyBits.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -33,7 +33,7 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "A70D6205146797470097AF5E"
             BuildableName = "IBAThemeManagerSample.app"
-            BlueprintName = "IBAThemeManagerSample"
+            BlueprintName = "IBAResourceManagerSample"
             ReferencedContainer = "container:IttyBittyBits.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -51,7 +51,7 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "A70D6205146797470097AF5E"
             BuildableName = "IBAThemeManagerSample.app"
-            BlueprintName = "IBAThemeManagerSample"
+            BlueprintName = "IBAResourceManagerSample"
             ReferencedContainer = "container:IttyBittyBits.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -69,7 +69,7 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "A70D6205146797470097AF5E"
             BuildableName = "IBAThemeManagerSample.app"
-            BlueprintName = "IBAThemeManagerSample"
+            BlueprintName = "IBAResourceManagerSample"
             ReferencedContainer = "container:IttyBittyBits.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
