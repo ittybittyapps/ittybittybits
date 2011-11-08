@@ -22,19 +22,27 @@
 
 #import "UIColor+IBAExtensions.h"
 
-static NSString * const kSizeWidthKey = @"width";
-static NSString * const kSizeHeightKey = @"height";
-static NSString * const kPointXKey = @"x";
-static NSString * const kPointYKey = @"y";
-static NSString * const kRectSizeKey = @"size";
-static NSString * const kRectOriginKey = @"origin";
-static NSString * const kStructElementSeparators = @"\t ,|:;";
+@interface IBAResourceBundle ()
++ (NSArray *)imageExtensions;
+- (NSString *)resolveResourceName:(NSString *)name;
+@end
 
 @implementation IBAResourceBundle
 {
     NSBundle *bundle;
     NSCache *cache;
     NSDictionary *resources;
+}
+
++ (NSArray *)imageExtensions
+{
+    static NSArray *extensions = nil;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        extensions = IBA_NSARRAY(@"png", @"PNG", @"jpg", @"JPG", @"jpeg", @"JPEG");
+    });
+    
+    return extensions;
 }
 
 /*!
@@ -81,10 +89,131 @@ static NSString * const kStructElementSeparators = @"\t ,|:;";
     [super dealloc];
 }
 
+- (NSString *)resolveResourceName:(NSString *)name
+{
+    int count = 0;
+    do {
+        id object = [resources objectForKey:name];
+        if (object && [object isKindOfClass:[NSString class]])
+        {
+            if ([object hasPrefix:@"$"])
+            {
+                name = [object substringFromIndex:1];
+            }
+            else
+            {
+                name = object;
+                break;
+            }
+        }
+    }
+    while (++count < 100);
+        
+    if (count >= 100)
+    {
+        IBALogError(@"Broke out of possible resource redirection loop for resource named: %@", name);
+    }
+
+    return name;
+}
+
+- (BOOL)hasResourceNamed:(NSString *)name
+{
+    return [resources objectForKey:[self resolveResourceName:name]] != nil;
+}
+
+- (NSString *)stringNamed:(NSString *)name
+{
+    NSString *string = nil;
+    name = [self resolveResourceName:name];
+    if (name)
+    {
+        string = (NSString  *)[cache objectForKey:name];
+        if (string == nil)
+        {
+            id resource = [resources valueForKey:name];
+            if ([resource isKindOfClass:[NSString class]])
+            {
+                string = resource;
+            }
+            else
+            {
+                string = [resource description];
+            }
+
+            [cache setObject:string forKey:name cost:[string lengthOfBytesUsingEncoding:NSUnicodeStringEncoding]];
+        }
+    }
+    
+    return string;
+}
+
+- (NSData *)dataNamed:(NSString *)name
+{
+    NSData *data = nil;
+    name = [self resolveResourceName:name];
+    if (name)
+    {
+        id resource = [resources objectForKey:name];
+        if ([resource isKindOfClass:[NSData class]])
+        {
+            data = resource;
+        }
+        else if ([resource isKindOfClass:[NSString class]])
+        {
+            NSString *path = [bundle pathForResource:resource ofType:nil];
+            if (path)
+            {
+                data = [NSData dataWithContentsOfMappedFile:path];
+            }
+            else
+            {
+                IBALogError(@"Unable to load NSData resource named '%@' from file: %@", name, path);
+            }
+        }
+    }
+    
+    return data;
+}
+
+- (UIImage *)imageNamed:(NSString *)name
+{
+    CGFloat scale = [[UIScreen mainScreen] scale];
+    
+    UIImage *image = nil;
+    NSString *resource = [self stringNamed:name];    
+    resource = resource ? resource : name;
+
+    if (resource)
+    {
+        NSArray *extentions = [[self class] imageExtensions];
+        NSString *pathExt = [resource pathExtension];
+        if (pathExt && [pathExt ibaNotBlank])
+        {
+            extentions = IBA_NSARRAY(pathExt);
+        }
+        
+        NSString *pathWithoutExt = [resource stringByDeletingPathExtension];
+        
+        for (NSString *ext in extentions) 
+        {
+            NSString *formattedPath = [NSString stringWithFormat:@"%@%@", pathWithoutExt, (scale == 2.0 ? @"@2x" : @"")]; 
+            NSString *path = [bundle pathForResource:formattedPath ofType:ext];    
+            if (path)
+            {
+                image = [UIImage imageWithContentsOfFile:path];
+            }
+        }
+    }
+    
+    return image;
+}
+
 - (UIColor *)colorNamed:(NSString *)name
 {
     UIColor *color = nil;
-    if ([self hasResourceNamed:name])
+    name = [self resolveResourceName:name];
+    if (name)
     {
         color = (UIColor  *)[cache objectForKey:name];
         if (color == nil)
@@ -128,15 +257,11 @@ static NSString * const kStructElementSeparators = @"\t ,|:;";
     return color;
 }
 
-- (UIImage *)imageNamed:(NSString *)name
-{
-    return nil;
-}
-
 - (CGSize)sizeNamed:(NSString *)name
 {
-    CGSize size = CGSizeZero;
-    if ([self hasResourceNamed:name])
+    CGSize size = CGSizeZero;    
+    name = [self resolveResourceName:name];
+    if (name)
     {
         NSValue *value = [cache objectForKey:name];
         if (value == nil)
@@ -152,7 +277,7 @@ static NSString * const kStructElementSeparators = @"\t ,|:;";
             }
             else if ([resource isKindOfClass:[NSString class]])
             {
-                size = [resource hasPrefix:@"$"] ? [self sizeNamed:[resource substringFromIndex:1]] : CGSizeFromString((NSString *)resource);
+                size = CGSizeFromString((NSString *)resource);
             }
             
             value = [NSValue valueWithBytes:&size objCType:@encode(CGSize)];
@@ -170,8 +295,8 @@ static NSString * const kStructElementSeparators = @"\t ,|:;";
 - (CGRect)rectNamed:(NSString *)name
 {
     CGRect rect = CGRectZero;
-    
-    if ([self hasResourceNamed:name])
+    name = [self resolveResourceName:name];
+    if (name)
     {
         NSValue *value = [cache objectForKey:name];
         if (value == nil)
@@ -187,7 +312,7 @@ static NSString * const kStructElementSeparators = @"\t ,|:;";
             }
             else if ([resource isKindOfClass:[NSString class]])
             {
-                rect =  [resource hasPrefix:@"$"] ? [self rectNamed:[resource substringFromIndex:1]] : CGRectFromString((NSString *)resource);
+                rect =  CGRectFromString((NSString *)resource);
             }
             
             value = [NSValue valueWithBytes:&rect objCType:@encode(CGRect)];
@@ -204,10 +329,10 @@ static NSString * const kStructElementSeparators = @"\t ,|:;";
 
 - (CGPoint)pointNamed:(NSString *)name
 {
-    if ([self hasResourceNamed:name])
+    CGPoint point = CGPointZero;
+    name = [self resolveResourceName:name];
+    if (name)
     {
-        CGPoint point = CGPointZero;
-        
         NSValue *value = [cache objectForKey:name];
         if (value == nil)
         {
@@ -222,7 +347,7 @@ static NSString * const kStructElementSeparators = @"\t ,|:;";
             }
             else if ([resource isKindOfClass:[NSString class]])
             {
-                point = [resource hasPrefix:@"$"] ? [self pointNamed:[resource substringFromIndex:1]] : CGPointFromString((NSString *)resource);
+                point = CGPointFromString((NSString *)resource);
             }
             
             value = [NSValue valueWithBytes:&point objCType:@encode(CGPoint)];
@@ -232,22 +357,9 @@ static NSString * const kStructElementSeparators = @"\t ,|:;";
         {
             [value getValue:&point];
         }
-        
-        return point;
     }
 
-    return CGPointZero;
-}
-
-- (UIFont *)fontNamed:(NSString *)font
-{
-    return nil;
-}
-
-- (BOOL)hasResourceNamed:(NSString *)name
-{
-    return [resources valueForKey:name] != nil;
-    // TODO: deal with files.
+    return point;
 }
 
 @end

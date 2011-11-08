@@ -49,5 +49,15 @@
 		<key>Height</key>
 		<integer>8</integer>
 	</dict>
+	<key>string</key>
+	<string>this is a string</string>
+	<key>stringRedirect</key>
+	<string>$string</string>
+	<key>data</key>
+	<data>cmF3ZGF0YQ==</data>
+	<key>dataRedirect</key>
+	<string>$data</string>
+	<key>dataFile</key>
+	<string>data.txt</string>
 </dict>
 </plist>

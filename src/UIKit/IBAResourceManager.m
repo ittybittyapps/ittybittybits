@@ -56,82 +56,26 @@ IBA_SYNTHESIZE_SINGLETON_FOR_CLASS(IBAResourceManager, sharedInstance);
     [bundleStack popObject];
 }
 
-- (UIColor *)colorNamed:(NSString *)name
-{
-    for (IBAResourceBundle *bundle in bundleStack) 
-    {
-        if ([bundle hasResourceNamed:name])
-        {
-            return [bundle colorNamed:name];
-        }
-    }
-    
-    return nil;
+#define X(name, type, default) \
+- (type)name##Named:(NSString *)name \
+{ \
+    for (IBAResourceBundle *bundle in bundleStack) \
+    { \
+        if ([bundle hasResourceNamed:name]) { \
+            type resource = (type)[bundle name##Named:name]; \
+            return resource; \
+        } \
+    } \
+    return (default); \
 }
 
-- (UIImage *)imageNamed:(NSString *)name
-{
-    for (IBAResourceBundle *bundle in bundleStack) 
-    {
-        if ([bundle hasResourceNamed:name])
-        {
-            return [bundle imageNamed:name];
-        }
-    }
-    
-    return nil;
-}
-
-- (UIFont *)fontNamed:(NSString *)name
-{
-    for (IBAResourceBundle *bundle in bundleStack) 
-    {
-        if ([bundle hasResourceNamed:name])
-        {
-            return [bundle fontNamed:name];
-        }
-    }
-    
-    return nil;
-}
-
-- (CGSize)sizeNamed:(NSString *)name
-{
-    for (IBAResourceBundle *bundle in bundleStack) 
-    {
-        if ([bundle hasResourceNamed:name])
-        {
-            return [bundle sizeNamed:name];
-        }
-    }
-    
-    return CGSizeZero;
-}
-
-- (CGRect)rectNamed:(NSString *)name
-{
-    for (IBAResourceBundle *bundle in bundleStack) 
-    {
-        if ([bundle hasResourceNamed:name])
-        {
-            return [bundle rectNamed:name];
-        }
-    }
-    
-    return CGRectZero;
-}
-
-- (CGPoint)pointNamed:(NSString *)name
-{
-    for (IBAResourceBundle *bundle in bundleStack) 
-    {
-        if ([bundle hasResourceNamed:name])
-        {
-            return [bundle pointNamed:name];
-        }
-    }
-    
-    return CGPointZero;
-}
+X(color, UIColor *, nil)
+X(image, UIImage *, nil)
+X(size, CGSize, CGSizeZero)
+X(rect, CGRect, CGRectZero)
+X(point, CGPoint, CGPointZero)
+X(string, NSString *, nil)
+X(data, NSData *, nil)
+#undef X
 
 @end

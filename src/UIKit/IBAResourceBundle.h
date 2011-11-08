@@ -20,16 +20,16 @@
 
 @interface IBAResourceBundle : NSObject
 
-- (id)initWithBundleName:(NSString*)name;
-
+- (id)initWithBundleName:(NSString *)name;
 - (BOOL)hasResourceNamed:(NSString *)name;
 
 - (UIColor *)colorNamed:(NSString *)name;
-- (UIImage *)imageNamed:(NSString *)name;
-- (UIFont *)fontNamed:(NSString *)font;
 - (CGSize)sizeNamed:(NSString *)name;
 - (CGRect)rectNamed:(NSString *)name;
 - (CGPoint)pointNamed:(NSString *)name;
+- (NSString *)stringNamed:(NSString *)name;
+- (NSData *)dataNamed:(NSString *)name;
+- (UIImage *)imageNamed:(NSString *)name;
 
 @end
 

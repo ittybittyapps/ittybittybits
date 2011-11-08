@@ -31,16 +31,17 @@
 - (void)pushResourceBundle:(IBAResourceBundle *)bundle;
 - (void)popResourceBundle;
 
-- (UIColor *)colorNamed:(NSString *)name;
 - (UIImage *)imageNamed:(NSString *)name;
 - (CGSize)sizeNamed:(NSString *)name;
 - (CGRect)rectNamed:(NSString *)name;
+- (UIColor *)colorNamed:(NSString *)name;
+// gradients?
+- (CGSize)sizeNamed:(NSString *)name;
+- (CGRect)rectNamed:(NSString *)name;
 - (CGPoint)pointNamed:(NSString *)name;
-- (UIFont *)fontNamed:(NSString *)name;
-
-// gradients
-// variable references
-// stop reference cycles
+- (NSString *)stringNamed:(NSString *)name;
+- (NSData *)dataNamed:(NSString *)name;
+- (UIImage *)imageNamed:(NSString *)name;
 
 
 

@@ -380,7 +380,7 @@
 		A70D61FB146795960097AF5E /* IBAResourceManagerSampleAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IBAResourceManagerSampleAppDelegate.m; sourceTree = "<group>"; };
 		A70D61FE146795960097AF5E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		A70D61FF146795960097AF5E /* README.markdown */ = {isa = PBXFileReference; lastKnownFileType = text; path = README.markdown; sourceTree = "<group>"; };
-		A70D6268146797470097AF5E /* IBAThemeManagerSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IBAThemeManagerSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A70D6268146797470097AF5E /* IBAResourceManagerSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IBAResourceManagerSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A70D627214679FA00097AF5E /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
 		A70D627314679FA00097AF5E /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
 		A70D627B1467A2770097AF5E /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/RootViewController.xib; sourceTree = "<group>"; };
@@ -1159,7 +1159,7 @@
 				A7B4DACA13679F5D00543D61 /* IttyBittyBitsTests.app */,
 				A7345F68140CC026005ED52E /* IBAFlipButtonSample.app */,
 				A73C53CC140F19D6003CE7CF /* IBACarouselViewSample.app */,
-				A70D6268146797470097AF5E /* IBAThemeManagerSample.app */,
+				A70D6268146797470097AF5E /* IBAResourceManagerSample.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -1432,7 +1432,7 @@
 			);
 			name = IBAResourceManagerSample;
 			productName = IBACarouselViewSample;
-			productReference = A70D6268146797470097AF5E /* IBAThemeManagerSample.app */;
+			productReference = A70D6268146797470097AF5E /* IBAResourceManagerSample.app */;
 			productType = "com.apple.product-type.application";
 		};
 		A7345F67140CC026005ED52E /* IBAFlipButtonSample */ = {

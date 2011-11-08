@@ -136,4 +136,29 @@
     GHAssertEquals(rectAsString, rectAsRedirect, @"");
 }
 
+- (void)testStrings
+{
+    NSString *string = [bundle stringNamed:@"string"];
+    NSString *stringRedirect = [bundle stringNamed:@"stringRedirect"];
+    
+    GHAssertNotNil(string, @"");
+    GHAssertNotNil(stringRedirect, @"");
+    GHAssertEqualStrings(string, stringRedirect, @"");
+}
+
+- (void)testData
+{
+    NSData *data = [bundle dataNamed:@"data"];
+    NSData *dataRedirect = [bundle dataNamed:@"dataRedirect"];
+    NSData *dataFile = [bundle dataNamed:@"dataFile"];
+    
+    GHAssertNotNil(data, @"");
+    GHAssertNotNil(dataRedirect, @"");
+    GHAssertNotNil(dataFile, @"");
+    
+    GHAssertTrue([data isEqualToData:dataRedirect], @"");
+    
+    GHAssertTrue([[[[NSString alloc] initWithBytes:[dataFile bytes] length:[dataFile length] encoding:NSUTF8StringEncoding] autorelease] hasPrefix:@"This is a test data file."], @"");
+}
+
 @end
