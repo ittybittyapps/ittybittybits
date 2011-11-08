@@ -8,9 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
-@interface RootViewController : UIViewController
+@interface RootViewController : IBAViewController
 
 @property (nonatomic, retain) IBOutlet UILabel *label;
 @property (nonatomic, retain) IBOutlet UIImageView *imageView;
+
++ (id)controller;
+
+- (IBAction)buttonPressed:(id)sender forEvent:(UIEvent*)event;
 
 @end

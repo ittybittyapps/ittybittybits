@@ -39,10 +39,15 @@
     static NSArray *extensions = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        extensions = IBA_NSARRAY(@"png", @"PNG", @"jpg", @"JPG", @"jpeg", @"JPEG");
+        extensions = [IBA_NSARRAY(@"png", @"PNG", @"jpg", @"JPG", @"jpeg", @"JPEG") retain];
     });
     
     return extensions;
+}
+
++ (id)bundleNamed:(NSString *)name
+{
+    return [[[self alloc] initWithBundleName:name] autorelease];
 }
 
 /*!
@@ -102,7 +107,6 @@
             }
             else
             {
-                name = object;
                 break;
             }
         }
@@ -141,7 +145,10 @@
                 string = [resource description];
             }
 
-            [cache setObject:string forKey:name cost:[string lengthOfBytesUsingEncoding:NSUnicodeStringEncoding]];
+            if (string)
+            {
+                [cache setObject:string forKey:name cost:[string lengthOfBytesUsingEncoding:NSUnicodeStringEncoding]];
+            }
         }
     }
     
@@ -227,30 +234,28 @@
             {
                 NSString *colorAsString = (NSString *)colorResource;
                 
-                // Handle property redirects.
-                if ([colorAsString hasPrefix:@"$"])
+                // try matching against predefined CSS color names.
+                color = [UIColor ibaColorWithCSSName:colorAsString];
+                if (color == nil)
                 {
-                    color = [self colorNamed:[colorAsString substringFromIndex:1]];
-                }
-                else
-                {
-                    // try using HTML style string encoding first
-                    color = [UIColor ibaColorWithHTMLHex:colorAsString];
+                    // try css rgb() style encoding
+                    color = [UIColor ibaColorWithCSSRGB:colorAsString];
                     if (color == nil)
                     {
-                        // try css rgb() style encoding now.
-                        color = [UIColor ibaColorWithCSSRGB:colorAsString];
-                        
+                        // try using HTML style string encoding
+                        color = [UIColor ibaColorWithHTMLHex:colorAsString];
                         if (color == nil)
                         {
-                            // try matching against predefined CSS color names.
-                            color = [UIColor ibaColorWithCSSName:colorAsString];
+                            IBALogError(@"Failed to load UIColor resource with name: %@", name);
                         }
                     }
                 }
             }
-            
-            [cache setObject:color forKey:name];
+
+            if (color)
+            {
+                [cache setObject:color forKey:name];
+            }
         }
     }
     

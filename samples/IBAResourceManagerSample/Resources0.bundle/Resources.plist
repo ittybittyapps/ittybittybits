@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>labelTextColor</key>
+	<string>red</string>
+	<key>labelBackgroundColor</key>
+	<string>rgb(50%, 50%, 50%)</string>
+	<key>image</key>
+	<string>image</string>
+</dict>
+</plist>

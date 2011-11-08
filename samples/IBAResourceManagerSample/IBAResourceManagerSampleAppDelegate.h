@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface IBAResourceManagerSampleAppDelegate : NSObject <UIApplicationDelegate>
+@interface IBAResourceManagerSampleAppDelegate : NSObject <UIApplicationDelegate, UINavigationControllerDelegate>
 
 @property (nonatomic, retain) IBOutlet UIWindow *window;
 

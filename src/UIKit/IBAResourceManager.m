@@ -46,8 +46,15 @@ IBA_SYNTHESIZE_SINGLETON_FOR_CLASS(IBAResourceManager, sharedInstance);
     [super dealloc];
 }
 
+- (void)pushResourceBundleNamed:(NSString *)bundleName
+{
+    IBAAssertNotNilOrEmptyString(bundleName);
+    [self pushResourceBundle:[IBAResourceBundle bundleNamed:bundleName]];
+}
+
 - (void)pushResourceBundle:(IBAResourceBundle *)bundle
 {
+    IBAAssertNotNil(bundle);
     [bundleStack pushObject:bundle];
 }
 

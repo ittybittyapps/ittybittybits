@@ -28,6 +28,7 @@
  */
 + (IBAResourceManager *)sharedInstance;
 
+- (void)pushResourceBundleNamed:(NSString *)bundleName;
 - (void)pushResourceBundle:(IBAResourceBundle *)bundle;
 - (void)popResourceBundle;
 

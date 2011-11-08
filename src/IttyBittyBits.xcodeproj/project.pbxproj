@@ -301,6 +301,8 @@
 		A7C2FBA213B3087200F774CA /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7B4DACC13679F5E00543D61 /* UIKit.framework */; };
 		A7C2FBA313B3087500F774CA /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7C2FB9B13B3083500F774CA /* QuartzCore.framework */; };
 		A7C2FBA413B3087900F774CA /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7B4DACF13679F5E00543D61 /* CoreGraphics.framework */; };
+		A7C6A3E61468FB8A00615BFD /* Resources0.bundle in Resources */ = {isa = PBXBuildFile; fileRef = A7C6A3E41468FB8A00615BFD /* Resources0.bundle */; };
+		A7C6A3E71468FB8A00615BFD /* Resources1.bundle in Resources */ = {isa = PBXBuildFile; fileRef = A7C6A3E51468FB8A00615BFD /* Resources1.bundle */; };
 		A7D58C541378BF440041BBEB /* NSString+IBAExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = A7D58C521378BF440041BBEB /* NSString+IBAExtensions.h */; };
 		A7D58C551378BF440041BBEB /* NSString+IBAExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = A7D58C531378BF440041BBEB /* NSString+IBAExtensions.m */; };
 		A7D58C591378CFAA0041BBEB /* NSArray+IBAWhitespace.h in Headers */ = {isa = PBXBuildFile; fileRef = A7D58C571378CFA80041BBEB /* NSArray+IBAWhitespace.h */; };
@@ -643,6 +645,8 @@
 		A7C2FB9613B3073F00F774CA /* IBAGradientButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBAGradientButton.h; sourceTree = "<group>"; };
 		A7C2FB9713B3073F00F774CA /* IBAGradientButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IBAGradientButton.m; sourceTree = "<group>"; };
 		A7C2FB9B13B3083500F774CA /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		A7C6A3E41468FB8A00615BFD /* Resources0.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Resources0.bundle; sourceTree = "<group>"; };
+		A7C6A3E51468FB8A00615BFD /* Resources1.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Resources1.bundle; sourceTree = "<group>"; };
 		A7D58C521378BF440041BBEB /* NSString+IBAExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString+IBAExtensions.h"; path = "Foundation/NSString+IBAExtensions.h"; sourceTree = SOURCE_ROOT; };
 		A7D58C531378BF440041BBEB /* NSString+IBAExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+IBAExtensions.m"; path = "Foundation/NSString+IBAExtensions.m"; sourceTree = SOURCE_ROOT; };
 		A7D58C571378CFA80041BBEB /* NSArray+IBAWhitespace.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSArray+IBAWhitespace.h"; path = "Foundation/NSArray+IBAWhitespace.h"; sourceTree = SOURCE_ROOT; };
@@ -807,6 +811,8 @@
 		A70D61F61467942B0097AF5E /* IBAResourceManager */ = {
 			isa = PBXGroup;
 			children = (
+				A7C6A3E41468FB8A00615BFD /* Resources0.bundle */,
+				A7C6A3E51468FB8A00615BFD /* Resources1.bundle */,
 				A70D61FF146795960097AF5E /* README.markdown */,
 				A70D61FA146795960097AF5E /* IBAResourceManagerSampleAppDelegate.h */,
 				A70D61FB146795960097AF5E /* IBAResourceManagerSampleAppDelegate.m */,
@@ -1545,6 +1551,8 @@
 				A70D62801467A2E40097AF5E /* MainWindow.xib in Resources */,
 				A70D627C1467A2770097AF5E /* RootViewController.xib in Resources */,
 				A70D627F1467A28A0097AF5E /* InfoPlist.strings in Resources */,
+				A7C6A3E61468FB8A00615BFD /* Resources0.bundle in Resources */,
+				A7C6A3E71468FB8A00615BFD /* Resources1.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

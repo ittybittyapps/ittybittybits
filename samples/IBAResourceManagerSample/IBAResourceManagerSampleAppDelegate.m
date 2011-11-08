@@ -14,6 +14,8 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    [[IBAResourceManager sharedInstance] pushResourceBundleNamed:@"Resources0"];
+     
     // Override point for customization after application launch.
     [self.window makeKeyAndVisible];
     return YES;

@@ -20,6 +20,8 @@
 
 @interface IBAResourceBundle : NSObject
 
++ (id)bundleNamed:(NSString *)name;
+
 - (id)initWithBundleName:(NSString *)name;
 - (BOOL)hasResourceNamed:(NSString *)name;
 
