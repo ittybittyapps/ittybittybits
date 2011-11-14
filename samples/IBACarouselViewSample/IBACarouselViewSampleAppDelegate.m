@@ -8,8 +8,6 @@
 
 #import "IBACarouselViewSampleAppDelegate.h"
 
-#import "IBACarouselViewSampleViewController.h"
-
 @implementation IBACarouselViewSampleAppDelegate
 
 @synthesize window = _window;

@@ -32,6 +32,24 @@
 		A707FD8113779BFD0029FA76 /* IBAInputStreamLineReaderTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A707FD7E13779BCB0029FA76 /* IBAInputStreamLineReaderTests.m */; };
 		A7127A41144CF42B00392A99 /* IBANavigationController.h in Headers */ = {isa = PBXBuildFile; fileRef = A7127A3F144CF42B00392A99 /* IBANavigationController.h */; };
 		A7127A42144CF42B00392A99 /* IBANavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = A7127A40144CF42B00392A99 /* IBANavigationController.m */; };
+		A70D620D146797470097AF5E /* libIttyBittyBits.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A7B4DAB91367991200543D61 /* libIttyBittyBits.a */; };
+		A70D620E146797470097AF5E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7B4DACC13679F5E00543D61 /* UIKit.framework */; };
+		A70D620F146797470097AF5E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7B4DABC1367991200543D61 /* Foundation.framework */; };
+		A70D6210146797470097AF5E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7B4DACF13679F5E00543D61 /* CoreGraphics.framework */; };
+		A70D6211146797470097AF5E /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7966B43139378CB00F1B1A1 /* AddressBook.framework */; };
+		A70D6212146797470097AF5E /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 751C605A13B20E0800447BB4 /* CoreData.framework */; };
+		A70D6213146797470097AF5E /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7966B48139378EB00F1B1A1 /* CoreLocation.framework */; };
+		A70D6214146797470097AF5E /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7966B4A139378FD00F1B1A1 /* MapKit.framework */; };
+		A70D6215146797470097AF5E /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7B4DB111367C65B00543D61 /* Security.framework */; };
+		A70D6216146797470097AF5E /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7C2FB9B13B3083500F774CA /* QuartzCore.framework */; };
+		A70D6217146797470097AF5E /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A713975613F4F62C00CE8FF2 /* SystemConfiguration.framework */; };
+		A70D626F14679E1F0097AF5E /* IBAResourceManagerSampleAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A70D61FB146795960097AF5E /* IBAResourceManagerSampleAppDelegate.m */; };
+		A70D627114679E2A0097AF5E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A70D61FE146795960097AF5E /* main.m */; };
+		A70D627514679FA00097AF5E /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A70D627314679FA00097AF5E /* RootViewController.m */; };
+		A70D627C1467A2770097AF5E /* RootViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A70D627A1467A2770097AF5E /* RootViewController.xib */; };
+		A70D627F1467A28A0097AF5E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A70D627D1467A28A0097AF5E /* InfoPlist.strings */; };
+		A70D62801467A2E40097AF5E /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = A70D62821467A2E40097AF5E /* MainWindow.xib */; };
+		A70D62841467AF650097AF5E /* DefaultResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = A70D62831467AF650097AF5E /* DefaultResources.bundle */; };
 		A713975313F4E5AF00CE8FF2 /* IBANetworkReachability.h in Headers */ = {isa = PBXBuildFile; fileRef = A713975113F4E5AF00CE8FF2 /* IBANetworkReachability.h */; };
 		A713975413F4E5AF00CE8FF2 /* IBANetworkReachability.m in Sources */ = {isa = PBXBuildFile; fileRef = A713975213F4E5AF00CE8FF2 /* IBANetworkReachability.m */; };
 		A713975713F4F62C00CE8FF2 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A713975613F4F62C00CE8FF2 /* SystemConfiguration.framework */; };
@@ -240,6 +258,10 @@
 		A7A0E11213E12DB0006CEC5A /* IBAStateMachine.m in Sources */ = {isa = PBXBuildFile; fileRef = A7A0E11013E12DB0006CEC5A /* IBAStateMachine.m */; };
 		A7A1D43B142C51FA008EA4A6 /* NSPropertyListSerialization+IBAExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = A7A1D439142C51FA008EA4A6 /* NSPropertyListSerialization+IBAExtensions.h */; };
 		A7A1D43C142C51FA008EA4A6 /* NSPropertyListSerialization+IBAExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = A7A1D43A142C51FA008EA4A6 /* NSPropertyListSerialization+IBAExtensions.m */; };
+		A7ACE4921405C93000CC2138 /* IBAResourceManager.h in Headers */ = {isa = PBXBuildFile; fileRef = A7ACE4901405C93000CC2138 /* IBAResourceManager.h */; };
+		A7ACE4931405C93000CC2138 /* IBAResourceManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A7ACE4911405C93000CC2138 /* IBAResourceManager.m */; };
+		A7ACE4971405CC5600CC2138 /* IBAResourceBundle.h in Headers */ = {isa = PBXBuildFile; fileRef = A7ACE4951405CC5600CC2138 /* IBAResourceBundle.h */; };
+		A7ACE4981405CC5600CC2138 /* IBAResourceBundle.m in Sources */ = {isa = PBXBuildFile; fileRef = A7ACE4961405CC5600CC2138 /* IBAResourceBundle.m */; };
 		A7ACE49B1405CE1700CC2138 /* IBAStack.h in Headers */ = {isa = PBXBuildFile; fileRef = A7ACE4991405CE1700CC2138 /* IBAStack.h */; };
 		A7ACE49C1405CE1700CC2138 /* IBAStack.m in Sources */ = {isa = PBXBuildFile; fileRef = A7ACE49A1405CE1700CC2138 /* IBAStack.m */; };
 		A7ACE49F140637C900CC2138 /* IBAStackTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A7ACE49E140637C900CC2138 /* IBAStackTests.m */; };
@@ -290,6 +312,7 @@
 		A7B9E5B81426DA9500DEA745 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7555E5D142067A8002E5E57 /* CoreGraphics.framework */; };
 		A7C05856140C771600339F5B /* IBAViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = A7C05854140C771600339F5B /* IBAViewController.h */; };
 		A7C05857140C771600339F5B /* IBAViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A7C05855140C771600339F5B /* IBAViewController.m */; };
+		A7C0585D140C888600339F5B /* IBAResourceBundleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A7C0585A140C887C00339F5B /* IBAResourceBundleTests.m */; };
 		A7C05865140CA04000339F5B /* IBAFlipButton.h in Headers */ = {isa = PBXBuildFile; fileRef = A7C05863140CA04000339F5B /* IBAFlipButton.h */; };
 		A7C05866140CA04000339F5B /* IBAFlipButton.m in Sources */ = {isa = PBXBuildFile; fileRef = A7C05864140CA04000339F5B /* IBAFlipButton.m */; };
 		A7C0DBDF13B1705E00860296 /* UIView+IBAExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = A7C0DBDD13B1705E00860296 /* UIView+IBAExtensions.h */; };
@@ -303,10 +326,16 @@
 		A7C2FBA013B3086400F774CA /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7966B43139378CB00F1B1A1 /* AddressBook.framework */; };
 		A7C2FBA113B3086800F774CA /* AddressBookUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7966B44139378CB00F1B1A1 /* AddressBookUI.framework */; };
 		A7C2FBA213B3087200F774CA /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7B4DACC13679F5E00543D61 /* UIKit.framework */; };
+		A7C2FBA313B3087500F774CA /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7C2FB9B13B3083500F774CA /* QuartzCore.framework */; };
+		A7C2FBA413B3087900F774CA /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7B4DACF13679F5E00543D61 /* CoreGraphics.framework */; };
 		A7CD3F8C1420356C0022F7AD /* NSIndexPath+UITableView+IBAExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = A7CD3F8A1420356C0022F7AD /* NSIndexPath+UITableView+IBAExtensions.h */; };
 		A7CD3F8D1420356C0022F7AD /* NSIndexPath+UITableView+IBAExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = A7CD3F8B1420356C0022F7AD /* NSIndexPath+UITableView+IBAExtensions.m */; };
 		A7D35F4A1451553F004AE3EF /* IBACancelToken.h in Headers */ = {isa = PBXBuildFile; fileRef = A7D35F481451553F004AE3EF /* IBACancelToken.h */; };
 		A7D35F4B1451553F004AE3EF /* IBACancelToken.m in Sources */ = {isa = PBXBuildFile; fileRef = A7D35F491451553F004AE3EF /* IBACancelToken.m */; };
+		A7C2FBA313B3087500F774CA /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7C2FB9B13B3083500F774CA /* QuartzCore.framework */; };
+		A7C2FBA413B3087900F774CA /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7B4DACF13679F5E00543D61 /* CoreGraphics.framework */; };
+		A7C6A3E61468FB8A00615BFD /* Resources0.bundle in Resources */ = {isa = PBXBuildFile; fileRef = A7C6A3E41468FB8A00615BFD /* Resources0.bundle */; };
+		A7C6A3E71468FB8A00615BFD /* Resources1.bundle in Resources */ = {isa = PBXBuildFile; fileRef = A7C6A3E51468FB8A00615BFD /* Resources1.bundle */; };
 		A7D58C541378BF440041BBEB /* NSString+IBAExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = A7D58C521378BF440041BBEB /* NSString+IBAExtensions.h */; };
 		A7D58C551378BF440041BBEB /* NSString+IBAExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = A7D58C531378BF440041BBEB /* NSString+IBAExtensions.m */; };
 		A7D58C591378CFAA0041BBEB /* NSArray+IBAWhitespace.h in Headers */ = {isa = PBXBuildFile; fileRef = A7D58C571378CFA80041BBEB /* NSArray+IBAWhitespace.h */; };
@@ -333,6 +362,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		A70D6207146797470097AF5E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A7B4DAB01367991100543D61 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A7B4DAB81367991200543D61;
+			remoteInfo = IttyBittyBits;
+		};
 		A749CF37140F5F5900751EF5 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = A7B4DAB01367991100543D61 /* Project object */;
@@ -383,6 +419,19 @@
 		A707FD7E13779BCB0029FA76 /* IBAInputStreamLineReaderTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IBAInputStreamLineReaderTests.m; sourceTree = "<group>"; };
 		A7127A3F144CF42B00392A99 /* IBANavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBANavigationController.h; sourceTree = "<group>"; };
 		A7127A40144CF42B00392A99 /* IBANavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IBANavigationController.m; sourceTree = "<group>"; };
+		A70D61F8146795960097AF5E /* IBAResourceManagerSample-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "IBAResourceManagerSample-Info.plist"; sourceTree = "<group>"; };
+		A70D61F9146795960097AF5E /* IBAResourceManagerSample-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "IBAResourceManagerSample-Prefix.pch"; sourceTree = "<group>"; };
+		A70D61FA146795960097AF5E /* IBAResourceManagerSampleAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IBAResourceManagerSampleAppDelegate.h; sourceTree = "<group>"; };
+		A70D61FB146795960097AF5E /* IBAResourceManagerSampleAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IBAResourceManagerSampleAppDelegate.m; sourceTree = "<group>"; };
+		A70D61FE146795960097AF5E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		A70D61FF146795960097AF5E /* README.markdown */ = {isa = PBXFileReference; lastKnownFileType = text; path = README.markdown; sourceTree = "<group>"; };
+		A70D6268146797470097AF5E /* IBAResourceManagerSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IBAResourceManagerSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A70D627214679FA00097AF5E /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
+		A70D627314679FA00097AF5E /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
+		A70D627B1467A2770097AF5E /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/RootViewController.xib; sourceTree = "<group>"; };
+		A70D627E1467A28A0097AF5E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		A70D62811467A2E40097AF5E /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
+		A70D62831467AF650097AF5E /* DefaultResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = DefaultResources.bundle; path = ../DefaultResources.bundle; sourceTree = "<group>"; };
 		A713975113F4E5AF00CE8FF2 /* IBANetworkReachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBANetworkReachability.h; sourceTree = "<group>"; };
 		A713975213F4E5AF00CE8FF2 /* IBANetworkReachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IBANetworkReachability.m; sourceTree = "<group>"; };
 		A713975613F4F62C00CE8FF2 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
@@ -424,7 +473,6 @@
 		A7345F7C140CC027005ED52E /* IBAFlipButtonSampleViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IBAFlipButtonSampleViewController.h; sourceTree = "<group>"; };
 		A7345F7D140CC027005ED52E /* IBAFlipButtonSampleViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IBAFlipButtonSampleViewController.m; sourceTree = "<group>"; };
 		A7345F80140CC027005ED52E /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/IBAFlipButtonSampleViewController.xib; sourceTree = "<group>"; };
-		A7345F8A140CC19A005ED52E /* Target-IBAFlipButtonSample-Debug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = "Target-IBAFlipButtonSample-Debug.xcconfig"; sourceTree = "<group>"; };
 		A73C53CC140F19D6003CE7CF /* IBACarouselViewSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IBACarouselViewSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A73C53D3140F19D6003CE7CF /* IBACarouselViewSample-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "IBACarouselViewSample-Info.plist"; sourceTree = "<group>"; };
 		A73C53D5140F19D6003CE7CF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -440,9 +488,6 @@
 		A7422E6714012A3600D9C54F /* IBANavigationBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IBANavigationBar.m; sourceTree = "<group>"; };
 		A7422E6F1401331F00D9C54F /* UINavigationController+IBAExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+IBAExtensions.h"; sourceTree = "<group>"; };
 		A7422E701401331F00D9C54F /* UINavigationController+IBAExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+IBAExtensions.m"; sourceTree = "<group>"; };
-		A749CF2F140F1B1400751EF5 /* Target-IBACarouselVIewSample-Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Target-IBACarouselVIewSample-Debug.xcconfig"; sourceTree = "<group>"; };
-		A749CF30140F1B1400751EF5 /* Target-IBACarouselViewSample-Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Target-IBACarouselViewSample-Release.xcconfig"; sourceTree = "<group>"; };
-		A749CF31140F1B1400751EF5 /* Target-IBACarouselViewSample-Shared.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Target-IBACarouselViewSample-Shared.xcconfig"; sourceTree = "<group>"; };
 		A749CF33140F4F1100751EF5 /* IBAEasing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IBAEasing.m; sourceTree = "<group>"; };
 		A749CF35140F4F6A00751EF5 /* IBAEasing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBAEasing.h; sourceTree = "<group>"; };
 		A749CF3C140F612800751EF5 /* Seq_v04_640x378_01.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Seq_v04_640x378_01.jpg; sourceTree = "<group>"; };
@@ -518,8 +563,6 @@
 		A749CF82140F612800751EF5 /* Seq_v04_640x378_71.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Seq_v04_640x378_71.jpg; sourceTree = "<group>"; };
 		A749CF83140F612800751EF5 /* Seq_v04_640x378_72.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Seq_v04_640x378_72.jpg; sourceTree = "<group>"; };
 		A7541C94140CC25F0098586E /* Target-Samples-Shared.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Target-Samples-Shared.xcconfig"; sourceTree = "<group>"; };
-		A7541C9A140CC46F0098586E /* Target-IBAFlipButtonSample-Shared.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Target-IBAFlipButtonSample-Shared.xcconfig"; sourceTree = "<group>"; };
-		A7541C9B140CC4B50098586E /* Target-IBAFlipButtonSample-Release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = "Target-IBAFlipButtonSample-Release.xcconfig"; sourceTree = "<group>"; };
 		A7541C9C140CC4FB0098586E /* Target-Samples-Debug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = "Target-Samples-Debug.xcconfig"; sourceTree = "<group>"; };
 		A7541C9D140CC50C0098586E /* Target-Samples-Release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = "Target-Samples-Release.xcconfig"; sourceTree = "<group>"; };
 		A7555E5B14206752002E5E57 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
@@ -608,6 +651,10 @@
 		A7A0E11013E12DB0006CEC5A /* IBAStateMachine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IBAStateMachine.m; sourceTree = "<group>"; };
 		A7A1D439142C51FA008EA4A6 /* NSPropertyListSerialization+IBAExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSPropertyListSerialization+IBAExtensions.h"; sourceTree = "<group>"; };
 		A7A1D43A142C51FA008EA4A6 /* NSPropertyListSerialization+IBAExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSPropertyListSerialization+IBAExtensions.m"; sourceTree = "<group>"; };
+		A7ACE4901405C93000CC2138 /* IBAResourceManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBAResourceManager.h; sourceTree = "<group>"; };
+		A7ACE4911405C93000CC2138 /* IBAResourceManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IBAResourceManager.m; sourceTree = "<group>"; };
+		A7ACE4951405CC5600CC2138 /* IBAResourceBundle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBAResourceBundle.h; sourceTree = "<group>"; };
+		A7ACE4961405CC5600CC2138 /* IBAResourceBundle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IBAResourceBundle.m; sourceTree = "<group>"; };
 		A7ACE4991405CE1700CC2138 /* IBAStack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBAStack.h; sourceTree = "<group>"; };
 		A7ACE49A1405CE1700CC2138 /* IBAStack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IBAStack.m; sourceTree = "<group>"; };
 		A7ACE49D140637C900CC2138 /* IBAStackTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBAStackTests.h; sourceTree = "<group>"; };
@@ -651,6 +698,8 @@
 		A7B9E5B51426D45900DEA745 /* IBATableViewSectionModelTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IBATableViewSectionModelTests.m; sourceTree = "<group>"; };
 		A7C05854140C771600339F5B /* IBAViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBAViewController.h; sourceTree = "<group>"; };
 		A7C05855140C771600339F5B /* IBAViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IBAViewController.m; sourceTree = "<group>"; };
+		A7C05859140C887C00339F5B /* IBAResourceBundleTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBAResourceBundleTests.h; sourceTree = "<group>"; };
+		A7C0585A140C887C00339F5B /* IBAResourceBundleTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IBAResourceBundleTests.m; sourceTree = "<group>"; };
 		A7C05860140C9F7D00339F5B /* IBACarouselView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBACarouselView.h; sourceTree = "<group>"; };
 		A7C05861140C9F7D00339F5B /* IBACarouselView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IBACarouselView.m; sourceTree = "<group>"; };
 		A7C05863140CA04000339F5B /* IBAFlipButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = IBAFlipButton.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
@@ -670,6 +719,9 @@
 		A7CD3F8B1420356C0022F7AD /* NSIndexPath+UITableView+IBAExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSIndexPath+UITableView+IBAExtensions.m"; sourceTree = "<group>"; };
 		A7D35F481451553F004AE3EF /* IBACancelToken.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBACancelToken.h; sourceTree = "<group>"; };
 		A7D35F491451553F004AE3EF /* IBACancelToken.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IBACancelToken.m; sourceTree = "<group>"; };
+		A7C2FB9B13B3083500F774CA /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		A7C6A3E41468FB8A00615BFD /* Resources0.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Resources0.bundle; sourceTree = "<group>"; };
+		A7C6A3E51468FB8A00615BFD /* Resources1.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Resources1.bundle; sourceTree = "<group>"; };
 		A7D58C521378BF440041BBEB /* NSString+IBAExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString+IBAExtensions.h"; path = "Foundation/NSString+IBAExtensions.h"; sourceTree = SOURCE_ROOT; };
 		A7D58C531378BF440041BBEB /* NSString+IBAExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+IBAExtensions.m"; path = "Foundation/NSString+IBAExtensions.m"; sourceTree = SOURCE_ROOT; };
 		A7D58C571378CFA80041BBEB /* NSArray+IBAWhitespace.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSArray+IBAWhitespace.h"; path = "Foundation/NSArray+IBAWhitespace.h"; sourceTree = SOURCE_ROOT; };
@@ -695,6 +747,24 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		A70D620C146797470097AF5E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A70D620D146797470097AF5E /* libIttyBittyBits.a in Frameworks */,
+				A70D620E146797470097AF5E /* UIKit.framework in Frameworks */,
+				A70D620F146797470097AF5E /* Foundation.framework in Frameworks */,
+				A70D6210146797470097AF5E /* CoreGraphics.framework in Frameworks */,
+				A70D6211146797470097AF5E /* AddressBook.framework in Frameworks */,
+				A70D6212146797470097AF5E /* CoreData.framework in Frameworks */,
+				A70D6213146797470097AF5E /* CoreLocation.framework in Frameworks */,
+				A70D6214146797470097AF5E /* MapKit.framework in Frameworks */,
+				A70D6215146797470097AF5E /* Security.framework in Frameworks */,
+				A70D6216146797470097AF5E /* QuartzCore.framework in Frameworks */,
+				A70D6217146797470097AF5E /* SystemConfiguration.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		A7345F65140CC026005ED52E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -818,6 +888,35 @@
 			path = MapKit;
 			sourceTree = "<group>";
 		};
+		A70D61F61467942B0097AF5E /* IBAResourceManager */ = {
+			isa = PBXGroup;
+			children = (
+				A7C6A3E41468FB8A00615BFD /* Resources0.bundle */,
+				A7C6A3E51468FB8A00615BFD /* Resources1.bundle */,
+				A70D61FF146795960097AF5E /* README.markdown */,
+				A70D61FA146795960097AF5E /* IBAResourceManagerSampleAppDelegate.h */,
+				A70D61FB146795960097AF5E /* IBAResourceManagerSampleAppDelegate.m */,
+				A70D62821467A2E40097AF5E /* MainWindow.xib */,
+				A70D627214679FA00097AF5E /* RootViewController.h */,
+				A70D627314679FA00097AF5E /* RootViewController.m */,
+				A70D627A1467A2770097AF5E /* RootViewController.xib */,
+				A70D6200146795A60097AF5E /* Supporting Files */,
+			);
+			name = IBAResourceManager;
+			path = IBAResourceManagerSample;
+			sourceTree = "<group>";
+		};
+		A70D6200146795A60097AF5E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A70D627D1467A28A0097AF5E /* InfoPlist.strings */,
+				A70D61F9146795960097AF5E /* IBAResourceManagerSample-Prefix.pch */,
+				A70D61F8146795960097AF5E /* IBAResourceManagerSample-Info.plist */,
+				A70D61FE146795960097AF5E /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		A721B2BE14173B5F00BC9E23 /* CoreAnimation */ = {
 			isa = PBXGroup;
 			children = (
@@ -831,6 +930,7 @@
 		A7345F6D140CC026005ED52E /* Samples */ = {
 			isa = PBXGroup;
 			children = (
+				A70D61F61467942B0097AF5E /* IBAResourceManager */,
 				A73C53D1140F19D6003CE7CF /* IBACarouselViewSample */,
 				A7345F87140CC054005ED52E /* IBAFlipButtonSample */,
 			);
@@ -870,8 +970,6 @@
 				A7541C94140CC25F0098586E /* Target-Samples-Shared.xcconfig */,
 				A7541C9C140CC4FB0098586E /* Target-Samples-Debug.xcconfig */,
 				A7541C9D140CC50C0098586E /* Target-Samples-Release.xcconfig */,
-				A73C53EA140F1A8D003CE7CF /* IBACarouselViewSample */,
-				A7541C93140CC21D0098586E /* IBAFlipButtonSample */,
 			);
 			path = Samples;
 			sourceTree = "<group>";
@@ -909,16 +1007,6 @@
 				A73C53D9140F19D6003CE7CF /* IBACarouselViewSample-Prefix.pch */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		A73C53EA140F1A8D003CE7CF /* IBACarouselViewSample */ = {
-			isa = PBXGroup;
-			children = (
-				A749CF2F140F1B1400751EF5 /* Target-IBACarouselVIewSample-Debug.xcconfig */,
-				A749CF30140F1B1400751EF5 /* Target-IBACarouselViewSample-Release.xcconfig */,
-				A749CF31140F1B1400751EF5 /* Target-IBACarouselViewSample-Shared.xcconfig */,
-			);
-			name = IBACarouselViewSample;
 			sourceTree = "<group>";
 		};
 		A749CF3A140F612800751EF5 /* Resources */ = {
@@ -1008,16 +1096,6 @@
 			path = iPhoneImages;
 			sourceTree = "<group>";
 		};
-		A7541C93140CC21D0098586E /* IBAFlipButtonSample */ = {
-			isa = PBXGroup;
-			children = (
-				A7541C9A140CC46F0098586E /* Target-IBAFlipButtonSample-Shared.xcconfig */,
-				A7345F8A140CC19A005ED52E /* Target-IBAFlipButtonSample-Debug.xcconfig */,
-				A7541C9B140CC4B50098586E /* Target-IBAFlipButtonSample-Release.xcconfig */,
-			);
-			name = IBAFlipButtonSample;
-			sourceTree = "<group>";
-		};
 		A7708F14140DC132005FDA05 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -1032,12 +1110,15 @@
 		A7808BD413D2D73400F76DB1 /* UIKit */ = {
 			isa = PBXGroup;
 			children = (
+				A70D62831467AF650097AF5E /* DefaultResources.bundle */,
 				A7808BD513D2D76A00F76DB1 /* UIColor+IBAExtensionsTests.h */,
 				A7808BD613D2D76A00F76DB1 /* UIColor+IBAExtensionsTests.m */,
 				A7B9E5AE1426D3AA00DEA745 /* IBATableViewModelTests.h */,
 				A7B9E5B21426D3FE00DEA745 /* IBATableViewModelTests.m */,
 				A7B9E5B41426D45900DEA745 /* IBATableViewSectionModelTests.h */,
 				A7B9E5B51426D45900DEA745 /* IBATableViewSectionModelTests.m */,
+				A7C05859140C887C00339F5B /* IBAResourceBundleTests.h */,
+				A7C0585A140C887C00339F5B /* IBAResourceBundleTests.m */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -1072,6 +1153,10 @@
 				A7555E6414207B7D002E5E57 /* IBATableViewModel.m */,
 				A7652BD013E581530023D4B3 /* IBATiledImageView.h */,
 				A7652BD113E581530023D4B3 /* IBATiledImageView.m */,
+				A7ACE4901405C93000CC2138 /* IBAResourceManager.h */,
+				A7ACE4911405C93000CC2138 /* IBAResourceManager.m */,
+				A7ACE4951405CC5600CC2138 /* IBAResourceBundle.h */,
+				A7ACE4961405CC5600CC2138 /* IBAResourceBundle.m */,
 				A7C05854140C771600339F5B /* IBAViewController.h */,
 				A7C05855140C771600339F5B /* IBAViewController.m */,
 				A7CD3F8A1420356C0022F7AD /* NSIndexPath+UITableView+IBAExtensions.h */,
@@ -1185,6 +1270,7 @@
 				A7B4DACA13679F5D00543D61 /* IttyBittyBitsTests.app */,
 				A7345F68140CC026005ED52E /* IBAFlipButtonSample.app */,
 				A73C53CC140F19D6003CE7CF /* IBACarouselViewSample.app */,
+				A70D6268146797470097AF5E /* IBAResourceManagerSample.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -1449,6 +1535,8 @@
 				A7422E6814012A3600D9C54F /* IBANavigationBar.h in Headers */,
 				A7422E711401331F00D9C54F /* UINavigationController+IBAExtensions.h in Headers */,
 				75C832441401475C00F476B9 /* UIGestureRecognizer+IBAExtensions.h in Headers */,
+				A7ACE4921405C93000CC2138 /* IBAResourceManager.h in Headers */,
+				A7ACE4971405CC5600CC2138 /* IBAResourceBundle.h in Headers */,
 				A7ACE49B1405CE1700CC2138 /* IBAStack.h in Headers */,
 				A7C05856140C771600339F5B /* IBAViewController.h in Headers */,
 				A7C05865140CA04000339F5B /* IBAFlipButton.h in Headers */,
@@ -1478,6 +1566,24 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		A70D6205146797470097AF5E /* IBAResourceManagerSample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A70D6264146797470097AF5E /* Build configuration list for PBXNativeTarget "IBAResourceManagerSample" */;
+			buildPhases = (
+				A70D6208146797470097AF5E /* Sources */,
+				A70D620C146797470097AF5E /* Frameworks */,
+				A70D6218146797470097AF5E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A70D6206146797470097AF5E /* PBXTargetDependency */,
+			);
+			name = IBAResourceManagerSample;
+			productName = IBACarouselViewSample;
+			productReference = A70D6268146797470097AF5E /* IBAResourceManagerSample.app */;
+			productType = "com.apple.product-type.application";
+		};
 		A7345F67140CC026005ED52E /* IBAFlipButtonSample */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = A7345F85140CC027005ED52E /* Build configuration list for PBXNativeTarget "IBAFlipButtonSample" */;
@@ -1575,11 +1681,24 @@
 				A7B4DAC913679F5D00543D61 /* IttyBittyBitsTests */,
 				A7345F67140CC026005ED52E /* IBAFlipButtonSample */,
 				A73C53CB140F19D6003CE7CF /* IBACarouselViewSample */,
+				A70D6205146797470097AF5E /* IBAResourceManagerSample */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		A70D6218146797470097AF5E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A70D62801467A2E40097AF5E /* MainWindow.xib in Resources */,
+				A70D627C1467A2770097AF5E /* RootViewController.xib in Resources */,
+				A70D627F1467A28A0097AF5E /* InfoPlist.strings in Resources */,
+				A7C6A3E61468FB8A00615BFD /* Resources0.bundle in Resources */,
+				A7C6A3E71468FB8A00615BFD /* Resources1.bundle in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		A7345F66140CC026005ED52E /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -1681,6 +1800,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A7B4DAD613679F5E00543D61 /* InfoPlist.strings in Resources */,
+				A70D62841467AF650097AF5E /* DefaultResources.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1703,6 +1823,16 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		A70D6208146797470097AF5E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A70D626F14679E1F0097AF5E /* IBAResourceManagerSampleAppDelegate.m in Sources */,
+				A70D627114679E2A0097AF5E /* main.m in Sources */,
+				A70D627514679FA00097AF5E /* RootViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		A7345F64140CC026005ED52E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -1788,6 +1918,8 @@
 				A7422E6914012A3600D9C54F /* IBANavigationBar.m in Sources */,
 				A7422E721401331F00D9C54F /* UINavigationController+IBAExtensions.m in Sources */,
 				75C832451401475C00F476B9 /* UIGestureRecognizer+IBAExtensions.m in Sources */,
+				A7ACE4931405C93000CC2138 /* IBAResourceManager.m in Sources */,
+				A7ACE4981405CC5600CC2138 /* IBAResourceBundle.m in Sources */,
 				A7ACE49C1405CE1700CC2138 /* IBAStack.m in Sources */,
 				A7C05857140C771600339F5B /* IBAViewController.m in Sources */,
 				A7C05866140CA04000339F5B /* IBAFlipButton.m in Sources */,
@@ -1829,12 +1961,18 @@
 				A7B9E5B61426D45900DEA745 /* IBATableViewSectionModelTests.m in Sources */,
 				A7335B741433F77200D9DE14 /* IBACommonTests.m in Sources */,
 				A7F8371B143D66B700196396 /* NSData+IBAExtensionsTests.m in Sources */,
+				A7C0585D140C888600339F5B /* IBAResourceBundleTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		A70D6206146797470097AF5E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A7B4DAB81367991200543D61 /* IttyBittyBits */;
+			targetProxy = A70D6207146797470097AF5E /* PBXContainerItemProxy */;
+		};
 		A749CF38140F5F5900751EF5 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = A7B4DAB81367991200543D61 /* IttyBittyBits */;
@@ -1853,6 +1991,30 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		A70D627A1467A2770097AF5E /* RootViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A70D627B1467A2770097AF5E /* en */,
+			);
+			name = RootViewController.xib;
+			sourceTree = "<group>";
+		};
+		A70D627D1467A28A0097AF5E /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A70D627E1467A28A0097AF5E /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		A70D62821467A2E40097AF5E /* MainWindow.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A70D62811467A2E40097AF5E /* en */,
+			);
+			name = MainWindow.xib;
+			sourceTree = "<group>";
+		};
 		A7345F70140CC026005ED52E /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -1949,9 +2111,29 @@
 			};
 			name = UAT;
 		};
+		A70D6265146797470097AF5E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A7541C9C140CC4FB0098586E /* Target-Samples-Debug.xcconfig */;
+			buildSettings = {
+			};
+			name = Debug;
+		};
+		A70D6266146797470097AF5E /* UAT */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = UAT;
+		};
+		A70D6267146797470097AF5E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A7541C9D140CC50C0098586E /* Target-Samples-Release.xcconfig */;
+			buildSettings = {
+			};
+			name = Release;
+		};
 		A7345F82140CC027005ED52E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A7345F8A140CC19A005ED52E /* Target-IBAFlipButtonSample-Debug.xcconfig */;
+			baseConfigurationReference = A7541C9C140CC4FB0098586E /* Target-Samples-Debug.xcconfig */;
 			buildSettings = {
 			};
 			name = Debug;
@@ -1964,14 +2146,14 @@
 		};
 		A7345F84140CC027005ED52E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A7541C9B140CC4B50098586E /* Target-IBAFlipButtonSample-Release.xcconfig */;
+			baseConfigurationReference = A7541C9D140CC50C0098586E /* Target-Samples-Release.xcconfig */;
 			buildSettings = {
 			};
 			name = Release;
 		};
 		A73C53E7140F19D6003CE7CF /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A749CF2F140F1B1400751EF5 /* Target-IBACarouselVIewSample-Debug.xcconfig */;
+			baseConfigurationReference = A7541C9C140CC4FB0098586E /* Target-Samples-Debug.xcconfig */;
 			buildSettings = {
 			};
 			name = Debug;
@@ -1984,7 +2166,7 @@
 		};
 		A73C53E9140F19D6003CE7CF /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A749CF30140F1B1400751EF5 /* Target-IBACarouselViewSample-Release.xcconfig */;
+			baseConfigurationReference = A7541C9D140CC50C0098586E /* Target-Samples-Release.xcconfig */;
 			buildSettings = {
 			};
 			name = Release;
@@ -2067,6 +2249,16 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		A70D6264146797470097AF5E /* Build configuration list for PBXNativeTarget "IBAResourceManagerSample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A70D6265146797470097AF5E /* Debug */,
+				A70D6266146797470097AF5E /* UAT */,
+				A70D6267146797470097AF5E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		A7345F85140CC027005ED52E /* Build configuration list for PBXNativeTarget "IBAFlipButtonSample" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

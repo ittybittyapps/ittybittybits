@@ -24,6 +24,8 @@
 #import "IBAGradientButton.h"
 #import "IBANavigationBar.h"
 #import "IBANavigationController.h"
+#import "IBAResourceBundle.h"
+#import "IBAResourceManager.h"
 #import "IBATableViewAccessory.h"
 #import "IBATableViewController.h"
 #import "IBATableViewSectionModel.h"
