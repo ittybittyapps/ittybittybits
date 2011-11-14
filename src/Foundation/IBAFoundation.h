@@ -32,6 +32,7 @@
 #import "IBAMath.h"
 #import "IBANetworkReachability.h"
 #import "IBAPathUtilities.h"
+#import "IBAResourceBundle.h"
 #import "IBAStack.h"
 #import "IBAStateMachine.h"
 #import "IBASynthesizeSingleton.h"

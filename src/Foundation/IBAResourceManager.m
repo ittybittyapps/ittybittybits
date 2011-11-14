@@ -20,20 +20,20 @@
 #import "IBAResourceManager.h"
 #import "IBAResourceBundle.h"
 
+#import "IBAResourceManager+Internal.h"
+
 #import "../Foundation/IBAFoundation.h"
 
 @implementation IBAResourceManager
-{
-    IBAStack *bundleStack;
-}
 
 IBA_SYNTHESIZE_SINGLETON_FOR_CLASS(IBAResourceManager, sharedInstance);
+IBA_SYNTHESIZE(bundleStack);
 
 - (id)init
 {
     if ((self = [super init]))
     {
-        bundleStack = [[IBAStack alloc] init];
+        IBA_RETAIN_PROPERTY(bundleStack, [IBAStack stack]);
     }
     
     return self;
@@ -41,7 +41,7 @@ IBA_SYNTHESIZE_SINGLETON_FOR_CLASS(IBAResourceManager, sharedInstance);
 
 - (void)dealloc
 {
-    IBA_RELEASE(bundleStack);
+    IBA_RELEASE_PROPERTY(bundleStack);
     
     [super dealloc];
 }
@@ -55,34 +55,15 @@ IBA_SYNTHESIZE_SINGLETON_FOR_CLASS(IBAResourceManager, sharedInstance);
 - (void)pushResourceBundle:(IBAResourceBundle *)bundle
 {
     IBAAssertNotNil(bundle);
-    [bundleStack pushObject:bundle];
+    [self.bundleStack pushObject:bundle];
 }
 
 - (void)popResourceBundle
 {
-    [bundleStack popObject];
+    [self.bundleStack popObject];
 }
 
-#define X(name, type, default) \
-- (type)name##Named:(NSString *)name \
-{ \
-    for (IBAResourceBundle *bundle in bundleStack) \
-    { \
-        if ([bundle hasResourceNamed:name]) { \
-            type resource = (type)[bundle name##Named:name]; \
-            return resource; \
-        } \
-    } \
-    return (default); \
-}
-
-X(color, UIColor *, nil)
-X(image, UIImage *, nil)
-X(size, CGSize, CGSizeZero)
-X(rect, CGRect, CGRectZero)
-X(point, CGPoint, CGPointZero)
-X(string, NSString *, nil)
-X(data, NSData *, nil)
-#undef X
+ImplResourceNamed(string, NSString *, nil)
+ImplResourceNamed(data, NSData *, nil)
 
 @end

@@ -1,9 +1,9 @@
 //
-//  IBAResourceBundle.h
+//  IBAResourceManager+CoreGraphics.h
 //  IttyBittyBits
 //
-//  Created by Oliver Jones on 25/08/11.
-//  Copyright 2011 Itty Bitty Apps Pty. Ltd. All rights reserved.
+//  Created by Oliver Jones on 14/11/11.
+//  Copyright (c) 2011 Itty Bitty Apps Pty. Ltd. All rights reserved.
 //
 //  Licensed under the Apache License, Version 2.0 (the "License");
 //  you may not use this file except in compliance with the License.
@@ -16,22 +16,13 @@
 //  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 //  See the License for the specific language governing permissions and
 //  limitations under the License.
-#import <UIKit/UIKit.h>
 
-@interface IBAResourceBundle : NSObject
+#import "../Foundation/IBAResourceManager.h"
 
-+ (id)bundleNamed:(NSString *)name;
+@interface IBAResourceManager (CoreGraphics)
 
-- (id)initWithBundleName:(NSString *)name;
-- (BOOL)hasResourceNamed:(NSString *)name;
-
-- (UIColor *)colorNamed:(NSString *)name;
 - (CGSize)sizeNamed:(NSString *)name;
 - (CGRect)rectNamed:(NSString *)name;
 - (CGPoint)pointNamed:(NSString *)name;
-- (NSString *)stringNamed:(NSString *)name;
-- (NSData *)dataNamed:(NSString *)name;
-- (UIImage *)imageNamed:(NSString *)name;
 
 @end
-

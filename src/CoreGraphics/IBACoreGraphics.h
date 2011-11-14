@@ -20,4 +20,6 @@
 
 #import "../Foundation/IBAFoundation.h"
 
+#import "IBAResourceBundle+CoreGraphics.h"
+#import "IBAResourceManager+CoreGraphics.h"
 #import "IBARoundedRectPath.h"

@@ -32,18 +32,7 @@
 - (void)pushResourceBundle:(IBAResourceBundle *)bundle;
 - (void)popResourceBundle;
 
-- (UIImage *)imageNamed:(NSString *)name;
-- (CGSize)sizeNamed:(NSString *)name;
-- (CGRect)rectNamed:(NSString *)name;
-- (UIColor *)colorNamed:(NSString *)name;
-// gradients?
-- (CGSize)sizeNamed:(NSString *)name;
-- (CGRect)rectNamed:(NSString *)name;
-- (CGPoint)pointNamed:(NSString *)name;
 - (NSString *)stringNamed:(NSString *)name;
 - (NSData *)dataNamed:(NSString *)name;
-- (UIImage *)imageNamed:(NSString *)name;
-
-
 
 @end
