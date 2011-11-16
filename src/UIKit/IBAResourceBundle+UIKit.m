@@ -24,6 +24,8 @@
 
 #import "UIColor+IBAExtensions.h"
 
+#import <objc/runtime.h>
+
 @implementation IBAResourceBundle (UIKit)
 
 + (NSArray *)imageExtensions
@@ -108,7 +110,7 @@
             
             if (color)
             {
-                [self.cache setObject:color forKey:name];
+                [self.cache setObject:color forKey:name cost:class_getInstanceSize([UIColor class])];
             }
         }
     }
