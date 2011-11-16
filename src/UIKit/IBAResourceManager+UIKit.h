@@ -23,6 +23,7 @@
 
 - (UIImage *)imageNamed:(NSString *)name;
 - (UIColor *)colorNamed:(NSString *)name;
+- (UIColor *)colorWithPatternNamed:(NSString *)name;
 - (UIFont *)fontNamed:(NSString *)name;
 
 // gradients?

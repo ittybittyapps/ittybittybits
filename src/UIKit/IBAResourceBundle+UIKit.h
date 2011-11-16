@@ -22,6 +22,7 @@
 @interface IBAResourceBundle (UIKit)
 
 - (UIColor *)colorNamed:(NSString *)name;
+- (UIColor *)colorWithPatternNamed:(NSString *)name;
 - (UIImage *)imageNamed:(NSString *)name;
 - (UIFont *)fontNamed:(NSString *)name;
 

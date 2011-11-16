@@ -116,6 +116,26 @@
     return color;
 }
 
+- (UIColor *)colorWithPatternNamed:(NSString *)name
+{
+    UIColor *color = nil;
+    name = [self resolveResourceName:name];
+    if (name)
+    {
+        UIImage *pattern = [self imageNamed:name];
+        if (pattern)
+        {
+            color = [UIColor colorWithPatternImage:pattern];
+        }
+        
+        if (color)
+        {
+            [self.cache setObject:color forKey:name cost:class_getInstanceSize([UIColor class])];
+        }
+    }
+    
+    return color;
+}
 
 - (UIFont *)fontNamed:(NSString *)name
 {
