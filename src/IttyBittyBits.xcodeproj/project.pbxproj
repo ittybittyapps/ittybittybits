@@ -176,6 +176,8 @@
 		A749CFCA140F612800751EF5 /* Seq_v04_640x378_71.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A749CF82140F612800751EF5 /* Seq_v04_640x378_71.jpg */; };
 		A749CFCB140F612800751EF5 /* Seq_v04_640x378_72.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A749CF83140F612800751EF5 /* Seq_v04_640x378_72.jpg */; };
 		A749CFCC140F66C300751EF5 /* IBACarouselView.m in Sources */ = {isa = PBXBuildFile; fileRef = A7C05861140C9F7D00339F5B /* IBACarouselView.m */; };
+		A751240814733456005E6FCC /* IBAResourceBundleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A751240714733456005E6FCC /* IBAResourceBundleTests.m */; };
+		A751240D1473354E005E6FCC /* IBAResourceBundle+CoreGraphicsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A751240C1473354E005E6FCC /* IBAResourceBundle+CoreGraphicsTests.m */; };
 		A7555E5C14206752002E5E57 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7555E5B14206752002E5E57 /* QuartzCore.framework */; };
 		A7555E5E142067A8002E5E57 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7555E5D142067A8002E5E57 /* CoreGraphics.framework */; };
 		A7555E6514207B7D002E5E57 /* IBATableViewModel.h in Headers */ = {isa = PBXBuildFile; fileRef = A7555E6314207B7D002E5E57 /* IBATableViewModel.h */; };
@@ -322,7 +324,7 @@
 		A7B9E5B81426DA9500DEA745 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7555E5D142067A8002E5E57 /* CoreGraphics.framework */; };
 		A7C05856140C771600339F5B /* IBAViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = A7C05854140C771600339F5B /* IBAViewController.h */; };
 		A7C05857140C771600339F5B /* IBAViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A7C05855140C771600339F5B /* IBAViewController.m */; };
-		A7C0585D140C888600339F5B /* IBAResourceBundleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A7C0585A140C887C00339F5B /* IBAResourceBundleTests.m */; };
+		A7C0585D140C888600339F5B /* IBAResourceBundle+UIKitTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A7C0585A140C887C00339F5B /* IBAResourceBundle+UIKitTests.m */; };
 		A7C05865140CA04000339F5B /* IBAFlipButton.h in Headers */ = {isa = PBXBuildFile; fileRef = A7C05863140CA04000339F5B /* IBAFlipButton.h */; };
 		A7C05866140CA04000339F5B /* IBAFlipButton.m in Sources */ = {isa = PBXBuildFile; fileRef = A7C05864140CA04000339F5B /* IBAFlipButton.m */; };
 		A7C0DBDF13B1705E00860296 /* UIView+IBAExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = A7C0DBDD13B1705E00860296 /* UIView+IBAExtensions.h */; };
@@ -435,7 +437,7 @@
 		A70D627B1467A2770097AF5E /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/RootViewController.xib; sourceTree = "<group>"; };
 		A70D627E1467A28A0097AF5E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		A70D62811467A2E40097AF5E /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
-		A70D62831467AF650097AF5E /* DefaultResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = DefaultResources.bundle; path = ../DefaultResources.bundle; sourceTree = "<group>"; };
+		A70D62831467AF650097AF5E /* DefaultResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = DefaultResources.bundle; sourceTree = "<group>"; };
 		A7127A3F144CF42B00392A99 /* IBANavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBANavigationController.h; sourceTree = "<group>"; };
 		A7127A40144CF42B00392A99 /* IBANavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IBANavigationController.m; sourceTree = "<group>"; };
 		A713975113F4E5AF00CE8FF2 /* IBANetworkReachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBANetworkReachability.h; sourceTree = "<group>"; };
@@ -568,6 +570,10 @@
 		A749CF81140F612800751EF5 /* Seq_v04_640x378_70.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Seq_v04_640x378_70.jpg; sourceTree = "<group>"; };
 		A749CF82140F612800751EF5 /* Seq_v04_640x378_71.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Seq_v04_640x378_71.jpg; sourceTree = "<group>"; };
 		A749CF83140F612800751EF5 /* Seq_v04_640x378_72.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Seq_v04_640x378_72.jpg; sourceTree = "<group>"; };
+		A751240614733456005E6FCC /* IBAResourceBundleTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBAResourceBundleTests.h; sourceTree = "<group>"; };
+		A751240714733456005E6FCC /* IBAResourceBundleTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IBAResourceBundleTests.m; sourceTree = "<group>"; };
+		A751240B1473354E005E6FCC /* IBAResourceBundle+CoreGraphicsTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "IBAResourceBundle+CoreGraphicsTests.h"; sourceTree = "<group>"; };
+		A751240C1473354E005E6FCC /* IBAResourceBundle+CoreGraphicsTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "IBAResourceBundle+CoreGraphicsTests.m"; sourceTree = "<group>"; };
 		A7541C94140CC25F0098586E /* Target-Samples-Shared.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Target-Samples-Shared.xcconfig"; sourceTree = "<group>"; };
 		A7541C9C140CC4FB0098586E /* Target-Samples-Debug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = "Target-Samples-Debug.xcconfig"; sourceTree = "<group>"; };
 		A7541C9D140CC50C0098586E /* Target-Samples-Release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = "Target-Samples-Release.xcconfig"; sourceTree = "<group>"; };
@@ -714,8 +720,8 @@
 		A7B9E5B51426D45900DEA745 /* IBATableViewSectionModelTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IBATableViewSectionModelTests.m; sourceTree = "<group>"; };
 		A7C05854140C771600339F5B /* IBAViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBAViewController.h; sourceTree = "<group>"; };
 		A7C05855140C771600339F5B /* IBAViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IBAViewController.m; sourceTree = "<group>"; };
-		A7C05859140C887C00339F5B /* IBAResourceBundleTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBAResourceBundleTests.h; sourceTree = "<group>"; };
-		A7C0585A140C887C00339F5B /* IBAResourceBundleTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IBAResourceBundleTests.m; sourceTree = "<group>"; };
+		A7C05859140C887C00339F5B /* IBAResourceBundle+UIKitTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "IBAResourceBundle+UIKitTests.h"; sourceTree = "<group>"; };
+		A7C0585A140C887C00339F5B /* IBAResourceBundle+UIKitTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "IBAResourceBundle+UIKitTests.m"; sourceTree = "<group>"; };
 		A7C05860140C9F7D00339F5B /* IBACarouselView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBACarouselView.h; sourceTree = "<group>"; };
 		A7C05861140C9F7D00339F5B /* IBACarouselView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IBACarouselView.m; sourceTree = "<group>"; };
 		A7C05863140CA04000339F5B /* IBAFlipButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = IBAFlipButton.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
@@ -1112,6 +1118,15 @@
 			path = iPhoneImages;
 			sourceTree = "<group>";
 		};
+		A751240A14733513005E6FCC /* CoreGraphics */ = {
+			isa = PBXGroup;
+			children = (
+				A751240B1473354E005E6FCC /* IBAResourceBundle+CoreGraphicsTests.h */,
+				A751240C1473354E005E6FCC /* IBAResourceBundle+CoreGraphicsTests.m */,
+			);
+			path = CoreGraphics;
+			sourceTree = "<group>";
+		};
 		A7708F14140DC132005FDA05 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -1126,15 +1141,14 @@
 		A7808BD413D2D73400F76DB1 /* UIKit */ = {
 			isa = PBXGroup;
 			children = (
-				A70D62831467AF650097AF5E /* DefaultResources.bundle */,
 				A7808BD513D2D76A00F76DB1 /* UIColor+IBAExtensionsTests.h */,
 				A7808BD613D2D76A00F76DB1 /* UIColor+IBAExtensionsTests.m */,
 				A7B9E5AE1426D3AA00DEA745 /* IBATableViewModelTests.h */,
 				A7B9E5B21426D3FE00DEA745 /* IBATableViewModelTests.m */,
 				A7B9E5B41426D45900DEA745 /* IBATableViewSectionModelTests.h */,
 				A7B9E5B51426D45900DEA745 /* IBATableViewSectionModelTests.m */,
-				A7C05859140C887C00339F5B /* IBAResourceBundleTests.h */,
-				A7C0585A140C887C00339F5B /* IBAResourceBundleTests.m */,
+				A7C05859140C887C00339F5B /* IBAResourceBundle+UIKitTests.h */,
+				A7C0585A140C887C00339F5B /* IBAResourceBundle+UIKitTests.m */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -1222,6 +1236,8 @@
 				A79141641370E01300209C96 /* IBALoggerTests.m */,
 				A7ACE49D140637C900CC2138 /* IBAStackTests.h */,
 				A7ACE49E140637C900CC2138 /* IBAStackTests.m */,
+				A751240614733456005E6FCC /* IBAResourceBundleTests.h */,
+				A751240714733456005E6FCC /* IBAResourceBundleTests.m */,
 				A7F83719143D66B700196396 /* NSData+IBAExtensionsTests.h */,
 				A7F8371A143D66B700196396 /* NSData+IBAExtensionsTests.m */,
 				A780655F1404DCD60075FDA7 /* NSString+IBAExtensionsTests.h */,
@@ -1342,6 +1358,8 @@
 		A7B4DAD113679F5E00543D61 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
+				A70D62831467AF650097AF5E /* DefaultResources.bundle */,
+				A751240A14733513005E6FCC /* CoreGraphics */,
 				A7E8BD9D1434576E00DE7861 /* CoreLocation */,
 				A79141621370DFE100209C96 /* Foundation */,
 				A7808BD413D2D73400F76DB1 /* UIKit */,
@@ -1997,7 +2015,9 @@
 				A7B9E5B61426D45900DEA745 /* IBATableViewSectionModelTests.m in Sources */,
 				A7335B741433F77200D9DE14 /* IBACommonTests.m in Sources */,
 				A7F8371B143D66B700196396 /* NSData+IBAExtensionsTests.m in Sources */,
-				A7C0585D140C888600339F5B /* IBAResourceBundleTests.m in Sources */,
+				A7C0585D140C888600339F5B /* IBAResourceBundle+UIKitTests.m in Sources */,
+				A751240814733456005E6FCC /* IBAResourceBundleTests.m in Sources */,
+				A751240D1473354E005E6FCC /* IBAResourceBundle+CoreGraphicsTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

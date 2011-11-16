@@ -10,6 +10,8 @@
 	<string>rgb(22, 33, 44)</string>
 	<key>colorCSSName</key>
 	<string>green</string>
+	<key>colorPattern</key>
+	<string>images/Test.png</string>
 	<key>colorRedirect</key>
 	<string>$colorHex</string>
 	<key>sizeAsString</key>
@@ -59,5 +61,24 @@
 	<string>$data</string>
 	<key>dataFile</key>
 	<string>data.txt</string>
+	<key>imageTest</key>
+	<string>images/Test.png</string>
+	<key>numberAsNumber</key>
+	<integer>1234</integer>
+	<key>numberAsString</key>
+	<string>3.14</string>
+	<key>numberAsRedirect</key>
+	<string>$numberAsNumber</string>
+	<key>fontAsString</key>
+	<string>Helvetica</string>
+	<key>fontAsRedirect</key>
+	<string>$fontAsDict</string>
+	<key>fontAsDict</key>
+	<dict>
+		<key>face</key>
+		<string>Helvetica</string>
+		<key>size</key>
+		<integer>17</integer>
+	</dict>
 </dict>
 </plist>

@@ -113,7 +113,6 @@
     GHAssertEquals(m.rowCount, 0, @"model rowCount should be zero");
 }
 
-
 - (void)testShouldGetRowAtIndex
 {
     NSArray *rows = IBA_NSARRAY(@"A", @"B");
