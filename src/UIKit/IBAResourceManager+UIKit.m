@@ -27,5 +27,6 @@
 
 ImplResourceNamed(color, UIColor *, nil)
 ImplResourceNamed(image, UIImage *, nil)
+ImplResourceNamed(font, UIFont *, nil)
 
 @end

@@ -116,4 +116,28 @@
     return color;
 }
 
+
+- (UIFont *)fontNamed:(NSString *)name
+{
+    UIFont *font = nil;
+    name = [self resolveResourceName:name];
+    if (name)
+    {
+        id resource = [self.resources valueForKeyPath:name];
+        if ([resource isKindOfClass:[NSDictionary class]])
+        {
+            NSString *faceName = [self stringNamed:[NSString stringWithFormat:@"%@.face", name]];
+            NSNumber *size = [self numberNamed:[NSString stringWithFormat:@"%@.size", name]];
+            
+            font = [UIFont fontWithName:faceName size:[size floatValue]];
+        }
+        else if ([resource isKindOfClass:[NSString class]])
+        {
+            font = [UIFont fontWithName:[self stringNamed:name] size:[UIFont systemFontSize]];
+        }
+    }
+    
+    return font;
+}
+
 @end

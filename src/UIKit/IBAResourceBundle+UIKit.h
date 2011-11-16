@@ -23,5 +23,6 @@
 
 - (UIColor *)colorNamed:(NSString *)name;
 - (UIImage *)imageNamed:(NSString *)name;
+- (UIFont *)fontNamed:(NSString *)name;
 
 @end
