@@ -65,5 +65,6 @@ IBA_SYNTHESIZE(bundleStack);
 
 ImplResourceNamed(string, NSString *, nil)
 ImplResourceNamed(data, NSData *, nil)
+ImplResourceNamed(number, NSNumber *, nil)
 
 @end

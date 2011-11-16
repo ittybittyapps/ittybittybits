@@ -22,6 +22,8 @@
 
 #import "../Foundation/IBAFoundation.h"
 
+#import <objc/runtime.h>
+
 @implementation IBAResourceBundle
 
 + (id)bundleNamed:(NSString *)name
@@ -163,6 +165,46 @@ IBA_SYNTHESIZE(bundle, cache, resources);
     }
     
     return data;
+}
+
+- (NSNumber *)numberNamed:(NSString *)name
+{
+    NSNumber *number = nil;
+    name = [self resolveResourceName:name];
+    if (name)
+    {
+        number = (NSNumber *)[self.cache objectForKey:name];
+        if (number == nil)
+        {
+            id resource = [self.resources valueForKeyPath:name];
+            if ([resource isKindOfClass:[NSNumber class]])
+            {
+                number = resource;
+            }
+            else if ([resource isKindOfClass:[NSString class]])
+            {
+                static NSNumberFormatter *numberFormatter = nil;
+                static dispatch_once_t onceToken;
+                dispatch_once(&onceToken, ^{
+                    numberFormatter = [[NSNumberFormatter alloc] init];
+                    [numberFormatter setLocale:[[[NSLocale alloc] initWithLocaleIdentifier:@"en_US_POSIX"] autorelease]];
+                });
+                
+                NSString *numberAsString = resource;
+                @synchronized(numberFormatter)
+                {
+                    number = [numberFormatter numberFromString:numberAsString];
+                }
+            }
+            
+            if (number)
+            {
+                [self.cache setObject:number forKey:name cost:class_getInstanceSize([number class])];
+            }
+        }
+    }
+    
+    return number;
 }
 
 @end

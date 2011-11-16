@@ -34,5 +34,6 @@
 
 - (NSString *)stringNamed:(NSString *)name;
 - (NSData *)dataNamed:(NSString *)name;
+- (NSNumber *)numberNamed:(NSString *)name;
 
 @end
