@@ -105,7 +105,7 @@ IBA_SYNTHESIZE(bundle, cache, resources);
 
 - (BOOL)hasResourceNamed:(NSString *)name
 {
-    return [self.resources objectForKey:[self resolveResourceName:name]] != nil;
+    return [self.resources valueForKeyPath:[self resolveResourceName:name]] != nil;
 }
 
 - (NSString *)stringNamed:(NSString *)name
@@ -117,7 +117,7 @@ IBA_SYNTHESIZE(bundle, cache, resources);
         string = (NSString  *)[self.cache objectForKey:name];
         if (string == nil)
         {
-            id resource = [self.resources valueForKey:name];
+            id resource = [self.resources valueForKeyPath:name];
             if ([resource isKindOfClass:[NSString class]])
             {
                 string = resource;
@@ -143,7 +143,7 @@ IBA_SYNTHESIZE(bundle, cache, resources);
     name = [self resolveResourceName:name];
     if (name)
     {
-        id resource = [self.resources objectForKey:name];
+        id resource = [self.resources valueForKeyPath:name];
         if ([resource isKindOfClass:[NSData class]])
         {
             data = resource;

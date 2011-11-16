@@ -33,7 +33,7 @@
         NSValue *value = [self.cache objectForKey:name];
         if (value == nil)
         {
-            id resource = [self.resources valueForKey:name];
+            id resource = [self.resources valueForKeyPath:name];
             if ([resource isKindOfClass:[NSDictionary class]])
             {
                 if (CGSizeMakeWithDictionaryRepresentation((CFDictionaryRef)resource, &size) == NO)
@@ -68,7 +68,7 @@
         NSValue *value = [self.cache objectForKey:name];
         if (value == nil)
         {
-            id resource = [self.resources valueForKey:name];
+            id resource = [self.resources valueForKeyPath:name];
             if ([resource isKindOfClass:[NSDictionary class]])
             {
                 if (CGRectMakeWithDictionaryRepresentation((CFDictionaryRef)resource, &rect) == NO)
@@ -103,7 +103,7 @@
         NSValue *value = [self.cache objectForKey:name];
         if (value == nil)
         {
-            id resource = [self.resources valueForKey:name];
+            id resource = [self.resources valueForKeyPath:name];
             if ([resource isKindOfClass:[NSDictionary class]])
             {
                 if (CGPointMakeWithDictionaryRepresentation((CFDictionaryRef)resource, &point) == NO)

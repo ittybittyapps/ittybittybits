@@ -79,7 +79,7 @@
         color = (UIColor  *)[self.cache objectForKey:name];
         if (color == nil)
         {
-            id<NSObject> colorResource = [self.resources valueForKey:name];
+            id<NSObject> colorResource = [self.resources valueForKeyPath:name];
             if ([colorResource isKindOfClass:[NSNumber class]])
             {
                 color = [UIColor ibaColorWithRGBHex:[((NSNumber*)colorResource) unsignedIntValue]];
