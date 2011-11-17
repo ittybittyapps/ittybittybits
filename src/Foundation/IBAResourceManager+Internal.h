@@ -20,6 +20,7 @@
 #import "IBAResourceManager.h"
 #import "IBAResourceBundle+Internal.h"
 #import "IBAStack.h"
+#import "IBALogger.h"
 
 #define ImplResourceNamed(name, type, default) \
 - (type)name##Named:(NSString *)name \
@@ -31,6 +32,8 @@
             return resource; \
         } \
     } \
+    \
+    IBALogError(@"Failed to find resource with name '%@', returning default.", name); \
     return (default); \
 }
 
