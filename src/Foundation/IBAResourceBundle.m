@@ -83,16 +83,13 @@ IBA_SYNTHESIZE(bundle, cache, resources);
     int count = 0;
     do {
         id object = [self.resources valueForKeyPath:name];
-        if (object)
+        if ([object isKindOfClass:[NSString class]] && [object hasPrefix:@"$"])
         {
-            if ([object isKindOfClass:[NSString class]] && [object hasPrefix:@"$"])
-            {
-                name = [object substringFromIndex:1];
-            }
-            else
-            {
-                break;
-            }
+            name = [object substringFromIndex:1];
+        }
+        else
+        {
+            break;
         }
     }
     while (++count < 100);
