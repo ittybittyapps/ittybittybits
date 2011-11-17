@@ -65,6 +65,10 @@
             if (path)
             {
                 image = [UIImage imageWithContentsOfFile:path];
+                if (image == nil)
+                {
+                    IBALogError(@"Failed to load UIImage resource with name '%@' from file: %@", name, path);
+                }
             }
         }
     }
@@ -128,6 +132,10 @@
         if (pattern)
         {
             color = [UIColor colorWithPatternImage:pattern];
+            if (color == nil)
+            {
+                IBALogError(@"Failed to load UIColor resource with name: %@", name);
+            }
         }
         
         if (color)
