@@ -34,15 +34,19 @@ IBA_SYNTHESIZE(flipped,
     [super dealloc];
 }
 
-- (void)loadView
+- (void)viewDidLoad
 {
-    [super loadView];
+    [super viewDidLoad];
     
     self.frontViewCoordinator.view.frame = self.view.bounds;
     self.backViewCoordinator.view.frame = self.view.bounds;
     
     id<IBAFlipViewSideProtocol> frontFacingCoordinator = (self.flipped) ? self.backViewCoordinator : self.frontViewCoordinator;
+    id<IBAFlipViewSideProtocol> backFacingCoordinator = (self.flipped) ? self.frontViewCoordinator : self.backViewCoordinator;
+    backFacingCoordinator.view.hidden = YES;
+                                                         
     [self.view addSubview:frontFacingCoordinator.view];
+    [self.view addSubview:backFacingCoordinator.view];
 }
 
 #pragma mark - View Management
@@ -78,7 +82,7 @@ IBA_SYNTHESIZE(flipped,
     id<IBAFlipViewSideProtocol> frontFacingCoordinator = (self.flipped) ? self.backViewCoordinator : self.frontViewCoordinator;
     id<IBAFlipViewSideProtocol> backFacingCoordinator = (self.flipped) ? self.frontViewCoordinator : self.backViewCoordinator;
     
-    UIViewAnimationOptions animationOptions = UIViewAnimationOptionTransitionFlipFromLeft;
+    UIViewAnimationOptions animationOptions = UIViewAnimationOptionTransitionFlipFromLeft | UIViewAnimationOptionAllowAnimatedContent;
     
     if ([frontFacingCoordinator respondsToSelector:@selector(flipSideWillDisappear)])
         [frontFacingCoordinator flipSideWillDisappear];
@@ -86,8 +90,8 @@ IBA_SYNTHESIZE(flipped,
         [backFacingCoordinator flipSideWillAppear];
     
     [UIView transitionWithView:self.view duration:0.75 options:animationOptions animations:^{
-        [frontFacingCoordinator.view removeFromSuperview];
-        [self.view addSubview:backFacingCoordinator.view];
+        frontFacingCoordinator.view.hidden = YES;
+        backFacingCoordinator.view.hidden = NO;
         IBA_RUN_BLOCK(self.animateBlockDuringFlip);
     } completion:^(BOOL IBA_UNUSED finished) {
         if ([backFacingCoordinator respondsToSelector:@selector(flipSideDidAppear)])
