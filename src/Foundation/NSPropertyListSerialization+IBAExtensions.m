@@ -27,16 +27,26 @@ NSString * const IBAPropertyListSerializationErrorDomain = @"com.ittybittyapps.e
 /*!
  \brief     Returns a dictionary containing the contents of a property list.
  \param     plistPath       The file path of the property list to read.
- \param     format          The format of the property list.
  \param     error           Set if an error occurs.
  \return    A dictionary containing the contents of the property list file on success; otherwise nil.
  */
-+ (NSDictionary *)ibaDictionaryFromPropertyList:(NSString *)plistPath format:(NSPropertyListFormat)format error:(NSError **)error
++ (NSDictionary *)ibaDictionaryFromPropertyList:(NSString *)plistPath error:(NSError **)error
+{
+    NSData *plistData = [NSData dataWithContentsOfMappedFile:plistPath];
+    return [self ibaDictionaryFromPropertyListData:plistData error:error];
+}
+
+/*!
+ \brief     Returns a dictionary containing the contents of a property list.
+ \param     data            The property list data to deserialize.
+ \param     error           Set if an error occurs.
+ \return    A dictionary containing the contents of the property list file on success; otherwise nil.
+ */
++ (NSDictionary *)ibaDictionaryFromPropertyListData:(NSData *)data error:(NSError **)error
 {
     NSString *errorDesc = nil;
-
-    NSData *plistData = [NSData dataWithContentsOfMappedFile:plistPath];
-    NSDictionary *temp = [NSPropertyListSerialization propertyListFromData:plistData
+    NSPropertyListFormat format = 0;
+    NSDictionary *temp = [NSPropertyListSerialization propertyListFromData:data
                                                           mutabilityOption:NSPropertyListImmutable
                                                                     format:&format
                                                           errorDescription:&errorDesc];

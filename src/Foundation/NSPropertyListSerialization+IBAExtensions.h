@@ -27,5 +27,6 @@ typedef enum {
 IBA_EXTERN NSString * const IBAPropertyListSerializationErrorDomain;
 
 @interface NSPropertyListSerialization (IBAExtensions)
-+ (NSDictionary *)ibaDictionaryFromPropertyList:(NSString *)plistPath format:(NSPropertyListFormat)format error:(NSError **)error;
++ (NSDictionary *)ibaDictionaryFromPropertyList:(NSString *)plistPath error:(NSError **)error;
++ (NSDictionary *)ibaDictionaryFromPropertyListData:(NSData *)data error:(NSError **)error;
 @end
