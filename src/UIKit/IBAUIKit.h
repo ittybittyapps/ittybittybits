@@ -33,6 +33,7 @@
 #import "IBATiledImageView.h"
 #import "IBAViewController.h"
 #import "IBAAlertView.h"
+#import "IBAAnchoredStackView.h"
 
 // Extension categories.
 #import "NSIndexPath+UITableView+IBAExtensions.h"

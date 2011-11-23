@@ -367,6 +367,8 @@
 		A7F83717143D5E7300196396 /* NSData+IBAExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = A7F83715143D5E7300196396 /* NSData+IBAExtensions.m */; };
 		A7F8371B143D66B700196396 /* NSData+IBAExtensionsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A7F8371A143D66B700196396 /* NSData+IBAExtensionsTests.m */; };
 		A7FB6B5C137148DC0088C4CD /* IBACommon.h in Headers */ = {isa = PBXBuildFile; fileRef = A7FB6B5B137148DC0088C4CD /* IBACommon.h */; };
+		A8F2239D147C57B500220F4F /* IBAAnchoredStackView.h in Headers */ = {isa = PBXBuildFile; fileRef = A8F2239B147C57B400220F4F /* IBAAnchoredStackView.h */; };
+		A8F2239E147C57B500220F4F /* IBAAnchoredStackView.m in Sources */ = {isa = PBXBuildFile; fileRef = A8F2239C147C57B400220F4F /* IBAAnchoredStackView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -766,6 +768,8 @@
 		A7F83719143D66B700196396 /* NSData+IBAExtensionsTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+IBAExtensionsTests.h"; sourceTree = "<group>"; };
 		A7F8371A143D66B700196396 /* NSData+IBAExtensionsTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+IBAExtensionsTests.m"; sourceTree = "<group>"; };
 		A7FB6B5B137148DC0088C4CD /* IBACommon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IBACommon.h; path = Foundation/IBACommon.h; sourceTree = SOURCE_ROOT; };
+		A8F2239B147C57B400220F4F /* IBAAnchoredStackView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBAAnchoredStackView.h; sourceTree = "<group>"; };
+		A8F2239C147C57B400220F4F /* IBAAnchoredStackView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IBAAnchoredStackView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1161,6 +1165,8 @@
 				A774CADD13B2E0B3002B2FA1 /* IBAUIKit.m */,
 				A706A6EB13821B8300429203 /* IBAActionSheet.h */,
 				A706A6EC13821B8300429203 /* IBAActionSheet.m */,
+				A8F2239B147C57B400220F4F /* IBAAnchoredStackView.h */,
+				A8F2239C147C57B400220F4F /* IBAAnchoredStackView.m */,
 				A7C05860140C9F7D00339F5B /* IBACarouselView.h */,
 				A7C05861140C9F7D00339F5B /* IBACarouselView.m */,
 				A7C05863140CA04000339F5B /* IBAFlipButton.h */,
@@ -1610,6 +1616,7 @@
 				A791054C1470A07B0074226B /* IBAResourceManager+CoreGraphics.h in Headers */,
 				A79105501470A1140074226B /* IBAResourceManager+Internal.h in Headers */,
 				A79105541470A2AE0074226B /* IBAResourceManager+UIKit.h in Headers */,
+				A8F2239D147C57B500220F4F /* IBAAnchoredStackView.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1996,6 +2003,7 @@
 				A791054914709E5A0074226B /* IBAResourceBundle+UIKit.m in Sources */,
 				A791054D1470A07B0074226B /* IBAResourceManager+CoreGraphics.m in Sources */,
 				A79105551470A2AE0074226B /* IBAResourceManager+UIKit.m in Sources */,
+				A8F2239E147C57B500220F4F /* IBAAnchoredStackView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
