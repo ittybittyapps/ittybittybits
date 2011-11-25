@@ -25,6 +25,7 @@
 - (UIColor *)colorNamed:(NSString *)name;
 - (UIColor *)colorWithPatternNamed:(NSString *)name;
 - (UIFont *)fontNamed:(NSString *)name;
+- (BOOL)hasResource:(NSString *)name;
 
 // gradients?
 

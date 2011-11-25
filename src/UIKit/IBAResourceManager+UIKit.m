@@ -30,4 +30,15 @@ ImplResourceNamed(image, UIImage *, nil)
 ImplResourceNamed(colorWithPattern, UIColor *, nil)
 ImplResourceNamed(font, UIFont *, nil)
 
+// For additional resource-name validation without throwing missing resource debug errors.
+- (BOOL)hasResource:(NSString *)name
+{
+	for (IBAResourceBundle *bundle in self.bundleStack)
+	{
+		if ([bundle hasResourceNamed:name])
+			return YES;
+	}
+	return NO;
+}
+
 @end
