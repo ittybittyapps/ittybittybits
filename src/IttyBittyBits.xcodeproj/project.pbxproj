@@ -367,6 +367,8 @@
 		A7F83717143D5E7300196396 /* NSData+IBAExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = A7F83715143D5E7300196396 /* NSData+IBAExtensions.m */; };
 		A7F8371B143D66B700196396 /* NSData+IBAExtensionsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A7F8371A143D66B700196396 /* NSData+IBAExtensionsTests.m */; };
 		A7FB6B5C137148DC0088C4CD /* IBACommon.h in Headers */ = {isa = PBXBuildFile; fileRef = A7FB6B5B137148DC0088C4CD /* IBACommon.h */; };
+		A893DA57147F56AB0064D810 /* NSMutableArray+IBASorting.h in Headers */ = {isa = PBXBuildFile; fileRef = A893DA55147F56AB0064D810 /* NSMutableArray+IBASorting.h */; };
+		A893DA58147F56AC0064D810 /* NSMutableArray+IBASorting.m in Sources */ = {isa = PBXBuildFile; fileRef = A893DA56147F56AB0064D810 /* NSMutableArray+IBASorting.m */; };
 		A8F2239D147C57B500220F4F /* IBAAnchoredStackView.h in Headers */ = {isa = PBXBuildFile; fileRef = A8F2239B147C57B400220F4F /* IBAAnchoredStackView.h */; };
 		A8F2239E147C57B500220F4F /* IBAAnchoredStackView.m in Sources */ = {isa = PBXBuildFile; fileRef = A8F2239C147C57B400220F4F /* IBAAnchoredStackView.m */; };
 /* End PBXBuildFile section */
@@ -768,6 +770,8 @@
 		A7F83719143D66B700196396 /* NSData+IBAExtensionsTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+IBAExtensionsTests.h"; sourceTree = "<group>"; };
 		A7F8371A143D66B700196396 /* NSData+IBAExtensionsTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+IBAExtensionsTests.m"; sourceTree = "<group>"; };
 		A7FB6B5B137148DC0088C4CD /* IBACommon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IBACommon.h; path = Foundation/IBACommon.h; sourceTree = SOURCE_ROOT; };
+		A893DA55147F56AB0064D810 /* NSMutableArray+IBASorting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+IBASorting.h"; sourceTree = "<group>"; };
+		A893DA56147F56AB0064D810 /* NSMutableArray+IBASorting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+IBASorting.m"; sourceTree = "<group>"; };
 		A8F2239B147C57B400220F4F /* IBAAnchoredStackView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBAAnchoredStackView.h; sourceTree = "<group>"; };
 		A8F2239C147C57B400220F4F /* IBAAnchoredStackView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IBAAnchoredStackView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -1449,6 +1453,8 @@
 				A79B837D1439843F0002C8D5 /* NSHTTPURLResponse+IBAExtensions.m */,
 				A7286D88138A1AFB00C12FCB /* NSMutableArray+IBAExtensions.h */,
 				A7286D89138A1AFB00C12FCB /* NSMutableArray+IBAExtensions.m */,
+				A893DA55147F56AB0064D810 /* NSMutableArray+IBASorting.h */,
+				A893DA56147F56AB0064D810 /* NSMutableArray+IBASorting.m */,
 				A71E21CF13CAD26800FB2695 /* NSMutableDictionary+IBAExtensions.h */,
 				A71E21D013CAD26800FB2695 /* NSMutableDictionary+IBAExtensions.m */,
 				A78E41D413DD0C8E0042FF9E /* NSMutableSet+IBAExtensions.h */,
@@ -1617,6 +1623,7 @@
 				A79105501470A1140074226B /* IBAResourceManager+Internal.h in Headers */,
 				A79105541470A2AE0074226B /* IBAResourceManager+UIKit.h in Headers */,
 				A8F2239D147C57B500220F4F /* IBAAnchoredStackView.h in Headers */,
+				A893DA57147F56AB0064D810 /* NSMutableArray+IBASorting.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2004,6 +2011,7 @@
 				A791054D1470A07B0074226B /* IBAResourceManager+CoreGraphics.m in Sources */,
 				A79105551470A2AE0074226B /* IBAResourceManager+UIKit.m in Sources */,
 				A8F2239E147C57B500220F4F /* IBAAnchoredStackView.m in Sources */,
+				A893DA58147F56AC0064D810 /* NSMutableArray+IBASorting.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
