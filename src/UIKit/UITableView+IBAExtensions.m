@@ -62,7 +62,7 @@
         // move to previous section
         --section;
     
-        IBAIndexPathRowType rows = [self numberOfRowsInSection:section];
+        NSInteger rows = [self numberOfRowsInSection:section];
         if (rows > 0)
         {
             return [NSIndexPath indexPathForRow:(rows - 1) inSection:section];
