@@ -19,5 +19,6 @@
 
 #endif
 
+- (NSIndexPath *)ibaIndexPathOfRowBeforeIndexPath:(NSIndexPath*)indexPath;
 
 @end

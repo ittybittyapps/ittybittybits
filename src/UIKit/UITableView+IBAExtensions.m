@@ -9,6 +9,8 @@
 #import "UITableView+IBAExtensions.h"
 #import "../Foundation/IBAFoundation.h"
 
+#import "NSIndexPath+UITableView+IBAExtensions.h"
+
 @implementation UITableView (IBAExtensions)
 
 #pragma mark - iOS 5 Backwards Compatibility
@@ -45,5 +47,29 @@
 }
 
 #endif
+
+- (NSIndexPath *)ibaIndexPathOfRowBeforeIndexPath:(NSIndexPath*)indexPath
+{
+    if (indexPath.row > 0)
+    {
+        return [NSIndexPath indexPathForRow:(indexPath.row - 1) inSection:indexPath.section];
+    }
+
+    IBAIndexPathSectionType section = indexPath.section;
+    
+    while (section > 0)
+    {
+        // move to previous section
+        --section;
+    
+        IBAIndexPathRowType rows = [self numberOfRowsInSection:section];
+        if (rows > 0)
+        {
+            return [NSIndexPath indexPathForRow:(rows - 1) inSection:section];
+        }
+    }
+
+    return nil;
+}
 
 @end
