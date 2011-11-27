@@ -197,7 +197,7 @@ IBA_SYNTHESIZE(sections);
  \brief     Returns a value that indicates whether the specified \a indexPath references the last row in a section.
  \return    YES if the \a indexPath references the last row in a table model section; otherwise NO.
  */
-- (BOOL)isLastRowOfSectionInTableViewModel:(IBATableViewModel *)tableViewModel
+- (BOOL)ibaIsLastRowOfSectionInTableViewModel:(IBATableViewModel *)tableViewModel
 {
     return self.ibaTableViewModelRow == ([tableViewModel numberOfRowsInSection:self.ibaTableViewModelSection] - 1);
 }
@@ -206,7 +206,7 @@ IBA_SYNTHESIZE(sections);
  \brief     Returns a value that indicates whether the specified \a indexPath references the last row in the table model.
  \return    YES if the \a indexPath references the last row in the table model; otherwise NO.
  */
-- (BOOL)isLastRowInTableViewModel:(IBATableViewModel *)tableViewModel
+- (BOOL)ibaIsLastRowInTableViewModel:(IBATableViewModel *)tableViewModel
 {
     NSInteger section = self.ibaTableViewModelSection;
     NSInteger row = self.ibaTableViewModelRow;

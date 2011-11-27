@@ -51,7 +51,7 @@
 - (NSInteger)ibaTableViewModelSection;
 - (NSInteger)ibaTableViewModelRow;
 
-- (BOOL)isLastRowOfSectionInTableViewModel:(IBATableViewModel *)tableViewModel;
-- (BOOL)isLastRowInTableViewModel:(IBATableViewModel *)tableViewModel;
+- (BOOL)ibaIsLastRowOfSectionInTableViewModel:(IBATableViewModel *)tableViewModel;
+- (BOOL)ibaIsLastRowInTableViewModel:(IBATableViewModel *)tableViewModel;
 
 @end
