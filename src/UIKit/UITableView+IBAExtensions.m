@@ -55,7 +55,7 @@
         return [NSIndexPath indexPathForRow:(indexPath.row - 1) inSection:indexPath.section];
     }
 
-    IBAIndexPathSectionType section = indexPath.section;
+    NSInteger section = indexPath.section;
     
     while (section > 0)
     {
