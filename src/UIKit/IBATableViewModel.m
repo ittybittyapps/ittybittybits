@@ -210,8 +210,23 @@ IBA_SYNTHESIZE(sections);
 {
     NSInteger section = self.ibaTableViewModelSection;
     NSInteger row = self.ibaTableViewModelRow;
+ 
+    // get the index of the last non-empty section
+    NSInteger idx = [tableViewModel sectionCount] - 1;
+    NSInteger lastNonEmptySectionIdx = -1;
+    while (idx >= 0)
+    {
+        IBATableViewSectionModel *sectionModel = [tableViewModel sectionAtIndex:idx];
+        if (sectionModel.rowCount > 0)
+        {
+            lastNonEmptySectionIdx = idx;
+            break;
+        }
     
-    return section == ([tableViewModel sectionCount] - 1)  && row == ([tableViewModel numberOfRowsInSection:section] - 1);
+        --idx;
+    }
+     
+    return section == lastNonEmptySectionIdx  && row == ([tableViewModel numberOfRowsInSection:section] - 1);
 }
 
 @end
