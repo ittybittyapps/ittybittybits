@@ -33,20 +33,24 @@ typedef NSUInteger IBAIndexPathSectionType;
 #endif
 
 #if IBA_NSINDEXPATH_ROW_IS_SIGNED
+#   define IBANSIntegerToIBAIndexPathRowType(value) (value)
 #   define IBANSUIntegerToIBAIndexPathRowType(value) IBANSUIntegerToNSInteger((value))
 #   define IBAIndexPathRowTypeToNSUInteger(value) IBANSIntegerToNSUInteger((value))
 #   define IBAIndexPathRowTypeToNSInteger(value) (value)
 #else
+#   define IBANSIntegerToIBAIndexPathRowType(value) IBANSIntegerToNSUInteger(value)
 #   define IBANSUIntegerToIBAIndexPathRowType(value) (value)
 #   define IBAIndexPathRowTypeToNSUInteger(value) (value)
 #   define IBAIndexPathRowTypeToNSInteger(value) IBANSUIntegerToNSInteger(value)
 #endif
 
 #if IBA_NSINDEXPATH_SECTION_IS_SIGNED
+#   define IBANSIntegerToIBAIndexPathSectionType(value) (value)
 #   define IBANSUIntegerToIBAIndexPathSectionType(value) IBANSUIntegerToNSInteger(value)
 #   define IBAIndexPathSectionTypeToNSUInteger(value) IBANSIntegerToNSUInteger(value)
 #   define IBAIndexPathSectionTypeToNSInteger(value) (value)
 #else
+#   define IBANSIntegerToIBAIndexPathSectionType(value) IBANSIntegerToNSUInteger(value)
 #   define IBANSUIntegerToIBAIndexPathSectionType(value) (value)
 #   define IBAIndexPathSectionTypeToNSUInteger(value) (value)
 #   define IBAIndexPathSectionTypeToNSInteger(value) IBANSUIntegerToNSInteger(value)

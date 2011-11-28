@@ -55,17 +55,17 @@
         return [NSIndexPath indexPathForRow:(indexPath.row - 1) inSection:indexPath.section];
     }
 
-    NSInteger section = indexPath.section;
+    IBAIndexPathSectionType section = indexPath.section;
     
     while (section > 0)
     {
         // move to previous section
         --section;
     
-        NSInteger rows = [self numberOfRowsInSection:section];
+        NSInteger rows = [self numberOfRowsInSection:IBAIndexPathRowTypeToNSInteger(section)];
         if (rows > 0)
         {
-            return [NSIndexPath indexPathForRow:(rows - 1) inSection:section];
+            return [NSIndexPath indexPathForRow:IBANSIntegerToIBAIndexPathRowType(rows - 1) inSection:section];
         }
     }
 
