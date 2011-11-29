@@ -71,6 +71,11 @@
                 }
             }
         }
+        
+        if (image == nil)
+        {
+            IBALogError(@"Failed to find and load image for resource named: %@", name);
+        }
     }
     
     return image;
