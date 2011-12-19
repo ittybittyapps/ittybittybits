@@ -21,6 +21,7 @@
 
 @interface IBAResourceBundle (UIKit)
 
+- (void)setImageCacheMaxCost:(NSUInteger)maxCost;
 - (UIColor *)colorNamed:(NSString *)name;
 - (UIColor *)colorWithPatternNamed:(NSString *)name;
 - (UIImage *)imageNamed:(NSString *)name;

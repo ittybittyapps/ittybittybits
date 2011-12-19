@@ -26,6 +26,30 @@
 
 #import <objc/runtime.h>
 
+@interface IBAResourceBundle (UIKitPrivate)
+@property (nonatomic, readonly) NSCache *imageCache;
+@end
+
+@implementation IBAResourceBundle (UIKitPrivate)
+
+- (NSCache *)imageCache
+{
+    static char kImageCacheKey = 0;
+    @synchronized(self)
+    {
+        NSCache *cache = objc_getAssociatedObject(self, &kImageCacheKey);
+        if (cache == nil)
+        {
+            cache = [[[NSCache alloc] init] autorelease];
+            objc_setAssociatedObject(self, &kImageCacheKey, cache, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+        }
+        
+        return cache;
+    }
+}
+
+@end
+
 @implementation IBAResourceBundle (UIKit)
 
 + (NSArray *)imageExtensions
@@ -39,6 +63,11 @@
     return extensions;
 }
 
+- (void)setImageCacheMaxCost:(NSUInteger)maxCost
+{
+    [self.imageCache setTotalCostLimit:maxCost];
+}
+
 - (UIImage *)imageNamed:(NSString *)name
 {
     CGFloat scale = [[UIScreen mainScreen] scale];
@@ -49,32 +78,44 @@
     
     if (resource)
     {
-        NSArray *extentions = [[self class] imageExtensions];
-        NSString *pathExt = [resource pathExtension];
-        if (pathExt && [pathExt ibaNotBlank])
-        {
-            extentions = IBA_NSARRAY(pathExt);
-        }
-        
-        NSString *pathWithoutExt = [resource stringByDeletingPathExtension];
-        
-        for (NSString *ext in extentions) 
-        {
-            NSString *formattedPath = [NSString stringWithFormat:@"%@%@", pathWithoutExt, (scale == 2.0 ? @"@2x" : @"")]; 
-            NSString *path = [self.bundle pathForResource:formattedPath ofType:ext];    
-            if (path)
-            {
-                image = [UIImage imageWithContentsOfFile:path];
-                if (image == nil)
-                {
-                    IBALogError(@"Failed to load UIImage resource with name '%@' from file: %@", name, path);
-                }
-            }
-        }
-        
+        NSCache *imageCache = self.imageCache;
+        image = (UIImage  *)[imageCache objectForKey:name];
         if (image == nil)
         {
-            IBALogError(@"Failed to find and load image for resource named: %@", name);
+            NSArray *extentions = [[self class] imageExtensions];
+            NSString *pathExt = [resource pathExtension];
+            if (pathExt && [pathExt ibaNotBlank])
+            {
+                extentions = IBA_NSARRAY(pathExt);
+            }
+            
+            NSString *pathWithoutExt = [resource stringByDeletingPathExtension];
+            
+            for (NSString *ext in extentions) 
+            {
+                NSString *formattedPath = [NSString stringWithFormat:@"%@%@", pathWithoutExt, (scale == 2.0 ? @"@2x" : @"")]; 
+                NSString *path = [self.bundle pathForResource:formattedPath ofType:ext];    
+                if (path)
+                {
+                    image = [UIImage imageWithContentsOfFile:path];
+                    if (image == nil)
+                    {
+                        IBALogError(@"Failed to load UIImage resource with name '%@' from file: %@", name, path);
+                    }
+                }
+            }
+            
+            if (image == nil)
+            {
+                IBALogError(@"Failed to find and load image for resource named: %@", name);
+            }
+            else
+            {
+                // Estimate the total "cost" of the image by multiplying the number of bytes per row & number of rows in an image.
+                CGImageRef cgImage = image.CGImage;
+                size_t bytesSize = CGImageGetBytesPerRow(cgImage) * CGImageGetHeight(cgImage);
+                [imageCache setObject:image forKey:name cost:bytesSize];
+            }
         }
     }
     
