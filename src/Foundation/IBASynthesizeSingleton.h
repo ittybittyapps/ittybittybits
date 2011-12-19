@@ -13,19 +13,6 @@
 
 #define IBA_SYNTHESIZE_SINGLETON_FOR_CLASS(classname, accessorname) \
 static classname *shared##classname = nil; \
-+ (void)cleanupFromTerminate \
-{ \
-    classname *temp = shared##classname; \
-    shared##classname = nil; \
-    [temp dealloc]; \
-} \
-+ (void)registerForCleanup \
-{ \
-    [[NSNotificationCenter defaultCenter] addObserver:self \
-                                             selector:@selector(cleanupFromTerminate) \
-                                                 name:UIApplicationWillTerminateNotification \
-                                               object:nil]; \
-} \
 + (classname *)accessorname \
 { \
     static dispatch_once_t p; \
@@ -35,7 +22,6 @@ static classname *shared##classname = nil; \
         { \
             NSAutoreleasePool *pool = [[NSAutoreleasePool alloc] init]; \
             shared##classname = [[self alloc] init]; \
-            [self registerForCleanup]; \
             [pool drain]; \
         } \
     }); \
