@@ -158,6 +158,15 @@ IBA_SYNTHESIZE(title, rows);
     return [NSArray arrayWithArray:self.rows];
 }
 
+/*!
+ \brief     Sorts the table section using the comparison method specified by the comparator block.
+ \param     cmptr A comparator block.
+*/
+- (void)sortRowsUsingComparator:(NSComparator)cmptr
+{
+    [self.rows sortUsingComparator:cmptr];
+}
+
 - (NSString *)description
 {
     return [NSString stringWithFormat:@"<%@ %@:[\n\t%@\n]>", self.class, self.title, self.rows];

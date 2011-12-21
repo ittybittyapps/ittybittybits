@@ -41,4 +41,6 @@
 - (void)removeRow:(id)row;
 - (void)removeRowAtIndex:(NSInteger)index;
 
+- (void)sortRowsUsingComparator:(NSComparator)cmptr;
+
 @end
