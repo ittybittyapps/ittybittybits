@@ -39,6 +39,8 @@
 - (NSInteger)sectionCount;
 - (NSInteger)numberOfRowsInSection:(NSInteger)sectionIndex;
 
+- (void)withEachSectionPerformBlock:(void (^)(NSInteger index, IBATableViewSectionModel *sectionModel))block;
+
 - (IBATableViewSectionModel *)sectionAtIndex:(NSInteger)sectionIndex;
 - (id)objectAtIndexPath:(NSIndexPath*)indexPath;
 

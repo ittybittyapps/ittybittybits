@@ -174,6 +174,18 @@ IBA_SYNTHESIZE(sections);
     return indexPath ? [[self sectionAtIndex:indexPath.ibaTableViewModelSection] rowAtIndex:indexPath.ibaTableViewModelRow] : nil;
 }
 
+/*!
+ \brief     Perform the specified \a block for each section in the table model.
+ */
+- (void)withEachSectionPerformBlock:(void (^)(NSInteger sectionIndex, IBATableViewSectionModel *sectionModel))block
+{
+    for (NSInteger i = 0; i < self.sectionCount; ++i)
+    {
+        IBATableViewSectionModel *sectionModel = [self sectionAtIndex:i];
+        IBA_RUN_BLOCK(block, i, sectionModel);
+    }
+}
+
 - (NSString *)description
 {
     return [NSString stringWithFormat:@"<%@ [\n\t%@\n]>", self.class, [[self.sections ibaMap:^(id i) { return [i description]; }] componentsJoinedByString:@",\n\t"]];
