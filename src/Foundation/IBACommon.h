@@ -516,3 +516,9 @@ IBA_INLINE NSUInteger IBANSIntegerToNSUInteger(NSInteger i)
 {
     return (i < 0) ? 0 : (NSUInteger)i;
 }
+
+/*!
+ \def       IBACompare
+ \brief     Compares to values for order.
+ */
+#define IBACompare(x, y) (((x) < (y)) ? NSOrderedAscending : (((x) > (y)) ? NSOrderedDescending : NSOrderedSame))
