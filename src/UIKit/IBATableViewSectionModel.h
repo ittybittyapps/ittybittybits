@@ -36,6 +36,7 @@
 - (NSInteger)rowCount;
 - (id)rowAtIndex:(NSInteger)indexRow;
 - (void)addRow:(id)row;
+- (void)addRowsFromArray:(NSArray *)rows;
 - (NSArray *)allRows;
 
 - (void)removeRow:(id)row;

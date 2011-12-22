@@ -142,6 +142,14 @@ IBA_SYNTHESIZE(title, rows);
 }
 
 /*!
+ \brief     Adds the rows objects from the array \a rows.
+ */
+- (void)addRowsFromArray:(NSArray *)rows
+{
+    [self.rows addObjectsFromArray:rows];
+}
+
+/*!
  \brief     Adds a row to the section.
  */
 - (void)addRow:(id)row
