@@ -52,7 +52,10 @@ IBA_SYNTHESIZE(tableView, clearsSelectionOnViewWillAppear, tableViewModel);
 
 - (void)releaseViews
 {
+    self.tableView.delegate = nil;
+    self.tableView.dataSource = nil;
     IBA_RELEASE_PROPERTY(tableView);
+    
     [super releaseViews];
 }
 
