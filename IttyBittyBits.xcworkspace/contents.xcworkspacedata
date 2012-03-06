@@ -2,6 +2,60 @@
 <Workspace
    version = "1.0">
    <Group
+      location = "container:config"
+      name = "Configuration">
+      <Group
+         location = "container:config/common"
+         name = "Common">
+         <FileRef
+            location = "group:Linker.xcconfig">
+         </FileRef>
+         <FileRef
+            location = "group:Tests.xcconfig">
+         </FileRef>
+         <FileRef
+            location = "group:Platform-iOS.xcconfig">
+         </FileRef>
+         <FileRef
+            location = "group:Platform-OSX.xcconfig">
+         </FileRef>
+         <FileRef
+            location = "group:Compiler.xcconfig">
+         </FileRef>
+         <FileRef
+            location = "group:CodeGen.xcconfig">
+         </FileRef>
+         <FileRef
+            location = "group:Diagnostics.xcconfig">
+         </FileRef>
+         <FileRef
+            location = "group:Debug.xcconfig">
+         </FileRef>
+         <FileRef
+            location = "group:Release.xcconfig">
+         </FileRef>
+      </Group>
+      <Group
+         location = "container:config"
+         name = "Project">
+         <FileRef
+            location = "group:FoundationiOS-Release.xcconfig">
+         </FileRef>
+         <FileRef
+            location = "group:FoundationOSX-Release.xcconfig">
+         </FileRef>
+         <FileRef
+            location = "group:Foundation.xcconfig">
+         </FileRef>
+         <FileRef
+            location = "group:FoundationiOS-Debug.xcconfig">
+         </FileRef>
+         <FileRef
+            location = "group:FoundationOSX-Debug.xcconfig">
+         </FileRef>
+      </Group>
+   </Group>
+   <Group
       location = "container:"
       name = "Documentation">
       <FileRef
@@ -9,6 +63,13 @@
       </FileRef>
       <FileRef
          location = "group:README.markdown">
+      </FileRef>
+   </Group>
+   <Group
+      location = "container:"
+      name = "Foundation">
+      <FileRef
+         location = "group:foundation/Foundation.xcodeproj">
       </FileRef>
    </Group>
    <FileRef

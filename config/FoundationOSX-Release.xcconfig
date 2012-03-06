@@ -1,0 +1,6 @@
+//  Copyright 2012 Itty Bitty Apps Pty. Ltd. All rights reserved.
+
+#include "common/Platform-OSX.xcconfig"
+#include "common/Release.xcconfig"
+
+#include "Foundation.xcconfig"

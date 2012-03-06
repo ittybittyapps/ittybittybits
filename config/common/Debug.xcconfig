@@ -1,0 +1,12 @@
+//  Copyright 2012 Itty Bitty Apps Pty. Ltd. All rights reserved.
+
+// No optimization
+GCC_OPTIMIZATION_LEVEL = 0
+
+CONFIG_GCC_PREPROCESSOR_DEFINITIONS = DEBUG=1
+
+COPY_PHASE_STRIP = NO
+DEAD_CODE_STRIPPING = NO
+
+// When enabled, only the active architecture is built for faster debugging turnaround
+ONLY_ACTIVE_ARCH = YES

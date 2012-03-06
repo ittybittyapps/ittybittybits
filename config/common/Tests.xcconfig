@@ -1,0 +1,2 @@
+// Activating this setting causes a 'notes' file to be produced that the gcov code-coverage utility can use to show program coverage. 
+GCC_GENERATE_TEST_COVERAGE_FILES = YES

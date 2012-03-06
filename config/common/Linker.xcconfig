@@ -1,0 +1,3 @@
+//  Copyright 2011 Itty Bitty Apps Pty. Ltd. All rights reserved.
+
+OTHER_LDFLAGS = -ObjC

@@ -1,0 +1,29 @@
+//  Copyright 2011 Itty Bitty Apps Pty. Ltd. All rights reserved.
+
+// Don't hide symbols by default
+GCC_SYMBOLS_PRIVATE_EXTERN = NO
+
+// Optimize code by making more aggressive assumptions about whether pointers can point to the same objects as other pointers. 
+GCC_STRICT_ALIASING = YES
+
+// The optimizer will not look across object files in your program and optimize across file boundaries during linking.
+LLVM_LTO = NO
+
+// Ensable ARC 
+CLANG_ENABLE_OBJC_ARC = YES
+
+// Faster function calls for applications. Not appropriate for shared (dynamic) libraries (which need to be position-independent).
+GCC_DYNAMIC_NO_PIC = NO
+
+// This setting enables highly accelerated dispatch to the Objective-C runtime. Only applies to Objective-C. 
+GCC_FAST_OBJC_DISPATCH = YES
+
+// Choose a version of the C++ standard library to use. libc++: highly optimized C++ standard library that works only with the LLVM Compiler, and is designed to support new C++11 features. 
+CLANG_CXX_LIBRARY = libc++
+
+// Controls whether built-in functions that do not begin with __builtin_ as prefix are recognized. GCC normally generates special code to handle certain built-in functions more efficiently; for instance, calls to "alloca" may become single instructions that adjust the stack directly, and calls to "memcpy" may become inline copy loops. The resulting code is often both smaller and faster, but since the function calls no longer appear as such, you cannot set a breakpoint on those calls, nor can you change the behavior of the functions by linking with a different library. In addition, when a function is recognized as a built-in function, GCC may use information about that function to warn about problems with calls to that function, or to generate more efficient code, even if the resulting code still contains calls to that function. For example, warnings are given with -Wformat for bad calls to "printf", when "printf" is built in, and "strlen" is known not to modify global memory. 
+GCC_ENABLE_BUILTIN_FUNCTIONS = YES
+
+DEBUG_INFORMATION_FORMAT = dwarf-with-dsym
+
+GCC_ENABLE_OBJC_EXCEPTIONS = YES

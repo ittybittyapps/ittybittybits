@@ -1,45 +1,10 @@
-//
-//  Project-IttyBittyBits-Shared.xcconfig
-//  IttyBittyBits
-//
-//  Created by Oliver Jones on 17/06/11.
 //  Copyright 2011 Itty Bitty Apps Pty. Ltd. All rights reserved.
-//
-
-// Normally we can just use the following config:
-// ARCHS = $(ARCHS_STANDARD_32_BIT)
-
-// But because the iOS5 SDK seems to have dropped armv6 from the 
-// ARCHS_STANDARD_32_BIT macro we have to specify it explicitly below.
-// The armv6 architecture is required when deploying on iOS4.2 (iPhone 3G)
-
-ARCHS[sdk=iphoneos*] = armv6 armv7
-ARCHS[sdk=iphonesimulator*] = i386
-
-SDKROOT = iphoneos
-IPHONEOS_DEPLOYMENT_TARGET = 4.2
-
-// Use Clang/LLVM 3.0
-GCC_VERSION = com.apple.compilers.llvm.clang.1_0
 
 // Always run the Static Analyzer with each build (increases build times but worth while).
 RUN_CLANG_STATIC_ANALYZER = YES
 
-// Don't "install" static library
-SKIP_INSTALL = YES
-
-// User header paths should not take precedence over system header paths.
-ALWAYS_SEARCH_USER_PATHS = NO
-
-// Additional header search path for submodules.
-ITTYBITTYBITS_HEADER_SEARCH_PATHS = $(SRCROOT)/lib/JSONKit
-HEADER_SEARCH_PATHS = $(ITTYBITTYBITS_HEADER_SEARCH_PATHS)
-
-// Don't hide symbols by default
-GCC_SYMBOLS_PRIVATE_EXTERN = NO
-
-// Allow GNU extensions to C99.
-GCC_C_LANGUAGE_STANDARD = gnu99
+CLANG_ANALYZER_DEADCODE_DEADSTORES = YES
+CLANG_ANALYZER_OBJC_SELF_INIT = YES
 
 // All warnings should be treated as errors.
 GCC_TREAT_WARNINGS_AS_ERRORS = YES
@@ -75,31 +40,24 @@ GCC_WARN_UNKNOWN_PRAGMAS = YES
 GCC_WARN_UNUSED_FUNCTION = YES
 GCC_WARN_UNUSED_PARAMETER = YES
 
+
 // Unfortunately this warning tends to generate false positives.  Not sure why.  Therefore we turn it off.
 GCC_WARN_MULTIPLE_DEFINITION_TYPES_FOR_SELECTOR = NO
+
+// These options duplicate a couple above but they are only available in Xcode 4.2 with LLVM 3.0.
+CLANG_WARN_CXX0X_EXTENSIONS = YES
+CLANG_WARN_IMPLICIT_SIGN_CONVERSION = YES
+CLANG_WARN_OBJCPP_ARC_ABI = YES
+CLANG_WARN_OBJC_IMPLICIT_ATOMIC_PROPERTIES = YES
+CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES
+CLANG_WARN_SUSPICIOUS_IMPLICIT_CONVERSION = YES
 
 // Additional warning flags that arn't covered by the GCC_WARN options
 // See http://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html for details on these options.
 WARNING_CFLAGS = -Wall -Wextra -Wunused -Wconversion -Wsign-conversion -Wfloat-equal -Wundef -Wc++-compat -Wstrict-prototypes -Wnested-externs -Wwrite-strings
 
-// These options duplicate a couple above but they are only available in Xcode 4.2 with LLVM 3.0.
-CLANG_WARN_CXX0X_EXTENSIONS = YES
-CLANG_WARN_IMPLICIT_SIGN_CONVERSION = YES
-CLANG_WARN_OBJC_IMPLICIT_ATOMIC_PROPERTIES = YES
-CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES
-CLANG_WARN_SUSPICIOUS_IMPLICIT_CONVERSION = YES
-
-// Optimize code by making more aggressive assumptions about whether pointers can point to the same objects as other pointers. 
-GCC_STRICT_ALIASING = YES
-
-// The optimizer will not look across object files in your program and optimize across file boundaries during linking.
-LLVM_LTO = NO
-
-// Disable ARC (for the time being - will adopt later)
-CLANG_ENABLE_OBJC_ARC = NO
-
 // Turn off color diagnostics by default (disable this for commandline builds for better looking output - Jenkins can use the color if the ANSI logfile parsing plugin is enabled)
 COLOR_DIAGNOSTICS=no-
 
 // Turn on other Clang compiler flags (mainly for diagnostics formatting)
-OTHER_CFLAGS = -fshow-source-location -fcaret-diagnostics -fdiagnostics-show-option -fdiagnostics-print-source-range-info -fdiagnostics-fixit-info -fdiagnostics-parseable-fixits -f$(COLOR_DIAGNOSTICS)color-diagnostics
+DIAGNOSTICS_OTHER_CFLAGS = -fshow-source-location -fcaret-diagnostics -fdiagnostics-show-option -fdiagnostics-print-source-range-info -fdiagnostics-fixit-info -fdiagnostics-parseable-fixits -f$(COLOR_DIAGNOSTICS)color-diagnostics
