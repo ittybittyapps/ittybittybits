@@ -14,6 +14,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+#pragma unused(application, launchOptions)
     [[IBAResourceManager sharedInstance] pushResourceBundleNamed:@"Resources0"];
      
     // Override point for customization after application launch.

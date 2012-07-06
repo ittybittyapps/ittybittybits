@@ -34,6 +34,7 @@
 
 -(void)viewDidDisappear:(BOOL)animated
 {
+#pragma unused(animated)
     if (self.navigationController == nil)
     {
         [[IBAResourceManager sharedInstance] popResourceBundle];
@@ -42,6 +43,7 @@
 
 - (IBAction)buttonPressed:(id)sender forEvent:(UIEvent*)event
 {
+#pragma unused(sender, event)
     NSString *bundleName = [NSString stringWithFormat:@"Resources%d", [self.navigationController.viewControllers count] % 2];
 
     [[IBAResourceManager sharedInstance] pushResourceBundleNamed:bundleName];

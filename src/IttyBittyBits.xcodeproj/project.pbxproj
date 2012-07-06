@@ -15,6 +15,13 @@
 		75C832451401475C00F476B9 /* UIGestureRecognizer+IBAExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 75C832431401475B00F476B9 /* UIGestureRecognizer+IBAExtensions.m */; };
 		8806703A1433C97A004487A5 /* IBAAlertView.h in Headers */ = {isa = PBXBuildFile; fileRef = 880670381433C97A004487A5 /* IBAAlertView.h */; };
 		8806703B1433C97A004487A5 /* IBAAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 880670391433C97A004487A5 /* IBAAlertView.m */; };
+		A33C702815A6B8B90074FDC3 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7555E5B14206752002E5E57 /* QuartzCore.framework */; };
+		A33C702C15A6BA010074FDC3 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7555E5D142067A8002E5E57 /* CoreGraphics.framework */; };
+		A33C702D15A6BA410074FDC3 /* AddressBookUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7966B44139378CB00F1B1A1 /* AddressBookUI.framework */; };
+		A33C702E15A6BA5E0074FDC3 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7555E5B14206752002E5E57 /* QuartzCore.framework */; };
+		A33C705A15A6BEA00074FDC3 /* AddressBookUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7966B44139378CB00F1B1A1 /* AddressBookUI.framework */; };
+		A33C705C15A6BED10074FDC3 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7555E5D142067A8002E5E57 /* CoreGraphics.framework */; };
+		A33C705D15A6BEE10074FDC3 /* AddressBookUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7966B44139378CB00F1B1A1 /* AddressBookUI.framework */; };
 		A701064413947B8000D9AB8B /* MKPlacemark+IBAFormattedAddress.h in Headers */ = {isa = PBXBuildFile; fileRef = A701064213947B8000D9AB8B /* MKPlacemark+IBAFormattedAddress.h */; };
 		A701064513947B8000D9AB8B /* MKPlacemark+IBAFormattedAddress.m in Sources */ = {isa = PBXBuildFile; fileRef = A701064313947B8000D9AB8B /* MKPlacemark+IBAFormattedAddress.m */; };
 		A7014AF713718C0300BE32D2 /* NSTimer+IBABlocks.h in Headers */ = {isa = PBXBuildFile; fileRef = A7014AF513718C0300BE32D2 /* NSTimer+IBABlocks.h */; };
@@ -33,13 +40,11 @@
 		A70D620D146797470097AF5E /* libIttyBittyBits.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A7B4DAB91367991200543D61 /* libIttyBittyBits.a */; };
 		A70D620E146797470097AF5E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7B4DACC13679F5E00543D61 /* UIKit.framework */; };
 		A70D620F146797470097AF5E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7B4DABC1367991200543D61 /* Foundation.framework */; };
-		A70D6210146797470097AF5E /* (null) in Frameworks */ = {isa = PBXBuildFile; };
 		A70D6211146797470097AF5E /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7966B43139378CB00F1B1A1 /* AddressBook.framework */; };
 		A70D6212146797470097AF5E /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 751C605A13B20E0800447BB4 /* CoreData.framework */; };
 		A70D6213146797470097AF5E /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7966B48139378EB00F1B1A1 /* CoreLocation.framework */; };
 		A70D6214146797470097AF5E /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7966B4A139378FD00F1B1A1 /* MapKit.framework */; };
 		A70D6215146797470097AF5E /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7B4DB111367C65B00543D61 /* Security.framework */; };
-		A70D6216146797470097AF5E /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7C2FB9B13B3083500F774CA /* QuartzCore.framework */; };
 		A70D6217146797470097AF5E /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A713975613F4F62C00CE8FF2 /* SystemConfiguration.framework */; };
 		A70D626F14679E1F0097AF5E /* IBAResourceManagerSampleAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A70D61FB146795960097AF5E /* IBAResourceManagerSampleAppDelegate.m */; };
 		A70D627114679E2A0097AF5E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A70D61FE146795960097AF5E /* main.m */; };
@@ -741,7 +746,6 @@
 		A7C2169113AB2DE70070DA6A /* Target-IttyBittyBits-Release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = "Target-IttyBittyBits-Release.xcconfig"; sourceTree = "<group>"; };
 		A7C2FB9613B3073F00F774CA /* IBAGradientButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBAGradientButton.h; sourceTree = "<group>"; };
 		A7C2FB9713B3073F00F774CA /* IBAGradientButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IBAGradientButton.m; sourceTree = "<group>"; };
-		A7C2FB9B13B3083500F774CA /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		A7C6A3E41468FB8A00615BFD /* Resources0.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Resources0.bundle; sourceTree = "<group>"; };
 		A7C6A3E51468FB8A00615BFD /* Resources1.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Resources1.bundle; sourceTree = "<group>"; };
 		A7CD3F8A1420356C0022F7AD /* NSIndexPath+UITableView+IBAExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSIndexPath+UITableView+IBAExtensions.h"; sourceTree = "<group>"; };
@@ -781,16 +785,17 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A33C705D15A6BEE10074FDC3 /* AddressBookUI.framework in Frameworks */,
+				A33C705C15A6BED10074FDC3 /* CoreGraphics.framework in Frameworks */,
+				A33C702815A6B8B90074FDC3 /* QuartzCore.framework in Frameworks */,
 				A70D620D146797470097AF5E /* libIttyBittyBits.a in Frameworks */,
 				A70D620E146797470097AF5E /* UIKit.framework in Frameworks */,
 				A70D620F146797470097AF5E /* Foundation.framework in Frameworks */,
-				A70D6210146797470097AF5E /* (null) in Frameworks */,
 				A70D6211146797470097AF5E /* AddressBook.framework in Frameworks */,
 				A70D6212146797470097AF5E /* CoreData.framework in Frameworks */,
 				A70D6213146797470097AF5E /* CoreLocation.framework in Frameworks */,
 				A70D6214146797470097AF5E /* MapKit.framework in Frameworks */,
 				A70D6215146797470097AF5E /* Security.framework in Frameworks */,
-				A70D6216146797470097AF5E /* QuartzCore.framework in Frameworks */,
 				A70D6217146797470097AF5E /* SystemConfiguration.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -799,6 +804,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A33C705A15A6BEA00074FDC3 /* AddressBookUI.framework in Frameworks */,
 				A7708F13140DBD1B005FDA05 /* libIttyBittyBits.a in Frameworks */,
 				A7345F6A140CC026005ED52E /* UIKit.framework in Frameworks */,
 				A7345F6B140CC026005ED52E /* Foundation.framework in Frameworks */,
@@ -817,6 +823,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A33C702E15A6BA5E0074FDC3 /* QuartzCore.framework in Frameworks */,
+				A33C702D15A6BA410074FDC3 /* AddressBookUI.framework in Frameworks */,
+				A33C702C15A6BA010074FDC3 /* CoreGraphics.framework in Frameworks */,
 				A749CF39140F5F5D00751EF5 /* libIttyBittyBits.a in Frameworks */,
 				A73C53CE140F19D6003CE7CF /* UIKit.framework in Frameworks */,
 				A73C53CF140F19D6003CE7CF /* Foundation.framework in Frameworks */,
