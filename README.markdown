@@ -2,6 +2,11 @@
 
 Copyright (c) 2011 IttyBittyApps Pty. Ltd.
 
+Getting Start
+
+ - Refer to IttyBittyBits target Link Binary with Libraries, add them into your Link Binary Phase.
+ - Config Other Linker Flags to be "all_load -ObjC -lstdc++"
+
 Where not indicated in the individual files code in this repository are licensed under the following terms:
 
    Licensed under the Apache License, Version 2.0 (the "License");
