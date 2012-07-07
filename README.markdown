@@ -1,11 +1,13 @@
 # IttyBittyApps Objective-C Utility Library
 
-Copyright (c) 2011 IttyBittyApps Pty. Ltd.
-
-Getting Start
+### Getting Start
 
  - Refer to IttyBittyBits target Link Binary with Libraries, add them into your Link Binary Phase.
  - Config Other Linker Flags to be "all_load -ObjC -lstdc++"
+
+
+
+Copyright (c) 2011 IttyBittyApps Pty. Ltd.
 
 Where not indicated in the individual files code in this repository are licensed under the following terms:
 
