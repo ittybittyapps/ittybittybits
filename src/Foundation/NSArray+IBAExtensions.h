@@ -53,8 +53,7 @@
 
 @interface NSArray (IBAExtensions)
 
-- (id)ibaFirst;
-- (id)ibaLast;
+- (id)ibaFirstObject;
 - (BOOL)ibaIsEmpty;
 
 - (void)ibaEach:(void (^)(id item))block;

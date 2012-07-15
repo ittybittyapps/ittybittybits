@@ -55,7 +55,7 @@
  \brief     Returns the object in the array with the lowest index value.
  \return    The object in the array with the lowest index value.
  */
-- (id)ibaFirst
+- (id)ibaFirstObject
 {
     if ([self count] > 0)
     {
@@ -64,16 +64,6 @@
     
     return nil;
 }
-
-/*!
- \brief     Returns the object in the array with the highest index value.
- \return    The object in the array with the highest index value.
- */
-- (id)ibaLast
-{
-    return [self lastObject];
-}
-
 
 /*!
  \brief     Returns a value indicating whether the array is empty.
