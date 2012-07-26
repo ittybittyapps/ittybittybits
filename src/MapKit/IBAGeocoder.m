@@ -263,7 +263,7 @@ IBA_SYNTHESIZE(delegate, responseData, connection, request, requestURL, cancelle
                         NSString *streetNumber = [component valueForKey:@"long_name"];
                         NSString *streetName = [formattedAddressDict valueForKey:(NSString*)kABPersonAddressStreetKey];
                         
-                        streetAddress = streetName ? [streetNumber stringByAppendingFormat:@" @%", streetName] : streetNumber;
+                        streetAddress = streetName ? [streetNumber stringByAppendingFormat:@" %@", streetName] : streetNumber;
                     }
                     
                     if ([types containsObject:@"route"])
@@ -271,7 +271,7 @@ IBA_SYNTHESIZE(delegate, responseData, connection, request, requestURL, cancelle
                         NSString *streetNumber = [formattedAddressDict valueForKey:(NSString*)kABPersonAddressStreetKey];
                         NSString *streetName = [component valueForKey:@"long_name"];
                         
-                        streetAddress = streetNumber ? [streetNumber stringByAppendingFormat:@" @%", streetName] : streetName; 
+                        streetAddress = streetNumber ? [streetNumber stringByAppendingFormat:@" %@", streetName] : streetName;
                     }
                     
                     [formattedAddressDict setValue:streetAddress forKey:(NSString*)kABPersonAddressStreetKey];

@@ -255,7 +255,7 @@ char *IBANewBase64Encode(const void *buffer, size_t length, bool separateLines, 
  */
 - (NSString *)ibaBase64EncodedString
 {
-	size_t outputLength;
+	size_t outputLength = 0;
 	char *outputBuffer = IBANewBase64Encode([self bytes], [self length], true, &outputLength);	
     
 	NSString *result = [[[NSString alloc] initWithBytes:outputBuffer

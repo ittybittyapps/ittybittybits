@@ -70,7 +70,7 @@
         else
         {
             NSAssert2([stringOrPredicate isKindOfClass:[NSPredicate class]],
-                      @"Second parameter passed to %s is of unexpected class %@",
+                      @"Second parameter passed to %s is of unexpected class %s",
                       sel_getName(_cmd), class_getName([stringOrPredicate class]));
             predicate = (NSPredicate *)stringOrPredicate;
         }

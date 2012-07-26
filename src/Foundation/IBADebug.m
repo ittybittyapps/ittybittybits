@@ -46,17 +46,17 @@ void ALogImpl(BOOL assert, const char* functionName, const char* filename, int l
         NSString* function = [NSString stringWithCString:functionName encoding:NSUTF8StringEncoding];    
         NSString* file = [NSString stringWithCString:filename encoding:NSUTF8StringEncoding];
         
-        NSString* description = [[NSString alloc] initWithFormat:format arguments:args];
+//        NSString* description = [[NSString alloc] initWithFormat:format arguments:args];
         
         [[NSAssertionHandler currentHandler] handleFailureInFunction:function
                                                                 file:file
                                                           lineNumber:line
-                                                         description:description];    
-        [description release];
+                                                         description:format, args];
+//        [description release];
     }
     else
     {
-        NSString* logFormat = [[NSString alloc] initWithFormat:@"ALERT: %s", format];
+        NSString* logFormat = [[NSString alloc] initWithFormat:@"ALERT: %@", format];
         [[IBALogger sharedLogger] logNotice:logFormat file:filename line:line function:functionName args:args];
         [logFormat release];
     }
